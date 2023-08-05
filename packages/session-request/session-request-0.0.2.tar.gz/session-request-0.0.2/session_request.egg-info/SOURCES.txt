@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+session_request/__init__.py
+session_request/session_request.py
+session_request.egg-info/PKG-INFO
+session_request.egg-info/SOURCES.txt
+session_request.egg-info/dependency_links.txt
+session_request.egg-info/requires.txt
+session_request.egg-info/top_level.txt
+session_request.egg-info/zip-safe
