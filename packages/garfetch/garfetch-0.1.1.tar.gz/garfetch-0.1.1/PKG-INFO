@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: garfetch
+Version: 0.1.1
+Summary: Unofficial gocomics library
+Home-page: https://gitlab.com/a/garfetch
+License: MIT
+Author: Ave
+Author-email: ave@ave.zone
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: beautifulsoup4 (>=4.9.3,<5.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Project-URL: Repository, https://gitlab.com/a/garfetch
+Description-Content-Type: text/markdown
+
+# garfetch
+
+Python 3 library to fetch comic images from gocomics.com.
+
+## Installation
+
+### PyPI
+
+This package is available on PyPI as `garfetch`.
+
+### Building
+
+This project uses [poetry](https://python-poetry.org/), and the recommended way of building it is running `poetry build` on the root of this repository.
+
+## Usage
+
+### Get comic URL
+
+```python
+import garfetch
+
+print(garfetch.fetch_url("garfield", "1990-05-30"))
+# If comic exists: 'https://assets.amuniversal.com/7e81c7c05d1a012ee3bd00163e41dd5b'
+# If comic does not exist: None
+```
+
