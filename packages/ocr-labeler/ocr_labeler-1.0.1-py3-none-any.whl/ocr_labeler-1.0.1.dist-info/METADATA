@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ocr-labeler
+Version: 1.0.1
+Summary: A tool for labeling ocr data
+Home-page: https://github.com/hisiter97/OCR_LabelTool
+Author: hisiter
+Author-email: leeyueshing19@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PyQt5 (==5.12.1)
+
+1. Install PyQT5
+```bash
+pip install -r requirements.txt
+```
+
+2. Run 
+```bash
+python ocr-labeler/main.py --image_dir image_dir
+```
+
+3. Demo 
+![alt text](demo.PNG)
+
