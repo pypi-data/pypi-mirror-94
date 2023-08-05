@@ -1,0 +1,12 @@
+six
+sqlparse
+future
+cx_Oracle
+pymysql
+psycopg2
+vertica_python
+pyodbc
+psycopg2
+pyodbc
+pymongo
+pandas
