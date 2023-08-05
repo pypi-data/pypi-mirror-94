@@ -1,0 +1,7 @@
+httpx
+python-socketio==4.6.0
+websocket-client
+loguru
+click
+aiohttp
+prettytable
