@@ -1,0 +1,12 @@
+flipr_api/__init__.py,sha256=QcEok1uyzo35SeQQU-3ATnoQMyFczeQf4fTyQlNmkJQ,102
+flipr_api/__main__.py,sha256=eMIEhjgs3WipUNQa7iDLPSEhYhBKm8V5XVn7yb_QZeE,52
+flipr_api/client.py,sha256=q20ec_Njfh1GW_PSJPbVA-Hixi2bI8wn3AQGw-Jc4K0,1790
+flipr_api/const.py,sha256=a5_AHtq8MNFgy-8bXbHG0Pj61jPW4l3HNi6tYs90cpM,158
+flipr_api/model/__init__.py,sha256=U7890YZPK1ljpyDiTLGv-ie-re_fj6nw0c_h30mXARY,102
+flipr_api/model/pool_measure.py,sha256=Vs3-1Iqf7Qy6yeoDb0UKn7vOH8gQBzUrJOvWuJdP1Pc,1315
+flipr_api/session.py,sha256=DZnHz9SVhfzXUTsop4vG-xeZnXn_k9In0WUuiQcuUys,2025
+flipr_api-1.0.1.dist-info/entry_points.txt,sha256=w3ZwDVEbyaJtYjQwLIV3mHMkD96hV3_lnta7ZgeEQUI,53
+flipr_api-1.0.1.dist-info/LICENSE.rst,sha256=UQPWccffMSxcux_vhVdxj_2WkgdCI-36sI3mAyA8-ao,1078
+flipr_api-1.0.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+flipr_api-1.0.1.dist-info/METADATA,sha256=zPn2-sxxnwAw1PmqEl0RrDgMNeEZjvjM8y5RhkWRq_Y,5150
+flipr_api-1.0.1.dist-info/RECORD,,
