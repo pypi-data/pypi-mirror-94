@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: deferred-import
+Version: 0.1.0
+Summary: Lazy import and install on demand Python packages.
+Home-page: https://github.com/orsinium-labs/deferred-import
+License: MIT
+Keywords: import,defer,install,pip,lazy
+Author: Gram
+Author-email: gram@orsinium.dev
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Requires-Dist: isort ; extra == "dev"
+Requires-Dist: mypy ; extra == "dev"
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: flake8 ; extra == "dev"
+Provides-Extra: dev
+
+# deferred-import
+
+Lazy import and install on demand Python packages.
+
+1. Package will be loaded only when you use it in the first time. Deferring it makes module loading much faster.
+1. If module is missed, the package will be automatically installed. It allows to make some project dependencies optional and install them on demand.
+
+## Installation
+
+```bash
+python3 -m pip install --user deferred-import
+```
+
+## Usage
+
+```python
+from deferred_import import deferred_import
+
+requests = deferred_import('requests')
+attr = deferred_import('attr', package='attrs')
+
+requests.get('http://httpbin.org/status/200')
+# <Response [200]>
+```
+
