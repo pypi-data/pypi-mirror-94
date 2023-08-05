@@ -1,0 +1,87 @@
+// .slider: input slider
+// --------------------------------------------------------------------------
+// Note: Bootstrap 4.2 has custom-range. .slider is deprecated.
+$track-height: 0.4rem;
+.slider {
+  -webkit-appearance: none;     // Required for any custom styling
+  background: transparent;      // Chrome has a non-transparent background
+  border: none;                 // Override default
+  box-shadow: none;             // Override .form-control
+  cursor: pointer;
+  padding-left: 0;
+  padding-right: 0;
+
+  &::-webkit-slider-runnable-track {
+    height: $track-height;
+    @include border-radius($input-border-radius);
+    @include button-variant($gray-300, $gray-300);
+    @if $enable-shadows {
+      box-shadow: $btn-active-box-shadow;
+    }
+  }
+  &::-moz-range-track {
+    height: $track-height;
+    @include border-radius($input-border-radius);
+    @include button-variant($gray-300, $gray-300);
+    @if $enable-shadows {
+      box-shadow: $btn-active-box-shadow;
+    }
+  }
+  &::-ms-track {
+    height: $custom-control-indicator-size;
+    background-color: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  &::-ms-fill-upper, &::-ms-fill-lower {
+    box-sizing: border-box;
+    height: $track-height;
+    @include border-radius($input-border-radius);
+    @include button-variant($gray-300, $gray-300);
+    @if $enable-shadows {
+      box-shadow: $btn-active-box-shadow;
+    }
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @include button-variant($primary, $primary);
+    @include border-radius($input-border-radius);
+    margin-top: ($custom-control-indicator-size - $track-height) / -2;
+    height: $custom-control-indicator-size;
+    width: $custom-control-indicator-size;
+  }
+  &::-moz-range-thumb {
+    @include button-variant($primary, $primary);
+    @include border-radius($input-border-radius);
+    margin-top: ($custom-control-indicator-size - $track-height) / -2;
+    height: $custom-control-indicator-size;
+    width: $custom-control-indicator-size;
+  }
+  &::-ms-thumb {
+    box-sizing: border-box; // IE11 sizing
+    margin-top: 0; // Edge vertical alignment
+    @include button-variant($primary, $primary);
+    @include border-radius($input-border-radius);
+    height: $custom-control-indicator-size;
+    width: $custom-control-indicator-size;
+  }
+
+  // Enable shadows on thumb, not main control
+  &.shadow { box-shadow: none; }
+  &.shadow::-webkit-slider-thumb { box-shadow: $shadow; }
+  &.shadow::-moz-range-thumb { box-shadow: $shadow; }
+  &.shadow::-ms-thumb { box-shadow: $shadow; }
+  &.shadow::-webkit-slider-runnable-track { box-shadow: $btn-active-box-shadow; }
+  &.shadow::-moz-range-track { box-shadow: $btn-active-box-shadow; }
+  &.shadow::-ms-track { margin-bottom: $shadow-y + $shadow-blur; }
+  &.shadow::-ms-fill-upper, &.shadow::-ms-fill-lower { box-shadow: $btn-active-box-shadow; }
+
+  // Enable round on elements, not main control
+  &.round { border-radius: 3px; }
+  &.round::-webkit-slider-thumb { border-radius: $round-radius; }
+  &.round::-moz-range-thumb { border-radius: $round-radius; }
+  &.round::-ms-thumb { border-radius: $round-radius; }
+  &.round::-webkit-slider-runnable-track { border-radius: $round-radius; }
+  &.round::-moz-range-track { border-radius: $round-radius; }
+  &.round::-ms-track { border-radius: $round-radius; }
+}
