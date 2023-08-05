@@ -1,0 +1,8 @@
+[console_scripts]
+date_ver_id = fastutil.model_util:date_ver_id
+fitlog_commit = fastutil.model_util:fitlog_commit
+fitlog_init = fastutil.model_util:init_fitlog
+taskkill = fastutil.task_util:kill_task
+taskplan = fastutil.task_plan:start_plan
+ver_id = fastutil.model_util:ver_id
+
