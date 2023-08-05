@@ -1,0 +1,6 @@
+scrapli>=2021.01.30a1
+ruamel.yaml==0.16.12
+asyncssh==2.5.0
+
+[:python_version < "3.7"]
+dataclasses<1.0,>=0.7
