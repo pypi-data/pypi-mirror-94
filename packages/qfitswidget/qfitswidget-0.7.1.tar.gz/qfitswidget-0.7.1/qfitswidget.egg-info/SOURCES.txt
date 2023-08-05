@@ -1,0 +1,13 @@
+README.md
+setup.py
+qfitswidget/__init__.py
+qfitswidget/fitswidget.py
+qfitswidget/norm.py
+qfitswidget/qfitswidget.py
+qfitswidget/qimageview.py
+qfitswidget/resources.py
+qfitswidget.egg-info/PKG-INFO
+qfitswidget.egg-info/SOURCES.txt
+qfitswidget.egg-info/dependency_links.txt
+qfitswidget.egg-info/requires.txt
+qfitswidget.egg-info/top_level.txt
