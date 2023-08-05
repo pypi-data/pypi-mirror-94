@@ -1,0 +1,3 @@
+redis>=3.4.1
+mmh3
+typing_extensions
