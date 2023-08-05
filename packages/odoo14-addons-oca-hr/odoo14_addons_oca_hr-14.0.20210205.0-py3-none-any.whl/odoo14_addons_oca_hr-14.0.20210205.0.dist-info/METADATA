@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-oca-hr
+Version: 14.0.20210205.0
+Summary: Meta package for oca-hr Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo14-addon-hr-branch
+Requires-Dist: odoo14-addon-hr-employee-firstname
+Requires-Dist: odoo14-addon-hr-employee-lastnames
+Requires-Dist: odoo14-addon-hr-employee-relative
+Requires-Dist: odoo14-addon-hr-employee-service
+Requires-Dist: odoo14-addon-hr-employee-ssn
+Requires-Dist: odoo14-addon-hr-org-chart-overview
+
+UNKNOWN
+
+
