@@ -1,0 +1,14 @@
+README.md
+setup.py
+forks_sync/__init__.py
+forks_sync/sync.py
+forks_sync.egg-info/PKG-INFO
+forks_sync.egg-info/SOURCES.txt
+forks_sync.egg-info/dependency_links.txt
+forks_sync.egg-info/entry_points.txt
+forks_sync.egg-info/requires.txt
+forks_sync.egg-info/top_level.txt
+test/__init__.py
+test/unit/__init__.py
+test/unit/conftest.py
+test/unit/test_forks.py
