@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pd-basic-utils
+Version: 0.0
+Summary: Makes it easier
+Home-page: https://github.com/powerfuldeveloper
+Author: powerfuldeveloper
+Author-email: apowerfuldeveloper@gmail.com
+License: UNKNOWN
+Description: # Remember
+        if a django project pop up do not forget to add this line of code to it
+        ```
+        recursive-include powerfuldeveloper/templates *
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.8
+Description-Content-Type: text/markdown

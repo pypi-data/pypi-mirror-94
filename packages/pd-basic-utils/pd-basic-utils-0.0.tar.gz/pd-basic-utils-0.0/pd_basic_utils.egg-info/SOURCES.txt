@@ -1,0 +1,7 @@
+MANIFEST.in
+README.md
+setup.py
+pd_basic_utils.egg-info/PKG-INFO
+pd_basic_utils.egg-info/SOURCES.txt
+pd_basic_utils.egg-info/dependency_links.txt
+pd_basic_utils.egg-info/top_level.txt
