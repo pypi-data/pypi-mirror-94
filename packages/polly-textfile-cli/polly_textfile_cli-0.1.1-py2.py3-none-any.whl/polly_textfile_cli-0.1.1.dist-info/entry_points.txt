@@ -1,0 +1,3 @@
+[console_scripts]
+polly-textfile = polly_textfile_cli.main:main
+

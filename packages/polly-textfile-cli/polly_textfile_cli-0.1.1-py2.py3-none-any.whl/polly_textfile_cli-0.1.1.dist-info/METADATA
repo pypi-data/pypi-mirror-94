@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: polly-textfile-cli
+Version: 0.1.1
+Summary: Command Line Client to render TTS for long textfiles using AWS Polly
+Home-page: https://github.com/jmarhee/polly-textfile-cli
+Author: jmarhee
+Author-email: jmarhee@interiorae.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Requires-Dist: boto3
+
+UNKNOWN
+
+
