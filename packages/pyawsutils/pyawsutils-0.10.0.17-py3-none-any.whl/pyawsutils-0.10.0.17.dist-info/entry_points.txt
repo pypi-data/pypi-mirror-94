@@ -1,0 +1,3 @@
+[console_scripts]
+pyawsutils = pyawsutils.cli_pyaws:main
+
