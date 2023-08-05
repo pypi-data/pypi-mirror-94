@@ -1,0 +1,11 @@
+requests
+Flask
+flask-cors
+PyJWT
+PyYAML
+setuptools
+ansible
+pymongo
+ply
+pycrypto
+ldap3
