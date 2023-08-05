@@ -1,0 +1,134 @@
+MANIFEST.in
+README.md
+setup.py
+bci_framework/__main__.py
+bci_framework/_version.txt
+bci_framework/custom.css
+bci_framework.egg-info/PKG-INFO
+bci_framework.egg-info/SOURCES.txt
+bci_framework.egg-info/dependency_links.txt
+bci_framework.egg-info/entry_points.txt
+bci_framework.egg-info/top_level.txt
+bci_framework/assets/banner.png
+bci_framework/assets/banner.svg
+bci_framework/assets/bciframework.default
+bci_framework/bci_framework/__init__.py
+bci_framework/bci_framework/config_manager.py
+bci_framework/bci_framework/configuration.py
+bci_framework/bci_framework/core.py
+bci_framework/bci_framework/dialogs.py
+bci_framework/bci_framework/nbstreamreader.py
+bci_framework/bci_framework/stream_handler.py
+bci_framework/bci_framework/subprocess_script.py
+bci_framework/bci_framework/editor/__init__.py
+bci_framework/bci_framework/editor/completer.py
+bci_framework/bci_framework/editor/editor.py
+bci_framework/bci_framework/editor/snippets.py
+bci_framework/bci_framework/editor/highlighters/__init__.py
+bci_framework/bci_framework/editor/highlighters/css_syntax.py
+bci_framework/bci_framework/editor/highlighters/python_syntax.py
+bci_framework/bci_framework/environments/__init__.py
+bci_framework/bci_framework/environments/development.py
+bci_framework/bci_framework/environments/stimuli_delivery.py
+bci_framework/bci_framework/environments/visualization.py
+bci_framework/bci_framework/qtgui/__init__.py
+bci_framework/bci_framework/qtgui/about.ui
+bci_framework/bci_framework/qtgui/configurations.ui
+bci_framework/bci_framework/qtgui/main.ui
+bci_framework/bci_framework/qtgui/new_project.ui
+bci_framework/bci_framework/qtgui/stimuli_delivery.ui
+bci_framework/bci_framework/qtgui/visualization_widget.ui
+bci_framework/bci_framework/qtgui/icons/__init__.py
+bci_framework/bci_framework/qtgui/icons/source/add.svg
+bci_framework/bci_framework/qtgui/icons/source/arrow-down-double.svg
+bci_framework/bci_framework/qtgui/icons/source/arrow-left-double.svg
+bci_framework/bci_framework/qtgui/icons/source/arrow-right-double.svg
+bci_framework/bci_framework/qtgui/icons/source/arrow-up-double.svg
+bci_framework/bci_framework/qtgui/icons/source/base.svg
+bci_framework/bci_framework/qtgui/icons/source/brain.svg
+bci_framework/bci_framework/qtgui/icons/source/close.svg
+bci_framework/bci_framework/qtgui/icons/source/cyton.svg
+bci_framework/bci_framework/qtgui/icons/source/dialog-close.svg
+bci_framework/bci_framework/qtgui/icons/source/document-new.svg
+bci_framework/bci_framework/qtgui/icons/source/documentation.svg
+bci_framework/bci_framework/qtgui/icons/source/downarrow.svg
+bci_framework/bci_framework/qtgui/icons/source/edit-delete-remove.svg
+bci_framework/bci_framework/qtgui/icons/source/edit-delete.svg
+bci_framework/bci_framework/qtgui/icons/source/file.svg
+bci_framework/bci_framework/qtgui/icons/source/folder-add.svg
+bci_framework/bci_framework/qtgui/icons/source/folder.svg
+bci_framework/bci_framework/qtgui/icons/source/go-down.svg
+bci_framework/bci_framework/qtgui/icons/source/go-next.svg
+bci_framework/bci_framework/qtgui/icons/source/go-previous.svg
+bci_framework/bci_framework/qtgui/icons/source/go-up.svg
+bci_framework/bci_framework/qtgui/icons/source/home.svg
+bci_framework/bci_framework/qtgui/icons/source/icon_dev.svg
+bci_framework/bci_framework/qtgui/icons/source/icon_sti.svg
+bci_framework/bci_framework/qtgui/icons/source/icon_viz.svg
+bci_framework/bci_framework/qtgui/icons/source/imagery.svg
+bci_framework/bci_framework/qtgui/icons/source/list-add.svg
+bci_framework/bci_framework/qtgui/icons/source/logo.svg
+bci_framework/bci_framework/qtgui/icons/source/media-playback-start.svg
+bci_framework/bci_framework/qtgui/icons/source/media-playback-stop.svg
+bci_framework/bci_framework/qtgui/icons/source/media-record.svg
+bci_framework/bci_framework/qtgui/icons/source/splash.svg
+bci_framework/bci_framework/widgets/__init__.py
+bci_framework/bci_framework/widgets/annotations.py
+bci_framework/bci_framework/widgets/connection.py
+bci_framework/bci_framework/widgets/connection.py.orig
+bci_framework/bci_framework/widgets/montage.py
+bci_framework/bci_framework/widgets/projects.py
+bci_framework/bci_framework/widgets/records.py
+bci_framework/default_projects/4-Class (up to) motor imagery/.bcifr
+bci_framework/default_projects/4-Class (up to) motor imagery/main.py
+bci_framework/default_projects/4-Class (up to) motor imagery/styles.css
+bci_framework/default_projects/DSP EEG/main.py
+bci_framework/default_projects/EEG Spectogram /main.py
+bci_framework/default_projects/Latency measurement/.bcifr
+bci_framework/default_projects/Latency measurement/main.py
+bci_framework/default_projects/OpenBCI - Accelerometer/main.py
+bci_framework/default_projects/OpenBCI - External inputs/main.py
+bci_framework/default_projects/OpenBCI - External inputs/new_file-0.py
+bci_framework/default_projects/OpenBCI - Raw EEG/main.py
+bci_framework/default_projects/OpenBCI - Raw topoplot/main.py
+bci_framework/default_projects/P300 Speller/.bcifr
+bci_framework/default_projects/P300 Speller/main.py
+bci_framework/default_projects/P300 Speller/styles.css
+bci_framework/default_projects/Resting state and noise acquisition/.bcifr
+bci_framework/default_projects/Resting state and noise acquisition/main.py
+bci_framework/default_projects/Resting state and noise acquisition/styles.css
+bci_framework/default_projects/Test/main.py
+bci_framework/default_projects/Test2/main.py
+bci_framework/default_projects/Tutorial | 2-Class motor imagery/.bcifr
+bci_framework/default_projects/Tutorial | 2-Class motor imagery/main.py
+bci_framework/default_projects/Tutorial | 2-Class motor imagery/styles.css
+bci_framework/default_projects/Tutorial | Tones/.bcifr
+bci_framework/default_projects/Tutorial | Tones/main.py
+bci_framework/default_projects/Tutorial | Widgets/.bcifr
+bci_framework/default_projects/Tutorial | Widgets/main.py
+bci_framework/default_projects/Visual work memory/.bcifr
+bci_framework/default_projects/Visual work memory/main.py
+bci_framework/default_projects/Visual work memory/points.py
+bci_framework/default_projects/Visual work memory/styles.css
+bci_framework/default_projects/_default_stimuli_delivery/main.py
+bci_framework/default_projects/_default_stimuli_delivery/styles.css
+bci_framework/default_projects/_default_visualization/main.py
+bci_framework/extensions/__init__.py
+bci_framework/extensions/properties.py
+bci_framework/extensions/stimuli_delivery/__init__.py
+bci_framework/extensions/stimuli_delivery/colors.xml
+bci_framework/extensions/stimuli_delivery/stimuli_delivery.py
+bci_framework/extensions/stimuli_delivery/template.html
+bci_framework/extensions/stimuli_delivery/tornado_handlers.py
+bci_framework/extensions/stimuli_delivery/utils.py
+bci_framework/extensions/stimuli_delivery/path/bci_framework/__init__.py
+bci_framework/extensions/stimuli_delivery/path/bci_framework/extensions/__init__.py
+bci_framework/extensions/stimuli_delivery/path/bci_framework/extensions/stimuli_delivery/__init__.py
+bci_framework/extensions/stimuli_delivery/path/bci_framework/extensions/stimuli_delivery/stimuli_delivery.py
+bci_framework/extensions/stimuli_delivery/path/bci_framework/extensions/stimuli_delivery/utils/__init__.py
+bci_framework/extensions/stimuli_delivery/path/bci_framework/extensions/stimuli_delivery/utils/widgets.py
+bci_framework/extensions/visualizations/__init__.py
+bci_framework/extensions/visualizations/eeg_stream.py
+bci_framework/extensions/visualizations/utils.py
+bci_framework/transformers/__init__.py
+bci_framework/transformers/record.py
