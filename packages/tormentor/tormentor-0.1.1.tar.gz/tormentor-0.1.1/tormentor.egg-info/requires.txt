@@ -1,0 +1,5 @@
+torch
+matplotlib
+torchvision
+fargv
+kornia>=0.3.2
