@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: kskit
+Version: 0.0.7
+Summary: Cancer screening analysis module build on Python
+Home-page: https://github.com/Epiconcept-Paris/kskit
+Author: Francisco Orchard
+Author-email: f.orchard@epiconcept.fr
+License: MIT License
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pydicom
+Requires-Dist: Numpy
+Requires-Dist: matplotlib
+Requires-Dist: pynetdicom
+Requires-Dist: requests
+Requires-Dist: xmltodict
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: python-barcode[images]
+Requires-Dist: qrcode
+Requires-Dist: pyzbar[scripts]
+Requires-Dist: opencv-python
+Requires-Dist: pycryptodome
+
+## kskit module
+
+Functionality for cancer screening data pipeline including DICOM image importing and processing.
+
+Initially conceived for french breast cancer screening program during the execution of deep.pisre study
+
+
