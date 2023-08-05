@@ -1,0 +1,12 @@
+dagster_celery_docker/__init__.py,sha256=V5WXAzO-Jztrar5mRQpcpqTqVY8jMjPiSlxbcIU3xfg,209
+dagster_celery_docker/app.py,sha256=teVFrsA7uLh6Epv3wiFlqnvQQQFYI8zS5lK4prpCRA4,312
+dagster_celery_docker/executor.py,sha256=SmkGGXvgttVVzxanD95We_zffkqy8LAt_70BEeOoHz4,11999
+dagster_celery_docker/version.py,sha256=fGZMaoPHZfTX9I4TDkr07gp-kj_1U_SD-gjQC_2flQs,23
+dagster_celery_docker_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dagster_celery_docker_tests/test_execute_docker.py,sha256=oQX4s0xCU9I0YduUhCvT2tN6DmcZxSNZS5Z5hzv0vAo,3332
+dagster_celery_docker_tests/test_inclusion.py,sha256=9aMrHqPqvppbf8s29fz0dUeBrU-ye6YBLpnSLUsVWwg,206
+dagster_celery_docker_tests/test_version.py,sha256=o1CGrBBFCY_pwYjKPhubmjCM0IwZlJgizga8NBMOah8,99
+dagster_celery_docker-0.10.4.dist-info/METADATA,sha256=FuT6mvVywJbnDi99TbcqzENWGoo6GycZ_QCqU5JNptc,677
+dagster_celery_docker-0.10.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dagster_celery_docker-0.10.4.dist-info/top_level.txt,sha256=vvOy0CDIwAQ7eTNqDpsAkkjIAsq_icb4uRuwrPxNMyQ,50
+dagster_celery_docker-0.10.4.dist-info/RECORD,,
