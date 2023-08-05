@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: conditional-independence
+Version: 0.1a4
+Summary: Parametric and non-parametric conditional independence tests.
+Home-page: UNKNOWN
+Author: Chandler Squires
+Author-email: chandlersquires18@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >3.5.0
