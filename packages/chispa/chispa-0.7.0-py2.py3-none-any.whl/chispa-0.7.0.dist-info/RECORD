@@ -1,0 +1,12 @@
+chispa/__init__.py,sha256=ityM5W8E0PqGi6UA3qJ-WxTl6w-RctT2HXft7xXAGpI,209
+chispa/bcolors.py,sha256=B8koEULWV1Ze_1Xsnop8Y0_fQ8ggApEvxgA8KQFhqFk,616
+chispa/column_comparer.py,sha256=UAWOwTrxaSoVR2X7ya6X1zdHNfkfuU0V0M0KiCABGos,2338
+chispa/dataframe_comparer.py,sha256=QgpoVNjLVWTRt5m0owNqpp-s4U8zrL6mZ_MkI24uj-Y,2325
+chispa/prettytable.py,sha256=AU0u_lmR9NUvI2jPVq9aeUS-wkT7h3AqCjoVeJyDbS4,65997
+chispa/row_comparer.py,sha256=KxeOCFUIbN8YsYDur-K4j862Aq8SQdKF_OhNs2LF24Y,656
+chispa/schema_comparer.py,sha256=URwRuRFgG01kNBkDyBiw0Lcb0_N9AYPAse1Br4mtxQA,1310
+chispa/six.py,sha256=U4Z_yv534W5CNyjY9i8V1OXY2SjAny8y2L5vDLhhThM,34159
+chispa-0.7.0.dist-info/LICENSE.md,sha256=EWT9N8L3u5YdV1OB9L9knzvw3CRYupNcxtT1g9gasXk,1081
+chispa-0.7.0.dist-info/WHEEL,sha256=2SyTS6-hWVbCVhxpPo1j5f9gwaWw-hVIJs0s_cC8MXM,87
+chispa-0.7.0.dist-info/METADATA,sha256=QS7mIn9Q_L90s7WzUJmIepkgaaH7uo5uHOaPm-ABWTs,629
+chispa-0.7.0.dist-info/RECORD,,
