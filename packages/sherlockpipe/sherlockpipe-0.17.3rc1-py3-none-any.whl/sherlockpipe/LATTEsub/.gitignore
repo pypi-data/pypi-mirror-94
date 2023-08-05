@@ -1,0 +1,15 @@
+LATTE_output
+LATTE_test
+EB_input.csv
+pyaneti_test.py
+pyaneti_test2.py
+test_nickname.py
+build
+dist
+LATTE.egg-info
+README_pip.md
+MANIFEST.in
+pyaneti_LATTE
+pyaneti_LATTE.py
+./_config.txt
+./LATTE/_config.txt
