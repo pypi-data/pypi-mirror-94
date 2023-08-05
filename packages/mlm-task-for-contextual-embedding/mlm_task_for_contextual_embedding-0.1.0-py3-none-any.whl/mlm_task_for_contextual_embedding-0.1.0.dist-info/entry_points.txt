@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    bert_mlm_ft=src.models.bert_mlm_ft:main
+    
