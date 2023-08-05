@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: exams2anki
+Version: 1.0.1
+Summary: Convert ExamTopics pages to Anki decks!
+Home-page: https://github.com/Sighmir/exams2anki
+Author: Guilherme Caulada
+Author-email: guilherme.caulada@gmail.com
+License: AGPL-3.0
+Keywords: anki examtopics exam certification cert sighmir
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Dist: selenium (~=3.141.0)
+Requires-Dist: genanki (~=0.10.1)
+Requires-Dist: tqdm (~=4.56.0)
+
+UNKNOWN
+
+
