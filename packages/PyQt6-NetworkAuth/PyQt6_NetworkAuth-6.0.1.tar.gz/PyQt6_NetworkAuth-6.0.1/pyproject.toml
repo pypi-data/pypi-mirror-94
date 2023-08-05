@@ -1,0 +1,29 @@
+# Specify the build system for the project.
+[build-system]
+requires = ["sip >=6, <7", "PyQt-builder >=1.8, <2"]
+build-backend = "sipbuild.api"
+
+# Specify the PEP 566 metadata for the project.
+[tool.sip.metadata]
+name = "PyQt6-NetworkAuth"
+version = "6.0.1"
+summary = "Python bindings for the Qt Network Authorization library"
+home-page = "https://www.riverbankcomputing.com/software/pyqtnetworkauth/"
+author = "Riverbank Computing Limited"
+author-email = "info@riverbankcomputing.com"
+license = "GPL v3"
+description-file = "README"
+requires-dist = ["PyQt6-NetworkAuth-Qt (>=6.0)", "PyQt6 (>=6.0)"]
+
+# Specify a PyQt-based project.
+[tool.sip]
+project-factory = "pyqtbuild:PyQtProject"
+
+# Project-wide configuration.
+[tool.sip.project]
+minimum-glibc-version = "2.28"
+minimum-macos-version = "10.14"
+
+# Define and configure each set of bindings.
+[tool.sip.bindings.QtNetworkAuth]
+qmake-QT = ["network", "networkauth", "-gui"]
