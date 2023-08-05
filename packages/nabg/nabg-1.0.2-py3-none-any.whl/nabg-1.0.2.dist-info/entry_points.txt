@@ -1,0 +1,3 @@
+[console_scripts]
+nabg = nabg.__main__:main
+
