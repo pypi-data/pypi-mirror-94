@@ -1,0 +1,13 @@
+fairworkflows/__init__.py,sha256=kZVeyMYV52PmZOSc3gZ3SW3pyzi_ZdFS_zy15a-e1co,148
+fairworkflows/_version.py,sha256=SBl2EPFW-ltPvQ7vbVWItyAsz3aKYIpjO7vcfr84GkU,22
+fairworkflows/config.py,sha256=gocs0c_hzkZnF_ClDgLo8GJTfxzGZ5XnP_yuK183muE,361
+fairworkflows/fairstep.py,sha256=2eUee3-MLuqlTq-c5vcv5jYIc9Kf3c-GUCo7XtiVWsw,24406
+fairworkflows/fairworkflow.py,sha256=o5eTO66UTJ_HIIh7CV10_ch9NE-4oro3PtCgz7Mw_Ec,21160
+fairworkflows/namespaces.py,sha256=Y5CxOo5RVQHmO2MorZDCT__5yUjJu7WhK5K4jgNEI4A,434
+fairworkflows/rdf_wrapper.py,sha256=dmvGoR3b1kVTsk3cNL2BECi0rJq5FNzyl_iFsESvsvU,10539
+fairworkflows/resources/plex-shapes.ttl,sha256=uGie_Fw7UlFVXfXQgpuskA-2iTny7YeRDp1UAOvK5yU,25548
+fairworkflows-0.2.4.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+fairworkflows-0.2.4.dist-info/METADATA,sha256=HAPP2ig2WVHwXfZdly7U2l5B2fSxjPPOzDkxq1-QU0g,8113
+fairworkflows-0.2.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fairworkflows-0.2.4.dist-info/top_level.txt,sha256=1WTPEXqCGJdhWYruNk4uOWIgX9xi4BQsKcDwcYrmQeE,14
+fairworkflows-0.2.4.dist-info/RECORD,,
