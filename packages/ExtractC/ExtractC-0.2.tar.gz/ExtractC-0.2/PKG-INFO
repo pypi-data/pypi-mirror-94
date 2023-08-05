@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: ExtractC
+Version: 0.2
+Summary: Extract Vietnamese Card
+Home-page: https://github.com/trongbui1105/ExtractCard.git
+Author: TrongBui
+Author-email: buiquoctrong110500@gmail.com
+License: MIT
+Download-URL: https://github.com/trongbui1105/ExtractCard/archive/0.1.5.tar.gz
+Description: UNKNOWN
+Keywords: extract
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
