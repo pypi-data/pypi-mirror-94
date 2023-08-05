@@ -1,0 +1,7 @@
+
+    [console_scripts]
+    aiboot_start=aiboot.aiboot:start
+    aiboot_pack_model=aiboot.pack_model:pack_model
+    aiboot_build_docker=aiboot.pack_model:build_docker
+    cubeai_onboarding=aiboot.onboarding:onboarding
+    
