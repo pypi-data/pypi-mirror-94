@@ -1,0 +1,4 @@
+sanic>=18.2
+xmltodict>=0.12.0
+aiohttp>=3.6.2
+ujson>=1.35
