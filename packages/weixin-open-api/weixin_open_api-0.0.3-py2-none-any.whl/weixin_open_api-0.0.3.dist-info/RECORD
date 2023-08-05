@@ -1,0 +1,13 @@
+test/WeixinOpenClientTest.py,sha256=aYGJVcZ1SNpr8hpVXUnzB8rWdX7rYvtXdKVhhXFYYMI,737
+test/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+weixin_open_api/__init__.py,sha256=gCpbn7JKX5jkn7BnWdVj1pGRBgzJBsV39yQ_6SqQ8r0,117
+weixin_open_api/logger.py,sha256=_u4SFQKtTF0kIDf4MBdW1ULLifDsj9cATcUZr39eDE8,143
+weixin_open_api/weixin_open_api.py,sha256=IbGERoo1ZgyYHDdU8Zve9vE0mnH_-wZqCL1wEYjnGQ8,1685
+weixin_open_api/weixin_open_client.py,sha256=QFFOGVwhqKsQNgvjd3EflEkQKtAi_6M4H_1aN-GQvbI,2381
+weixin_open_api/utils/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+weixin_open_api/utils/sign.py,sha256=7UDh74_UYkhnD80KPXw3q0Fx1BTvN9NGL4hAv7wYowg,1288
+weixin_open_api-0.0.3.dist-info/METADATA,sha256=kqasoSuAwgY5vkEm2QAScIIwzy6qSBXvHYdgRrlnf4Y,1446
+weixin_open_api-0.0.3.dist-info/WHEEL,sha256=DgcoKJDfsYFbFLUrngH-aDjJZvn8UqGD3gZyEvGv0dg,92
+weixin_open_api-0.0.3.dist-info/top_level.txt,sha256=easxLVbGmw-SllSxeCR50nLHIivPEHvhH74sKbhfnPs,21
+weixin_open_api-0.0.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+weixin_open_api-0.0.3.dist-info/RECORD,,
