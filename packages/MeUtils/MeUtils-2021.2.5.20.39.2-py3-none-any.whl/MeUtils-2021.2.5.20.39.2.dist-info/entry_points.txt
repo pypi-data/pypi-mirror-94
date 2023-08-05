@@ -1,0 +1,7 @@
+[console_scripts]
+mecli = meutils.cli:cli
+mecli-conf = meutils.clis.conf:conf_cli
+mecli-pipe = meutils.pipe:cli
+mi-ann = meutils.clis.ann:main
+mi-dsl = meutils.clis.dsl:main
+
