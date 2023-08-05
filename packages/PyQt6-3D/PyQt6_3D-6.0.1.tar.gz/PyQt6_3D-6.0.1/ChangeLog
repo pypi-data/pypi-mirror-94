@@ -1,0 +1,81 @@
+2021-02-05  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS:
+	Released as v6.0.1.
+	[df34f36f4b9c] [6.0.1] <6.0-maint>
+
+2021-02-04  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* NEWS:
+	Updated the NEWS file.
+	[1c88f1deed35] <6.0-maint>
+
+2021-01-17  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* README, pyproject.toml:
+	Wheels depend on an external Qt wheel rather than bundle Qt.
+	[8e313f8665e9] <6.0-maint>
+
+2021-01-07  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* rb-product.toml:
+	There is no longer any need to explcitly specify the next release
+	number.
+	[17e53f63751e] <6.0-maint>
+
+	* pyproject.toml:
+	Fixed building when not concatenating generated C++ source files.
+	[5f645afcf6ff] <6.0-maint>
+
+2021-01-04  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgtags:
+	Added tag 6.0.0 for changeset 52bfb2314668
+	[b1fc4aace33c]
+
+	* NEWS:
+	Released as v6.0.0.
+	[52bfb2314668] [6.0.0]
+
+	* NEWS:
+	Updated the NEWS file.
+	[3e347601fe29]
+
+2020-12-31  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* DevelopersNotes.txt:
+	Added DevelopersNotes.txt.
+	[2092d948cd7d]
+
+2020-12-30  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* PyQt6-3D.msp, mksccode/Qt3DAnimation.versions,
+	mksccode/Qt3DCore.versions, mksccode/Qt3DExtras.versions,
+	mksccode/Qt3DInput.versions, mksccode/Qt3DLogic.versions,
+	mksccode/Qt3DRender.versions:
+	Completed the updates for Qt6.
+	[f6ccc4d429a5]
+
+	* PyQt6-3D.msp:
+	Updated Qt3DLogic and Qt3DRender for Qt6.
+	[fdd740300b7f]
+
+	* PyQt6-3D.msp:
+	Updated Qt3DInput for Qt6.
+	[feda0bf13b2c]
+
+	* PyQt6-3D.msp:
+	Updated Qt3DCore and Qt3DExtras for Qt6.
+	[eef50ba510fc]
+
+	* PyQt6-3D.msp:
+	Updated Qt3DAnimation for Qt6.
+	[6723a41d99e8]
+
+2020-12-29  Phil Thompson  <phil@riverbankcomputing.com>
+
+	* .hgignore, NEWS, PyQt6-3D.msp, README, pyproject.toml, rb-
+	product.toml, sip/Qt3DCore/qsharedpointer.sip,
+	sip/Qt3DRender/qlist.sip:
+	The initial commit of PyQt6-3D based on PyQt3D.
+	[fb0b080e7c41]
