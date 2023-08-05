@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: nidhoggr_core
+Version: 0.5.6
+Summary: Domain model for nidhoggr
+Home-page: https://git.mc4ep.org/mc4ep/nidhoggr-core
+Author: Andriy Kushnir (Orhideous)
+Author-email: me@orhideous.name
+License: MIT
+Description: # nidhoggr-core
+        
+        This package contains all domain model for [nighoggr] library for
+        convenient interop with other Python applications (like
+        [nidhoggr-requests]).
+        
+        [nidhoggr]: https://pypi.org/project/nidhoggr/
+        [nidhoggr-requests]: https://pypi.org/project/nidhoggr-requests/
+        
+        
+        # History
+        
+        ## 0.5.0 (2020-01-10)
+        
+        * **Breaking** Always return User from UserRepository
+        
+        ## 0.4.1 (2020-01-09)
+        
+        * Improved API consistency
+        
+        ## 0.4.0 (2020-01-09)
+        
+        * **Breaking** Split StatusResponse on two classes
+        
+        ## 0.3.0 (2020-01-06)
+        
+        * **Breaking** Return StatusResponse from each method of repositories
+        
+        ## 0.1.0 (2019-12-31)
+        
+        * First release on PyPI.
+        
+Keywords: Minecraft,Yggdrasil,Authentication
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown

@@ -1,0 +1,5 @@
+wheel>=0.33
+pylint>=2.4
+twine>=1.12
+flake8>=3.7
+Sphinx>=1.8
