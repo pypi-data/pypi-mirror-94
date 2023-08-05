@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: SplitsPy
+Version: 0.0.10
+Summary: Phylogenetic outlines
+Home-page: http://github.com/husonlab/SplitsPhy
+Author: Daniel H. Huson
+Author-email: daniel.huson@uni-tuebingen.de
+License: GPL
+Description: UNKNOWN
+Keywords: phylogenetics,network
+Platform: UNKNOWN
+Requires-Python: >=3.5, <4
