@@ -1,0 +1,35 @@
+from typing import Any
+
+DESCRIPTOR: Any
+SecurityType: Any
+SecurityType_Unknown: int
+SecurityType_Stock: int
+SecurityType_Fund: int
+SecurityType_Index: int
+SecurityType_Future: int
+SecurityType_Option: int
+SecurityType_Credit: int
+SecurityType_Bond: int
+Quote: Any
+L2OrderBook: Any
+L2OrderBooks: Any
+L2OrderQueue: Any
+L2OrderQueues: Any
+L2Order: Any
+L2Orders: Any
+L2Transaction: Any
+L2Transactions: Any
+Tick: Any
+Ticks: Any
+Bar: Any
+Bars: Any
+InstrumentInfo: Any
+InstrumentInfos: Any
+Instrument: Any
+Instruments: Any
+Dividend: Any
+Dividends: Any
+ContinuousContract: Any
+ContinuousContracts: Any
+Constituent: Any
+Constituents: Any
