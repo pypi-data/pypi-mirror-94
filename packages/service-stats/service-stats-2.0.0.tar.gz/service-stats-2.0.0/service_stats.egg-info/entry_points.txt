@@ -1,0 +1,3 @@
+[console_scripts]
+service-stats = service_stats.app:main
+
