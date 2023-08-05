@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: libreflow.thesiren
+Version: 0.0.3
+Summary: A Kabaret flow tailor-made for the production of a feature film
+Home-page: https://gitlab.com/lfs.coop/libreflow
+Author: Flavio Perez
+Author-email: flavio@lfs.coop
+License: LGPLv3+
+Description: # The Siren Flow
+        ### Description
+        This project is part of the wider asset management project [Libre Flow](https://gitlab.com/lfs.coop/libreflow) based on [Kabaret Studio](https://gitlab.com/kabaretstudio/kabaret) framework and its *flow* paradigm. The latter consists in describing the structure of a fabrication pipeline and the data circulating on it.
+        *The Siren* flow is aimed at supporting the fabrication of the feature film *The Siren*.
+        
+        ### Dependencies
+        
+        * Python (>= 3.7)
+        * Kabaret
+        * Libreflow
+        
+        ### Installation
+        
+        Coming soon...
+        
+        # Changelog
+        
+        All notable changes to this project will be documented in this file.
+        
+        The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+        and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)[^1].
+        
+        <!---
+        Types of changes
+        
+        - Added for new features.
+        - Changed for changes in existing functionality.
+        - Deprecated for soon-to-be removed features.
+        - Removed for now removed features.
+        - Fixed for any bug fixes.
+        - Security in case of vulnerabilities.
+        
+        -->
+        
+        ## [Unreleased]
+        
+        ## [0.0.3] - 2021-02-04
+        
+        Configuration for auto deployment
+        
+        ## [0.0.1] - 2021-02-04
+        
+        Initial public commit and PyPI setup. This version is an early version of libreflow.the_siren. It defines a flow derived from Libre Flow's baseflow, and designed to support the workflow and dataflow involved in an animation feature film project.
+        
+        ### Fixed
+        
+        libreflow.the_siren is now ready for use as a pip package
+        
+Keywords: kabaret cgwire kitsu gazu animation pipeline libreflow
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
