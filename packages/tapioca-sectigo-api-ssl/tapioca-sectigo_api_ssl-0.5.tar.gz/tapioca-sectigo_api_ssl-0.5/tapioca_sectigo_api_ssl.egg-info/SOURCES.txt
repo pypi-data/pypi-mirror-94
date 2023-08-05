@@ -1,0 +1,11 @@
+README.md
+setup.py
+tapioca_sectigo_api_ssl/__init__.py
+tapioca_sectigo_api_ssl/resource_mapping.py
+tapioca_sectigo_api_ssl/tapioca_sectigo_api_ssl.py
+tapioca_sectigo_api_ssl.egg-info/PKG-INFO
+tapioca_sectigo_api_ssl.egg-info/SOURCES.txt
+tapioca_sectigo_api_ssl.egg-info/dependency_links.txt
+tapioca_sectigo_api_ssl.egg-info/not-zip-safe
+tapioca_sectigo_api_ssl.egg-info/requires.txt
+tapioca_sectigo_api_ssl.egg-info/top_level.txt
