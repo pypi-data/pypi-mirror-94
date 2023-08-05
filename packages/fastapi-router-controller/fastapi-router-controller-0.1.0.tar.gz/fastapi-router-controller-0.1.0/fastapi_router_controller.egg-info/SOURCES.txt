@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+fastapi_router_controller/__init__.py
+fastapi_router_controller.egg-info/PKG-INFO
+fastapi_router_controller.egg-info/SOURCES.txt
+fastapi_router_controller.egg-info/dependency_links.txt
+fastapi_router_controller.egg-info/requires.txt
+fastapi_router_controller.egg-info/top_level.txt
+fastapi_router_controller/lib/__init__.py
+fastapi_router_controller/lib/controller.py
+fastapi_router_controller/lib/controller_loader.py
