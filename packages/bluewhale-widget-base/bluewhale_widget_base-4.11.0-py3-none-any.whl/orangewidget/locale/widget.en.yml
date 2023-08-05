@@ -1,0 +1,172 @@
+owreport:
+  name: "Report"
+  placeholder_write_comment: "Write a comment..."
+  btn:
+    return_to_scheme: "Back to Last Scheme"
+    save: "Save"
+    print: "Print"
+  dialog:
+    save_report: "Save Report"
+    print_report: "Print report"
+  msg:
+    set_instance_deprecate: "OWReport.set_instance is deprecated"
+    remove: "Remove"
+    open_scheme: "Open Scheme"
+  msg_box:
+    error: "Error"
+    permission_error: "Permission error when trying to write report."
+    permission_error_occur: "Permission error occurred while saving '{}'."
+
+visual_settings:
+  visual_settings: "Visual Settings"
+
+widget:
+  input_no_data: "No data on input"
+  output_no_data: "No data on output"
+  tooltip:
+    widget_help: "Show widget help"
+    save_image: "Save Image"
+    report: "Report"
+    setting_default: "Reset settings to defaults"
+    set_visual_settings: "Set visual settings"
+  btn:
+    help: "Help"
+    help_tip: "Show help"
+    report: "Report"
+    save_image: "Save Image"
+    show_status_bar: "Show status bar"
+    show_status_bar_tip: "Show status bar"
+    got_it: "Ok, got it"
+    learn_more: "Learn more\N{HORIZONTAL ELLIPSIS}"
+  warn:
+    property_change: "'OWBaseWidget.info' is a property since 3.19 and will be made read only in v4.0."
+
+settings:
+  warn:
+    miss_instance: "{0} is declared as setting on {1} but not present on instance."
+    read_defaults_error: "Could not read defaults for widget {0}\n The following error occurred:\n\n{1}"
+    setting_error: "{0} has not been declared as setting provider in {1}.Settings will not be saved/loaded properly. Defaults will be used instead."
+
+io:
+  png_desc: "Portable Network Graphics"
+  clipboard_desc: "System Clipboard"
+  svg_desc: "Scalable Vector Graphics"
+  matplotlib_desc: "Python Code (with Matplotlib)"
+  matplotlibpdf_desc: "Portable Document Format (from Matplotlib)"
+  pdf_desc: "Portable Document Format"
+
+gui:
+  ignore_editable: "'editable' is ignored for searchable combo box."
+  deprecated_string_literals: "string literals for orientation are deprecated"
+  deprecated_boolean_value: "boolean values for orientation are deprecated"
+  btn:
+    send_selection: "Send Selection"
+    send_automatically: "Send Automatically"
+    apply_automatically: "Apply Automatically"
+    automatically: " Automatically"
+    apply: "Apply"
+
+config:
+  application_name: "Blue Whale Canvas"
+  warn_cache_dir_deprecated: "'{}.cache_dir' is deprecated."
+  warn_log_dir_deprecated: "'{}.log_dir' is deprecated."
+  warn_setting_dir_deprecated: "'{}.widget_settings_dir' is deprecated."
+
+errorreporting:
+  win_title_error: "Unexpected Error"
+  label_report_error_to_developer: "The program encountered an unexpected error. Please<br>report it anonymously to the developers.<br><br>The following data will be reported:"
+  checkbox_include_workflow: "Include workflow (data will NOT be transmitted)"
+  btn:
+    send_report: "Send Report (Thanks!)"
+    don't_send: "Don't Send"
+  msg:
+    error_encountered: "Error Encountered"
+    error_encountered_text: "Error encountered{}:<br><br><tt>{}</tt>"
+    widget: " in widget <b>{}</b>"
+
+mainwindow:
+  dialog_open_report: "Open Report"
+  btn:
+    show_report: "Show report"
+    show_report_tip: "Show a report window"
+    open_report: "Open Report..."
+    open_report_tip: "Open a saved report"
+    reset_widget_setting: "Reset Widget Settings..."
+  msg_box:
+    clear_settings_title: "Clear settings"
+    clear_settings_text: "Blue Whale needs to be restarted for the changes to take effect."
+    clear_settings_info_text: "Press OK to close Blue Whale now."
+    reset_settings: "Settings will still be reset at next application start"
+    report_window_title: "Report window"
+    report_window_text: "The report contains unsaved changes."
+    report_window_info_text: "Would you like to save the report?"
+
+widgetsscheme:
+  widget_state_change: "State change for a non-tracked widget {}"
+  btn:
+    show_settings: "Show settings"
+    show_settings_tip: "Show widget settings"
+
+line:
+  filter: "Filter..."
+
+concurrent:
+  warn:
+    deprecate_iscancelled: "isCancelled is deprecated"
+    deprecated_isdone: "isDone is deprecated"
+
+filedialogs:
+  warn_fix_error: "Mismatching extension Extension '{}' does not match the chosen file format, {}.\n\n Would you like to fix this?"
+  dialog_title_save_as: "Save as..."
+  dialog_title_open: "Open..."
+  all_readable_files: "All readable files (*{})"
+  row_none: "(none)"
+  btn:
+    change_extension: "Change extension to "
+    save_as: "Save as "
+    back: "Back"
+
+itemmodels:
+  pytablemodel_modification_failed: "Can't modify PyTableModel when it's sorted"
+
+messagewidget:
+  msg:
+    err_encountered_hcf: "Encountered a HCF"
+    err_encountered_hcf_detail: "<em>AAA! It burns.</em>"
+    warn_achtung: "ACHTUNG!"
+    warn_achtung_detail: "<div style=\"color: red\">DAS KOMPUTERMASCHINE IST NICHT FÜR DER GEFINGERPOKEN</div>"
+    info_rain_spain_plain: "The rain in spain falls mostly on the plain"
+    info_rain_spain_plain_detail: "<a href=\"https://www.google.si/search?q=Average+Yearly+Precipitation+in+Spain\">Link</a>"
+    err_not_do: "I did not do this!"
+    err_not_do_info: "The computer made suggestions..."
+    err_not_do_detail: "... and the default options was yes."
+
+overlay:
+  btn_ok: "Ok"
+  btn_help: "Help"
+
+progressbar:
+  percentage_complete: " (0% complete)"
+  called_error: "progressBarSet() called without a preceding progressBarInit()"
+
+saveplot:
+  msg_error: "Error"
+  msg_error_text: "Error occurred while saving file '{}': {}"
+
+svgexporter:
+  name: "Scalable Vector Graphics (SVG)"
+  desc: "Scalable Vector Graphics (*.svg)"
+
+webview:
+  warn:
+    set_environment: "To debug QWebEngineView, set environment variable QTWEBENGINE_REMOTE_DEBUGGING={port} and then visit http://127.0.0.1:{port}/ in a Chromium-based browser. See https://doc.qt.io/qt-5/qtwebengine-debugging.html This has also been done for you."
+    js_not_readable: "://qtwebchannel/qwebchannel.js is not readable."
+    construct_qobjects: "Don't expose QWidgets in WebView. Construct minimal QObjects instead."
+
+btn:
+  ok: "OK"
+  cancel: "Cancel"
+  right: "Yes"
+  wrong: "No"
+  save: "Save"
+  discard: "Discard"

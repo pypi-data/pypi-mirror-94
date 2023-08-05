@@ -1,0 +1,172 @@
+owreport:
+  name: "报表"
+  placeholder_write_comment: "写评论…"
+  btn:
+    return_to_scheme: "返回上一个方案"
+    save: "保存"
+    print: "打印"
+  dialog:
+    save_report: "保存报表"
+    print_report: "打印报表"
+  msg:
+    set_instance_deprecate: "OWReport.set_instance已经被弃用"
+    remove: "移除"
+    open_scheme: "打开方案"
+  msg_box:
+    error: "错误"
+    permission_error: "尝试写入报表时出现权限错误。"
+    permission_error_occur: "保存{}时出现权限错误。"
+
+visual_settings:
+  visual_settings: "显示设置"
+
+widget:
+  input_no_data: "没有输入数据"
+  output_no_data: "没有输出数据"
+  tooltip:
+    widget_help: "显示组件帮助"
+    save_image: "保存图像"
+    report: "报表"
+    setting_default: "将设置重置为默认状态"
+    set_visual_settings: "显示设置"
+  btn:
+    help: "帮助"
+    help_tip: "显示帮助"
+    report: "报表"
+    save_image: "保存图像"
+    show_status_bar: "显示状态栏"
+    show_status_bar_tip: "显示状态栏"
+    got_it: "好的，我知道了"
+    learn_more: "了解更多信息\N{HORIZONTAL ELLIPSIS}"
+  warn:
+    property_change: "是3.19之后的属性，将在v4.0中设置为只读。"
+
+settings:
+  warn:
+    miss_instance: "{0}声明为{1}上的设置，但实例上不存在。"
+    read_defaults_error: "无法读取组件{0}的默认值\n发生以下错误：\ n\n{1}"
+    setting_error: "{0}尚未在{1}中声明为设置提供程序。设置将无法正确保存/加载。将改为使用默认值。"
+
+io:
+  png_desc: "便携式网络图形"
+  clipboard_desc: "系统剪贴板"
+  svg_desc: "可缩放矢量图形"
+  matplotlib_desc: "Python代码（带Matplotlib）"
+  matplotlibpdf_desc: "可移植文档格式（来自Matplotlib）"
+  pdf_desc: "可移植文档格式"
+
+gui:
+  ignore_editable: "可搜索组合框的“可编辑”被忽略。"
+  deprecated_string_literals: "不推荐使用定向字符串"
+  deprecated_boolean_value: "不推荐使用定向字符串boolean值"
+  btn:
+    send_selection: "发送选定行"
+    send_automatically: "自动发送"
+    apply_automatically: "自动应用"
+    automatically: " 自动"
+    apply: "应用"
+
+config:
+  application_name: "蓝鲸画布"
+  warn_cache_dir_deprecated: "'{}.cache_dir'已被弃用。"
+  warn_log_dir_deprecated: "'{}.log_dir'已被弃用。"
+  warn_setting_dir_deprecated: "'{}.widget_settings_dir'已被弃用。"
+
+errorreporting:
+  win_title_error: "意外错误"
+  label_report_error_to_developer: "程序遇到意外错误。请匿名向开发人员报告。<br><br>将报告以下数据："
+  checkbox_include_workflow: "包括工作流（不传输数据）"
+  btn:
+    send_report: "发送报告"
+    don't_send: "不发送"
+  msg:
+    error_encountered: "遇到错误"
+    error_encountered_text: "遇到错误{}:<br><br><tt>{}</tt>"
+    widget: "在组件<b>{}</b>"
+
+mainwindow:
+  dialog_open_report: "打开报表"
+  btn:
+    show_report: "显示报表"
+    show_report_tip: "显示报表窗口"
+    open_report: "打开报表…"
+    open_report_tip: "打开保存的报表"
+    reset_widget_setting: "重置组件设置…"
+  msg_box:
+    clear_settings_title: "清除设置"
+    clear_settings_text: "需要重新启动蓝鲸以使更改生效"
+    clear_settings_info_text: "点击“确定”关闭蓝鲸"
+    reset_settings: "下次启动应用程序时仍将重置设置"
+    report_window_title: "报表窗口"
+    report_window_text: "报表窗口包含未保存的更改"
+    report_window_info_text: "要保存报表吗？"
+
+widgetsscheme:
+  widget_state_change: "未跟踪组件{}{}的状态更改"
+  btn:
+    show_settings: "显示设置"
+    show_settings_tip: "显示组件设置"
+
+line:
+  filter: "过滤器…"
+
+concurrent:
+  warn:
+    deprecate_iscancelled: "isCancelled已弃用"
+    deprecated_isdone: "isDone已弃用"
+
+filedialogs:
+  warn_fix_error: "扩展名{}不匹配与所选文件格式{}不匹配。\n\n要修复此问题吗？"
+  dialog_title_save_as: "另存为…"
+  dialog_title_open: "打开…"
+  all_readable_files: "所有可读文件(*{})"
+  row_none: "(无)"
+  btn:
+    change_extension: "更改扩展名为"
+    save_as: "另存为"
+    back: "返回"
+
+itemmodels:
+  pytablemodel_modification_failed: "排序后无法修改PyTableModel"
+
+messagewidget:
+  msg:
+    err_encountered_hcf: "遇到HCF"
+    err_encountered_hcf_detail: "<em>AAA!已损坏。</em>"
+    warn_achtung: "ACHTUNG!"
+    warn_achtung_detail: "<div style=\"color: red\">DAS KOMPUTERMASCHINE IST NICHT FÜR DER GEFINGERPOKEN</div>"
+    info_rain_spain_plain: "The rain in spain falls mostly on the plain"
+    info_rain_spain_plain_detail: "<a href=\"https://www.google.si/search?q=Average+Yearly+Precipitation+in+Spain\">链接</a>"
+    err_not_do: "我没有这么做!"
+    err_not_do_info: "计算机提出了建议…"
+    err_not_do_detail: "… 默认选项是“是”。"
+
+overlay:
+  btn_ok: "好的"
+  btn_help: "帮助"
+
+progressbar:
+  percentage_complete: " (0% 完成)"
+  called_error: "progressBarSet() 没有之前的调用 progressBarInit()"
+
+saveplot:
+  msg_error: "错误"
+  msg_error_text: "保存文件时出错'{}': {}"
+
+svgexporter:
+  name: "可缩放矢量图形(SVG)"
+  desc: "可缩放矢量图形(*.svg)"
+
+webview:
+  warn:
+    set_environment: "To debug QWebEngineView，设置环境变量QTWEBENGINE_REMOTE_DEBUGGING={port}之后访问http://127.0.0.1:{port}/在基于Chromium的浏览器中。查看https://doc.qt.io/qt-5/qtwebengine-debugging.html也已经完成。"
+    js_not_readable: "://qtwebchannel/qwebchannel.js不可读。"
+    construct_qobjects: "不要将QWidgets暴露在网络视图。而是构造最小的QObjects。"
+
+btn:
+  ok: "确定"
+  cancel: "取消"
+  right: "是"
+  wrong: "否"
+  save: "保存"
+  discard: "不保存"
