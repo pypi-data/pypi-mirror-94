@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+IOHMM/IOHMM.py
+IOHMM/__init__.py
+IOHMM/forward_backward.py
+IOHMM/linear_models.py
+IOHMM.egg-info/PKG-INFO
+IOHMM.egg-info/SOURCES.txt
+IOHMM.egg-info/dependency_links.txt
+IOHMM.egg-info/requires.txt
+IOHMM.egg-info/top_level.txt
+IOHMM.egg-info/zip-safe

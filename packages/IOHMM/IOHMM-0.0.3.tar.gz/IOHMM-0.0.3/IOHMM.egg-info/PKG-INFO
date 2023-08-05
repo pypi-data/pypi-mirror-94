@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: IOHMM
+Version: 0.0.3
+Summary: A python library for Input Output Hidden Markov Models
+Home-page: https://github.com/Mogeng/IOHMM
+Author: Mogeng Yin
+Author-email: mogengyin@berkeley.edu
+License: BSD License
+Description: UNKNOWN
+Keywords: python hidden-markov-model graphical-models sequence-to-sequence machine-learning linear-models sequence-labeling supervised-learning semi-supervised-learning unsupervised-learning time-series scikit-learn statsmodels
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: tests
