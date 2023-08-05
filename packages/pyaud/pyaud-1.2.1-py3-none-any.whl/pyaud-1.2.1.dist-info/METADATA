@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: pyaud
+Version: 1.2.1
+Summary: Automate quality-check of Python package with bundled utils
+Home-page: https://github.com/jshwi/pyaud
+Author: Stephen Whitlock
+Maintainer: Stephen Whitlock
+Maintainer-email: stephen@jshwisolutions.com
+License: MIT
+Keywords: python3.8,audit,deploy,dev,black,codecov,mypy,pipfile-requirements,pylint,pytest,pytest-cov,sphinx,vulture
+Platform: GNU/Linux
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Requires-Dist: appdirs (==1.4.4)
+Requires-Dist: black (==20.8b1)
+Requires-Dist: codecov (==2.1.11)
+Requires-Dist: coverage (==5.3.1)
+Requires-Dist: mypy (==0.800)
+Requires-Dist: object-colors (==1.0.8)
+Requires-Dist: pipfile-requirements (==0.3.0)
+Requires-Dist: pyblake2 (==1.1.2)
+Requires-Dist: pylint (==2.6.0)
+Requires-Dist: pytest-cov (==2.11.1)
+Requires-Dist: pytest-profiling (==1.7.0)
+Requires-Dist: pytest-randomly (==3.5.0)
+Requires-Dist: pytest-sugar (==0.9.4)
+Requires-Dist: pytest (==6.2.1)
+Requires-Dist: sphinx (==3.4.3)
+Requires-Dist: sphinxcontrib-fulltoc (==1.2.0)
+Requires-Dist: sphinxcontrib-programoutput (==0.16)
+Requires-Dist: vulture (==2.3)
+
+PyAud
+=====
+.. image:: https://github.com/jshwi/pyaud/workflows/build/badge.svg
+    :target: https://github.com/jshwi/pyaud/workflows/build/badge.svg
+    :alt: audit
+.. image:: https://img.shields.io/badge/python-3.8-blue.svg
+    :target: https://www.python.org/downloads/release/python-380
+    :alt: python3.8
+.. image:: https://img.shields.io/pypi/v/pyaud
+    :target: https://img.shields.io/pypi/v/pyaud
+    :alt: pypi
+.. image:: https://codecov.io/gh/jshwi/pyaud/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/jshwi/pyaud
+    :alt: codecov.io
+.. image:: https://readthedocs.org/projects/pyaud/badge/?version=latest
+    :target: https://pyaud.readthedocs.io/en/latest/?badge=latest
+    :alt: readthedocs.org
+.. image:: https://img.shields.io/badge/License-MIT-blue.svg
+    :target: https://lbesson.mit-license.org/
+    :alt: mit
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+    :alt: black
+
+Automate quality-check of Python package with bundled utils
+
+.. code-block:: console
+
+    usage: pyaud [-h] [-c] [-d] [-s] [-v] [--path PATH] MODULE
+
+    positional arguments:
+      MODULE          choice of module: ``modules`` to list all options
+
+    optional arguments:
+      -h, --help      show this help message and exit
+      -c, --clean     clean unversioned files prior to any process
+      -d, --deploy    include test and docs deployment after audit
+      -s, --suppress  continue without stopping for errors
+      -v, --verbose   incrementally increase logging verbosity
+      --path PATH     set alternative path to present working dir
+    ---------------------------------------------------------------------------
+
+    audit                   Run all checks
+    clean                   Remove all unversioned files unless excluded
+    coverage                Run ``pytest`` with ``coverage``
+    deploy                  Deploy code coverage and documentation
+    deploy-cov              Deploy code coverage to ``codecov.io``
+    deploy-docs             Deploy ``Sphinx`` docs to ``gh-pages``
+    docs                    Compile documentation with ``Sphinx``
+    files                   Run ``requirements``, ``toc``, and ``whitelist``
+    format                  Format all Python project files with ``Black``
+    lint                    Show possible corrections with ``pylint``
+    requirements            Create requirements.txt from Pipfile.lock
+    tests                   Run unittests with ``pytest``
+    toc                     Update docs/<PACKAGENAME>.rst
+    typecheck               Inspect files for type errors with ``mypy``
+    unused                  Inspect files for unused code with ``vulture``
+    whitelist               Update ``vulture`` whitelist.py
+..
+
+
