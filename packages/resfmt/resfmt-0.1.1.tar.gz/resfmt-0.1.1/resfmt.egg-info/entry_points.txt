@@ -1,0 +1,3 @@
+[console_scripts]
+resfmt = resfmt:main
+

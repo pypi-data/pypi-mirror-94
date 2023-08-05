@@ -1,0 +1,9 @@
+README.md
+setup.py
+resfmt/__init__.py
+resfmt/__main__.py
+resfmt.egg-info/PKG-INFO
+resfmt.egg-info/SOURCES.txt
+resfmt.egg-info/dependency_links.txt
+resfmt.egg-info/entry_points.txt
+resfmt.egg-info/top_level.txt
