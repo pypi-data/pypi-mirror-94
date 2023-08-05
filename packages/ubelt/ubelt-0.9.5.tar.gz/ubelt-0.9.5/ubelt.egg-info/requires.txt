@@ -1,0 +1,44 @@
+six
+ordered-set
+
+[:platform_system == "Windows"]
+jaraco.windows
+
+[:python_version < "3.0"]
+typing
+
+[all]
+six
+ordered-set
+numpy
+xxhash
+Pygments
+xdoctest
+pytest
+pytest-cov
+pytest-timeout
+coverage
+codecov
+
+[all:platform_system == "Windows"]
+jaraco.windows
+colorama
+
+[all:python_version < "3.0"]
+typing
+
+[optional]
+numpy
+xxhash
+Pygments
+
+[optional:platform_system == "Windows"]
+colorama
+
+[tests]
+xdoctest
+pytest
+pytest-cov
+pytest-timeout
+coverage
+codecov
