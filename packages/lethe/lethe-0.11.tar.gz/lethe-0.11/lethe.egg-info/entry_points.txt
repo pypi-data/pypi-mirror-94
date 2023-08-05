@@ -1,0 +1,5 @@
+[console_scripts]
+lethe = lethe:endpoints.main
+lethe-fetch = lethe:endpoints.fetch
+lethe-push = lethe:endpoints.push
+
