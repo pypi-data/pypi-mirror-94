@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+cognitoinator.egg-info/PKG-INFO
+cognitoinator.egg-info/SOURCES.txt
+cognitoinator.egg-info/dependency_links.txt
+cognitoinator.egg-info/requires.txt
+cognitoinator.egg-info/top_level.txt
+src/cognitoinator/__init__.py
+src/cognitoinator/providers.py
