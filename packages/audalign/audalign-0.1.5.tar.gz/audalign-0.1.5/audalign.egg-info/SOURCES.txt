@@ -1,0 +1,14 @@
+README.md
+setup.py
+audalign/__init__.py
+audalign/align.py
+audalign/datalign.py
+audalign/filehandler.py
+audalign/fingerprint.py
+audalign/recognize.py
+audalign/visrecognize.py
+audalign.egg-info/PKG-INFO
+audalign.egg-info/SOURCES.txt
+audalign.egg-info/dependency_links.txt
+audalign.egg-info/requires.txt
+audalign.egg-info/top_level.txt
