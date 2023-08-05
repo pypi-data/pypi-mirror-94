@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: stamdata3
+Version: 1.0
+Summary: A Python class structure to work with data from stamdata3 XML files
+Home-page: https://github.com/StorFollo-IKT/stamdata3-py
+Author: Anders Birkenes
+Author-email: datagutten@datagutten.net
+License: GPL
+Description: # stamdata3-py
+        A Python class structure to work with data from stamdata3 XML files
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
