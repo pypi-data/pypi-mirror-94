@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: mp-school-info
+Version: 1.0.0
+Summary: A simple package for school info
+Home-page: https://github.com/realSaeedHassani/school_info
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Requires-Dist: Django (>=2.0)
+
+این اولین پکیج من هست.
+
+یه سری توضیحات میتونین اینجا قرار بدیین.
+مثلا چجوری برنامه نویس ها میتونن این پکیج رو توی برنامه هاشون نصب کنن.
+
+```sh
+$ pip install mp-school-info
+```
+
+License
+
+MIT
+
