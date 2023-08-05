@@ -1,0 +1,3 @@
+[console_scripts]
+ApiLogicServer = app_logic_server.api_logic_server_cli:start
+
