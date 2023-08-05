@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: text_to_speech
+Version: 1.4.0
+Summary: A simple text to speech engine
+Home-page: https://github.com/dewittethomas/text-to-speech
+Author: Thomas Dewitte
+Author-email: thomasdewittecontact@gmail.com
+License: MIT
+Description: # text-to-speech
+        
+        [![npm](https://img.shields.io/pypi/v/text-to-speech.svg)](https://pypi.org/project/text-to-speech/)
+        
+        A simple text to speech engine
+        
+        ## Installation
+        To install the package run this command:
+        
+        ```bash
+        pip install text-to-speech
+        ```
+        
+        ## Usage
+        
+        ### Speak
+        
+        Write â€˜helloâ€™ in English
+        
+        ```python
+        from text_to_speech import speak 
+        
+        speak("hello")
+        ```
+        
+        Write â€˜bonjourâ€™ in French
+        
+        ```python
+        from text_to_speech import speak 
+        
+        speak("bonjour", lang="fr")
+        ```
+        
+        Write â€˜helloâ€™ in English slow
+        
+        ```python
+        from text_to_speech import speak 
+        
+        speak("hello", lang="en", slow=True)
+        ```
+        
+        Write â€˜helloâ€™ in English and save the file as "speech.mp3"
+        ```python
+        from text_to_speech import speak 
+        
+        speak("hello", lang="en", save=True)
+        ```
+        
+        Write â€˜helloâ€™ in English and save the file as "hello.mp3"
+        ```python
+        from text_to_speech import speak 
+        
+        speak("hello", lang="en", save=True, file="hello.mp3")
+        ```
+        
+        
+        "text" is the text, and "lang" is an IETF language tag such as en or pt-br, "slow" is the option if it has to be read slow or not, "save" is if it has to be saved or not by default it is saved as "speech.mp3", "file" is if "save" = True you could choose a specific path or filename.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >= 3.5
+Description-Content-Type: text/markdown
