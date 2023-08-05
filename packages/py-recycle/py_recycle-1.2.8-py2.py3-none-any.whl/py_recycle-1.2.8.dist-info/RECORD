@@ -1,0 +1,15 @@
+py_recycle-1.2.8.dist-info/DESCRIPTION.rst,sha256=iNw1yfVn2JVCsEfH_bp3OcrDRy6nwCdes5UItCtfpXc,35
+py_recycle-1.2.8.dist-info/METADATA,sha256=191jstwxZAOBAb6ItCSEWfKkKiQPmPktvr4uypfbtqw,1081
+py_recycle-1.2.8.dist-info/RECORD,,
+py_recycle-1.2.8.dist-info/WHEEL,sha256=GrqQvamwgBV4nLoJe0vhYRSWzWsx7xjlt74FT0SWYfE,110
+py_recycle-1.2.8.dist-info/entry_points.txt,sha256=OTWHgABnFUGmUD4zVdnjR9Ajaq-QCb4VPnsrBQrvPR0,197
+py_recycle-1.2.8.dist-info/metadata.json,sha256=x2vVFMrpiggxClv95EGQ5LOZEZDIlR33NBVeendgyKs,1621
+py_recycle-1.2.8.dist-info/top_level.txt,sha256=gBLIED0d7KnFQmx_ZRWW7mtmmH36t70-z6yCGjYa6HA,8
+recycle/__init__.py,sha256=ovguP4wzQEDNguczwiZnhMm4dRRVcvnzmHrfQtlRCNQ,15
+recycle/config.py,sha256=XMvgaxf9XYIdq6R1To37OzcqUhncsgUH_MhGrhM4HVw,361
+recycle/init_env.py,sha256=dx5V0I_eYLRgm09VHTKDu1lCI_cEOrTyOwW6qJXx68Q,3565
+recycle/lib.py,sha256=_WQAuIn1WrJRejFBZwXdgGA4TU7lSoqCP7jPdKOooQY,3695
+recycle/move_to_trash.py,sha256=yrn8Yz4RXEMqbR5Q09utBXNhQzL7Aymn1LX00Ll01A4,854
+recycle/permanently_delete.py,sha256=eyb2w4x4q2259CBCwusO5fHFQ27Gr-lUzO5mM7kEn_k,1379
+recycle/recover_from_trash.py,sha256=fVa6oRZ9M88aazO4JNK2rD1NS8r3EDd6H6LS8AghHnY,1956
+recycle/trash_tree.py,sha256=VfNKqR80RflCGvzSGHHz09SAFRHd66ftivt1AKCPLrU,2383
