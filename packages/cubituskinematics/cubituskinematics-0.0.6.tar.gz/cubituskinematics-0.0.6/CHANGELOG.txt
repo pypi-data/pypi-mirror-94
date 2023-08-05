@@ -1,0 +1,32 @@
+Change Log
+----------
+
+0.0.6 (02/06/2021)
+------------------
+- Removed 'é' from all strings that contained 'bézier' because of utf-8 encoding problem
+- Improved "set_end_effector" function
+
+0.0.5 (02/05/2021)
+------------------
+- More of major code changes for better functionality
+- Better UI ( more options, better user-asking algorithm, prettier 'about' strings )
+- Added examples for each 'shape' ( the user now sees this examples in terminal )
+- Major changes in README.md ( enriched by more examples )
+- Modified 'load_xml()' function ( fixed .xml file loading problem )
+
+0.0.4 (02/02/2021)
+------------------
+- Bugfix release of this package ( added 'pyserial' into 'install_requires' args in setup.py )
+- Some minor code changes for better functionality
+
+0.0.3 (02/02/2021)
+------------------
+- Bugfix of previous release (0.0.2) of this package ( fixed module dependencies ) - now fully functional
+
+0.0.2 (02/01/2021)
+------------------
+- Bugfix release of this package ( fixed module dependencies )
+
+0.0.1 (02/01/2021)
+------------------
+- First Release of this package ( no minor/major changes made yet )
