@@ -1,0 +1,10 @@
+dalle_pytorch/__init__.py,sha256=OspwHCCL9cp6K2BwJzoLamZWUrnri2WiU9qi3WVhFGY,65
+dalle_pytorch/attention.py,sha256=QAUwelLOkeAEkvj8m0EQ2yNBayhPUyr2AhcPIfBfVbI,11209
+dalle_pytorch/dalle_pytorch.py,sha256=Dg5I5OWhi7vtl5PAhSbRhTkE-RLntoHOX7iOt9XVaiY,14413
+dalle_pytorch/reversible.py,sha256=yWuf2ZGuc_5NSonNrwJJ9bhd204WBsr1ptiXc0nPFxs,5390
+dalle_pytorch/transformer.py,sha256=WhJyeGYZf8qpCWtW1n8sFukYkuBj3ATxWhh-kKjdvtc,2515
+dalle_pytorch-0.0.53.dist-info/LICENSE,sha256=_nRlQFj-K6BpgI2_Nt79biB7r4hZ82NmpqPOrlqm7MU,1066
+dalle_pytorch-0.0.53.dist-info/METADATA,sha256=E8n8dZdrY91S0zAOYxMboHA6srLXuIS3YjHDi32Y8-I,675
+dalle_pytorch-0.0.53.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dalle_pytorch-0.0.53.dist-info/top_level.txt,sha256=CWzEADsQ0lKh-AIqsHHOcT5bvyHcr2N_k3lgG_22JYQ,14
+dalle_pytorch-0.0.53.dist-info/RECORD,,
