@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: ImageFilter
+Version: 0.1.0
+Summary: We can't vaporize porn but we can reduce porn, and we only helps it.
+Home-page: https://github.com/HanzHaxors/PornFreeKit
+Author: HanzHaxors
+Author-email: hanzhaxors@gmail.com
+License: UNKNOWN
+Description: # ImageFilter
+        Tired of removing porn pictures and getting baited to that again? From now on, let computers do the job. Because, they don't have eyes.
+        Writen by Hanz (u/HanzHaxors)
+        
+        # Installation
+        #### Bash
+        ```bash
+        sudo pip3 install ImageFilter
+        ```
+        #### Windows (Batch)
+        ```batch
+        pip3 isntall ImageFilter
+        ```
+        Currently, there isn't any executeables for both Windows and Unix systems.
+        
+        # Usage
+        ```
+        USAGE:
+        imagefilter <directory> [-r][-ar][-v]
+        
+        -ar -- Auto remove detected files (dangerous)
+        -v  -- Verbose output (good for debug)
+        ```
+        `-r` flag are currently under development (bruh)
+        
+        
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
