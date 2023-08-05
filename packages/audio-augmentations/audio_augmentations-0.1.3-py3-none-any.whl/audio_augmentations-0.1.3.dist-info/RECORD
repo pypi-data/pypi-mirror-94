@@ -1,0 +1,17 @@
+audio_augmentations/__init__.py,sha256=3AlYK1kD_-7e6p_NdpOZ4DBA--JiAqAvK7zotFA7ggQ,504
+audio_augmentations/apply.py,sha256=ZTAq_p84MnQ3vxJRU7ddc1oSXFGyhGXlULQ1395IadM,2941
+audio_augmentations/compose.py,sha256=LeqpRR9srwsKwuYV1__713z1XCs4zoDv9PIriCXLUH4,1168
+audio_augmentations/augmentations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+audio_augmentations/augmentations/delay.py,sha256=uQq2oRZ_s1MdXBBkB-4f_IQBacCihyAnz0dyCYxD1dw,949
+audio_augmentations/augmentations/gain.py,sha256=_uNytiwGerh4azqLXhI3JS6-0UyLHzhynVNVwQ4VyVQ,418
+audio_augmentations/augmentations/high_low_pass.py,sha256=CyK3zPoNIMaY02v8MH2Q6S7Por41qOtU4nKEKP3Bza4,1068
+audio_augmentations/augmentations/noise.py,sha256=NKCz84AOzPd8krrA-mEUIp-QaPtpFTQsEeOHIUwTqrA,649
+audio_augmentations/augmentations/pitch_shift.py,sha256=POO1QGMNmYKjDGWkKDVGg3cEosTxswqM2iGfFwaq7x8,1334
+audio_augmentations/augmentations/polarity_inversion.py,sha256=QJFG0s8YtLFVt6kY2YPOfbfSoZhaggOtjd3eFdAtI3A,215
+audio_augmentations/augmentations/random_resized_crop.py,sha256=MuMhqgHfUjMqBKSufDjI8V9teIfULWadrpc11-HQQ-I,389
+audio_augmentations/augmentations/reverb.py,sha256=72R5GUlBjC0RlaG783q5JH2yF1pEOvVR_QWo1icBNr8,1359
+audio_augmentations/augmentations/reverse.py,sha256=giNqu-Z_OloVV32EZPKkZ9VPVHaprtNuXcq5GY4t2J8,189
+audio_augmentations-0.1.3.dist-info/METADATA,sha256=VwMiji9t0JPhNEeuJp6Bq_EK3ITY8LPYu8n1it4Reyw,2382
+audio_augmentations-0.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+audio_augmentations-0.1.3.dist-info/top_level.txt,sha256=5x6pDF-OZujW3gzGvK3yX4EvxsiO_gjDXr5GQ2KzgbQ,20
+audio_augmentations-0.1.3.dist-info/RECORD,,
