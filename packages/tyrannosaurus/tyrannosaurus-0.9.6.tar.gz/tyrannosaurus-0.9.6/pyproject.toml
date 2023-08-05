@@ -1,0 +1,222 @@
+[metadata]
+description-file = "README.md"
+
+[build-system]
+# virtualenv 20.0.34 partly breaks pre-commit under conda
+# https://github.com/ContinuumIO/anaconda-issues/issues/12094
+# Poetry uses pip and setuptools (although they're not included as dependencies)
+# We don't need to list wheel here, but setting a min vr can avoid generating inferior wheels
+requires = ["poetry>=1.1,<2", "virtualenv==20.0.33", "wheel>=0.36,<1.0"]
+build-backend = "poetry.masonry.api"
+
+
+#########################################################################################
+# Poetry metadata
+#########################################################################################
+
+[tool.poetry]
+name = "tyrannosaurus"
+version = "0.9.6"
+description = "Generate beautifully modern Python projects with seamless, Github-based CI/CD and loads of integrations."
+authors = ["Douglas Myers-Turnbull"]
+maintainers = ["Douglas Myers-Turnbull"]
+license = "Apache-2.0"
+readme = "README.md"
+keywords = ["python", "template", "pyproject-toml", "python-poetry", "conda-build"]
+homepage = "https://github.com/dmyersturnbull/tyrannosaurus"
+repository = "https://github.com/dmyersturnbull/tyrannosaurus"
+documentation = "https://tyrannosaurus.readthedocs.io"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+	"Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+	"Framework :: tox",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Code Generators"
+]
+include = [
+    "README.md",
+    "LICENSE.txt",
+    "CHANGELOG.md"
+]
+
+[tool.poetry.urls]
+CI = "https://github.com/dmyersturnbull/tyrannosaurus/actions"
+Issues = "https://github.com/dmyersturnbull/tyrannosaurus/issues"
+Download = "https://pypi.org/project/tyrannosaurus/"
+
+
+#########################################################################################
+# Tyrannosaurus
+#########################################################################################
+
+[tool.tyrannosaurus.options]
+align = true
+sort  = true
+
+[tool.tyrannosaurus.sources]
+doc_license        = "'CC BY 4.0'"
+doc_license_url    = "'https://creativecommons.org/licenses/by/4.0'"
+metavm             = "'ubuntu-20.04'"
+metavmbox          = "'ubuntu/focal64'"
+pymetaversion      = "'3.9'"
+pycompatversions   = "tool.poetry.dependencies"
+pytoxversions      = "tool.poetry.dependencies"
+status             = "'Development'"
+date               = "'${today}'"
+version            = "tool.poetry.version"
+release            = "tool.poetry.version"
+devdeps            = "tool.poetry.dev-dependencies"
+precommitvr        = "tool.poetry.dev-dependencies"
+precommitconfigvr  = "tool.poetry.dev-dependencies"
+linelength         = "tool.black.line-length"
+copyright          = "'Douglas Myers-Turnbull 2020–2021'"
+authors            = [
+    "Douglas Myers-Turnbull <github:dmyersturnbull,orcid:0000-0003-3610-4808>"
+]
+maintainers        = "tool.tyrannosaurus.sources.authors"
+long_description   = """'
+    An opinionated, forwards-looking Python template for 2021. Generate elegant, ready-to-use Python projects that have
+    excellent continuous integration and deployment (CI/CD). Integrated with Docker Hub, Github Packages, Azure,
+    Conda-Forge, and an array of linting, static analysis, security testing, documentation, dependency management, and
+    CI/CD tools, including a custom tool to keep all duplicate project metadata synchronized to a single pyproject.toml.
+    You only need to interact with your project via git, tyrannosaurus, and Github releases – all other integrations
+    kick off from there.
+    '"""
+importorderstyle   = "'google'"
+docstringstyle     = "'google'"
+
+[tool.tyrannosaurus.sources.flake8skip]
+# 212 and 213 contradict; 203 and 204 contradict; D302 is not relevant in Py3
+# D107 isn't needed sometimes; and the rest are overly picky
+all   = "'W503,E203,E225,E301,E302,E501,D107,D200,D205,D400,D403,D409,D410,D411,D212,W391,W293'"
+test  = "'D100,D101,D102,D103,D104,S101,W503,E203,E225,E301,E302,E501,D107,D200,D205,D400,D403,D409,D410,D411,D212,W391,W293'"
+
+[tool.tyrannosuarus.paths]
+recipe             = "'recipes/${name}/meta.yaml'"
+environment        = "'environment.yml'"
+
+[tool.tyrannosaurus.targets]
+pyproject    = true
+init         = true
+precommit    = true
+tox          = true
+docs         = true
+recipes      = true
+license      = true
+authors      = true
+github       = true
+travis       = true
+scrutinizer  = true
+dockerfile   = true
+readme       = true
+changelog    = true
+citation     = true
+codemeta     = true
+headers      = false
+environment  = false
+
+
+#########################################################################################
+# Poetry build & dependencies
+#########################################################################################
+
+[tool.poetry.scripts]
+tyrannosaurus = "tyrannosaurus.cli:cli"
+
+[tool.poetry.dependencies]
+python                   = ">=3.8, <4"
+tomlkit                  = ">=0.7, <1"
+typer                    = ">=0.3, <1"
+requests                 = ">=2.24, <3"
+grayskull                = ">=0.8.4, <1"
+
+[tool.poetry.dev-dependencies]
+pre-commit               = ">=2.9, <3.0"
+pre-commit-hooks         = ">=3.4, <4.0"
+bandit                   = ">=1.7, <2.0"
+black                    = {git = "https://github.com/psf/black.git", rev="692c0f50d91"}
+pytest                   = "^6"
+coverage                 = {extras = ["toml"], version = "^5"}
+pytest-cov               = "^2"
+flake8                   = "^3"
+flake8-docstrings        = "^1"
+flake8-bugbear           = "^20"
+mypy                     = ">=0.790, <1.0"
+sphinx                   = "^3"
+sphinx-autoapi           = "^1"
+sphinx-copybutton        = ">=0.3, <1.0"
+sphinx-rtd-theme         = ">=0.5, <1.0"
+
+[tool.poetry.extras]
+
+
+#########################################################################################
+# Testing
+#########################################################################################
+
+# This will be used in a future version of pytest:
+#[tool.pytest]
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s [%(levelname)8s] %(name)s: %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+#########################################################################################
+# Changelog generation
+#########################################################################################
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+
+[tool.towncrier]
+filename = "NEWS.md"
+
+
+#########################################################################################
+# Style checking
+#########################################################################################
+
+[tool.coverage.paths]
+source = ["tyrannosaurus"]
+
+[tool.coverage.run]
+source = ["tyrannosaurus"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+
+[tool.isort]
+line_length = 100
+
+[mypy]
+check_untyped_defs = true
+strict_optional = true
+
+# ------- THE FOLLOWING ARE NOT USED BY THEIR RESPECTIVE TOOLS  --------
+# --- There are open discussions about supporting pyproject for each ---
+# https://github.com/python/mypy/issues/5205
+# https://github.com/PyCQA/bandit/issues/606
+# https://github.com/PyCQA/pycodestyle/issues/813
+# https://github.com/PyCQA/pydocstyle/issues/447
+
+[tool.bandit]
+
+[tool.pycodestyle]
+max-line-length = 100
+statistics = true
+
+[tool.pydocstyle]
