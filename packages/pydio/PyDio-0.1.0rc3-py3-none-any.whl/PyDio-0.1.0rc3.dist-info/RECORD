@@ -1,0 +1,15 @@
+pydio/__init__.py,sha256=0MOfi9Lw5eDVYh7JSzeZGraMDGvLuAPEusN4eHIBe_c,710
+pydio/_factory.py,sha256=GF8ti8al_10ebQwViyI310ispgLnodSgBujX1hr417Q,4786
+pydio/_utils.py,sha256=2Rpui1UuLuI-FdJcA_f7nd_qEs_z0CiZKKxF062pmtk,969
+pydio/_version.py,sha256=pnnksgnOwg9c4rGrO93_Px9s4Ex4PuviQ8BDVXgvSvE,150
+pydio/api.py,sha256=do8mgz-a4F-YARkRAVz--QKUAoI2mfeJEnpibb-4xaM,565
+pydio/base.py,sha256=ZpFhTLUCBRasjT3xIKD5ufNKRlwp8j4873UawaxLres,3592
+pydio/exc.py,sha256=DsZQJ5p6-N0Js3vBJVE-POQyxMbuvZbJH6Lk2GkaV0U,1421
+pydio/injector.py,sha256=2CVdpqpvEI4ZJryvSRFZr-bLPNS4YbnwDXuFeKUXIoM,2849
+pydio/provider.py,sha256=8-fhRmEMbdSE09UwfwyVPSPqKP42B8YJ-hztZ29yEOQ,2927
+pydio/variant.py,sha256=YIZg3RIyBH6g79R5IFiNrTe04i_JU4cotV-Xl1iqXrU,1266
+PyDio-0.1.0rc3.dist-info/LICENSE.txt,sha256=6onkTEZEfiMY4kp9a8On4NZ67Ffx080ZLL3FEsfq_BY,1087
+PyDio-0.1.0rc3.dist-info/METADATA,sha256=5xMFUzgULeifmSnE-19nIGyJ9Mwxwbo2NKQV4MueV80,3013
+PyDio-0.1.0rc3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PyDio-0.1.0rc3.dist-info/top_level.txt,sha256=7SfyomwDxV_sWGOAreGAt30lEfMMpvlCF9Wy5-oDM3w,6
+PyDio-0.1.0rc3.dist-info/RECORD,,
