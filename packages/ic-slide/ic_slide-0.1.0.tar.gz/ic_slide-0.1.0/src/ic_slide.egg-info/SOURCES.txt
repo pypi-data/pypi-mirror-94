@@ -1,0 +1,12 @@
+README.md
+setup.py
+src/ic_slide/__init__.py
+src/ic_slide/auth.py
+src/ic_slide/config.py
+src/ic_slide/slide_index.py
+src/ic_slide/slide_source.py
+src/ic_slide.egg-info/PKG-INFO
+src/ic_slide.egg-info/SOURCES.txt
+src/ic_slide.egg-info/dependency_links.txt
+src/ic_slide.egg-info/requires.txt
+src/ic_slide.egg-info/top_level.txt
