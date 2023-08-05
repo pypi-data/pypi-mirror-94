@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: causal_inference
+Version: 0.0.2
+Summary: Causal Inference
+Home-page: https://github.com/ga74kud/causal_inference
+Author: Michael Hartmann
+Author-email: michael.hartmann@v2c2.at
+License: GNU GENERAL PUBLIC LICENSE
+Description: ![](/images/pexels_splash.jpg)
+        
+        
+        # Causal Inference
+        
+        - [ ] Causal Inference
+        
+        # Installation
+        ```bash
+        pip install causal-inference
+        ```
+        
+        # Usage
+        
+        ```python
+        # TBD
+        ```
+        
+        
+        
+        
+        # Citation
+        
+        Please cite following document if you use this python package:
+        ```
+        TBD
+        ```
+        
+        
+        Image source: https://www.pexels.com/photo/blue-water-2695624/
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
