@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: kumisms
+Version: 0.1.4
+Summary: Class to interact with KumiSMS
+Home-page: https://kumig.it/kumisystems/pykumisms
+Author: Kumi Systems e.U.
+Author-email: support@kumi.systems
+License: BSD-2-Clause
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# pykumisms
+
+A class to interact with KumiSMS.
+
+## Quick start
+
+1. Import `kumisms` into your project
+
+   ```python
+   import kumisms
+   ```
+
+2. Create a KumiSMS object with your API key
+
+   ```python
+   gateway = KumiSMS("my_api_key")
+   ```
+
+3. Start making requests
+
+   ```python
+   gateway.send("+123456789", "Hello!")
+   ```
+
