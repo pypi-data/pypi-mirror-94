@@ -1,0 +1,14 @@
+graphviz
+setuptools>=42
+setuptools_scm[toml]>=3.4
+
+[dev]
+black
+flake8
+isort>=5.0.0
+mypy
+pre-commit
+pytest>=6.0.0
+pytest-cov>=2.0.0
+sphinx
+sphinx_rtd_theme
