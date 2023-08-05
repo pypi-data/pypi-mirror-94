@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+hubmap_api_py_client/__init__.py
+hubmap_api_py_client/errors.py
+hubmap_api_py_client/external.py
+hubmap_api_py_client/internal.py
+hubmap_api_py_client.egg-info/PKG-INFO
+hubmap_api_py_client.egg-info/SOURCES.txt
+hubmap_api_py_client.egg-info/dependency_links.txt
+hubmap_api_py_client.egg-info/requires.txt
+hubmap_api_py_client.egg-info/top_level.txt
