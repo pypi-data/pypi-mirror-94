@@ -1,0 +1,3 @@
+[console_scripts]
+gitprof = gitprof:init
+
