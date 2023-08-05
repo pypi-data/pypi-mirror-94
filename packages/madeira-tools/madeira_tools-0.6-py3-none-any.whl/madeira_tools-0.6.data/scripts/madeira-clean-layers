@@ -1,0 +1,20 @@
+#!python
+"""
+Usage:
+  madeira-clean-layers [ --debug ] [ --mode=mode ]
+  madeira-clean-layers --help
+
+Options:
+  -h --help                        Show this help screen.
+  --debug                          When specified, enables debug-level logging
+  --trace-boto3                    When specified, enables a "spew" of boto3 logging
+"""
+
+import docopt
+from madeira_tools import maintenance
+
+arguments = docopt.docopt(__doc__, help=True)
+maintenance.Maintenance(
+    debug=arguments.get('--debug'),
+    trace_boto3=arguments.get('--trace-boto3')
+).delete_orphan_lambda_layer_versions()

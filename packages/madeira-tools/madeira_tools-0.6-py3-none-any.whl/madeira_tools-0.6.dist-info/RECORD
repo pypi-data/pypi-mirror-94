@@ -1,0 +1,17 @@
+madeira_tools/__init__.py,sha256=VrSIuqacCIS8zcL-CEJs2UJkUXPwIyxTzcSsdSj1Fjc,20
+madeira_tools/base.py,sha256=gqxX9vo11NMdq2lhdXr_NECMEEBHOFPt5V1BgL9sWI0,2767
+madeira_tools/cloudfront_app.py,sha256=sM3HjwT57XSpe37dD2qmjRWBp2-4GtFrSFrhqPHLg3I,5112
+madeira_tools/cloudfront_site.py,sha256=xT1bR1nOwZYkPSPQdfNbkqf8_qLa_bPri_QMjRR-vsg,3267
+madeira_tools/dispatch.py,sha256=fZC8cpLHXDMiEwgBdhaFNZShL8zywt0LS6lj9dNg-b0,732
+madeira_tools/maintenance.py,sha256=WMociQOjPchbA7Rs88EcrKa6zq4ZcdrqIgrhcHbDyXQ,1520
+madeira_tools/cf_templates/cloudfront_app.yml,sha256=xf6WKhGCDQMM2drX147_YNwJR-tnYAsVXUIc5DDliTw,9716
+madeira_tools/cf_templates/cloudfront_site.yml,sha256=n0h3WrFhWhKrNwhroaXI_a5r7XVPRYLnArDyGgoVTr4,3074
+madeira_tools-0.6.data/scripts/madeira-clean-layers,sha256=l1gCBeG09s4IiqU3Ff7J8dTIZJE7uJ2SIFzxhenQDbI,585
+madeira_tools-0.6.data/scripts/madeira-deploy,sha256=oohhOu7tlcmelOHAE0X4MgVC4UTZJPR8vYhl9nfI7E8,643
+madeira_tools-0.6.data/scripts/madeira-package-layer,sha256=2vOYCEjOzYXkSZPSa2QaTLhJcdaya2-2QcAS4zdlMR8,1679
+madeira_tools-0.6.data/scripts/madeira-remove,sha256=3zXzSZFFI8D8626XUuDLA2zjX_esnxkdl9618ZDoaCc,643
+madeira_tools-0.6.data/scripts/madeira-run-dev,sha256=iVIvXVdwS_pO-0kR4Wcgw7S-SMmJmDoGflhGJTFZkMU,742
+madeira_tools-0.6.dist-info/METADATA,sha256=75-zgcqOHrD55sGPRf54GPaJaGCp1TfrP7A5aWhMOEU,1548
+madeira_tools-0.6.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+madeira_tools-0.6.dist-info/top_level.txt,sha256=EIrd-Z2R3VtZsDsizH_tPUrtEB2oJ9njE4tcQxRhGD8,14
+madeira_tools-0.6.dist-info/RECORD,,

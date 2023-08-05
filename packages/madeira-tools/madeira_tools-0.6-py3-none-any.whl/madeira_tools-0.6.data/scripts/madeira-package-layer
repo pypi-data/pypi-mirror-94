@@ -1,0 +1,71 @@
+#!/bin/bash
+
+set -e
+
+layer_requirements_path="${PWD}/layer_requirements.txt"
+
+if [ ! -f "${layer_requirements_path}" ]; then
+  echo "${layer_requirements_path} does not exist or is not a file"
+  exit 1
+fi
+
+layer_name="${1}"
+
+if [ ! "${layer_name}" ]; then
+
+  echo "Usage: $0 <layer name>"
+  exit 1
+fi
+
+destination_path="layers/"
+container="layer-packaging-$(uuid)"
+base_dir=$(cd "$(dirname "$0")"; pwd)
+
+create_layer_tempfile=$(mktemp)
+trap '{
+  rm -f -- "$create_layer_tempfile";
+  echo "deleting container";
+  docker rm "${container}";
+}' EXIT
+
+echo "Using ${create_layer_tempfile} for docker run"
+
+cat <<EOF > "${create_layer_tempfile}"
+#!/bin/bash
+
+set -e
+
+echo "installing packaging utilities"
+yum install -y zip
+amazon-linux-extras install -y python3.8
+python3.8 -m pip install --upgrade pip
+python3.8 -m pip install virtualenv
+
+# layer_name to be set by 'docker run'
+echo "creating venv for layer: ${layer_name}"
+python3.8 -m venv "${layer_name}"
+source "${layer_name}/bin/activate"
+
+echo "installing python layer requirements"
+pip install -r /requirements.txt -t ./python
+deactivate
+
+echo "creating archive: ${layer_name}.zip"
+zip -rq "${layer_name}.zip" ./python/
+
+echo "done creating archive; exiting container"
+exit
+EOF
+chmod +x "${create_layer_tempfile}"
+
+docker run --name "${container}" -it \
+  -e layer_name="${layer_name}" \
+  -v "${layer_requirements_path}":/requirements.txt \
+  -v "${create_layer_tempfile}":/madeira-create-layer \
+  amazonlinux:2.0.20191016.0 \
+  ./madeira-create-layer
+
+# back in local machine user shell
+echo "copying layer ZIP from container"
+mkdir -p "${destination_path}"
+docker cp "${container}:${layer_name}.zip" "${destination_path}"

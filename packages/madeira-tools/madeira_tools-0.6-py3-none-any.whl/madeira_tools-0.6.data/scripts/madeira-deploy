@@ -1,0 +1,22 @@
+#!python
+"""
+Usage:
+  madeira-deploy [ --debug ] [ --mode=mode ]
+  madeira-deploy --help
+
+Options:
+  -h --help                        Show this help screen.
+  --debug                          When specified, enables debug-level logging
+  --mode=mode                      'test' or 'production' [default: test]
+  --trace-boto3                    When specified, enables a "spew" of boto3 logging
+"""
+
+import docopt
+from madeira_tools import dispatch
+
+arguments = docopt.docopt(__doc__, help=True)
+dispatch.Dispatch(
+    debug=arguments.get('--debug'),
+    mode=arguments.get('--mode'),
+    trace_boto3=arguments.get('--trace-boto3')
+).deploy()
