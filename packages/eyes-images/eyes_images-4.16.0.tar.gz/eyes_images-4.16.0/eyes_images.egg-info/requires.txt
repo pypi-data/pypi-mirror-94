@@ -1,0 +1,4 @@
+eyes-common==4.16.0
+eyes-core==4.16.0
+structlog<=20.1.0
+Pillow>=5.0.0
