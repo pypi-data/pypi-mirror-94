@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: chess4fun
+Version: 0.0.0a9
+Summary: A Python App for Chess
+Home-page: https://github.com/tank-overlord/chess4fun
+Author: Tank Overlord
+Author-email: TankOverLord88@gmail.com
+License: LGPL-3.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Requires-Dist: chess (>=1.4.0)
+Requires-Dist: pygame (>=2.0.1)
+Requires-Dist: PySide2 (>=5.15.2)
+
+.. -*- mode: rst -*-
+
+|BuildTest|_ |PyPi|_ |License|_ |Downloads|_ |PythonVersion|_
+
+.. |BuildTest| image:: https://travis-ci.com/tank-overlord/chess4fun.svg?branch=main
+.. _BuildTest: https://travis-ci.com/tank-overlord/chess4fun
+
+.. |PythonVersion| image:: https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue
+.. _PythonVersion: https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue
+
+.. |PyPi| image:: https://img.shields.io/pypi/v/chess4fun
+.. _PyPi: https://pypi.python.org/pypi/chess4fun
+
+.. |Downloads| image:: https://pepy.tech/badge/chess4fun
+.. _Downloads: https://pepy.tech/project/chess4fun
+
+.. |License| image:: https://img.shields.io/pypi/l/chess4fun
+.. _License: https://pypi.python.org/pypi/chess4fun
+
+
+======================
+A Python App for Chess
+======================
+
+Install
+-------
+
+.. code-block::
+
+   pip install chess4fun
+
+
+Execute
+-------
+
+.. code-block::
+
+   python -m chess4fun 
+
+
+Have fun!!!
+-----------
+
+
+Sample Screenshot
+-----------------
+|image1|
+
+
+.. |image1| image:: https://github.com/tank-overlord/chess4fun/raw/main/chess4fun/examples/opening_Ruy_Lopez.png
+
