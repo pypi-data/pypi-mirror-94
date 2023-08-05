@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pctap_annek"
+version = "0.1.0"
+description = "Tap LDAP for PCs"
+authors = ["Michael MacKenna <mmackenna@unitedfiregroup.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+ldap3 = "^2.9"
+click = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.poetry.scripts]
+pctap = 'pctap_annek.cli:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
