@@ -1,0 +1,10 @@
+# File: HISTORY.txt
+#
+13-Dec-2020 - V0.11 Created module and ported code from py27 version
+16-Dec-2020 - V0.12 Added CcdcSearch and CcdcSearchExec and associated tests
+12-Jan-2021 - V0.13 Add geometry analysis module and assocated tests, update documentation
+15-Jan-2021 - V0.14 Add multiprocessing wrapper for the CcdcSearchExec()
+26-Jan-2021 - V0.15 Move IndexUtils() to rcsb.utils.io, extend index metadata
+31-Jan-2021 - V0.16 Update add hasDisorder() status.
+ 2-Feb-2021 - V0.17 Add accession codes to generated mol/sdf and mol2 files
+ 6-Feb-2021 - V0.18 Update dependencies and push to PyPi
