@@ -1,0 +1,11 @@
+Pillow<=6.2.1
+numpy>=1.20
+matplotlib
+gluoncv<1.0,>=0.9.1
+graphviz<0.9.0,>=0.8.1
+pandas<2.0,>=1.0.0
+d8<1.0,>=0.0.2
+autogluon.core==0.0.16b20210205
+autogluon.mxnet==0.0.16b20210205
+pytest
+openml
