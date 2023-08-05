@@ -1,0 +1,9 @@
+# Mandatory Python dependencies:
+keystone-light
+
+# Optional Python dependencies:
+#pika   # for reading from RabbitMQ
+
+# CLI dependencies:
+#gpg    # https://www.osso.nl/blog/encryption-decryption-speed-gnupg-openssl/
+#qpress # (with qlzip1/qlzcat1) https://github.com/ossobv/qpress-deb
