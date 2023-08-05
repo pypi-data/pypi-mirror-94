@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+pyjaspar/__init__.py
+pyjaspar/utils.py
+pyjaspar.egg-info/PKG-INFO
+pyjaspar.egg-info/SOURCES.txt
+pyjaspar.egg-info/dependency_links.txt
+pyjaspar.egg-info/requires.txt
+pyjaspar.egg-info/top_level.txt
+pyjaspar/data/JASPAR2014.sqlite
+pyjaspar/data/JASPAR2016.sqlite
+pyjaspar/data/JASPAR2018.sqlite
+pyjaspar/data/JASPAR2020.sqlite
+pyjaspar/data/__init__.py
