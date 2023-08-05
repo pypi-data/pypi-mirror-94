@@ -1,0 +1,9 @@
+README.rst
+setup.py
+src/dataclass_persistence/__init__.py
+src/dataclass_persistence/core.py
+src/dataclass_persistence.egg-info/PKG-INFO
+src/dataclass_persistence.egg-info/SOURCES.txt
+src/dataclass_persistence.egg-info/dependency_links.txt
+src/dataclass_persistence.egg-info/requires.txt
+src/dataclass_persistence.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+numpy
+
+[dev]
+pytest
+check-manifest
+twine
