@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup
+
+packages = \
+['potrace', 'potrace.agg']
+
+package_data = \
+{'': ['*']}
+
+install_requires = \
+['numpy']
+
+setup_kwargs = {
+    'name': 'pypotrace',
+    'version': '0.3',
+    'description': 'potrace Python bindings',
+    'long_description': 'potrace Python bindings\n=======================\n\nThese bindings provide an object oriented API to the `potrace`_ library.\n\nThe full API documentation is on `<https://pythonhosted.org/pypotrace/>`_.\n\n\nExample usage\n-------------\n\nThe bindings work with input images represented as numpy arrays::\n\n    import numpy as np\n    import potrace\n\n    # Make a numpy array with a rectangle in the middle\n    data = np.zeros((32, 32), np.uint32)\n    data[8:32-8, 8:32-8] = 1\n\n    # Create a bitmap from the array\n    bmp = potrace.Bitmap(data)\n\n    # Trace the bitmap to a path\n    path = bmp.trace()\n\n    # Iterate over path curves\n    for curve in path:\n        print "start_point =", curve.start_point\n        for segment in curve:\n            print segment\n            end_point_x, end_point_y = segment.end_point\n            if segment.is_corner:\n                c_x, c_y = segment.c\n            else:\n                c1_x, c1_y = segment.c1\n                c2_x, c2_y = segment.c2\n\nInstallation\n------------\n\nUbuntu\n~~~~~~\n\nInstall system dependencies::\n\n    $ sudo apt-get install build-essential python-dev libagg-dev libpotrace-dev pkg-config\n\nInstall pypotrace::\n\n    $ git clone https://github.com/flupke/pypotrace.git\n    $ cd pypotrace\n    $ pip install numpy\n    $ pip install .\n\nCentOS/RedHat\n~~~~~~~~~~~~~\n\nInstall system dependencies::\n\n    $ sudo yum -y groupinstall "Development Tools"\n    $ sudo yum -y install agg-devel potrace-devel python-devel\n\nInstall pypotrace::\n\n    $ git clone https://github.com/flupke/pypotrace.git\n    $ cd pypotrace\n    $ pip install numpy\n    $ pip install .\n\nOSX\n~~~\n\nInstall system dependencies::\n\n    $ brew install libagg pkg-config potrace\n\nInstall pypotrace::\n\n    $ git clone https://github.com/flupke/pypotrace.git\n    $ cd pypotrace\n    $ pip install numpy\n    $ pip install .\n\nWindows\n~~~~~~~\n\n*Thanks to* `klonuo <https://github.com/klonuo>`_ *for the instructions*\n\nHere are instruction how to make this package work on Windows, by using MinGW\nsystem. Probably it can be done with Visual Studio, but I lack skills to make\nsuch magic.\n\nSo assuming user has MinGW available, additional two packages are needed:\n\n1. potrace source: http://potrace.sourceforge.net/#downloading\n2. agg source: http://www.antigrain.com/download/index.html\n\nI extracted both packages in my ``C:\\src`` folder. Both are easy to build by\nexecuting ``./configure; make`` and ``./autogen.sh; make`` respectively, on\nMSYS prompt.\n\nAfter that, we need some variables to build pypotrace successfully:\n\nFirst, includes paths:\n\n* "numpy/arrayobject.h": ``C:/Python27/Lib/site-packages/numpy/core/include``\n* potrace headers: ``C:/src/potrace-1.11/src``\n* agg headers: ``C:/src/agg-2.5``\n\nthere is a little catch for agg includes, as paths referenced in cpp sources\npoint to ``agg2/*.h`` while in downloaded agg package we don\'t have ``agg2``\nfolder. For me it was easiest to rename ``C:/src/agg-2.5/include`` to\n``C:/src/agg-2.5/agg2`` and use ``C:/src/agg-2.5`` as agg include folder.\n\nNext, libdirs for libraries we build above:\n\n* potrace: ``C:/src/potrace-1.11/src/.libs``\n* agg: ``C:/src/agg-2.5/src``\n\nand we can make pypotrace build command, and execute it::\n\n    python setup.py build_ext -IC:/Python27/Lib/site-packages/numpy/core/include;C:/src/potrace-1.11/src;C:/src/agg-2.5 -LC:/src/potrace-1.11/src/.libs;C:/src/agg-2.5/src\n\nFinally install the package::\n\n    C:\\src\\git\\pypotrace>python setup.py install\n    running install\n    running build\n    running build_py\n    copying potrace\\__init__.py -> build\\lib.win32-2.7\\potrace\n    copying potrace\\agg\\__init__.py -> build\\lib.win32-2.7\\potrace\\agg\n    running build_ext\n    skipping \'potrace\\_potrace.c\' Cython extension (up-to-date)\n    skipping \'potrace\\bezier.cpp\' Cython extension (up-to-date)\n    skipping \'potrace/agg\\curves.cpp\' Cython extension (up-to-date)\n    running install_lib\n    creating C:\\Python27\\Lib\\site-packages\\potrace\n    creating C:\\Python27\\Lib\\site-packages\\potrace\\agg\n    copying build\\lib.win32-2.7\\potrace\\agg\\curves.pyd -> C:\\Python27\\Lib\\site-packages\\potrace\\agg\n    copying build\\lib.win32-2.7\\potrace\\agg\\__init__.py -> C:\\Python27\\Lib\\site-packages\\potrace\\agg\n    copying build\\lib.win32-2.7\\potrace\\bezier.pyd -> C:\\Python27\\Lib\\site-packages\\potrace\n    copying build\\lib.win32-2.7\\potrace\\_potrace.pyd -> C:\\Python27\\Lib\\site-packages\\potrace\n    copying build\\lib.win32-2.7\\potrace\\__init__.py -> C:\\Python27\\Lib\\site-packages\\potrace\n    byte-compiling C:\\Python27\\Lib\\site-packages\\potrace\\agg\\__init__.py to __init__.pyc\n    byte-compiling C:\\Python27\\Lib\\site-packages\\potrace\\__init__.py to __init__.pyc\n    running install_egg_info\n    Writing C:\\Python27\\Lib\\site-packages\\pypotrace-0.1-py2.7.egg-info\n\nRunning tests\n-------------\n\nYou can check everything is working correctly by running the tests::\n\n    $ pip install \'.[dev]\'\n    $ nosetests -v\n\nDocumentation\n-------------\n\nThe documentation is hosted here: http://packages.python.org/pypotrace\n\nA copy is also included in the ``doc/_build/html`` directory of the source\ndistribution.\n\nHomepage\n--------\n\nThis project is hosted on github: http://github.com/flupke/pypotrace\n\n.. _potrace: http://potrace.sourceforge.net/\n',
+    'author': 'Luper Rouch',
+    'author_email': 'luper.rouch@gmail.com',
+    'maintainer': None,
+    'maintainer_email': None,
+    'url': None,
+    'packages': packages,
+    'package_data': package_data,
+    'install_requires': install_requires,
+}
+from build import *
+build(setup_kwargs)
+
+setup(**setup_kwargs)
