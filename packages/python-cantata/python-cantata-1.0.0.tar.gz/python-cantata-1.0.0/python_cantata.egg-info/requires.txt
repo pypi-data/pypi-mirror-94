@@ -1,0 +1,14 @@
+aenum==3.0.0
+argparse-addons==0.6.0
+bitstruct==8.11.1
+cantools==36.2.0
+cogapp==3.0.0
+textparser==0.23.0
+windows-curses==2.2.0
+wrapt==1.12.1
+
+[:python_version >= "2.7"]
+python-can==3.3.4
+
+[:python_version >= "3"]
+diskcache==5.2.1

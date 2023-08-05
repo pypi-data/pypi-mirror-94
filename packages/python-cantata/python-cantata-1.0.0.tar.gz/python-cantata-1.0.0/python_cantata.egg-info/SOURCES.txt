@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+cantata/__init__.py
+cantata/main.py
+cantata/templates/cantata.c.cogen
+cantata/templates/cantata.h.cogen
+python_cantata.egg-info/PKG-INFO
+python_cantata.egg-info/SOURCES.txt
+python_cantata.egg-info/dependency_links.txt
+python_cantata.egg-info/requires.txt
+python_cantata.egg-info/top_level.txt
