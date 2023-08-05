@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: kitinv1
+Version: 0.0.1
+Summary: By Sergey kitin
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
