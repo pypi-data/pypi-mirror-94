@@ -1,0 +1,10 @@
+dwa/__init__.py,sha256=uO7nVCc_kTWHHQfD_odxz8vrr_pSMUm21IhgIubCJ-U,4519
+dwa/core.py,sha256=F9bwsBp2WwHFNtmA8E1LeRzBO7OtohtfXHs6ft9XmDs,2254
+dwa/handlers.py,sha256=qxCu-JHX0WWxX2xluhRISyqV_oSQ4HB-fA6kp82CNcM,11938
+dwa/utils.py,sha256=UAVINMIaXpnKw-9wSRqLk4kjcui6Zhl2x2O_yHrpQ_I,183
+dwa/worker.py,sha256=QjxDoAKeYAD-z3eCM_ZBG8d5a6lADS6s1SyLbHd4OK0,746
+dwa-0.0.10.dist-info/LICENSE,sha256=E_tIpsMacuDitpZQsc6-iVT3tzRJhISS3P0islvZGvo,35182
+dwa-0.0.10.dist-info/METADATA,sha256=sPVZ6ahuj7-MNMushTebZVJprisWyP9kFXTdxzD2g7k,3218
+dwa-0.0.10.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+dwa-0.0.10.dist-info/top_level.txt,sha256=PROr4qp_vDToaw2vU_wjar-TQNTrWJmJ8myvrg74N3w,4
+dwa-0.0.10.dist-info/RECORD,,
