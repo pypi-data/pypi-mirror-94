@@ -1,0 +1,15 @@
+biceps/Analysis.py,sha256=Et4g_6Qmd8njBRhL4ICJbyT4IrbnpBe4kUCRMeEmrXk,14666
+biceps/J_coupling.py,sha256=o494as9R8oOzwWJzgfr44nP3_DSOCx6RCDl68ZDF6K8,3931
+biceps/KarplusRelation.py,sha256=NIKba4QpJP5p-sEoRsruXyj4FIVIeqiGE-mTLAVrzj0,5244
+biceps/PosteriorSampler.py,sha256=P8lc2_7UspDfsCVqsZh7xi-MnBd7YR77N0ZIyYISG00,23976
+biceps/Restraint.py,sha256=ZJ6caTO39tHHKt-Q1mPMcqd55tHaeOzx_jHzhty2i1A,46169
+biceps/__init__.py,sha256=xgUvXQy9Gj-oMxp0I0IHPBeyOma3LNn08vUkia0kTNA,741
+biceps/convergence.py,sha256=NMnY5pooHhEgWD2KO2lcEXtantjShZtYQtNxTqmbzK0,26501
+biceps/decorators.py,sha256=kU7nXsGcaPDICsCNRN3-uP5A8Zkk4oFn5YYRSfMfQtg,2136
+biceps/toolbox.py,sha256=Og4hZoO0VcZ79QuT0HGkpWyoz6t9OvbrtHY_PFz8C5U,32763
+biceps-2.0b0.post0.dist-info/AUTHORS,sha256=A-kSE1azag5wPUBfZcd18rZXyP6FJuDdQryG8kwP6FI,42
+biceps-2.0b0.post0.dist-info/COPYING,sha256=bv4gf1hHrasnbxEtZzSFr6PFHTlc2miiAm2XDOrU6r0,18104
+biceps-2.0b0.post0.dist-info/METADATA,sha256=wtiapT6CCcy6h8XwfTi-BLD6aOJ6c8tBXw5Qrdz8q-g,4034
+biceps-2.0b0.post0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+biceps-2.0b0.post0.dist-info/top_level.txt,sha256=h-Y8yDp76krDzhsuwHT9gDKqUgA2HWkwtDZF3ElSuxo,7
+biceps-2.0b0.post0.dist-info/RECORD,,
