@@ -1,0 +1,3 @@
+[console_scripts]
+florodoro = florodoro.__init__:run
+
