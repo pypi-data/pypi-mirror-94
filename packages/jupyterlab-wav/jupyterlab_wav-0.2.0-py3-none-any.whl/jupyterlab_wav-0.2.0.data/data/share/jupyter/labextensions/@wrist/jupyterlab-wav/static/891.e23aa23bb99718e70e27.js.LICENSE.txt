@@ -1,0 +1,25 @@
+/*!
+ * wavesurfer.js spectrogram plugin 4.4.0 (2021-01-14)
+ * https://wavesurfer-js.org
+ * @license BSD-3-Clause
+ */
+
+/*!
+ * wavesurfer.js timeline plugin 4.4.0 (2021-01-14)
+ * https://wavesurfer-js.org
+ * @license BSD-3-Clause
+ */
+
+/*! ./fft */
+
+/*!**************************************!*\
+  !*** ./src/plugin/timeline/index.js ***!
+  \**************************************/
+
+/*!***************************************!*\
+  !*** ./src/plugin/spectrogram/fft.js ***!
+  \***************************************/
+
+/*!*****************************************!*\
+  !*** ./src/plugin/spectrogram/index.js ***!
+  \*****************************************/
