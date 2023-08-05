@@ -1,0 +1,11 @@
+pytest>=3.9
+pynetconsole>=2.0.2
+pint>=0.11.0
+robotpy-wpiutil<2022,>=2021
+pyntcore<2022,>=2021
+robotpy-hal<2022,>=2021
+wpilib<2022,>=2021
+robotpy-installer<2022,>=2021
+
+[:python_version < "3.8"]
+importlib-metadata
