@@ -1,0 +1,51 @@
+```
+INSTALLATION
+
+    $ pip3 install libscol
+
+HELP
+
+    $ pydoc libscol
+
+NAME
+
+    libscol - LIBrary to convert integers into Spreadsheet COLumn names, and vice versa
+
+PACKAGE CONTENTS
+
+
+
+FUNCTIONS
+
+    int2scol(num)
+        convert integer num into spreadsheet column name
+        >>> for n in [-2, -1, 0, 1, 2, 25, 26, 27, 28, 701, 702, 703, 704]: print((n, int2scol(n)))
+        (-2, '-C')
+        (-1, '-B')
+        (0, 'A')
+        (1, 'B')
+        (2, 'C')
+        (25, 'Z')
+        (26, 'AA')
+        (27, 'AB')
+        (28, 'AC')
+        (701, 'ZZ')
+        (702, 'AAA')
+        (703, 'AAB')
+        (704, 'AAC')
+
+    scol2int(scol)
+        convert spreadsheet column name scol into integer
+        >>> all(n == scol2int(int2scol(n)) for n in range(-100000, 100000))
+        True
+
+VERSION
+
+    0.9.1
+
+FILE
+
+    /home/xxxx/Documents/pypi/libscol/libscol/__init__.py
+
+
+```

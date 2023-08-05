@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: libscol
+Version: 0.9.1
+Summary: LIBrary to convert integers into Spreadsheet COLumn names, and vice versa
+Home-page: https://pypi.org/project/libscol
+Author: Carlo Alessandro Verre
+Author-email: carlo.alessandro.verre@gmail.com
