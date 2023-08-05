@@ -1,0 +1,3 @@
+[console_scripts]
+chainedSCT = chainedSCT.__main__:main
+
