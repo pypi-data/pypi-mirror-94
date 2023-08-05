@@ -1,0 +1,12 @@
+parse_1c_build/__about__.py,sha256=ilevi6e8fJ_moilQQHK_8pcgvceJYD6qBc-BxfuSd6s,75
+parse_1c_build/__init__.py,sha256=fwGmfqASr2jcMVT8mAG6CKc-ioUzVBu99inRcNTeJuo,333
+parse_1c_build/__main__.py,sha256=JHqvK6OArT1RbmykTkvys93kqC3XAAOOXyW5OdgS3XM,185
+parse_1c_build/base.py,sha256=kavDMfkGV7LtlpmnuL1b2ENVc3hKU4LuRwxjqqIkss0,1538
+parse_1c_build/build.py,sha256=ICciWdS5a3wbvqVWuuPqOmcFG0HC1G-W9aFkj70qKcI,5640
+parse_1c_build/cli.py,sha256=W14BIo2aQwR_4WIVx190IJUe5AkcCCNITJ_kTBr_juI,798
+parse_1c_build/core.py,sha256=yq8OHKz_-abq7YNHduddDDQks57lZrMlltqI8wokccQ,309
+parse_1c_build/parse.py,sha256=ziQFl2WkZGBlSS4SeUpixccP1l-pgUYG_YpLwj0QC7s,4343
+parse_1c_build-5.14.4.dist-info/entry_points.txt,sha256=_OOqtv1QTSByRBwYWPPxJlCXakS398dZk-7jPoGQGEw,52
+parse_1c_build-5.14.4.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+parse_1c_build-5.14.4.dist-info/METADATA,sha256=yqlDaCuebyL7Ki9jxivt5XosP977cns4mY-ABi0V70c,2858
+parse_1c_build-5.14.4.dist-info/RECORD,,
