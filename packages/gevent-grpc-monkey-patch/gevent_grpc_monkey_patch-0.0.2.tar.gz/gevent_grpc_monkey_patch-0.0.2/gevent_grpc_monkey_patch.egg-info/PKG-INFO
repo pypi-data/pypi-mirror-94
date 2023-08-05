@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: gevent-grpc-monkey-patch
+Version: 0.0.2
+Summary: Get gevent and grpcio packages working together
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: Get gevent and grpcio packages working together: https://github.com/grpc/grpc/issues/4629#issuecomment-376962677
+        
+        Build and upload steps: https://packaging.python.org/tutorials/packaging-projects
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
