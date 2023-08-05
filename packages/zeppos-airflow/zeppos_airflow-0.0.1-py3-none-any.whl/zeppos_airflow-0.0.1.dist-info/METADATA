@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: zeppos-airflow
+Version: 0.0.1
+Summary: Various helper functionality to make airflow easier
+Home-page: https://github.com/changrunner/zeppos_airflow
+Author: Gert Haegdorens
+Author-email: Gert@Haegdorens.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# zeppos_airflow
+
+## purpose
+Various helper functionality to make airflow easier
+
