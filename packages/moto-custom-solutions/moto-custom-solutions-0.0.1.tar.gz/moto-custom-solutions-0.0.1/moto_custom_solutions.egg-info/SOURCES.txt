@@ -1,0 +1,15 @@
+README.md
+setup.py
+customsol_pkg/__init__.py
+customsol_pkg/dir_clean.py
+customsol_pkg/errors.py
+customsol_pkg/ftp_cleanse.py
+customsol_pkg/ftp_down.py
+customsol_pkg/ftp_up.py
+customsol_pkg/redash_download.py
+customsol_pkg/slackbot.py
+customsol_pkg/supp_create.py
+moto_custom_solutions.egg-info/PKG-INFO
+moto_custom_solutions.egg-info/SOURCES.txt
+moto_custom_solutions.egg-info/dependency_links.txt
+moto_custom_solutions.egg-info/top_level.txt
