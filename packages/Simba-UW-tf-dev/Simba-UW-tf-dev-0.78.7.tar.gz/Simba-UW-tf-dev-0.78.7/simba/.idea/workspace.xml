@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c39d3d71-e74d-4955-b809-52b1c1364f0f" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run_RF_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2108">
+              <caret line="124" selection-start-line="124" selection-end-line="124" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/validate_model_on_single_video.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Kleinberg_burst_analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+              <folding>
+                <element signature="e#75#106#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_plot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="103" column="55" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/process_data_log.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>columns2grab</find>
+      <find>multiAnimalIDList</find>
+      <find>CurrentVideo</find>
+      <find>inputcsv</find>
+      <find>csv_dir_in</find>
+      <find>animalBodypartList</find>
+      <find>visualize roi trac</find>
+      <find>analyze roi data</find>
+      <find>roi_settings</find>
+      <find>run_roiAnalysisSettings</find>
+      <find>run_analyze_roi</find>
+      <find>tresh</find>
+      <find>probability_threshold</find>
+      <find>timeBetFrames</find>
+      <find>vidin</find>
+      <find>fps</find>
+      <find>Open Video</find>
+      <find>videoName</find>
+      <find>f</find>
+      <find>vidinfDf</find>
+      <find>play_video</find>
+      <find>main</find>
+      <find>load_lab</find>
+      <find>choose_folder</find>
+      <find>update_frame_from_video</find>
+      <find>currDisplayFrameNo</find>
+      <find>printOnFrame</find>
+      <find>reverse</find>
+      <find>date</find>
+      <find>datetime</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ROI_directionality_to_other_animals.py" />
+        <option value="$PROJECT_DIR$/sklearn_plot_scripts/plot_sklearn_results_2.py" />
+        <option value="$PROJECT_DIR$/ROI_directionality_to_other_animals_visualize.py" />
+        <option value="$PROJECT_DIR$/outlier_scripts/location/correct_devs_loc_14bp.py" />
+        <option value="$PROJECT_DIR$/outlier_scripts/movement/correct_devs_mov_14bp.py" />
+        <option value="$PROJECT_DIR$/ROI_add_to_features.py" />
+        <option value="$PROJECT_DIR$/ROI_add_to_features_new.py" />
+        <option value="$PROJECT_DIR$/run_RF_model_new.py" />
+        <option value="$PROJECT_DIR$/../../simbapypi/simba/run_RF_model.py" />
+        <option value="$PROJECT_DIR$/../../simbapypi_no_tf/simba/run_RF_model.py" />
+        <option value="$PROJECT_DIR$/plot_threshold.py" />
+        <option value="$PROJECT_DIR$/outlier_scripts/movement/correct_devs_mov_user_defined.py" />
+        <option value="$PROJECT_DIR$/train_model_2.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_8.py" />
+        <option value="$PROJECT_DIR$/import_videos_csv_project_ini.py" />
+        <option value="$PROJECT_DIR$/read_DLCmulti_h5_function.py" />
+        <option value="$PROJECT_DIR$/import_solomon.py" />
+        <option value="$PROJECT_DIR$/ROI_plot_old.py" />
+        <option value="$PROJECT_DIR$/drop_bp_cords.py" />
+        <option value="$PROJECT_DIR$/rw_dfs.py" />
+        <option value="$PROJECT_DIR$/reverse_tracking_order.py" />
+        <option value="$PROJECT_DIR$/pyburst_kleinberg.py" />
+        <option value="$PROJECT_DIR$/data_plot.py" />
+        <option value="$PROJECT_DIR$/ez_lineplot.py" />
+        <option value="$PROJECT_DIR$/features_scripts/extract_features_7bp.py" />
+        <option value="$PROJECT_DIR$/features_scripts/extract_features_4bp.py" />
+        <option value="$PROJECT_DIR$/features_scripts/extract_features_8bp.py" />
+        <option value="$PROJECT_DIR$/features_scripts/extract_features_9bp.py" />
+        <option value="$PROJECT_DIR$/features_scripts/extract_features_14bp.py" />
+        <option value="$PROJECT_DIR$/features_scripts/extract_features_14bp_from_16bp.py" />
+        <option value="$PROJECT_DIR$/features_scripts/extract_features_16bp.py" />
+        <option value="$PROJECT_DIR$/features_scripts/extract_features_16bp-8-more.py" />
+        <option value="$PROJECT_DIR$/features_scripts/extract_features_16bp_new.py" />
+        <option value="$PROJECT_DIR$/features_scripts/extract_features_user_defined.py" />
+        <option value="$PROJECT_DIR$/ROI_process_movement.py" />
+        <option value="$PROJECT_DIR$/ROI_plot_new.py" />
+        <option value="$PROJECT_DIR$/ROI_analysis_new.py" />
+        <option value="$PROJECT_DIR$/ROI_plot.py" />
+        <option value="$PROJECT_DIR$/ROI_analysis_2.py" />
+        <option value="$PROJECT_DIR$/../setup.py" />
+        <option value="$PROJECT_DIR$/../../simbapypi_no_tf/simba/play_video_pseudo.py" />
+        <option value="$PROJECT_DIR$/pseudoLabel.py" />
+        <option value="$PROJECT_DIR$/play_video_pseudo.py" />
+        <option value="$PROJECT_DIR$/load_labelling_aggression.py" />
+        <option value="$PROJECT_DIR$/play_video.py" />
+        <option value="$PROJECT_DIR$/run_RF_model.py" />
+        <option value="$PROJECT_DIR$/SimBA.py" />
+        <option value="$PROJECT_DIR$/Kleinberg_burst_analysis.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="743" />
+    <option name="y" value="151" />
+    <option name="width" value="2089" />
+    <option name="height" value="1190" />
+  </component>
+  <component name="ProjectId" id="1iq1sOOP9PsGRWei8elkHaVlIcj" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="simba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simba" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.SimBA_dash_app">
+    <configuration name="SimBA" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="simba" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SimBA.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SimBA_dash_app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="simba" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SimBA_dash_app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.SimBA_dash_app" />
+        <item itemvalue="Python.SimBA" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c39d3d71-e74d-4955-b809-52b1c1364f0f" name="Default Changelist" comment="" />
+      <created>1601405456209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601405456209</updated>
+      <workItem from="1601405457988" duration="910000" />
+      <workItem from="1601600237952" duration="1161000" />
+      <workItem from="1601664178329" duration="944000" />
+      <workItem from="1601917272575" duration="1080000" />
+      <workItem from="1601918701025" duration="1888000" />
+      <workItem from="1601920986739" duration="72000" />
+      <workItem from="1601921233481" duration="1137000" />
+      <workItem from="1601928412748" duration="1105000" />
+      <workItem from="1601932323884" duration="21626000" />
+      <workItem from="1602190542835" duration="2678000" />
+      <workItem from="1602253513834" duration="2110000" />
+      <workItem from="1602626312741" duration="91000" />
+      <workItem from="1602628237770" duration="270000" />
+      <workItem from="1602628637525" duration="59000" />
+      <workItem from="1602629290481" duration="130000" />
+      <workItem from="1602632387385" duration="49000" />
+      <workItem from="1602694001246" duration="55000" />
+      <workItem from="1602695256817" duration="969000" />
+      <workItem from="1602818150843" duration="434000" />
+      <workItem from="1602984820486" duration="1193000" />
+      <workItem from="1603126924847" duration="618000" />
+      <workItem from="1603215803397" duration="1698000" />
+      <workItem from="1603384035618" duration="1148000" />
+      <workItem from="1603385526485" duration="140000" />
+      <workItem from="1603393246372" duration="1683000" />
+      <workItem from="1604091690630" duration="2773000" />
+      <workItem from="1604338584908" duration="12035000" />
+      <workItem from="1604354564656" duration="638000" />
+      <workItem from="1604355580586" duration="1166000" />
+      <workItem from="1604357651680" duration="511000" />
+      <workItem from="1604425117587" duration="824000" />
+      <workItem from="1604426051753" duration="2480000" />
+      <workItem from="1604430867291" duration="682000" />
+      <workItem from="1604431568578" duration="80000" />
+      <workItem from="1604431666747" duration="1864000" />
+      <workItem from="1604434042584" duration="1313000" />
+      <workItem from="1604439418609" duration="2788000" />
+      <workItem from="1604443279085" duration="90000" />
+      <workItem from="1604443719242" duration="1924000" />
+      <workItem from="1604446018463" duration="34000" />
+      <workItem from="1604446550826" duration="439000" />
+      <workItem from="1604447496421" duration="20000" />
+      <workItem from="1604447545543" duration="12000" />
+      <workItem from="1604447572381" duration="304000" />
+      <workItem from="1604447914796" duration="1166000" />
+      <workItem from="1604511584675" duration="3016000" />
+      <workItem from="1604514817866" duration="370000" />
+      <workItem from="1604515725548" duration="1396000" />
+      <workItem from="1604520030922" duration="1619000" />
+      <workItem from="1604524606272" duration="212000" />
+      <workItem from="1604524904782" duration="2543000" />
+      <workItem from="1604598082723" duration="3144000" />
+      <workItem from="1604607017186" duration="97000" />
+      <workItem from="1604689774918" duration="37000" />
+      <workItem from="1604696033157" duration="13000" />
+      <workItem from="1605038130681" duration="2106000" />
+      <workItem from="1605203045950" duration="2363000" />
+      <workItem from="1605223814938" duration="84000" />
+      <workItem from="1605289294143" duration="598000" />
+      <workItem from="1605572777161" duration="20000" />
+      <workItem from="1605722208317" duration="264000" />
+      <workItem from="1605751290063" duration="2234000" />
+      <workItem from="1605894310224" duration="6908000" />
+      <workItem from="1605914413452" duration="377000" />
+      <workItem from="1605914877514" duration="14000" />
+      <workItem from="1605914907428" duration="2634000" />
+      <workItem from="1606163060222" duration="3458000" />
+      <workItem from="1606247567861" duration="545000" />
+      <workItem from="1606248213682" duration="2756000" />
+      <workItem from="1606251001234" duration="13000" />
+      <workItem from="1606254884343" duration="109000" />
+      <workItem from="1606255438139" duration="931000" />
+      <workItem from="1606418854524" duration="9267000" />
+      <workItem from="1606669370374" duration="1344000" />
+      <workItem from="1606756843177" duration="1774000" />
+      <workItem from="1606780344602" duration="2123000" />
+      <workItem from="1606844310250" duration="378000" />
+      <workItem from="1606845230268" duration="500000" />
+      <workItem from="1606846316544" duration="1678000" />
+      <workItem from="1606854367835" duration="3756000" />
+      <workItem from="1606858563183" duration="2160000" />
+      <workItem from="1606867823995" duration="1067000" />
+      <workItem from="1606931982925" duration="1027000" />
+      <workItem from="1606933152174" duration="901000" />
+      <workItem from="1606938394667" duration="1323000" />
+      <workItem from="1606946260534" duration="980000" />
+      <workItem from="1607016959545" duration="1937000" />
+      <workItem from="1607021291598" duration="4255000" />
+      <workItem from="1607033234075" duration="2679000" />
+      <workItem from="1607037553289" duration="4049000" />
+      <workItem from="1607539606594" duration="415000" />
+      <workItem from="1607540261341" duration="58000" />
+      <workItem from="1607541198980" duration="5000" />
+      <workItem from="1607541242164" duration="2390000" />
+      <workItem from="1607979283295" duration="1188000" />
+      <workItem from="1608067293171" duration="7029000" />
+      <workItem from="1608090772350" duration="3493000" />
+      <workItem from="1609373902773" duration="684000" />
+      <workItem from="1609869311729" duration="5833000" />
+      <workItem from="1609875315280" duration="16000" />
+      <workItem from="1609875451795" duration="955000" />
+      <workItem from="1610128461567" duration="757000" />
+      <workItem from="1610149068405" duration="584000" />
+      <workItem from="1610474869960" duration="10000" />
+      <workItem from="1610474899901" duration="922000" />
+      <workItem from="1610476364166" duration="295000" />
+      <workItem from="1610479333574" duration="1202000" />
+      <workItem from="1610510613527" duration="271000" />
+      <workItem from="1610573743467" duration="862000" />
+      <workItem from="1610654135588" duration="1325000" />
+      <workItem from="1610655913317" duration="31000" />
+      <workItem from="1610656093490" duration="33000" />
+      <workItem from="1610663829861" duration="853000" />
+      <workItem from="1610665738235" duration="50000" />
+      <workItem from="1610665818106" duration="547000" />
+      <workItem from="1610666486798" duration="715000" />
+      <workItem from="1610752372487" duration="594000" />
+      <workItem from="1610819120792" duration="12931000" />
+      <workItem from="1610974632197" duration="10352000" />
+      <workItem from="1611002927429" duration="1718000" />
+      <workItem from="1611081851232" duration="16839000" />
+      <workItem from="1611174365307" duration="300000" />
+      <workItem from="1611181506763" duration="4681000" />
+      <workItem from="1611339086923" duration="520000" />
+      <workItem from="1611343345534" duration="1139000" />
+      <workItem from="1611344646452" duration="1741000" />
+      <workItem from="1611356810667" duration="2021000" />
+      <workItem from="1611596723555" duration="5313000" />
+      <workItem from="1611696167394" duration="1098000" />
+      <workItem from="1611705653409" duration="960000" />
+      <workItem from="1611856337054" duration="8648000" />
+      <workItem from="1612112500695" duration="1028000" />
+      <workItem from="1612298146142" duration="122000" />
+      <workItem from="1612498296292" duration="769000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="184549000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="743" y="151" width="2089" height="1190" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22129127" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32931727" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.13528855" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32837528" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" weight="0.32988167" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19067977" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32931727" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.28114188" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32837528" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1602623702898">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602623702898" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1602623702897">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602623702897" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1602623702897">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602623702897" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1602623702897">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602623702897" />
+    <state x="461" y="163" key="SettingsEditor" timestamp="1602620960345">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602620960345" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SimBA_dash_app.py</url>
+          <line>807</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/merge_frames_movie.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/drop_bp_cords.py</url>
+          <line>148</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.py" />
+    <entry file="file://$PROJECT_DIR$/features_scripts/drop_bp_cords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process_movement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_model_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="234" selection-start-line="234" selection-end-line="236" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sklearn_plot_scripts/plot_sklearn_results_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outlier_scripts/movement/correct_devs_mov_16bp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="275" column="8" selection-start-line="275" selection-start-column="8" selection-end-line="275" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyburst_kleinberg.py" />
+    <entry file="file://C:/Python36/Lib/site-packages/simba/ez_lineplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-959">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python36/Lib/site-packages/simba/rw_dfs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outlier_scripts/skip_outlierCorrection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rw_dfs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="63" lean-forward="true" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ez_lineplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="85" column="29" lean-forward="true" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#234#2502#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python36/Lib/site-packages/simba/train_model_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../simbapypi_no_tf/simba/SimBA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="3570" column="173" lean-forward="true" selection-start-line="3570" selection-start-column="168" selection-end-line="3570" selection-end-column="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drop_bp_cords.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reverse_tracking_order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_user_defined_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runmodel_1st.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="48" column="8" selection-start-line="30" selection-start-column="24" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_16bp_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_7bp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="61" lean-forward="true" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_4bp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_8bp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_9bp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_14bp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_14bp_from_16bp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_16bp-8-more.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_16bp_new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_16bp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features_scripts/extract_features_user_defined.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ROI_process_movement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="33" column="79" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ROI_plot_new.py" />
+    <entry file="file://$PROJECT_DIR$/ROI_analysis_new.py" />
+    <entry file="file://$PROJECT_DIR$/../../simbapypi_no_tf/simba/labelling_aggression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python36/Lib/site-packages/simba/labelling_aggression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="308" column="4" selection-start-line="308" selection-start-column="4" selection-end-line="308" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/load_labelling_aggression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="207" column="20" lean-forward="true" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labelling_aggression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5423">
+          <caret line="331" column="27" selection-start-line="331" selection-start-column="4" selection-end-line="331" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pseudoLabel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4012">
+          <caret line="249" column="64" selection-start-line="249" selection-start-column="64" selection-end-line="249" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/play_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1870">
+          <caret line="114" column="32" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../App.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/play_video_pseudo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ROI_analysis_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ROI_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="65" column="9" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../simbapypi_no_tf/simba/play_video_pseudo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" column="75" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimBA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="99" column="18" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="96" lean-forward="true" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_RF_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validate_model_on_single_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="103" column="55" selection-start-line="103" selection-start-column="55" selection-end-line="103" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process_data_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kleinberg_burst_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+          <folding>
+            <element signature="e#75#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
