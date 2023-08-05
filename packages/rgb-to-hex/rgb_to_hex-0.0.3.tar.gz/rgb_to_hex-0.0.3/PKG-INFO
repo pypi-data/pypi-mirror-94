@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: rgb_to_hex
+Version: 0.0.3
+Summary: BU KÜTÜPHANE 'TKİNTER' KÜTÜPHANESİNDE 'RGB' RENK KODLARINI KULLANABİLMEK İÇİN YAZILMIŞTIR
+Home-page: https://github.com/user/NexDen
+Author: SAMET ERİLTER
+Author-email: sametbilal34@gmail.com
+License: MIT
+Download-URL: https://github.com/NexDen/rgb_to_hex/archive/v.0.0.3.tar.gz
+Description: UNKNOWN
+Keywords: RGB,HEX
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
