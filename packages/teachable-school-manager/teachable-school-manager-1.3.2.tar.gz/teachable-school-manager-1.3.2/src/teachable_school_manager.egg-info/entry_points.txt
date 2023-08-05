@@ -1,0 +1,7 @@
+[console_scripts]
+teachable_enroll = teachable.scripts.enroll:main
+teachable_leaderboard = teachable.scripts.leaderboard:main
+teachable_remind = teachable.scripts.remind:main
+teachable_scheduler = teachable.scripts.scheduler:main
+teachable_user_report = teachable.scripts.user_report:main
+
