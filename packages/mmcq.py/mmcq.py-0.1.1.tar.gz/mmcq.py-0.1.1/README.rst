@@ -1,0 +1,56 @@
+mmcq.py -- Python implementation of Modified Median Color Quantization (MMCQ)
+================================================================================
+
+goal of this project is write `JS implemntation MMCQ`_ in python.
+
+.. _`JS implemntation MMCQ`: https://github.com/lokesh/color-thief/
+
+MMCQ?
+------
+
+See more at `Color quantization using modified median cut by Dan S. Bloomb`_
+
+.. _`Color quantization using modified median cut by Dan S. Bloomb`: http://www.leptonica.com/papers/mediancut.pdf
+
+Usage
+--------
+
+To get sample palette, you can use `mmcq.get_palette`.
+
+.. code-block:: python
+
+   from mmcq import get_palette
+   from PIL import Image, ImageDraw
+
+   # create an image
+   out = Image.new("RGB", (1000, 1000), (255, 255, 255))
+   d = ImageDraw.Draw(out)
+
+   with get_palette('something.jpg', 8) as palette:
+       for i, color in enumerate(palette):
+           d.rectangle((((i - 1) * 100, 0), (i * 100, 100)), fill=color)
+
+   out.show()
+
+To get dominant color, you can use `mmcq.get_dominant_color`
+which color is frist of `mmcq.get_palette`.
+
+.. code-block:: python
+
+   >>> from mmcq import get_dominant_color
+   >>> get_dominant_color(filename='/image/something.jpg')
+   (255, 234, 0)
+
+
+See more at `Color thief`_.
+
+.. _Color thief: http://lokeshdhakar.com/color-thief/
+
+Changelog
+---------
+
+0.1.0
+======
+
+- Only Python3 support.
+- Default image library changed from Wand to Pillow.
