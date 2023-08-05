@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: digimat.ebix
+Version: 0.0.2
+Summary: Digimat EBIX files helper
+Home-page: https://www.digimat.ch
+Author: Frederic Hess
+Author-email: fhess@st-sa.ch
+License: PSF
+Description: =====================
+        Python digimat.ebix
+        =====================
+        
+        No documentation available yet ;(
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3

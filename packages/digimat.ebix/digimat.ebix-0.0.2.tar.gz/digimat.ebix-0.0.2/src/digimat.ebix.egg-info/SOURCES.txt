@@ -1,0 +1,15 @@
+README.rst
+setup.py
+src/digimat/__init__.py
+src/digimat.ebix.egg-info/PKG-INFO
+src/digimat.ebix.egg-info/SOURCES.txt
+src/digimat.ebix.egg-info/dependency_links.txt
+src/digimat.ebix.egg-info/namespace_packages.txt
+src/digimat.ebix.egg-info/not-zip-safe
+src/digimat.ebix.egg-info/requires.txt
+src/digimat.ebix.egg-info/top_level.txt
+src/digimat/ebix/__init__.py
+src/digimat/ebix/ebix.py
+src/digimat/ebix/data/io-ch-eic-list-w-codes.xml
+src/digimat/ebix/data/io-ch-eic-list-x-codes.xml
+src/digimat/ebix/data/io-ch-eic-list-y-codes.xml
