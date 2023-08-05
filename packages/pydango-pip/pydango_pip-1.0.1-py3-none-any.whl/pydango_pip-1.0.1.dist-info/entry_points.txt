@@ -1,0 +1,3 @@
+[console_scripts]
+pydango = pydango.__main__:main
+
