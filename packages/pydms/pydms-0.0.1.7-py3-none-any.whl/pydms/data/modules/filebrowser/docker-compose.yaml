@@ -1,0 +1,14 @@
+version: "3"
+networks:
+  micro:
+    external: true
+services:
+  filebrowser:
+    image: filebrowser/filebrowser
+    networks:
+      - micro
+    container_name: filebrowser
+    volumes:
+    - /opt/fb:/srv
+    ports:
+    - 7002:80
