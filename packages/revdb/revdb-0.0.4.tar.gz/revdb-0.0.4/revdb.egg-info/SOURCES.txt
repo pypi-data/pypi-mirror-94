@@ -1,0 +1,14 @@
+setup.py
+revdb/__init__.py
+revdb/db.py
+revdb/exceptions.py
+revdb/jstorage.py
+revdb/manager.py
+revdb/models.py
+revdb/operators.py
+revdb/settings.py
+revdb.egg-info/PKG-INFO
+revdb.egg-info/SOURCES.txt
+revdb.egg-info/dependency_links.txt
+revdb.egg-info/requires.txt
+revdb.egg-info/top_level.txt
