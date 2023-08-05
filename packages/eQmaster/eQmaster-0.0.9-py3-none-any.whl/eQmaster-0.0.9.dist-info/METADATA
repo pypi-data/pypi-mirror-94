@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: eQmaster
+Version: 0.0.9
+Summary: Query interface to retrieve data from destinated s3 location with proper authentication
+Home-page: UNKNOWN
+Author: ava.chen
+Author-email: ava.chen@ephodtech.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: pandas
+Requires-Dist: s3fs
+Requires-Dist: pyarrow
+
+UNKNOWN
+
+
