@@ -1,0 +1,10 @@
+setup.py
+tele_logging/__init__.py
+tele_logging/bot.py
+tele_logging/logger.py
+tele_logging.egg-info/PKG-INFO
+tele_logging.egg-info/SOURCES.txt
+tele_logging.egg-info/dependency_links.txt
+tele_logging.egg-info/not-zip-safe
+tele_logging.egg-info/requires.txt
+tele_logging.egg-info/top_level.txt

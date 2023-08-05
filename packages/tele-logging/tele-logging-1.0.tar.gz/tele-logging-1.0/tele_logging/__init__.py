@@ -1,0 +1,1 @@
+from tele_logging.logger import send
