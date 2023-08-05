@@ -1,0 +1,13 @@
+causal_inference/__init__.py,sha256=kGhoQ1wvuwlNl3fuo-KNRsbLuglfL0q3ZueflypBzY8,323
+causal_inference/__main__.py,sha256=79Zc9gM8iXf-CZ0dvnPONs6c-F3Zyyxb5uR49y8pEiU,1451
+causal_inference/src/__init__.py,sha256=kGhoQ1wvuwlNl3fuo-KNRsbLuglfL0q3ZueflypBzY8,323
+causal_inference/src/uc_scm/__init__.py,sha256=kGhoQ1wvuwlNl3fuo-KNRsbLuglfL0q3ZueflypBzY8,323
+causal_inference/src/uc_scm/manifold.py,sha256=fl_igV5q6WxYT6Ew4JIYw5IXpNp10XAFZV1eaCjgLPI,409
+causal_inference/src/uc_scm/problem.py,sha256=ZpHSeVOitLR-Nt5nQg9jfb0nM78o1QiVjdklXSkb7mI,528
+causal_inference/src/uc_scm/scm.py,sha256=T88QYo0Hxt2ZAzagPWYVdXtKIjLQ53z20JzU7huS4S4,5331
+causal_inference/src/uc_scm/uc_scm_main.py,sha256=EQil-lRVVH66xBNmKNhfpxsMYYMbQokg2KOSJ6pDkdA,961
+causal_inference-0.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+causal_inference-0.0.2.dist-info/METADATA,sha256=6OMb0n6sWkartA_sELBWfYUGFZG6PQV0GaQztfl71qg,829
+causal_inference-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+causal_inference-0.0.2.dist-info/top_level.txt,sha256=7cdj3mFlIwTloRN8_sl6ZVGs4FA93EfBVk6qDnkLJRE,17
+causal_inference-0.0.2.dist-info/RECORD,,

@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: causal-inference
+Version: 0.0.2
+Summary: Causal Inference
+Home-page: https://github.com/ga74kud/causal_inference
+Author: Michael Hartmann
+Author-email: michael.hartmann@v2c2.at
+License: GNU GENERAL PUBLIC LICENSE
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: argparse
+Requires-Dist: python-igraph
+Requires-Dist: pycairo
+Requires-Dist: plotly
+Requires-Dist: pandas
+Requires-Dist: sympy
+
+![](/images/pexels_splash.jpg)
+
+
+# Causal Inference
+
+- [ ] Causal Inference
+
+# Installation
+```bash
+pip install causal-inference
+```
+
+# Usage
+
+```python
+# TBD
+```
+
+
+
+
+# Citation
+
+Please cite following document if you use this python package:
+```
+TBD
+```
+
+
+Image source: https://www.pexels.com/photo/blue-water-2695624/
+
