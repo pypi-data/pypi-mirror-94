@@ -1,0 +1,8 @@
+setup.py
+tablepy/__init__.py
+tablepy/makeHtml.py
+tablepy/printout.py
+tablepy.egg-info/PKG-INFO
+tablepy.egg-info/SOURCES.txt
+tablepy.egg-info/dependency_links.txt
+tablepy.egg-info/top_level.txt
