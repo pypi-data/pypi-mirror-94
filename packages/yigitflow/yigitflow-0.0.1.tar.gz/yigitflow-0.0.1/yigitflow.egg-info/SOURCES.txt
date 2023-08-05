@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+yigitflow/__init__.py
+yigitflow.egg-info/PKG-INFO
+yigitflow.egg-info/SOURCES.txt
+yigitflow.egg-info/dependency_links.txt
+yigitflow.egg-info/top_level.txt

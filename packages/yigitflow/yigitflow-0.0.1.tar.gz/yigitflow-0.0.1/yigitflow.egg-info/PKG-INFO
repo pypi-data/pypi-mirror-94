@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: yigitflow
+Version: 0.0.1
+Summary: A very basic 4 operator.
+Home-page: UNKNOWN
+Author: IYEHolding
+Author-email: yigidogulay@gmail.com
+License: MIT
+Description: You can make 4 operations with this libary.
+        
+        Change Log
+        ==========
+        
+        0.0.1(6/02/2021)
+        ----------------
+        - First Release
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
