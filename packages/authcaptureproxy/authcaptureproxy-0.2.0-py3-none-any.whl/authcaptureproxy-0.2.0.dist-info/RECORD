@@ -1,0 +1,16 @@
+CHANGELOG.md,sha256=snFiWU36WC1-nk-HngdOpoKpujR7KPrRpIdVuIWIZ0w,585
+LICENSE.txt,sha256=bqoHeeh8J2p7cbMj34SaC7Gk6XWy534D7NAd8HqlTDE,10889
+README.md,sha256=fHXjYyaQXjbV4NHLXgJvd_QUf-jEphg1E5QflgSHhK0,2305
+authcaptureproxy/__init__.py,sha256=u5RCt4XtMm4czKUFacF3MqIQddqgLtCESQP-qlJzOJc,2097
+authcaptureproxy/auth_capture_proxy.py,sha256=Q-VXiXj6yiEdCa2aeiMTm07I-FM4Ce8NwRZqfUmhya0,10537
+authcaptureproxy/cli.py,sha256=jHjmhQjXNuNXfvOy6-VyxKoRXMgJikkLCkmlQPMK4JE,4770
+authcaptureproxy/examples/__init__.py,sha256=mec24Y3S1rrJMWWuuI5qZbTOBuGPzXDc0ukjYFxVQso,80
+authcaptureproxy/examples/modifiers.py,sha256=bVz0-UD3V0TpA8vbLOCmpW1ebj0UiiS7pf8S9tCDRgc,1087
+authcaptureproxy/examples/testers.py,sha256=6uet5iXzq1LJmeD3rdiDPBhtWSHffD86fBJqid_UDhY,1418
+authcaptureproxy/helper.py,sha256=Yak89CP8nC66YmK8HM4n3KhsAIi9wUAZLo7rrxzzwNw,895
+authcaptureproxy/stackoverflow.py,sha256=qdMqA0tKzI9esXFV4-hb6_a50AQzD_KfWDmNRn36LwU,631
+authcaptureproxy-0.2.0.dist-info/entry_points.txt,sha256=Y3x3p_kKiPIjsB3tfFRGawiutcJkCPM-WsYOwXHMap0,63
+authcaptureproxy-0.2.0.dist-info/LICENSE.txt,sha256=bqoHeeh8J2p7cbMj34SaC7Gk6XWy534D7NAd8HqlTDE,10889
+authcaptureproxy-0.2.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+authcaptureproxy-0.2.0.dist-info/METADATA,sha256=TSE3ZhrJoqWGAx9J6I3iM4hITKgfDIqYEoMcspcXqVA,3959
+authcaptureproxy-0.2.0.dist-info/RECORD,,
