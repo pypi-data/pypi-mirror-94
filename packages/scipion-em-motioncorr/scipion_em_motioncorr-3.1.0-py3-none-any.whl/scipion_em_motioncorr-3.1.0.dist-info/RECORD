@@ -1,0 +1,16 @@
+motioncorr/__init__.py,sha256=9B0qt9T71Ktbw91b6Mgo0N70-llaoxj7pkvLxry_85o,2857
+motioncorr/bibtex.py,sha256=rJfn5AEBvk3A8xciAeESeKrvtYqIdY_2MlGpTpDbmms,1588
+motioncorr/constants.py,sha256=Uaeosv6c0fxnmd66v-IE3HUNTon4MexMeVnE4iXhEXk,1432
+motioncorr/convert.py,sha256=UQH6cq2qg8WOpGu5VPb2g7S2pMLsHT1qKj1YG8pv_vk,2136
+motioncorr/protocols.conf,sha256=7_uUmxmUCNzMqwKpSQdlnr3vo6_tcfzEnPZHFGK3wbI,5329
+motioncorr/viewers.py,sha256=AULtmBsARt7to0iBw7FHdyLm7SLJbGxMGj0v96vbJpU,7289
+motioncorr/protocols/__init__.py,sha256=UIgmsOGQKQ_3Wcu1gcDIHmYamYX7HmW_pOuQ0JQQSQI,1179
+motioncorr/protocols/protocol_motioncorr.py,sha256=pv-QExPE1DPdyP9yRA8UUA-dynfr6ENVhYFCxGynfDQ,28439
+motioncorr/tests/__init__.py,sha256=pI1spQt3XHZ6eFjWnrrog4EbgfUxgAZ5RfF23UXNOD8,66
+motioncorr/tests/test_protocols_motioncor2.py,sha256=XxH2rodbBnMN0zdrp8pMZg_UfkhezoeZveA_0rFhFpg,6103
+scipion_em_motioncorr-3.1.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+scipion_em_motioncorr-3.1.0.dist-info/METADATA,sha256=RnDzeVe6dsma_a0hwRN4XPYGqG4gKYOuFh4otTi7F7I,4468
+scipion_em_motioncorr-3.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+scipion_em_motioncorr-3.1.0.dist-info/entry_points.txt,sha256=85Ts06asIjjRuX0yjt1RltmGg9hI9pojN9AacqvSu9Q,45
+scipion_em_motioncorr-3.1.0.dist-info/top_level.txt,sha256=8-kkZymt4aOvhtJAk_SvbMKL-g_mOzGyQUenPD3afpI,11
+scipion_em_motioncorr-3.1.0.dist-info/RECORD,,
