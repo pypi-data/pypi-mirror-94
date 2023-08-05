@@ -1,0 +1,3 @@
+[console_scripts]
+pctap=pctap_annek.cli:main
+
