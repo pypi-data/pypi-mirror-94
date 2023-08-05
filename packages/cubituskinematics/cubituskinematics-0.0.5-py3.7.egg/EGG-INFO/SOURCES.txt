@@ -1,0 +1,16 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+cubituskinematics/Bezier.py
+cubituskinematics/Core.py
+cubituskinematics/Kinematics.py
+cubituskinematics/Mathematics.py
+cubituskinematics/__init__.py
+cubituskinematics/cubitus.xml
+cubituskinematics.egg-info/PKG-INFO
+cubituskinematics.egg-info/SOURCES.txt
+cubituskinematics.egg-info/dependency_links.txt
+cubituskinematics.egg-info/requires.txt
+cubituskinematics.egg-info/top_level.txt

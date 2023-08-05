@@ -1,0 +1,152 @@
+Metadata-Version: 2.1
+Name: cubituskinematics
+Version: 0.0.5
+Summary: Controller library for C.U.B.I.T.U.S. Robotic Arm
+Home-page: https://pypi.org/project/cubituskinematics/
+Author: Oliver Kudzia
+Author-email: olinox11@gmail.com
+License: MIT
+Description: # Cubitus Kinematics Package
+        
+        This is the custom made package for Cubitus Robotic Arm. This package includes matplotlib plotting as well as realtime sending the data to the robotic manipulator itself.
+        
+        ## Installation
+        
+        Run the following to install the package :
+        
+        ```console
+        $ pip install cubituskinematics
+        ```
+        
+        ## Usage
+        
+        First of all, you need to import cubituskinematics package/library into your project's python file.
+        
+        ```python
+        import cubituskinematics as ck
+        # or you could also use (but not recommended):
+        from cubituskinematics import *
+        ```
+        
+        Next you can test it using simple commands as shown below :
+        
+        #### Point
+        ```python
+        # moves to one certain point in 3D space
+        ck.move_to_point(210, 0, 170)
+        ```
+        
+        > NOTE: if you want to know more about a function, hover on its name to reveal more information
+        
+        #### Line
+        ```python
+        # declare two points (each as a list)
+        A = [200, 0, 120]
+        B = [200, 0, 260]
+        
+        # performs a line movement
+        ck.perform_line(A, B, sampling=50, repeat=1)
+        # use 'sampling' and 'repeat' arguments to determine sampling and number of repetitions
+        ```
+        
+        #### Circle
+        ```python
+        # declare three points (each as a list)
+        A = [150, 0, 200]
+        B = [185, -80, 190]
+        C = [210, 30, 150]
+        
+        # performs a circle movement
+        ck.perform_circle(A, B, C, sampling=50, repeat=1)
+        # use 'sampling' and 'repeat' arguments to determine sampling and number of repetitions
+        ```
+        
+        #### Parabola
+        ```python
+        # define vertex point
+        V = [217, 0, 150]
+        
+        # performs a parabolic movement
+        ck.perform_parabola(0.03, 30, V, sampling=50, repeat=1)
+        # use 'sampling' and 'repeat' arguments to determine sampling and number of repetitions
+        ```
+        
+        #### BĂ©zier curve
+        ```python
+        # declare three points (each as a list)
+        A = [230, 0, 140]
+        B = [280, 20, 280]
+        C = [240, 50, 150]
+        
+        # performs a bĂ©zier curve movement
+        ck.perform_bezier(A, B, C, sampling=50, repeat=1)
+        # use 'sampling' and 'repeat' arguments to determine sampling and number of repetitions
+        ```
+        
+        #### Custom XML file
+        
+        To use a custom-made .xml file you'll need to load it into the system like so :
+        > Note that your .xml file MUST be in the same folder as your .py script, otherwise fails to proceed !
+        
+        ```python
+        # declare a name of your .xml file
+        xml_name = "manipulator.xml" # or you can use just "manipulator"
+        
+        # it is very important to have __file__ as a first argument
+        ck.load_xml(__file__, xml_name)
+        ```
+        
+        ### Simple User Interface Terminal
+        
+        If you want to use user interface use one simple command as shown below :
+        
+        ```python
+        # opens user interface which acts like a simple command line terminal
+        ck.run_ui()
+        ```
+        
+        ### Usage
+        
+        After the command (shown above) is executed, this should be printed 
+        
+        ```console
+        +------------- CUBITUS ROBOTIC ARM -------------+
+        |                 TUKE FEI KKUI                 |
+        +------------- USER INTERFACE v1.2 -------------+
+        
+            Enter 'help' to show list of all comands.
+        ```
+        
+        When you type 'help' as show below
+        
+        ```console
+        >> help
+        ```
+        
+        the list of all possible commands appears on the screen. Each of these commands can be used to interface with the robotic arm itself via command line terminal :
+        
+        ```console
+        >> help         Shows all commands.
+        >> loadxml      Loads user defined XML into system. (needs external command)
+        >> grip         Sets gripper state to *hold* position.
+        >> ungrip       Sets gripper state to *open* position.
+        >> eefangle     Sets end effector angle (X Y Z angles).
+        >> perform      Perform a specific movement based on input.
+        >> equation     Perform a custom curve based on input.
+        >> about        Show application info.
+        >> reset        Reset application.
+        >> clear        Clear terminal.
+        >> exit         Exit interface.
+        ```
+        
+Keywords: cubitus,robotic arm,inverse kinematics,forward kinematics
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
