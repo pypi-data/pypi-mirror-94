@@ -1,0 +1,3 @@
+[console_scripts]
+htknx = htknx.__main__:main
+
