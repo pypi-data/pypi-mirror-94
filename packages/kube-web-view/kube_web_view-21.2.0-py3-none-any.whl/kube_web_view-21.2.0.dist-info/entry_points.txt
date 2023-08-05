@@ -1,0 +1,3 @@
+[console_scripts]
+kube-web-view=kube_web:main.main
+

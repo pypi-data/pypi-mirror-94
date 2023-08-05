@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %} - Kubernetes Web View</title>
+        <link rel="stylesheet" href="/assets/themes/{{ theme.name }}/bulmaswatch.min.css?v=21.2.0">
+        <script defer src="/assets/solid.min.js?v=21.2.0"></script>
+        <script defer src="/assets/fontawesome.min.js?v=21.2.0"></script>
+        <script src="/assets/kube-web.js?v=21.2.0"></script>
+        <link rel="stylesheet" href="/assets/kube-web.css?v=21.2.0" />
+        <link rel="stylesheet" href="/assets/themes/{{ theme.name }}/kube-web.css?v=21.2.0" />
+        <link rel="shortcut icon" href="/assets/favicon.png">
+        <link rel="icon" type="image/png" href="/assets/favicon.png">
+        {% include "partials/extrahead.html" %}
+    </head>
+    <body class="has-navbar-fixed-top">
+        {% include "partials/navbar.html" %}
+        <div class="container is-fluid is-flex-desktop">
+            {% include "partials/sidebar.html" %}
+            <main>
+            {% block content %}{% endblock %}
+            </main>
+        </div>
+        {% include "partials/footer.html" %}
+        {% if reload: %}
+        <script>
+            // reload page after X seconds..
+            const reloadInterval = {{ reload }};
+            if (reloadInterval > 0.5) {
+                const button = document.getElementById("btn-reload");
+                button.style.animationName = "reload";
+                button.style.animationDuration = reloadInterval + "s";
+                window.setTimeout(function () { location.reload(); }, reloadInterval * 1000);
+            }
+        </script>
+        {% endif %}
+    </body>
+</html>

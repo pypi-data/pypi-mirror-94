@@ -1,0 +1,38 @@
+<aside class="menu">
+    <div class="is-hidden-desktop"><a role="button" class="aside-burger" data-target="aside-menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a></div>
+        <div id="aside-menu">
+            {% if sidebar_menu: %}
+            {% for label, links in sidebar_menu.items(): %}
+            <p class="menu-label">
+            {{ label }}
+            </p>
+            <ul class="menu-list">
+                {% for link in links: %}
+                <li><a href="{{ link.href }}">{{ link.text }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+            {% endif %}
+
+            {% if cluster and namespace: %}
+            <p class="menu-label">
+            Meta
+            </p>
+            <ul class="menu-list">
+                <li><a href="/clusters/{{cluster}}/namespaces/{{namespace}}/_resource-types">Resource Types</a></li>
+                <li><a href="/clusters/{{cluster}}/namespaces/{{namespace}}/events">Events</a></li>
+            </ul>
+            {% elif cluster and not namespace: %}
+            <p class="menu-label">
+            Meta
+            </p>
+            <ul class="menu-list">
+                <li><a href="/clusters/{{cluster}}/_resource-types">Resource Types</a></li>
+            </ul>
+            {% endif %}
+        </div>
+
+</aside>
