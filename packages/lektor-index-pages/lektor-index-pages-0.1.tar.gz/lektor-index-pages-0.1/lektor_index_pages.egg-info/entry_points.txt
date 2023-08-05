@@ -1,0 +1,3 @@
+[lektor.plugins]
+index-pages = lektor_index_pages:IndexPagesPlugin
+
