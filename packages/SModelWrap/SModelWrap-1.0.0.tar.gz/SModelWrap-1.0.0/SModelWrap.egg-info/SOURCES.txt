@@ -1,0 +1,10 @@
+README.md
+SModelWrap.py
+setup.cfg
+setup.py
+SModelWrap.egg-info/PKG-INFO
+SModelWrap.egg-info/SOURCES.txt
+SModelWrap.egg-info/dependency_links.txt
+SModelWrap.egg-info/requires.txt
+SModelWrap.egg-info/top_level.txt
+test/testFunction.py

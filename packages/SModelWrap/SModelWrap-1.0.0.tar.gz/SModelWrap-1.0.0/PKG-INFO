@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: SModelWrap
+Version: 1.0.0
+Summary: Quick wrapper to get predictions to work with AWS Sagemaker
+Home-page: https://github.com/SrzStephen/ModelWrap
+Author: Stephen Mott
+Author-email: stephen@mott.email
+License: WTFPL
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.6
