@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: headbot
+Version: 0.1.0
+Summary: python client for the headbot.io API
+Home-page: https://github.com/headbot/headbot-python/
+Author: Ruslan Ksalov
+Author-email: rksalov@gmail.com
+License: Apache 2
+Description: # Headbot.io Python Client
+        
+        Python client for the [headbot.io API](http://headbot.io/api/).
+        
+        ## Installing
+        ```
+        pip install headbot
+        ```
+        
+        ## Supported versions
+        * Python 3.6+
+        
+        ## Usage
+        ```
+        import asyncio
+        from pprint import pprint
+        from headbot.client import HeadbotClient
+        
+        
+        async def main():
+            async with HeadbotClient(email="{email}", password="{password}") as client:
+                my_crawlers = await client.crawlers()
+                pprint(my_crawlers)
+        
+        
+        if __name__ == '__main__':
+            loop = asyncio.get_event_loop()
+            loop = loop.run_until_complete(main())
+        
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: AsyncIO
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
