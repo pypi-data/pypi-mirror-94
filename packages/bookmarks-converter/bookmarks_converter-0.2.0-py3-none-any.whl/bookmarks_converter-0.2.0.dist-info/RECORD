@@ -1,0 +1,10 @@
+bookmarks_converter/__init__.py,sha256=SpTTKSe0-C1-OBJOjV1-mcMOp8Er85b6rKi5KWhFoBc,37
+bookmarks_converter/__main__.py,sha256=vCuFfg2rsbEuj7_7T74VTFvw5Dn8MPMz27O0Va4IAd0,87
+bookmarks_converter/cli.py,sha256=BN5peScbSQuuiv4I1oshuqblczB362MqarcBaBbRD2U,2723
+bookmarks_converter/core.py,sha256=n8Db27b7d86QW15jsiIntAp85TsPKpXso0VA_9qiqps,16126
+bookmarks_converter/models.py,sha256=wdIqgCKnRL6tJb4iY6nUBw_N1nGTkNefY7U1yXhFbk4,13221
+bookmarks_converter-0.2.0.dist-info/entry_points.txt,sha256=xN6fghTAgQItX_ipjVc7cmU3KfdZw_dttq2or3GCEEA,68
+bookmarks_converter-0.2.0.dist-info/LICENSE,sha256=Sff6CExQcWKDg4fXPsaRmV8TEStuN0UgedQzgfuc_Aw,1061
+bookmarks_converter-0.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+bookmarks_converter-0.2.0.dist-info/METADATA,sha256=rRuAc5VEQqznTcalCBV61loozcmQs9dxDvp1jzCTnCE,5702
+bookmarks_converter-0.2.0.dist-info/RECORD,,
