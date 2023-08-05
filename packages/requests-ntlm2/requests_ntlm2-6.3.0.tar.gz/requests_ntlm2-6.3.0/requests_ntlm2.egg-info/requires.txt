@@ -1,0 +1,26 @@
+requests>=2.0.0
+ntlm-auth>=1.0.2
+cryptography>=1.3
+six>=1.10
+
+[linting]
+flake8
+flake8-isort
+flake8-quotes
+
+[linting:python_version != "2.7"]
+bandit
+
+[linting:python_version == "2.7"]
+bandit==1.6.2
+
+[testing]
+flask
+pytest
+pytest-cov
+wheel
+codecov
+coverage
+mock
+faker
+trustme
