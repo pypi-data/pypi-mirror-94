@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: graphical-model-learning
+Version: 0.1a4
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: 
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >3.5.0
+Requires-Dist: conditional-independence
+Requires-Dist: graphical-models
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: tqdm
+
+UNKNOWN
+
+
