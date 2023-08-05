@@ -1,0 +1,41 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Run an Experiment{% endblock %}
+{% block content %}
+
+{% if stdout %}
+<div class="card border-secondary mb-3" overflow="scroll" style="max-height: 36rem;">
+  <div class="card-header"><strong>Output Printed by the Subprocess</strong></div>
+  <div class="card-body text-secondary scroll">
+    <p class="card-text">
+        {% for line in stdout%}
+            {{line}}<br>
+        {% endfor %}
+    </p>
+  </div>
+</div>
+{% endif %}
+{% if stderr %}
+<hr>
+<div class="card border-danger mb-3" overflow="scroll" style="max-height: 36rem;">
+  <div class="card-header text-danger"><strong>Error Message from Subprocess; Read and Report!</strong></div>
+  <div class="card-body text-danger scroll">
+    <p class="card-text">
+        {% for line in stderr%}
+            {{line}}<br>
+        {% endfor %}
+    </p>
+  </div>
+</div>
+<hr>
+{% endif %}
+
+<div class="page-header">
+    {% from 'macros/render_form.html' import auto_render_form, simple_render_form %}
+    <h2> <a href="{{url_for('experiment')}}">Experiment</a> <h2>
+        <h6></h6>
+    {{ auto_render_form(
+        form, ultra_form, data, toggle_off_keys, data2, toggle_off_keys2, buttons,
+        enter_show, url_experiment, readonly=readonly) }}
+</div>
+
+{% endblock %}

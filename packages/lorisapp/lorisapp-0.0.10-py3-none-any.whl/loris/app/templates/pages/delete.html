@@ -1,0 +1,25 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Delete Entry {{ restriction }}{% endblock %}
+{% block content %}
+
+<div class="page-header">
+<h2> Deleting entry in <a href={{url}}>{{table_name}}</a> <h2>
+</div>
+<h6>
+    You are about to delete the entry <font color="orangered">{{ restriction }}</font>.
+    If this entry has dependent downstream entries, these entries will be
+    deleted as well. The below delete message indicates if any downstream
+    entries will be deleted.
+</h6>
+<p class="lead">
+    {% for imessage in message %}
+        {{ imessage }}<br>
+    {% endfor %}
+</p>
+<form method="POST">
+<tr>
+<td align="center"><input class="btn btn-outline-danger" type="submit" value=Delete name="submit"></td>
+<td align="center"><input class="btn btn-outline-primary" type="submit" value=Cancel name="submit"></td>
+</tr>
+</form>
+{% endblock %}

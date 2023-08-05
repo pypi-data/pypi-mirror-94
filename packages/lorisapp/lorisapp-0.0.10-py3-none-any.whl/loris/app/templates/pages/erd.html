@@ -1,0 +1,17 @@
+{% extends 'layouts/main.html' %}
+{% block title %}{{schema}} Diagram{% endblock %}
+{% block content %}
+
+<div class="page-header">
+    <h2> <a href={{url}}>{{schema}}</a> <h2>
+    <h4>Relations</h4>
+    Click on a table to expand it.
+    <div class="post-tabs" style="overflow:auto">
+        <object data="{{ url_for('tmpfile', filename=filename) }}"
+                type="image/svg+xml"
+                class="Svg" target="_top">
+        </object>
+    </div>
+</div>
+
+{% endblock %}

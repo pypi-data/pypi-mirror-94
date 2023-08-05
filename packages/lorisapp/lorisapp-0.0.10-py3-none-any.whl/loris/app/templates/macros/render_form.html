@@ -1,0 +1,518 @@
+{% macro render_label(field) %}
+    <strong>
+    {% if field.render_kw['primary_key'] %}
+        <font color="Crimson">{{ field.label }}</font>
+    {% elif field.render_kw['nullable']%}
+        <font color="DarkGray">{{ field.label }}</font>
+    {% else %}
+        {{ field.label }}
+    {% endif %}
+    </strong>
+{% endmacro %}
+
+{% macro render_field(field, label, readonly=[]) %}
+    <td>
+        {% if field.type in ['FileField', 'BlobFileField', 'AttachFileField', 'DynamicFileField'] %}
+            {% if label %}
+                {{ render_label(field) }}
+                {% if field.description%}
+                    &emsp;<small>({{ field.description }})</small>&emsp;
+                {% endif %}
+                {% if field.short_name in readonly %}
+                <p> {{ field(readonly=true) }} </p>
+                {% else %}
+                <p> {{ field()}} </p>
+                {% endif %}
+            {% else %}
+                {% if field.short_name in readonly %}
+                {{ field(readonly=true) }}
+                {% else %}
+                {{ field()}}
+                {% endif %}
+            {% endif %}
+        {% elif field.type in ['SelectField'] %}
+            {% if label %}
+                {{ render_label(field) }}
+                {% if field.description%}
+                    &emsp;<small>({{ field.description }})</small>&emsp;
+                {% endif %}
+            {% endif %}
+            {% if field.short_name in readonly %}
+            {{ field(class="form-control", readonly=true) }}
+            {% else %}
+            {{ field(class="form-control") }}
+            {% endif %}
+        {% elif field.type in ['BooleanField']%}
+            {% if label %}
+                {{ render_label(field) }}
+                {% if field.description%}
+                    &emsp;<small>({{ field.description }})</small>&emsp;
+                {% endif %}
+            {% endif %}
+            {% if field.short_name in readonly %}
+            {{ field(readonly=true) }}
+            {% else %}
+            {{ field() }}
+            {% endif %}
+        {% else %}
+            {% if label %}
+                {{ render_label(field) }}
+                {% if field.short_name in readonly %}
+                {{
+                    field(class="form-control",
+                    placeholder=field.description, autofocus=true, readonly=true)
+                }}
+                {% else %}
+                {{
+                    field(class="form-control",
+                    placeholder=field.description, autofocus=true)
+                }}
+                {% endif %}
+            {% else %}
+            {% if field.short_name in readonly %}
+            {{
+                field(class="form-control",
+                placeholder=field.description, readonly=true)
+            }}
+            {% else %}
+            {{
+                field(class="form-control",
+                placeholder=field.description)
+            }}
+            {% endif %}
+            {% endif %}
+        {% endif %}
+    {% if field.errors %}
+        <ul class="errors">
+            {% for error in field.errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    </td>
+{% endmacro %}
+
+{% macro _render_form(form, toggle_class="fieldsetting", skip=[], readonly=[]) %}
+{% for field in form %}
+{% if (not "csrf_token" in field.name) and (not field.type in ['HiddenField', 'SetHiddenField']) and (field.id not in skip)%}
+        {% if field.type in ['FieldList'] %}
+        <tr>
+            <td>
+            <div data-toggle="{{ toggle_class }}" id="{{ field.id }}-{{ toggle_class }}">
+            <table>
+                <tr>
+                    {% if toggle_class == "subfieldset" %}
+                    <td>
+                        <b> {{ field.label }} </b>
+                    </td>
+                    {% else %}
+                    <td>
+                        <b><font size="5"> {{ field.label }} </font></b>
+                    </td>
+                    {% endif %}
+                    <td>
+                        <button id="{{ field.id }}" class="btn btn-outline-primary btn-sm" type="button" data-toggle="{{ toggle_class }}-add-row" data-target="#{{ field.id }}-{{ toggle_class }}">+</button>
+                    </td>
+                </tr>
+                {% for subfield in field %}
+                {% if subfield.type == 'FormField' %}
+                    <tr data-toggle="{{ toggle_class }}-entry" {% if loop.index0==0 %}style="display:none;"{% endif %}>
+                    <td>
+                    <div>
+                    <table>
+                        <!-- changed back to fieldsetting instead of subfieldset -->
+                    {{ _render_form(subfield, "fieldsetting", readonly=readonly)}}
+                    <tr>
+                        <td>
+                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="{{ toggle_class }}-remove-row" id="{{field.id}}-{{loop.index0}}-remove">-
+                        </button>
+                        </td>
+                    </tr>
+                    </table>
+                    </div>
+                    </td>
+                    </tr>
+                {% else %}
+                    <tr data-toggle="{{ toggle_class }}-entry" {% if loop.index0==0 %}style="display:none;"{% endif %}>
+                    {{ render_field(subfield, False, readonly=readonly) }}
+                    <td>
+                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="{{ toggle_class }}-remove-row" id="{{field.id}}-{{loop.index0}}-remove">-
+                        </button>
+                    </td>
+                    </tr>
+                {% endif %}
+                {% endfor %}
+                <tr>
+                    <td>
+                        <button id="{{ field.id }}" class="btn btn-outline-primary btn-sm" type="button" data-toggle="{{ toggle_class }}-add-row" data-target="#{{ field.id }}-{{ toggle_class }}">+</button>
+                    </td>
+                </tr>
+            </table>
+            </div>
+            </td>
+        </tr>
+        {% elif field.type in ['SetFieldList'] %}
+        {% for subfield in field %}
+            {% if loop.index0 == 0 %}
+                <tr>
+                {{ render_field(subfield, True, readonly=readonly) }}
+                </tr>
+            {% else %}
+                <tr>
+                {{ render_field(subfield, False, readonly=readonly) }}
+                </tr>
+            {% endif %}
+        {% endfor %}
+        {% elif field.type in ['ParentFormField'] %}
+            <tr>
+            {{ render_field(field.existing_entries, True, readonly=readonly) }}
+            <td>
+                <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#{{field.id}}">
+                    New
+                </button>
+                <div class="modal fade" id="{{field.id}}" tabindex="-1" role="dialog" aria-labelledby="{{field.id}}Label" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="{{field.id}}Label">Enter into parent table {{field.parent_table_name}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <table>
+                         {{ _render_form(field, None, skip=['existing_entries'], readonly=readonly) }}
+                         </table>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Enter</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </td>
+            </tr>
+        {% elif field.type in ['FormField'] %}
+            {{ _render_form(field, readonly=readonly)}}
+        {% else %}
+        <tr>
+            {{ render_field(field, True, readonly=readonly) }}
+        </tr>
+        {% endif %}
+{% endif %}
+{% endfor %}
+{% endmacro %}
+
+{% macro render_form(form, readonly=[]) %}
+    <form novalidate method=post enctype="multipart/form-data">
+        <table  style="width:100%">
+        {{ form.hidden_tag() }}
+        {{ _render_form(form, readonly=readonly) }}
+        </table>
+        <p> </p>
+        <div>
+        <tr>
+            {% if request.args.get('edit', 'False') == 'True' %}
+            <td align="center"><input class="btn btn-outline-success" type=submit value=Save name="submit"></td>
+            {% else %}
+            <td align="center"><input class="btn btn-outline-success" type=submit value=Save name="submit"></td>
+            <td align="center"><input class="btn btn-outline-warning" type=submit value=Overwrite name="submit"></td>
+            {% endif %}
+        </tr>
+        </div>
+        <p> </p>
+    </form>
+{% endmacro %}
+
+
+{% macro simple_render_form(form, readonly=[]) %}
+        <table  style="width:100%">
+        {{ _render_form(form, readonly=readonly) }}
+        </table>
+{% endmacro %}
+
+
+{% macro auto_render_form(form, ultra_form, data, toggle_off_keys, data2, toggle_off_keys2, buttons, enter_show, url_experiment, readonly=[]) %}
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-outline-primary collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Load Your Experiment
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+          <form novalidate method=post enctype="multipart/form-data">
+              <table  style="width:100%">
+              {{ form.hidden_tag() }}
+              {{ _render_form(form, readonly=readonly) }}
+              </table>
+              <p> </p>
+              <div>
+              <tr>
+                  <td align="center"><input class="btn btn-outline-primary" type=submit value=Load name="submit"></td>
+              </tr>
+              </div>
+              <p> </p>
+          </form>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingOne1">
+      <h5 class="mb-0">
+        <button class="btn btn-outline-danger collapsed" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+          Abort Running Subprocess
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne1" class="collapse" aria-labelledby="headingOne1" data-parent="#accordion">
+      <div class="card-body">
+          <form novalidate method=post enctype="multipart/form-data">
+              <div>
+              <tr>
+                  <td align="center"><input class="btn btn-outline-danger" type=submit value=Abort name="submit"></td>
+              </tr>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+  {% if ultra_form != "None" %}
+  <div class="card">
+    <div class="card-header" id="headingTwoTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-outline-primary collapsed {{ enter_show[0] }}" data-toggle="collapse" data-target="#collapseTwoTwo" aria-expanded="{{ enter_show[1] }}" aria-controls="collapseTwoTwo">
+          Setup Your Experiment
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwoTwo" class="collapse {{ enter_show[0] }}" aria-labelledby="headingTwoTwo" data-parent="#accordion">
+      <div class="card-body">
+          <p>
+            <button class="btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#ExperimentForm" aria-expanded="false" aria-controls="ExperimentForm">{{ ultra_form.table_name }}</button>
+            {% for iname in ultra_form.autoscript_forms %}
+            <button class="btn btn-outline-secondary" type="button" data-toggle="collapse" data-target="#{{iname}}" aria-expanded="false" aria-controls="{{iname}}">{{ iname }}</button>
+            {% endfor %}
+          </p>
+          <form novalidate method=post enctype="multipart/form-data">
+              {{ ultra_form.hidden_tag() }}
+                  <div class="collapse multi-collapse" id="ExperimentForm">
+                      <p></p>
+                      <div class="card card-body">
+                        <h4><a href="{{url_experiment}}" target="_blank">{{ ultra_form.table_name }}</a></h4>
+                        {{ simple_render_form(ultra_form.experiment_form.form, readonly=readonly) }}
+                      </div>
+                    </div>
+                {% for iname in ultra_form.autoscript_forms %}
+                    <div class="collapse multi-collapse" id="{{iname}}">
+                         <p></p>
+                        <div class="card card-body">
+                            <h4>{{iname}}</h4>
+                            {{ simple_render_form(ultra_form[iname].form, readonly=readonly) }}
+                        </div>
+                      </div>
+                  {% endfor %}
+            <p> </p>
+            {{ simple_render_form(ultra_form.settingsname_form.form) }}
+            <p> </p>
+            <div>
+            <tr>
+                <td align="center"><input class="btn btn-outline-success" type=submit value=Save name="submit"></td>
+                {% for button in buttons %}
+                <td align="center"><input class="btn btn-outline-secondary" type=submit value="{{button}}" name="submit"></td>
+                {% endfor %}
+                <td align="center">
+                    <a class="btn btn-outline-warning" href="{{ url_for('monitorexperiment')}}" target="_blank">
+                        Monitor
+                    </a>
+                </td>
+            </tr>
+            </div>
+            <p> </p>
+            </form>
+
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% if ultra_form != "None" %}
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-outline-primary collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         Saved Configurations
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+          {% with data=data, toggle_off_keys=toggle_off_keys%}
+              {% include 'macros/tables.html' %}
+          {% endwith %}
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree2">
+      <h5 class="mb-0">
+        <button class="btn btn-outline-primary collapsed" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+         Existing Entries for {{ ultra_form.table_name }}
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordion">
+      <div class="card-body">
+          {% with data=data2, toggle_off_keys=toggle_off_keys2%}
+              {% include 'macros/tables.html' %}
+          {% endwith %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endmacro %}
+
+
+{% macro register_render_form(form, readonly=[]) %}
+    <form novalidate method=post enctype="multipart/form-data">
+        <table  style="width:100%">
+        {{ form.hidden_tag() }}
+        {{ _render_form(form, readonly=readonly) }}
+        </table>
+        <p> </p>
+        <div>
+        <tr>
+            <td align="center">
+                <input class="btn btn-outline-primary" type=submit value=Register name="submit">
+            </td>
+        </tr>
+        </div>
+        <p> </p>
+    </form>
+{% endmacro %}
+
+{% macro login_render_form(form) %}
+    <form novalidate method=post enctype="multipart/form-data">
+        <table  style="width:100%">
+        {{ form.hidden_tag() }}
+        {{ _render_form(form) }}
+        </table>
+        <p> </p>
+        <div>
+        <tr>
+            <td align="center">
+                <input class="btn btn-outline-primary" type=submit value=Login name="submit">
+            </td>
+        </tr>
+        </div>
+        <p> </p>
+    </form>
+{% endmacro %}
+
+{% macro change_render_form(form) %}
+    <form novalidate method=post enctype="multipart/form-data">
+        <table  style="width:100%">
+        {{ form.hidden_tag() }}
+        {{ _render_form(form) }}
+        </table>
+        <p> </p>
+        <div>
+        <tr>
+            <td align="center">
+                <input class="btn btn-outline-primary" type=submit value=Change name="submit">
+            </td>
+        </tr>
+        </div>
+        <p> </p>
+    </form>
+{% endmacro %}
+
+{% macro submit_render_form(form) %}
+    <form novalidate method=post enctype="multipart/form-data">
+        <table  style="width:100%">
+        {{ form.hidden_tag() }}
+        {{ _render_form(form) }}
+        </table>
+        <p> </p>
+        <div>
+        <tr>
+            <td align="center"><input class="btn btn-outline-primary" type=submit value=Submit name="submit"></td>
+        </tr>
+        </div>
+        <p> </p>
+    </form>
+{% endmacro %}
+
+{% macro joindownload_render_form(form) %}
+    <form novalidate method=post enctype="multipart/form-data">
+        <table  style="width:100%">
+        {{ form.hidden_tag() }}
+        {{ _render_form(form) }}
+        </table>
+        <p> </p>
+        <div>
+        <tr>
+            <td align="center"><input class="btn btn-outline-primary" type=submit value=Join name="submit"></td>
+            <td align="center"><input class="btn btn-outline-secondary" type=submit value=Download name="submit"></td>
+        </tr>
+        </div>
+        <p> </p>
+    </form>
+{% endmacro %}
+
+{% macro submitcancel_render_form(form) %}
+    <form novalidate method=post enctype="multipart/form-data">
+        <table  style="width:100%">
+        {{ form.hidden_tag() }}
+        {{ _render_form(form) }}
+        </table>
+        <p> </p>
+        <div>
+        <tr>
+            <td align="center"><input class="btn btn-outline-success" type=submit value=Submit name="submit"></td>
+            <td align="center"><input class="btn btn-outline-danger" type=submit value=Cancel name="submit"></td>
+        </tr>
+        </div>
+        <p> </p>
+    </form>
+{% endmacro %}
+
+
+{% macro declare_render_form(form) %}
+    <form novalidate method=post enctype="multipart/form-data">
+        <table  style="width:100%">
+        {{ form.hidden_tag() }}
+        {{ _render_form(form) }}
+        </table>
+        <p> </p>
+        <div>
+        <tr>
+            <td align="center"><input class="btn btn-outline-primary" type=submit value=Declare name="submit"></td>
+        </tr>
+        </div>
+        <p> </p>
+    </form>
+{% endmacro %}
+
+
+{% macro run_render_form(form, readonly=[]) %}
+    <form novalidate method=post enctype="multipart/form-data">
+        <table  style="width:100%">
+        {{ form.hidden_tag() }}
+        {{ _render_form(form, readonly=readonly) }}
+        </table>
+        <p> </p>
+        <div>
+        <tr>
+            <td align="center"><input class="btn btn-outline-success" type=submit value=Run name="submit"></td>
+            <td align="center"><input class="btn btn-outline-danger" type=submit value=Abort name="submit"></td>
+        </tr>
+        </div>
+        <p> </p>
+    </form>
+{% endmacro %}

@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: lorisapp
+Version: 0.0.10
+Summary: Loris
+Home-page: UNKNOWN
+Author: Matthias Christenson
+Author-email: gucky@gucky.eu
+License: UNKNOWN
+Keywords: database application
+Platform: UNKNOWN
+Requires-Dist: cloudpickle (==1.5.0)
+Requires-Dist: flask (==1.1.2)
+Requires-Dist: flask-login (==0.5.0)
+Requires-Dist: wtforms (==2.2.1)
+Requires-Dist: flask-wtf (==0.14.3)
+Requires-Dist: markdown (==3.2.2)
+Requires-Dist: plotly (==4.5.1)
+Requires-Dist: graphviz (==0.13.2)
+Requires-Dist: sshtunnel (==0.1.5)
+Requires-Dist: gitpython (==3.0.5)
+Requires-Dist: numpy (>=1.16.5)
+Requires-Dist: pandas (>=1.1.3)
+Requires-Dist: scipy (>=1.5.2)
+Requires-Dist: slackclient (==2.7.1)
+Requires-Dist: pymysql (==0.9.3)
+Requires-Dist: datajoint-gucky (>=0.13.dev23)
+Requires-Dist: python-rapidjson (>=1.0)
+
+Data management and analysis application for DataJoint
+
+

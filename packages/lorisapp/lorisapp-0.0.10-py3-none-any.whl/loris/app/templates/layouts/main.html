@@ -1,0 +1,527 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>{% block title %}{% endblock %}</title>
+
+<!-- meta -->
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- /meta -->
+
+<!-- favicon -->
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+<!-- scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/b-1.5.2/b-flash-1.5.2/b-html5-1.5.2/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+<script type="text/javascript" src="/static/js/plugins.js" defer></script>
+<script type="text/javascript" src="/static/js/script.js" defer></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/b-1.5.2/b-flash-1.5.2/b-html5-1.5.2/datatables.min.js"></script>
+<!-- styles -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+-->
+<!--[if lt IE 9]><script src="/static/js/libs/respond-1.4.2.min.js"></script><![endif]-->
+<!-- /scripts -->
+
+</head>
+<body>
+
+  <!-- Wrap all page content here -->
+  <div id="wrap">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="{{ url_for('home') }}">
+              <img src="/static/img/loris_icon.jpg" height=30 />
+         </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Database
+        </a>
+        <ul class="dropdown-menu", aria-labelledby="navbarDropdown1">
+        <li><a class="dropdown-item" href="{{ url_for('erd') }}">Complete ERD</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('erd', only_essentials=True) }}">Simple ERD</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('join') }}">Join/Download Tables</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('register') }}">Register User</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('registeredusers') }}">Registered Users</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('emergencycontacts') }}">Emergency Contacts</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('assigngroup') }}">Create/Assign Group Project</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('declare') }}">Create/Declare a Table</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('change') }}">Change Password</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('refresh')}}">Refresh Database</a></li>
+        <li class="dropdown-submenu">
+        <a id="subdrop1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">
+            Jobs
+        </a>
+            <ul aria-labelledby="subdrop1" class="dropdown-menu border-0 shadow">
+                {% for schema in config['schemata'] %}
+                <li><a href="{{ url_for('jobs', schema=schema) }}" class="dropdown-item">{{schema}}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Schema
+        </a>
+        <ul class="dropdown-menu border-0 shadow", aria-labelledby="navbarDropdown2">
+        {% for schema in config['schemata'] %}
+        {% if 'tables' in config %}
+        {% if config['tables'][schema] %}
+        <li class="dropdown-submenu">
+        <div class="btn-group dropright">
+            <a href="{{ url_for('erd', schema=schema) }}" class="dropdown-item">
+                {{ schema }}
+            </a>
+            <a id="subdrop1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle dropdown-toggle-split">
+                 <span class="sr-only"></span>
+            </a>
+                <ul aria-labelledby="subdrop1" class="dropdown-menu border-0 shadow">
+                    {% for table in config['tables'][schema] %}
+                    <li><a href="{{ url_for('table', schema=schema, table=table) }}" class="dropdown-item">{{table}}</a></li>
+                    {% endfor %}
+                </ul>
+        </div>
+        </li>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+        </ul>
+      </li>
+      {% if config['include_fly'] in [True, "True"] %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Flies
+        </a>
+        <ul class="dropdown-menu", aria-labelledby="navbarDropdown4">
+        <li><a class="dropdown-item" href="{{ url_for('genotype')}}">Enter Genotype</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('stock')}}">Enter Stock</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('stockgenotype')}}">Stock + Genotype</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('stockcrossgenotype')}}">Stock + Cross + Genotype</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('cross')}}">Enter Cross</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('crossgenotype')}}">Cross + Genotype</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('entersubject')}}">Enter Subject</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('subjectgenotype')}}">Subject + Genotype</a></li>
+        </ul>
+      </li>
+      {% endif %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Experiments
+        </a>
+        <ul class="dropdown-menu", aria-labelledby="navbarDropdown5">
+        {% if config['include_fly'] in [True, "True"] %}
+        <li><a class="dropdown-item" href="{{ url_for('entersubject')}}">Enter Subject</a></li>
+        {% endif %}
+        <li><a class="dropdown-item" href="{{ url_for('experiment')}}">Start Experiment</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('monitorexperiment')}}">Monitor Experiment</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('buildexperiment')}}">Build Experiment</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Analysis
+        </a>
+        <ul aria-labelledby="navbarDropdown6" class="dropdown-menu border-0 shadow">
+        {% for value in config['autotables'] %}
+        <li class="dropdown-submenu">
+        <a id="subdrop1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">
+            {{ value[0] }}
+        </a>
+            <ul aria-labelledby="subdrop1" class="dropdown-menu border-0 shadow">
+                <li><a href="{{ url_for('setup', schema=value[1], table=value[2]) }}" class="dropdown-item">Setup </a></li>
+                <li><a href="{{ url_for('run', schema=value[1], table=value[2]) }}" class="dropdown-item">Run </a></li>
+                <li><a href="{{ url_for('plot', schema=value[1], table=value[2]) }}" class="dropdown-item">Plot </a></li>
+            </ul>
+        </li>
+        {% endfor %}
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown7" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Wiki
+        </a>
+        <ul class="dropdown-menu", aria-labelledby="navbarDropdown7">
+            {% if config['external_wiki'] not in [None, "None"]%}
+            <li><a class="dropdown-item" href="{{ config['external_wiki'] }}" target="_blank">External Wiki</a></li>
+            {% endif %}
+            <li><a class="dropdown-item" href="{{ url_for('wikihome') }}">Home</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('wikiindex') }}">Index</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('wikitags') }}">Tags</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('wikisearch') }}">Search</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('wikicreate') }}">New Page</a></li>
+        </ul>
+      </li>
+      <a class="nav-item nav-link" href="{{ url_for('about')}}">About</a>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a class="btn btn-outline-secondary my-2 my-sm-0"
+      href="{{ url_for('logout')}}">
+          Logout
+      </a>
+    </form>
+    <!--
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    -->
+
+          </div>
+      </div>
+    </nav>
+    <p></p>
+
+
+    <!-- Begin page content -->
+    <main id="content" role="main" class="container">
+
+    {% block extraheader %}{% endblock %}
+
+    <div class="container">
+    {% for category, message in get_flashed_messages(with_categories=true) %}
+          {% if category == 'error' %}
+              <div class="alert alert-danger">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>{{message}}</strong>
+              </div>
+        {% elif category == 'success' %}
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{message}}</strong>
+        </div>
+        {% elif category == 'secondary' %}
+        <div class="alert alert-secondary">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{message}}</strong>
+        </div>
+        {% elif category == 'info' %}
+        <div class="alert alert-info">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{message}}</strong>
+        </div>
+        {% elif category == 'light' %}
+        <div class="alert alert-light">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{message}}</strong>
+        </div>
+        {% elif category == 'dark' %}
+        <div class="alert alert-dark">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{message}}</strong>
+        </div>
+        {% elif category == 'warning' %}
+        <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{message}}</strong>
+        </div>
+          {% else %}
+              <div class="alert alert-primary">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>{{message}}</strong>
+              </div>
+          {% endif %}
+    {% endfor %}
+    </div>
+
+    {% block content %}{% endblock %}
+
+    {% block sidebar %}{% endblock sidebar %}
+    </main>
+
+  </div>
+  <br></br>
+  <hr>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        Loris - Neuroscience on the Fly!
+      </div>
+      <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  <script type=text/javascript>
+      $(function() {
+          $("div[data-toggle=fieldsetting]").each(function() {
+              var $this = $(this);
+
+              //Add new entry
+              $this.find("button[data-toggle=fieldsetting-add-row]").click(function() {
+                  var target = $($(this).data("target"));
+                  var oldrow = target.find("[data-toggle=fieldsetting-entry]:last");
+                  var row = oldrow.clone(true, true);
+                  var elem_id = row.find(":input")[0].id;
+                  var elem_num = parseInt(elem_id.replace(/.*-(\d{1,4})-.*/m, '$1')) + 1;
+                  var postfix = '-';
+                  if (isNaN( elem_num )) {
+                      var elem_num = parseInt(elem_id.replace(/.*-(\d{1,4}).*/m, '$1')) + 1;
+                      var postfix = '';
+                  }
+                  // if still nan say it is 1
+                  if (isNaN(elem_num)) {
+                      var elem_num = 1;
+                  }
+                  console.log(elem_num)
+                  row.attr('data-id', elem_num);
+
+                  row.find("input").each(function() {
+                      var attr = $(this).attr("readonly");
+                      if (typeof attr !== typeof undefined && attr !== false) {
+                          $(this).removeAttr("readonly");
+                      }
+                      try {
+                        var id = $(this).attr('name').replace('-' + (elem_num - 1) + postfix, '-' + (elem_num) + postfix);
+                      }
+                      catch(err) {
+                        var id = $(this).attr('id').replace('-' + (elem_num - 1) + postfix, '-' + (elem_num) + postfix);
+                      }
+
+                      var datatype = $(this).attr('type');
+                      if (datatype == "checkbox") {
+                          $(this).attr('name', id).attr('id', id).removeAttr("checked");
+                      } else if (datatype == "textarea") {
+                          $(this).attr('name', id).attr('id', id).removeAttr("checked");
+                      } else {
+                          // change name, id, and value of field to none
+                          $(this).attr('name', id).attr('id', id).val('').removeAttr("checked");
+                      }
+                  });
+
+                  row.find("select").each(function() {
+                      var attr = $(this).attr("readonly");
+                      if (typeof attr !== typeof undefined && attr !== false) {
+                          $(this).removeAttr("readonly");
+                      }
+                      try {
+                        var id = $(this).attr('name').replace('-' + (elem_num - 1) + postfix, '-' + (elem_num) + postfix);
+                      }
+                      catch(err) {
+                        var id = $(this).attr('id').replace('-' + (elem_num - 1) + postfix, '-' + (elem_num) + postfix);
+                      }
+                      $(this).attr('name', id).attr('id', id).val('').removeAttr("checked");
+                  });
+
+                  row.find("textarea").each(function() {
+                      var attr = $(this).attr("readonly");
+                      if (typeof attr !== typeof undefined && attr !== false) {
+                          $(this).removeAttr("readonly");
+                      }
+                      try {
+                        var id = $(this).attr('name').replace('-' + (elem_num - 1) + postfix, '-' + (elem_num) + postfix);
+                      }
+                      catch(err) {
+                        var id = $(this).attr('id').replace('-' + (elem_num - 1) + postfix, '-' + (elem_num) + postfix);
+                      }
+                      $(this).attr('name', id).attr('id', id).removeAttr("checked");
+                  });
+
+                  row.find("button").each(function() {
+                      var dtoggle = $(this).attr("data-toggle");
+                      if (dtoggle == "modal") {
+                        var id = $(this).attr('data-target').replace('-' + (elem_num - 1) + postfix, '-' + (elem_num) + postfix);
+                        $(this).attr('data-target', id);
+                      }
+                  });
+
+                  row.find("div").each(function() {
+                      var dtoggle = $(this).attr("class");
+                      if (dtoggle == "modal fade") {
+                        var id = $(this).attr('id').replace('-' + (elem_num - 1) + postfix, '-' + (elem_num) + postfix);
+                        $(this).attr('id', id);
+                        // var id = $(this).attr('arialabelledby').replace('-' + (elem_num - 1) + '-', '-' + (elem_num) + '-');
+                        // $(this).attr('arialabelledby', id);
+                      }
+                  });
+
+                  row.find("h5").each(function() {
+                      var dtoggle = $(this).attr("class");
+                      if (dtoggle == "modal title") {
+                        var id = $(this).attr('id').replace('-' + (elem_num - 1) + postfix, '-' + (elem_num) + postfix);
+                        $(this).attr('id', id);
+                      }
+                  });
+
+
+
+                  row.show();
+                  oldrow.after(row);
+              }); //End add new entry
+
+              //Remove row
+              $this.find("button[data-toggle=fieldsetting-remove-row]").click(function() {
+                  if($this.find("[data-toggle=fieldsetting-entry]").length > 1) {
+                      var thisRow = $(this).closest("[data-toggle=fieldsetting-entry]");
+                      var noreadonly = true;
+                      thisRow.find("input").each(function() {
+                          var attr = $(this).attr("readonly");
+                          if (typeof attr !== typeof undefined && attr !== false) {
+                              noreadonly = false;
+                          }
+                      });
+                      if (noreadonly) {
+                          thisRow.remove();
+                      } else {
+                          console.log("readonly define");
+                      }
+                  }
+              }); //End remove row
+          });
+      });
+      $(function() {
+          // ------------------------------------------------------- //
+          // Multi Level dropdowns
+          // ------------------------------------------------------ //
+          $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            $(this).siblings().toggleClass("show");
+
+
+            if (!$(this).next().hasClass('show')) {
+              $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+            }
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+              $('.dropdown-submenu .show').removeClass("show");
+            });
+
+          });
+        });
+  </script>
+  <script type="text/javascript">
+      {% block postscripts %}
+      {% endblock postscripts %}
+  </script>
+
+  <style>
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    a[class="toggle-vis"] {
+        background-color: gray;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 6px;
+        font-size: 10px;
+    }
+    .toggleon {
+        background-color: gray;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 6px;
+        font-size: 10px;
+    }
+    .toggleoff {
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 6px;
+        font-size: 10px;
+    }
+
+    .lired {
+        color: orangered;
+    }
+    .ligreen {
+        color: #4CAF50;
+    }
+    .licyan {
+        color: cyan;
+    }
+    .divbox {
+      background-color: lightgrey;
+      width: 300px;
+      border: 15px solid green;
+      padding: 50px;
+      margin: 20px;
+    }
+
+
+    .dropdown-submenu {
+      position: relative;
+    }
+
+    .dropdown-submenu>a:after {
+      content: "\f0da";
+      float: right;
+      border: none;
+      font-family: 'FontAwesome';
+    }
+
+    .dropdown-submenu>.dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+
+    .scroll {
+        max-height: 100px;
+        overflow-y: auto;
+    }
+
+    /*
+    *
+    * ==========================================
+    * FOR DEMO PURPOSES
+    * ==========================================
+    *
+    */
+
+    code {
+      color: #B06AB3;
+      background: #fff;
+      padding: 0.1rem 0.2rem;
+      border-radius: 0.2rem;
+    }
+
+    @media (min-width: 991px) {
+      .dropdown-menu {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .monospace {
+      font-family: "Lucida Console", Courier, monospace;
+    }
+  </style>
+
+</body>
+</html>
