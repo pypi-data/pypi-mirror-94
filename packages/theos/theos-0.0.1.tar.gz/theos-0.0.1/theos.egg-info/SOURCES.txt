@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+example/__init__.py
+example/example_code.py
+tests/__init__.py
+tests/tests.py
+theos.egg-info/PKG-INFO
+theos.egg-info/SOURCES.txt
+theos.egg-info/dependency_links.txt
+theos.egg-info/top_level.txt
