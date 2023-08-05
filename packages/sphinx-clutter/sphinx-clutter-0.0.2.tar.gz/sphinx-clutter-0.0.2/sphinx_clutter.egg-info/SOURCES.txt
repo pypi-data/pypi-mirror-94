@@ -1,0 +1,8 @@
+README.md
+setup.py
+sphinx_clutter/__init__.py
+sphinx_clutter/ext.py
+sphinx_clutter.egg-info/PKG-INFO
+sphinx_clutter.egg-info/SOURCES.txt
+sphinx_clutter.egg-info/dependency_links.txt
+sphinx_clutter.egg-info/top_level.txt
