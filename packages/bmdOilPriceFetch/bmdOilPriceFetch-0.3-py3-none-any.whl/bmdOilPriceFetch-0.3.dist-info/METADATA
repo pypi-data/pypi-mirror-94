@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bmdOilPriceFetch
+Version: 0.3
+Summary: A Fast and Efficient way to get the current Oil Price from Yahoo Finance API in Python.
+Home-page: https://github.com/duivesteyn/bmdOilPriceFetch
+Author: Benjamin M. Duivesteyn
+Author-email: duivesteyn@gmail.com
+License: LICENSE.txt
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+file: README.md
+
+
