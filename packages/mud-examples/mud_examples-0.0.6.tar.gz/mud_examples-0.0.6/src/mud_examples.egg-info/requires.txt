@@ -1,0 +1,17 @@
+mud
+numpy
+scipy
+matplotlib
+
+[pub]
+setuptools
+wheel
+twine
+
+[test]
+pytest
+pytest-cov
+coverage
+coveralls
+flake8
+pre-commit
