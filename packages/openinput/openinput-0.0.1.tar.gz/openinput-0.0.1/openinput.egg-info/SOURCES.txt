@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+OpenInput/__init__.py
+openinput.egg-info/PKG-INFO
+openinput.egg-info/SOURCES.txt
+openinput.egg-info/dependency_links.txt
+openinput.egg-info/top_level.txt
