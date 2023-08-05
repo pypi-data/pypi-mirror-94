@@ -1,0 +1,174 @@
+Metadata-Version: 2.1
+Name: number_comparator
+Version: 0.0.3a1
+Summary: A numeric comparator package.
+Home-page: https://github.com
+Author: Diego Ramirez
+Author-email: dr01191115@gmail.com
+License: UNKNOWN
+Description: # number_comparator
+        
+        A numeric comparator package.
+        
+        ## Introduction
+        
+        The number_comparator package can compare if a number is a:
+        
+        - Prime
+        - Pair
+        - Periodic
+        
+        Also, you can operate:
+        
+        - Average from:
+          - Tuples
+        - Reverse numbers from:
+          - Integers
+          - Float
+        
+        To obtain the package with pip, use one of this commands:
+        
+        ```
+        pip install number_comparator
+        pip install number_comparator_[version]_[plat].whl
+        pip install number_comparator_[version]_[plat].tar.gz
+        pip install number_comparator==[version]
+        pip install --upgrade number_comparator
+        ```
+        
+        ## Release notes
+        
+        #### What's new in number_comparator 0.0.3 (Alpha 1)
+        
+        - Minor bugs resolved
+          - `__version__` variable fixed
+          - Some variables fixed at `number_comparator.data.first_prime`
+        - New MANIFEST.in includes:
+          - The `setup.py`
+          - The markdown file `README.md`
+        
+        ## Using number_comparator functions
+        
+        To call the number_comparator library, just type:
+        
+        ```python
+        from number_comparator import *
+        ```
+        
+        #### isPair()
+        
+        The function `isPair(n)` takes a number and returns **True** if the number is a
+        pair or **False** if not. So, if you type:
+        
+        ```python
+        print(isPair(20))         # Short number
+        print(isPair(15))         # Short number
+        print(isPair(1986031))    # Large number?
+        ```
+        
+        You'll get this output:
+        
+        ```
+        True
+        False
+        False
+        ```
+        
+        #### isPrime()
+        
+        The prime numbers are numbers that can only be divided by 1 and themselves. To find
+        if a number is prime, we used many functions:
+        
+        1. Check if a number is on a list of 168 prime numbers.
+        2. If the number is larger, check if the termination is 1, 3, 7 or 9
+        
+        Example: 3, 4, 7.
+        
+        ```python
+        print(isPrime(3))
+        print(isPrime(4))
+        print(isPrime(7))
+        ```
+        
+        You must get:
+        
+        ```
+        True
+        False
+        True
+        ```
+        
+        __NOTE:__ The function `isPrime()` does not support negative numbers. You can operate them
+        by using the `reverseNumber()` function.
+        
+        #### reverseNumber()
+        
+        The `reverseNumber()` function converts a negative number to a positive number, and a
+        positive to a negative. The allowed data type is `int()`.
+        
+        ```python
+        print(reverseNumber(123))
+        print(reverseNumber(-123))
+        ```
+        
+        So, conversions must be:
+        
+        | Before         | After          |
+        | :------------- | :------------- |
+        | 123            | -123           |
+        | -123           | 123            |
+        
+        To convert float numbers, use `reverseFloat()`.
+        
+        #### reverseFloat()
+        
+        This function has the same function than `reverseNumber()`, but taking a float number:
+        
+        ```python
+        print(reverseNumber(1.23))
+        print(reverseNumber(-1.23))
+        ```
+        
+        #### isPeriodic()
+        
+        In Python, periodic numbers are infinite float numbers. We are using
+        this property to see if a number (int or float) is periodic.
+        
+        For example, `10 / 3` returns a periodic `float()`:
+        
+        ```python
+        print(isPeriodic(10 / 3))
+        ```
+        
+        So you'll get the output:
+        
+        ```
+        True
+        ```
+        
+        #### average()
+        
+        Take an average from a tuple or a group of numbers:
+        
+        ```python
+        print(average(10, 7, 8, 9)) # As a multiple argument group
+        ```
+        
+        Getting the output:
+        
+        ```
+        8.5
+        ```
+        
+Keywords: numbers number comparations operations python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
