@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+PySfMUtils.egg-info/PKG-INFO
+PySfMUtils.egg-info/SOURCES.txt
+PySfMUtils.egg-info/dependency_links.txt
+PySfMUtils.egg-info/requires.txt
+PySfMUtils.egg-info/top_level.txt
+sfm_utils/__init__.py
+sfm_utils/alicevision.py
+sfm_utils/io.py
+sfm_utils/openmvg.py
+sfm_utils/sfm.py
+test/__init__.py
+test/sfm_utils_tests.py
