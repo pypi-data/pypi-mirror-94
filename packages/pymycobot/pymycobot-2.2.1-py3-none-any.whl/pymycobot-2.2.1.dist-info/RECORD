@@ -1,0 +1,13 @@
+pymycobot/__init__.py,sha256=PnZjHusfqgR35se8GhIiEo4f7KOQ3u0BlPp55xeta7s,115
+pymycobot/common.py,sha256=Q5HohuKrYsM03vCtvjrLOtsgiCgvpI4S1TD_iDDBF9E,4434
+pymycobot/error.py,sha256=2Wq_5a-cqu7D7YbEMbdRxoeRIbpTvMLuBNJyNstQocs,316
+pymycobot/genre.py,sha256=j4k3gbS2vs-TM3uRHStDhry2IWHNaRmm16nHOtlFCQQ,230
+pymycobot/mycobot.py,sha256=2rSq80cLfNUVFzj87GwpP4wlJKnNWRybfXjZhU_BMmw,13301
+pymycobot/mycobot3.py,sha256=TMcD_vXVMXtTOrVWb9jzNsSm4Hr9t3orOn2c7xNdcDA,11295
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test.py,sha256=DTd1u7jHFToHwm4ac8a_77QRWgNTIYV1K4bqRHAfn-U,3608
+pymycobot-2.2.1.dist-info/LICENSE,sha256=uqdPTUT1z8eSQ936pF5W2fDmLSjFuVgroVay5cwLQlA,1074
+pymycobot-2.2.1.dist-info/METADATA,sha256=wQW5Lh1BnWXhytD3xuY5LLA8eabgs0xHDmSQ-yLuLZY,7724
+pymycobot-2.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pymycobot-2.2.1.dist-info/top_level.txt,sha256=fXxIMd1dgiJrslk7OsEhci_zNCCLDPIHiak8kMx8fW4,10
+pymycobot-2.2.1.dist-info/RECORD,,
