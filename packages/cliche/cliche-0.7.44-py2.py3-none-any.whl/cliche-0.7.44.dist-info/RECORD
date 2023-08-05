@@ -1,0 +1,14 @@
+cliche/__init__.py,sha256=MvBrPjC4WNgPyxbc7eKl-OyL_QcftJaR7RO2ZCbT1a4,10016
+cliche/argparser.py,sha256=KyQ7GQkT6GVqLvUcoFYT-6Xk7IvuorbOulIXoTlbpPw,12062
+cliche/choice.py,sha256=SXJkRdv-UqjW9ZVWkadM6qpZCNst5YpKkMQ_mBdZiIQ,1399
+cliche/docstring_to_help.py,sha256=YOvxh_rQxmXKG9RrIadui-f7SBbhfwHAFJSSmSjHeJQ,1846
+cliche/install.py,sha256=sd5pdsQCArs0zDoI2rT1MLSW1GmGincLKTQOI-8B1J8,2196
+cliche/install_generator.py,sha256=m1d4qWxNhMeUgJCY9Ysd63hXM1W9Azvom-jY6Tje1jI,2220
+cliche/types.py,sha256=hl6QQK45UAr57sj-Q8q-1GFhySuIhvE7qr-oyHVk9kk,429
+cliche/using_underscore.py,sha256=_WsDlRIgbl1oEzOm57aATBf90d0v6-VinjuEgrEQzIk,204
+cliche-0.7.44.dist-info/METADATA,sha256=hwnewZpBqIggQDZYZQ8dVQKJa1RhC0rp8x-b12tqWFw,1437
+cliche-0.7.44.dist-info/RECORD,,
+cliche-0.7.44.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+cliche-0.7.44.dist-info/entry_points.txt,sha256=EbJ-CdRTehtuuM2ylzpy4Vxwfgfmc56xX6yJlhOyN-k,49
+cliche-0.7.44.dist-info/top_level.txt,sha256=O1Kwm5FrL4sWbqRxNx6xmA16KaiS_8NFA_kYFqOnOP0,7
+mincli/__init__.py,sha256=q8wabLwrijOLZf8GglJq5Eud6f1ATMZ5hXLvjG4CSxY,4357
