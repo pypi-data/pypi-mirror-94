@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+consolecmdtools.py
+setup.cfg
+setup.py
+consolecmdtools.egg-info/PKG-INFO
+consolecmdtools.egg-info/SOURCES.txt
+consolecmdtools.egg-info/dependency_links.txt
+consolecmdtools.egg-info/requires.txt
+consolecmdtools.egg-info/top_level.txt
