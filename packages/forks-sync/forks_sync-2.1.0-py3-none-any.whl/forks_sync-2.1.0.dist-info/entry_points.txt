@@ -1,0 +1,3 @@
+[console_scripts]
+forks-sync = forks_sync.sync:main
+
