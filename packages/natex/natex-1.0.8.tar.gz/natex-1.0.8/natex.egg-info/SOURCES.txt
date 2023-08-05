@@ -1,0 +1,11 @@
+README.md
+setup.py
+natex/__init__.py
+natex/__main__.py
+natex/natex.py
+natex/test.py
+natex.egg-info/PKG-INFO
+natex.egg-info/SOURCES.txt
+natex.egg-info/dependency_links.txt
+natex.egg-info/requires.txt
+natex.egg-info/top_level.txt
