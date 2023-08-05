@@ -1,0 +1,30 @@
+name: Python Branch Workflow
+on: [push]
+
+jobs:
+  build-python:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and push docker
+      id: build-docker
+      run: |
+        echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u $GITHUB_ACTOR --password-stdin
+        docker pull docker.pkg.github.com/$GITHUB_REPOSITORY/build-cache-no-buildkit || true
+        docker build . -t arbie --cache-from=docker.pkg.github.com/$GITHUB_REPOSITORY/build-cache-no-buildkit
+        docker tag arbie docker.pkg.github.com/$GITHUB_REPOSITORY/build-cache-no-buildkit && docker push docker.pkg.github.com/$GITHUB_REPOSITORY/build-cache-no-buildkit || true
+    - name: Test and Lint
+      run: |
+        docker-compose run arbie ./gradlew testAndLint
+    - name: Publish Test Report
+      if: always()
+      uses: scacap/action-surefire-report@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: build/tests/cov/coverage.xml

@@ -1,0 +1,144 @@
+def sorceDir = "$projectDir/${project.name}"
+
+def testDir = "$projectDir/tests"
+def unitTestDir = "$testDir/unit"
+def systemTestDir = "$testDir/system"
+def testResultDir = "$buildDir/tests"
+
+def pipDir = "$projectDir/pip"
+
+def isCI = System.getenv('CI') ?: false
+def homeDir = System.getenv("HOME")
+
+def codecov = "$buildDir/tools/codecov.sh"
+
+def web3_server = System.getenv('RUNNING_IN_DOCKER') ? 'http://ganache:7545' : 'http://127.0.0.1:7545'
+def redis_server = System.getenv('RUNNING_IN_DOCKER') ? 'redis:6379' : '127.0.0.1:6379'
+
+ext {
+    charset = 'UTF-8'
+}
+
+task pip(type: Exec) {
+    workingDir projectDir
+    def reqs = [
+      file("$pipDir/requirements.txt"),
+      file("$pipDir/requirements-dev.txt"),
+      file("$pipDir/requirements-tools.txt")]
+
+    inputs.files reqs
+
+    def args = ["pip", "install"]
+
+    reqs.each { req ->
+        args += ["-r", req]
+    }
+    commandLine args
+}
+
+task install(type: Exec) {
+    workingDir projectDir
+
+    commandLine "pip", "install", "."
+}
+
+task test(type: Exec) {
+    dependsOn install
+    workingDir projectDir
+
+    commandLine "pytest", "-v", "--pyargs", "$testDir",
+            "--cov-report", "html:$testResultDir/cov/html",
+            "--cov-report", "xml:$testResultDir/cov/coverage.xml",
+            "--junitxml=$testResultDir/surefire-reports/TEST-report.xml",
+            "--cov=$sorceDir",  "--web3_server", "$web3_server",
+            "--redis_server", "$redis_server", "--run_slow"
+}
+
+task systemTest(type: Exec) {
+    dependsOn install
+    workingDir projectDir
+
+    commandLine "pytest", "-v", "--pyargs", "$systemTestDir",
+            "--cov-report", "html:$testResultDir/cov/system/html",
+            "--cov=$sorceDir",  "--web3_server", "$web3_server",
+            "--redis_server", "$redis_server"
+}
+
+task unitTest(type: Exec) {
+    dependsOn install
+    workingDir projectDir
+
+    commandLine "pytest", "--pyargs", "$unitTestDir",
+            "--cov-report", "html:$testResultDir/cov/unit/html",
+            "--cov=$sorceDir"
+}
+
+
+task black(type: Exec){
+  commandLine "black", "."
+}
+
+task isort(type: Exec){
+    commandLine "isort", "-y", "--recursive"
+}
+
+task lint(type: Exec) {
+  dependsOn isort, black
+  commandLine "flake8", "Arbie", "tests"
+}
+
+task testAndLint{
+  dependsOn test, lint
+}
+
+task venv(type: Exec) {
+    commandLine "python3.8", "-m", "venv", ".venv"
+}
+
+task buildDocker(type: Exec){
+    commandLine "docker", "build", ".", "-t", "arbie"
+}
+
+task preCommit(type: Exec) {
+    dependsOn pip
+    commandLine "pre-commit",
+                "install",
+                "--hook-type",
+                "commit-msg"
+}
+
+task setup {
+  dependsOn preCommit, pip, buildDocker
+}
+
+class KonsoleTask extends DefaultTask {
+    @Input
+    String command
+
+    @TaskAction
+    void launchKonsole() {
+        ext.process = new ProcessBuilder()
+                .directory(project.projectDir)
+                .command('konsole', '--noclose', '-e', command)
+                .start()
+    }
+}
+
+task startGanache(type: KonsoleTask) {
+    command = "docker-compose up --force-recreate ganache"
+}
+
+
+task startRedis(type: KonsoleTask) {
+    command = "docker-compose up --force-recreate redis"
+}
+
+task startJupyter(type: KonsoleTask) {
+    command = "docker run --rm -p 8888:8888 -e " +
+            "JUPYTER_ENABLE_LAB=yes -v $projectDir:/home/jovyan/work " +
+            "jupyter/datascience-notebook:latest"
+}
+
+task develop{
+  dependsOn startRedis, startGanache
+}

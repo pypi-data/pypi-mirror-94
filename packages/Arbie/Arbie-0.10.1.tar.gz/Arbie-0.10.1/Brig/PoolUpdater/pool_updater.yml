@@ -1,0 +1,26 @@
+store:
+  address: 'gluteus:6379'
+
+web3:
+  address: 'http://gluteus:8545'
+
+variables:
+  weth:
+    type: Weth
+    network: mainnet
+  uniswap_factory:
+      type: UniswapFactory
+      network: mainnet
+  balancer_factory:
+      type: BalancerFactory
+      network: mainnet
+
+action_tree:
+  event: ['PoolFinder.1.pools', 'PoolUpdater.1.pools']
+  actions:
+    PoolUpdater:
+      input:
+        web3: web3
+        pools: 'PoolFinder.1.pools'
+      output:
+        new_pools: 'PoolUpdater.1.pools'

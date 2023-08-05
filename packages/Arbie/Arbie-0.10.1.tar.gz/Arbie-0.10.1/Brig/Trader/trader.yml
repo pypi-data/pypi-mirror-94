@@ -1,0 +1,26 @@
+store:
+  address: 'gluteus:6379'
+web3:
+  address: 'http://gluteus:8545'
+account:
+    path: test_account.json
+
+variables:
+  weth:
+    type: Weth
+    network: mainnet
+  router:
+      type: UniswapV2Router
+      network: mainnet
+
+action_tree:
+  event:
+    'Arbitrage.1.filtered_trades'
+  actions:
+    SetUpTrader:
+    Trader:
+      input:
+        trades: 'Arbitrage.1.filtered_trades'
+        dry_run: False
+      output:
+        profit: 'Trader.1.profit'

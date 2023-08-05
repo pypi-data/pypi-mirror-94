@@ -1,0 +1,15 @@
+venv
+.vscode
+Arbie.egg-info
+Arbie/__init__.pyc
+__pycache__/
+build
+.doit.db
+.coverage
+.gradle
+.ipynb_checkpoints/
+.venv/
+.idea/.name
+fragmap.html
+real_account.json
+arbie.log*

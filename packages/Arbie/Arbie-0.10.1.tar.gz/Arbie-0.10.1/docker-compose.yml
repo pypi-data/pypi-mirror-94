@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  ganache:
+    image: trufflesuite/ganache-cli
+    ports:
+      - 7545:7545
+    command: --gasLimit 0xfffffffffff --callGasLimit 0xfffffffffff -p 7545 --allowUnlimitedContractSize
+
+  redis:
+    image: "redis:alpine"
+    ports:
+     - "6379:6379"
+    environment:
+     - REDIS_REPLICATION_MODE=master
+
+  arbie:
+    image: arbie
+    depends_on:
+      - ganache
+      - redis
+    volumes:
+      - .:/arbie
+    command: /arbie/gradlew test
