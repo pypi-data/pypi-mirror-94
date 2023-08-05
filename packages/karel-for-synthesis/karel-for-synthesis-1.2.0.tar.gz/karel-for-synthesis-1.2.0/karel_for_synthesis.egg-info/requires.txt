@@ -1,0 +1,4 @@
+attrs==20.3.0
+numpy
+pylru==1.2.0
+ply==3.11
