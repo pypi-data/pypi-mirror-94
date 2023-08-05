@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: service-configuration-layer
+Version: 0.0.4
+Summary: A tool the request and store services configuration. This tool is part of the Microservices ToolBox
+Home-page: UNKNOWN
+Author: Antonio Di Mariano
+Author-email: antonio.dimariano@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
