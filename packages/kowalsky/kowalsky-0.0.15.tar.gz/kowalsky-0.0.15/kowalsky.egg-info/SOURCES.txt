@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+kowalsky/__init__.py
+kowalsky/colab.py
+kowalsky/df.py
+kowalsky/kaggle.py
+kowalsky/metrics.py
+kowalsky/optuna.py
+kowalsky.egg-info/PKG-INFO
+kowalsky.egg-info/SOURCES.txt
+kowalsky.egg-info/dependency_links.txt
+kowalsky.egg-info/requires.txt
+kowalsky.egg-info/top_level.txt
