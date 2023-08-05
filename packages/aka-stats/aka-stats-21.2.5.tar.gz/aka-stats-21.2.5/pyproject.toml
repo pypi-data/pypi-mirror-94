@@ -1,0 +1,51 @@
+[tool.black]
+line-length = 120
+
+[tool.poetry]
+name = "aka-stats"
+version = "21.2.5"
+description = "Module for keeping metrics about your application in Redis. The goal is to have an easy way to measure an application, and then expose these metrics through a HTTP API, either to process it in some web ui, or expose it to Prometheus."
+authors = ["Michal Mazurek <mazurek.michal@gmail.com>"]
+packages = [{include="aka_stats"}]
+repository = "https://github.com/MichalMazurek/aka_stats"
+homepage = "https://github.com/MichalMazurek/aka_stats"
+classifiers = [
+	"Development Status :: 5 - Production/Stable",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.plugins.pytest11]
+mock_stats = "aka_stats.testing"
+
+[tool.portray]
+modules = ["aka_stats"]
+
+[tool.portray.mkdocs]
+site_name = "Aka Stats"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+redis = "^3.4.1"
+aioredis = "^1.3.1"
+pytz = "^2019.3"
+fastapi = {version = "^0.54.1", optional=true}
+
+[tool.poetry.extras]
+fastapi = ["fastapi"]
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+portray = "^1.3.1"
+pytest = "^5.4.1"
+pytest-cov = "^2.8.1"
+pylama = "^7.7.1"
+fastapi = "^0.54.0"
+hypothesis = "^5.8.0"
+pytest-asyncio = "^0.14.0"
+pytest-redis = "^2.0.0"
+
+[build-system]
+requires = ["poetry>=1"]
+build-backend = "poetry.masonry.api"
