@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: mopeka-pro-check
+Version: 0.0.4
+Summary: A library for reading Mopeka Pro Check BLE sensors
+Home-page: https://github.com/spbrogan/mopeka_pro_check
+Author: Sean Brogan
+Author-email: spbrogan@live.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: bleson (>=0.1.6)
+
+# mopeka-pro-check package
+
+Basic package for using a BLE adapter to passively read
+BLE GAP advertisements looking for Mopeka Pro Check Sensors and
+decoding the mfg data.
+
+Fluid depth, sensor battery voltage, and other information is available. 
+
+## Supported Sensors
+
+* Pro Check LP gas - <https://mopeka.com/product/mopeka-check-pro-lp-sensor/>
+
+## Get Involved
+
+Github Project here: <https://github.com/spbrogan/mopeka_pro_check>
+
