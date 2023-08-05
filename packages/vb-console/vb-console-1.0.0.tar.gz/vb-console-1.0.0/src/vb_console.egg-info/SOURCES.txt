@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/console/__init__.py
+src/console/console.py
+src/vb_console.egg-info/PKG-INFO
+src/vb_console.egg-info/SOURCES.txt
+src/vb_console.egg-info/dependency_links.txt
+src/vb_console.egg-info/top_level.txt
