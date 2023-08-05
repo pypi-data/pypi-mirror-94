@@ -1,0 +1,46 @@
+Metadata-Version: 1.2
+Name: distkv_knx
+Version: 0.9.2
+Summary: A distributed no-master key-value store
+Home-page: https://github.com/smurfix/distknx
+Author: Matthias Urlichs
+Author-email: matthias@urlichs.de
+License: MIT -or- Apache License 2.0
+Description: =======
+        DistKNX
+        =======
+        
+        DistKNX is a link between KNX buses and DistKV.
+        
+        It will
+        
+        * query and monitor inputs as specified
+        
+        * write values that it reads from them to some DistKV entry
+        
+        * monitor a DistKV entry and write any updates to KNX
+        
+        * work with DistKV's runner system, either centrally or distributed
+        
+        
+        Warning
+        =======
+        
+        Currently this will only work with MoaT's fork of XKNX because we're using
+        AnyIO and some other improvements.
+        
+Keywords: async,key-values,distributed
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: Trio
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Home Automation
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.7
