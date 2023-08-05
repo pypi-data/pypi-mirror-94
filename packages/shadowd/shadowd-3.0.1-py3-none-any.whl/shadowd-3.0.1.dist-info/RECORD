@@ -1,0 +1,12 @@
+shadowd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shadowd/cgi_connector.py,sha256=RJG_oNDxTbuWQ7MbnblmbbJhAuFE22Q11U4JS2I17dY,4872
+shadowd/connector.py,sha256=jUrLbgtWkTd3L8GH8M3IxjB_fbeMijm196No2KDH2mk,9102
+shadowd/django_connector.py,sha256=aXrmZnNLMsmEtwKiWnD62_GZqrxLWQEkHO7JnpAWOx8,4736
+shadowd/flask_connector.py,sha256=-EJJDohcuXfQZVUqZKRZgyOyW1otBYM745mUP_uEDog,915
+shadowd/werkzeug_connector.py,sha256=7_XpJMi9V1B1O-7gpmW-gdXu-ia6vIdy2r7FozCB_Bs,5305
+shadowd-3.0.1.dist-info/DESCRIPTION.rst,sha256=cG1fyDRCAu5fUCqSr4LpYAK4bs6yasW-fsTxAYAs_Y0,2851
+shadowd-3.0.1.dist-info/METADATA,sha256=KYkjohEDHMFTk47bxjiV9fhED3XJSGDT_pXndDjo73U,3520
+shadowd-3.0.1.dist-info/RECORD,,
+shadowd-3.0.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+shadowd-3.0.1.dist-info/metadata.json,sha256=ZBAEv2CawrgQL7bDXu4JY1kIhseYs7itsj39oR74vc4,822
+shadowd-3.0.1.dist-info/top_level.txt,sha256=OMW-eErPFdmcwXF5UdDOQAlvC791fzFL-KDTKsJKWHA,8
