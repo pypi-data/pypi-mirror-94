@@ -1,0 +1,8 @@
+README.md
+setup.py
+djangorescue/__init__.py
+djangorescue/middleware.py
+djangorescue.egg-info/PKG-INFO
+djangorescue.egg-info/SOURCES.txt
+djangorescue.egg-info/dependency_links.txt
+djangorescue.egg-info/top_level.txt
