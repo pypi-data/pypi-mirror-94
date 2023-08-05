@@ -1,0 +1,16 @@
+
+<div class="heading-flex">
+    {% if title %}
+    <h1>{{ title }}
+        {% if not hide_search %}
+        <p>
+        <input name="list_search" type="search" placeholder="Recherche" />
+        <button class="reset-search invisible">
+            <i class="fa fa-eraser"></i>
+        </button>
+        </p>
+        {% endif %}
+    </h1>
+    {% endif %}
+    {% include 'genviews/templates/list-menu.html' %}
+</div>

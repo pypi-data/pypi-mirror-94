@@ -1,0 +1,18 @@
+<div class="heading-flex">
+    <h1>
+        {{ object }}
+        {% if fields %}
+        <div class="subheading">
+            <ul>
+                {% for field in fields %}
+                <li>
+                    {% include settings.DETAIL_FIELDMAP %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </h1>
+    {% include 'genviews/templates/detail-menu.html' %}
+</div>
+

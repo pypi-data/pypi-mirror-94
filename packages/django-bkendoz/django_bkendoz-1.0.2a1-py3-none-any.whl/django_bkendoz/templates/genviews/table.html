@@ -1,0 +1,30 @@
+{% load templates %}
+
+<table cellspacing="1"> 
+
+  <thead>
+    <tr>
+      {% for fieldref, fieldtext in fields %}
+      <th>
+        {{ fieldtext }}
+        <button class="btn-ls-sort is-off" data-sort="{{ fieldref }}">
+          <i class="fa fa-chevron-circle-down"></i>
+        </button>
+      </th>
+      {% endfor %}
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for object in object_list %}
+    <tr>
+      {% for fieldref, fieldtext in fields %}
+      <td data-field="{{ fieldref }}">
+        {% include settings.LIST_FIELDMAP %}
+      </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+
+</table>

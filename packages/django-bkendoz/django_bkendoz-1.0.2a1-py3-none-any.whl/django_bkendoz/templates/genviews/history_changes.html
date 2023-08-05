@@ -1,0 +1,8 @@
+{% load i18n %}
+{% load templates %}
+
+<table>
+    {% for change in object.get_history_changes %}
+        {% include 'genviews/templates/history-change-row.html' %}
+    {% endfor %}
+</table>

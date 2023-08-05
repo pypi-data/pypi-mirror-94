@@ -1,0 +1,63 @@
+{% load i18n %}
+{% load templates %}
+
+<tr class="hist-row">
+
+    <td>
+        {% if type == 'ED' or type == '~' %}
+        <a class="modal-open get-object-changes" href="#" data-url="{{ hist.get_absolute_url }}" data-modal="#modal-changes">
+            <i class="fas fa-pen hist-edit"></i>
+        </a>
+        {% elif type == 'NE' or type == '+' %}
+        <i class="fas fa-plus hist-add"></i>
+        {% elif type == 'DE' or type == '-' %}
+        <i class="fas fa-trash hist-del"></i>
+        {% endif %}
+        </i>
+    </td>
+
+    <td data-field="date">
+        <div class="info">
+            <span class="ls-field-date">
+                {{ date |date:'d/m/Y'}}
+            </span>
+        </div>
+        <div class="info">
+            <span class="ls-field-hour">
+            {{ date |date:'H:i:s'}}
+            </span>
+        </div>
+    </td>
+
+    <td data-field="user">
+        {% if user %}
+        <a href="{% url 'profile' user.pk %}">
+            <span class="ls-field">
+                {{ user }}
+            </span>
+        </a>
+        {% endif %}
+    </td>
+    
+    <td data-field="object">
+        <div>
+        {% if type == 'DE' %}
+        <span class="ls-field">
+            {{ object }}
+        </span>
+        {% else %}
+        <a href="{{ object.get_absolute_url }}">
+            <span class="ls-field">
+                {{ object }}
+            </span>
+        </a>
+        {% endif %}
+        </div>
+        <div class="info">
+        <span class="ls-field">
+            {{ object | to_class_name }}
+        </span>
+        <div>
+    </td>
+
+</tr>

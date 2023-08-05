@@ -1,0 +1,12 @@
+{% extends 'genviews/history_global.html' %}
+{% load i18n %}
+
+{% block history_menu %}
+{% include 'genviews/templates/detail-menu.html' with menu=history_menu %}
+{% endblock %}
+
+{% block history_row %}
+{% for hist in object.history.all %}
+    {% include 'genviews/history_row.html' with user=hist.history_user date=hist.history_date action=hist.history_action history_object=hist.history_object type=hist.history_type %}
+{% endfor %}
+{% endblock %}

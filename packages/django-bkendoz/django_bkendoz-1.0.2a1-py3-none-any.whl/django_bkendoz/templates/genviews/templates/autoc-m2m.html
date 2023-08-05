@@ -1,0 +1,5 @@
+{% for v in selected %}
+    {% include 'genviews/templates/autoc-input.html' with index=v.index %}
+{% endfor %}
+
+{% include 'genviews/templates/autoc-input.html' with disabled=True index=index %}

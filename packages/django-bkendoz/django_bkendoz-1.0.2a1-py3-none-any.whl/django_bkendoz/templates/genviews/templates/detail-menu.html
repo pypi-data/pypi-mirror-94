@@ -1,0 +1,17 @@
+{% for href, faclass, aclass, data, tooltip in menu %}
+<a href = "{{ href }}" 
+   class = "{% if tooltip %} tooltip {% endif %}
+   {{ aclass }}"
+   {% for field, value in data %}
+   data-{{field}}="{{value}}"
+   {% endfor %}
+   >
+   {% if tooltip %}
+   <span class="tooltiptext">
+       {{ tooltip }}
+   </span>
+    {% endif %}
+    <i class="fas {{ faclass }}"></i>
+</a>
+{% endfor %}
+

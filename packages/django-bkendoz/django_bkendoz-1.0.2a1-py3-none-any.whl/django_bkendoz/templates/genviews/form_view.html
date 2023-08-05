@@ -1,0 +1,27 @@
+{% extends layout_data.main_layout|default:"genviews/layout.html" %}
+
+{% load i18n %}
+
+{% block content %}
+
+<div class="heading-flex">
+
+    <h1>
+        {{ form_title }}
+        <div class="subheading">
+            <ul>
+                <li>
+                </li>
+            </ul>
+        </div>
+    </h1>
+    {% if form_type == 'update' %}
+        {% include 'genviews/templates/detail-menu.html' %}
+    {% else %}
+        {% include 'genviews/templates/list-menu.html' %}
+    {% endif %}
+</div>
+
+{% include 'genviews/templates/form.html' %}
+
+{% endblock %}
