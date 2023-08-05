@@ -1,0 +1,3 @@
+[console_scripts]
+wythoff-construct = wythoff_construct:main
+
