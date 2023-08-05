@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: types-requests
+Version: 0.1.1
+Summary: Typing stubs for requests
+Home-page: https://github.com/python/typeshed
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+
+## Typing stubs for requests
+
+This is an auto-generated PEP 561 type stub package for `requests` package.
+It can be used by type-checking tools like mypy, PyCharm, pytype etc. to check code
+that uses `requests`. The source for this package can be found at
+https://github.com/python/typeshed/tree/master/stubs/requests. All fixes for
+types and metadata should be contributed there.
+
+See https://github.com/python/typeshed/blob/master/README.md for more details.
+This package was generated from typeshed commit `a3f5541830205400cdf3aac04625e8a09f86cace`.
+
+
