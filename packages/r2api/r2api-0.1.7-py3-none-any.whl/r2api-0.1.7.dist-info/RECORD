@@ -1,0 +1,16 @@
+r2api/__init__.py,sha256=VQqHcXmcxYQih8rgyIGcW4XvE0AQd5FBPPqeDW1BPP4,332
+r2api/converter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+r2api/converter/base_converter.py,sha256=nY9rNK7NI1ixV2769a6J4_o8OOJrifvPXZYP0X2gup0,3226
+r2api/converter/fatto_in_casa.py,sha256=jar_TU5cNgkIEMPlWoZZ8orCMswmUinKFPgMzOf23po,6079
+r2api/converter/giallo_zafferano.py,sha256=32dbgZfQaw062SnMT37lfXozpf9owHk_YyKK-K20Rrg,15755
+r2api/converter/molliche_di_zucchero.py,sha256=LlzN9bcVP4KFXNbp1qlmSqXKBRGciPjG6Ee02YOfb10,6554
+r2api/translate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+r2api/translate/apply_translation.py,sha256=eILWjjQRX-b8rkzd30L2_zgQGxj99AV5dIHH9j4FmXU,5845
+r2api/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+r2api/utilities/errors.py,sha256=wsyF3EQr8ktPNIrqBAhHs2VCuN4yntLtToHyQ3an7Fs,93
+r2api/utilities/unit_conversion.py,sha256=nbC9R1xnCxeLOjaEJtpUpRqUrTikI2xD_R4plcPQ_Iw,11403
+r2api-0.1.7.dist-info/LICENSE,sha256=yLwi0o8gm2dRqPUEk6yMxM1koXzSvmykVJ7hDzrv1Do,1078
+r2api-0.1.7.dist-info/METADATA,sha256=BrMmpk-TOa-qKOAoO3CpeJJZQLQQPtmVLoeomWwwvOI,11753
+r2api-0.1.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+r2api-0.1.7.dist-info/top_level.txt,sha256=iOc6k5x4a0uoNomkaZpRvuyrlWq4AbaagMJ7fgUNqQk,6
+r2api-0.1.7.dist-info/RECORD,,
