@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: tablepy
+Version: 0.0.0.0
+Summary: table generator for python
+Home-page: https://github.com/JulianWww/AMCommandPack2
+Author: Julian Wandhoven
+Author-email: julian.wandhoven@fgz.ch
+License: wtfpl
+Project-URL: documentation, https://py-tables.readthedocs.io/en/latest/index.html
+Description: 
+                tablepy is a python package that can be used to generate tables 
+            
+Keywords: tables,rendering
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3
