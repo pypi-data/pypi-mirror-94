@@ -1,0 +1,15 @@
+fugue>=0.5.1
+scikit-learn
+matplotlib
+
+[all]
+hyperopt
+notebook
+jupyterlab
+
+[hyperopt]
+hyperopt
+
+[notebook]
+notebook
+jupyterlab
