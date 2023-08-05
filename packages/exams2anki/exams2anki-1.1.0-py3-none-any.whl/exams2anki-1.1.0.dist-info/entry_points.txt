@@ -1,0 +1,3 @@
+[console_scripts]
+exams2anki = exams2anki:main
+
