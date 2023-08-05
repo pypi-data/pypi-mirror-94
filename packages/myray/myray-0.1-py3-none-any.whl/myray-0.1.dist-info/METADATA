@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: myray
+Version: 0.1
+Summary: my ray desc
+Home-page: UNKNOWN
+Author: Ray Developers
+Author-email: myray@googlegroups.com
+License: Apache 2.0
+Keywords: ray distributed
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: typing
+Requires-Dist: pandas (==1.1.4)
+Requires-Dist: psutil
+Requires-Dist: pyarrow (>=0.10)
+Requires-Dist: ray (>=1.1.0)
+Requires-Dist: pyspark (==3.0.1)
+
+# myRay Test
+
+my [Ray](https://github.com/ray-project/ray/) test update.
+
+
+
