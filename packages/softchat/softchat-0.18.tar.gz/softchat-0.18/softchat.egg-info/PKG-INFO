@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: softchat
+Version: 0.18
+Summary: convert twitch/youtube chat into softsubs
+Home-page: https://github.com/9001/softchat
+Author: ed
+Author-email: softchat@ocv.me
+License: MIT
+Description: # softchat
+        convert twitch/youtube chat into softsubs
+        
+        # notes
+        * on windows, `--kana` requires python 3.8 or newer
+        
+        # maintainers
+        * build and release: `python setup.py rls`
+        
+Keywords: youtube chat converter danmaku marquee softsubs ass subtitles
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Natural Language :: English
+Classifier: Topic :: Multimedia :: Video
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: unkanji
