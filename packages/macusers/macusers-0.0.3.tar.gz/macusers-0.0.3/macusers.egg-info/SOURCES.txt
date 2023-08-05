@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+macusers/__init__.py
+macusers.egg-info/PKG-INFO
+macusers.egg-info/SOURCES.txt
+macusers.egg-info/dependency_links.txt
+macusers.egg-info/top_level.txt
