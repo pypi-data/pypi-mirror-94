@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: discord-ext-getch
+Version: 0.1.0
+Summary: Get and Fetch Objects!
+Home-page: https://github.com/Ext-Creators/discord-ext-getch
+Author: Ext-Creators
+License: Apache Software License
+Project-URL: Issue Tracker, https://github.com/Ext-Creators/discord-ext-getch/issues
+Project-URL: Source, https://github.com/Ext-Creators/discord-ext-getch
+Description: |Analyse Status|
+        |Build Status|
+        |Lint Status|
+        
+        .. |Analyse Status| image:: https://github.com/Ext-Creators/discord-ext-getch/workflows/Analyze/badge.svg?event=push
+           :target: https://github.com/Ext-Creators/discord-ext-getch/actions?query=workflow%3AAnalyze+event%3Apush
+        
+        
+        .. |Build Status| image:: https://github.com/Ext-Creators/discord-ext-getch/workflows/Build/badge.svg?event=push
+           :target: https://github.com/Ext-Creators/discord-ext-getch/actions?query=workflow%3ABuild+event%3Apush
+        
+        
+        .. |Lint Status| image:: https://github.com/Ext-Creators/discord-ext-getch/workflows/Lint/badge.svg?event=push
+           :target: https://github.com/Ext-Creators/discord-ext-getch/actions?query=workflow%3ALint+event%3Apush
+        
+        ----------
+        
+        discord-ext-getch
+        -----------------
+        
+        A discord.py extension that allows simplification of getting and fetching objects.
+        
+        
+        Installation
+        ------------
+        
+        .. code-block:: sh
+        
+            python3 -m pip install --upgrade discord-ext-getch
+        
+        
+        Usage
+        -----
+        
+        .. code-block:: py
+        
+            from discord.ext.getch import GetchMixin
+        
+            class Bot(commands.Bot, GetchMixin):
+                ...
+        
+            bot = Bot(command_prefix='!')
+        
+            @bot.event
+            async def on_ready():
+                print(await bot.annel(123456789).essage(987654321).getch())
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7.1
+Description-Content-Type: text/x-rst
