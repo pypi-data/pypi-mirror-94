@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: fugue-incubator
+Version: 0.0.8
+Summary: Fugue based experimental projects
+Home-page: http://github.com/fugue-project/fugue-incubator
+Author: Han Wang
+Author-email: goodwanghan@gmail.com
+License: Apache-2.0
+Keywords: fugue incubator experiment
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: fugue (>=0.5.1)
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Provides-Extra: all
+Requires-Dist: hyperopt ; extra == 'all'
+Requires-Dist: notebook ; extra == 'all'
+Requires-Dist: jupyterlab ; extra == 'all'
+Provides-Extra: hyperopt
+Requires-Dist: hyperopt ; extra == 'hyperopt'
+Provides-Extra: notebook
+Requires-Dist: notebook ; extra == 'notebook'
+Requires-Dist: jupyterlab ; extra == 'notebook'
+
+# Fugue Incubator
+Fugue based experimental projects
+
+
