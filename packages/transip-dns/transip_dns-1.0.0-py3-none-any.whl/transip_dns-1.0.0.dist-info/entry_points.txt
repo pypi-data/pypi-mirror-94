@@ -1,0 +1,3 @@
+[console_scripts]
+transip_dns = transip_dns.transip_dns:main
+

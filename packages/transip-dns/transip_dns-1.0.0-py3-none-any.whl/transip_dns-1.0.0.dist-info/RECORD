@@ -1,0 +1,11 @@
+transip_dns/__init__.py,sha256=X5lnx4j6YrVGklouC8iEtJvvcpHs_6SQaGiByOzJXMo,497
+transip_dns/accesstoken.py,sha256=71KUNKkg8MnHYVleeRhYw72MOg98_Azr_mfo3-tgo1g,9762
+transip_dns/env_params.py,sha256=lVYV82sCoDKMA5Jj_DWAgJyp9gqcwW6Ds4RJA3nmVxk,4807
+transip_dns/transip_dns.py,sha256=MQjvFukb1-PExGwnlHqzki-JfrqOhwthg1pZTbwQiOU,20653
+transip_dns/transip_interface.py,sha256=fLiXShCyQMIpOAHvbdiWYnQRKGqKyRtJWTUlM4BNzeo,13214
+transip_dns-1.0.0.dist-info/LICENSE,sha256=Rfco2TBYjjUpcSd0w8Ih0d09N6W0WA1f6y1BX3RpV0I,1098
+transip_dns-1.0.0.dist-info/METADATA,sha256=lXxKUF05mYwT24BFXYDvipXubNKnjDP9xc98mGveOqM,6965
+transip_dns-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+transip_dns-1.0.0.dist-info/entry_points.txt,sha256=9lpyGdg4HPfdQOGbV8J-ieLm93ZUEnVysT6Ysde4UEw,62
+transip_dns-1.0.0.dist-info/top_level.txt,sha256=dziN6duXV93lIA3YXotoRV_a8ANU63OYl5O4A14MHvg,12
+transip_dns-1.0.0.dist-info/RECORD,,
