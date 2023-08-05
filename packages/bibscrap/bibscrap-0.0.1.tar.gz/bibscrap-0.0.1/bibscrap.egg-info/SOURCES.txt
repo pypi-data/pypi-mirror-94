@@ -1,0 +1,7 @@
+README.rst
+pyproject.toml
+setup.cfg
+bibscrap.egg-info/PKG-INFO
+bibscrap.egg-info/SOURCES.txt
+bibscrap.egg-info/dependency_links.txt
+bibscrap.egg-info/top_level.txt
