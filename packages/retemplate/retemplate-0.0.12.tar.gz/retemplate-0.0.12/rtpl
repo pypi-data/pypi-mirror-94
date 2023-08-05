@@ -1,0 +1,151 @@
+#!/bin/env python3
+
+import glob
+import logging
+import json
+import retemplate
+import sys
+import yaml
+
+from argparse import ArgumentParser
+from threading import Thread
+
+'''
+This file serves as an entry point to the module's features, and is the recommended method of
+executing templates.
+'''
+
+all_configs = list()
+
+def parseargs():
+    '''
+    Interpets command line arguments
+    '''
+
+    parser = ArgumentParser(description='Schedule file templating')
+    parser.add_argument('-c', '--config',
+                        help='Config file to read in',
+                        default='config.yml')
+    parser.add_argument('-l', '--logfile',
+                        help='The file to direct log output to (see readme for details)',
+                        default=None)
+    parser.add_argument('-v', '--values',
+                        help='Log all values retrieved from data stores',
+                        default=False,
+                        action='store_true')
+    return parser.parse_args()
+
+def read_config(path):
+    try:
+        with open(path, 'r') as fh:
+            return yaml.load(fh.read(), Loader=yaml.FullLoader)
+    except IOError:
+        logging.error('Could not read config file: {}'.format(args.config))
+        return None
+
+def get_configs(includes):
+    if len(includes) > 0:
+        for include in includes:
+            files = glob.glob(include)
+            for file in files:
+                config = read_config(file)
+                if config:
+                    all_configs.append(config)
+                    if 'retemplate' in config and 'include' in config['retemplate']:
+                        get_configs(config['retemplate']['include'])
+
+def deep_merge(d, u):
+    for k, v in u.items():
+        if isinstance(v, dict):
+            d[k] = deep_merge(d.get(k, {}), v)
+        else:
+            d[k] = v
+    return d
+
+def merge_configs(base_config):
+    # logging.info('Base config: {}'.format(json.dumps(base_config, indent=2)))
+    for config in all_configs:
+        # logging.info('Merging in config: {}'.format(json.dumps(config, indent=2)))
+        base_config = deep_merge(base_config, config)
+        # logging.info('Base config after merge: {}'.format(json.dumps(base_config, indent=2)))
+    if 'retemplate' in base_config and 'include' in base_config['retemplate']:
+        del(base_config['retemplate']['include'])
+    return base_config
+
+def main():
+    '''
+    Main entry point to the rtpl utility. This handles configuration of the application before
+    launching Retemplate objects as simultaneous threads.
+    '''
+
+    args = parseargs()
+
+    # First set up basic logging so we can emit events before the user's custom configs can be read
+    logcfg = {
+        'level': 'INFO',
+        'filename': args.logfile,
+        'format': '%(levelname)s %(asctime)s %(message)s',
+        'style': '%'
+    }
+
+    # Forcible reconfiguration of live logging is only available after Python 3.8
+    if sys.version_info.minor >= 8:
+        logcfg['force'] = True
+    logging.basicConfig(**logcfg)
+
+    logging.info('Starting up Retemplate')
+    stores = dict()
+    templates = list()
+    threads = list()
+
+    # Parse config files
+    base_config = read_config(args.config)
+    if base_config and 'retemplate' in base_config and 'include' in base_config['retemplate']:
+        get_configs(base_config['retemplate']['include'])
+    config = merge_configs(base_config)
+
+    # Update logging config based on user configs if Python allows it
+    if 'retemplate' in config and 'logging' in config['retemplate'] and sys.version_info.minor >= 8:
+        logcfg.update(config['retemplate']['logging'])
+        logging.basicConfig(**logcfg)
+        logging.debug('Logging configured')
+
+    logging.info('Retemplate loaded with this configuration:\n{}'.format(json.dumps(config, indent=2)))
+
+    # Configure DataStores
+    for store in config['stores']:
+        if config['stores'][store]['type'] == 'aws-local-meta':
+            stores[store] = retemplate.AwsLocalMetadataServer(store, **config['stores'][store])
+        if config['stores'][store]['type'] == 'aws-secrets-manager':
+            stores[store] = retemplate.AwsSecretsManagerStore(store, **config['stores'][store])
+        if config['stores'][store]['type'] == 'aws-systems-manager':
+            stores[store] = retemplate.AwsSystemsManagerStore(store, **config['stores'][store])
+        if config['stores'][store]['type'] == 'local-exec':
+            stores[store] = retemplate.LocalExecutionStore(store, **config['stores'][store])
+        if config['stores'][store]['type'] == 'redis':
+            stores[store] = retemplate.RedisStore(store, **config['stores'][store])
+        logging.debug('Configured data store {}'.format(store))
+
+    # Configure templates
+    for target in config['templates']:
+        template = config['templates'][target]['template']
+        del(config['templates'][target]['template'])
+        tpl = retemplate.Retemplate(target, template, stores, args.values, **config['templates'][target])
+        templates.append(tpl)
+        logging.debug('Configured template for target {}'.format(target))
+
+    # Run each template as a thread
+    for tpl in templates:
+        thread = Thread(target=tpl.run)
+        threads.append(thread)
+        thread.start()
+
+    # Wait for all threads to finish before exiting
+    # (They should only ever finish if they error out, since they run in infinite loops)
+    for thread in threads:
+        thread.join()
+
+    logging.info('Shutting down Retemplate')
+
+if __name__ == '__main__':
+    main()

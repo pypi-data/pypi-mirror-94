@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: retemplate
+Version: 0.0.12
+Summary: A module to execute a Jinja template on a schedule, supporting several backends for value storage
+Home-page: https://github.com/ryanjjung/retemplate
+Author: Ryan Jung
+Author-email: ryanjjung@gmail.com
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
