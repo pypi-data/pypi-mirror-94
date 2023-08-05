@@ -1,0 +1,10 @@
+simpletasks/__init__.py,sha256=xUrFby8jtv2WtJO6rlzm7ZmjhpelhmlSF1NW3SVjKaU,437
+simpletasks/cli.py,sha256=QGE0122Rso-B4yfzlbNgSgMjBXogZOgSLQhnGgJnmcM,6749
+simpletasks/helpers.py,sha256=EUtX1avc97vTHIKvUGkyB6FUQUHECLk-zGBtGG-iMlE,931
+simpletasks/orchestrator.py,sha256=RVjAC_vBPA8htbIhox2C-aZx8tKLJNJvoxp4zH55zQM,4593
+simpletasks/pipeline.py,sha256=fb4OZkPXYeh7eeIvz0IaiMweIJxmSXpMaHDFC9R9TYM,1350
+simpletasks/task.py,sha256=6G_cPuFF2ETV4aV9NeQWB8GKwATOm_bPfQkfXRNyeAg,6652
+simpletasks-0.1.2.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+simpletasks-0.1.2.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+simpletasks-0.1.2.dist-info/METADATA,sha256=okOzhkPu_42feRH-6STh_yj5UVz0SaVrrQMVJcjpTqA,2313
+simpletasks-0.1.2.dist-info/RECORD,,
