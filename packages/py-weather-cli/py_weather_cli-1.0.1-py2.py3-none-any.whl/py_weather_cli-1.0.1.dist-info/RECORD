@@ -1,0 +1,12 @@
+weather_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weather_cli/ascii_art.py,sha256=3-gDuufxGyFlU63STr1Ypv73Uftjv4snbQON7ZTExjk,13414
+weather_cli/main.py,sha256=1nBf7T3CH76wASC3wBjrmDon2FpBglb0l5TPua--3jU,2095
+weather_cli/openweathermap.py,sha256=qO71cDBYZIZ-hIi07zCkUrwbdVku7OUjaB10-iV6qyU,5223
+weather_cli/utils.py,sha256=MawRPrs57haTRf8jeVmHB_KAFNsZTp6FvNXLYd-YBTo,788
+weather_cli/weather.py,sha256=ZBB680eMfdtIPDRYSNPP86GSnq5uC_sTOiEFfVrU5RM,3306
+py_weather_cli-1.0.1.dist-info/LICENSE,sha256=OVBuY5HDPcdtgueMoa3ueDqVt8x02edC0FlCoxTiUzM,1066
+py_weather_cli-1.0.1.dist-info/METADATA,sha256=rmWgoHYCBxDYKHhX-N8NCbED8qGrQQy0F7Q0Q0JMqDE,1917
+py_weather_cli-1.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+py_weather_cli-1.0.1.dist-info/entry_points.txt,sha256=rxf6kLg4DWX4nJovnBeW7IG2id11FKHLfUfaF4vj4Ho,54
+py_weather_cli-1.0.1.dist-info/top_level.txt,sha256=SgpxMBjaaONsC23KntdAKEqQEOmw6Rdx9TuF8jWZEOY,12
+py_weather_cli-1.0.1.dist-info/RECORD,,
