@@ -1,0 +1,13 @@
+mailcow/__init__.py,sha256=sSkuQjWw4VYkgq5AuxuJamrq68OJcf1iCHvJ5zDbiYI,8322
+mailcow/__main__.py,sha256=LYMWtw7TUdK56u0K_9IHBfHh5z2smi2BEtoLv2y-RyA,265
+mailcow/cli.py,sha256=cAFoFnsh5qSyRe3wFOH9IFpoVT_epHVmh2U1HdOVPng,2776
+mailcow/config.py,sha256=8f5-RVA-DMcxVnqYnY7a4TjW_PsvhVfRsPi2Nrszllg,1609
+mailcow/globals.py,sha256=_49X8Qip5wTjBOOkS9LUSyUuJ4XnxYxp6dEgcaSTQew,392
+mailcow/menu.py,sha256=NgT5ogFOOuv4CX1iUQ414KHCOiH7qIhHMu2LIzt_cWU,4054
+mailcow/utils.py,sha256=zsrQOEydFNz0HTyfZfjbk9b1rT8LkdP42s_cbz4IfM0,8043
+python_mailcow-1.0.3.dist-info/LICENSE,sha256=9wsXyHq-dmlAniI3vhsAdQa1pvHpngWtiBlQdPp3m78,35071
+python_mailcow-1.0.3.dist-info/METADATA,sha256=YyZ98bKJDVPU6EtrUBJnIE1nHuHTCsENSKzsFlW2f-U,10176
+python_mailcow-1.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_mailcow-1.0.3.dist-info/entry_points.txt,sha256=XzrPzRTgVeugjOV1kR3TOxqkl2X0cs4_9XAm8gCR85I,46
+python_mailcow-1.0.3.dist-info/top_level.txt,sha256=goUSpzpDGe2rRBrLaFtPwlN76jAMtPXaRgGftt2TJjw,8
+python_mailcow-1.0.3.dist-info/RECORD,,
