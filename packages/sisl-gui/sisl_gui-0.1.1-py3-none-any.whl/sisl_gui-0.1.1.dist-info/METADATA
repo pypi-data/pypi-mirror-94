@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sisl-gui
+Version: 0.1.1
+Summary: Graphical interface for the sisl visualization module
+Home-page: http://github.com/pfebrer/sisl-gui
+Author: Pol Febrer
+Author-email: pfebrer96@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: simplejson
+Requires-Dist: flask
+Requires-Dist: flask-restx
+Requires-Dist: flask-socketio (>=5.0)
+Requires-Dist: flask-cors
+Requires-Dist: flask-login
+Requires-Dist: flask-session
+
+UNKNOWN
+
+
