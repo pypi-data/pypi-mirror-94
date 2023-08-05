@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: streamlit-gallery
+Version: 0.1.0
+Summary: Streamlit gallery.
+Author: Yevgnen Koh
+Author-email: wherejoystarts@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: spacy (>=3.0.1,<4.0.0)
+Requires-Dist: streamlit (>=0.76.0,<0.77.0)
