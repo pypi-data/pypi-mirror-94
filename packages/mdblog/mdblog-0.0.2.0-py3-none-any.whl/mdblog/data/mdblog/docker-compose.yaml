@@ -1,0 +1,19 @@
+version: "3"
+networks:
+  micro:
+    external: true
+services:
+  mdblog:
+    image:
+      mdblog:latest
+    restart: always
+    networks:
+      - micro
+    ports:
+      - 8080:8080
+    volumes:
+    - /mdblog/data:/mdblog/data
+    - /mdblog/config:/mdblog/config
+
+
+
