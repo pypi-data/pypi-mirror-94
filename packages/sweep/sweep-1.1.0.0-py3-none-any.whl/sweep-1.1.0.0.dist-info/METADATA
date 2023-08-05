@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: sweep
+Version: 1.1.0.0
+Summary: SWeeP is a tool to representing large biological sequences datasets in compact vectors
+Home-page: UNKNOWN
+Author: Diogo de J. S. Machado
+Author-email: diogomachado.bioinfo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: Biopython
+Requires-Dist: scipy
+Requires-Dist: sympy
+Requires-Dist: hdf5storage
+Requires-Dist: more-itertools
+Requires-Dist: tqdm
+Requires-Dist: requests
+Requires-Dist: dask
+
+SWeeP Overview
+====================
+This package is a python version of the tool described in the article available at <https://www.nature.com/articles/s41598-019-55627-4>. **Please quote the article**.
+
+Use
+------------
+To use SWeeP in python, install the package with the command "pip install sweep" and import the package in your code, as in the example:
+
+.. code-block:: python
+
+    from sweep import fastaread, fas2sweep
+    fasta = fastaread ("fasta_file_path")
+    vect = fas2sweep (fasta)
+
+The default configurations are intended for vectorization of amino acid sequences. The default output is the matrix already projected, with 600 columns. **See the article if you need information about the projection method**.
+
+The default projection matrix has dimensions 160000x600. It is necessary generate a new matrix if other masks are used or another projection size is desired. To generate the orthonormal matrix for projection, a function called orthbase is available on the package. For example, if the goal is to change the projection size to 300, just use:
+
+.. code-block:: python
+
+    from sweep import fastaread, fas2sweep, orthbase
+    ob = orthbase(160000,300)
+    fasta = fastaread ("fasta_file_path")
+    vect = fas2sweep (fasta, orth_mat = ob)
+
+It is also possible obtain the result without projection, for this is necessary set the parameter "projection" to "False".
+
+For the nucleotide sequences vectorization is possible set the parameter fasta_type to "NT".
+
