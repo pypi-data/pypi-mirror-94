@@ -1,0 +1,8 @@
+numpy>=1.20.0
+scipy>=1.6.0
+pandas>=1.0.3
+natsort
+nibabel>=3.2.0
+mne>=0.22.0
+mne-bids>=0.6
+pybv>=0.4.0
