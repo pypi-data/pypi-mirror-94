@@ -1,0 +1,363 @@
+[build-system]
+    requires = ["poetry>=0.12"]
+    build-backend = "poetry.masonry.api"
+
+
+#: -- TESTING COFIGURATION -------------------------------------------------------------
+[tool._testing]
+    ci_default_python_version = "3.8"
+    #: Max 10 python versions are currently installed
+    # TODO:#i# find way to install multiple py ver in workflow VM in one step
+    # https://github.com/actions/setup-python/issues/98
+    ci_test_python_versions = [
+        #: pypy
+        "pypy-3.6", "pypy-3.7",
+        #: cpython
+        "3.6", "3.7", "3.8", "3.9", "3.10.0-alpha.2 - 3.10"
+    ]
+    ci_test_os = ["ubuntu", "macos", "windows"]
+    cc_test_reporter_version = "latest-linux-amd64"
+    skip_install = false  #: Application -> true || Library -> false
+    toxenv_python_versions_win32 = "py{310,39,38,37,36}"
+    toxenv_python_versions_darwin = "py{py3,310,39,38,37,36}"
+    toxenv_python_versions_linux = "py{py3,310,39,38,37,36}"
+    toxenv_docs_builders = "test_docs-{html,linkcheck,coverage,doctest,spelling}"
+
+
+#: -- POETRY CONFIG --------------------------------------------------------------------
+[tool.poetry]
+    name = "formelsammlung"
+    version = "5.0.0"
+    description = "Collection of different functions"
+    authors = ["Christian Riedel <cielquan@protonmail.com>"]
+    license = "GPL-3.0-or-later"
+    packages = [{ include = "formelsammlung", from = "src" }]
+    readme = "README.rst"
+    classifiers = [
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "Natural Language :: English",
+        "Operating System :: MacOS",
+        "Operating System :: Microsoft :: Windows :: Windows 10",
+        "Operating System :: POSIX :: Linux",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Programming Language :: Python :: Implementation :: PyPy",
+        "Topic :: Software Development",
+        "Topic :: Utilities",
+    ]
+
+    [tool.poetry.urls]
+        "Issue Tracker" = "https://github.com/Cielquan/formelsammlung/issues"
+        "Changelog" = "https://formelsammlung.readthedocs.io/en/latest/changelog"
+        "Documentation" = "https://formelsammlung.readthedocs.io"
+        "Source" = "https://github.com/Cielquan/formelsammlung"
+
+    [tool.poetry.dependencies]
+        python = "^3.6.2"  # NOTE: update min_python_version below also
+        importlib-metadata = {version = ">=1.6, <4.0", python = "<3.8"}
+        flask = {version = "^1.1.2", optional = true}
+        nox = {version = "^2020.12.31", optional = true}
+        ####################
+        #: Testing
+        pytest = {version = "^6", optional = true}
+        pytest-xdist = {version = "^2.2", optional = true}
+        # TODO:#i# bug on py310 when set as extra: xdist is not installed
+        psutil = {version = "^5.8.0", optional = true}
+        # pytest-xdist = {extras = ["psutil"], version = "^2.2", optional = true}
+        pytest-cov = {version = "^2.10.1", optional = true}
+        coverage = {extras = ["toml"], version = "^5.3.1", optional = true}
+        coverage-conditional-plugin = {version = "^0.3.1", optional = true}
+        pytest-sugar = {version = "^0.9.4", optional = true}
+        pytest-randomly = {version = "^3.5", optional = true}
+        pytest-mock = {version = "^3.5.1", optional = true}
+        mock = {version = "^4.0.3", optional = true}
+        pytest-flask = {version = "^1.0", optional = true}
+        ####################
+        #: Docs
+        sphinx = {version = "^3.1", optional = true}
+        m2r2 = {version = "^0.2.7", optional = true}
+        sphinx-autobuild = {version = "2020.9.1", optional = true}
+        python-dotenv = {version = "^0.15", optional = true}
+        sphinx-rtd-theme = {version = "^0.5.1", optional = true}
+        sphinx-autodoc-typehints = {version = "^1.11", optional = true}
+        sphinxcontrib-apidoc = {version = "^0.3", optional = true}
+        sphinxcontrib-spelling = {version = "^7.1", optional = true}
+        ####################
+        #: Code check
+        pre-commit = {version = "^2.9", optional = true}
+        mypy = {version = "0.790", optional = true}
+        #: flakehell & flake8-plugins
+        pylint = {version = "^2.6", optional = true}
+        pyenchant = {version = "^3.2", optional = true}
+        #: flakehell 0.9.0 only drops dropqa (prior: yesqa) cmd
+        #: flakehell is now (0.9.0) unmaintained
+        flakehell = {version = "0.8.0", optional = true}
+        flake8 = {version = "^3.8", optional = true}
+        pydocstyle = {version = "^5.1", optional = true}
+        pep8-naming = {version = "^0.11", optional = true}
+        flake8-2020 = {version = "^1.6", optional = true}
+        flake8-aaa = {version = "^0.11", optional = true}
+        flake8-annotations = {version = "^2.4", optional = true}
+        flake8-bandit = {version = "^2.1.2", optional = true}
+        bandit = {version = "^1.7", optional = true}
+        flake8-broken-line = {version = "^0.3", optional = true}
+        flake8-bugbear = {version = "^20.11", optional = true}
+        flake8-cognitive-complexity = {version = "^0.1", optional = true}
+        flake8-comprehensions = {version = "^3.3", optional = true}
+        flake8-docstrings = {version = "^1.5", optional = true}
+        flake8-eradicate = {version = "^1", optional = true}
+        flake8-logging-format = {version = "^0.6", optional = true}
+        flake8-mutable = {version = "^1.2", optional = true}
+        flake8-no-u-prefixed-strings = {version = "^0.2", optional = true}
+        flake8-pytest-style = {version = "^1.3", optional = true}
+        flake8-rst-docstrings = {version = "^0.0.14", optional = true}
+        flake8-simplify = {version = "^0.12", optional = true}
+        flake8-sql = {version = "^0.4.1", optional = true}
+        flake8-string-format = {version = "^0.3", optional = true}
+        flake8-typing-imports = {version = "^1.10.1", optional = true}
+        flake8-use-fstring = {version = "^1.1", optional = true}
+        flake8-variables-names = {version = "^0.0.3", optional = true}
+        flake8-walrus = {version = "^1.1", python = ">=3.8", optional = true}
+        ####################
+        #: nox env dependencies
+        tomlkit = {version = ">=0.7.0, <1.0.0", optional = true}
+        tox = {version = "^3.21", optional = true}
+        ####################
+        #: Additional tools
+        poetry = {version = "^1.1.4", optional = true}
+        twine = {version = "^3.3", optional = true}
+        safety = {version = "^1.9", optional = true}
+        diff-cover = {version = "^4", optional = true}
+
+    [tool.poetry.dev-dependencies]
+        nox = "*"  #: Version managed above
+        tomlkit = "*"  #: Version managed above
+        poetry = "*"  #: Version managed above
+        virtualenv = "^20, !=20.2.2"  #: 20.2.2 breaks smth with nox/tox
+        # TODO:#i# wait for new release: https://github.com/myint/rstcheck/issues/69
+        rstcheck = {git = "https://github.com/myint/rstcheck.git", rev = "3f92957478422df87bd730abde66f089cc1ee19b"}
+
+    [tool.poetry.extras]
+        flask = ["flask"]
+        nox = ["nox"]
+        testing = [
+            "pytest", "pytest-xdist", "psutil",
+            "pytest-cov", "coverage", "coverage-conditional-plugin",
+            "pytest-sugar",
+            "pytest-randomly",
+            "pytest-mock", "mock",
+            "pytest-flask", "flask",
+            "nox",
+        ]
+        coverage = ["coverage", "coverage-conditional-plugin"]
+        diff-cover = ["diff-cover"]
+        docs = [
+            "sphinx",
+            "m2r2",
+            "sphinx-rtd-theme",
+            "sphinx-autodoc-typehints",
+            "sphinxcontrib-apidoc",
+            "sphinxcontrib-spelling",
+            "flask",
+            "nox",
+        ]
+        sphinx-autobuild = ["sphinx-autobuild"]
+        pre-commit = [
+            "pre-commit",
+            "rstcheck", "sphinx",
+            "mypy",
+            "flakehell", "flake8", "pycodestyle",
+            "pylint", "pyenchant",
+            "pep8-naming",
+            "flake8-2020",
+            "flake8-aaa",
+            "flake8-annotations",
+            "flake8-bandit", "bandit",
+            "flake8-broken-line",
+            "flake8-bugbear",
+            "flake8-cognitive-complexity",
+            "flake8-comprehensions",
+            "flake8-docstrings",
+            "flake8-eradicate",
+            "flake8-logging-format",
+            "flake8-mutable",
+            "flake8-no-u-prefixed-strings",
+            "flake8-pytest-style",
+            "flake8-rst-docstrings",
+            "flake8-simplify",
+            "flake8-sql",
+            "flake8-string-format",
+            "flake8-typing-imports",
+            "flake8-use-fstring",
+            "flake8-variables-names",
+            "flake8-walrus",
+        ]
+        poetry = ["poetry"]
+        dev_nox = ["nox", "tomlkit"]
+        tomlkit = ["tomlkit"]
+        tox = ["tox"]
+        twine = ["twine"]
+        safety = ["safety"]
+
+    [tool.poetry.scripts]
+        env_exe_runner = 'formelsammlung.env_exe_runner:cli_caller'
+
+
+#: -- BLACK CONFIG ---------------------------------------------------------------------
+[tool.black]
+    line-length = 88
+    exclude = "venv/"
+    include = '\.pyi?$'  #: single quotes needed
+
+
+#: -- ISORT CONFIG ---------------------------------------------------------------------
+[tool.isort]
+    profile = "black"
+    lines_after_imports = 2
+    lines_between_types = 1
+    skip_gitignore = true
+
+
+#: -- FLAKEHELL CONFIG -----------------------------------------------------------------
+[tool.flakehell]
+    format="colored"
+    max_line_length = 88
+    max_complexity = 20
+    max_cognitive_complexity = 10
+    min_python_version = "3.6.2"
+    pytest_fixture_no_parentheses = true
+
+    [tool.flakehell.plugins]
+        pylint = [
+            "+*",
+            #: deactivate
+            "-C0301",  # line length - E501[pycodestyle]
+            "-C040?",  # spelling
+            "-W0511",  # fixme
+            #: bugs
+            "-W1203",  # Use % format in logger funcs | https://github.com/PyCQA/pylint/issues/2354
+        ]
+        pyflakes = ["+*"]
+        mccabe = ["+*"]
+        pycodestyle = [
+            "+*",
+            #: deactivate for black
+            "-W503",  # line break before binary operator
+            "-E203",  # whitespace before ':'
+            #: deactivate
+            "-E731",  #: forbids lambda
+        ]
+        pep8-naming = ["+*"]
+        "flake8-*" = ["+*"]
+        flake8-aaa = ["-*"]
+        flake8-annotations = [
+            "+*",
+            #: deactivate
+            "-ANN101",  # Missing type annotation for self in method
+            "-ANN102",  # Missing type annotation for cls in classmethod
+        ]
+        flake8-rst-docstrings = [
+            "+*",
+            #: deactivate
+            "-RST303",  # Unknown directive type
+            "-RST304",  # Unknown interpreted text role
+        ]
+        flake8-use-fstring = [
+            "+*",
+            #: deactivate
+            "-FS003",  # f-string missing prefix | can be % string
+        ]
+
+    [tool.flakehell.exceptions]
+        [tool.flakehell.exceptions."tests/"]
+            flake8-aaa = ["+*"]
+            flake8-bandit = [
+                "-S101",  # assert used
+            ]
+            pylint = [
+                "-W0212",  # accesss protected member
+            ]
+
+        [tool.flakehell.exceptions."noxfile.py"]
+            flake8-cognitive-complexity = [
+                "-CCR001",  # Cognitive complexity is too high
+            ]
+
+        [tool.flakehell.exceptions."docs/source/conf.py"]
+            pylint = [
+                "-C0103",  # %s name "%s" doesn't conform to %s
+            ]
+
+
+#: -- PYLINT CONFIG --------------------------------------------------------------------
+[tool.pylint]
+    [tool.pylint.master]
+        additional-builtins = "tags"
+
+    [tool.pylint.spelling]
+        spelling-dict = "en_US"
+        spelling-private-dict-file = "docs/source/spelling_dict.txt"
+
+
+#: -- PYTEST CONFIG --------------------------------------------------------------------
+[tool.pytest.ini_options]
+    addopts = "-ra --showlocals"
+    mock_use_standalone_module = true
+    junit_family = "xunit2"
+
+
+#: -- COVERAGE CONFIG ------------------------------------------------------------------
+[tool.coverage]
+    [tool.coverage.run]
+        plugins = ["coverage_conditional_plugin"]
+        branch = true
+        parallel = true
+        context = "static-context"
+        omit = [
+            "tests/*",
+            "docs/*",
+        ]
+
+    [tool.coverage.paths]
+        tox_combine = [
+            "src/formelsammlung",
+            "*/.tox/*/lib/python*/site-packages/formelsammlung",
+            "*/.tox/pypy*/site-packages/formelsammlung",
+            "*/.tox\\*\\Lib\\site-packages\\formelsammlung",
+        ]
+        local_combine = [
+            "src/formelsammlung",
+            "*/.venv/lib/python*/site-packages/formelsammlung",
+            "*/.venv\\*\\Lib\\site-packages\\formelsammlung",
+            "*/src/formelsammlung",
+            "*\\src\\formelsammlung",
+        ]
+
+    [tool.coverage.report]
+        show_missing = true
+        exclude_lines = [
+            "# pragma: no cover",
+            "if __name__ == ['\"]__main__['\"]:",
+            "def __str__",
+            "def __repr__",
+            "if self.debug:",
+            "if settings.DEBUG",
+            "if 0:",
+            "if False:",
+            "if TYPE_CHECKING:",
+            "if MYPY:",
+        ]
+
+    [tool.coverage.html]
+        show_contexts = true
+
+    [tool.coverage.coverage_conditional_plugin]
+        [tool.coverage.coverage_conditional_plugin.rules]
+            # use with: # pragma: <KEY>
+            py-lt-38 = "sys_version_info < (3, 8)"
+            py-gte-38 = "sys_version_info >= (3, 8)"
