@@ -1,0 +1,16 @@
+rebulk>=3
+babelfish
+python-dateutil
+
+[dev]
+tox
+mkdocs
+mkdocs-material
+pyinstaller
+python-semantic-release
+
+[test]
+pytest
+pytest-benchmark
+pylint
+PyYAML

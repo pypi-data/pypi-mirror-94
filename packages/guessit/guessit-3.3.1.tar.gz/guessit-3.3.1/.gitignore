@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+dist/
+
+# Python dist
+*.egg-info/
+.eggs/
+build/
+
+# Coverage
+.coverage
+
+# PyEnv
+.python-version
+
+# Tox
+.tox/
+
+# py.test
+lastfailed
+.pytest_cache/
+
+# Jetbrain
+*.iml
+.idea/
+
+# docs
+docs/_build/
+
