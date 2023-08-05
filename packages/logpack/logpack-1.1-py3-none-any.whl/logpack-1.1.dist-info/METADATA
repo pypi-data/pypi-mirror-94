@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: logpack
+Version: 1.1
+Summary: log for python!
+Home-page: https://github.com/Joxos/olylog
+Author: Joxos
+Author-email: xujunhao61@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: datetime
+
+UNKNOWN
+
+
