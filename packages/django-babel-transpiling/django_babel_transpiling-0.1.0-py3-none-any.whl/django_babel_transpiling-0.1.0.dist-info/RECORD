@@ -1,0 +1,9 @@
+babel_transpiling/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+babel_transpiling/middlewares.py,sha256=SiFLQuUJ7RxIc6_CyQusPzrTRiaEn1wwdNgRpO04WuY,1955
+babel_transpiling/storage.py,sha256=K-BGx6SUMNlcbWioKexfy1pB8amASYlBWBOTbKxElnA,922
+babel_transpiling/utils.py,sha256=iZ-J__lqN9RCVkAIsilT_3YAqQkMAYER5cppiksXLqI,1778
+babel_transpiling/static/npm/@babel/standalone@7.12.15/babel.min.js,sha256=fRdNqR-JGHJstznn56ibOIsBKuYrhYprwg5bJ9VMY6M,1686493
+django_babel_transpiling-0.1.0.dist-info/METADATA,sha256=jHumYH8MuKeGp_xo9-HBogoxXzcDuw3iD9wsiq6Bbho,3008
+django_babel_transpiling-0.1.0.dist-info/RECORD,,
+django_babel_transpiling-0.1.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+django_babel_transpiling-0.1.0.dist-info/top_level.txt,sha256=MrHJl3zjnjr8Nt-EKKUh314RgmVLXT2bLmVpWndchSg,18
