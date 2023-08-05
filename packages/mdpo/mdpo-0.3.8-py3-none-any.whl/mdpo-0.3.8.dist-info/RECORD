@@ -1,0 +1,16 @@
+mdpo/__init__.py,sha256=U5VKnQnh9eJRwkLl4bMqYxMUJgvxOxsOypogWXLBt6A,368
+mdpo/cli.py,sha256=mCvjQSwOnNL6mjuk--Z0wJdvsfwoxyoZ3LIAo1uYaRs,607
+mdpo/command.py,sha256=yNzL1A0UFDTwHdou-Q6FNgc7vMEhmxVQqVYZCwIku7Q,704
+mdpo/html.py,sha256=YEav1SEcYkyEnIF-Qi636iYRm7EZb6vszFhuq6C8_tk,1611
+mdpo/io.py,sha256=dqFHRqlfC6zNX83aqTR5eleM-JSMnhqMEedFpCT4rLM,2239
+mdpo/md.py,sha256=QZMr9IGPdW6gk0_qiE11_aAMvfyWqTnZMIqER19Wwes,9930
+mdpo/md4c.py,sha256=4N0I8PipUrMAmwyos4BRHwJgWjidmPl3hkQ4nYG99zI,201
+mdpo/po.py,sha256=S101r8j17Tf6Iq_Ooj-2igcCW7kbc4LBNaLY657_fZ8,1358
+mdpo/polib.py,sha256=GSRBinR-FCgCx0opO36ySeSFy3qnRudbR-jh24beZuQ,2356
+mdpo/text.py,sha256=7Lc16M2iwnFV26z5iR_UPiviN2Mpvvkl3Wk9SDBDXsM,2477
+mdpo-0.3.8.dist-info/LICENSE,sha256=tcZ2c7Gk2a26-ggOKYZR8-0v0Ig6N-yg6ddcwuy3SuI,1536
+mdpo-0.3.8.dist-info/METADATA,sha256=VOgbkdmVopbW9dvyMjq0e-tzUbtDvRGurFVm46deW0Y,4340
+mdpo-0.3.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mdpo-0.3.8.dist-info/entry_points.txt,sha256=utDkB4k1lH2nbkX-QUtadk1dj8wLoJTCucHqOKEqvF0,126
+mdpo-0.3.8.dist-info/top_level.txt,sha256=VzuN--q_uCYoVsqlbBHxnVD-deEQW58L02rKh7RjIic,5
+mdpo-0.3.8.dist-info/RECORD,,
