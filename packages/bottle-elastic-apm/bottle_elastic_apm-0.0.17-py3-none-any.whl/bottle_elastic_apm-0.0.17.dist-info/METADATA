@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: bottle-elastic-apm
+Version: 0.0.17
+Summary: Plugin to implement instrumentation of elastic apm on a bottle server.
+Home-page: https://gitlab.com/TruckPad/utils/bottle-elastic-apm
+Author: TruckPad Dev Team
+Author-email: devs@truckpad.com.br
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Description-Content-Type: text/markdown
+Requires-Dist: bottle
+Requires-Dist: elastic-apm
+
+# Bottle Elastic APM
+
+Simple plugin to use ELK with APM server for your bottle application
+
+```python
+# Keep this first
+import elasticapm
+elasticapm.instrument()
+
+from bottle import default_app, run
+from bottle_elastic_apm import ELKApmPLugin
+
+ELK_CONFIG = {
+    'SERVICE_NAME': 'my-app',
+}
+
+app = default_app()
+app.install(ELKApmPLugin(ELK_CONFIG))
+
+@app.get('/')
+def index():
+    return 'Hello world!'
+
+run(app)
+```
+
