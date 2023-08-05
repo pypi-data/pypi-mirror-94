@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: GPL-3.0-only
+# SPDX-FileCopyrightText: 2020 Vincent Lequertier <vi.le@autistici.org>
+
+include README.md
+include LICENSE.txt
+include requirements.txt
+include .reuse/dep5
+
+recursive-include LICENSES *
+global-exclude *.py[cod]

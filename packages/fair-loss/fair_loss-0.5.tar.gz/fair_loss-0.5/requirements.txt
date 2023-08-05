@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-only
+# SPDX-FileCopyrightText: 2020 Vincent Lequertier <vi.le@autistici.org>
+
+torch==1.*

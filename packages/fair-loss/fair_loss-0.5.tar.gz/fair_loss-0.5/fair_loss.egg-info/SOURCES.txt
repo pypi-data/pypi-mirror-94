@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+fair_loss.py
+requirements.txt
+setup.cfg
+setup.py
+.reuse/dep5
+LICENSES/GPL-3.0-only.txt
+fair_loss.egg-info/PKG-INFO
+fair_loss.egg-info/SOURCES.txt
+fair_loss.egg-info/dependency_links.txt
+fair_loss.egg-info/requires.txt
+fair_loss.egg-info/top_level.txt
