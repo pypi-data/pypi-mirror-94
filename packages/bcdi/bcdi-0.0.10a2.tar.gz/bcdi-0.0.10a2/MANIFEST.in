@@ -1,0 +1,10 @@
+include *.rst
+include *.txt
+recursive-include doc *.rst
+include doc/conf.py
+include doc/make.bat
+include doc/Makefile
+include bcdi/preprocessing/alias_dict_2018.txt
+include bcdi/preprocessing/alias_dict_2019.txt
+include bcdi/preprocessing/alias_dict_2020.txt
+include bcdi/preprocessing/alias_dict_2021.txt

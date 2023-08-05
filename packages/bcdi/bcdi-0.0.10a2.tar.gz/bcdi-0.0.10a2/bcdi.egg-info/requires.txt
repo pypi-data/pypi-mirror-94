@@ -1,0 +1,13 @@
+numpy
+scipy
+scikit-image
+matplotlib
+hdf5plugin
+h5py
+vtk
+mayavi
+xrayutilities
+fabio
+silx
+lmfit
+moviepy
