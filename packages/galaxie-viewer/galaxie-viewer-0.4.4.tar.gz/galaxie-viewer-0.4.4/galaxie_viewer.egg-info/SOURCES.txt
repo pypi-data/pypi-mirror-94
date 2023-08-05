@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+galaxie_viewer.egg-info/PKG-INFO
+galaxie_viewer.egg-info/SOURCES.txt
+galaxie_viewer.egg-info/dependency_links.txt
+galaxie_viewer.egg-info/not-zip-safe
+galaxie_viewer.egg-info/top_level.txt
+glxviewer/__init__.py
+glxviewer/colors.py
+glxviewer/utils.py
+glxviewer/viewer.py
