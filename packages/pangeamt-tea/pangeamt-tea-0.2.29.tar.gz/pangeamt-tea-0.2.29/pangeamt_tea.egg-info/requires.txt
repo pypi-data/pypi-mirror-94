@@ -1,0 +1,9 @@
+PyYAML
+aiohttp
+aiounittest
+asyncclick
+autoclass
+nteu_translation_engine
+pangeamt-nlp>=0.4.74
+pathos
+sacrebleu
