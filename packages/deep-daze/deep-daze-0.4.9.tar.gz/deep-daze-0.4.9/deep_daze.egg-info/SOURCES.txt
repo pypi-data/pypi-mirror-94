@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+deep_daze/__init__.py
+deep_daze/cli.py
+deep_daze/clip.py
+deep_daze/deep_daze.py
+deep_daze/version.py
+deep_daze.egg-info/PKG-INFO
+deep_daze.egg-info/SOURCES.txt
+deep_daze.egg-info/dependency_links.txt
+deep_daze.egg-info/entry_points.txt
+deep_daze.egg-info/requires.txt
+deep_daze.egg-info/top_level.txt
+deep_daze/data/bpe_simple_vocab_16e6.txt
