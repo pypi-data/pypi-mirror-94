@@ -1,0 +1,20 @@
+{
+    "EnMAP": {
+        "FO_settings": {
+            "aot": 0.2
+        },
+        "Retrieval": {
+            "land_only": false,  /*if true, SICOR is applied to land surfaces only (this may result
+                                   in edge effects, e.g., at coastlines); otherwise, all image pixels (land
+                                   + water) are processed; default: false*/
+            "fn_LUT": "",
+            "fast": true,
+            "ice": false,
+            "cpu": 32,
+            "disable_progressbars": false,
+            "segmentation": true,
+            "n_pca": 5,
+            "segs": 200
+        }
+    }
+}
