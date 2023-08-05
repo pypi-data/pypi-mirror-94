@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: tkcrypteo
+Version: 0.1.0
+Summary: Pure-python implementation of token crypt(3) functions
+Home-page: UNKNOWN
+Author: Awesome Soul
+Author-email: me@example.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.0.0
+Description-Content-Type: text/markdown
+
+This repo exists to provide [an example setup.py] file, that can be used
+to bootstrap your next Python project. It includes some advanced
+patterns and best practices for `setup.py`, as well as some
+commented–out nice–to–haves.
+
+For example, this `setup.py` provides a `$ python setup.py upload`
+command, which creates a *universal wheel* (and *sdist*) and uploads
+your package to [PyPi] using [Twine], without the need for an annoying
+`setup.cfg` file. It also creates/uploads a new git tag, automatically.
+
+In short, `setup.py` files can be daunting to approach, when first
+starting out — even Guido has been heard saying, "everyone cargo cults
+thems". It's true — so, I want this repo to be the best place to
+copy–paste from :)
+
+License
+-------
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any means.
+
+
