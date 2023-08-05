@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pycoax
+Version: 0.5.1
+Summary: IBM 3270 coaxial interface
+Home-page: https://github.com/lowobservable/coax
+Author: Andrew Kay
+Author-email: projects@ajk.me
+License: UNKNOWN
+Description: # pycoax
+        
+        Python IBM 3270 coaxial interface library.
+        
+        See [GitHub](https://github.com/lowobservable/coax#readme) for more information.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Communications
+Classifier: Topic :: Terminals
+Description-Content-Type: text/markdown
