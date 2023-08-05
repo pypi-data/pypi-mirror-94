@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: django-bkendoz
+Version: 1.0.2a1
+Summary: generic views for managing data
+Home-page: https://pypi.org/project/django-bkendoz/
+Author: lokpr
+Author-email: oziatek@gmail.com
+License: : OSI Approved :: MIT License
+Description: # django-bkendoz
+        
+        vues génériques
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

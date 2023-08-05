@@ -1,0 +1,18 @@
+{% extends 'genviews/history_global.html' %}
+
+{% block history_menu %}
+    {% include 'genviews/templates/detail-menu.html' with menu=list_menu title="Historique des actions" %}
+{% endblock history_menu %}
+
+{% block prev_content %}
+    <h2>{{ object }}</h2>
+    {% include 'genviews/templates/form.html' %}
+{% endblock prev_content %}
+
+<hr />
+
+{% block history_row %}
+{% for hist in history %}
+    {% include 'genviews/history_row.html' with user=hist.user date=hist.date type=hist.action object=hist.record.instance %}
+{% endfor %}
+{% endblock %}

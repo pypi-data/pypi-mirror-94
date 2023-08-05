@@ -1,0 +1,23 @@
+<div id="autoc_{{ widget.name }}{{index}}" class="autoComplete_root"
+     data-objects="{{ objects }}"
+     data-matchkey="{{ match_keys }}"
+     >
+    <input 
+         type="text" 
+         autocomplete="off"
+         value="{{ v.name }}"
+         id="id_search_{{widget.name}}{{index}}" 
+         data-reset="reset_{{widget.name}}{{index}}"
+         />
+    <button class="reset-autoc" id="reset_{{widget.name}}{{index}}" type="button">
+        <i class="fa fa-eraser">
+        </i>
+    </button>
+    <input 
+        {% if disabled %} disabled="disabled" {% endif %}
+         name="{{ widget.name }}"
+         type="hidden" 
+         value="{{ v.pk }}"
+         id="id_{{widget.name}}{{index}}" 
+         />
+</div>

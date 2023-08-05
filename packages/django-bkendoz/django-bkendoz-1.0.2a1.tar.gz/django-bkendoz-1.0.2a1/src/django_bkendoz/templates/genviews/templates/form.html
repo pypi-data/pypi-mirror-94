@@ -1,0 +1,16 @@
+{% load i18n %}
+
+{{ form.non_field_errors }}
+
+<form action="{{ form_action }}" 
+    method="post" 
+    enctype="multipart/form-data" 
+    novalidate>
+    {% csrf_token %}
+
+    {% for field in form %}
+        {% include settings.FORM_FIELDMAP %}
+    {% endfor %}
+
+    <button type="submit">{% trans 'Valider' %}</button>
+</form>

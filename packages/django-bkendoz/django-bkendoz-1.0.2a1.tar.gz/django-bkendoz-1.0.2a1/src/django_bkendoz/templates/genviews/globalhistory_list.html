@@ -1,0 +1,11 @@
+{% extends 'genviews/history_global.html' %}
+
+{% block history_menu %}
+    {% include 'genviews/templates/list-header.html' with home_url=settings.LAYOUT.homepage menu=list_menu title=list_title %}
+{% endblock history_menu %}
+
+{% block history_row %}
+{% for hist in object_list %}
+    {% include 'genviews/history_row.html' with user=hist.user date=hist.date type=hist.action object=hist.record.instance %}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends settings.LAYOUT.main_layout %}
+{% load i18n %}
+{% load templates %}
+
+{% block content %}
+<div class="list-cont">
+
+{% block history_menu %}
+{% comment %}
+<div class="heading-flex">
+
+  <h1>
+    {{ object }}
+    {% if fields %}
+    <div class="subheading">
+      <ul>
+        {% for field in fields %}
+        <li>
+            {% include settings.DETAIL_FIELDMAP %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </h1>
+
+  {% for href, faclass, aclass, data in history_menu %}
+    <a href = "{{ href }}" 
+       class = "{{ aclass }}"
+       {% for field, value in data %}
+           data-{{field}}="{{value}}"
+       {% endfor %}
+    >
+        <i class="fas {{ faclass }}"></i>
+    </a>
+  {% endfor %}
+
+</div>
+
+{% endcomment %}
+
+{% endblock history_menu %}
+
+{% block prev_content %}
+{% endblock prev_content %}
+<div class="modal" id="modal-changes">
+  <div>
+    <div class="modal-header">
+      <h1 class="modal-title">
+        {% trans 'Changements' %}
+      </h1>
+      <button type="button" class="modal-close">
+        <i class="fa fa-window-close"></i>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="hist-change-list">
+      </div>
+    </div>
+    <div class="modal-footer">
+
+      <button type="button" class="modal-close">
+          {% trans 'Fermer' %}
+      </button>
+    </div>
+  </div>
+</div>
+
+<table> 
+  <thead>
+    <tr>
+      <th>
+      </th>
+      <th>
+          {% trans 'Date' %}
+        <button class="btn-ls-sort btn-ls-double-up is-off" data-sort="date">
+          <i class="fa fa-chevron-circle-down "></i>
+        </button>
+      </th>
+      <th>
+          {% trans 'Utilisateur' %}
+        <button class="btn-ls-sort is-off" data-sort="user">
+          <i class="fa fa-chevron-circle-down "></i>
+        </button>
+      </th>
+      <th>
+          {% trans 'Objet' %}
+        <button class="btn-ls-sort is-off" data-sort="object">
+          <i class="fa fa-chevron-circle-down "></i>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {% block history_row %}
+    {% endblock history_row %}
+  </tbody>
+</table>
+
+</div>
+</div>
+{% endblock content %}

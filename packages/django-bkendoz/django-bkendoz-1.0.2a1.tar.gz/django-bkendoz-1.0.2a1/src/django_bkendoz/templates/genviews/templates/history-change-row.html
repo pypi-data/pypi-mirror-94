@@ -1,0 +1,13 @@
+<tr class="hist-change-row"> 
+    <td class="hist-field">{{ change.field_name }}</td> 
+    <td class="hist-old">
+        {% include settings.HISTORYCHANGE_FIELDMAP with field=change.field_name value=change.old_value hist_context='old' %}
+    </td>
+    <td class="hist-arrow">
+        <i class="fas fa-arrow-right"></i>
+    </td>
+    <td class="hist-new">
+        {% include settings.HISTORYCHANGE_FIELDMAP with field=change.field_name value=change.new_value hist_context='new' %}
+    </td>
+</tr>
+

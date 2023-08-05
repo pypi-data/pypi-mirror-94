@@ -1,0 +1,15 @@
+{% load i18n %}
+
+<div class="list-cont">
+
+{% include 'genviews/templates/list-header.html' with home_url=settings.LAYOUT.homepage menu=list_menu title=list_title %}
+
+  {% if not object_list %}
+      {% trans 'Aucun objet à afficher.' %}
+  {% else %}
+    {% if html %}
+      {% include html %}
+    {% endif %}
+  {% endif %}
+
+</div>

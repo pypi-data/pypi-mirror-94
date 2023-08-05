@@ -1,0 +1,13 @@
+{% extends settings.LAYOUT.main_layout %}
+{% load i18n %}
+
+
+{% block content %}
+
+{% include 'genviews/templates/detail-header.html' with menu=detail_menu %}
+
+{% if html %}
+    {% include html %}
+{% endif %}
+
+{% endblock %}

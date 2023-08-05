@@ -1,0 +1,3 @@
+# django-bkendoz
+
+vues génériques

@@ -1,0 +1,18 @@
+{% if home_url %}
+<a class="" 
+   href=" {% url home_url %} ">
+    <i class="fas fa-home"></i>
+</a>
+{% endif %}
+
+{% for link, fa, tooltip in menu %}
+<a class="{% if tooltip %} tooltip {% endif %}" 
+   href="{% url link %}">
+    {% if tooltip %}
+    <span class="tooltiptext">
+        {{ tooltip }}
+    </span>
+    {% endif %}
+    <i class="fas {{ fa }}"></i>
+</a>
+{% endfor %}
