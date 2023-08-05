@@ -1,0 +1,7 @@
+setuptools
+Products.CMFCore
+plone.tiles
+
+[test]
+plone.app.testing
+plone.app.robotframework

@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: collective.remoteproxy
+Version: 2.0
+Summary: Proxy for remote content in Plone pages.
+Home-page: https://github.com/collective/collective.remoteproxy
+Author: Johannes Raggam
+Author-email: thetetet@gmail.com
+License: GPL
+Description: ======================
+        collective.remoteproxy
+        ======================
+        
+        .. image:: https://github.com/collective/collective.remoteproxy/workflows/Testing/badge.svg
+            :target: https://github.com/collective/collective.remoteproxy/actions?query=workflow%3ATesting
+        
+        Proxy for remote content.
+        
+        Includes a remote proxy behavior, a type, a view, a tile and a portlet.
+        
+        All remote URLs for which a local proxy was created are replaced in the resulting content.
+        
+        
+        .. warning::
+            This package might introduce security problems including XSS attacks, if the proxied site contains malicious content.
+        
+        
+        
+        Source Code
+        ===========
+        
+        The sources are in a GIT DVCS with its main branches at
+        `github <https://github.com/collective/collective.remoteproxy>`_.
+        
+        We'd be happy to see many forks and pull-requests to make collective.remoteproxy even better.
+        
+        
+        Contributors
+        ============
+        
+        - Johannes Raggam (`thetet <https://github.com/thet>`_)
+        - Jens Klein (`jensens <https://github.com/jensens>`_)
+        
+        
+        License
+        =======
+        
+        The project is licensed under the GPLv2.
+        
+        Changelog
+        =========
+        
+        
+        2.0 (2021-02-05)
+        ----------------
+        
+        - fix tests [jensens]
+        
+        - Code tyle black, isort [jensens]
+        
+        - modernize packaging and add GH Actions CI [jensens]
+        
+        - py 3 support, drop py 2 support [jensens]
+        
+        
+        1.0 (2019-01-17)
+        ----------------
+        
+        - Initial release.
+          [thet]
+        
+        
+Keywords: proxy content remote
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 5.2
+Classifier: Framework :: Plone :: 6.0
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Zope
+Classifier: Framework :: Zope :: 4
+Classifier: Framework :: Zope :: 5
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: test
