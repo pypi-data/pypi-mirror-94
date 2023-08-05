@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: qoqo_calculator_pyo3
+Version: 0.1.5
+Author: HQS Quantum Simulations <info@quantumsimulations.de>
+Author-Email: HQS Quantum Simulations <info@quantumsimulations.de>
+Maintainer: HQS Quantum Simulations GmbH
+Maintainer-Email: info@quantumsimulations.de
+Requires-Python: >=3.6
