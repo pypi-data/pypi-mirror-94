@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: nidhoggr-requests
+Version: 0.5.7
+Summary: Requests-based repository implementation for nidhoggr
+Home-page: https://git.mc4ep.org/mc4ep/nidhoggr-requests
+Author: Roman Shishkin
+Author-email: spark@uwtech.org
+License: MIT
+Keywords: Minecraft,Yggdrasil,Authentication,Nidhoggr
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: nidhoggr-core (==0.5.7)
+Requires-Dist: requests (>=2.22)
+
+# Nidhoggr-requests
+
+Requests-based repository implementation for nidhoggr
+
+# Development
+
+## Installation
+
+```bash
+sudo apt-get install libssl-dev swig python3-dev gcc
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements_dev.txt -r requirements.txt
+```
+
+To run the all tests run:
+
+```bash
+tox
+```
+
+
+# History
+
+## 0.5.0 (2020-01-10)
+
+* **Breaking** Compatibility with nidhoggr_core 0.5.x
+
+## 0.4.0 (2020-01-09)
+
+* **Breaking** Compatibility with nidhoggr_core 0.4.x
+
+## 0.3.0 (2020-01-06)
+
+* **Breaking** Compatibility with nidhoggr_core 0.3.0
+
+## 0.2.0 (2019-12-31)
+
+* Used nidhoggr-core
+
+## 0.1.0 (2019-12-31)
+
+* First release on PyPI.
+
+
