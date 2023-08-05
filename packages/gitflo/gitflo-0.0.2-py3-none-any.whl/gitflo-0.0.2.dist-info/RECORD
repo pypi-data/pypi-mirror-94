@@ -1,0 +1,15 @@
+gf/__init__.py,sha256=naX7qQe1n08r7K3sTLnk0nq21k7IpVUZVhSuNSFXri4,21
+gf/dialog.py,sha256=Wx6w_SiwsgAuHoMX8D1EbqlWe2QAdVrmCAfQlq_EOAo,13990
+gf/emoji.py,sha256=qog5_ZgbpdwCtXw24xKPjEdgVZJCdcpbhA9jsNdTfH0,338
+gf/feature.py,sha256=8CYN81aIGoAli36wulttQFkmn7Gr9aVfxXjufGC5QqI,1418
+gf/hotfix.py,sha256=DKteGIljaRpId_J3KAM7KQekGVcsQLV_oNWOMpyTXBs,1000
+gf/inspector.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gf/main.py,sha256=tYvcaXnIkpZcneYlUyL0bmiKVEVyXFKFRUs8SDEzb8w,5429
+gf/test.py,sha256=dFPjWydhI49l1vO2AzWdz3htdOv5P2UxR66zQ0P3OlA,515
+gf/utils.py,sha256=X_90h4Mm-SQKVPJsVIZ4ZSivCZoLMWEzB4hnZpmGI_M,901
+gitflo-0.0.2.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+gitflo-0.0.2.dist-info/METADATA,sha256=EUxLkC3nG-zDsWhUXJlMCyT8bNWaGyD1tCR5qzMPrwE,2062
+gitflo-0.0.2.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+gitflo-0.0.2.dist-info/entry_points.txt,sha256=i5K09wnE_LvaQPE3NhjesYMCXXMVi_EnkPY7L1Xefw8,36
+gitflo-0.0.2.dist-info/top_level.txt,sha256=OI4gwOB2zyeCtz105qgwLZGBjsgvDXlZKTJK9P_OfpA,3
+gitflo-0.0.2.dist-info/RECORD,,
