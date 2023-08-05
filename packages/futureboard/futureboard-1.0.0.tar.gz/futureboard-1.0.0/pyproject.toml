@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "futureboard"
+version = "1.0.0"
+description = ""
+authors = ["Nutchanon Ninyawee <nutchanon@codustry.com>"]
+readme = "README.md"
+repository = "https://github.com/sakuguru/futureboard"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^1.7.3"
+Jinja2 = "^2.11.3"
+snap-html = "^0.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.1.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
