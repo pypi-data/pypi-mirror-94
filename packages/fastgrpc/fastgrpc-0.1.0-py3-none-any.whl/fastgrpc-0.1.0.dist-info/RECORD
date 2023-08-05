@@ -1,0 +1,11 @@
+fastgrpc/__init__.py,sha256=hPDKFDqZdsylzT0cIA3qnOoQShFmyHN7diRb2_A1sms,493
+fastgrpc/applications.py,sha256=0bFqjnMoWz0LpfeXCzasHVenH3FtjJ-3dDfP3vUyqvk,4424
+fastgrpc/dependencies.py,sha256=DnHsd-LLSIWqmLXvkV_XZ-mVWcZqt1Odvc5tBWyIHaM,573
+fastgrpc/handler.py,sha256=ryTABwrckpIomX3mNfAJhebMvraEGZmdi716YHnpgEQ,3533
+fastgrpc/manage.py,sha256=NefzrSU6M2xFv0kamAhK2h8HvsNiiviEoFQ3vQE4wJY,7174
+fastgrpc/tools.py,sha256=jIEQtt48ZIAWkAyk6PQRdi6BGcIEIrfMShIbqcMip-4,1532
+fastgrpc/typedef.py,sha256=X6EDrgNEI_izEcQhJmKFl3rV7N5lUEpMi78AL81zuDE,670
+fastgrpc-0.1.0.dist-info/LICENSE.md,sha256=uhthZLubO-HNMk8jQFYQ2G99O9-NjD-KeRn0QHO8thY,12
+fastgrpc-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+fastgrpc-0.1.0.dist-info/METADATA,sha256=O3CE3lM6Kq1yNhRdJ_JEI3dvhjpF3wV0zvo6ZTrNBCQ,673
+fastgrpc-0.1.0.dist-info/RECORD,,

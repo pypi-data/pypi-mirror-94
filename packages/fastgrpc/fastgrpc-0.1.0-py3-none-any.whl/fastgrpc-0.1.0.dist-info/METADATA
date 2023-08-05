@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: fastgrpc
+Version: 0.1.0
+Summary: ### FastgRPC framework, fast to code
+Home-page: https://github.com/Euraxluo/fastgrpc
+License: MIT
+Author: Euraxluo
+Author-email: euraxluo@qq.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/Euraxluo/fastgrpc
+Description-Content-Type: text/markdown
+
+### FastgRPC framework, fast to code
