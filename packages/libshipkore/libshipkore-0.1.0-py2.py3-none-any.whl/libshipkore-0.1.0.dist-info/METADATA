@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: libshipkore
+Version: 0.1.0
+Summary: Shipkore tracking library and CLI
+Home-page: https://github.com/shipkore/libshipkore
+Author: Innerkore
+Author-email: admin@innerkore.com
+License: UNKNOWN
+Keywords: libshipkore
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: Click (>=7.0)
+
+===========
+libshipkore
+===========
+
+Shipkore tracking library & CLI to track packages across couriers. 
+This is first Open source product of Innerkore Technologies. We are commited to do things differently. 
+
+
+Installation
+-------------
+
+Coming soon
+
+
+Usage
+-------
+
+.. code-block:: python
+
+   python libshipkore/cli.py
+
+It will ask for 2 things
+- Provider (Couries)
+- Waybill (Tracking number) 
+
+
+Features
+--------
+
+- Tracking through CLI
+- Embeddable as library
+
+
+Supported Couriers
+-------------------
+
+- Delhivery
+
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2020-12-20)
+------------------
+
+* First release on PyPI.
+
+
