@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: weblint
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/avengerpenguin/weblint
+Author: Ross Fenning
+Author-email: github@rossfenning.co.uk
+License: UNKNOWN
+Description: # WebLint
+        
+        Extends Scrapy to provide a test suite for a website.
+        
+        Features so far:
+        
+        * Checks for broken links
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
