@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+test/test_threadswitch.py
+threadswitch/__init__.py
+threadswitch/errors.py
+threadswitch/threadswitch.py
+threadswitch/utils.py
+threadswitch.egg-info/PKG-INFO
+threadswitch.egg-info/SOURCES.txt
+threadswitch.egg-info/dependency_links.txt
+threadswitch.egg-info/top_level.txt
