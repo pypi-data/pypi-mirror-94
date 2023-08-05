@@ -1,0 +1,11 @@
+linguist_breakdown/__init__.py,sha256=k_em9kQG06Xxvm7bEp0hId-zp-PSGgsiH5Qfh7IuXkE,65
+linguist_breakdown/breakdown.py,sha256=drWw1tq6VMzZMyQET1C_vo6GVZ7TfefC4poD17WP-xQ,5183
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/unit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/unit/test_linguist.py,sha256=FvquD6vhjoJUpGvH9txykl2d5UgjpqCn7PgVZXE-hJA,3078
+linguist_breakdown-2.0.0.dist-info/LICENSE,sha256=WoDunZvVM8yKs2dwmA-Eae0e64uqKwfEuOOokFS1w5g,1071
+linguist_breakdown-2.0.0.dist-info/METADATA,sha256=DTM0QCUSymSKmiyMXlynEYj7aB9X9gvhEYok4rheSI8,3661
+linguist_breakdown-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+linguist_breakdown-2.0.0.dist-info/entry_points.txt,sha256=CAWpqYVCRbeSJcBpeWcOJpac_XlDVRqp9R49SjnMZHE,74
+linguist_breakdown-2.0.0.dist-info/top_level.txt,sha256=IAUkvHvbfG5nXvbAIbRzqW-pYCzvDuHwNG-Yzba3bLU,24
+linguist_breakdown-2.0.0.dist-info/RECORD,,
