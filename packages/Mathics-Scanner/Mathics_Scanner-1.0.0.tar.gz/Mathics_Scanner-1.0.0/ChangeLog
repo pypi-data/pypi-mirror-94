@@ -1,0 +1,572 @@
+2021-02-06  rocky <rb@dustyfeet.com>
+
+	* mathics_scanner/characters.py, mathics_scanner/prescanner.py,
+	mathics_scanner/tokeniser.py, mathics_scanner/version.py: Get ready
+	for release 1.0.0
+
+2021-02-06  rocky <rb@dustyfeet.com>
+
+	* mathics_scanner/errors.py, mathics_scanner/feed.py: Small changes blacken buffers, go over docstrings
+
+2021-02-06  rocky <rb@dustyfeet.com>
+
+	* : commit 83f430ff040da7fcc2aaf9b177a45029a99665eb Merge: 656a7cc
+	707e165 Author: R. Bernstein <rocky@users.noreply.github.com> Date:
+	Sat Feb 6 05:11:34 2021 -0500
+
+2021-02-06  rocky <rb@dustyfeet.com>
+
+	* : commit 656a7ccc46f43a7126f95130681c24702288c2f8 Merge: 295fe97
+	dbae4b3 Author: R. Bernstein <rocky@users.noreply.github.com> Date:
+	Sat Feb 6 05:01:33 2021 -0500
+
+2021-02-06  rocky <rb@dustyfeet.com>
+
+	* mathics_scanner/generate/build_tables.py, test/{test_roundtrip.py
+	=> test_table_consistency.py}: Update docstring; add some table
+	consistency tests
+
+2021-02-01  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_general_yaml_sanity.py,
+	test/test_has_unicode_inverse_sanity.py,
+	test/test_letterlikes_sanity.py, test/test_roundtrip.py,
+	test/test_wl_to_ascii.py: Fixed import issues
+
+2021-02-01  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_general_yaml_sanity.py,
+	test/test_has_unicode_inverse_sanity.py,
+	test/test_letterlikes_sanity.py, test/test_roundtrip.py,
+	test/test_wl_to_ascii.py, test/util.py: Extracted the code that
+	loads the data from disk to a separate module
+
+2021-01-31  Gark Garcia <37553739+GarkGarcia@users.noreply.github.com>
+
+	* implementation.rst, test/test_translation_regressions.py: Fixed
+	minor errors in the internal documentation on
+	`mathics_scanner.characters`
+
+2021-02-01  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_translation_regressions.py: Added checks for decisions
+	about the translation that are documented in YAML table
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* README.rst, implementation.rst, mathics_scanner/characters.py: 
+	Added an awfull lot of documentation
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/generate/rl_inputrc.py: Fix errors in the inputrc
+	generation routines I removed the part of the code that printed header comments because
+	it's better for users in general to have control over that (they can
+	write their own header if they want to)
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml,
+	test/test_general_yaml_sanity.py: Fixed the general sanity tests and
+	errors in YAML
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_general_yaml_sanity.py: Fixed syntax error
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .github/workflows/osx.yaml, .github/workflows/ubuntu.yaml,
+	mathics_scanner/data/named-characters.yml,
+	test/test_general_yaml_sanity.py: Fixed errors in the YAML table Fixed the general sanity tests
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .github/workflows/osx.yaml, .github/workflows/ubuntu.yaml: Updated
+	the workflows
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml, test/test_roundtrip.py: 
+	Fixed another errors in the YAML table
+
+2021-02-02  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/tokeniser.py: Marked adtional methods of Tokenise
+	as private This methods are only useful internally and are not used by core
+	anywhere
+
+2021-02-02  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/feed.py: Documented the feeders
+
+2021-02-02  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/errors.py: Fixed typo
+
+2021-02-01  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/tokeniser.py: Fixed typos
+
+2021-02-01  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/errors.py, mathics_scanner/tokeniser.py: 
+	Documented stuff used by Mathics
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* : commit 8fb9905826e052d12e649e1bfdc9cee615941ccf Author: Pablo
+	Emilio Escobar Gaviria <pablo-escobar@riseup.net> Date:   Sun Jan 31
+	17:54:18 2021 +0000
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml: Fixed error in the YAML
+	table
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_general_yaml_sanity.py: Fixed typos
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_general_yaml_sanity.py, test/test_letterlikes_sanity.py: 
+	Improved the general tests for YAML
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_letterlikes_sanity.py: Fixed the sanity tests for
+	letter-like characters
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_general_yaml_sanity.py: Added general sanity tests for
+	the YAML table
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_letterlikes_sanity.py: Added sanity checks for
+	letter-like character
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_wl_to_ascii.py: Fixed typo
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_wl_to_ascii.py: Added sanity checks for the WL-to-ASCII
+	conversions
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_has_unicode_inverse_sanity.py, test/test_roundtrip.py: 
+	Fixed typos
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_has_unicode_inverse_sanity.py, test/test_roundtrip.py: 
+	Improved the sanity checks for has-unicode-inverse
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_has_unicode_inverse_sanity.py, test/test_roundtrip.py: 
+	Fixed and improved the roundtrip tests
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_has_unicode_inverse_sanity.py, test/test_roundtrip.py: 
+	Added sanity check for has-unicode-inverse and fixed the reound trip
+	tests
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* test/test_roundtrip.py: Fixed the roundtrip test
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/characters.py,
+	mathics_scanner/generate/build_tables.py: Added a comment explaining
+	the optimization
+
+2021-01-30  rocky <rb@dustyfeet.com>
+
+	* .gitignore, Makefile, mathics_scanner/data/README.rst,
+	mathics_scanner/generate/README.rst, mathics_scanner/{ =>
+	generate}/build_tables.py, mathics_scanner/generate/rl_inputrc.py,
+	setup.py, test/test_roundtrip.py: Misc tweaks: * Start a character table roundtrip test.  * Document what is in the various directories * Add code to generate GNU Readline inputrc's * Split off generate code into its own directory.
+
+2021-01-30  rocky <rb@dustyfeet.com>
+
+	* : Merge github.com:Mathics3/mathics-scanner
+
+2021-01-30  Gark Garcia <37553739+GarkGarcia@users.noreply.github.com>
+
+	* README.rst: Update README.rst
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/build_tables.py: Added some comments
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/build_tables.py: Added extra checks for duplicates
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml: Fixed minor error
+
+2021-01-31  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml: Added mappings for
+	invisible characters
+
+2021-01-26  R. Bernstein <rocky@users.noreply.github.com>
+
+	* : Merge pull request #7 from kxxt/patch-1 Fix path separator.
+
+2021-01-27  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/build_tables.py: Improved the algorith that
+	resolves the appropriate plain-text representation of a given
+	character
+
+2021-01-27  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml: Minor enhancement in
+	the translation tables
+
+2021-01-27  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml: Fixed some ESC
+	sequences
+
+2021-01-27  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml: Minor enhancement in
+	the translation tables
+
+2021-01-26  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml: Fixed #18
+
+2021-01-24  rocky <rb@dustyfeet.com>
+
+	* : commit d76c53f0c72868cfbb6db3061aae4986db0c3c0a Merge: c335c53
+	ba518b3 Author: rocky <rb@dustyfeet.com> Date:   Sat Jan 23 18:24:20
+	2021 -0500
+
+2021-01-23  rocky <rb@dustyfeet.com>
+
+	* mathics_scanner/__init__.py: More exports
+
+2021-01-23  R. Bernstein <rocky@users.noreply.github.com>
+
+	* : Merge pull request #1 from Mathics3/character-selection-comments Start indicating why we chose what we chose.
+
+2021-01-22  rocky <rb@dustyfeet.com>
+
+	* .github/workflows/osx.yaml, .github/workflows/ubuntu.yaml,
+	admin-tools/release.sh: Administrivia
+
+2021-01-22  rocky <rb@dustyfeet.com>
+
+	* setup.py: Administriva: compatible package name
+
+2021-01-22  R. Bernstein <rocky@users.noreply.github.com>
+
+	* : Merge pull request #6 from Mathics3/mathics-scanner-import Automatically handle characters.json
+
+2021-01-22  rocky <rb@dustyfeet.com>
+
+	* .github/workflows/compile-translation-tables.yml,
+	.github/workflows/{osx.yml => osx.yaml},
+	.github/workflows/{ubuntu.yml => ubuntu.yaml}: Administrivia -
+	github workflows
+
+2021-01-22  rocky <rb@dustyfeet.com>
+
+	* Makefile: Correct the Makefile "clean" target
+
+2021-01-20  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/characters.json: Compiled the JSON file
+	locally
+
+2021-01-20  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml: Added missing unicode
+	equivalents for characters of the form \[Raw...]
+
+2021-01-20  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .github/workflows/compile-translation-tables.yml: Cleaned the
+	GitHub action code
+
+2021-01-20  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .github/workflows/compile-translation-tables.yml: Added additional
+	pulling step to GitHub action
+
+2021-01-20  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .github/workflows/compile-translation-tables.yml: Log stuff to
+	GitHub actions
+
+2021-01-20  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .github/workflows/compile-translation-tables.yml: Log stuff to
+	GitHub actions
+
+2021-01-20  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .github/workflows/compile-translation-tables.yml: Fixed syntax
+	error in GitHub action (again)
+
+2021-01-20  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .github/workflows/compile-translation-tables.yml: Fixed syntax
+	error in GitHub action (again)
+
+2021-01-20  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .github/workflows/compile-translation-tables.yml: Fixed syntax
+	error in GitHub action
+
+2021-01-20  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* : Merge https://github.com/Mathics3/mathics-scanner
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/data/named-characters.yml: Fixed typo
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* README.rst: Added notes on the implementation of
+	mathics_scanner.characters
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* : commit de8e51537ca84a27747fc8588d8d79235d91673d Author: Pablo
+	Emilio Escobar Gaviria <pablo-escobar@riseup.net> Date:   Tue Jan 19
+	22:34:50 2021 +1000
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* Makefile: Fixed the Makefile
+
+2021-01-19  R. Bernstein <rocky@users.noreply.github.com>
+
+	* README.rst: Update README.rst
+
+2021-01-19  rocky <rb@dustyfeet.com>
+
+	* : commit 8958e4d44443a3d257cfb213a258723ac5e47359 Author: rocky
+	<rb@dustyfeet.com> Date:   Tue Jan 19 03:32:38 2021 -0500
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* Makefile: Added PyYAML back to Makefile
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .github/workflows/compile-translation-tables.yml, .gitignore,
+	Makefile, admin-tools/compile-translation-tables.py,
+	mathics_scanner/data/characters.json, setup.py: Added a GitHub
+	action to compile the translation tables for us at every commit to
+	master
+
+2021-01-19  Gark Garcia <37553739+GarkGarcia@users.noreply.github.com>
+
+	* : Merge pull request #3 from Mathics3/named-characters-optimize Named characters optimization
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* setup.py: Tryed to fix the installation script
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* Makefile, setup.py: Tryed to fix CI
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* setup.py: Tryed to fix the installation errors
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* setup.py: Fixed installation path
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* setup.py: Fixed the installation script
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* setup.py: Fixed re_from_keys
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* .gitignore, mathics_scanner/data/characters.json: Removed
+	unnecessary file from the repo
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/characters.py,
+	mathics_scanner/data/characters.json, setup.py: Transferred the
+	installation code to setup.py
+
+2021-01-19  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* mathics_scanner/__init__.py, mathics_scanner/characters.py,
+	mathics_scanner/tokeniser.py: Copied some core from core to here This will allow us to avoid exporting
+	mathics.core.characters.{letters,letterlikes}
+
+2021-01-18  rocky <rb@dustyfeet.com>
+
+	* mathics_scanner/data/named-characters.yml: Start indicating why we
+	chose what we chose.
+
+2021-01-18  rocky <rb@dustyfeet.com>
+
+	* admin-tools/make-dist.sh, admin-tools/release.sh: packaging
+	administrivia
+
+2021-01-18  rocky <rb@dustyfeet.com>
+
+	* Makefile, test/test_tokeniser.py: Blacken/modnerize test (a
+	little)
+
+2021-01-18  rocky <rb@dustyfeet.com>
+
+	* README.rst, tmp/README.rst: Administrivia: Add CI status badge and remove tmp dir
+
+2021-01-18  rocky <rb@dustyfeet.com>
+
+	* setup.py: Administrivia: update dependencies
+
+2021-01-18  rocky <rb@dustyfeet.com>
+
+	* .github/workflows/osx.yml, .github/workflows/{basic.yml =>
+	ubuntu.yml}, .gitignore, AUTHORS.txt, CHANGES.rst, FUTURE.rst,
+	MANIFEST.in, Makefile, README.rst,
+	admin-tools/time-mathmp-sympy-fns.py,
+	examples/symbolic_logic/gries_schneider/GS1.m,
+	examples/symbolic_logic/gries_schneider/GS2.m,
+	examples/symbolic_logic/gries_schneider/GS3.m,
+	examples/symbolic_logic/gries_schneider/test_gs.py,
+	examples/test_driver.m, mathics/Makefile, mathics/__init__.py,
+	mathics/algorithm/__init__.py, mathics/algorithm/clusters.py,
+	mathics/algorithm/introselect.py,
+	mathics/autoload/formats/Base64/Export.m,
+	mathics/autoload/formats/Base64/Import.m,
+	mathics/autoload/formats/CSV/Export.m,
+	mathics/autoload/formats/CSV/Import.m,
+	mathics/autoload/formats/Image/Export.m,
+	mathics/autoload/formats/Image/Import.m,
+	mathics/autoload/formats/JSON/Import.m,
+	mathics/autoload/formats/PACKAGE/Import.m,
+	mathics/autoload/formats/SVG/Export.m,
+	mathics/autoload/formats/Text/Export.m,
+	mathics/autoload/formats/Text/Import.m,
+	mathics/autoload/formats/XML/Import.m, mathics/autoload/settings.m,
+	mathics/benchmark.py, mathics/builtin/__init__.py,
+	mathics/builtin/algebra.py, mathics/builtin/arithmetic.py,
+	mathics/builtin/assignment.py, mathics/builtin/attributes.py,
+	mathics/builtin/base.py, mathics/builtin/calculus.py,
+	mathics/builtin/codetables.py, mathics/builtin/colors.py,
+	mathics/builtin/combinatorial.py, mathics/builtin/comparison.py,
+	mathics/builtin/compilation.py,
+	mathics/builtin/compile/__init__.py,
+	mathics/builtin/compile/base.py,
+	mathics/builtin/compile/compile.py, mathics/builtin/compile/ir.py,
+	mathics/builtin/compile/types.py, mathics/builtin/compile/utils.py,
+	mathics/builtin/control.py, mathics/builtin/datentime.py,
+	mathics/builtin/diffeqns.py, mathics/builtin/evaluation.py,
+	mathics/builtin/exptrig.py, mathics/builtin/files.py,
+	mathics/builtin/formatting.py, mathics/builtin/functional.py,
+	mathics/builtin/graphics.py, mathics/builtin/graphics3d.py,
+	mathics/builtin/image.py, mathics/builtin/importexport.py,
+	mathics/builtin/inout.py, mathics/builtin/integer.py,
+	mathics/builtin/iohooks.py, mathics/builtin/linalg.py,
+	mathics/builtin/lists.py, mathics/builtin/logic.py,
+	mathics/builtin/manipulate.py, mathics/builtin/numbertheory.py,
+	mathics/builtin/numeric.py,
+	mathics/builtin/numpy_utils/__init__.py,
+	mathics/builtin/numpy_utils/with_numpy.py,
+	mathics/builtin/numpy_utils/without_numpy.py,
+	mathics/builtin/optimization.py, mathics/builtin/options.py,
+	mathics/builtin/patterns.py, mathics/builtin/physchemdata.py,
+	mathics/builtin/plot.py, mathics/builtin/pymimesniffer/__init__.py,
+	mathics/builtin/pymimesniffer/magic.py,
+	mathics/builtin/pymimesniffer/mimetypes.xml,
+	mathics/builtin/pympler/__init__.py,
+	mathics/builtin/pympler/asizeof.py, mathics/builtin/quantities.py,
+	mathics/builtin/randomnumbers.py, mathics/builtin/recurrence.py,
+	mathics/builtin/scoping.py, mathics/builtin/specialfunctions.py,
+	mathics/builtin/strings.py, mathics/builtin/structure.py,
+	mathics/builtin/system.py, mathics/builtin/tensors.py,
+	mathics/builtin/xmlformat.py, mathics/core/__init__.py,
+	mathics/core/characters.py, mathics/core/convert.py,
+	mathics/core/definitions.py, mathics/core/evaluation.py,
+	mathics/core/expression.py, mathics/core/numbers.py,
+	mathics/core/parser/README.md, mathics/core/parser/__init__.py,
+	mathics/core/parser/ast.py, mathics/core/parser/convert.py,
+	mathics/core/parser/operators.py, mathics/core/parser/parser.py,
+	mathics/core/parser/util.py, mathics/core/pattern.py,
+	mathics/core/rules.py, mathics/core/util.py,
+	mathics/data/ExampleData/BloodToilTearsSweat.txt,
+	mathics/data/ExampleData/EinsteinSzilLetter.txt,
+	mathics/data/ExampleData/ExampleData.txt,
+	mathics/data/ExampleData/InventionNo1.xml,
+	mathics/data/ExampleData/Middlemarch.txt,
+	mathics/data/ExampleData/Namespaces.xml,
+	mathics/data/ExampleData/Testosterone.svg,
+	mathics/data/ExampleData/benzene.xyz,
+	mathics/data/ExampleData/colors.json,
+	mathics/data/ExampleData/copyright.csv,
+	mathics/data/ExampleData/numberdata.csv, mathics/doc/Makefile,
+	mathics/doc/__init__.py, mathics/doc/doc.py,
+	mathics/doc/documentation/1-Manual.mdoc,
+	mathics/doc/documentation/A-License.mdoc,
+	mathics/doc/documentation/images/classes.eps,
+	mathics/doc/images.sh, mathics/doc/images/logo-heptatom.svg,
+	mathics/doc/images/logo-text-nodrop.svg,
+	mathics/doc/images/logo-text.svg, mathics/doc/tex/Makefile,
+	mathics/doc/tex/latexmkrc, mathics/doc/tex/logo.pdf,
+	mathics/doc/tex/mathics.tex, mathics/doc/utils.py, mathics/main.py,
+	mathics/packages/DiscreteMath/CombinatoricaV0.6.m,
+	mathics/packages/DiscreteMath/CombinatoricaV0.9.m,
+	mathics/packages/DiscreteMath/Kernel/init.m,
+	mathics/packages/DiscreteMath/RSolve.m,
+	mathics/packages/VectorAnalysis/Kernel/init.m,
+	mathics/packages/VectorAnalysis/VectorAnalysis.m,
+	mathics/profile_mathics.py, mathics/session.py,
+	mathics/settings.py, mathics/test.py, mathics_scanner/__init__.py,
+	mathics_scanner/characters.py, {mathics =>
+	mathics_scanner}/data/element.csv, {mathics =>
+	mathics_scanner}/data/element.txt, {mathics =>
+	mathics_scanner}/data/named-characters.yml, {mathics/core/parser =>
+	mathics_scanner}/errors.py, {mathics/core/parser =>
+	mathics_scanner}/feed.py, {mathics/core/parser =>
+	mathics_scanner}/prescanner.py, {mathics/core/parser =>
+	mathics_scanner}/tokeniser.py, {mathics =>
+	mathics_scanner}/version.py, script/dmathics,
+	script/dmathicsscript, script/dmathicsserver, setup.py,
+	test/__init__.py, test/helper.py, test/test_arithmetic.py,
+	test/test_color.py, test/test_combinatorial.py,
+	test/test_combinatorica.py, test/test_compile.py,
+	test/test_control.py, test/test_convert.py, test/test_datentime.py,
+	test/test_deletecases.py, test/test_evaluation.py,
+	test/test_feed.py, test/test_file.py, test/test_hash.py,
+	test/test_numpy_utils.py, test/test_parser/__init__.py,
+	test/test_parser/test_convert.py, test/test_parser/test_feed.py,
+	test/test_parser/test_parser.py,
+	test/test_parser/test_prescanner.py, test/test_parser/test_util.py,
+	test/test_prescanner.py, test/test_to_python.py, test/{test_parser
+	=> }/test_tokeniser.py, travis.py: Split scanner and conversion
+	tables from Mathics
+
+2021-01-18  Pablo Emilio Escobar Gaviria <pablo-escobar@riseup.net>
+
+	* Removed unnecessary comments (the old code wass commented)
+

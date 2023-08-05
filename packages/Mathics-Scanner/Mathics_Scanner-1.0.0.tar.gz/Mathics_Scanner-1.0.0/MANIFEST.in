@@ -1,0 +1,9 @@
+include README.rst
+include CHANGES.rst
+include ChangeLog
+include COPYING.txt
+include FUTURE.rst
+include Makefile
+include mathics_scanner/Makefile
+recursive-include mathics_scanner *.py
+recursive-include test *.py
