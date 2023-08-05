@@ -1,0 +1,3 @@
+[console_scripts]
+stopots = stopots_bot.start:start
+

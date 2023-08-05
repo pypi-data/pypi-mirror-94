@@ -1,0 +1,16 @@
+stopots_bot/__init__.py,sha256=mFJftrNw4cJNWcWH96HYXwAUJKOkWke1_cqijnm_EYQ,60
+stopots_bot/bot.py,sha256=pSxZmkP6MLW8z4wtStnY0w6Rh-4OIqOX0079O05kBJs,14923
+stopots_bot/command_line.py,sha256=4c-mOKtA6ZfO-qWFpIjRl8Jtgik8PG8O1q1PmSFgn8Q,2236
+stopots_bot/constants.py,sha256=Sxc65QLdmocuLzXN4SoE7NqGzwTajLiDZkNpCHnf3lo,9267
+stopots_bot/dictionary.json,sha256=0CLyM4bK4QPSYDxgflY-on-CR_JcGlZpaXvANaEYvQ8,62392
+stopots_bot/dictionary.py,sha256=6a1F33L1x47yCbnY61JMmIM28GwMbyW4A7hg4JTLJfY,6963
+stopots_bot/menu.py,sha256=PBwE1Lxtzy_HsUt0YWJELiXQOzlcMd0qioubmNLbF1g,1848
+stopots_bot/start.py,sha256=aGBdoHeUHzMF8EwxAtDkBQ-MKWdO5EoDT8Zh38YnAQQ,538
+stopots_bot/utils.py,sha256=oJTbXpDRhElIQC0ksTnetlcDPiOWSiv9S5wsXbM6VKA,5412
+stopots_bot/webdriver.py,sha256=0hExRbBjDhhANvuOL-Xf6qAgs3EEOxYciMvWDNb3WgE,1578
+stopots_bot-1.2.0.dist-info/LICENSE,sha256=VQFPrKTYiEUyrWeDFzGz-8Lpn-GSAyeModR_zYYXBMs,1063
+stopots_bot-1.2.0.dist-info/METADATA,sha256=HuJMau1r_kLFvuvH8M8A_WDPCVaVZ5UAb7atIFpi-hg,3973
+stopots_bot-1.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+stopots_bot-1.2.0.dist-info/entry_points.txt,sha256=uhFUIvdDj49oRjs6XwcWsxXvdQjWAv0hbpysTbJ0YCM,53
+stopots_bot-1.2.0.dist-info/top_level.txt,sha256=58rWHELltB0-vM190hV-j2FoA4ph9PdjWxLe0OIjHKk,12
+stopots_bot-1.2.0.dist-info/RECORD,,
