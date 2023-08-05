@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: websiteblocker
+Version: 0.2
+Summary: Blocks distracting websites in Windows PC.
+Home-page: https://github.com/Anish-M-code/Simple_Website_blocker
+Author: Anish M
+Author-email: aneesh25861@gmail.com
+License: GPLv3
+Description: A simple Website blocker in python for windows using hosts file.
+Keywords: Website Blocker,hosts file
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows
