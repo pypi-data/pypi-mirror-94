@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "rock-paper-scissors-bot"
+version = "0.1.0"
+description = ""
+authors = ["Maxim Semenov <0rang3max@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+rock_paper_scissors_bot = "rock_paper_scissors_bot:main"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+python-telegram-bot = "^13.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
