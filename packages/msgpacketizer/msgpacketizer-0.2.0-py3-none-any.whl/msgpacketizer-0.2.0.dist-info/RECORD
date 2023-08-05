@@ -1,0 +1,11 @@
+msgpacketizer/__init__.py,sha256=Esucfd5tNOs88ILeDadcZjCsO9lyBNknDIvy8T3tgB0,346
+msgpacketizer/localtypes.py,sha256=V-c3epXIDw9oSnTlme3SlxxXOpfyAAO1p8s1Co72vrA,210
+msgpacketizer/packer.py,sha256=XUnVNkfy0HAptzABKg6Lfquf496XQdD2ypZncT8jvXg,1595
+msgpacketizer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+msgpacketizer/sender.py,sha256=bd-ib99q1MmIsouo3wu5I5bKQjFRlzpuGSDxw3TUJAk,346
+msgpacketizer/stubs.py,sha256=5iWVjqdlXl_ufYHk4uw2hnqoeoLYqzKfq5kPmhxovRc,524
+msgpacketizer/subscriber.py,sha256=leq0xRrlgeUn_B_tsqwsrJaV3B7qa5HyDjepxJJs718,3154
+msgpacketizer-0.2.0.dist-info/LICENSE,sha256=QuAI2NmhykatoRKWM1V8ssD1qpWfaeI5ZuwJRjYCG9c,1072
+msgpacketizer-0.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+msgpacketizer-0.2.0.dist-info/METADATA,sha256=SppBp6oCnKLVHc5ZZabp-v0Dc9uSDCgtKQ7l_ImGAFE,600
+msgpacketizer-0.2.0.dist-info/RECORD,,
