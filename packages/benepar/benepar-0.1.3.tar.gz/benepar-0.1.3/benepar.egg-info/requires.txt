@@ -1,0 +1,12 @@
+cython
+numpy
+nltk>=3.2
+
+[cpu]
+tensorflow>=1.11.0
+
+[gpu]
+tensorflow-gpu>=1.11.0
+
+[spacy]
+spacy<3.0.0,>=2.0.9
