@@ -1,0 +1,16 @@
+neatpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neatpy/activations.py,sha256=YhgsxZdTc0r8UOCnktIg8e2Zb3WAlHHHKwPK8dXCqro,1976
+neatpy/brain.py,sha256=gCEB1Bj_AzKpiM1I3AmTp0smC85DMx0E0RoAmY-ud7s,10101
+neatpy/connection.py,sha256=dX3V2we4hbvP4tBZ-b6tmePg2PvnNh6sbmHIWi9Gtcw,683
+neatpy/draw.py,sha256=hRy0cEA154pqCZygkG6-7tmhw3T7yNpKA7S_axPv4uk,1130
+neatpy/innovation.py,sha256=pa8dr6Ikq1zY11vHFfkzGmVOKAEDwRrtg1FDxWC7rM4,2651
+neatpy/node.py,sha256=fCIqojxQTznXkE0BQ9mH8qdimJBQeGvQ_oK2NpcMAs4,668
+neatpy/options.py,sha256=K9RnNBDlWDmmGpsltz4jYzkIQwZhbdoBb6LHdoLOBJQ,5748
+neatpy/population.py,sha256=PG5GL5qBJoo-i59SKKmFojyDUujMtJD8rQok8CMZWH4,8458
+neatpy/save.py,sha256=HwJ6FZafZgrrDiKd3XWNpy4sIF7RHiRAxErpY1mSfQ4,1436
+neatpy/species.py,sha256=TqCYQYbDUv-87GrRYGnBQv4fSaPXYP8fir5uNlXva4Y,2671
+neatpy-0.4.0.dist-info/LICENSE.md,sha256=Tv0pHeq2YgeGHRl8W7faLYbARJc4_4WG_TxEyslQ1lY,1068
+neatpy-0.4.0.dist-info/METADATA,sha256=IVcogxRiR-j-tZhZPP1KkCviF9a-VUjg9kIByeqqxtk,2674
+neatpy-0.4.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+neatpy-0.4.0.dist-info/top_level.txt,sha256=2hjp5OsV-swzbS6cSf-C92TCRz18yJSPhiNkanBiEEY,7
+neatpy-0.4.0.dist-info/RECORD,,
