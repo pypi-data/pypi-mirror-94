@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: deep-piste
+Version: 0.0.11
+Summary: Evaluating the impact of IA on Breast Cancer Screening Program
+Home-page: https://github.com/Epiconcept-Paris/deep.piste
+Author: Francisco Orchard
+Author-email: f.orchard@epiconcept.fr
+License: GNU General Public License v2.0
+Description: # deep.piste
+        
+        Tools for implementing Deep.piste study
+        
+        ## Installation
+        pip install deep-piste
+        
+        On windows you may need to install "Visual C++ Redistributable Packages for Visual Studio 2013" Microsoft C++ Build Tools: https://www.microsoft.com/en-us/download/details.aspx?id=40784 
+        
+        
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
