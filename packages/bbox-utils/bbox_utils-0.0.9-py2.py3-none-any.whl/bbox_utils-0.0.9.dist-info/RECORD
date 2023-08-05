@@ -1,0 +1,10 @@
+bbox_utils/__init__.py,sha256=a2roSIWGnYC3N8i-1PrYBihNJGLpmhOVfO0TxqBrhmg,678
+bbox_utils/bbox_2d.py,sha256=gI0pJWSrGLWLy0USNH0iVq_4MdE35ALdxQ5S_-8VRdQ,6965
+bbox_utils/bbox_3d.py,sha256=ZVk5BH8xgFHmkfpgjANw5cxoN8-B023tEFgEw8zwGxI,10373
+bbox_utils/utils.py,sha256=eYQCiMUG4p4KTIM3Jx9KFyMO2kKz4HaV3akosRVegw4,3269
+bbox_utils-0.0.9.dist-info/AUTHORS.rst,sha256=B8fJL_1kRd7ixc66W42CjRbaortITHb74sPw9zJjVGI,78
+bbox_utils-0.0.9.dist-info/LICENSE.txt,sha256=rjnnN5maf-WVscNOFSvzZYPGp8E58ETbO13ekZ5mmOU,1078
+bbox_utils-0.0.9.dist-info/METADATA,sha256=-ox7k8GtK0cfx5nDz350U_gxNswcIc5_qgRii2jowng,2293
+bbox_utils-0.0.9.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+bbox_utils-0.0.9.dist-info/top_level.txt,sha256=N34OnYRjF0Dk0e6RKtsgNlsseqytjEwgzZBZ_9yKxlI,11
+bbox_utils-0.0.9.dist-info/RECORD,,
