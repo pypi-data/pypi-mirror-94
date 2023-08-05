@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: django-aws-s3-storage
+Version: 1.0.0
+Summary: AWS S3 Bucket file storage system for Django applications
+Home-page: UNKNOWN
+Author: Gustavo Valentim
+License: UNKNOWN
+Description: # Django S3 Storage
+        > AWS S3 Bucket file storage system for Django applications.
+        
+        ## Setup
+        `pip install django-aws-s3-storage`
+        
+        ## Configuration
+        Add `django_aws_s3_storage` to your `INSTALLED_APPS` setting.
+        
+        ```python
+        INSTALLED_APPS = [
+            ...
+            'django_aws_s3_storage',
+            ...
+        ]
+        ```
+        
+        Set `DEFAULT_FILE_STORAGE` setting.
+        
+        ```python
+        DEFAULT_FILE_STORAGE = 'django_aws_s3_storage.storage.S3Storage'
+        ```
+        
+        Add `DJANGO_AWS_S3_STORAGE` specific settings.
+        
+        ```python
+        DJANGO_AWS_S3_STORAGE = {
+            'AWS_ACCESS_KEY_ID': 'YOUR_ACCESS_KEY_ID',
+            'AWS_ACCESS_SECRET_KEY': 'YOUR_SECRET_KEY',
+            'BUCKET_NAME': 'BUCKET_NAME',
+        }
+        ```
+        
+        ## Usage
+        After finishing the configuration steps, in just add a file-like field to one your models, as the example bellow
+        
+        ```python
+        from django.db import models
+        
+        
+        class MyModel(models.Model):
+            my_file = models.FileField()
+        
+        ```
+        
+        ### Links
+        
+        [How to handle file uploads in Django](https://docs.djangoproject.com/en/3.1/topics/http/file-uploads/)
+        
+        [Managing files in Django](https://docs.djangoproject.com/en/3.1/topics/files/)
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
