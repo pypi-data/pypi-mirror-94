@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: msgpacketizer
+Version: 0.2.0
+Summary: https://github.com/hideakitai/MsgPacketizer protocol encoding/decoding for python
+License: MIT
+Author: Eero af Heurlin
+Author-email: eero.afheurlin@iki.fi
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cobs (>=1.1,<2.0)
+Requires-Dist: crc8 (>=0.1,<0.2)
+Requires-Dist: msgpack (>=1.0,<2.0)
