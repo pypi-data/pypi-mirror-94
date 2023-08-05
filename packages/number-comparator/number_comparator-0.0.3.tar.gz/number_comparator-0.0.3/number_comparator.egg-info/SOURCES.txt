@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+number_comparator/__init__.py
+number_comparator/comparations.py
+number_comparator/operations.py
+number_comparator.egg-info/PKG-INFO
+number_comparator.egg-info/SOURCES.txt
+number_comparator.egg-info/dependency_links.txt
+number_comparator.egg-info/top_level.txt
+number_comparator/data/__init__.py
+number_comparator/data/colors.py
+number_comparator/data/first_prime.py
