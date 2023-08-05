@@ -1,0 +1,231 @@
+{%extends "tagging.html"%}
+
+{%block work_title%}
+{{super()}}
+<h4 class="m-3 bg-warning p-2 text-white text-center rounded" title="Named Entity Recognition">
+    <i class="fas fa-dove"></i>
+    NER task</h4>
+{%endblock%}
+
+{%block controls%}
+<div class="m-3">
+    <h5 class="mt-2 mb-2">
+        Controls
+    </h5>
+    <div class="m-2 btn-group">
+        <button id='next' class="btn btn-primary btn-lg">Finish</button>
+        <button id='skip' class="btn btn-warning btn-lg">Skip</button>
+    </div>
+</div>
+
+{%endblock%}
+
+{%block tail_js%}
+{{super()}}
+<script>
+    var color_ct = 0
+
+    const create_raw = (d) => {
+        // console.log(d)
+        document.querySelector("#raw").innerHTML = d.text
+        document.querySelector("#raw").dataset.hl_index = d.index
+
+        if (d.record) {
+            // this is a data entry this user already tagged
+            if (d.record.tags) {
+                var option_to_data = JSON.parse(document
+                    .querySelector("#label_pool")
+                    .dataset.option_to_data)
+                var tags = d.record.tags
+
+                visualize_tagged({ option_to_data, tags })
+            }
+        }
+
+        get_history()
+    }
+
+    const create_controls = (d) => {
+        var { option_list, option_to_data } = create_option_list(d.options)
+        document.querySelector("#label_pool").dataset.option_to_data = JSON.stringify(option_to_data)
+        visualize_options(option_list)
+    }
+
+    const create_option_list = (options) => {
+        var option_list = [];
+        var option_to_data = {}
+        var color_ct=0;
+        for (var i in options) {
+            if (color_ct >= flavors.length) {
+                color_ct = 0
+            }
+            var dt = {
+                label: options[i],
+                flavor: flavors[color_ct]
+            }
+            option_list.push(dt)
+            option_to_data[options[i]] = dt
+            color_ct += 1
+        }
+        return { option_list, option_to_data }
+    }
+
+
+    class NERBlock {
+        constructor(d) {
+            this.node = document.createElement("span");
+            this.node.className = `bg-${d.flavor} text-white p-2 ner_tag`;
+            this.node.style = "border-radius:3px";
+            this.node.datasets = d;
+            this.node.title = d.label;
+            var node = this.node
+
+            this.node.addEventListener("click", () => {
+                node.after(node.innerText)
+                node.remove()
+            })
+        }
+
+        get_node(){
+            return this.node
+        }
+    }
+
+    const calc_label = () => {
+        var nodes = document.querySelector("#raw").childNodes
+
+        var tags = [];
+        var l_ct = 0
+        for (var i = 0; i < nodes.length; i++) {
+            var node = nodes[i]
+            if (node.nodeName == "#text") {
+                l_ct += node.textContent.length
+            }
+            if (node.nodeName == "SPAN") {
+                tags.push({
+                    offset: l_ct,
+                    text: node.textContent,
+                    label: node.datasets.label
+                })
+                l_ct += node.textContent.length
+            }
+        }
+        return tags
+    }
+
+    const next_btn = () => {
+        var tags = calc_label()
+        var data = { tags }
+        tagging(data)
+    }
+
+
+    document.querySelector("#next").addEventListener("click", next_btn)
+    document.querySelector("#skip").addEventListener("click", skipping)
+
+
+    const tag_NER = (e, d) => {
+        console.log(`clicked ${JSON.stringify(d, 0, 2)}`)
+        try {
+            var selected = document.getSelection()
+
+            if (selected.anchorNode.parentElement.id != "raw") {
+                // select outside of the textarea
+                console.log(`out of area ${selected.anchorNode.parentElement.id}`)
+                return
+            }
+
+            var {
+                anchorOffset,
+                focusOffset
+            } = selected
+
+            var range = selected.getRangeAt(0)
+            var ner_block = new NERBlock(d)
+            range.surroundContents(ner_block.get_node())
+        }
+        catch (e) {
+            if (e instanceof DOMException) { console.error("Selection should not overlap"); }
+            else {
+                throw e;
+            }
+        }
+    }
+
+    const get_history = async () => {
+        var user_id = get_user_id()
+        fetch(`/personal_history?user_id=${user_id}`)
+        .then(res=>res.json())
+        .then(data=>{
+            d3.select("#histories")
+            .selectAll(".history_entry")
+            .data(data)
+            .enter()
+            .append("div")
+            .attr("class",
+            "history_entry m-3 pt-1 pb-1 pl-3 pr-3 border border-primary rounded-pill border-3 border-top-0 border-bottom-0")
+            .text(d=>{return `${d.time.substring(9,17)} (${d.tags}x🏷)`})
+            .on("click", (e, data) => {
+                window.location = `/?index=${data.index}`
+            })
+        })
+        .catch(console.error)
+    }
+
+    const visualize_options = (options) => {
+        d3.select("#label_pool").selectAll("button")
+            .data(options)
+            .enter().append("button")
+            .style("border-radius", "3px")
+            .attr("class", (d) => {
+                return `btn btn-${d.flavor} m-1`
+            })
+            .text((d) => {
+                return d.label
+            })
+            .on('mousedown', function (e) {
+                e.preventDefault();
+            })
+            .on("click", tag_NER)
+    }
+
+    const visualize_tagged = (ipt) => {
+        /* Visualize from
+        Tracked record
+        var { tags, option_to_data } = ipt;
+        tags are the tagged json data
+        */
+        var { tags, option_to_data } = ipt;
+        // console.log(tags);
+        var subs = [];
+        var ct = 0;
+        var raw = document.querySelector("#raw")
+        var text = raw.innerText
+
+        for (var i in tags) {
+            var tag = tags[i];
+            subs.push({ text: text.substring(ct, tag.offset) })
+            ct = tag.offset + tag.text.length
+            subs.push({
+                text: text.substring(tag.offset, ct),
+                label_data: option_to_data[tag.label]
+            })
+        }
+        subs.push({ text: text.substring(ct, text.length) })
+        // console.log(subs)
+
+        raw.innerHTML=""
+
+        for (var i in subs) {
+            var sub = subs[i];
+            if (sub.label_data) {
+                var ner_node = new NERBlock(sub.label_data).get_node()
+                ner_node.innerText = sub.text
+                raw.append(ner_node)
+            } else {
+                raw.append(sub.text)
+            }
+        }
+    }
+</script>
+{%endblock%}
