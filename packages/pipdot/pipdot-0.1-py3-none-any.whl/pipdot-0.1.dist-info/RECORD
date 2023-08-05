@@ -1,0 +1,10 @@
+pipdot/__init__.py,sha256=b7zO50apZxt9Hg2eOkJhRLrXgACR8eS5b-Rphdn5qNQ,44
+pipdot/__main__.py,sha256=2hWFyzmRfXtk5tYc76TmtHVzxJNXptvgiseNexr57Vw,3910
+pipdot/version.py,sha256=FVg3MuoKfr7DEAyCQmco73kMYOLifMXXAegYMNX3TXc,137
+pipdot/templates/default.dot.j2,sha256=Db04xt4JZs59mQ3SC7ZiZ4GWbQ1s3qjzUh8Vp4IyDn8,2517
+pipdot-0.1.dist-info/LICENSE,sha256=yq-stINknv27G6O01SyZdTGez06MIh_DDMyMzVO1dBI,1519
+pipdot-0.1.dist-info/METADATA,sha256=0nrCbHoPtYCmy6y1BwwQWK1_rdHnqo8DGNzU3QKaVko,1272
+pipdot-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pipdot-0.1.dist-info/entry_points.txt,sha256=-bqdD9Fg5sd5b6MFdMMjx6fo0dAd3-klI7H9V1-yFF4,49
+pipdot-0.1.dist-info/top_level.txt,sha256=UouHBN0or6YSgdDpyrbz8x60uPnRKw_akkhfXmxwGOc,7
+pipdot-0.1.dist-info/RECORD,,

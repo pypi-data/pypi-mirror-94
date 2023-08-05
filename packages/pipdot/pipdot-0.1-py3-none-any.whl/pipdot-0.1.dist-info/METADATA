@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: pipdot
+Version: 0.1
+Summary: Generate a graphviz dot file representing installed PyPI distributions.
+Home-page: https://github.com/tanbro/pipdot
+Author: liu xue yan
+Author-email: liu_xue_yan@foxmail.com
+License: BSD 3-Clause License
+Keywords: pypi,pip,distribution,dist,graphviz,dot,package
+Platform: UNKNOWN
+Requires-Python: <4,>=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: pip (>=10.0)
+Requires-Dist: jinja2 (<3.0,>=2.0)
+
+# pipdot
+
+Generate a [Graphviz][] `dot` file representing installed [PyPI][] distributions.
+
+## Installation
+
+```sh
+pip install pipdot
+```
+
+## Usage
+
+Generate a [graphviz][] `dot` file
+
+```sh
+pipdot --include-extras --show-extras-label 1.dot
+```
+
+Convert it to a `svg` (or other formats) image:
+
+```sh
+dot -Tsvg -O 1.dot
+```
+
+we'll get something like:
+
+![assets/1.dot.svg](https://github.com/tanbro/pipdot/raw/main/assets/1.dot.svg)
+
+Run
+
+```sh
+python -m pipdot --help
+```
+
+for help messages
+
+[PyPI]: https://pypi.org/
+[pip]: https://pip.pypa.io/
+[graphviz]: https://graphviz.org/
+
+# CHANGELOG
+
+## v0.1
+
+date: 2021-2-5
+
+# AUTHORS
+
+* Liu Xue Yan (<liu_xue_yan@foxmail.com>)
+
+  [![liu_xue_yan@foxmail.com](https://www.gravatar.com/avatar/049d2fae1fd2df6439e87d1383d0276b)](mailto:liu_xue_yan@foxmail.com)
+
+

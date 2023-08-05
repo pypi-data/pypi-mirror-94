@@ -1,0 +1,3 @@
+[console_scripts]
+pipdot = pipdot.__main__:main
+
