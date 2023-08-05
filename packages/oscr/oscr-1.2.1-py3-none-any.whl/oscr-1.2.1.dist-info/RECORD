@@ -1,0 +1,13 @@
+oscr-1.2.1.data/scripts/oscr,sha256=yp_DgLo4dWWorvRtn9QdAQUBhg7FX-tdoz96oxgp_IE,3461
+oscrmodules/__init__.py,sha256=dJbIRg7fugu8FVkE6ypad2aMNTyPEBAc8WH4LAHKjbw,700
+oscrmodules/gvars.py,sha256=lRvxzJyX0RB7FwUjlGsMvWQHz-491m0Us1vzHGBFcKQ,1123
+oscrmodules/log.py,sha256=GrKdR0lTcYV-xYKtQRSQMDfGlsHeLt6XsTu_NOVTO_A,2368
+oscrmodules/main.py,sha256=0cmhi9cAK31WUPjfSlco-FWncc2VH3EIqpiL7AyQGWU,6207
+oscrmodules/misc.py,sha256=_uAct38E3ttp_BV61uQ9vEKCbx9hOn2HEmwU7uFDEMU,6880
+oscrmodules/settings.py,sha256=FabAGVAyqOW0bd1RN_uRguuqO-DrCX_YCUJH90bFEw4,10428
+oscrmodules/statistics.py,sha256=6yT3gM8t67qKuSlimov_R1fLYTYONFzZOomSOyY8K74,3868
+oscr-1.2.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+oscr-1.2.1.dist-info/METADATA,sha256=vtWgTnsYwAfj3HS_tx5u14Sar4k8vBWpvs2r-mfWPA0,10242
+oscr-1.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+oscr-1.2.1.dist-info/top_level.txt,sha256=Hxjwyvj0AWs1-kl-cRCYEf_1kVZkLk-bAa6Jj_qpyQU,12
+oscr-1.2.1.dist-info/RECORD,,
