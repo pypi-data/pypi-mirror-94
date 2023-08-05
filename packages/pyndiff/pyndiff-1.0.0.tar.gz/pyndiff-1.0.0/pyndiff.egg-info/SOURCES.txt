@@ -1,0 +1,12 @@
+README.md
+setup.py
+pyndiff/__init__.py
+pyndiff/__main__.py
+pyndiff/core.py
+pyndiff/ndiff.py
+pyndiff.egg-info/PKG-INFO
+pyndiff.egg-info/SOURCES.txt
+pyndiff.egg-info/dependency_links.txt
+pyndiff.egg-info/entry_points.txt
+pyndiff.egg-info/requires.txt
+pyndiff.egg-info/top_level.txt
