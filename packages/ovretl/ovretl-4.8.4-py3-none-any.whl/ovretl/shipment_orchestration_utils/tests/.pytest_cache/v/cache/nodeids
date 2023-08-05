@@ -1,0 +1,15 @@
+[
+  "test_so_workflows_weights.py::test_so_workflows_weights",
+  "test_shipment_daily_workload.py::test_total_task_weight",
+  "test_shipment_daily_workload.py::test_daily_tasks_todo_total_weight",
+  "test_shipment_daily_workload.py::test_shipment_total_workflows_weight",
+  "test_shipment_daily_workload.py::test_count_shipment_remaining_days",
+  "test_shipment_daily_workload.py::test_shipments_timelines",
+  "test_shipment_daily_workload.py::test_actualized_daily_remaining_workload",
+  "test_shipment_daily_workload.py::test_daily_todo_tasks_total_weight_on_shipment",
+  "test_shipment_daily_workload.py::test_shipments_actualized_daily_workload",
+  "test_shipment_daily_workload.py::test_estimated_remaining_daily_workload",
+  "test_shipment_daily_workload.py::test_shipments_daily_workload_timelines",
+  "test_shipment_daily_workload.py::test_daily_tasks_total_weight_on_shipment",
+  "test_shipment_daily_workload.py::test_shipment_remaining_days"
+]

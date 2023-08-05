@@ -1,0 +1,4 @@
+{
+  "tests/test_shipment_daily_workload.py::test_total_task_weight": true,
+  "tests/test_so_workflows_weights.py::test_so_workflows_weights": true
+}
