@@ -1,0 +1,15 @@
+env: dev # dev test prod
+nacos:
+  server-addr: wealth.afa.ai:10003
+  discovery:
+    only_reader: false
+    boot_admin: true
+    enable: true
+    group: ${env}
+  config:
+    enable: true
+    group: saas_config
+    file-extension: yaml
+    extension-configs:
+      - data-id: common-prod.yaml
+        group: saas_config

@@ -1,0 +1,58 @@
+web:
+  service_name: flask_templates
+  service_ip: 127.0.0.1
+  service_port: 9000
+  host: 0.0.0.0
+  port: 9000
+  debug: false
+flask_template:
+  requester:
+    load_balance_enable: true
+  db:
+    mysql:
+      encryption: False
+      use_slave: False
+      echo: False
+      master:
+        host: r2.dsjcj.cc
+        port: 10196
+        user: root
+        password: 1111111
+        database: db_news
+        pool_size: 5
+        max_overflow: 10
+      slaves:
+        - host: r2.dsjcj.cc
+          port: 10196
+          user: root
+          password: 1111111
+          database: db_news
+          pool_size: 5
+          max_overflow: 10
+          name: slave1
+    redis:
+      encryption:
+      default:
+        host: r2.dsjcj.cc
+        port: 10168
+        db: 2
+        password: ${env}
+        decode_responses: False
+        use_sentinel: False
+
+  log:
+    level: INFO
+    enable_mail: false
+    mail:
+      subject: test_public_sentiment
+      smtp_server: smtp.163.com
+      sender: "afa_wealth@163.com"
+      receivers:
+        - "hongzhengyi@afa.ai"
+      user: afa_wealth@163.com
+      password: MXVGPOFGXBEOXKTY
+celery:
+  enable: true
+  result_backend: 'redis://r2.dsjcj.cc:10168/2'
+  broker_url: 'redis://r2.dsjcj.cc:10168/2'
+  task_serializer: 'json'
