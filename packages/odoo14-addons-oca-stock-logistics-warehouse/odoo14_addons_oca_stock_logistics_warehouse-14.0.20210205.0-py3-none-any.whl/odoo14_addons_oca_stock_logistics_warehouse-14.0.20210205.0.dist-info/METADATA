@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-oca-stock-logistics-warehouse
+Version: 14.0.20210205.0
+Summary: Meta package for oca-stock-logistics-warehouse Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo14-addon-stock-free-quantity
+Requires-Dist: odoo14-addon-stock-inventory-include-exhausted
+Requires-Dist: odoo14-addon-stock-move-location
+Requires-Dist: odoo14-addon-stock-packaging-calculator
+
+UNKNOWN
+
+
