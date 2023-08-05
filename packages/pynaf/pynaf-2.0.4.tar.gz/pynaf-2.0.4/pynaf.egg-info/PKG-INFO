@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: pynaf
+Version: 2.0.4
+Summary: Read and create NAF annotation Documents.
+Home-page: https://github.com/josubg/pynaf/
+Author: Rodrigo Agerri,Josu Bermudez
+Author-email: rodrigo.agerri@ehu.es,josubg@gmail.com
+License:  Apache License 2.0 (APL 2.0)
+Description: pynaf
+        =====
+        
+        **pynaf** provides  a simple API for creating or reading **NAF documents**.
+        
+        The NAF (Natural language Annotation Format) is an XML markup language that contains several layers of linguistic annotation. It is used in **Natural Language Processing** tools like `IXA Pipes <http://ixa2.si.ehu.es/ixa-pipes/>`_ or `Corefgraph <https://bitbucket.org/Josu/corefgraph>`_.
+        
+        More information about NAF in the  following `link <https://github.com/newsreader/NAF>`_.
+        
+Keywords: NLP XML markup NAF
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: XML
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2.7

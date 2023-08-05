@@ -1,0 +1,10 @@
+LONG.rst
+MANIFEST.in
+README.md
+setup.py
+pynaf/__init__.py
+pynaf.egg-info/PKG-INFO
+pynaf.egg-info/SOURCES.txt
+pynaf.egg-info/dependency_links.txt
+pynaf.egg-info/requires.txt
+pynaf.egg-info/top_level.txt
