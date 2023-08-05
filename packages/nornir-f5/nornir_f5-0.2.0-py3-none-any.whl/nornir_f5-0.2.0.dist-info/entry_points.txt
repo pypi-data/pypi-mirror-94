@@ -1,0 +1,3 @@
+[nornir.plugins.connections]
+f5=nornir_f5.plugins.connections:F5iControlREST
+
