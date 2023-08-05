@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+src/libtabular/__init__.py
+src/libtabular/metadataheaders.py
+src/libtabular.egg-info/PKG-INFO
+src/libtabular.egg-info/SOURCES.txt
+src/libtabular.egg-info/dependency_links.txt
+src/libtabular.egg-info/not-zip-safe
+src/libtabular.egg-info/requires.txt
+src/libtabular.egg-info/top_level.txt
