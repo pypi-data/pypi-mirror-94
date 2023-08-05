@@ -1,0 +1,13 @@
+README.md
+setup.py
+aiboot/__init__.py
+aiboot/aiboot.py
+aiboot/build_docker.py
+aiboot/onboarding.py
+aiboot/pack_model.py
+aiboot.egg-info/PKG-INFO
+aiboot.egg-info/SOURCES.txt
+aiboot.egg-info/dependency_links.txt
+aiboot.egg-info/entry_points.txt
+aiboot.egg-info/requires.txt
+aiboot.egg-info/top_level.txt
