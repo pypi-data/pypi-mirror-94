@@ -1,0 +1,14 @@
+dynamotable/__init__.py,sha256=wtMrHuxnZgapTsXkbNsMONMJPzxo5nCwh2j6miek4Z0,61
+dynamotable/analysis.py,sha256=Vt0gkZ9xTibjWvVnFOKZQRhUmwOo0z2fHdOJE9Hd6dA,802
+dynamotable/constants.py,sha256=rNMsct0yD7VJjfq_kBuz2DgiNyksZCsyPQMfSOWeDFw,962
+dynamotable/convention.py,sha256=-SLO9BVte9XYhhhid9yPIyX2_68WYltSrI4xcjLDg8Y,1752
+dynamotable/dynamotable.py,sha256=vsqIbQqj4gYusVSuSAgVZsTBLVR55KkA9biylJBPuEY,4067
+dynamotable/io.py,sha256=j_v_UlOTxu-jY0jxSJLd6gHhKz_-Be9Hf_kow6ZBaWw,2532
+dynamotable/table_map.py,sha256=4AAGbu-9ajpZsxdYAeXG3_F2wKKNE8vyLtaI3DbWgPY,419
+dynamotable/utils.py,sha256=Bg1nKJLNCl5JyZdxHsVA-2Plj5Fd2DRBLJBXauy6YIM,1140
+dynamotable/version.py,sha256=N5-p8dQB8uwuCMpS1ADLf_E6rvWovtRRp3vY9Cq2gw4,22
+dynamotable-0.2.4.dist-info/LICENSE.txt,sha256=UetdVNWgtA5ZIQC10ergCga_7TAB8PIvGg03byAFx6E,1513
+dynamotable-0.2.4.dist-info/METADATA,sha256=s9e4lJIfUEkQUTNEnvNof8YaP8_M61tW1cFypYn0zJc,804
+dynamotable-0.2.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dynamotable-0.2.4.dist-info/top_level.txt,sha256=R5Ls9nNvgXkKiqAT2c1TSmWkeZ6fv2gnwH57omOQj5A,12
+dynamotable-0.2.4.dist-info/RECORD,,

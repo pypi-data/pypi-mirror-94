@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: dynamotable
+Version: 0.2.4
+Summary: Read and write table files from the Dynamo software package for subtomogram averaging as pandas dataframes
+Home-page: https://github.com/alisterburt/dynamotable
+Author: Alister Burt
+Author-email: alisterburt@gmail.com
+License: BSD 3-Clause License
+Download-URL: https://github.com/alisterburt/dynamotable/archive/v0.2.4.tar.gz
+Keywords: IO,dynamo,table file,cryo-EM,cryo-ET
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+
+UNKNOWN
+
+
