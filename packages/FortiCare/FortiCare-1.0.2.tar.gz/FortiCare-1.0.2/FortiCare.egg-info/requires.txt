@@ -1,0 +1,6 @@
+requests
+python-dateutil
+PyPDF2
+tabulate
+filelock
+validators

@@ -1,0 +1,10 @@
+README.md
+setup-forticare.py
+FortiCare/__init__.py
+FortiCare/fortiCare.py
+FortiCare/rateLimit.py
+FortiCare.egg-info/PKG-INFO
+FortiCare.egg-info/SOURCES.txt
+FortiCare.egg-info/dependency_links.txt
+FortiCare.egg-info/requires.txt
+FortiCare.egg-info/top_level.txt

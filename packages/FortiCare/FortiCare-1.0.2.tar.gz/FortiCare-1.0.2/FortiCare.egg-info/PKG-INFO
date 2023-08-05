@@ -1,0 +1,210 @@
+Metadata-Version: 2.1
+Name: FortiCare
+Version: 1.0.2
+Summary: FortiCare management package for python
+Home-page: https://pypi.org/project/FortiCare/
+Author: See "Authors" section
+Author-email: 
+License: MIT
+Description: 
+        # Abstract
+        The aim of this library is to ease the management of licenses and devices via FortiCare, it represents the base components of the Fortinet FortiCare REST interface. This library helps the user to make scripts in order to manage what should be defined in the [Fortinet support web site](https://support.fortinet.com).
+        The library allows and eases all the functionalities defined by the FortiCare REST calls.
+        
+        # Authors
+        
+        This project is managed by API team of Fortinet Support EMEA. Code was written by Luca Pizziniaco (lpizziniaco at fortinet dot com) and Ondrej Holecek (oholecek at fortinet dot com). 
+        
+        # Prerequisites
+        In order to use this library and all the services related to the FortiCare, the user must create an account on the support website. Once the account is created the user must request a FortiCare Token. A FortiCare Token is associated with the account previously created and a set of IP addresses the requests can come from.
+        
+        To obtain the token:
+        - If you are Fortinet employee, please to follow the _Fortinet System Access Requests procedure_.
+        - Otherwise please contact your SE.
+        
+        # Devices supported
+        
+        Not all Fortinet devices are supported by the offical Fortinet FortiCare registration API.
+        
+        At this moment following devices are verified to work correctly:
+        - FortiGate (appliance & VM)
+        - FortiManager (appliance & VM)
+        - FortiAnalyzer (appliance & VM)
+        - FortiPortal (VM)
+        - FortiMail (VM)
+        - FortiSwitch (appliance)
+        - FortiSandbox (appliance)
+        - (and probably more)
+        
+        At this moment following devices cannot be registered using this API:
+        - FortiWeb (VM)
+        - FortiADC (VM)
+        - FortiDDoS (VM)
+        - FortiTester (VM)
+        - FortiWLC (VM)
+        - FortiVoice Enterprise (VM)
+        - (and probably more)
+        
+        _The device types above are only those that were explicitly tested. Most probably when "VM" version works the appliance will work as well (and vice versa)._
+        
+        # How to use it
+        
+        For real working code you can check [FortiCareCli](/project/FortiCareCli/) that utilizes most of the functions available by this library.
+        
+        ## Main classes
+        The library is written in Python, it defines three main classes:
+        - FortiCare: This is the main class it is used to create sessions and handle all the requests to the system.
+        - Asset: It describes the Fortinet device (physical or virtual) registered and for which a license is generated.
+        - AssetEntitlement: Each entitlement is associated with an asset license it represents what the user is allowed to perform via the license.
+        
+        Each class represents the entities that are used to interface with the registration system. Some Exceptions handlers are defined as well.
+        
+        
+        ## Start
+        
+        In order to define an instance for FortiCare the need to specify the token in the constructor. 
+        
+        ```python
+        from FortiCare import FortiCare
+        
+        forticare = FortiCare("ABCD-ABCD-ABCD-ABCD-ABCD-ABCD-ABCD-ABCD")
+        ```
+        
+        By default local rate limit is enforced to prevent hitting the limit on FortiCare server. This feature can be disabled with `ratelimit` parameter (keep in mind that the limit is still applied on the server):
+        
+        ```python
+        forticare = FortiCare("ABCD-ABCD-ABCD-ABCD-ABCD-ABCD-ABCD-ABCD", ratelimit=False)
+        ```
+        
+        
+        If access via HTTP(s) proxy is needed, write its URL (like `https://myproxy:3128` to proxy setter). Proxy authentication can by done with common syntax like `https://user:password@myproxy:3128`.
+        
+        ```python
+        forticare.proxy = "http://192.168.1.1:3128"
+        ```
+        
+        ## Retrieve registered devices
+        
+        To get all devices registered to the account you cann call `GetAssets` without any parameter:
+        
+        ```python
+        assets = forticare.GetAssets()
+        ```
+        
+        As this can be quite a lot of devices, you can limit it by specifying a part of serial number:
+        
+        ```python
+        fortigateVMs = forticare.GetAssets(serialNumber="FGVM")
+        ```
+        
+        You can also request only devices expiring before a specific date and time:
+        
+        ```python
+        from datetime import datetime
+        from dateutil.relativedelta import relativedelta
+        from dateutil import tz
+        
+        firstOfNextMonth = (datetime.utcnow() + relativedelta(months=1)) \
+                           .replace(hour=0, minute=0, second=0, microsecond=0, day=1, tzinfo=tz.tzutc())
+        
+        expiringThisMonth = forticare.GetAssets(expire=firstOfNextMonth)
+        ```
+        
+        You can combide `serialNumber` and `expire` parameters.
+        
+        ## Get details about specific registered device
+        
+        ```python
+        asset = forticare.GetAsset("FAZ-VMXXXXXXXXXX")
+        print(asset)
+        ```
+        
+        The output should be something like :
+        ```
+        Model: FortiAnalyzer VM
+        Serial Number: FAZ-VMXXXXXXXXXX
+        SKU: None
+        Registration Date: 2020-11-23 02:25:15 UTC+0100
+        Entitlements: 
+          Type    Level  Start Date                    End Date                        Remaining Days  Description
+        ------  -------  ----------------------------  ----------------------------  ----------------  --------------------------
+             2        6  2020-11-23 00:00:00 UTC+0100  2021-11-23 00:00:00 UTC+0100               340  Firmware & General Updates
+            11       10  2020-11-23 00:00:00 UTC+0100  2021-11-23 00:00:00 UTC+0100               340  Enhanced Support
+            67        6  2020-11-23 00:00:00 UTC+0100  2021-11-23 00:00:00 UTC+0100               340  Threat Detection service
+        ```
+        
+        Following getters are available:
+        - `sku` - usually empty (probably bug in API server)
+        - `productModel` - like "FortiVoiceEnterprise VM 100"
+        - `serialNumber`
+        - `registrationDate` as "datetime"
+        - `description` - user content field
+        - `entitlements` - list of `AssetEntitlement` objects
+        
+        AssetEntitlement object has following getters:
+        - `type` - type id, like "11"
+        - `typeDesc` - human readable type description, like "Telephone Support"
+        - `level` - level id, like 20
+        - `levelDesc` - human readable level description, like "24x7"
+        - `startDate` - as "datetime"
+        - `endData` - as "datetime"
+        
+        ## Register VM license
+        
+        In order to register VM license, registration code issued by Fortinet must be provided. This is the code you receive in the PDF file,
+        like `ZN121-AC76A-34X7C-642DV-W365TA`.
+        
+        ```python
+        serial = forticare.RegisterLicense("ZN121-AC76A-34X7C-642DV-W365TA")
+        ```
+        
+        If the device is to be used in government environment, you should also specify another optional parameter `gov` and set it to `True`.
+        
+        For some devices the license needs to contain management IP address that will be assigned to the device, in that case you should specify it in an optional `ip` paramemer. 
+        
+        ```python
+        serial = forticare.RegisterLicense("ZN121-AC76A-34X7C-642DV-W365TA", ip="192.168.1.1")
+        ```
+        
+        If the device is to be used in government environment, you should also specify another optional parameter `gov` and set it to `True`.
+        
+        The method will return serial number of the newly registered device.
+        
+        ## Retrieve license file
+        
+        In order to get the license for VM with a given serial number:
+        
+        ```python
+        license = forticare.DownloadLicense("FAZ-VMXXXXXXXXXX")
+        ```
+        
+        License file is returned as string.
+        
+        ## Register physical device
+        
+        To register hardware device, serial number of the device is used. The parameter must be a list of serial numbers.
+        
+        Current limit from FortiCare API is 10 devices in one request - exception will be raised if you specify more. Be aware that it might be uncomfortable to correctly recover from errors with batch registration, therefore it might be better to register one by one.
+        
+        ```python
+        serialNumbers = ["FGT60E0012345678"]
+        forticare.RegisterDevices(serialNumbers)
+        ```
+        
+        This function doesn't return anything. If there is any problem, exception is raised.
+        
+        ## Update device description
+        
+        Description is a custom field stored in FortiCare that can be used for whatever you like.
+        
+        ```python
+        forticare.UpdateAssetDescription("FGT60E0012345678", "something interesting")
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
