@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+pybit/__init__.py
+pybit/bits.py
+pybit/multiplication.py
+pybit/radix_convert.py
+pybit_lib.egg-info/PKG-INFO
+pybit_lib.egg-info/SOURCES.txt
+pybit_lib.egg-info/dependency_links.txt
+pybit_lib.egg-info/top_level.txt
