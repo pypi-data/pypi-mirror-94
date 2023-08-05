@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: autoBoostcamp
+Version: 3.4
+Summary: A moudule for self-authentication
+Home-page: UNKNOWN
+Author: datadriven42
+Author-email: datadriven42@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: chromedriver-autoinstaller
+
+A moudule for self-authentication
+-------------------------------------
+### Quickstart
+```
+$ pip install autoBoostcamp
+import autoBoostcamp as abc
+abc.quick_start()
+```
+
+#### 1. get google sms app installed on your phone. set the app as default sms app. 
+https://play.google.com/store/apps/details?id=com.google.android.apps.messaging
+
+#### 2. check if isready functions below work properly.
+
+sign into the slack
+```
+abc.backend.isready_slack_driver()
+```
+sign into the naver
+```
+abc.backend.isready_naver_driver()
+```
+make a pairing between google sms app and google sms web.
+```
+abc.backend.isready_auth_driver()
+```
+the function isready_table() makes auth_key.txt file at the current working directory. you should modify it to have proper credential information
+```
+table_path = abc.backend.isready_table()
+print(table_path)
+```
+
+
+#### 3. the package has three frontend function.
+
+```
+abc.doHi() # say Hi to slack and edwith
+abc.doBye() # say Bye to edwith
+abc.do() # say either Hi or Bye, upon time condition.
+```
+
+
+be careful with the chromedriver_profile security !
+
+Especially remember the fact that you paired your sms messages with the desktop.
+
