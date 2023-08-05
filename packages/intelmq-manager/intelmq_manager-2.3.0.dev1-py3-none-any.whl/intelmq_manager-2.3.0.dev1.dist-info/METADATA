@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: intelmq-manager
+Version: 2.3.0.dev1
+Summary: IntelMQ Manager is a graphical interface to manage configurations for the IntelMQ framework.
+Home-page: https://github.com/certtools/intelmq-manager/
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: intelmq-api
+
+UNKNOWN
+
+
