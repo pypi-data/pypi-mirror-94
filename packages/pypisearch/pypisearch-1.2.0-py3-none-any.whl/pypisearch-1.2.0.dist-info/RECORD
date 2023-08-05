@@ -1,0 +1,11 @@
+pypisearch/__init__.py,sha256=MpAT5hgNoHnTtG1XRD_GV_A7QrHVU6vJjGSw_8qMGA4,22
+pypisearch/__main__.py,sha256=jC6-oMrtXxS4eK20vreocCmGOHAjsYSOnsHKDPKzjiU,79
+pypisearch/main.py,sha256=Y0u6ejdl_WCYD-50vKs5lsoVksoQTMvCG0vyHkW5OTs,730
+pypisearch/re_constants.py,sha256=pGk-5qweE6zenmeg_EicYzBoX0m840KCOYnI5VF1o6A,324
+pypisearch/result_item.py,sha256=mT8y52dySQB6SO76_Ur9Rs4of4EZaZY8ZS6dBZHZ6WM,1547
+pypisearch/search.py,sha256=9C7XahvH2jQaYfZ5zLcq5FyiRhNpNk0aQ9EBalsLKEs,1508
+pypisearch-1.2.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+pypisearch-1.2.0.dist-info/METADATA,sha256=QlU-sGUYhIudMAxGDmlDgl6LxUote7Wl2N_FhwGmLVE,1282
+pypisearch-1.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pypisearch-1.2.0.dist-info/top_level.txt,sha256=MUuzA_9pIarjxG6h8wgDPKCtxFP6v1IAQ1zhl0Ebc_U,11
+pypisearch-1.2.0.dist-info/RECORD,,
