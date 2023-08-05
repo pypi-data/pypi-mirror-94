@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pyMatchSeries.egg-info/PKG-INFO
+pyMatchSeries.egg-info/SOURCES.txt
+pyMatchSeries.egg-info/dependency_links.txt
+pyMatchSeries.egg-info/requires.txt
+pyMatchSeries.egg-info/top_level.txt
+pymatchseries/__init__.py
+pymatchseries/config_tools.py
+pymatchseries/default_parameters.param
+pymatchseries/io_utils.py
+pymatchseries/matchseries.py
