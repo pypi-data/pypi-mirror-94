@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ThrustRTC
+Version: 0.3.9
+Summary: Thrust for Python based on NVRTC
+Home-page: https://github.com/fynv/ThrustRTC
+Author: Fei Yang
+Author-email: hyangfeih@gmail.com
+License: Anti 996
+Requires-Dist: cffi
+Requires-Dist: numpy
+
+ThrustRTC
+
+
