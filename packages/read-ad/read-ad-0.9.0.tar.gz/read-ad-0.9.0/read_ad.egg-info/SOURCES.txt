@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+read_ad.py
+setup.cfg
+setup.py
+read_ad.egg-info/PKG-INFO
+read_ad.egg-info/SOURCES.txt
+read_ad.egg-info/dependency_links.txt
+read_ad.egg-info/requires.txt
+read_ad.egg-info/top_level.txt
