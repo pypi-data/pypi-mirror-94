@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: nordypy
+Version: 2.1.2.2
+Summary: Nordypy Package 
+Home-page: https://github.com/nordstrom/nordypy
+License: UNKNOWN
+Author: aaron.lichtner
+Author-email: aaron.lichtner@nordstrom.com
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: psycopg2-binary
+Requires-Dist: pyyaml
+Requires-Dist: boto3
+Requires-Dist: botocore==1.12.214
+Requires-Dist: pystache
+Requires-Dist: pandas
+Requires-Dist: pymysql
+Requires-Dist: teradatasql >=16.20.0.59
+Requires-Dist: sqlalchemy
+Requires-Dist: pyhive
+Requires-Dist: requests
