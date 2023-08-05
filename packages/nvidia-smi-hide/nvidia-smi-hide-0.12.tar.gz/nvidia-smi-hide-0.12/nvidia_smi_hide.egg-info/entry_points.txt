@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        nvidia-smi-hide=nvidia_smi_hide:main
+    
