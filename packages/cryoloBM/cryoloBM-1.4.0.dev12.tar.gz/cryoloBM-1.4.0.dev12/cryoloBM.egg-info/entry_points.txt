@@ -1,0 +1,4 @@
+[console_scripts]
+cryolo_boxmanager.py = cryoloBM.boxmanager:run
+cryolo_boxmanager_tools.py = cryoloBM.boxmanager_tools:_main_
+
