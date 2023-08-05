@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "nt-app"
+version = "0.1.1"
+description = ""
+authors = ["Uriel Mandujano <uriel.mandujano14@gmail.com>"]
+packages = [{include = "nt"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = "^0.3.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
