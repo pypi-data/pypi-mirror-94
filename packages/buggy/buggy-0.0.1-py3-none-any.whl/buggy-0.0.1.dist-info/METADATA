@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: buggy
+Version: 0.0.1
+Summary: CLI tool to report bugs in Python packages.
+Home-page: https://github.com/orsinium-labs/flake8-length
+License: MIT
+Keywords: bugs,issues,issue,tracker,pypi
+Author: Gram
+Author-email: gram@orsinium.dev
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Dist: requests
+Requires-Dist: isort ; extra == "dev"
+Requires-Dist: mypy ; extra == "dev"
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: flake8 ; extra == "dev"
+Requires-Dist: requests-mock ; extra == "dev"
+Provides-Extra: dev
+
+# buggy
+
+Buggy is a CLI tool to report bugs in Python projects.
+
+Given the project name, it finds it on PyPI.org, detects the issue tracker URL, and opens it in the browser.
+
+```
+python3 -m pip install --user buggy
+python3 -m buggy flask
+```
+
