@@ -1,0 +1,9 @@
+threadswitch/__init__.py,sha256=AfAmevlUbrxdT6xxTCCAeZzdB9EhdH4t1SmmZGmp74E,83
+threadswitch/errors.py,sha256=a9dlg5RNqnj55h9llwRtrPLFO_rZTReMtWLAruOEziU,192
+threadswitch/threadswitch.py,sha256=_GE2fnThVYVTx8G6EoWJk0l2HHu2fTMm0PP_JSCpLG4,9339
+threadswitch/utils.py,sha256=vSyNLWmy9qxM8KwxMOsUl47np_xz0tvji_JyhcerS5Y,571
+threadswitch-1.0.0.dist-info/LICENSE,sha256=pRysSrEcimUTtRtzgvz7r0BVX5hdcj8e_hrhLM0v_0o,1063
+threadswitch-1.0.0.dist-info/METADATA,sha256=w3X_PcseGAw3jxUOl8QTm5KMSXYT01EdDypLiS4Zw94,5340
+threadswitch-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+threadswitch-1.0.0.dist-info/top_level.txt,sha256=Nktz3XcosOA74KnmseCfev-sLZB48nUdSaU6-JLE2IY,13
+threadswitch-1.0.0.dist-info/RECORD,,
