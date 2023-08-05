@@ -1,0 +1,4 @@
+click>7.0
+
+[dev]
+pytest>=6.2.2
