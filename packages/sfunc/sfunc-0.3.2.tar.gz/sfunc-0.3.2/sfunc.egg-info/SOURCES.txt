@@ -1,0 +1,13 @@
+README.md
+setup.py
+sfunc/__init__.py
+sfunc/apigw_request.py
+sfunc/apigw_response.py
+sfunc.egg-info/PKG-INFO
+sfunc.egg-info/SOURCES.txt
+sfunc.egg-info/dependency_links.txt
+sfunc.egg-info/top_level.txt
+tests/__init__.py
+tests/apigw_request_test.py
+tests/apigw_response_test.py
+tests/sfunc_test.py
