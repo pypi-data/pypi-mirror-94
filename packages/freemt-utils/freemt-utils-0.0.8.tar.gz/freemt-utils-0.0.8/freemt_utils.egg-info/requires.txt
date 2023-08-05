@@ -1,0 +1,9 @@
+httpx
+tqdm
+redis
+pytest
+logzero
+sacremoses
+numpy
+marisa_trie
+langcodes
