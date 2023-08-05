@@ -1,0 +1,7 @@
+tdw>=1.8.0.0
+numpy
+ikpy
+requests
+matplotlib
+pillow
+py_md_doc
