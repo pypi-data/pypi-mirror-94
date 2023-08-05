@@ -1,0 +1,5 @@
+datasette
+jellyfish>=0.8.2
+
+[test]
+pytest
