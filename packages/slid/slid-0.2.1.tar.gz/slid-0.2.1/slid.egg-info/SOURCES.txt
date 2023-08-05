@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+slid/__init__.py
+slid.egg-info/PKG-INFO
+slid.egg-info/SOURCES.txt
+slid.egg-info/dependency_links.txt
+slid.egg-info/top_level.txt
