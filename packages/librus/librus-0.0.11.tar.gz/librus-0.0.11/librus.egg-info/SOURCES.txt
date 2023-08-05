@@ -1,0 +1,9 @@
+README.md
+setup.py
+librus/__init__.py
+librus.egg-info/PKG-INFO
+librus.egg-info/SOURCES.txt
+librus.egg-info/dependency_links.txt
+librus.egg-info/requires.txt
+librus.egg-info/top_level.txt
+librus.egg-info/zip-safe
