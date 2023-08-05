@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: deep-daze
+Version: 0.4.6
+Summary: Deep Daze
+Home-page: https://github.com/lucidrains/deep-daze
+Author: Phil Wang
+Author-email: lucidrains@gmail.com
+License: MIT
+Keywords: artificial intelligence,deep learning,transformers,implicit neural representations,text to image
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: einops (>=0.3)
+Requires-Dist: fire
+Requires-Dist: ftfy
+Requires-Dist: siren-pytorch (>=0.0.8)
+Requires-Dist: torch (>=1.7.1)
+Requires-Dist: torch-optimizer
+Requires-Dist: torchvision (>=0.8.2)
+Requires-Dist: tqdm
+Requires-Dist: regex
+
+UNKNOWN
+
+
