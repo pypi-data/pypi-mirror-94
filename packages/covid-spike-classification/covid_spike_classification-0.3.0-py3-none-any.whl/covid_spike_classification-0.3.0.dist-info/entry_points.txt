@@ -1,0 +1,3 @@
+[console_scripts]
+covid-spike-classification = covid_spike_classification.__main__:main
+
