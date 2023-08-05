@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+build.sh
+package.sh
+setup.cfg
+setup.py
+pyBCS/__init__.py
+pyBCS/scanpy2bcs.py
+pyBCS_bioturing.egg-info/PKG-INFO
+pyBCS_bioturing.egg-info/SOURCES.txt
+pyBCS_bioturing.egg-info/dependency_links.txt
+pyBCS_bioturing.egg-info/top_level.txt

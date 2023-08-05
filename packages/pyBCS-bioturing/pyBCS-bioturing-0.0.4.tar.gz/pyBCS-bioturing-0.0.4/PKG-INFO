@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pyBCS-bioturing
+Version: 0.0.4
+Summary: Create BioTuring Compressed Study (bcs) file
+Home-page: https://www.bioturing.com
+Author: BioTuring
+Author-email: support@bioturing.com
+License: UNKNOWN
+Description: # pyBCS
+        
+        This is a python library to create a BioTuring Compressed Study (`bcs`) file from an AnnData (scanpy) object.
+        
+        `bcs` files can be imported directly into [BBrowser](https://bioturing.com/bbrowser), a software for single-cell data.
+        
+        Visit our [github](https://github.com/bioturing/pyBCS) for more detail.
+        
+        ## Example
+        
+        ```python
+        from pyBCS import scanpy2bcs
+        scanpy2bcs.format_data('/mnt/example/data.h5ad', '/mnt/example/data.bcs')
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
