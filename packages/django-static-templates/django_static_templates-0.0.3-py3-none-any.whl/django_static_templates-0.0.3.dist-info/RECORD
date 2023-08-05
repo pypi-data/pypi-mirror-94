@@ -1,0 +1,10 @@
+static_templates/__init__.py,sha256=yyLtGsBhynC-sSHdax-rRGvHNjH-gdWxIY68WnPVfDw,22
+static_templates/renderer.py,sha256=Newca_-L0PSFpznnXwWy5ixUPnumQ6X13I3ZmBCT71U,3575
+static_templates/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+static_templates/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+static_templates/management/commands/render_static_templates.py,sha256=xuu0FDYRl3gZuf3LNxIG7ss6g_nfrotcKY0cBcuHJSk,616
+django_static_templates-0.0.3.dist-info/LICENSE.rst,sha256=XjNSvpZ8kUMAdQO20p8UtHcHt4A3Xd4o3j4XOsSjUzA,1071
+django_static_templates-0.0.3.dist-info/METADATA,sha256=m5FxPb9AfwGSb9yFAbFHOCARPri7D7Ww0O7mpf0pCbI,2577
+django_static_templates-0.0.3.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+django_static_templates-0.0.3.dist-info/top_level.txt,sha256=AxcgP4nOF59oShQs2rEpT69E_ZvXw4PO6nJpTag6lUY,17
+django_static_templates-0.0.3.dist-info/RECORD,,
