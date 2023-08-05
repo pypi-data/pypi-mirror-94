@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+gevent_grpc_monkey_patch.egg-info/PKG-INFO
+gevent_grpc_monkey_patch.egg-info/SOURCES.txt
+gevent_grpc_monkey_patch.egg-info/dependency_links.txt
+gevent_grpc_monkey_patch.egg-info/requires.txt
+gevent_grpc_monkey_patch.egg-info/top_level.txt
