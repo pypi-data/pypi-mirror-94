@@ -1,0 +1,15 @@
+[MASTER]
+load-plugins=pylint.extensions.mccabe
+
+[BASIC]
+good-names=i,j,k,ex,Run,_,db
+
+[DESIGN]
+max-complexity=10
+min-public-methods=1
+
+[FORMAT]
+max-line-length=120
+
+[MESSAGES CONTROL]
+disable=missing-function-docstring

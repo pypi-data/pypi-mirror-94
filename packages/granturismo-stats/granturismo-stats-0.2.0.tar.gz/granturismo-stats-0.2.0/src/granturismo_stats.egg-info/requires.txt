@@ -1,0 +1,20 @@
+requests
+numpy
+
+[:python_version < "3.7"]
+dataclasses
+
+[dev]
+tox
+setuptools
+wheel
+twine
+check-manifest
+
+[tests]
+coverage
+pylint
+pytest
+pytest-cov
+pytest-pylint
+requests-mock
