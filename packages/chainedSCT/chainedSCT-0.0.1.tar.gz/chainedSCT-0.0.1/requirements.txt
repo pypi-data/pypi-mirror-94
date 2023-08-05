@@ -1,0 +1,6 @@
+psycopg2-binary
+Flask==0.12.2
+Faker
+numpy
+Flask-RESTFUL
+Flask-JWT
