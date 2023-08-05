@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: spider-lib
+Version: 0.0.0.3
+Summary: Spider
+Home-page: https://gitee.com/fubo_linux/spider
+Author: fubo
+Author-email: fb_linux@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: tqdm (==4.56.0)
+Requires-Dist: requests-async (==0.6.2)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: beautifulsoup4 (==4.9.3)
+Requires-Dist: pydantic (==1.7.3)
+
+Spider in python3 coroutine
+
+
