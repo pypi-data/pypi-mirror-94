@@ -1,0 +1,3 @@
+[console_scripts]
+dvk-archive-test = dvk_archive.test.all_tests:main
+
