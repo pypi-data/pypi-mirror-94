@@ -1,0 +1,3 @@
+[httpie.plugins.auth.v1]
+httpie_bearer_auth = httpie_bearer_auth:BearerAuthPlugin
+
