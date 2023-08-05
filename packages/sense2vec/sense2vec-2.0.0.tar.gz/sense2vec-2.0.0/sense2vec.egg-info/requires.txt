@@ -1,0 +1,8 @@
+spacy<4.0.0,>=3.0.0
+wasabi<1.1.0,>=0.8.1
+srsly<3.0.0,>=2.4.0
+catalogue<2.1.0,>=2.0.1
+numpy>=1.15.0
+
+[:python_version < "3.8"]
+importlib_metadata>=0.20
