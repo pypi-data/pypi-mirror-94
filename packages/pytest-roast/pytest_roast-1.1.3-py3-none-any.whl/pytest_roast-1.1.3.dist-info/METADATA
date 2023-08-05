@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pytest-roast
+Version: 1.1.3
+Summary: pytest plugin for ROAST configuration override and fixtures
+Home-page: https://github.com/Xilinx/pytest-roast
+Author: Ching-Hwa Yu
+Author-email: chinghwa@xilinx.com
+License: MIT
+Keywords: roast
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: pytest (<6)
+Requires-Dist: roast (>=2.0.0)
+Provides-Extra: dev
+Requires-Dist: pytest-mock ; extra == 'dev'
+Requires-Dist: pytest-black ; extra == 'dev'
+
+# pytest-roast
+pytest plugin for ROAST fixtures:
+
+1. Scenario generation
+2. Configuration generation and override
+3. Board session
+
+
