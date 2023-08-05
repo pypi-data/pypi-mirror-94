@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: k3fs
+Version: 0.1.5
+Summary: File-system Utilities
+Home-page: https://github.com/pykit3/k3fs
+Author: Zhang Yanpo
+Author-email: drdr.xp@gmail.com
+License: MIT
+Keywords: fs,file,dir
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: semantic-version (~=2.8.5)
+Requires-Dist: jinja2 (~=2.11.2)
+Requires-Dist: PyYAML (~=5.3.1)
+Requires-Dist: sphinx (~=3.3.1)
+Requires-Dist: k3confloader (~=0.1.1)
+Requires-Dist: k3ut (~=0.1.7)
+Requires-Dist: k3thread (~=0.1.0)
+
+# k3fs
+
+[![Build Status](https://travis-ci.com/pykit3/k3fs.svg?branch=master)](https://travis-ci.com/pykit3/k3fs)
+[![Documentation Status](https://readthedocs.org/projects/k3fs/badge/?version=stable)](https://k3fs.readthedocs.io/en/stable/?badge=stable)
+[![Package](https://img.shields.io/pypi/pyversions/k3fs)](https://pypi.org/project/k3fs)
+
+File-system Utilities
+
+k3fs is a component of [pykit3] project: a python3 toolkit set.
+
+
+# Install
+
+```
+pip install k3fs
+```
+
+# Synopsis
+
+```python
+>>> fwrite('/tmp/foo', "content")
+
+>>> fread('/tmp/foo')
+'content'
+>>> 'foo' in ls_files('/tmp/')
+True
+```
+
+#   Author
+
+Zhang Yanpo (张炎泼) <drdr.xp@gmail.com>
+
+#   Copyright and License
+
+The MIT License (MIT)
+
+Copyright (c) 2015 Zhang Yanpo (张炎泼) <drdr.xp@gmail.com>
+
+
+[pykit3]: https://github.com/pykit3
+
