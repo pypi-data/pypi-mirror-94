@@ -1,0 +1,3 @@
+[console_scripts]
+msise00 = msise00.__main__:cli
+
