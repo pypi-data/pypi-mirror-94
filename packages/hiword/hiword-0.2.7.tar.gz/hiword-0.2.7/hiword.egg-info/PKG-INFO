@@ -1,0 +1,37 @@
+Metadata-Version: 1.2
+Name: hiword
+Version: 0.2.7
+Summary: Hi, word!
+Home-page: https://github.com/jadbin/hiword
+Author: jadbin
+Author-email: jadbin.com@hotmail.com
+License: Apache 2
+Description: ======
+        HiWord
+        ======
+        
+        .. image:: https://img.shields.io/badge/license-Apache 2-blue.svg
+            :target: https://github.com/jadbin/hiword/blob/master/LICENSE
+        
+        Overview
+        ========
+        
+        HiWord is used to extract keywords from documents.
+        
+        Installation
+        ============
+        
+        Install or update using pip::
+        
+            $ pip install -U hiword
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5
