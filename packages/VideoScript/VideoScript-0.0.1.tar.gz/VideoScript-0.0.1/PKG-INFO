@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: VideoScript
+Version: 0.0.1
+Summary: VideoScript is a compiler for the VideoScript video-making language.
+Home-page: https://github.com/josephernest/VideoScript
+Author: Joseph Ernest
+Author-email: contact@videoscript.org
+License: UNKNOWN
+Description: No release on PyPI yet, see https://github.com/josephernest/VideoScript.
+Platform: any
+Classifier: Development Status :: 1 - Planning
