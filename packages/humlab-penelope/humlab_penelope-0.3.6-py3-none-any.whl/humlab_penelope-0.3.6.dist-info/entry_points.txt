@@ -1,0 +1,5 @@
+[console_scripts]
+co_occurrence=penelope.scripts.co_occurrence:main
+compute_topic_model=penelope.scripts.compute_topic_model:main
+vectorize_corpus=penelope.scripts.vectorize_corpus:main
+
