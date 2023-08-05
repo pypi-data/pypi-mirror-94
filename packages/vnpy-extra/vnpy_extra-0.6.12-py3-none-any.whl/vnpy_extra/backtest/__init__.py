@@ -1,0 +1,47 @@
+"""
+@author  : MG
+@Time    : 2020/10/9 12:00
+@File    : __init__.py.py
+@contact : mmmaaaggg@163.com
+@desc    : 用于
+"""
+import enum
+import time
+from threading import Thread
+
+
+class CrossLimitMethod(enum.IntEnum):
+    open_price = 0
+    mid_price = 1
+    worst_price = 2
+
+
+class CleanupOrcaServerProcessIntermittent(Thread):
+
+    def __init__(self, sleep_time=5, interval=1800):
+        super().__init__()
+        self.is_running = True
+        self.interval = interval
+        self.sleep_time = sleep_time
+        self.sleep_count = interval // sleep_time
+
+    def run(self) -> None:
+        from plotly.io._orca import cleanup
+        count = 0
+        while self.is_running:
+            time.sleep(self.sleep_time)
+            count += 1
+            if count % self.sleep_count == 0 or not self.is_running:
+                cleanup()
+                count = 0
+
+
+DEFAULT_STATIC_ITEMS = [
+    "available", "info_ratio",
+    "max_new_higher_duration", "daily_trade_count", "return_drawdown_ratio",
+    "image_file_url",
+    "strategy_class_name", "id_name", "symbols", "cross_limit_method", "backtest_status",
+]
+
+STOP_OPENING_POS_PARAM = "stop_opening_pos"
+ENABLE_COLLECT_DATA_PARAM = "enable_collect_data"
