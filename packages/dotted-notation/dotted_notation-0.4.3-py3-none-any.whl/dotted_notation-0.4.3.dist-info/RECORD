@@ -1,0 +1,16 @@
+dotted/__init__.py,sha256=hzQGsIhOS84oMydVQrVm7dkvXRuQQdhqrp9ElVUVxdo,154
+dotted/__main__.py,sha256=dkJsFn6FksZS5jZx6dSKBonNJxBe_vW1TtbbSHnxyoM,63
+dotted/api.py,sha256=xT97YJHDTeF60m1dJkC7CDMQ5Phu9kaWlnCtghpvRyo,7165
+dotted/elements.py,sha256=ve2EkpUGeIf0OBaUm-dZsU0HEoY-2FYuepg5ez7dljU,16774
+dotted/grammar.py,sha256=t0NaQXXYkfBBiyCNQQ8RMZJIo5vRewxkAxhos5VKiH0,2259
+dotted/transforms.py,sha256=ycS50GAnpqBCG5VQS9oGs4wwksNr44GnP621N2sSqdY,3591
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_appender.py,sha256=BbHFjENX7zA5vCkVe5bfEAYnmh5twEVrj2bpxaVVgNA,1442
+tests/test_invert.py,sha256=pRitt_YQM_jPlbY7ANLqlOSijNALryg3gBRfKrJ71nM,1060
+tests/test_numeric.py,sha256=0H5nnszvihTG6Yi6dxPTcop0XihpvlA2hPg9ah7GrPw,960
+tests/test_slice.py,sha256=QpPnkdZXtaohSxUB2gBcIy3gdP1YiY5N8Aeo-5D15T8,713
+dotted_notation-0.4.3.dist-info/LICENSE,sha256=tfaXh_Z7MeQfIHLg0fXMJDZMTHQuOiAv50Wdg2YWHbA,1066
+dotted_notation-0.4.3.dist-info/METADATA,sha256=MQNiuEVIWL1EJXZGhKxpEcGSNBTCWwdGC_2pLuksplk,4632
+dotted_notation-0.4.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dotted_notation-0.4.3.dist-info/top_level.txt,sha256=tVYcYdxsYpQ3jBD8850z6H0HR7huY2HvOspD0PUZg2Y,13
+dotted_notation-0.4.3.dist-info/RECORD,,
