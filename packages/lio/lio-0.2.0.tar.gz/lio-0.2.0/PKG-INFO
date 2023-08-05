@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: lio
+Version: 0.2.0
+Summary: Learning from Indirect Observations
+Home-page: https://github.com/YivanZhang/lio
+Author: Yivan Zhang
+Author-email: yivanzhang@ms.k.u-tokyo.ac.jp
+License: MIT
+Description: # lio
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
