@@ -1,0 +1,49 @@
+\documentclass[{{ options.latex_documentclass_options }}]{article}
+\usepackage[{{ options.latex_geometry_options }}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{multirow}
+\pagestyle{empty}
+\begin{document}
+
+\{{ options.latex_font_size }}
+
+{% for eleve, results in questions_par_eleve.items() %}
+\vfill
+
+  { \bf
+  \begin{tabular}{ c *{6}{c}}
+    {{entete_par_eleve[eleve].nom_devoir}} & {{entete_par_eleve[eleve].nom }} & {{ entete_par_eleve[eleve].rang }} & {{ entete_par_eleve[eleve].note }} & {{ entete_par_eleve[eleve].moyenne }} & {{ entete_par_eleve[eleve].moyenne }} & {{ entete_par_eleve[eleve].ecart_type }} \\
+  \hline
+  \end{tabular}
+  }
+
+  { \bf
+  \begin{tabular}{ c *{ {{ synthese_probleme_par_eleve[eleve] | length }} }{c}}
+  {% for result in synthese_probleme_par_eleve[eleve] %}
+  {% if loop.index == loop.length %}
+  {{ result }} \\
+  {% else %}
+  {{ result }} &
+  {% endif %}
+
+  {% endfor %}
+  \end{tabular}
+  }
+{% for result in results %}
+\vfill
+{{ result.to_latex(float_format="%.2f", index_names=False, multirow=True) }}
+\vfill
+{% endfor %}
+\vspace{0.3cm}
+\hrule
+\vspace{0.3cm}
+\vfill
+{% if loop.index is divisibleby par_page %}
+\newpage
+{% endif %}
+{% endfor %}
+
+
+\end{document}
