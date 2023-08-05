@@ -1,0 +1,10 @@
+click
+appdirs
+requests
+fiona
+shapely
+tqdm
+numpy
+rasterio
+geopy
+python-dateutil
