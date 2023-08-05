@@ -1,0 +1,6 @@
+starlette
+
+[test]
+pytest
+pytest-cov
+itsdangerous
