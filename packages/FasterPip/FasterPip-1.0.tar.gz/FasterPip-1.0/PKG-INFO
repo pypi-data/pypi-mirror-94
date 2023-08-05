@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: FasterPip
+Version: 1.0
+Summary: Faster pip for Python users can be used to install Python modules
+Home-page: https://github.com/mstouk57g/FasterPip
+Author: mstouk57g
+Author-email: mstouk57g@yeah.net
+License: UNKNOWN
+Description: # FasterPip
+        You can see the lastest README in our website.
+        
+        [https://github.com/mstouk57g/FasterPip/blob/main/README.md](https://github.com/mstouk57g/FasterPip/blob/main/README.md)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
