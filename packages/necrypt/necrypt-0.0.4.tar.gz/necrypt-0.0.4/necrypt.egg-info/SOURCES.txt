@@ -1,0 +1,16 @@
+HISTORY.rst
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+versioneer.py
+necrypt/__init__.py
+necrypt/_version.py
+necrypt/necrypt.py
+necrypt.egg-info/PKG-INFO
+necrypt.egg-info/SOURCES.txt
+necrypt.egg-info/dependency_links.txt
+necrypt.egg-info/not-zip-safe
+necrypt.egg-info/requires.txt
+necrypt.egg-info/top_level.txt

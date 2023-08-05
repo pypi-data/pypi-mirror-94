@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: necrypt
+Version: 0.0.4
+Summary: Encryption method
+Home-page: https://github.com/mghorbani2357/Necrypt
+Author: Mohsen Ghorbani
+Author-email: m.ghorbani2357@gmail.com
+License: MIT
+Description: .. |license| image:: https://img.shields.io/pypi/l/necrypt
+            :target: https://pypi.python.org/pypi/necrypt
+            :alt: PyPI - License
+        
+        *******
+        Necrypt
+        *******
+        
+        |license|
+        
+        Necrypt provides method which generate new cipher for each encryption.
+        
+        Installation
+        ============
+        
+        .. code-block:: bash
+        
+            pip install necrypt
+        .. :changelog:
+        
+        Changelog
+        =========
+        
+        v0.0.4
+        ------
+        Release Date: 2021-02-05
+            * Import/Export of key added.
+        
+        v0.0.3
+        ------
+        Release Date: 2021-02-04
+            * File encryption/decryption added.
+        
+        v0.0.2
+        ------
+        Release Date: 2021-02-04
+            * Sign and verify added.
+        
+        v0.0.1
+        ------
+        Release Date: 2021-02-03
+            * Initial package.
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/x-rst
