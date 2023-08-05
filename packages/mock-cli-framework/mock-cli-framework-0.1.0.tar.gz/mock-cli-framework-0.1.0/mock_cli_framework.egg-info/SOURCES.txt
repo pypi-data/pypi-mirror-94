@@ -1,0 +1,13 @@
+README.md
+setup.py
+mock_cli/__about__.py
+mock_cli/__init__.py
+mock_cli/about.py
+mock_cli/argv_conversion.py
+mock_cli/mock_cmd.py
+mock_cli/path.py
+mock_cli/responses.py
+mock_cli_framework.egg-info/PKG-INFO
+mock_cli_framework.egg-info/SOURCES.txt
+mock_cli_framework.egg-info/dependency_links.txt
+mock_cli_framework.egg-info/top_level.txt
