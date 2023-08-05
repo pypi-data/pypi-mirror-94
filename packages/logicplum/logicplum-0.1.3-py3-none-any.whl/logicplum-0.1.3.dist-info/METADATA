@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: logicplum
+Version: 0.1.3
+Summary: This client library is designed to support the LogicPlum API.
+Home-page: https://github.com/LogicPlum/logicplum_v2
+Author: LogicPlum
+Author-email: message@logicplum.com
+License: MIT
+Keywords: logicplum machine-learning AI automl prediction model
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: pandas (>=1.2.1)
+Requires-Dist: twine (>=3.3.0)
+
+# LogicPlum Module
+LogicPlum is a client library for working with the LogicPlum platform API.
+
+
+Example
+------------
+```
+>>> import pandas as pd
+>>> from logicplum import LogicPlum
+>>>
+>>> deployment_id = "DEPLOYMENT_ID"
+>>> df = pd.read_csv("datatopredict.csv")
+>>>
+>>> lp = LogicPlum("YOUR-API-KEY")
+>>>
+>>> score = lp.score(deployment_id, df)
+>>> score
+```
+
+
