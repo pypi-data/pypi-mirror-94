@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pypartpicker
+Version: 0.3
+Summary: A package that scrapes pcpartpicker.com and returns the results as objects.
+Home-page: https://github.com/QuaKe8782/pypartpicker
+Author-email: mastermind4560@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/QuaKe8782/pypartpicker/archive/v0.3.tar.gz
+Description: # PyPartPicker
+        
+        #### PyPartPicker is a package that allows you to obtain information from PCPartPicker quickly and easily, with data being returned via objects with numerous attributes.
+        
+        ### Features:
+        - Obtain Part objects, estimated wattage and total cost from PCPartPicker lists.
+        - Obtain name, product URl, price, product type, image and more from Part objects.
+        - Obtain everything previously mentioned + specs, reviews and in depth pricing information from PCPartPicker product links
+        
+        
+        #Installation
+        Installation via pip:
+        ```
+        >>> pip install pypartpicker
+        ```
+        Or clone the repo directly:
+        ```
+        >>> git clone https://github.com/QuaKe8782/pypartpicker.git
+        ```
+        # Methods
+        *Full documentation coming soon*
+Keywords: pcpartpicker,scraper,list,beautifulsoup,pc,parts
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
