@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.py
+discord_logger/__init__.py
+discord_logger/message_logger.py
+discord_logger/utils.py
+discord_logger.egg-info/PKG-INFO
+discord_logger.egg-info/SOURCES.txt
+discord_logger.egg-info/dependency_links.txt
+discord_logger.egg-info/requires.txt
+discord_logger.egg-info/top_level.txt
+examples/__init__.py
+examples/basic_message.py
+examples/basic_message_without_hostname.py
+examples/complete_error_traceback.py
+examples/error_message.py
+examples/success_message.py
