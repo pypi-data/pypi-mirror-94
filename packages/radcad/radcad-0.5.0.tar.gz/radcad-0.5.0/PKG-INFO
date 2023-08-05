@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: radcad
+Version: 0.5.0
+Summary: A cadCAD implementation, for dynamical systems modelling & simulation
+Author: Benjamin Scholtz
+Author-email: ben@bitsofether.com
+Requires-Python: >=3.7,<3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: compat
+Requires-Dist: boto3 (>=1.16.43,<2.0.0)
+Requires-Dist: cadCAD (>=0.4.23,<0.5.0); extra == "compat"
+Requires-Dist: pandas (>=1.1.5,<2.0.0)
+Requires-Dist: pathos (>=0.2.7,<0.3.0)
+Requires-Dist: pytest-monitor (>=1.5.0,<2.0.0)
+Requires-Dist: ray (>=1.1.0,<2.0.0)
