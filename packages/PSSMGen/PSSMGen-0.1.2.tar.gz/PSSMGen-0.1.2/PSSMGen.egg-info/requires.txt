@@ -1,0 +1,12 @@
+numpy>=1.13
+scipy
+biopython
+pdb2sql>=0.5
+
+[test]
+nose
+coverage
+pytest
+pytest-cov
+codacy-coverage
+coveralls
