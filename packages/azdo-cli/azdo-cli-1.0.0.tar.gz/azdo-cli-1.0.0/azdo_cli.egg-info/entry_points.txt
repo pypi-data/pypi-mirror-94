@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    azdocli=azdocli.azdocli:cli
+    
