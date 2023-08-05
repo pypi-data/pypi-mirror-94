@@ -1,0 +1,7 @@
+matplotlib
+numpy
+omegaconf>=2.0
+opencv-python-headless
+pandas
+PySide2>=5.15
+vidio>=0.0.3
