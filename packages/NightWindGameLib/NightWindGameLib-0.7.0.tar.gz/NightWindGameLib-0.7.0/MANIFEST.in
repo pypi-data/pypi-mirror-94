@@ -1,0 +1,9 @@
+recursive-include NightWindGameLib/images_car *
+recursive-include NightWindGameLib/images_cards *
+recursive-include NightWindGameLib/images_fish *
+recursive-include NightWindGameLib/images_cat *
+recursive-include NightWindGameLib/images_alien *
+recursive-include NightWindGameLib/images_picture *
+recursive-include NightWindGameLib/images_render *
+recursive_include NightWindGameLib/pydub_audio *
+recursive_include NightWindGameLib/images_tag *
