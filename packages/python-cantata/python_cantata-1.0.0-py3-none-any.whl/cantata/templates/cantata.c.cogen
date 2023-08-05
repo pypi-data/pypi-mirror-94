@@ -1,0 +1,952 @@
+/**
+ ******************************************************************************
+ * @details This file was created with cantata, a code generation tool for can databases
+ * @author Pol Feliu Cuberes
+ * @link https://github.com/polfeliu/cantata
+ ******************************************************************************
+ */
+/*[[[cog
+import cog
+cog.out("""
+#include "cantata%s.h" 
+""" % (prefix))
+
+if settings['CallbackLib'] is not None:
+    cog.outl("""#include "%s.h" """ % (settings['CallbackLib']))
+]]]*/
+//[[[end]]]
+
+uint64_t reverseBits(uint64_t num, uint8_t NO_OF_BITS)
+{
+    uint64_t reverse_num = 0;
+    uint64_t temp = num;
+    uint64_t pos = (uint64_t)1 << (NO_OF_BITS - 1);
+    while(pos != 0)
+    {
+        if(temp & 1)
+            reverse_num |= pos;
+
+        temp = temp >> 1;
+        pos = pos >> 1;
+    }
+
+    return reverse_num;
+}
+
+uint32_t SingleToUint32(single s){
+    union SingleUint32_u{
+        single s;
+        uint32_t u;
+    }SingleUint32 = { .s = s};
+
+    return SingleUint32.u;
+}
+single Uint32ToSingle(uint32_t u){
+    union SingleUint32_u{
+        single s;
+        uint32_t u;
+    }SingleUint32 = { .u = u};
+
+    return SingleUint32.s;
+}
+
+uint64_t DoubleToUint64(double d){
+    union DoubleUint64_u{
+        double d;
+        uint64_t u;
+    }DoubleUint64 = { .d = d};
+    return DoubleUint64.u;
+}
+
+double Uint64ToDouble(uint64_t u){
+    union DoubleUint64_u{
+        double d;
+        uint64_t u;
+    }DoubleUint64 = { .u = u};
+    return DoubleUint64.d;
+}
+
+/*[[[cog
+import cog
+if settings['FreeRTOSInteractionLayer']:
+    cog.out("""
+/*
+ * Interaction Layer: Tasks to send the cyclic messages
+ */
+        """);
+
+    for time, ILframes in InteractionLayer['CycleTimeGroups'].items():
+        cog.out("""
+TaskHandle_t vTaskInteractionLayer_%s_cyclic_%sms_Handle;
+static void vTaskInteractionLayer_%s_cyclic_%sms( void *pvParameters ){
+    const TickType_t xTimeIncrement = pdMS_TO_TICKS(%s);
+    TickType_t xLastWakeTime = xTaskGetTickCount();
+    for(;;){
+""" %(prefix, time, 
+    prefix, time, 
+    time));
+
+        for frame in ILframes:
+            cog.out("""
+        %s_%s.send();""" %(prefix, frame))
+    
+        cog.out("""
+
+        vTaskDelayUntil(&xLastWakeTime, xTimeIncrement);
+    }
+}
+    """);
+
+    if InteractionLayer['CycleTimeFastMsg']:
+        cog.out("""
+/*
+ * Interaction Layer: Tasks to send the cyclic message at fast rate
+ */
+        """);
+        for framename, info in InteractionLayer['CycleTimeFastMsg'].items():
+
+            cog.out("""
+TaskHandle_t vTaskInteractionLayer_%s_%s_fast_Handle;
+static void vTaskInteractionLayer_%s_%s_fast( void *pvParameters ){
+    const TickType_t xTimeIncrement = pdMS_TO_TICKS(%s);
+    vTaskSuspend(vTaskInteractionLayer_%s_%s_fast_Handle); //Start in Suspended State
+    for(;;){
+""" %(prefix, framename,
+      prefix, framename,
+        info['time'],
+        prefix, framename        
+    ));
+
+            if len(info['ActiveRepetitionsResetSignals']) > 0: 
+                cog.out("""
+        if(false""")
+                for ActiveRepetitionsResetSignal in info['ActiveRepetitionsResetSignals']:
+                    cog.out("""
+            |(%ssig_%s.raw != %ssig_%s.inactiveValue)"""%(prefix, ActiveRepetitionsResetSignal, prefix, ActiveRepetitionsResetSignal))
+                cog.out("""
+        ){
+            %s_%s.repetitionsleft = %s_%s.repetitions;
+        }
+        """ % (prefix, framename,prefix, framename))
+
+
+
+            cog.out("""
+        if((%s_%s.repetitionsleft == 0)"""  %(prefix, framename)) 
+            for ActiveCheckSignal in info['ActiveCheckSignals']:
+                    cog.out("""
+            &(%ssig_%s.raw == %ssig_%s.inactiveValue)"""%(prefix, ActiveCheckSignal, prefix, ActiveCheckSignal))
+            cog.out("""
+        ){
+            // If repetitions are completed and signals are inactive suspend the task
+            vTaskSuspend(vTaskInteractionLayer_%s_%s_fast_Handle);""" %(prefix, framename))
+            
+            cog.out("""
+        }else{
+            %s_%s.send();
+            if(%s_%s.repetitionsleft > 0){
+                %s_%s.repetitionsleft--;
+            }
+            vTaskDelay(xTimeIncrement);
+        }       
+        """ % ( prefix, framename,
+                prefix, framename,
+                prefix, framename
+            ))
+
+            cog.out("""
+    }
+}""")
+
+
+            if info["FastDelayedResumeTask"]:
+                cog.out("""
+TaskHandle_t vTaskInteractionLayer_%s_%s_fastDelayedResume_Handle;
+static void vTaskInteractionLayer_%s_%s_fastDelayedResume( void *pvParameters ){
+    for(;;){
+        xTaskNotifyWait( 0,     //ulBitsToClearOnEntry
+                         0,     //ulBitsToClearOnExit
+                         NULL,  //*pulNotificationValue
+                         portMAX_DELAY );
+        vTaskDelay(pdMS_TO_TICKS(%s));
+        %s_%s.repetitionsleft = %s_%s.repetitions;
+        vTaskResume(vTaskInteractionLayer_%s_%s_fast_Handle);
+    }
+}
+
+"""%( prefix, framename,
+        prefix,framename,
+        info['time'],
+        prefix,framename,prefix,framename,
+        prefix,framename))
+
+
+    if InteractionLayer['OnWriteOnChange']:
+        cog.out("""
+/*
+ * Interaction Layer: Task to send Messages whose signals are sensitive to Write or Change
+ */
+TaskHandle_t vTaskInteractionLayer_%s_OnWriteOnChange_Handle;
+static void vTaskInteractionLayer_%s_OnWriteOnChange(void *pvParameters){
+    for(;;){
+        xTaskNotifyWait( 0,     //ulBitsToClearOnEntry
+                         0,     //ulBitsToClearOnExit
+                         NULL,  //*pulNotificationValue
+                         portMAX_DELAY );
+    """ %(prefix,prefix))
+    
+        for framename, sensitiveSignals in InteractionLayer['OnWriteOnChange'].items():
+            cog.out("""
+        if(false""");
+            for s in sensitiveSignals:
+                cog.out("""
+            || (%ssig_%s.sent == false)"""%(prefix,s));
+
+            cog.out("""
+        ){
+            %s_%s.send();
+        }
+    """%(prefix, framename))
+
+        cog.out("""
+    }
+}
+    """ %())
+
+]]]*/
+//[[[end]]]
+
+/*[[[cog
+import cog
+if settings['FreeRTOSInteractionLayer']:
+    cog.out("""
+/*
+ * Interaction Layer: Start function to initialize tasks
+ */""");
+
+    cog.out("""
+void %s_InteractionLayerStart(){""" % prefix)
+
+    cog.out("""
+
+    /*
+     * Cyclic Tasks
+     */""")
+    for time, ILframes in InteractionLayer['CycleTimeGroups'].items():
+        cog.out("""
+    xTaskCreate(
+        vTaskInteractionLayer_%s_cyclic_%sms,
+        "InteractionLayer_%s_cyclic_%sms",
+        100,
+        NULL,
+        tskIDLE_PRIORITY,
+        &vTaskInteractionLayer_%s_cyclic_%sms_Handle
+    ); """ % (  prefix, time,
+                prefix, time,
+                prefix, time,
+                ))
+
+    cog.out("""
+
+    /*
+     * Fast Time Tasks
+     */""")
+
+    for framename, info in InteractionLayer['CycleTimeFastMsg'].items():
+        cog.out("""
+    xTaskCreate(
+        vTaskInteractionLayer_%s_%s_fast,
+        "vTaskInteractionLayer_%s_%s_fast",
+        100,
+        NULL,
+        tskIDLE_PRIORITY,
+        &vTaskInteractionLayer_%s_%s_fast_Handle
+    ); """ % (  prefix, framename,
+                prefix, framename,
+                prefix, framename
+                ))
+
+        if info['FastDelayedResumeTask']:
+            
+            cog.out("""
+    xTaskCreate(
+        vTaskInteractionLayer_%s_%s_fastDelayedResume,
+        "vTaskInteractionLayer_%s_%s_fastDelayedResume",
+        100,
+        NULL,
+        tskIDLE_PRIORITY,
+        &vTaskInteractionLayer_%s_%s_fastDelayedResume_Handle
+    ); """ % (  prefix, framename,
+                prefix, framename,
+                prefix, framename
+                ))
+
+    if InteractionLayer['OnWriteOnChange']:
+
+
+    	cog.out("""
+
+    /*
+     * OnWriteOnChange Task
+     */
+    xTaskCreate(
+        vTaskInteractionLayer_%s_OnWriteOnChange,
+        "vTaskInteractionLayer_%s_OnWriteOnChange",
+        100,
+        NULL,
+        tskIDLE_PRIORITY,
+        &vTaskInteractionLayer_%s_OnWriteOnChange_Handle
+    ); """ % (prefix,prefix,prefix))
+
+    cog.out("""
+}""")
+]]]*/
+//[[[end]]]
+
+
+
+
+/*[[[cog
+import cog
+if settings['FreeRTOSInteractionLayer']:
+    cog.out("""
+/*
+ * Interaction Layer: Function to Stop Tasks
+ */""");
+
+    cog.out("""
+void %s_InteractionLayerStop(){""" % prefix)
+    
+    cog.out("""
+
+    /*
+     * Cyclic Tasks
+     */""")
+    for time, ILframes in InteractionLayer['CycleTimeGroups'].items():
+        cog.out("""
+    vTaskDelete(
+        vTaskInteractionLayer_%s_cyclic_%sms_Handle
+    ); """ % (  prefix, time,
+                ))
+
+    cog.out("""
+
+    /*
+     * Fast Time Tasks
+     */""")
+    for framename, info in InteractionLayer['CycleTimeFastMsg'].items():
+
+        cog.out("""
+    vTaskDelete(
+        vTaskInteractionLayer_%s_%s_fast_Handle
+    ); """ % (  prefix, framename
+                ))
+
+        if info['FastDelayedResumeTask']:
+            cog.out("""
+    vTaskDelete(
+        vTaskInteractionLayer_%s_%s_fastDelayedResume_Handle
+    ); """ % (  prefix, framename ))
+
+
+    if InteractionLayer['OnWriteOnChange']:
+    	cog.out("""
+
+    /*
+     * OnWriteOnChange Task
+     */
+    vTaskDelete(
+        vTaskInteractionLayer_%s_OnWriteOnChange_Handle
+    ); """ % (prefix))
+
+    cog.out("""
+}""")
+]]]*/
+//[[[end]]]
+
+
+
+
+
+/*
+ * CAN Callbacks: Receive Callback function. This function should be called when a new message arrives. The function automatically identifies the message and unpacks it into the signals
+ */
+/*[[[cog
+import cog
+if settings['CallbackLib'] is not None:
+    additionalparameters = ""
+    if BusType=="CAN FD":
+        additionalparameters += ", bool FDF, bool BRS"
+
+    cog.out(
+"""
+void %s_ReceiveCallback(uint8_t data[], uint8_t DLC, uint32_t ID, bool is_extended%s){
+    if((ID > 0x1FFFFFFF) & is_extended){
+        //invalid extended identifier
+    }else if((ID > 0x7FF) & !is_extended){
+        //invalid standard identifier
+    }
+""" %(prefix, additionalparameters));
+
+for framename, frame in frames.items():
+    if frame['RX']:
+        additionalchecks = ""
+        if BusType=="CAN FD":
+            additionalchecks += " & (FDF==%s_%s.FDF) & (BRS==%s_%s.BRS)" % (prefix, framename, prefix, framename)
+        cog.out(
+"""
+    else if((ID==%s_%s.ID) & (is_extended==%s_%s.is_extended) & (DLC==%s_%s.DLC)%s){
+        memcpy(%s_%s.raw.bytes, data, sizeof %s_%s.raw.bytes);
+        %s_%s.receive();"""
+        %(prefix, framename, prefix, framename, prefix, framename, additionalchecks,
+        prefix, framename, prefix, framename, 
+        prefix, framename
+        ));
+
+
+        cog.out("""
+    }""")
+
+
+cog.out("""
+    else{
+        //ID is not received by this ECU
+    }
+}
+""");
+]]]*/
+//[[[end]]]
+
+
+/*
+ * Signal getValue, setValue and setRaw method prototypes
+ */
+
+/*[[[cog
+import cog
+for signame, sig in signals.items():
+    cog.outl(
+"""static %s %ssig_%s_getValue();"""
+    % (
+        sig['getsetValue_type'],prefix,signame
+    ));
+    if sig['TX']:
+        cog.outl(
+"""static bool %ssig_%s_setValue(%s);"""
+        % (
+            prefix, signame, sig['getsetValue_type']
+        ));
+
+        cog.outl(
+"""static void %ssig_%s_setRaw(%s);"""
+        % (
+            prefix, signame, sig['value_type']
+        ));
+
+]]]*/
+//[[[end]]]
+
+
+/*
+ * Signals: Signal struct definitions
+ */
+
+/*[[[cog
+import cog
+for signame, sig in signals.items():
+    cog.out(
+"""
+struct %ssig_%s_t %ssig_%s = {
+    .length = %s,
+    .byte_order = %s,
+    .value_type = T%s,
+    .unit = "%s",
+    .initial_value = %s,
+    .factor = %s,
+    .offset = %s,
+    .min = %s,
+    .max = %s,
+    .raw = %s,
+    .getValue = %ssig_%s_getValue"""
+    % (
+        prefix, signame, prefix, signame,
+        sig['length'],
+        sig['byte_order'],
+        sig['value_type'],
+        sig['unit'],
+        sig['initial_value'],
+        sig['factor'],
+        sig['offset'],
+        sig['min'],
+        sig['max'],
+        sig['initial_value_raw'],
+        prefix,signame,
+    ));
+
+    if sig["TX"]:
+        cog.out(
+    """,
+    .setValue = %ssig_%s_setValue,
+    .setRaw = %ssig_%s_setRaw"""
+        % (
+            prefix,signame,
+            prefix,signame
+        ));
+
+        if settings['FreeRTOSInteractionLayer']:
+            cog.out(
+    """,
+    .sent = true""") # For now we don't have initialization properly handled on the Interaction Layer so this will keep me out of trouble for now
+            if 'GenSigSendType' in sig['attributes']:
+                GenSigSendType = sig['attributes']['GenSigSendType'].value
+                choices = sig['attribute_definitions']['GenSigSendType'].choices
+
+                if (GenSigSendType == choices.index("IfActive")) or (GenSigSendType == choices.index("IfActiveWithRepetition")):
+                    if 'GenSigInactiveValue' in sig['attributes']:
+                        inactiveValue = sig['attributes']['GenSigInactiveValue'].value
+                    else:
+                        inactiveValue = 0;
+                    cog.out(""",
+    .inactiveValue = %s,""" %(inactiveValue))
+                
+
+
+
+    cog.out("""
+};
+    """)
+
+]]]*/
+//[[[end]]]
+
+/*
+ * Signals: Signal getValue and setValue private methods
+ */
+/*[[[cog
+import cog
+for signame, sig in signals.items():
+    cog.outl("") #Space
+    cog.out("""
+// %s
+""" % (signame))
+    cog.out(
+"""static %s %ssig_%s_getValue(){
+"""%(sig['getsetValue_type'],prefix,signame));
+
+    if settings['getsetValueOptimizeIdentity'] & (sig['factor'] == 1) & (sig['offset'] == 0):
+        cog.out(
+"""     return %ssig_%s.raw;
+}
+"""%(prefix,signame,));
+
+    else:
+        cog.out(
+"""     return ((double) %ssig_%s.raw) * %ssig_%s.factor + %ssig_%s.offset;
+}
+"""% (prefix,signame,prefix,signame,prefix,signame));
+
+    if sig['TX']:
+        cog.out(
+"""static bool %ssig_%s_setValue(%s val){
+    bool saturation = false;"""%(prefix, signame, sig['getsetValue_type']));
+
+        if settings['getsetValueOptimizeIdentity'] & (sig['factor'] == 1) & (sig['offset'] == 0):
+            cog.out("""
+    %ssig_%s.setRaw(val);""" % (prefix, signame));
+
+        else:
+            cog.out("""
+    if(val > %ssig_%s.max){
+        saturation = true;
+        val = %ssig_%s.max;
+    }else if(val < %ssig_%s.min){
+        saturation = true;
+        val = %ssig_%s.min;
+    }
+
+    %ssig_%s.setRaw((val-%ssig_%s.offset)/%ssig_%s.factor);"""
+        % (
+            prefix, signame,
+            prefix, signame,
+            prefix, signame,
+            prefix, signame,
+            prefix, signame, prefix, signame, prefix, signame
+        ));
+    
+        cog.out("""
+    return !saturation;
+}
+""");
+
+
+        def NotifyOnWriteOnChange():
+            cog.out("""
+    xTaskNotify( vTaskInteractionLayer_%s_OnWriteOnChange_Handle, 0, eNoAction );""" %(prefix))
+
+        def setSentFalse(signame):
+            cog.out("""
+    %ssig_%s.sent = false;"""%(prefix, signame))
+
+        def IfDifferentInit(signame):
+            cog.out("""
+    if(raw != %ssig_%s.raw){"""%(prefix, signame)) 
+
+        def IfDifferentEnd():
+            cog.out("""
+    }""")
+
+        def resetRepetitions(parentframe):
+            cog.out("""
+    %s_%s.repetitionsleft = %s_%s.repetitions;"""%(prefix, parentframe, prefix, parentframe))
+  
+        def NotifyFastDelayedResumeTask(framename):
+            cog.out("""
+    xTaskNotify(vTaskInteractionLayer_%s_%s_fastDelayedResume_Handle, 0, eNoAction);""" %(prefix, framename));
+
+        def IfActiveCheck(signame, parentframes, repetitions=False):
+            cog.out("""
+    if(raw != %ssig_%s.inactiveValue){
+        %ssig_%s.sent = false;"""%(prefix, signame, prefix, signame))
+            for parentframe in parentframes:
+                if repetitions:
+                    cog.out("""
+        %s_%s.repetitionsleft = %s_%s.repetitions;""" %( prefix, parentframe, prefix, parentframe))
+
+                cog.out("""
+        vTaskResume(vTaskInteractionLayer_%s_%s_fast_Handle);""" %(prefix, parentframe
+                ))
+                
+
+            cog.out("""
+    }""")
+
+        def setRaw():
+            cog.out("""
+    %ssig_%s.raw = raw;"""%(
+            prefix, signame
+            ));    
+
+        cog.out(
+"""static void %ssig_%s_setRaw(%s raw){"""%(
+        prefix, signame, sig['value_type']
+        ));
+       
+
+        if settings['FreeRTOSInteractionLayer']:
+            
+            if 'GenSigSendType' in sig['attributes']:
+                GenSigSendType = sig['attributes']['GenSigSendType'].value
+                choices = sig['attribute_definitions']['GenSigSendType'].choices
+
+                if GenSigSendType == choices.index("Cyclic"):
+                    #Do Nothing. Cyclics are typically defined in messages
+                    pass
+                elif GenSigSendType == choices.index("OnWrite"):
+                    cog.out("""
+// GenSigSendType: OnWrite""")
+                    setSentFalse(signame)
+                    setRaw();
+                    NotifyOnWriteOnChange()
+                elif GenSigSendType == choices.index("OnWriteWithRepetition"):
+                    cog.out("""
+// GenSigSendType: OnWriteWithRepetition""")
+                    setSentFalse(signame)
+                    setRaw();
+                    NotifyOnWriteOnChange()
+                    for parentframe in signalparents[signame]:
+                        NotifyFastDelayedResumeTask(parentframe)
+
+                elif GenSigSendType == choices.index("OnChange"):
+                    cog.out("""
+// GenSigSendType: OnChange""")
+                    IfDifferentInit(signame)
+                    setSentFalse(signame)
+                    setRaw();
+                    NotifyOnWriteOnChange()
+                    IfDifferentEnd()
+                    pass
+                elif GenSigSendType == choices.index("OnChangeWithRepetition"):
+                    cog.out("""
+// GenSigSendType: OnChangeWithRepetition""")
+                    IfDifferentInit(signame)
+                    setSentFalse(signame)
+                    setRaw();
+                    NotifyOnWriteOnChange()
+                    for parentframe in signalparents[signame]:
+                        NotifyFastDelayedResumeTask(parentframe)
+                    IfDifferentEnd()
+                    
+                elif GenSigSendType == choices.index("IfActive"):
+                    cog.out("""
+// GenSigSendType: IfActive""")
+                    setRaw();
+                    IfActiveCheck(signame, signalparents[signame], repetitions=False)
+                elif GenSigSendType == choices.index("IfActiveWithRepetition"):
+                    setRaw();
+                    cog.out("""
+// GenSigSendType: IfActiveWithRepetition""")
+                    IfActiveCheck(signame, signalparents[signame], repetitions=True)
+            else:
+                setRaw();
+        else:
+            setRaw();
+
+        cog.out("""
+}""")
+
+]]]*/
+//[[[end]]]
+
+/*
+ * Messages:  send and receive private methods
+ */
+
+/*[[[cog
+import cog
+def unpacksignal(framename, signalname, signal): 
+    
+    raw = """%s_%s.raw.%ssig_%s.sig""" % (
+        prefix,framename,
+        prefix,signalname
+    )
+
+    if signal["byte_order"] == "big_endian":
+        raw = "reverseBits(%s, %ssig_%s.length)" % (raw, prefix,signalname)
+
+
+    if signal['value_type'] == "double":
+        raw = "Uint64ToDouble(%s)" % raw
+    elif signal['value_type'] == "single":
+        raw = "Uint32ToSingle(%s)" % raw
+    
+    cog.out("""
+    %ssig_%s.raw = %s;""" % (prefix,signalname, raw));
+
+
+def packsignal(framename, signalname, signal):
+   
+    raw = "%ssig_%s.raw" % (prefix,signalname);
+
+    if signal['value_type'] == "double":
+        raw = "DoubleToUint64(%s)" %(raw)
+    elif signal['value_type'] == "single":
+        raw = "SingleToUint32(%s)" %(raw)
+
+
+    if signal["byte_order"] == "big_endian":
+        raw = "reverseBits(%s,  %ssig_%s.length)" % (raw,prefix,signalname)
+
+    cog.out(
+"""
+    %s_%s.raw.%ssig_%s.sig = %s;"""
+        % (
+             prefix, framename, prefix, signalname,
+             raw
+        ));
+    if settings['FreeRTOSInteractionLayer']:
+        cog.out("""
+    %ssig_%s.sent = true;""" %(prefix,signalname))
+
+        
+
+
+# multiplex recursion inception :)
+def expandmultiplex(framename, item, mode="rx"):
+    multiplexorname = list(item)[0]
+    if mode=='rx':
+        unpacksignal(framename=framename, signalname=multiplexorname, signal=frame['signals'][multiplexorname]) #unpack multiplexor signal
+    else:#tx
+        packsignal(framename=framename, signalname=multiplexorname, signal=frame['signals'][multiplexorname]) #unpack multiplexor signal
+
+    initialized = False
+    cog.outl("")
+
+    for multiplexvalue in list(item[multiplexorname]):
+
+        subitem = item[multiplexorname][multiplexvalue]
+        if len(subitem) ==0: # no signal associated to this value
+            pass
+        else:
+
+            if not initialized:
+                cog.out("""
+    if(%ssig_%s.raw == %s){"""%(
+                    prefix, multiplexorname, multiplexvalue
+                    ))
+                initialized = True;
+            else:
+                cog.out("""
+    }else if(%ssig_%s.raw == %s){"""%(
+                    prefix, multiplexorname, multiplexvalue
+                    ))
+
+            for multiplexedsignal in subitem:
+                if type(multiplexedsignal) == str: # then it is a signal (and the variable is also the name)
+                    if mode=='rx':
+                        unpacksignal(framename=framename, signalname=multiplexedsignal, signal=frame['signals'][multiplexedsignal])
+                    else: #tx
+                        packsignal(framename=framename, signalname=multiplexedsignal, signal=frame['signals'][multiplexedsignal])
+                else:
+                    expandmultiplex(framename, subitem[0], mode=mode)
+
+
+    cog.out("""
+    }""")
+
+
+for framename, frame in frames.items():
+    if frame['RX']:
+        cog.out(
+"""
+static void %s_%s_receive(){
+"""
+        % (
+            prefix, framename
+        ));
+
+        if settings['FreeRTOSCriticalSections']:
+            cog.out("""
+    portENTER_CRITICAL();""");
+
+        for item in frame['signal_tree']:
+            if type(item) == str: # then it is a signal
+                unpacksignal(framename=framename, signalname=item, signal=frame['signals'][item])
+            else:
+                expandmultiplex(framename, item, mode="rx")
+
+        if settings['FreeRTOSCriticalSections']:
+            cog.out("""
+    portEXIT_CRITICAL();""");
+
+        if settings['on_receive']:
+            cog.out("""
+
+    if(%s_%s.on_receive != NULL){%s_%s.on_receive();}""" % (prefix, framename, prefix, framename))
+
+
+        cog.out("""
+    
+};""")
+    if frame['TX']:
+        cog.out(
+"""
+static void %s_%s_send(){"""
+        % ( prefix, framename));
+
+        if settings['FreeRTOSCriticalSections']:
+            cog.out("""
+    portENTER_CRITICAL();""");
+
+        cog.out("""
+    memset (%s_%s.raw.bytes,0,sizeof %s_%s.raw.bytes);"""
+        % ( prefix, framename, prefix, framename ));
+
+
+        for item in frame['signal_tree']:
+            if type(item) == str: 
+                packsignal(framename=framename, signalname=item, signal=frame['signals'][item])
+            else:
+                expandmultiplex(framename, item, mode='tx')
+        
+
+        if settings['FreeRTOSCriticalSections']:
+            cog.out("""
+    portEXIT_CRITICAL();""");
+            
+        additionalparameters = ""
+        if BusType=="CAN FD":
+            additionalparameters += """,
+        %s_%s.FDF,
+        %s_%s.BRS""" % (prefix,framename, prefix,framename)
+
+
+        cog.out("""
+
+    %s_SendCallback(
+        %s_%s.raw.bytes,
+        %s_%s.DLC,
+        %s_%s.ID,
+        %s_%s.is_extended%s
+    );
+};
+"""%(
+        prefix,
+        prefix,framename,
+        prefix,framename,
+        prefix,framename,
+        prefix,framename,
+        additionalparameters
+    ));
+
+        #TODO Add CANFD
+
+
+]]]*/
+//[[[end]]]
+
+/*
+ * Messages: Message structs definitions
+ */
+
+
+/*[[[cog
+import cog
+for framename, frame in frames.items():
+
+    cog.out(
+"""
+// Comment: %s
+struct %s_%s_t %s_%s = {
+    .ID = %s, //dec: %s
+    .is_extended = %s,
+    .DLC = %s,"""
+    % (
+        frame['comment'],
+        prefix,framename,prefix,framename,
+        frame['ID'], frame['decID'],
+        frame['is_extended'],
+        frame['DLC']
+    ));
+
+    if frame['RX']:
+        cog.out("""
+    .receive = %s_%s_receive,"""
+        %(prefix, framename));
+
+        if settings['on_receive']:
+            cog.out("""
+    .on_receive = NULL,""")
+
+
+    if frame['TX']:
+        cog.out("""
+    .send = %s_%s_send,"""
+        %(prefix, framename));
+
+    if BusType == "CAN FD":
+        cog.out("""
+    .FDF = %s,
+    .BRS = %s,""" % (frame['FDF'], frame['BRS']))
+
+
+    if settings['FreeRTOSInteractionLayer']:
+        if 'GenMsgNrOfRepetition' in frame['attributes']:
+
+            cog.out("""
+    .repetitions = %s,
+    .repetitionsleft = 0,"""
+        %(frame['attributes']['GenMsgNrOfRepetition'].value));
+
+    cog.out("""
+    .raw = {
+        .bytes = {0}
+    },""")
+
+
+    cog.out("""
+};""")
+
+
+]]]*/
+//[[[end]]]
+

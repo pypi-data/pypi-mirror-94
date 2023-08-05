@@ -1,0 +1,326 @@
+/**
+ ******************************************************************************
+ * @details This file was created with cantata, a code generation tool for can databases
+ * @author Pol Feliu Cuberes
+ * @link https://github.com/polfeliu/cantata
+ ******************************************************************************
+ */
+
+#ifndef __db_H
+#define __db_H
+#ifdef __cplusplus
+ extern "C" {
+#endif
+#include <stdint.h> 
+#include "stdbool.h"
+#include "string.h"
+/*[[[cog
+import cog
+if settings['FreeRTOSInteractionLayer'] or settings['FreeRTOSCriticalSections']:
+    cog.out("""
+#include "FreeRTOS.h"
+#include "task.h" """)
+]]]*/
+//[[[end]]]
+
+typedef float single;
+
+/*[[[cog
+import cog
+if settings['FreeRTOSInteractionLayer']:
+    cog.out("""
+/*
+ * Interaction Layer: Start and Stop function prototypes
+ */
+        """);
+
+    cog.out("""
+void %s_InteractionLayerStart(void);
+void %s_InteractionLayerStop(void);
+    """ % (prefix, prefix))
+]]]*/
+//[[[end]]]
+/*[[[cog
+import cog
+if settings['calculateCANFilter']:
+    cog.out("""
+/*
+ * CAN Filters: CAN Filters filter and mask
+ */
+%s
+#define %s_StandardFilter   %s
+#define %s_StandardMask     %s
+#define %s_ExtendedFilter   %s
+#define %s_ExtendedMask     %s
+ """ %(
+    filter['evaluation'],
+    prefix, """{:#013b}""".format(filter['StandardFilter']),
+    prefix, """{:#013b}""".format(filter['StandardMask']),
+    prefix, """{:#031b}""".format(filter['ExtendedFilter']),
+    prefix, """{:#031b}""".format(filter['ExtendedMask'])
+    ));
+]]]*/
+//[[[end]]]
+
+
+/*
+ * CAN Callbacks: Receive Callback prototype
+ */
+
+/*[[[cog
+import cog
+if settings['CallbackLib'] is not None:
+    additionalparameters = ""
+    if BusType=="CAN FD":
+        additionalparameters += ", bool FDF, bool BRS"
+
+    cog.out(
+"""
+void %s_ReceiveCallback(uint8_t data[], uint8_t DLC, uint32_t ID, bool is_extended%s);
+""" %(prefix, additionalparameters));
+
+]]]*/
+//[[[end]]]
+
+/*
+ * Enum definitions for CANbyteorder_t
+ */
+typedef enum {
+    little_endian, //intel
+    big_endian //motorola
+} CANbyteorder_t;
+
+/*
+ * Enum definitions of types of signals
+ */
+typedef enum {
+    Tbool,
+    Tdouble, 
+    Tsingle,
+    Tuint8_t,
+    Tuint16_t,
+    Tuint32_t,
+    Tuint64_t,
+    Tint8_t,
+    Tint16_t,
+    Tint32_t,
+    Tint64_t
+} CANvaluetype_t;
+
+/*
+ * Enum definitions for value tables
+ */
+/*[[[cog
+import cog
+for vtname, vt in valuetables.items():
+	cog.out(
+"""
+typedef enum {"""
+    )
+
+	for key,value in vt.items():
+		cog.out(
+"""
+    %ssig_%sVT_%s=%s,"""
+        %(
+            prefix,vtname,key,value
+        ));
+	cog.out(
+"""
+}%ssig_%sVT_t;
+"""
+	 %(
+	 	prefix,vtname
+ 	));
+    
+]]]*/
+//[[[end]]]
+
+/*
+ * Export message structs
+ */
+/*[[[cog
+import cog
+for framename, frame in frames.items():
+    cog.out(
+"""
+struct %s_%s_t %s_%s;"""
+% (
+    prefix,framename, prefix, framename,
+));
+]]]*/
+//[[[end]]]
+
+/*
+ * Export signal structs
+ */
+/*[[[cog
+import cog
+for signame, sig in signals.items():
+    cog.out(
+"""
+struct %ssig_%s_t %ssig_%s;""" 
+    % (
+        prefix,signame,prefix,signame
+    ));
+]]]*/
+//[[[end]]]
+
+/*
+ * Define types of the signal structs
+ */
+/*[[[cog
+import cog
+for signame, sig in signals.items():
+    cog.out(
+"""
+struct %ssig_%s_t{
+    const uint8_t length;
+    const CANbyteorder_t byte_order;
+    const CANvaluetype_t value_type;
+    const char unit[%s];
+    const %s initial_value ;
+    const double factor ;
+    const double offset ;
+    const double min ;
+    const double max ;
+    %s raw;
+    %s (*const getValue)(void);"""
+    % (
+        prefix,signame,
+        sig['unit_len'],
+        sig['getsetValue_type'],
+        sig['value_type'], 
+        sig['getsetValue_type'],
+    ));
+
+    if sig["TX"]:
+        cog.out(
+            """
+    bool (*const setValue)(%s);
+    void (*const setRaw)(%s);"""
+        % (
+            sig['getsetValue_type'],
+            sig['value_type']
+        ));
+
+        if settings['FreeRTOSInteractionLayer']:
+            cog.out(
+        """
+    bool sent;""")
+
+            if 'GenSigSendType' in sig['attributes']:
+                GenSigSendType = sig['attributes']['GenSigSendType'].value
+                choices = sig['attribute_definitions']['GenSigSendType'].choices
+
+                if (GenSigSendType == choices.index("IfActive")) or (GenSigSendType == choices.index("IfActiveWithRepetition")):
+                    cog.out(
+        """
+    uint32_t inactiveValue;""")
+
+    cog.outl("""
+};"""
+    	)
+]]]*/
+//[[[end]]]
+
+/*
+ * Define types of the message structs
+ */
+/*[[[cog
+import cog
+for framename, frame in frames.items():
+    cog.out(
+"""
+// Comment: %s
+struct %s_%s_t{
+    const uint32_t ID;
+    const bool is_extended;
+    const uint8_t DLC;""" % (
+        frame['comment'],
+        prefix,framename,
+    ));
+
+
+    if frame['RX']:
+        cog.out("""
+    void (*const receive)(void);"""
+        %());
+        if settings['on_receive']:
+            cog.out("""
+    void (*on_receive)(void);""")
+
+    if frame['TX']:
+        cog.out("""
+    void (*const send)(void);"""
+        %());
+
+    if BusType == "CAN FD":
+        cog.out("""
+    const bool FDF;
+    const bool BRS;""")
+
+    if settings['FreeRTOSInteractionLayer']:
+        if 'GenMsgNrOfRepetition' in frame['attributes']:
+            cog.out("""
+    const uint32_t repetitions;
+    uint32_t repetitionsleft;"""
+        %());
+
+    cog.out(
+"""
+    union %s_%sraw_u{
+        uint8_t bytes[%s];""" % (
+        prefix,framename,
+        frame['length'],
+    ));
+
+    def generatedpadding(length):
+        padding = """""";
+        done = False;
+        counter = 1;
+        while(not done):
+            if length == 0:
+                done = True
+            elif length <= 64:
+                padding += """
+            uint64_t pad%s: %s;""" % (counter, length)
+                done = True;
+            else:
+                padding += """
+            uint64_t pad%s: %s;""" % (counter, 64)
+                length -= 64
+                counter += 1
+        return padding
+        
+        
+
+    for signalname, signal in frame['signals'].items():
+        if signal['RX']==False and signal['TX']==False:
+            cog.outl("""
+        //%s is not mapped to this ECU""" % (signalname))
+        else:
+            cog.out("""
+        struct __attribute__((__packed__)) %s_%sraw_%s_s{%s
+            uint64_t sig: %s;
+        }%ssig_%s;"""%(
+            prefix,framename, signalname,
+            generatedpadding(signal['startbit']),
+            signal['length'],
+            prefix, signalname
+            ))
+
+    cog.out(
+"""
+    }raw;
+};""" % ());
+
+
+]]]*/
+//[[[end]]]
+
+#ifdef __cplusplus
+}
+#endif
+#endif /*__ can_H */
+
