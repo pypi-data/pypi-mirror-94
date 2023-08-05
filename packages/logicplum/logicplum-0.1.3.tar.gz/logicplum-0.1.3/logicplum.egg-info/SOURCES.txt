@@ -1,0 +1,11 @@
+README.md
+setup.py
+logicplum/__init__.py
+logicplum/config.py
+logicplum/logicplum.py
+logicplum.egg-info/PKG-INFO
+logicplum.egg-info/SOURCES.txt
+logicplum.egg-info/dependency_links.txt
+logicplum.egg-info/entry_points.txt
+logicplum.egg-info/requires.txt
+logicplum.egg-info/top_level.txt
