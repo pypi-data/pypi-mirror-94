@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: supabase-realtime-py
+Version: 0.1.1a0
+Summary: Python Client for Phoenix Channels
+Home-page: https://github.com/supabase/realtime-py
+Author: Supabase
+Author-email: ant@supabase.io
+License: MIT license
+Download-URL: https://github.com/supabase/realtime-py/archive/0.1.1-alpha.tar.gz
+Description: readme history
+Keywords: realtime-py
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
