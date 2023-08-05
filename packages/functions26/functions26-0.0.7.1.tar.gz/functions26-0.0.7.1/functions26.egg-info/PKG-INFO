@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: functions26
+Version: 0.0.7.1
+Summary: Supporting functions for Fu lab 26 room
+Home-page: https://github.com/vasilisniaouris/functions26
+Author: Vasilis Niaouris
+Author-email: vasilisniaouris@gmail.com
+License: UNKNOWN
+Description: This package has been created for use in the Fu lab at UW. It contains simple functions that make our every day coding
+        easier.
+        
+        _________________________________
+        
+        To install:
+            (Open cmd/terminal. Administrator privileges might be required)
+            pip install functions26
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
