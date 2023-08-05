@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: rcsb.ccmodels
+Version: 0.21
+Summary: RCSB Python Chemical Component Model Utilities
+Home-page: https://github.com/rcsb/py-rcsb_ccmodels
+Author: John Westbrook
+Author-email: john.westbrook@rcsb.org
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: mmcif (>=0.61)
+Requires-Dist: rcsb.utils.io (>=0.99)
+Requires-Dist: rcsb.utils.multiproc (>=0.18)
+Requires-Dist: rcsb.utils.chem (>=0.61)
+Requires-Dist: rcsb.utils.chemref (>=0.66)
+Requires-Dist: OpenEye-toolkits (>=2020.2.0)
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+See:  README.md
+
+
