@@ -1,0 +1,2 @@
+include versioneer.py
+include src/kabaret/sqarf_flow/_version.py

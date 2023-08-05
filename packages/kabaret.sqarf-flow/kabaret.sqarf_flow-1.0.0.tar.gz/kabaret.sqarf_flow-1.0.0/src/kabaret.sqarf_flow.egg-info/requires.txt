@@ -1,0 +1,6 @@
+kabaret>=2.1.5
+kabaret.script_view
+sqarf>=1.0.0
+
+[:python_version >= "3.7"]
+maya
