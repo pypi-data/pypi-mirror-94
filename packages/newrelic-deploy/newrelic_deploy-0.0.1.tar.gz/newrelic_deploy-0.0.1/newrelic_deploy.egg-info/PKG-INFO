@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: newrelic-deploy
+Version: 0.0.1
+Summary: NewRelic deployment notify
+Home-page: https://github.com/creditas/newrelic-deploy
+Author: Aurelio Saraiva
+Author-email: aurelio.saraiva@creditas.com.br
+License: UNKNOWN
+Description: # newrelic-deploy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
