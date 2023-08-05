@@ -1,0 +1,107 @@
+{% extends "bare_html_api/base.html" %}
+{% block content %}
+<table>
+     <tr>
+       <form action="/" method="post"  accept-charset="ISO-8859-1">
+    
+           <td id="form_system_id">SYSTEM_ID<br><select name="SYSTEM_ID" title="Define SYSTEM_ID">
+                {% for system_id  in system_id_options   %}
+                   <option   {% if system_id.selected %} selected {% endif %}           value="{{ system_id.value }}">
+                    {{ system_id.value }}
+                   </option>
+               {% endfor %}
+           </select></td>
+           <td id="form_sub_system_id">SUB_SYSTEM_ID<br><select name="SUB_SYSTEM_ID" title="Define SUB_SYSTEM_ID">
+              {% for sub_system_id in sub_system_id_options %}
+                 <option      {% if sub_system_id.selected %} selected {% endif %}     value="{{ sub_system_id.value }}">
+                  {{ sub_system_id.value }}
+                 </option>
+              {% endfor %}
+           </select></td>
+           <td id="form_sub_sub_system_id">SUB_SUB_SYSTEN_ID<br><select name="SUB_SUB_SYSTEM_ID" title="DEFINE SUB_SUB_SYSTEM_ID">
+              {% for sub_sub_system_id in sub_sub_system_id_options %}
+                 <option      {% if sub_sub_system_id.selected %} selected {% endif %} value="{{ sub_sub_system_id.value }}">
+                   {{ sub_sub_system_id.value }}
+                 </option>
+              {% endfor %}
+           </select></td>
+           <td id="form_user_spec_1">USER_SPEC_1<br><select name="USER_SPEC_1" title="DEFINE USER_SPEC_1">
+              {% for spec_1 in user_spec_1_id_options  %}
+                 <option      {% if spec_1.selected %} selected {% endif %}      value="{{ spec_1.value }}">{{ spec_1.value }}
+                 </option>
+              {% endfor %}
+           </select></td>
+           <td id="form_user_spec_2">USER_SPEC_2<br><select name="USER_SPEC_2" title="DEFINE USER_SPEC_2" >
+              {% for spec_2 in user_spec_2_id_options  %}
+                 <option          {% if spec_2.selected %} selected {% endif %}   value="{{ spec_2.value }}">
+                      {{ spec_2.value }}
+                 </option>
+              {% endfor %}
+           </select></td>
+           <td id="form_produkt_id">PRODUKT_ID<br><select name="PRODUKT_ID" title="DEFINE PRODUKT_ID">
+              {% for pid in pid_options %}
+                 <option         {% if pid.selected %} selected {% endif %}   value="{{ pid.value }}">
+                   {{ pid.value }}
+                 </option>
+              {% endfor %}
+           </select></td>
+     </tr>
+     <tr>
+           <td id="form_pattern"> Pattern<br> <input name="pattern" size="12" value="{{ pattern }}" title="define a pattern to search for"> </td>
+           <td id="form_starting_at"> Starting at<br> <input name="starting_at" size="20" value="{{ starting_at }}" title="adapt the starting time range for the request" > </td>
+           <td id="form_notify_level"> Notify_level<br> <select name="notify_level" title="define the log level upon which records will be displayed">
+
+                      {% if  notify_level|int < 10 %}
+                       <option selected value="00">ALL   (>00)</option>
+                       <option          value="10">DEBUG (>10)</option>
+                       <option          value="20">INFO  (>20) </option>
+                       <option          value="30">ERROR (>30)</option>
+                      {% elif  notify_level|int <= 10 %}
+                       <option          value="00">ALL   (>00)</option>
+                       <option selected value="10">DEBUG (>10)</option>
+                       <option          value="20">INFO  (>20) </option>
+                       <option          value="30">ERROR (>30)</option>
+                      {% elif  notify_level|int <= 20 %}
+                       <option          value="00">ALL   (>00)</option>
+                       <option          value="10">DEBUG (>10)</option>
+                       <option selected value="20">INFO  (>20)</option>
+                       <option          value="30">ERROR (>30)</option>
+                      {% else %}
+                       <option          value="00">ALL   (>00)</option>
+                       <option          value="10">DEBUG (>10)</option>
+                       <option          value="20">INFO  (>20)</option>
+                       <option selected value="30">ERROR (>30)</option>
+                      {% endif %}
+
+                 </select> </td>
+          <td id="form_num_records">num_records<br> <input name="max_rows" size="12" value="{{ max_rows }}" title="define the maximum number of log records to retrieve"> <br> </td>
+          <td id="form_order">order<br> <select name="old_row_first" title="define the order, how log-records are displayed">
+                      {% if  old_row_first == "asc" %}
+                       <option selected value="asc">Oldest log record First</option>
+                       <option          value="desc">Newest Log Record First</option>
+                      {% else %}
+                       <option          value="asc">Oldest log record First</option>
+                       <option selected value="desc">Newest Log Record First</option>
+                      {% endif %}
+          </select></td>
+          <td id="form_input"><br> <input type="submit" value="submit"   style=" background-color: #FFFFC0; border: 3pt ridge lightgrey"></td>
+     </tr>
+     </form>
+    </table>
+     <table class="htable">
+      <tr class="heading"><th>Date</th>
+                          <th>Level</th>
+                          <th>System</th>
+                          <th>App</th>
+                          <th>Module</th>
+                          <th>Message</th>
+                          <th>Exception</th>
+                          <th>Stack info</th>
+      </tr>
+      {% for record in records %}
+      {{ record|safe }}
+      {% endfor %}
+    </table>
+
+{% endblock %}
+

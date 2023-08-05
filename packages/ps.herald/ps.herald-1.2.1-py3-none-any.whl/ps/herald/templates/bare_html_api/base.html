@@ -1,0 +1,15 @@
+{% block title %} <center> {{ dev_stage  }} Logging Server Status Page <a href="{{ url_for('bare_html_api.index') }}/rm_logs">clean > 30 days</a> </center> 
+{% endblock %}
+
+{% block head %}
+<link rel="icon"      type="image/x-icon"    href="/static/favicon.ico" >
+<link rel="stylesheet" type="text/css" href="/static/logging_server.css">
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+    {% block page_content %}{% endblock %}
+{% endblock %}
+

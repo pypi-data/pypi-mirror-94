@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: ps.herald
+Version: 1.2.1
+Summary: UNKNOWN
+Home-page: https://bitbucket.org/drsetz/ps.herald
+Author: Setz
+Author-email: Thomas.Setz@acm.org
+License: GPL
+Keywords: PS
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Dist: Flask
+Requires-Dist: click
+Requires-Dist: flask-sqlalchemy
+Requires-Dist: ps.basic
+
+Introduction
+============
+
+The `Herald  package <https://psherald.readthedocs.io/en/latest/ps.html>`_ provides three tools usable to 
+monitor the behaviour of distributed applications
+
+Herald's functionality is based on the **Basic** class, defined in the ps.basic package.
+
+The **Basic** class enhances/uses the standard python logging package - especially  the ability to log messages 
+to a stream-socket.
+
+This package adds mechanisms to:
+
+                - put these messages into a central database (bridge)
+                - route/bridge  these messages to additional destinations (bridge)
+                - display in a web-server (herald)
+                - take actions on special messages (neelix)
+                - take actions on lost system heartbeat (neelix)
+
+
+
+

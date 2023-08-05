@@ -1,0 +1,15 @@
+ body { font-family: verdana, arial, helvetica, sans-serif; }
+ table { margin-left: auto; margin-right: auto;
+        width: 100%; border: 1px solid black; margin-top: 3ex; }
+ table caption { /*font-weight: bold;*/ text-align: center;
+                font-size: larger; margin-bottom: 0.5ex; }
+ tr                  { font-family: "Lucida Console", monospace; }
+ th, td              { padding: 0.5ex;  border: 1px solid white}
+ tr.critical         { background-color: red; color: yellow; text-decoration: blink; }
+ tr.error            { background-color: #ff3300; /* red */ color: yellow; }
+ tr.warn, tr.warning { background-color: #ffff99; /* yellow */ color: black; }
+ tr.info, td.info    { background-color: #90EE90; /* lightgreen */ color: black; }
+ tr.debug            { background-color: #7FFFD4; /* aquamarine */ color: black; }
+ table.vtable tr th  { font-weight: bold; text-align: right;  border: 1px solid white}
+ table.htable tr th  { font-weight: bold; text-align: center; border: 1px solid black}
+ table.htable tr.heading, table.vtable tr th.heading { background-color: #E0E0E0; }
