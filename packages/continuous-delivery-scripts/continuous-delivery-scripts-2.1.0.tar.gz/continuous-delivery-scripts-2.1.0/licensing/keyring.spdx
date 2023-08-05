@@ -1,0 +1,50 @@
+# Document Information
+
+SPDXVersion: SPDX-1.2
+DataLicense: CC0-1.0
+DocumentName: keyring-22.0.1
+SPDXID: SPDXRef-DOCUMENT
+DocumentNamespace: http://spdx.org/spdxdocs/keyring-22.0.1-7440ae43-e801-05e9-6cc6-b8905914e4ca
+DocumentComment: <text>This document was created automatically using available information from python packages.</text>
+
+
+# Creation Info
+
+Creator: Person: Kang Zhang (jobo.zh@gmail.com)
+Creator: Tool: mbed-spdx-generator
+Created: 2021-02-05T19:50:27Z
+
+
+# Package
+
+PackageName: keyring
+SPDXID: SPDXRef-keyring
+PackageVersion: 22.0.1
+PackageDownloadLocation: NONE
+PackageSummary: <text>Store and access your passwords safely.</text>
+PackageFileName: keyring
+PackageOriginator: Person: Kang Zhang (jobo.zh@gmail.com)
+PackageChecksum: SHA1: NOASSERTION
+PackageVerificationCode: NOASSERTION
+PackageDescription: <text>NOASSERTION</text>
+PackageLicenseDeclared: Unknown
+PackageLicenseConcluded: Unknown
+PackageLicenseInfoFromFiles: Unknown
+PackageCopyrightText: NOASSERTION
+PackageHomePage: https://github.com/jaraco/keyring
+
+
+# File
+
+FileName: UNKNOWN
+SPDXID: SPDXRef-ad921d60-4863-6625-8809-553a3db49a4a
+FileType: SOURCE
+FileChecksum: SHA1: 0
+LicenseConcluded: Unknown
+LicenseInfoInFile: Unknown
+FileCopyrightText: NONE
+FileComment: <text>NONE</text>
+
+
+# Extracted Licenses
+

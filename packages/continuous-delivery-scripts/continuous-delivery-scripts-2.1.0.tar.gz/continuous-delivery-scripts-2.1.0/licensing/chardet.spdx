@@ -1,0 +1,50 @@
+# Document Information
+
+SPDXVersion: SPDX-1.2
+DataLicense: CC0-1.0
+DocumentName: chardet-4.0.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentNamespace: http://spdx.org/spdxdocs/chardet-4.0.0-9ab4ac80-3169-17fe-f641-32d6e7334f50
+DocumentComment: <text>This document was created automatically using available information from python packages.</text>
+
+
+# Creation Info
+
+Creator: Person: Mark Pilgrim (mark@diveintomark.org)
+Creator: Tool: mbed-spdx-generator
+Created: 2021-02-05T19:50:27Z
+
+
+# Package
+
+PackageName: chardet
+SPDXID: SPDXRef-chardet
+PackageVersion: 4.0.0
+PackageDownloadLocation: NONE
+PackageSummary: <text>Universal encoding detector for Python 2 and 3</text>
+PackageFileName: chardet
+PackageOriginator: Person: Mark Pilgrim (mark@diveintomark.org)
+PackageChecksum: SHA1: NOASSERTION
+PackageVerificationCode: NOASSERTION
+PackageDescription: <text>NOASSERTION</text>
+PackageLicenseDeclared: Unknown
+PackageLicenseConcluded: Unknown
+PackageLicenseInfoFromFiles: Unknown
+PackageCopyrightText: NOASSERTION
+PackageHomePage: https://github.com/chardet/chardet
+
+
+# File
+
+FileName: UNKNOWN
+SPDXID: SPDXRef-ad921d60-4863-6625-8809-553a3db49a4a
+FileType: SOURCE
+FileChecksum: SHA1: 0
+LicenseConcluded: Unknown
+LicenseInfoInFile: Unknown
+FileCopyrightText: NONE
+FileComment: <text>NONE</text>
+
+
+# Extracted Licenses
+
