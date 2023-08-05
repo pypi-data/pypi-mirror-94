@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: oxasl-deblur
+Version: 0.0.3
+Summary: Python implementation of ASL deblurring algorithm
+Home-page: https://oxasl-deblur.readthedocs.io/
+Author: Martin Craig
+Author-email: martin.craig@eng.ox.ac.uk
+License: License granted by University of Oxford for use by academics carrying out research and not for use by consumers or commercial businesses. See LICENSE file for more details
+Description: OXASL_DEBLUR - deblurring of ASL data 
+        =====================================
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: Free for non-commercial use
+Description-Content-Type: text/markdown

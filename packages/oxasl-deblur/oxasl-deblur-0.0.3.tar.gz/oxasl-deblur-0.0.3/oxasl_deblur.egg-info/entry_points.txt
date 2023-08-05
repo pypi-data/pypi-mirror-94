@@ -1,0 +1,3 @@
+[console_scripts]
+oxasl_deblur = oxasl_deblur.deblur:main
+
