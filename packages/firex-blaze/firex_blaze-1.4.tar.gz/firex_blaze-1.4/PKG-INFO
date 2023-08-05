@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: firex_blaze
+Version: 1.4
+Summary: FireX event processor for submitting to a kafka bus.
+Home-page: https://github.com/FireXStuff/firex-blaze
+Author: Core FireX Team
+Author-email: firex-dev@gmail.com
+License: BSD-3-Clause
+Description: UNKNOWN
+Platform: UNKNOWN
