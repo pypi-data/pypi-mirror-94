@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+string_locator/locator.py
+string_locator.egg-info/PKG-INFO
+string_locator.egg-info/SOURCES.txt
+string_locator.egg-info/dependency_links.txt
+string_locator.egg-info/entry_points.txt
+string_locator.egg-info/top_level.txt
