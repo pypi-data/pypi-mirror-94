@@ -1,0 +1,22 @@
+
+version: '3'
+networks:
+    micro:
+        external: true
+services:
+    mongodb:
+        networks:
+            - micro
+        image: mongo:latest
+        container_name: "mongodb"
+        restart: always
+        environment:
+            - MONGO_DATA_DIR=/data/db
+            - MONGO_LOG_DIR=/data/logs
+            - MONGO_INITDB_ROOT_USERNAME=admin
+            - MONGO_INITDB_ROOT_PASSWORD=123.com
+        volumes:
+            - /opt/mongodb/data:/data/db
+            - /opt/mongodb/logs:/data/logs
+        ports:
+            - 27017:27017
