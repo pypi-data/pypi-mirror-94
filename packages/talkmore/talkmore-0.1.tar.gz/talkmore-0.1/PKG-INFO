@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: talkmore
+Version: 0.1
+Summary: Send sms, add and read contacts with through the talkmore web interface
+Home-page: https://github.com/okanten/talkmore
+Author: Ola Kanten
+Author-email: okgit@protonmail.com
+License: MIT
+Download-URL: https://github.com/okanten/talkmore/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: talkmore,talkmore sms,talkmore-sms,sms,norge
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
