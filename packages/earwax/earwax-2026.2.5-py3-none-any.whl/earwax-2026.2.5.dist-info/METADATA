@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: earwax
+Version: 2026.2.5
+Summary: An audio game engine for fast prototyping
+Home-page: http://earwax.readthedocs.io/
+Author: Chris Norman
+Author-email: chris.norman2@googlemail.com
+License: MPL
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pyglet (>=1.5.14)
+Requires-Dist: synthizer (>=0.8.7)
+Requires-Dist: cytolk (>=0.1.6)
+Requires-Dist: attrs (>=20.3.0)
+Requires-Dist: pyyaml (>=5.4.1)
+Requires-Dist: typing-inspect (>=0.6.0)
+Requires-Dist: shortuuid (>=1.0.1)
+Requires-Dist: movement-2d (>=1.1.1)
+Requires-Dist: pysdl2 (>=0.9.7)
+Requires-Dist: pysdl2-dll (>=2.0.14)
+Requires-Dist: jinja2 (>=2.11.3)
+Requires-Dist: cryptography (>=3.3.1)
+Requires-Dist: msgpack (>=1.0.2)
+
+An audio game engine for fast prototyping
+
+
