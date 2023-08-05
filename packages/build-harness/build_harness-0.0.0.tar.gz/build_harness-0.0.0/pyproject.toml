@@ -1,0 +1,83 @@
+[build-system]
+requires = ["flit_core >=2,<3"]
+build-backend = "flit_core.buildapi"
+
+
+[tool.flit.metadata]
+module = "build_harness"
+author = "Russell Smiley"
+author-email = "im.russell.smiley@gmail.com"
+home-page = "https://gitlab.com/ci-cd-devops/build_harness"
+classifiers = ["License :: OSI Approved :: MIT License"]
+description-file = "README.rst"
+
+requires-python = ">=3.7"
+
+requires = [
+    "behave == 1.2.6",
+    "black == 20.8b1",
+    "click == 7.1.2",
+    "flake8 == 3.8.4",
+    "flake8-annotations == 2.4.1",
+    "isort == 5.5.4",
+    "mypy == 0.782",
+    "packaging == 20.4",
+    "parver == 0.3.1",
+    "pip == 20.2.4",
+    "pydocstyle == 5.1.1",
+    # required for `description-file` parameter above (integration of README.rst)
+    "pygments == 2.7.1",
+    "toml == 0.10.1",
+]
+
+
+[tool.flit.scripts]
+build-harness = "build_harness.entrypoint:build_harness_entry"
+install-release = "build_harness.entrypoint:install_release_entry"
+release-flow = "build_harness.entrypoint:release_flow_entry"
+
+
+[tool.flit.metadata.requires-extra]
+dev = [
+    "flit == 3.0.0",
+    "mutmut == 2.1.0",
+    "pre_commit == 2.7.1",
+]
+doc = [
+    "sphinx == 3.2.1",
+    "sphinx_rtd_theme == 0.5.0",
+]
+test = [
+    "pytest == 6.1.1",
+    "pytest-cov == 2.10.1",
+    "pytest-mock == 2.0.0",
+]
+
+
+[tool.black]
+# Don't forget to sync this with isort, .flake8
+line-length = 88
+
+
+[tool.isort]
+profile = "black"
+# Don't forget to sync this with black, .flake8
+line_length = 88
+
+
+[tool.coverage.run]
+source = ["build_harness"]
+branch = true
+
+
+[tool.coverage.report]
+show_missing = true
+precision = 0
+exclude_lines = [
+    "except ImportError",
+    "raise NotImplementedError",
+    "pass",
+    "ABCmeta",
+    "abstractmethod",
+    "warnings.warn",
+]

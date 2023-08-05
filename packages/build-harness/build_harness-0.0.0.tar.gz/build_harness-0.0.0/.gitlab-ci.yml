@@ -1,0 +1,154 @@
+image: python:3.8-slim
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .cache/pip
+    - venv/
+
+stages:
+  - static-analysis
+  - tests
+  - package
+  - publish
+
+variables:
+  FLIT_ROOT_INSTALL: 1
+
+  UNITTEST_COVERAGE_THRESHOLD: 90
+
+
+.build-harness-target:
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist/
+  before_script:
+    - apt-get update -y
+    - 'apt-get install -y
+        git'
+    - python3 -m venv .venv
+    - .venv/bin/pip install flit pygments wheel
+    - .venv/bin/flit install -s
+    # This is redundant in light of the previous `flit install -s` step, but it serves
+    #  to exercise the `build-harness install` command.
+    - .venv/bin/build-harness install
+  script:
+    - '.venv/bin/build-harness ${TARGET}'
+
+
+formatting-check:
+  stage: static-analysis
+  variables:
+    TARGET: formatting --check
+
+  extends:
+    - .build-harness-target
+
+
+all-check:
+  stage: static-analysis
+  variables:
+    TARGET: static-analysis
+
+  extends:
+    - .build-harness-target
+
+
+flake8-check:
+  stage: static-analysis
+  variables:
+    TARGET: static-analysis --analysis flake8
+
+  extends:
+    - .build-harness-target
+
+
+mypy-check:
+  stage: static-analysis
+  variables:
+    TARGET: static-analysis --analysis mypy
+
+  extends:
+    - .build-harness-target
+
+
+pydocstyle-check:
+  stage: static-analysis
+  variables:
+    TARGET: static-analysis --analysis pydocstyle
+
+  extends:
+    - .build-harness-target
+
+
+unit-tests:
+  stage: tests
+  variables:
+    TARGET: unit-test
+
+  extends:
+    - .build-harness-target
+
+
+acceptance-tests:
+  stage: tests
+  variables:
+    TARGET: acceptance tests --junitxml
+
+  extends:
+    - .build-harness-target
+
+
+acceptance-tags:
+  stage: tests
+  variables:
+    TARGET: acceptance tags
+
+  extends:
+    - .build-harness-target
+
+
+unit-tests-coverage:
+  stage: tests
+  variables:
+    TARGET: unit-test --check ${UNITTEST_COVERAGE_THRESHOLD}
+
+  extends:
+    - .build-harness-target
+
+
+install-check:
+  stage: tests
+  variables:
+    TARGET: install
+
+  extends:
+    - .build-harness-target
+
+
+install-check-alternative-path:
+  stage: tests
+  variables:
+    TARGET: install
+
+  before_script:
+    - apt-get update -y
+    - python3 -m venv alt_venv
+    - alt_venv/bin/pip install flit pygments wheel
+    - alt_venv/bin/flit install -s
+  script:
+    # installs the current project into .venv/bin/
+    - alt_venv/bin/build-harness install
+    - '[[ -d ".venv/bin" ]] || (echo "FAILED: .venv not created" >/dev/stderr; exit 1)'
+    # Test that a file from a known dependency of *this* project is installed.
+    - '[[ -f ".venv/bin/flit" ]] || (echo "FAILED: flit not installed" >/dev/stderr; exit 1)'
+
+
+build-packages:
+  stage: package
+  variables:
+    TARGET: package --release-id $CI_COMMIT_TAG
+
+  extends:
+    - .build-harness-target

@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: build_harness
+Version: 0.0.0
+Summary: CI build harness embodying best practices for Python projects.
+Home-page: https://gitlab.com/ci-cd-devops/build_harness
+Author: Russell Smiley
+Author-email: im.russell.smiley@gmail.com
