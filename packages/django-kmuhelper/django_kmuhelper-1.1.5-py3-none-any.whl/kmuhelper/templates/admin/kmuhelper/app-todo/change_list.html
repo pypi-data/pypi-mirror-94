@@ -1,0 +1,36 @@
+{% extends 'admin/kmuhelper/change_list.html' %}
+
+{% block branding %}
+    <h1 id="site-name"><a target="_top" href="{% url 'kmuhelper:home' %}">KMUHelper</a> | <a id="app-link" target="_top" href="{% url 'kmuhelper:app-index' %}">App</a></h1>
+{% endblock %}
+
+{% block breadcrumbs %}
+    <div id="breadcrumbs" class="breadcrumbs">
+        <a href="{% url 'kmuhelper:app-index' %}">KMUHelper App</a> &gt; {% block modulename %}{{ module_name }}{% endblock %}
+    </div>
+
+    <script>
+        if (window !== window.top) { 
+            document.getElementById("breadcrumbs").style.display = "none";
+            document.getElementById("app-link").href = "{% url 'kmuhelper:app-main' %}";
+        }
+    </script>
+{% endblock %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script>
+        'use strict'
+        var $ = django.jQuery
+
+        $(document).ready(function () {
+            // Add Buttonrow to top too
+            var saveButtonRow = $('.paginator')[0]
+            var resultsDiv = $('#changelist-form > div.results')[0]
+
+            if (saveButtonRow && resultsDiv) {
+                $(saveButtonRow).clone().insertBefore(resultsDiv);
+            }
+        })
+    </script>
+{% endblock %}
