@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.py
+examples/__init__.py
+examples/basic_message.py
+examples/basic_message_without_hostname.py
+examples/complete_error_traceback.py
+examples/error_message.py
+examples/success_message.py
+python_slack_logger.egg-info/PKG-INFO
+python_slack_logger.egg-info/SOURCES.txt
+python_slack_logger.egg-info/dependency_links.txt
+python_slack_logger.egg-info/requires.txt
+python_slack_logger.egg-info/top_level.txt
+slack_logger/__init__.py
+slack_logger/message_logger.py
+slack_logger/utils.py
