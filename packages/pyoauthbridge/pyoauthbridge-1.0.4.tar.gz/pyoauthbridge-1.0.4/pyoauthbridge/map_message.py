@@ -1,0 +1,23 @@
+def market_data(data):
+    return {
+        'exchange_code': data.exchange_code,
+        'instrument_token': data.instrument_token,
+        'last_traded_price': data.last_traded_price,
+        'last_traded_time': data.last_traded_time,
+        'last_traded_quantity': data.last_traded_quantity,
+        'trade_volume': data.trade_volume,
+        'best_bid_price': data.best_bid_price,
+        'best_bid_quantity': data.best_bid_quantity,
+        'best_ask_price': data.best_ask_price,
+        'best_ask_quantity': data.best_ask_quantity,
+        'total_buy_quantity': data.total_buy_quantity,
+        'total_sell_quantity': data.total_sell_quantity,
+        'average_trade_price': data.average_trade_price,
+        'exchange_timestamp': data.exchange_timestamp,
+        'open_price': data.open_price,
+        'high_price': data.high_price,
+        'low_price': data.low_price,
+        'close_price': data.close_price,
+        'yearly_high_price': data.yearly_high_price,
+        'yearly_low_price': data.yearly_low_price
+    }
