@@ -1,0 +1,14 @@
+README.md
+setup.py
+fastavro_gen/__init__.py
+fastavro_gen/__main__.py
+fastavro_gen/from_dict.py
+fastavro_gen/models.py
+fastavro_gen/py.typed
+fastavro_gen/type_gen.py
+fastavro_gen.egg-info/PKG-INFO
+fastavro_gen.egg-info/SOURCES.txt
+fastavro_gen.egg-info/dependency_links.txt
+fastavro_gen.egg-info/entry_points.txt
+fastavro_gen.egg-info/requires.txt
+fastavro_gen.egg-info/top_level.txt

@@ -1,0 +1,16 @@
+fastavro>=1.3.0
+black
+
+[codecs]
+python-snappy
+zstandard
+lz4
+
+[lz4]
+lz4
+
+[snappy]
+python-snappy
+
+[zstandard]
+zstandard
