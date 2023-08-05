@@ -1,0 +1,11 @@
+seatconnect/__init__.py,sha256=TsnqZwCd1e-f8GYbjBAA-57_YTv0yAwqVPupyBfv360,70
+seatconnect/connection.py,sha256=v6dRMfH2LmIPWClEVeelPyhtQu0daquzz32k5YUJ73M,50907
+seatconnect/const.py,sha256=Ivki3giL3NeFZJ8k3LJmBxGjuYCyuStMK6pcUZWC3gU,1180
+seatconnect/dashboard.py,sha256=ciOEoHOTQ-geth7jgfN9gWlq6YiiJW--mNhwRK6Vo0I,25127
+seatconnect/utilities.py,sha256=cH4MiIzT2WlHgmnl_E7rR0R5LvCXfDNvirJolct50V8,2563
+seatconnect/vehicle.py,sha256=bmZ0YPUH9T0yioCZE15XSN6mwNju8iPUCTQAyUrV1Tc,66690
+seatconnect-1.0.31.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+seatconnect-1.0.31.dist-info/METADATA,sha256=l8Srk_hOv2yW5xvL7KN7kjS2nvBV22jSbGDr24qL3dw,6325
+seatconnect-1.0.31.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+seatconnect-1.0.31.dist-info/top_level.txt,sha256=emP6wojPb0XWMs2x5NSR8v4xrlbyWvMlPccFIvneVJ4,12
+seatconnect-1.0.31.dist-info/RECORD,,
