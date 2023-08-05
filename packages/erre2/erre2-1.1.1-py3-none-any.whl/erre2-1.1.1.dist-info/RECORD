@@ -1,0 +1,16 @@
+erre2/__main__.py,sha256=_pZgzGcj9cAsf6fMF67ZqRavQ58z5hjFXW67fdHmzZs,14067
+erre2/static/Erre2.png,sha256=Yk_BAvsHsxz0ppqcjrvGHSRnzq-E-M-10mves_N_wa0,50029
+erre2/static/favicon.ico,sha256=IpvGJpTtKoLlvLgSnt3nG6iF2uYqPKrExS7km34N_ds,16958
+erre2/templates/administration/dashboard.htm,sha256=4FDfky2vKDvX9IjnmDnF4gD4OtEDm-6JVRBnizrfdrI,4945
+erre2/templates/administration/materia.htm,sha256=Nn54A_mD_3VTd3Kdp0wICbokNAffbT8cp0n4J7nLBHQ,1924
+erre2/templates/administration/riassunto.htm,sha256=VV-YKFDXdSJQy3cBaBYqe6G1EwWAnRhSH9wNvyQBvaM,1442
+erre2/templates/administration/update.htm,sha256=8eriQDeZH9XzA5fxBYDLnnHMf_6gd6t6osvJyI4rUfA,910
+erre2/templates/dashboard.htm,sha256=-xXJVBuqeDA0oq-sXbRZH6HhjZRwBDJWm_NOPXkJtIE,3622
+erre2/templates/error.htm,sha256=P3NvSWu2CxhY_edt6Ykg29jS2H31_XsEZE7o91Xa5ck,320
+erre2/templates/nav.htm,sha256=xrFeaoUQ-8D-_0jnsDt5AHvSD5BZk-GFvgvRE5YDwbk,1903
+erre2/templates/riassunti_list.htm,sha256=HR5r-f2cn4y6s50bhJThMjdNk6mAUuXmaS3JKal8DNc,3128
+erre2/templates/stampo.htm,sha256=NgjdfC6bFiVz9cXEPwsIqBhn5on9mgZnhKKf6nZJO4Y,1504
+erre2-1.1.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+erre2-1.1.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+erre2-1.1.1.dist-info/METADATA,sha256=KdsmvQY5Kv4hE_pB6LZTqB2CuM2U9OYE3q_X5xXYuGM,693
+erre2-1.1.1.dist-info/RECORD,,
