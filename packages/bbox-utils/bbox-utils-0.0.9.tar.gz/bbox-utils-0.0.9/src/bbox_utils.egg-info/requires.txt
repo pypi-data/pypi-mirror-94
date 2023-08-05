@@ -1,0 +1,13 @@
+numpy>=1.13.3
+pyquaternion
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+setuptools
+pytest
+pytest-cov
+numpy>=1.13.3
+pillow
+pyquaternion
