@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: flake8-length
+Version: 0.1.0
+Summary: Flake8 plugin for a smart line length validation.
+Home-page: https://github.com/orsinium-labs/flake8-length
+Author: Gram
+Author-email: gram@orsinium.dev
