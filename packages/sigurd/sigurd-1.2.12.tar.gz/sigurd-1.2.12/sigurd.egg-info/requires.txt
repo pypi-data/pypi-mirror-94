@@ -1,0 +1,15 @@
+requests
+PyPDF2
+gensim
+cltk>=0.1.110
+bs4
+lxml
+nltk
+norsecorpus>=1.0.2
+jupyter
+networkx
+matplotlib
+pprint
+numpy
+scikit-learn
+pytest
