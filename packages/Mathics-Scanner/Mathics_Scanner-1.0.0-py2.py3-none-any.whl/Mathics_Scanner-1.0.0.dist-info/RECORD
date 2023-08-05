@@ -1,0 +1,17 @@
+mathics_scanner/__init__.py,sha256=JUvqg73PArb33aKhyuO12H1aLUSZguvxnlxHhCHykF0,562
+mathics_scanner/characters.py,sha256=L8AtoqbQsOg-0EhLdNT6owC3F7SW9jVkbHkI6i9cCiQ,3548
+mathics_scanner/errors.py,sha256=Gak7o7l_GB84eSwSH7r2DdHLR1SON-7Oasq39lsKgIw,455
+mathics_scanner/feed.py,sha256=XJR9fNZkXIQBnFI4t7CV56HpW8qGd6IHcVe02mttmF8,4742
+mathics_scanner/prescanner.py,sha256=jvBD4tXciSM1afHdeOKaW9kIInshFq7g8MbkY-a7izY,3979
+mathics_scanner/tokeniser.py,sha256=2FYxMlFPrk5ZCykiO0_S-7UDIZlNfC7loFK3mkkBZ_E,16231
+mathics_scanner/version.py,sha256=x9gwr2rHPLzEtkGtXe58gNeZCAhyL5kNWpB2saeVncY,195
+mathics_scanner/data/characters.json,sha256=nMvy99HPsRI2_dIobCjyUcK7bMIjOWUAv2xj0EN3BUQ,102379
+mathics_scanner/data/element.csv,sha256=v62uy31kuQ1__jvU09okrLGsmZcA55xn4anIC05S0cI,47224
+mathics_scanner/generate/build_tables.py,sha256=ixiiGyEp3vl8fbj9PZcKStxYIJ1vo_HgQT-5wRZfo1Q,5101
+mathics_scanner/generate/rl_inputrc.py,sha256=ONwFHrSwuhGDBmAlmrhg8JUVzUo_5L-pCiMN9pq4caQ,1159
+Mathics_Scanner-1.0.0.dist-info/AUTHORS.txt,sha256=EJcvqlD3lfS1FzFbAioY7f3ZMzX_IySxvy3ctD-aimA,307
+Mathics_Scanner-1.0.0.dist-info/COPYING.txt,sha256=KVSsKETJdiobK8E2zpvohfdrxi7fKHjDSoJkiUgYpXg,42660
+Mathics_Scanner-1.0.0.dist-info/METADATA,sha256=UGPjgWvS9yBry6veClOxMD_LUhKkc2BK_ndNhn4_XeE,2854
+Mathics_Scanner-1.0.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+Mathics_Scanner-1.0.0.dist-info/top_level.txt,sha256=TIbtHE5Rx6tCnKiibcuLk9rgurLCYZdeZ_IYqFLwl24,16
+Mathics_Scanner-1.0.0.dist-info/RECORD,,
