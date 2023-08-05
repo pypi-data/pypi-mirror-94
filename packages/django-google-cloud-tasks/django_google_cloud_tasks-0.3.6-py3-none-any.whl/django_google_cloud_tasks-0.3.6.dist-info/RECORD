@@ -1,0 +1,16 @@
+django_cloud_tasks/__init__.py,sha256=x-4UNebG3BQQgNMk8o4YJtbHjacdf4MAU7W6_ZXxJEw,73
+django_cloud_tasks/apps.py,sha256=7VSH_jHd39VJ93eTX-3CTAmcpWwXmX0-z8V-8huLpLA,2332
+django_cloud_tasks/exceptions.py,sha256=TMJ_iuqsiP89Y9oMV5Wcp0vSEFatEqEjG09237kI314,173
+django_cloud_tasks/helpers.py,sha256=iDmzv_vQLeQP-sdgpqVSnO8_xeZFKRUEcbgLkr5MSoE,278
+django_cloud_tasks/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_cloud_tasks/management/commands/__init__.py,sha256=OEPERERc8cQWP550cBQHvdw7i8qw_IpS8l2COEyIbZY,907
+django_cloud_tasks/management/commands/initialize_subscribers.py,sha256=sbgFcKqrYt3w8u4Ll8WSSAC-cqhoEiL6BhxJnGEeg-o,274
+django_cloud_tasks/management/commands/initialize_tasks.py,sha256=FMytWFfXLFpybsx7pwLeByWrWIGv4JtjB7TREIOu98g,394
+django_cloud_tasks/management/commands/schedule_tasks.py,sha256=DmFfdJm5FoIt8keMdSTUnwmRrUIHgk-Z98rGpc-DjVQ,651
+django_cloud_tasks/tasks.py,sha256=fie0VqZoRCmIhThSwjXD3WSV8XznqRsbgFjLCaz7acY,4938
+django_cloud_tasks/urls.py,sha256=3vUQVnVFQcsZ8Hro5Dn9BYmEi4row6GC09ZBHUPoiao,291
+django_cloud_tasks/views.py,sha256=dIEwCMUcR--gTojrt5KNNuxSWTyuvpZYdrSykXtMYFg,1846
+django_google_cloud_tasks-0.3.6.dist-info/LICENSE.md,sha256=CUvt2ilcBwKAfRAnoA4RNPTLcdUj3En21LPK9YkFMGg,11358
+django_google_cloud_tasks-0.3.6.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+django_google_cloud_tasks-0.3.6.dist-info/METADATA,sha256=Big2lsy7nMQkOwvTOhwa8Inr5gapp-v0ATt79VmHvrE,404
+django_google_cloud_tasks-0.3.6.dist-info/RECORD,,
