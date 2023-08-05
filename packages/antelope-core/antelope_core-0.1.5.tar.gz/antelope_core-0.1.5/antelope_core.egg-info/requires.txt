@@ -1,0 +1,10 @@
+antelope_interface>=0.1.4
+xlrd==1.2.0
+python-magic>=0.4.18
+requests>=2.25
+
+[XML]
+lxml>=1.2.0
+
+[write_to_excel]
+xlsxwriter>=1.3.7
