@@ -1,0 +1,6 @@
+fugue[dask,spark,sql]==0.5.1
+notebook
+kaggle
+matplotlib
+qpd
+dask[dataframe]
