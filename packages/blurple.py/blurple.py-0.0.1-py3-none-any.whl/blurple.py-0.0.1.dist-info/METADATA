@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: blurple.py
+Version: 0.0.1
+Summary: A framework built on discord.py
+Home-page: https://github.com/LeptoFlare/blurple.py
+Author: LeptoFlare
+License: MIT
+Project-URL: Issues, https://github.com/LeptoFlare/blurple.py/issues
+Project-URL: Docs, https://lepto.tech/blurple.py
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: discord
+
+# blurple.py
+A framework built on discord.py.
+
+Includes:
+1. A python library for building user interfaces in discord.
+2. A route-based microframework for creating commands.
+
+
