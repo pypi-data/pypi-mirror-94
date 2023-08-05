@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+import scrapy
+import sys
+import os
+sys.path.append(os.path.abspath('../../..'))
+from $project_name.items import ${ProjectName}Item
+from scrapy_rabbit import Engine
+
+
+class $classname(Engine):
+    name = '$name'
+    priority_queue = True
+    proxy = False
+    allow_status_code = []
+    custom_settings = {}
+    timeout = 60
+
+    def __init__(self, *args, **kwargs):
+        super($classname, self).__init__(*args, **kwargs)
+        # self.start_urls = ["$domain"]
+        self.post_header = {}
+        self.post_data = {}
+
+    def start_requests(self):
+        url = "$domain"
+        yield scrapy.Request(
+            url=url,
+            dont_filter=True,
+            callback=self.parse,
+        )
+
+    def parse(self, response):
+        pass
+
+
+if __name__ == '__main__':
+    from scrapy_rabbit import run
+
+    run(['$class_name', '$name', 'auto', 10])
