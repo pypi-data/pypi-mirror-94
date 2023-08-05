@@ -1,0 +1,14 @@
+numpy
+
+[docs]
+sphinx
+sphinx-rtd-theme
+numpydoc
+
+[lint]
+pylama
+isort
+
+[test]
+pytest
+coverage
