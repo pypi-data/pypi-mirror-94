@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pytest_roast.py
+setup.cfg
+setup.py
+pytest_roast.egg-info/PKG-INFO
+pytest_roast.egg-info/SOURCES.txt
+pytest_roast.egg-info/dependency_links.txt
+pytest_roast.egg-info/entry_points.txt
+pytest_roast.egg-info/requires.txt
+pytest_roast.egg-info/top_level.txt
