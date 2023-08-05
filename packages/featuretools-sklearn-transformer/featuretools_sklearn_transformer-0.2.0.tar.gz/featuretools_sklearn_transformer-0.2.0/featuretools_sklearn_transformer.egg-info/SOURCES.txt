@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+test-requirements.txt
+featuretools_sklearn_transformer/__init__.py
+featuretools_sklearn_transformer/transformer.py
+featuretools_sklearn_transformer.egg-info/PKG-INFO
+featuretools_sklearn_transformer.egg-info/SOURCES.txt
+featuretools_sklearn_transformer.egg-info/dependency_links.txt
+featuretools_sklearn_transformer.egg-info/entry_points.txt
+featuretools_sklearn_transformer.egg-info/requires.txt
+featuretools_sklearn_transformer.egg-info/top_level.txt
+featuretools_sklearn_transformer/tests/__init__.py
+featuretools_sklearn_transformer/tests/test_transformer.py
