@@ -1,0 +1,3 @@
+[console_scripts]
+spotilyzer = spotilyzer:main
+
