@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pyiron-experimental
+Version: 0.0.1
+Summary: Repository for experimental plugins to the pyiron IDE.
+Home-page: https://github.com/pyiron/pyiron_experimental
+Author: Max-Planck-Institut für Eisenforschung GmbH - Computational Materials Design (CM) Department
+Author-email: hassani@mpie.de
+License: BSD
+Keywords: pyiron
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pyiron-base (>=0.1.45)
+Requires-Dist: temmeta (>=0.0.6)
+Requires-Dist: pystem (>=0.0.25)
+Requires-Dist: hyperspy (>=1.5.2)
+Requires-Dist: scanf (>=1.5.2)
+
+http://pyiron.org
+
+
