@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: enigmx
+Version: 0.0.1
+Summary: enigmx package
+Home-page: https://www.quantmoon.tech
+Author: Quantmoon Technologies
+Author-email: info@quantmoon.tech
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.5
