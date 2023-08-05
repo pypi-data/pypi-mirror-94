@@ -1,0 +1,18 @@
+cffi>=1.14.0
+
+[:python_version < "3.8"]
+importlib_metadata
+
+[check]
+mypy
+check-manifest
+flake8
+readme-renderer
+pygments
+isort
+twine
+
+[test]
+pytest
+pytest-cov
+coverage[toml]>=5.2
