@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: formatting
+Version: 0.0.1
+Summary: A formatting function
+Home-page: UNKNOWN
+Author: Jayant Gupta
+Author-email: jayantgupta036@gmail.com
+License: MIT
+Description:  THis is a formatting function that help you to format you code and make your code beautiful
+        
+        Change Log
+        ==========
+        
+        0.0.1 (06/01/2021)
+        -------------------
+        - First Release
+Keywords: formatting
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

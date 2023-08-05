@@ -1,0 +1,15 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+FORMATTING/CHANGELOG.txt
+FORMATTING/LICENCE.txt
+FORMATTING/README.txt
+FORMATTING/__init__.py
+FORMATTING/setup.py
+formatting.egg-info/PKG-INFO
+formatting.egg-info/SOURCES.txt
+formatting.egg-info/dependency_links.txt
+formatting.egg-info/top_level.txt

@@ -1,0 +1,1 @@
+THis is a formatting function that help you to format you code and make your code beautiful
