@@ -1,0 +1,15 @@
+setup.py
+stacktools/__init__.py
+stacktools/cache.py
+stacktools/config.py
+stacktools/data.py
+stacktools/io.py
+stacktools/measure.py
+stacktools/segmentation.py
+stacktools/utils.py
+stacktools/vis.py
+stacktools.egg-info/PKG-INFO
+stacktools.egg-info/SOURCES.txt
+stacktools.egg-info/dependency_links.txt
+stacktools.egg-info/not-zip-safe
+stacktools.egg-info/top_level.txt
