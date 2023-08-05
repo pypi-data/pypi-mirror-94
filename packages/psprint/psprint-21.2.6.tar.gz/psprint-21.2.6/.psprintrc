@@ -1,0 +1,17 @@
+FLAGS:
+  # short = False
+  pad: True
+  flush: True
+  # :
+  # end:
+  # max_pref_len: 7
+
+help:
+  pref: help
+  pref_s: "?"
+  pref_color: yellow
+  pref_bgcol: terminal
+  pref_gloss: dim
+  text_color: terminal
+  text_gloss: normal
+  text_bgcol: terminal

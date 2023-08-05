@@ -1,0 +1,15 @@
+include *.md
+include *.yml
+include *.org
+include *.py
+include .psprintrc
+include LICENSE
+include docs/output.jpg
+recursive-exclude docs _*/*
+recursive-include docs *.bat
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs Makefile
+recursive-include psprint *.yml
+recursive-include docs *.jpg
+recursive-include docs *.txt

@@ -1,0 +1,50 @@
+FLAGS:
+  pref_max_len: 7
+
+cont:
+  pref: ""
+  pref_s: ''
+
+info:
+  pref: INFORM
+  pref_s: "i"
+  pref_color: green
+
+act:
+  pref: ACTION
+  pref_s: "@"
+  pref_color: yellow
+
+list:
+  pref: LIST
+  pref_s: "·"
+  pref_color: blue
+
+warn:
+  pref: WARNING
+  pref_s: "*"
+  pref_color: magenta
+
+err:
+  pref: ERROR
+  pref_s: "!"
+  pref_color: red
+  pref_gloss: bright
+  text_color: red
+  text_gloss: dim
+
+bug:
+  pref: DEBUG
+  pref_s: "#"
+  pref_color: cyan
+  text_color: cyan
+  text_gloss: dim
+
+order:
+- cont
+- info
+- act
+- list
+- warn
+- err
+- bug
