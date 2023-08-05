@@ -1,0 +1,8 @@
+[console_scripts]
+clean_names = search_names.clean_names:main
+merge_results = search_names.merge_results:main
+merge_supp = search_names.merge_supp:main
+preprocess = search_names.preprocess:main
+search_names = search_names.search_names:main
+split_text_corpus = search_names.split_text_corpus:main
+
