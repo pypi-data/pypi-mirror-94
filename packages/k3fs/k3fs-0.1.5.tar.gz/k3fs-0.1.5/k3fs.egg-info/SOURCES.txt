@@ -1,0 +1,9 @@
+setup.py
+k3fs/__init__.py
+k3fs/fs.py
+k3fs/setup.py
+k3fs.egg-info/PKG-INFO
+k3fs.egg-info/SOURCES.txt
+k3fs.egg-info/dependency_links.txt
+k3fs.egg-info/requires.txt
+k3fs.egg-info/top_level.txt
