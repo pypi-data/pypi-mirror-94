@@ -1,0 +1,12 @@
+autosegl3/__init__.py,sha256=SMi2WmD9Nyv1cXtPNG37TqJTMupZDwMWFl583HO9v-o,260
+autosegl3/autosegl3.py,sha256=tfl3q5RE4kVO3ERWAA-rp_DOyEIPWFAMadYO-siCoTA,2239
+autosegl3/cnn.py,sha256=fhODSvLbI652K47vjvm5-fmaSe_ybnMiNeqQKIUrkcA,10149
+autosegl3/models.py,sha256=MFGhSm73rhANbN0Y4_PcwtKDfkhcY8Hw1AJ9yBaEffc,2235
+autosegl3/run_offline.py,sha256=w3U5VupsKHGFLldqbKgHYxkAq0ZzHjFBimemn0JNWgg,13057
+autosegl3/utils.py,sha256=1ePUqNXPvB9lsC6C8ml77oeUnwNSYnUkp6iJp6aG_bA,5144
+autosegl3-0.7.0.dist-info/AUTHORS.rst,sha256=g5ZrhuGA9GgExwh1QxZyJh2CvuQlMELXVxbNh9jG3wA,168
+autosegl3-0.7.0.dist-info/METADATA,sha256=zxAlk-f_vlc1rtds-n2a0KbJZTfqCXhx8xnGL9s6mdA,3459
+autosegl3-0.7.0.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+autosegl3-0.7.0.dist-info/entry_points.txt,sha256=uF1NZGbiw30BUN4WQ6dO0fBG7OQifGnO_OeeCu-zv70,56
+autosegl3-0.7.0.dist-info/top_level.txt,sha256=azNiPmhkgbEexuPyRalMZMUdrJHr--KXwT8V9i84uUc,10
+autosegl3-0.7.0.dist-info/RECORD,,
