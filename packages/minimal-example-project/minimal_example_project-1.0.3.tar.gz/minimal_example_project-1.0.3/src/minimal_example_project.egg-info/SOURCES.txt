@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+src/merkle_example/__init__.py
+src/merkle_example/__main__.py
+src/merkle_example/example1.py
+src/merkle_example/example2.py
+src/merkle_example2/__init__.py
+src/merkle_example2/__main__.py
+src/merkle_example2/example2.py
+src/minimal_example_project.egg-info/PKG-INFO
+src/minimal_example_project.egg-info/SOURCES.txt
+src/minimal_example_project.egg-info/dependency_links.txt
+src/minimal_example_project.egg-info/requires.txt
+src/minimal_example_project.egg-info/top_level.txt
