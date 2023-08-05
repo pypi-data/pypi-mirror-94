@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: enigmx
+Version: 0.0.1
+Summary: enigmx package
+Home-page: https://www.quantmoon.tech
+Author: Quantmoon Technologies
+Author-email: info@quantmoon.tech
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.5
+Requires-Dist: pandas (>=0.22.0)
+Requires-Dist: numpy (>=1.18.2)
+Requires-Dist: zarr
+Requires-Dist: fracdiff
+
+UNKNOWN
+
+
