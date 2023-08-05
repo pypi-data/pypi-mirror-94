@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+gb_menu/__init__.py
+gb_menu/action.py
+gb_menu/choice.py
+gb_menu/menu.py
+gb_menu.egg-info/PKG-INFO
+gb_menu.egg-info/SOURCES.txt
+gb_menu.egg-info/dependency_links.txt
+gb_menu.egg-info/top_level.txt
