@@ -1,0 +1,10 @@
+dagster_docker/__init__.py,sha256=BvU9bPkGt_u9mC6qoGiH3cueisziXYAFFiIFavxZ95Q,208
+dagster_docker/docker_run_launcher.py,sha256=4ZF_YJTf4lJYbNy32cgR6vS443dayQ0aJk7Ei2gv1rI,6946
+dagster_docker/version.py,sha256=gMUyiwlpdNy6C7WA24X-Dyw9LLH_1nmwG4jB3MWo5pc,28
+dagster_docker_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dagster_docker_tests/test_launch_docker.py,sha256=VZb2Tk2xL0khRS2D5Nu4QT5qMOIraRwfqKmMm_FXM7Y,8210
+dagster_docker_tests/test_version.py,sha256=_2nyLBNz0luFlAZtnWcXIv3jCBXCe55pmpXjv6Qr_mY,92
+dagster_docker-0.10.4rc0.dist-info/METADATA,sha256=8GEd82McNNfTcZPN7C1ZvWDwYC8WMZ4XrSO3HUSF-Gg,640
+dagster_docker-0.10.4rc0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dagster_docker-0.10.4rc0.dist-info/top_level.txt,sha256=7ZCaNAunH_f59jCDG3j1IjKivRxvZ02qwluH8rBflXo,36
+dagster_docker-0.10.4rc0.dist-info/RECORD,,
