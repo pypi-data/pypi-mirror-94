@@ -1,0 +1,7 @@
+PyYAML
+
+[mysql]
+mysqlclient
+
+[postgres]
+psycopg2
