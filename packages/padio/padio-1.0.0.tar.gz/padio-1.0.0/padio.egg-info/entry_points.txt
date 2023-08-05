@@ -1,0 +1,3 @@
+[console_scripts]
+padio = padio:main
+
