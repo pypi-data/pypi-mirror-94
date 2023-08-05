@@ -1,0 +1,6 @@
+include settings.ini
+include LICENSE
+include CONTRIBUTING.md
+include README.md
+include igwp/data/*
+recursive-exclude * __pycache__
