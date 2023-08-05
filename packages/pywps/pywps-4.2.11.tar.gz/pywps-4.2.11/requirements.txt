@@ -1,0 +1,8 @@
+jinja2
+jsonschema
+lxml
+owslib
+python-dateutil
+requests
+SQLAlchemy
+werkzeug

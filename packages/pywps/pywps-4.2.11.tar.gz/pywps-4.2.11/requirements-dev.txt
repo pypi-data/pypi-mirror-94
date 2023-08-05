@@ -1,0 +1,7 @@
+coverage
+flake8
+pylint
+six
+Sphinx
+twine
+wheel
