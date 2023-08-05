@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: modestga
+Version: 0.5.5
+Summary: Genetic Algorithm minimization
+Home-page: https://github.com/krzysztofarendt/modestga
+Author: Krzysztof Arendt
+Author-email: krzysztof.arendt@gmail.com
+License: BSD
+Keywords: genetic algorithm optimization
+Platform: Windows
+Platform: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: BSD License
+Requires-Dist: numpy (>=1.18.2)
+Requires-Dist: matplotlib (>=3.2.1)
+Requires-Dist: scipy (>=1.4.1)
+Requires-Dist: cloudpickle
+
+UNKNOWN
+
+
