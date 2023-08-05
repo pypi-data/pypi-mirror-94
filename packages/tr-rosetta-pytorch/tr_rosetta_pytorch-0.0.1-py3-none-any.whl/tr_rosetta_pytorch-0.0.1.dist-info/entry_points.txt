@@ -1,0 +1,3 @@
+[console_scripts]
+tr_rosetta = tr_rosetta_pytorch.cli:predict
+

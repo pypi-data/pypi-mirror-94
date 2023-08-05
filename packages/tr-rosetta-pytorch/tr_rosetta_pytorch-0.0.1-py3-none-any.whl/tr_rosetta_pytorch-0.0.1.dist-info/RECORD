@@ -1,0 +1,11 @@
+tr_rosetta_pytorch/__init__.py,sha256=ZNiUm4QM2hv7z243DbX_IWHXxxeK9xIHnhC7FvkXG9I,67
+tr_rosetta_pytorch/cli.py,sha256=oWJkEin8zHOvtcprsnFyNjow6dAf8CIX0aInyVQgKEk,1606
+tr_rosetta_pytorch/tr_rosetta_pytorch.py,sha256=2viIxYcv7xZrLpomMsrJGsuDCkzDYSxuvZKG0IRvDGA,2485
+tr_rosetta_pytorch/utils.py,sha256=TMn4tGCKrMYN21ELH_AMr5BnXHP0EBaBEJQHokD0u5g,3079
+tr_rosetta_pytorch/models/models.tar.gz,sha256=pzOgiWj9tFHsHId-Cn8CK8sYne1L9u1Z4Ey-hEqfPbI,91688960
+tr_rosetta_pytorch-0.0.1.dist-info/LICENSE,sha256=_nRlQFj-K6BpgI2_Nt79biB7r4hZ82NmpqPOrlqm7MU,1066
+tr_rosetta_pytorch-0.0.1.dist-info/METADATA,sha256=h_QmNWpQnUzfPDO3Dnj1FI-F2jUePoU-3GeP1Mn4Blo,670
+tr_rosetta_pytorch-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tr_rosetta_pytorch-0.0.1.dist-info/entry_points.txt,sha256=_AYiFC1HtMSFPp0awdzC8xCmFHJOqADJPU4zQyCX3JA,63
+tr_rosetta_pytorch-0.0.1.dist-info/top_level.txt,sha256=Vul8l6xWstaMm0xughZco8f36ieQ3Ihxrkq0bmY6Gx4,19
+tr_rosetta_pytorch-0.0.1.dist-info/RECORD,,
