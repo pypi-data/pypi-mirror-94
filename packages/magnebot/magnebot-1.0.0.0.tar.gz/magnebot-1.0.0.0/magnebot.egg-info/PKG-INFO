@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: magnebot
+Version: 1.0.0.0
+Summary: High-level API for the Magnebot in TDW.
+Home-page: https://github.com/alters-mit/magnebot
+Author: Seth Alter
+Author-email: alters@mit.edu
+License: MIT
+Description: High-level API for the Magnebot in TDW.
+Keywords: unity simulation tdw robotics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
