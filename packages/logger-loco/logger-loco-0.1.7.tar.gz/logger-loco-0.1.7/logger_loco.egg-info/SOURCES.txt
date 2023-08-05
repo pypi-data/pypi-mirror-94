@@ -1,0 +1,9 @@
+README.md
+setup.py
+logger_loco/__init__.py
+logger_loco/__version__.py
+logger_loco/main.py
+logger_loco.egg-info/PKG-INFO
+logger_loco.egg-info/SOURCES.txt
+logger_loco.egg-info/dependency_links.txt
+logger_loco.egg-info/top_level.txt
