@@ -1,0 +1,13 @@
+embo/VERSION,sha256=jFS_q38a6b0acUjq5B57Co9K03JuDKxw-COi1F255gw,6
+embo/__init__.py,sha256=JgKYWl3CF6j9VZu2izKRWd3SSJk8gd-CM_WIXmloQUk,160
+embo/core.py,sha256=s7PmhICdp9uXSxCQNcNOSZYn2SkdyLqEXfRTE6i-p6I,11486
+embo/utils.py,sha256=MPPf_UFbC6l05WFIOqUDuonH3k-E6vgFwEIjNUsNFtE,4712
+embo/examples/Basic-Example.ipynb,sha256=F_Yi6NnfW4YEL1fBX9cVIVVioD6_LcL16sagHLCO_MM,91399
+embo/examples/Markov-Chains.ipynb,sha256=8eze80BMObj5yGKHOWcoCvkWuQQbBn-2sa1OTTKAL5c,236187
+embo/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+embo/test/test_embo.py,sha256=-MZ1-N5hCacuC8uKk5KTcc9kyJeKveXB1VlJX_a8pbE,7374
+embo-1.0.5.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+embo-1.0.5.dist-info/METADATA,sha256=sMXb7dqTFms8tPpm6DLvQY7Z1iEdFHbHK_DWS6ejwxk,5058
+embo-1.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+embo-1.0.5.dist-info/top_level.txt,sha256=ljAtnrIrMeLMZ8DJzi192OpO8Bp11wJeXNKHv44ykwE,5
+embo-1.0.5.dist-info/RECORD,,
