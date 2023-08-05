@@ -1,0 +1,14 @@
+lxml
+requests[security]
+
+[:python_version < "3"]
+backports.csv
+
+[hangouts]
+hangups
+
+[test]
+unittest-xml-reporting
+
+[zulip]
+zulip

@@ -1,0 +1,3 @@
+[console_scripts]
+chiron = chiron_bot.main:main
+
