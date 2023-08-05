@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+bin/cgdms
+cgdms/__init__.py
+cgdms/cgdms.py
+cgdms/cgdms_params_ep45.pt
+cgdms.egg-info/PKG-INFO
+cgdms.egg-info/SOURCES.txt
+cgdms.egg-info/dependency_links.txt
+cgdms.egg-info/requires.txt
+cgdms.egg-info/top_level.txt
