@@ -1,0 +1,10 @@
+django_aws_s3_storage/__init__.py,sha256=Xw57rVU3hdIlk95tJFVT9mhPg3aeBtNgpRUTayKXQ34,75
+django_aws_s3_storage/apps.py,sha256=7Rdqk63MCDzmK2ziG3FRURX_cPnYTiYEKkFfUn4o4Zk,249
+django_aws_s3_storage/settings.py,sha256=MKyu_86j28vrq-JUn9BcQA0nt18DgCAXBbKXSa1Pb48,1090
+django_aws_s3_storage/storage.py,sha256=jI1zaXNfvJcsUe8vMF4WPMNDzcq_-uoXhPIbWPOJSp8,2048
+django_aws_s3_storage/tests.py,sha256=iWYnsM6Nhtfi56HIXyfyWpREzejVNmEfUn-JtmmkXHg,911
+django_aws_s3_storage/utils.py,sha256=AzgKD8DJzAtiOf5ijwGjjyhsD0UrzMhJ9Vjz8ujfe1Y,127
+django_aws_s3_storage-1.0.0.dist-info/METADATA,sha256=8JtQhq_25TLjHV_dfyjS84PvZSWZp3YczJN7SSR-ZZM,1395
+django_aws_s3_storage-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_aws_s3_storage-1.0.0.dist-info/top_level.txt,sha256=GffT68fjdnuOb81JmEQHLy_Bou2xjGIdc_PkkhiFhBU,22
+django_aws_s3_storage-1.0.0.dist-info/RECORD,,
