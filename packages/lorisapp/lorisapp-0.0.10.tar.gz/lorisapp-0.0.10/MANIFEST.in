@@ -1,0 +1,2 @@
+recursive-include loris/app/templates *
+recursive-include loris/app/static *
