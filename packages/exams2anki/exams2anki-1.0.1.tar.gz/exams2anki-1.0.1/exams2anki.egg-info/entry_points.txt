@@ -1,0 +1,3 @@
+[console_scripts]
+gfg = src.exams2anki:main
+
