@@ -1,0 +1,12 @@
+hqsbase/__init__.py,sha256=ZSO5fe1XROBKVmEtrlqHRjPDEJoeCJFHzuMys4lmnDU,896
+hqsbase/__version__.py,sha256=JEN1fdNR7pibBd6ovTbLpUpiOsU2snNvDU_0wInGQFA,684
+hqsbase/calculator/__init__.py,sha256=ihM9K9SnqMu75xVrd2I5GdomAck9DbyqKBh29m_OwUs,1343
+hqsbase/calculator/calculator.py,sha256=j9329bt7g-y9GUQ9vWmpxbf2YT2FhvriHgRoEeZTaTQ,2401
+hqsbase/qonfig/__init__.py,sha256=Wsm6Utwr67_We_Y0zFReuHef0KZsavUONDz5fJiguwU,939
+hqsbase/qonfig/qonfig.py,sha256=X7fidj6Stmy5cWLQ4SAp7e7yruL4383zOb0aFdQULW4,36913
+hqsbase/qonfig/qonfig_helper_classes.py,sha256=wj3ykoOmE1aIduyC3FLxPGiR3ff_Ogd7ytwus7H0lzk,2983
+hqsbase-0.7.8.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+hqsbase-0.7.8.dist-info/METADATA,sha256=UrI5rTeiIer2fDKjuK8iiv8HSGhPQnpfrnJ8a9vg1Yw,926
+hqsbase-0.7.8.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+hqsbase-0.7.8.dist-info/top_level.txt,sha256=mQFBIP3QJljb7jEu-jHpng_sYpsUdSOon51Jc0ukAVc,8
+hqsbase-0.7.8.dist-info/RECORD,,
