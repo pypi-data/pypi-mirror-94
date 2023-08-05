@@ -1,0 +1,13 @@
+mypy_boto3_quicksight/__init__.py,sha256=44BkvNQ8O87n1m5tyzeoF3NX7Ef2LbbTHUWswebASKA,470
+mypy_boto3_quicksight/__init__.pyi,sha256=00NNk7e47SigRWiOrS6ieD6yGJozXqaesks0PCUJgB4,469
+mypy_boto3_quicksight/__main__.py,sha256=xCBcGDenTN4zXU1suVXSUSKmTU4NMG1G-Ws5i4QEjcA,398
+mypy_boto3_quicksight/client.py,sha256=SV_hRqMEXRAigXX3eli7oQPY7hw5EoWuVbeG841SQWw,48965
+mypy_boto3_quicksight/client.pyi,sha256=7YP0cN7sALAACMStUtlUNY3kpkQB2fPvEq1EVrnzJ_U,48859
+mypy_boto3_quicksight/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_quicksight/type_defs.py,sha256=lxsT6mN4vApQwYJEnoPOcKoIR03PB9n6Uko724SBV4E,65779
+mypy_boto3_quicksight/type_defs.pyi,sha256=PuzXrSTSHop1BpjwmHVqQA0vzj5ZavwHgSURTjzITqA,65756
+mypy_boto3_quicksight/version.py,sha256=xTBRC5kEOgYhBrL0QWZCuunJ7LihEvX3tNEOGOla5BA,56
+mypy_boto3_quicksight-1.17.3.0.dist-info/METADATA,sha256=nk6iKyElNsonSeCu_XH-kxm6o4bgQmh7IdEwx7x-fKo,13508
+mypy_boto3_quicksight-1.17.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mypy_boto3_quicksight-1.17.3.0.dist-info/top_level.txt,sha256=ztbEoGX96yo4l8ELUFFoo6UP5n2PA3AOU3E7McrF8ac,22
+mypy_boto3_quicksight-1.17.3.0.dist-info/RECORD,,
