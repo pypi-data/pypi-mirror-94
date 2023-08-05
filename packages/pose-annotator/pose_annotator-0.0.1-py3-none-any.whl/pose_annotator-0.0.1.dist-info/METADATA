@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pose-annotator
+Version: 0.0.1
+Summary: Keypoint annotation GUI
+Home-page: UNKNOWN
+Author: Jim Bohnslav
+Author-email: jbohnslav@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: omegaconf (>=2.0)
+Requires-Dist: opencv-python-headless
+Requires-Dist: pandas
+Requires-Dist: PySide2 (>=5.15)
+Requires-Dist: vidio (>=0.0.3)
+
+# Pose annotator
+A simple GUI for clicking on keypoints for training pose estimation models. Currently only supports one set of 
+points per frame. Please consider contributing for multiple instances per frame!
+
+
+
