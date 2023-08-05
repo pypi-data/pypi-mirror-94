@@ -1,0 +1,29 @@
+language: python
+python:
+    - '3.6'
+    - '3.7'
+
+notifications:
+    email:
+        recipients:
+            - dilawar.s.rajput@gmail.com
+        on_success: never # default: change
+        on_failure: always # default: always
+
+install:
+    - sudo apt update
+    - sudo apt install -y python3-tk python-tk 
+
+script:
+    - python -m nose dilawar
+    - python -m setup.py install
+
+deploy:
+  provider: pypi
+  on:
+      tags: true
+  user: dilawars
+  password:
+    secure: hmPcteZ8MOhPQy3EG5Z6dq6ZvWENoD1rBfoWdi9em9r98hx2FgJ6ZNEgwsDlwXjajaGkzxb2uXyWZyYIqcKjHUAVLyEygtdhqYsSaE4IpjvjyvPTlZ4WLUnECbQAcs5rzUghjdXRzv8W0/CXzldLXJLm55jdnajlUcSTfzcN97WQux9eVxCtiob/R6I+7Kuaw1ooa7GkfOV+osv9tb+dqmADIEc05KKqBIYMyrVjogD+Gwc7Joy9uu1jcV2hOioBrOXLjxCEwRoWfPvkHOxRspqDugXyhk3Et1ByBLZ7dnbxrANzjGhx9eE82m5CVGg4b2dqgUr4pMXvy/ghJd29jZQnQY5Gqqq6ZQsKlMXjbrgsAT3p0/cU9thvEtpou61HmkcF0pkgkCkd1R4J+g0n2er2YeioBU8jYrUZ6Hdl2US3zDjQ9IrjN1pum4pWwQPkX5Nf0999tyDAEr0Ao+3alXirskPvvGiaKu3unhOOVskVxEFb6LKoYCfLDJRWw4po3d9A6NRDu9wBwMFM/pKhSpHK1JKDgDMWs0M1EiWPMxIuFiAfFjEPP4JY5JaCAsXBeLz2MKkedH3pUCRPBGAJf4s4kOZWlXXYo5in1sz94LPWF5nJ5K16ya8/+JxBolfiXRtTWq2PcIsV3LMWsa+m/nxs+Yi83rrlMW2hiEJBSEw=
+    distributions: "sdist bdist_wheel"
+    skip_existing: true
