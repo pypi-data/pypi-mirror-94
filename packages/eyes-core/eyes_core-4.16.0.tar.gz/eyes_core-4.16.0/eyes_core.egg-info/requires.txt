@@ -1,0 +1,5 @@
+eyes-common==4.16.0
+attrs<20,>=19.2.0
+requests>=2.22.0
+structlog<=20.1.0
+Pillow>=5.0.0
