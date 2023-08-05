@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: async-8ball
+Version: 1.0
+Summary: Asynchronous 8ball response generator.
+Home-page: https://github.com/Cryptex-github/async-8ball
+Author: cryptex
+License: Apache-2.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# async-8ball
+Asynchronous 8ball response generator. 
+Example:
+```py
+import async-8ball
+async def your_function():
+ response = await async-8ball.response()
+```
+
+
