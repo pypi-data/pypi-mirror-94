@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pywer.egg-info/PKG-INFO
+pywer.egg-info/SOURCES.txt
+pywer.egg-info/dependency_links.txt
+pywer.egg-info/requires.txt
+pywer.egg-info/top_level.txt
