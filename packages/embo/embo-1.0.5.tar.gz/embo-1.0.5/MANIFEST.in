@@ -1,0 +1,4 @@
+include COPYING
+include embo/VERSION
+include embo/examples/*.ipynb
+include tox.ini
