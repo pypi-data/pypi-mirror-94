@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: cyjax-vectra-integration
+Version: 1.0.0
+Summary: cyjax-vectra-integration provides an integration to send indicators to Vectra Brain.
+Home-page: https://www.cyjax.com
+Author: Cyjax Ltd.
+Author-email: github@cyjax.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: stix (==1.2.0.11)
+Requires-Dist: cybox (==2.1.0.21)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: cyjax-cti (==1.0.7)
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+Requires-Dist: twine ; extra == 'test'
+
+## Introduction
+
+`cyjax-vectra-integration` is an integration for [Vectra](https://www.vectra.ai) and it can be used to ingest 
+indicators of compromise.
+
+The library is available on [Python Package Index](http://pypi.python.org/pypi/cyjax-vectra-integration).
+
+## Install
+
+You can install the `cyjax-vectra-integration` library with pip:
+
+```shell
+pip install --user cyjax-vectra-integration
+```
+
+## Configuration
+
+To set the integration up, you have to provide:
+
+- Cyjax API key: the API key for the Cyjax platform API.
+- Vectra FQDN: the fully qualified domain name to Vectra Brain.
+- Vectra API key: the API key for Vectra REST API.
+- Vectra threat feed ID: the threat feed ID where to save indicators.
+
+Then please run:
+
+```shell
+$HOME/.local/bin/cyjax-vectra-integration --setup
+
+=== Vectra integration for Cyjax Threat Intelligence platform ===
+
+Please provide the Cyjax API key: g5d9fig0db5b6b7022d3a5d3c93883g4
+Please provide the Vectra FQDN: brain.vectra-fqdn.com
+Please provide the Vectra API key: X2QrvRBwblBbd9nGa8Z2aJHDYZFoVFFiAadolPUU
+Please provide the Vectra Threat feed ID: 20
+```
+
+## Run
+
+Please set a cronjob up to run the Vectra integration every hour:
+
+```shell
+crontab -e
+0 * * * * $HOME/.local/bin/cyjax-vectra-integration
+```
+
+## Uninstall
+
+To remove the Vectra integration, please run:
+
+```shell
+pip uninstall cyjax-vectra-integration
+rm $HOME/.config/ccyjax_vectra_integration.json
+```
+
+
