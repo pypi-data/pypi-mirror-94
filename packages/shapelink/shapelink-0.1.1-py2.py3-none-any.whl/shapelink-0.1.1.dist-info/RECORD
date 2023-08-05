@@ -1,0 +1,14 @@
+shapelink/__init__.py,sha256=I-Yh__aiO-Aos8YGOid9RuVfL6w-RqMfzzEHzaeG0Ks,321
+shapelink/_version.py,sha256=fo5OmshoTcb5C3p3FEdDHuCx62Yx5-N0L9A6YnKhCvw,7095
+shapelink/_version_save.py,sha256=atVFF6H_rC7jjAr4R1-iMDvEOhB_Z3wgAK6WYd0hwoY,82
+shapelink/cli.py,sha256=tjk6zbuybhhfDn0Gm48s3f84oFFdmYJVgfJoD4ns5uA,2748
+shapelink/msg_def.py,sha256=t6-biqEv3meZZQOmy0qR4N3lzJfr3yNFcL_2w2IZB10,232
+shapelink/shapein_simulator.py,sha256=vB4w-FOSTenAJTvf7xrVW3zWfxgXw7DLNGQPDLBmLOc,8125
+shapelink/shapelink_plugin.py,sha256=3iHrCxvfvI4Dy-yQV8ssiWHMY4KuzeOjqnWnU6v_-ME,4416
+shapelink/util.py,sha256=RAWUIUyJFlKtkVxhgwZ1UjsA_Q7RUKsUEbVKmEof2fA,2570
+shapelink-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+shapelink-0.1.1.dist-info/METADATA,sha256=QtMEFycZ_0zwp_XogeTuufY6wjHxA3ou7FnlYGm3ONU,1562
+shapelink-0.1.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+shapelink-0.1.1.dist-info/entry_points.txt,sha256=6q2VvMCUivIZKLjognqTjwpt3ZJbe6-VpBM8Vyorl4o,51
+shapelink-0.1.1.dist-info/top_level.txt,sha256=23HtB59BzpheUEPry2t5lRJKxawJI0b6eSU1at0zn_o,10
+shapelink-0.1.1.dist-info/RECORD,,

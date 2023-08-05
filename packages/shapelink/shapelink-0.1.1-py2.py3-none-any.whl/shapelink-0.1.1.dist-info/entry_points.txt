@@ -1,0 +1,3 @@
+[console_scripts]
+shape-link = shapelink.cli:main
+
