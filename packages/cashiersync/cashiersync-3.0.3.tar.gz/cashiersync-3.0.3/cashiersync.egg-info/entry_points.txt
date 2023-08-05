@@ -1,0 +1,3 @@
+[console_scripts]
+cashiersync = cashiersync.main:run_server
+
