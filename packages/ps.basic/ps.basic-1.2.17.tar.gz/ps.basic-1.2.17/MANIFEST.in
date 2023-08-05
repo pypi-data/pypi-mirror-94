@@ -1,0 +1,5 @@
+include tox.ini README.rst 
+include src/ps/basic/__init__.py
+include src/ps/basic/ps_shell_log.py
+recursive-include src   *.py
+recursive-include tests  *.py
