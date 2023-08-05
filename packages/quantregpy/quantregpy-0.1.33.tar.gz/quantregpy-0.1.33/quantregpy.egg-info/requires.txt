@@ -1,0 +1,5 @@
+patsy
+numpy==1.19.2
+scipy
+pandas
+scikit-learn
