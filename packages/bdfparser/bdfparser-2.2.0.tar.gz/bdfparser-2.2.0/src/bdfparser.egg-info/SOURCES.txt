@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/bdfparser/__init__.py
+src/bdfparser/bdfparser.py
+src/bdfparser.egg-info/PKG-INFO
+src/bdfparser.egg-info/SOURCES.txt
+src/bdfparser.egg-info/dependency_links.txt
+src/bdfparser.egg-info/requires.txt
+src/bdfparser.egg-info/top_level.txt
