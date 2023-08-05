@@ -1,0 +1,526 @@
+/* This file is auto-generated from proj_functions.c.src */
+#ifndef DOUBLE_PREC
+#define DOUBLE_PREC
+#endif
+// # -*- mode: c -*-
+/* File: proj_functions.c.src */
+/*
+  This file is an extenstion of the Corrfunc package
+  Copyright (C) 2020-- Kate Storey-Fisher (kstoreyfisher@gmail.com)
+  License: MIT LICENSE. See LICENSE file under the top-level
+  directory at https://github.com/kstoreyf/Corrfunc/
+*/
+
+#ifndef DOUBLE_PREC
+#define DOUBLE_PREC
+#endif
+// # -*- mode: c -*-
+#pragma once
+
+#include "proj_functions_double.h"
+
+#include "defs.h"
+#include "utils.h"
+#include "function_precision.h"
+
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+#include <errno.h>
+
+#include <gsl/gsl_matrix_double.h>
+#include <gsl/gsl_linalg.h>
+#include <gsl/gsl_interp.h>
+#include <gsl/gsl_integration.h>
+
+#ifndef MAXLEN
+#define MAXLEN 1000
+#endif
+
+//////////////////////////////////
+// Projection functions
+//////////////////////////////////
+
+//
+void tophat_double(const proj_struct_double *projdata, double *u, double s, double sqr_s, const pair_struct_double *pair){
+    (void) s;//to suppress the unused variable warning
+
+    // nsbins is number of bins and not edges
+    // supp_sqr has length nsbins+1, number of edges
+    for(int p=projdata->nsbins-1; p>=0; p--){
+        u[p] = ZERO;
+    }
+    //printf("top %f %f %f\n", sqr_s, projdata->supp_sqr[0], projdata->supp_sqr[1]);
+    for(int p=projdata->nsbins-1; p>=0; p--){
+        
+        if (sqr_s >= projdata->supp_sqr[p] && sqr_s < projdata->supp_sqr[p+1]){
+            u[p] = 1.0;
+            //printf("u[p] %f\n", u[p]);
+            break;
+        }
+    }
+}
+
+
+void piecewise_double(const proj_struct_double *projdata, double *u, double s, double sqr_s, const pair_struct_double *pair){
+    (void) sqr_s;//to suppress the unused variable warning
+    // Assumes nsbins = nprojbins
+    for(int p=0;p<projdata->nprojbins;p++){
+        // peaks are bin averages, for now - need to take square roots
+        double peak = 0.5*(projdata->supp[p] + projdata->supp[p+1]);
+        // assumes bins in ascending order
+        double binwidth = projdata->supp[p+1] - projdata->supp[p];
+        double val = 1.0 - (1.0/binwidth) * FABS(s - peak);
+        if (val < 0) {
+            val = 0;
+        }
+        u[p] = val;
+    }
+}
+
+
+void gaussian_kernel_double(const proj_struct_double *projdata, double *u, double s, double sqr_s, const pair_struct_double *pair){
+    (void) sqr_s;//to suppress the unused variable warning
+    double sigma = 3.0;
+    double amp = 1.0/(SQRT(2.0*M_PI)*sigma);
+    for(int p=0;p<projdata->nprojbins;p++){
+        double rp = projdata->supp[p];
+        if (FABS(rp-s)<4.0*sigma) {
+            double gaussian = amp * exp( -0.5*( ((rp-s)/sigma)*((rp-s)/sigma)) );
+            u[p] = gaussian;
+        }
+        else {
+            u[p] = 0;
+        }
+    }
+}
+
+
+void powerlaw_double(const proj_struct_double *projdata, double *u, double s, double sqr_s, const pair_struct_double *pair){
+    (void) sqr_s;//to suppress the unused variable warning
+    (void) projdata;
+
+    double gamma=2.7, s0=15.0;
+    double powlaw = POW(s/s0, -gamma);
+    u[0] = powlaw;
+
+    double amp=0.004, width=10, mean=107;
+    double bump = amp * exp(-(s-mean)*(s-mean)/(2*width*width));
+    u[1] = bump;
+   
+    double dwidth = amp*(s-mean)*(s-mean)/(width*width*width) * exp(-(s-mean)*(s-mean)/(2*width*width)); 
+    u[2] = dwidth;
+}
+
+
+void general_r_double(const proj_struct_double *projdata, double *u, double s, double sqr_s, const pair_struct_double *pair){
+    (void) sqr_s;//to suppress the unused variable warning
+    int nbases = projdata->nbases;
+    int nres = projdata->nres;
+    double sval;
+    // TODO: somewhere check that r is in ascending order !! IMPORTANT !!
+
+    /* if not in r range, return 0s */
+    if (s<projdata->projbases[0] || s>=projdata->projbases[(nres-1)*(nbases+1)]){
+      for (int j=0; j<nbases; j++){
+        u[j] = 0;
+      }
+      return;
+    }
+
+    /* reverse linear search - binary may be faster? */
+    int i0 = -1, i1 = -1;
+    double s0, s1, y0, y1;
+    // loop backwards because last bins cover larger volume, should increase speed
+    // nres-2 because nres-1 is max value, which would be caught by above case
+    for (int i=nres-2; i>=0; i--){
+      // get first colum of basis file, radii
+      sval = projdata->projbases[i*(nbases+1)];
+      // >= because looping backward
+      if (s >= sval) {
+        i0 = i; //index before insertion location
+        i1 = i+1; //index after insertion location
+        s0 = sval;
+        s1 = projdata->projbases[i1*(nbases+1)];
+        break;
+      } 
+    }
+
+    for (int j=0; j<nbases; j++){
+        // +1's because 0th column is sarr 
+        y0 = projdata->projbases[i0*(nbases+1)+(j+1)];
+        y1 = projdata->projbases[i1*(nbases+1)+(j+1)];
+        u[j] = y0 + (s - s0)*(y1 - y0)/(s1 - s0); //linear interp
+    }
+}
+
+void gradient_double(const proj_struct_double *projdata, double *u, double s, 
+                     double sqr_s, const pair_struct_double *pair){
+
+    /* this could be whatever function we want to add a gradient to! */
+    // this will fill up the first 1/4 of u
+    // but CAREFUL, for functions that depend on nprojbins we will have to reset it, bc actual is 4x more than assumed in other funcs!
+    //tophat_double(projdata, u, s, sqr_s, pair);
+    general_r_double(projdata, u, s, sqr_s, pair);
+
+    /* Add gradients */
+    /* u is 4x as long as nbases! */
+    /* the .d is because of the union struct that allows for the other vectorization types */
+    int nconst = projdata->nprojbins/4;
+    double xweight, yweight, zweight;
+    
+    /* Take the pair position to be the mean */
+    /* x stored in index 1 of weights, because general weight in 0 (y in 2, z in 3)*/
+    xweight = 0.5*(pair->weights0[1].d + pair->weights1[1].d);
+    yweight = 0.5*(pair->weights0[2].d + pair->weights1[2].d);
+    zweight = 0.5*(pair->weights0[3].d + pair->weights1[3].d);
+
+    for (int j=0; j<nconst; j++){
+        u[nconst+j] = u[j] * xweight;
+        u[2*nconst+j] = u[j] * yweight;
+        u[3*nconst+j] = u[j] * zweight;
+    }
+}
+
+//////////////////////////////////
+// Utility functions
+//////////////////////////////////
+
+/* Gives a pointer to the projection function for the given projection method
+ * and instruction set.
+ */
+proj_func_t_double get_proj_func_by_method_double(const proj_method_t method){
+    switch(method){
+        case TOPHAT:
+            return &tophat_double;
+        case PIECEWISE:
+            return &piecewise_double;
+        case POWERLAW:
+            return &powerlaw_double;
+        case GENR:
+            return &general_r_double;
+        case GAUSSIAN_KERNEL:
+            return &gaussian_kernel_double;
+        case GRADIENT:
+            return &gradient_double;
+        default:
+        case NONEPROJ:
+            return NULL;
+    }
+}
+
+
+int compute_amplitudes_double(int nprojbins, int nd1, int nd2, int nr1, int nr2,
+            double *dd, double *dr, double *rd, double *rr, double *qq, double *amps){
+
+    // Computer numerator of estimator
+    double numerator[nprojbins];
+    double qqnorm[nprojbins*nprojbins];
+    for (int i=0; i<nprojbins; i++){
+        double ddnorm = dd[i]/((double)nd1*(double)nd2);
+        double drnorm = dr[i]/((double)nd1*(double)nr2);
+        double rdnorm = rd[i]/((double)nr1*(double)nd2);
+        double rrnorm = rr[i]/((double)nr1*(double)nr2);
+        numerator[i] = ddnorm - drnorm - rdnorm + rrnorm;
+        for (int j=0; j<nprojbins; j++){
+            qqnorm[i*nprojbins+j] = qq[i*nprojbins+j]/((double)nr1*(double)nr2);
+        }
+    }
+
+	int s;
+	// Define all the used matrices
+	gsl_matrix *qq_mat = gsl_matrix_alloc(nprojbins, nprojbins);
+	gsl_matrix *qq_mat_inv = gsl_matrix_alloc(nprojbins, nprojbins);
+	gsl_permutation *perm = gsl_permutation_alloc(nprojbins);
+	// Fill the matrix m
+	for (int i=0; i<nprojbins; i++){
+        for (int j=0; j<nprojbins; j++){
+            gsl_matrix_set(qq_mat, i, j, qqnorm[i*nprojbins+j]);
+        }
+    }
+	// Make LU decomposition of matrix m
+	gsl_linalg_LU_decomp(qq_mat, perm, &s);
+	// Invert the matrix m
+	gsl_linalg_LU_invert(qq_mat, perm, qq_mat_inv);
+
+    // Take inner product of qqinv * numerator, get amplitude vector
+    // TODO: double check
+    for (int i=0; i<nprojbins; i++){
+        double aval = 0;
+        for (int j=0; j<nprojbins; j++){
+            aval += gsl_matrix_get(qq_mat_inv, i, j) * numerator[j];
+        }
+        amps[i] = aval;
+    }
+	return EXIT_SUCCESS;
+}
+
+
+int evaluate_xi_double(int nprojbins, double *amps,
+                      int nsvals, double *svals, double *xi, proj_method_t proj_method, int nsbins, double *sbins, char *projfn, struct extra_options *extra){
+                          
+    // If no extra options were passed, create dummy options
+    // This allows us to pass arguments like "extra->weights0" below;
+    // they'll just be NULLs, which is the correct behavior
+    struct extra_options dummy_extra;
+    if(extra == NULL){
+        weight_method_t dummy_method = NONE;
+        dummy_extra = get_extra_options(dummy_method);
+        extra = &dummy_extra;
+    }
+
+    /* The metadata for a pair is applied to all r values */
+    pair_struct_double pair = {.num_weights = extra->weights0.num_weights};
+    for(int w = 0; w < pair.num_weights; w++){
+        //0 because for evaluate_xi we only have weights for a single pair
+        pair.weights0[w].d = ((double *) extra->weights0.weights[w])[0];
+        pair.weights1[w].d = ((double *)extra->weights0.weights[w])[0];
+    }
+
+    proj_struct_double *projdata = malloc(sizeof(proj_struct_double));
+    if(projdata == NULL){
+        free(projdata);
+        return EXIT_FAILURE;
+    }
+    projdata->nprojbins = nprojbins;
+	projdata->proj_method = proj_method;
+    proj_func_t_double proj_func = get_proj_func_by_method_double(proj_method);
+    /* Read in projection file if necessary */
+    if (projfn != NULL) {
+        read_projfile_double(projfn, projdata);
+    }
+    
+    // If nsbins given, add to projdata
+    projdata->nsbins = nsbins;
+    projdata->supp = sbins;
+    double supp_sqr[nsbins];
+    //plus 1 because one more edge than number of bins
+    for (int i=0; i<nsbins+1; i++){
+        supp_sqr[i] = sbins[i]*sbins[i];
+    }
+    projdata->supp_sqr = supp_sqr;
+    // nsvals: number of s values at which to evaluate xi
+    for (int i=0; i<nsvals; i++){
+        //get basis function u for given value of s
+        double u[nprojbins];
+        double sqr_s = svals[i]*svals[i];
+        proj_func(projdata, u, svals[i], sqr_s, &pair);
+		/* Multiply u by the amplitudes to get xi in that s bin (xi is vector of length nsvals) */
+        // printf("sval: %f\n", svals[i]);
+        // for (int n=0; n<nprojbins; n++){
+        //     printf("u[%d] = %f\n", n, u[n]);
+        // }
+
+        double xival = 0;
+        for (int j=0; j<nprojbins; j++){
+            xival += amps[j]*u[j];
+        }
+        xi[i] = xival;
+    }
+
+    if (projfn!=NULL) {
+      free(projdata->projbases);
+    }
+    free(projdata);
+	return EXIT_SUCCESS;
+}
+
+
+int read_projfile_double(char *projfn, proj_struct_double *projdata){
+    FILE *projfile;
+    projfile=fopen(projfn,"r");
+    if( !projfile ){
+        fprintf(stderr, "ERROR opening [%s]\n",projfn);
+        return EXIT_FAILURE;
+    }
+    int nres = 0;
+    int nbases = 0;
+    char buf[MAXLEN];
+    /* Count rows in file */
+    while(fgets(buf, MAXLEN, projfile)) {
+        if (nres==0) {
+            char *val;
+            val = strtok(buf, " ");
+            while (val != NULL) {
+                nbases++;
+                val = strtok(NULL, " ");
+            }
+        }
+        nres++;
+    }
+    nbases -= 1; //to account for r column
+
+    /* Check nprojbins same as number of bases in file nbases for general_r function */
+    if (nbases != projdata->nprojbins && projdata->proj_method==GENR) {
+        fprintf(stderr, "The value of nprojbins (%ld) must be the same as nbases (%d), the number of columns in your basis file. (If off-by-one, did you forget r column in your basis file?)\n", projdata->nprojbins, nbases);
+        return EXIT_FAILURE;
+    }
+    projdata->nres = nres;
+    projdata->nbases = nbases;
+    projdata->projbases = my_malloc(sizeof(*(projdata->projbases)), nres*(nbases+1)); //+1 to account for r column
+    if(projdata->projbases == NULL){
+        free(projdata->projbases);
+        return EXIT_FAILURE;
+    }
+
+    /* Read in file */
+    rewind(projfile);
+    for(int i = 0; i < nres; i++){
+        fgets(buf,MAXLEN,projfile);
+        char *val;
+        val = strtok(buf, " ");
+        for(int j=0; j<nbases+1; j++){
+            sscanf(val, "%"REAL_FORMAT, &projdata->projbases[i*(nbases+1)+j]);
+            val = strtok(NULL, " ");
+        }
+    }
+    fclose(projfile);
+    return EXIT_SUCCESS;
+}
+
+double linspace_double(double xmin, double xmax, int xnum, double* xarr){
+    double space = (xmax - xmin)/(xnum-1);
+    int i;
+    for (i=0; i<xnum; i++){
+        xarr[i] = xmin + i*space;
+    }
+    return space;
+}
+
+
+int qq_analytic_double(double rmin, double rmax, int nd, double volume, int nprojbins, double *rr, double *qq, proj_method_t proj_method, int nsbins, double *sbins, char *projfn){
+    proj_struct_double *projdata = malloc(sizeof(proj_struct_double));
+    if(projdata == NULL){
+        free(projdata);
+        return EXIT_FAILURE;
+    }
+    projdata->nprojbins = nprojbins;
+	projdata->proj_method = proj_method;
+
+    /* Read in projection file if necessary */
+    if (projfn != NULL) {
+        read_projfile_double(projfn, projdata);
+    } 
+    integration_params_double *int_params = malloc(sizeof(integration_params_double));
+    if(int_params == NULL){
+        free(int_params);
+        return EXIT_FAILURE;
+    }
+    projdata->nsbins = nsbins;
+    projdata->supp = sbins;
+    double supp_sqr[nsbins];
+    //plus 1 because one more edge than number of bins
+    //if nsbins=-1, means none needed; this loop just won't run
+    for (int i=0; i<nsbins+1; i++){
+        supp_sqr[i] = sbins[i]*sbins[i];
+    }
+    projdata->supp_sqr = supp_sqr;
+
+    int_params->projdata = projdata;
+
+    int_params->i = 0;
+    int_params->j = 0;
+    int_params->is_qq = 0;
+    
+    double prefac = 4*M_PI*nd*(nd-1)/volume;
+    for (int i=0; i<nprojbins; i++){
+        int_params->i = i;
+        int_params->is_qq = 0;
+        double integral = adaptiveSimpsons_double(proj_to_integrate_double, int_params, rmin, rmax, 1e-6, 100);
+        rr[i] = integral*prefac;
+        for (int j=0; j<nprojbins; j++){
+            int_params->j = j;
+            int_params->is_qq = 1;
+            double integral = adaptiveSimpsons_double(proj_to_integrate_double, int_params, rmin, rmax, 1e-6, 100);
+           qq[i*nprojbins+j] = integral*prefac;
+        }
+    }
+
+    if (projfn!=NULL) {
+      free(projdata->projbases);
+    }
+    free(projdata);
+    free(int_params);
+    //do i also need to free int_params's pointer to projdata?
+	return EXIT_SUCCESS;
+}
+
+
+double proj_to_integrate_double(double r, integration_params_double *p) {
+    integration_params_double *params = (integration_params_double *)p;
+    proj_struct_double *pdata = (params->projdata); 
+    proj_func_t_double proj_func = get_proj_func_by_method_double(pdata->proj_method);
+    int i = (params->i);
+    double r_sqr = r*r;
+    double integrand;
+    double u[pdata->nprojbins];
+    /* TODO: actually deal with pair here */
+    pair_struct_double pair;
+    proj_func(pdata, u, r, r_sqr, &pair);
+    if (params->is_qq) { 
+        int j = (params->j);
+        integrand = r_sqr * u[i] * u[j]; 
+    }
+    else { 
+        integrand = r_sqr * u[i]; 
+    }
+    return integrand;
+}
+
+
+/** Adaptive Simpson's Rule, Recursive Core */
+// adapted from https://en.wikipedia.org/wiki/Adaptive_Simpson%27s_method#C
+double adaptiveSimpsonsAux_double(double (*f)(double, integration_params_double*), integration_params_double *p, double a, double b, double eps,
+                          double whole, double fa, double fb, double fm, int rec) {
+    double m   = (a + b)/2,  h   = (b - a)/2;
+    double lm  = (a + m)/2,  rm  = (m + b)/2;
+    // serious numerical trouble: it won't converge
+    if ((eps/2 == eps) || (a == lm)) { errno = EDOM; return whole; }
+    double flm = (*f)(lm, p), frm = (*f)(rm, p);
+    double fl = (double) flm;
+    double left  = (h/6) * (fa + 4*flm + fm);
+    double right = (h/6) * (fm + 4*frm + fb);
+    double delta = left + right - whole;
+
+    if (rec <= 0 && errno != EDOM) errno = ERANGE;  // depth limit too shallow
+    // Lyness 1969 + Richardson extrapolation; see article
+    if (rec <= 0 || fabs(delta) <= 15*eps)
+        return left + right + (delta)/15;
+    return adaptiveSimpsonsAux_double(f, p, a, m, eps/2, left,  fa, fm, flm, rec-1) +
+           adaptiveSimpsonsAux_double(f, p, m, b, eps/2, right, fm, fb, frm, rec-1);
+}
+
+/** Adaptive Simpson's Rule Wrapper
+ *  (fills in cached function evaluations) */
+double adaptiveSimpsons_double(double (*f)(double, integration_params_double*),     // function ptr to integrate
+                       integration_params_double *p,
+                       double a, double b,      // interval [a,b]
+                       double epsilon,         // error tolerance
+                       int maxRecDepth) {     // recursion cap
+    errno = 0;
+    
+    double h = b - a;
+    if (h == 0) return 0;
+
+    // Dividing into sub-parts and integrating each and adding,
+    // because adaptive integration sometimes fails over whole region
+    double aa, bb;
+    double total = 0.0;
+    double hh = 5.0;// starting grid width - may need to make a parameter or adjust based on nprojbins
+    aa = a;
+    bb = aa+hh;
+    while (aa < b){
+        double fa = (*f)(aa, p), fb = (*f)(bb, p), fm = (*f)((aa + bb)/2, p);
+        double S = (hh/6)*(fa + 4*fm + fb);
+        if (bb > b){
+            bb = b;
+        }
+        total += adaptiveSimpsonsAux_double(f, p, aa, bb, epsilon, S, fa, fb, fm, maxRecDepth);
+        aa = bb;
+        bb += hh;
+    }
+    return total;
+}
+

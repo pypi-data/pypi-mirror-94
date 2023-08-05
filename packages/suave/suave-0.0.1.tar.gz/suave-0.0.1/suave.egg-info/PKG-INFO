@@ -1,0 +1,166 @@
+Metadata-Version: 1.2
+Name: suave
+Version: 0.0.1
+Summary: A continuous-function estimator for 2-point statistics
+Home-page: https://github.com/kstoreyf/suave
+Author: Kate Storey-Fisher
+Author-email: kstoreyfisher@gmail.com
+Maintainer: Kate Storey-Fisher
+Maintainer-email: kstoreyfisher@gmail.com
+License: MIT
+Download-URL: https://github.com/kstoreyf/suave/archive/suave-0.0.1.tar.gz
+Description: ``suave``: The Continuous-Function Estimator
+        ============================================
+        
+        |PyPI| |MIT licensed| |RTD| |Continuous-Function Estimator Paper| |Corrfunc Paper I| |Corrfunc Paper II|
+        
+        This is an implementation of the Continuous-Function Estimator, a generalization of the standard (Landy-Szalay) estimator for the two-point correlation function. 
+        We call this tool ``suave`` which means *smooth* in Spanish (pronounced **swah**-beh), as it can produce smooth (continuous) correlation functions. 
+        It is built within the `Corrfunc <https://github.com/manodeep/Corrfunc>`_  package, by Manodeep Sinha and Lehman Garrison; check out the full Corrfunc README at the original repo.
+        
+        The 2-point correlation function measures the clustering of galaxies (or other tracers) as a function of scale. 
+        Traditionally, this is done by counting the pairs of galaxies in a given separation bin, and normalizing by the pairs in a uniform random catalog. 
+        
+        The continuous-function estimator eliminates the need for binning, in separation or any other quantity. 
+        Rather, it projects the pairs onto any user-defined set of basis functions.
+        It replaces the pair counts with vectors, and the random normalization vector term with a matrix, that describe the contribution of the pairs to each basis function.
+        The correlation function can then be directly evaluated at any separation, resulting in a continuous estimation.
+        
+        An example script for using the estimator is in `example_theory.ipynb <https://github.com/kstoreyf/Corrfunc/blob/master/examples/example_theory.ipynb>`_.
+        The Continuous-Function Estimator is currenly implemented in the DD(s, mu) pair counting statistic for both mock and theory data.
+        Currently implemented bases are tophat and piecewise.
+        General r-dependent basis functions can be read in from a file; helper routines for these include spline basis functions of any order and a baryon acoustic oscillation fitting function.
+        
+        The paper presenting this method can be found at https://arxiv.org/abs/2011.01836 (Storey-Fisher \& Hogg, Accepted to ApJ). 
+        Feel free to email `k.sf@nyu.edu <mailto:k.sf@nyu.edu>`_ with any comments or questions, or `submit an issue <https://github.com/kstoreyf/Corrfunc/issues/new/choose>`_.
+        
+        
+        Author & Maintainers
+        =====================
+        
+        The suave package was implemented by `Kate Storey-Fisher <https://github.com/kstoreyf>`_.
+        It is built within Corrfunc, which was designed by Manodeep Sinha and is currently maintained by
+        `Lehman Garrison <https://github.com/lgarrison>`_ and `Manodeep Sinha <https://github.com/manodeep>`_.
+        
+        Citing
+        ======
+        
+        If you use or reference ``suave``, please cite the ApJ paper with this bibtex entry (this will be updated once the accepted paper is published):
+        
+        ::
+        
+           @misc{storeyfisher2020twopoint,
+              title={Two-point statistics without bins: A continuous-function generalization of the correlation function estimator for large-scale structure}, 
+              author={Kate Storey-Fisher and David W. Hogg},
+              year={2020},
+              eprint={2011.01836},
+              archivePrefix={arXiv},
+              primaryClass={astro-ph.CO}
+           }
+        
+        
+        If you use the code, please additionally cite the original MNRAS ``Corrfunc`` code paper with the following
+        bibtex entry:
+        
+        ::
+        
+           @ARTICLE{2020MNRAS.491.3022S,
+               author = {{Sinha}, Manodeep and {Garrison}, Lehman H.},
+               title = "{CORRFUNC - a suite of blazing fast correlation functions on
+               the CPU}",
+               journal = {\mnras},
+               keywords = {methods: numerical, galaxies: general, galaxies:
+               haloes, dark matter, large-scale structure of Universe, cosmology:
+               theory},
+               year = "2020",
+               month = "Jan",
+               volume = {491},
+               number = {2},
+               pages = {3022-3041},
+               doi = {10.1093/mnras/stz3157},
+               adsurl =
+               {https://ui.adsabs.harvard.edu/abs/2020MNRAS.491.3022S},
+               adsnote = {Provided by the SAO/NASA
+               Astrophysics Data System}
+           }
+        
+        
+        Finally, if you benefit from the enhanced vectorised kernels in ``Corrfunc`` (not currently used in ``suave`` but likely used if you're also using out-of-the-box ``Corrfunc``, then please also cite this paper:
+        
+        ::
+        
+              @InProceedings{10.1007/978-981-13-7729-7_1,
+                  author="Sinha, Manodeep and Garrison, Lehman",
+                  editor="Majumdar, Amit and Arora, Ritu",
+                  title="CORRFUNC: Blazing Fast Correlation Functions with AVX512F SIMD Intrinsics",
+                  booktitle="Software Challenges to Exascale Computing",
+                  year="2019",
+                  publisher="Springer Singapore",
+                  address="Singapore",
+                  pages="3--20",
+                  isbn="978-981-13-7729-7",
+                  url={https://doi.org/10.1007/978-981-13-7729-7_1}
+              }
+        
+        
+        LICENSE
+        =======
+        
+        Suave is released under the MIT license. Basically, do what you want
+        with the code, including using it in commercial application.
+        
+        Project URLs
+        ============
+        
+        -  Documentation (http://suave.rtfd.io/)
+        -  Source Repository (https://github.com/kstoreyf/suave)
+        -  Original Corrfunc Documentation (http://corrfunc.rtfd.io/)
+        -  Original Corrfunc Source Repository (https://github.com/manodeep/Corrfunc)
+        
+        
+        .. |logo| image:: https://github.com/manodeep/Corrfunc/blob/master/corrfunc_logo.png
+            :target: https://github.com/manodeep/Corrfunc
+            :alt: Corrfunc logo
+        .. |Release| image:: https://img.shields.io/github/release/kstoreyf/suave.svg
+           :target: https://github.com/kstoreyf/suave/releases/latest
+           :alt: Latest Release
+        .. |PyPI| image:: https://img.shields.io/pypi/v/suave.svg
+           :target: https://pypi.python.org/pypi/suave
+           :alt: PyPI Release
+        .. |MIT licensed| image:: https://img.shields.io/badge/license-MIT-blue.svg
+           :target: https://raw.githubusercontent.com/manodeep/Corrfunc/master/LICENSE
+           :alt: MIT License
+        .. |RTD| image:: https://readthedocs.org/projects/suave/badge/?version=master
+           :target: http://suave.readthedocs.io/en/master/?badge=master
+           :alt: Documentation Status
+        
+        .. |Continuous-Function Estimator Paper| image:: https://img.shields.io/badge/arXiv-2011.01836-%23B31B1B
+           :target: https://arxiv.org/abs/2011.01836
+           :alt: Continuous-Function Estimator Paper
+        .. |Corrfunc Paper I| image:: https://img.shields.io/badge/arXiv-1911.03545-%23B31B1B
+           :target: https://arxiv.org/abs/1911.03545
+           :alt: Corrfunc Paper I
+        .. |Corrfunc Paper II| image:: https://img.shields.io/badge/arXiv-1911.08275-%23B31B1B
+           :target: https://arxiv.org/abs/1911.08275
+           :alt: Corrfunc Paper II
+        
+Keywords: correlation functions,simulations,surveys,galaxies
+Platform: Linux
+Platform: Mac OSX
+Platform: Unix
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides: suave
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4
