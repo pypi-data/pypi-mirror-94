@@ -1,0 +1,10 @@
+setuptools
+numpy
+
+[dev]
+pre-commit
+pytest
+pytest-cov
+pytest-timeout
+pytest-xdist
+codecov
