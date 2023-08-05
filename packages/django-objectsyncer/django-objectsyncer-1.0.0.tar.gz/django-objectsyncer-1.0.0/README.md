@@ -1,0 +1,48 @@
+# Django Object Syncer
+
+Django application allowing a server instance to track modifications of instance of certain models and push them to 
+remote clients. 
+
+# In summary, how does it work ?
+
+Two abstract classes exist: VersioningBaseModel and TrackingAndVersioningBaseModel.
+
+The versioning base model have the following fields :
+
+* a UUID (version 4), unique for this model
+* a version, starting at 1
+* a creation datetime
+* a last edition datetime
+* an inactive flag
+	
+The tracking and versioning base model have the following field added to the fields of VersioningBaseModel.
+
+* an active state by applications
+
+It is then possible to create a monitored Model : 
+
+<pre>class VersioningFakeClass(TrackingAndVersioningBaseModel):
+    """
+    A code
+    """
+    code = models.CharField(max_length=20)
+
+    """
+    A name 
+    """
+    name = models.CharField(max_length=250)
+
+    """
+    Tracker
+    """
+    tracker = FieldTracker()
+</pre>
+
+An Application is a remote application that must be updated with each change. ach application contains a remote Rest API
+endpoint  and an Authorization Key. 
+
+For each change, a JobChange is created per application. A cron job will then consume JobChanges by making a POST 
+request on the endpoint API of each application. 
+
+At the customer level, they dynamically process the fields to keep only those present in their model (each customer 
+does not need all the fields).
