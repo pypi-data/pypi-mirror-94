@@ -1,0 +1,10 @@
+Plone
+setuptools
+
+[tests]
+plone.api
+plone.app.testing
+plone.restapi
+mock
+ftw.testbrowser
+ftw.testing
