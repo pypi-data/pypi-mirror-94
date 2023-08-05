@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: databricks-bundle
+Version: 0.7.0
+Summary: Databricks bundle for the Bricksflow framework
+Home-page: https://github.com/bricksflow/databricks-bundle
+License: MIT
+Author: Jiri Koutny
+Author-email: jiri.koutny@datasentics.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: console-bundle (>=0.3.1,<0.4.0)
+Requires-Dist: injecta (>=0.9.1,<0.10.0)
+Requires-Dist: logger-bundle (>=0.6.1,<0.7.0)
+Requires-Dist: pyfony-bundles (>=0.3.2,<0.4.0)
+Requires-Dist: pyfony-core (>=0.7.1,<0.8.0)
+Project-URL: Repository, https://github.com/bricksflow/databricks-bundle
+Description-Content-Type: text/markdown
+
+# Databricks bundle
+
+This bundle allows you to write **beautiful function-based notebooks**.
+
+![alt text](./docs/notebook-functions.png "Databricks function-based notebook example")
+
+Compared to bare notebooks, the function-based approach brings the **following advantages**: 
+
+1. create and publish auto-generated documentation and lineage of notebooks and pipelines (Bricksflow PRO) 
+1. write much cleaner notebooks with properly named code blocks
+1. (unit)test specific notebook functions with ease
+1. use YAML to configure your notebooks for given environment (dev/test/prod/...)
+1. utilize pre-configured objects to automate repetitive tasks
+
+Function-based notebooks have been designed to provide the same user-experience as bare notebooks.
+Just write the function, annotate it with the `@notebookFunction` decorator and run the cell.
+
+This bundle is the main part of the [Bricksflow framework](https://github.com/bricksflow/bricksflow).
+
+## Installation
+
+Install the bundle via Poetry:
+
+```
+$ poetry add databricks-bundle && poetry add databricks-connect --dev
+```
+
+## Usage
+
+1. [Writing function-based notebooks](docs/notebook-functions.md)
+1. [Using pre-configured objects](docs/dependencies.md)
+1. [Configuring notebook functions](docs/configuration.md)
+1. [Databricks Connect setup](docs/databricks-connect.md)
+

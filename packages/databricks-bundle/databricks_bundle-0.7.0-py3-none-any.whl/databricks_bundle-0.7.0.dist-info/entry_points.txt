@@ -1,0 +1,3 @@
+[pyfony.bundle]
+create=databricksbundle.DatabricksBundle:DatabricksBundle.autodetect
+
