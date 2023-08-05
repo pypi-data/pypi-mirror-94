@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: cxwidgets
+Version: 0.5
+Summary: PyQt widgets connected to CX v4 control system framewok with designer plugins
+Home-page: UNKNOWN
+Author: Fedor Emanov
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
