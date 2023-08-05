@@ -1,0 +1,16 @@
+aperc_osemosys/__init__.py,sha256=B6g9udB9NMF30iD2K-2n-o2bcBrd2XtnnOtoi7d0pG0,382
+aperc_osemosys/data_config.yml,sha256=rdTpIDgcRHjerPCYLUGKmtw06nnsLVzWmqqxgA31z2g,7574
+aperc_osemosys/main.py,sha256=iBi-gQeAmE4g19T160eB_CIkUPS8rmydPE5XzPe2PSk,18306
+aperc_osemosys/model_config.yml,sha256=tEu2KryPMB-I3wIpclgmk4pYGo9y7OXIU_ZdReXZ0nE,591
+aperc_osemosys/osemosys-fast.txt,sha256=A-C1jGa8CtyGxdwCY0Vp5ewnqGFzX-4LLDZKJOkLDUU,97128
+aperc_osemosys/osemosys-fast_1_0.txt,sha256=_qRuIr7dm19ZohSV4ryikoO1uBluaU_H6PqPA6sz5cI,97234
+aperc_osemosys/osemosys_1_0.txt,sha256=6ZtNBZO_c-sk13ThporQHkqEIgY8eVxzlBX3jddtGYE,72015
+aperc_osemosys/osemosys_short_1_0.txt,sha256=IdKKMYzqnHnJjVI5ghagSQU9wRGNrD_qbkE_XCJiwJw,94054
+aperc_osemosys/results_config.yml,sha256=z4MuD3BrRhWj026sSNLHNLOenCOMo78c-FPqz8v4_a8,2259
+aperc_osemosys-0.1.5.dist-info/AUTHORS.rst,sha256=WBSEOwehW9HJ8Ujxz_Y6zidQtWK2ePMnnW3jSq3j10Q,85
+aperc_osemosys-0.1.5.dist-info/LICENSE.txt,sha256=wSKFxRprf75BYj8AaLApBUVDJw_isEbj7q5ZvwztPC8,1099
+aperc_osemosys-0.1.5.dist-info/METADATA,sha256=7kUEtB64I3U4ZxJM-jqFifJrTaopU_9D5FaEk1jeB2s,1476
+aperc_osemosys-0.1.5.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+aperc_osemosys-0.1.5.dist-info/entry_points.txt,sha256=6FQOIfWMBajUKUEtaGn-SVlusSeviWRTtgiyYmUH4CI,53
+aperc_osemosys-0.1.5.dist-info/top_level.txt,sha256=3it8d1d3CwdPI3_zfSiDqbcscOw0S1dHQoMn1YWBTVo,15
+aperc_osemosys-0.1.5.dist-info/RECORD,,
