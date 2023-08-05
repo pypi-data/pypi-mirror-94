@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: tabular-trees
+Version: 0.1.4
+Summary: Package for tabular tree structures
+Home-page: https://github.com/richardangell/tabular-trees
+Author: Richard Angell
+Author-email: richardangell37@gmail.com
+License: UNKNOWN
+Description: # ttrees
+        Python gbm explainer. <br>
+        Explain predictions from gbms in Python. <br>
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
