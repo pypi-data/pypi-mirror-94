@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: mautrix-signal
+Version: 0.1.0
+Summary: A Matrix-Signal puppeting bridge.
+Home-page: https://github.com/tulir/mautrix-signal
+Author: Tulir Asokan
+Author-email: tulir@maunium.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Topic :: Communications :: Chat
+Classifier: Framework :: AsyncIO
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp (<4,>=3)
+Requires-Dist: asyncpg (<0.22,>=0.20)
+Requires-Dist: attrs (>=19.1)
+Requires-Dist: commonmark (<0.10,>=0.8)
+Requires-Dist: mautrix (<0.9,>=0.8.11)
+Requires-Dist: python-magic (<0.5,>=0.4)
+Requires-Dist: ruamel.yaml (<0.17,>=0.15.35)
+Requires-Dist: yarl (<2,>=1)
+Provides-Extra: all
+Requires-Dist: Pillow (<9,>=4) ; extra == 'all'
+Requires-Dist: phonenumbers (<9,>=8) ; extra == 'all'
+Requires-Dist: prometheus-client (<0.10,>=0.6) ; extra == 'all'
+Requires-Dist: pycryptodome (<4,>=3) ; extra == 'all'
+Requires-Dist: python-olm (<4,>=3) ; extra == 'all'
+Requires-Dist: qrcode (<7,>=6) ; extra == 'all'
+Requires-Dist: signalstickers-client (>=3.0) ; extra == 'all'
+Requires-Dist: unpaddedbase64 (<2,>=1) ; extra == 'all'
+Provides-Extra: e2be
+Requires-Dist: pycryptodome (<4,>=3) ; extra == 'e2be'
+Requires-Dist: python-olm (<4,>=3) ; extra == 'e2be'
+Requires-Dist: unpaddedbase64 (<2,>=1) ; extra == 'e2be'
+Provides-Extra: formattednumbers
+Requires-Dist: phonenumbers (<9,>=8) ; extra == 'formattednumbers'
+Provides-Extra: metrics
+Requires-Dist: prometheus-client (<0.10,>=0.6) ; extra == 'metrics'
+Provides-Extra: qrlink
+Requires-Dist: Pillow (<9,>=4) ; extra == 'qrlink'
+Requires-Dist: qrcode (<7,>=6) ; extra == 'qrlink'
+Provides-Extra: stickers
+Requires-Dist: signalstickers-client (>=3.0) ; extra == 'stickers'
+
+# mautrix-signal
+![Languages](https://img.shields.io/github/languages/top/tulir/mautrix-signal.svg)
+[![License](https://img.shields.io/github/license/tulir/mautrix-signal.svg)](LICENSE)
+[![Release](https://img.shields.io/github/release/tulir/mautrix-signal/all.svg)](https://github.com/tulir/mautrix-signal/releases)
+[![GitLab CI](https://mau.dev/tulir/mautrix-signal/badges/master/pipeline.svg)](https://mau.dev/tulir/mautrix-signal/container_registry)
+
+A Matrix-Signal puppeting bridge.
+
+### [Wiki](https://github.com/tulir/mautrix-signal/wiki)
+
+### [Features & Roadmap](https://github.com/tulir/mautrix-signal/blob/master/ROADMAP.md)
+
+## Discussion
+Matrix room: [`#signal:maunium.net`](https://matrix.to/#/#signal:maunium.net)
+
+
