@@ -1,0 +1,10 @@
+README.md
+setup.py
+picklecryptor/__init__.py
+picklecryptor/picklecryptor.py
+picklecryptor/test_picklecryptor.py
+picklecryptor.egg-info/PKG-INFO
+picklecryptor.egg-info/SOURCES.txt
+picklecryptor.egg-info/dependency_links.txt
+picklecryptor.egg-info/requires.txt
+picklecryptor.egg-info/top_level.txt
