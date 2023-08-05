@@ -1,0 +1,16 @@
+indexed_gzip/__init__.py,sha256=OLi5HLbYw2b_qrcG14cesduxtOSerqKIq8R-tik-XwA,604
+indexed_gzip/indexed_gzip.cp35-win_amd64.pyd,sha256=OtLOBrifcQNL6501j3hNbshkIeEQJWarbHm3J8sK7DM,251392
+indexed_gzip/tests/__init__.py,sha256=hqwn_6kZ7TNFUM2qGC3Qm8tKMBP7QijzxFF4bAjUZ2M,5527
+indexed_gzip/tests/__main__.py,sha256=4rNzmenB4sNNPzGOoZX3sxj2wH68gvi47WfGBnDeMUM,728
+indexed_gzip/tests/benchmark.py,sha256=kWLiwLEPKOiwhcugliGItdLulIOoy3Y7D1FCv1h6iRY,4581
+indexed_gzip/tests/conftest.py,sha256=-WOcdKR6udMRX5AH1JIBNcQevD0VPSIB4Y42VTe1eco,2711
+indexed_gzip/tests/ctest_indexed_gzip.cp35-win_amd64.pyd,sha256=Ynw1W88ZXkTJQojkC9Gi7F2SEHSXNJjIHuKP2JR44x4,386048
+indexed_gzip/tests/test_indexed_gzip.py,sha256=x83NFSoRC_dADLPbrDVI0AHk-66Ku01ppQTF9bSsD74,5134
+indexed_gzip/tests/test_indexed_gzip_threading.py,sha256=BykoGu-NLU9xiBdeJVPiztCscxKxGHZh3ngPrc0ZcVA,2323
+indexed_gzip/tests/test_nibabel_integration.py,sha256=H3sW-2vGGEdqAs0za69t9Ou8Gbd42uc1TxV922brrj0,3396
+indexed_gzip/tests/test_zran.py,sha256=HWzMAct2Zlt2wJiO7NOZLtKNqME1I5J255lwdfMKjqg,3043
+indexed_gzip_fileobj_fork_epicfaace-1.4.0.dist-info/LICENSE,sha256=24Ljv2Sw0GHZmC_DtP2VD_6MF_AvizFkoodLuhIEwWE,958
+indexed_gzip_fileobj_fork_epicfaace-1.4.0.dist-info/METADATA,sha256=FcfS2MF_e1_IxVd0T1w3C4hhj_4MMmTMjvFEcN704-k,8739
+indexed_gzip_fileobj_fork_epicfaace-1.4.0.dist-info/WHEEL,sha256=SxCF5RRW3Q_ggbAjzZyyl3kuZVt89lxAee8FBI92h1k,101
+indexed_gzip_fileobj_fork_epicfaace-1.4.0.dist-info/top_level.txt,sha256=lk5ZVPlCbcmiAtxiJdu7SWX1NUWgdJNxLy48WhZnmAk,13
+indexed_gzip_fileobj_fork_epicfaace-1.4.0.dist-info/RECORD,,
