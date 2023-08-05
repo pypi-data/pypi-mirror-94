@@ -1,0 +1,17 @@
+.gitignore
+CHANGES.md
+LICENSE
+MANIFEST.in
+README.md
+excerpt_html.py
+pyproject.toml
+setup.cfg
+setup.py
+tox.ini
+.github/workflows/tests.yml
+excerpt_html.egg-info/PKG-INFO
+excerpt_html.egg-info/SOURCES.txt
+excerpt_html.egg-info/dependency_links.txt
+excerpt_html.egg-info/requires.txt
+excerpt_html.egg-info/top_level.txt
+tests/test_excerpt_html.py
