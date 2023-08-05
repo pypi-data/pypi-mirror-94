@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: qcware-transpile
+Version: 0.1.1a2
+Summary: A quantum circuit transpilation framework
+Author: Vic Putz
+Author-email: vic.putz@qcware.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: pyzx
+Provides-Extra: qcware-quasar
+Provides-Extra: qiskit
+Requires-Dist: attrs (>=20.3.0,<21.0.0)
+Requires-Dist: icontract (>=2.4.1,<3.0.0)
+Requires-Dist: pyrsistent (>=0.17.3,<0.18.0)
+Requires-Dist: pyzx (>=0.6.3,<0.7.0); extra == "pyzx"
+Requires-Dist: qcware-quasar (>=1.0.2,<2.0.0); extra == "qcware-quasar"
+Requires-Dist: qiskit-aer (>=0.7.2,<0.8.0); extra == "qiskit"
+Requires-Dist: toolz (>=0.11.1,<0.12.0)
