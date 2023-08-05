@@ -1,0 +1,10 @@
+README.md
+setup.py
+ImageFilter/__init__.py
+ImageFilter/detector.py
+ImageFilter.egg-info/PKG-INFO
+ImageFilter.egg-info/SOURCES.txt
+ImageFilter.egg-info/dependency_links.txt
+ImageFilter.egg-info/entry_points.txt
+ImageFilter.egg-info/requires.txt
+ImageFilter.egg-info/top_level.txt

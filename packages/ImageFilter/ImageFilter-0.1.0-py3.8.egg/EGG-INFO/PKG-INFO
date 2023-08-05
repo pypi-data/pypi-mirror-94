@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ImageFilter
+Version: 0.1.0
+Summary: We can't vaporize porn but we can reduce porn, and we only helps it.
+Home-page: https://github.com/HanzHaxors/PornFreeKit
+Author: HanzHaxors
+Author-email: hanzhaxors@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
