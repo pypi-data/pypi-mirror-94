@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: quizapi
+Version: 0.1.0
+Summary: Use the quizapi (https://quizapi.io) with both blocking and async interface
+Home-page: https://github.com/FalseDev/quizapi-python
+Author: FalseDev
+License: MIT
+Description: # QuizAPI
+        
+        A wrapper around the [QuizAPI](https://quizapi.io) api
+        designed for an object oriented usage, with great type support
+        
+        ## Features
+        
+        - 100% typehinted codebase
+        - Excellent autocompletion and editor support
+        - Fully tested
+        - Blocking and Async (thanks to [`instant-api-client`](https://instant-api-client.readthedocs.io))
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
