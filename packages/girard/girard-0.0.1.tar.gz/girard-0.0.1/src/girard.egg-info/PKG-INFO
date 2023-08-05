@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: girard
+Version: 0.0.1
+Summary: Python package for approximating solid angles in high dimensions
+Home-page: https://github.com/gnsantos/girard
+Author: Gervásio Protásio dos Santos Neto
+License: UNKNOWN
+Description: Python package for approximating solid angles in high dimensions
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test_deps
