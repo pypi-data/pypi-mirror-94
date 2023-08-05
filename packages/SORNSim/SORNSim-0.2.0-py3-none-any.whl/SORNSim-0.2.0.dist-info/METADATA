@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: SORNSim
+Version: 0.2.0
+Summary: Self Organizing Network Simulator
+Home-page: https://github.com/gitmv/Self-Organizing-Recurrent-Network-Simulator
+Author: Marius Vieth
+Author-email: mv15go@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: PyQt5
+Requires-Dist: pyqtgraph (>=0.11.0rc0)
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: imageio
+Requires-Dist: pillow
+
+Self Organizing Network Simulator
+
+
