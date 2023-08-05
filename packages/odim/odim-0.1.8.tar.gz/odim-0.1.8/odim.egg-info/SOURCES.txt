@@ -1,0 +1,15 @@
+README.md
+setup.py
+odim/__init__.py
+odim/dependencies.py
+odim/dynmodels.py
+odim/helper.py
+odim/model_factory.py
+odim/mongo.py
+odim/mysql.py
+odim/router.py
+odim.egg-info/PKG-INFO
+odim.egg-info/SOURCES.txt
+odim.egg-info/dependency_links.txt
+odim.egg-info/requires.txt
+odim.egg-info/top_level.txt
