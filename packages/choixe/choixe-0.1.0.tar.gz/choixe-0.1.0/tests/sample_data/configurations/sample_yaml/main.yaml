@@ -1,0 +1,18 @@
+first: '@import(first.yaml)'
+one: '@int(v_0)'
+three:
+  t21:
+  - false
+  - false
+  t31: true
+  name: '@import(three.name.yaml)'
+two:
+- - -48
+  - -5
+  - -20
+- - 12
+  - 20
+  - 23
+- - -20
+  - -14
+  - 11
