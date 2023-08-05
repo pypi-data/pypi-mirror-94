@@ -1,0 +1,4 @@
+geopandas>=0.8
+psutil
+pygeos
+simplification
