@@ -1,0 +1,4 @@
+[console_scripts]
+paddlex = paddlex.command:main
+paddlex_restful = paddlex_restful.command:main
+
