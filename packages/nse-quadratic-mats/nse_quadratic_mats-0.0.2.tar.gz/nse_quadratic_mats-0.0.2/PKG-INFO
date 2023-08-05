@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: nse_quadratic_mats
+Version: 0.0.2
+Summary: basic routines for treating the NSE with the convection as a tensor
+Home-page: https://gitlab.mpi-magdeburg.mpg.de/heiland/nse-quadratic-mats
+Author: Jan Heiland
+Author-email: jnhlnd@gmail.com
+License: MIT
+Description: Restructuring the py-branch
+        ---
+        
+        for easy inclusion and development
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
