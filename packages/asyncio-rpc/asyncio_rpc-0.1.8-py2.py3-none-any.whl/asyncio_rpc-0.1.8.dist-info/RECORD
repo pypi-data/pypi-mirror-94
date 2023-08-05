@@ -1,0 +1,17 @@
+asyncio_rpc/__init__.py,sha256=rq5OMW-khxQo_5FAvSrPaAS1lRfG9aG2hSuo-KK2Yfk,22
+asyncio_rpc/client.py,sha256=o0Q7hikpwWAf94G89a2V2YwiC8C9nVZQbDPf3gdJjZg,9032
+asyncio_rpc/exceptions.py,sha256=VQ9SqpFkoF_9kEd6KFO0M3Oi13ln7SapWdcNBpGFA6I,525
+asyncio_rpc/models.py,sha256=afpbmY6YWCC6i73rtRrh8vhX0myn-ZlD6L87qCFmbc4,2700
+asyncio_rpc/pubsub.py,sha256=TvZiUaj7K2eBQ_-He-IZRbTgPo8ue8KuAAESagIOeqI,2810
+asyncio_rpc/server.py,sha256=OtTsb99K8iok6rXMLz82VEkgAb69sqkteoy-alH7f3Y,8626
+asyncio_rpc/commlayers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asyncio_rpc/commlayers/base.py,sha256=GZ7UgtbGQgzVQjDpIV4nn70fWxZv16SpORuVFh1yaCc,1111
+asyncio_rpc/commlayers/redis.py,sha256=Hph8t-HPB9Q3agw1pn9_1aY9AdHNeA2kVpzvW3s-jJQ,6009
+asyncio_rpc/serialization/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asyncio_rpc/serialization/msgpack.py,sha256=QLtm0DME8Hn7w4tIjXzEE6TO1KpIwvpsuHXWPDFa8aM,6991
+asyncio_rpc-0.1.8.dist-info/DESCRIPTION.rst,sha256=2D4GH0-U5Qy0oFE7hbWscc7j7IqLzBVQB7EE4aogNAI,2286
+asyncio_rpc-0.1.8.dist-info/METADATA,sha256=wqempuf8axujrovhkZMqyf5ageCvVOATGIvh8_wgTRU,3028
+asyncio_rpc-0.1.8.dist-info/RECORD,,
+asyncio_rpc-0.1.8.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+asyncio_rpc-0.1.8.dist-info/metadata.json,sha256=sPLxAbb-hzJ-vOK3CmbjrrRy0WUA-BPcRyDpV9osjIg,947
+asyncio_rpc-0.1.8.dist-info/top_level.txt,sha256=56tiR40lnTZ1BB9kKON-v9-MBQY_LAHqBXClpm11vbo,12
