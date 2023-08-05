@@ -1,0 +1,3 @@
+[console_scripts]
+serialmsgpacketizer=serialmsgpacketizer.console:serialmsgpacketizer_cli
+
