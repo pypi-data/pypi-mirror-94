@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+babel_transpiling/__init__.py
+babel_transpiling/middlewares.py
+babel_transpiling/storage.py
+babel_transpiling/utils.py
+babel_transpiling/static/npm/@babel/standalone@7.12.15/babel.min.js
+django_babel_transpiling.egg-info/PKG-INFO
+django_babel_transpiling.egg-info/SOURCES.txt
+django_babel_transpiling.egg-info/dependency_links.txt
+django_babel_transpiling.egg-info/not-zip-safe
+django_babel_transpiling.egg-info/requires.txt
+django_babel_transpiling.egg-info/top_level.txt
