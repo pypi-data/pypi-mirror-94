@@ -1,0 +1,15 @@
+numpy
+scipy
+ase>=3.21.1
+asap3>=3.11.10
+Sphinx
+sphinx-rtd-theme
+sphinx-tabs
+sphinxcontrib-applehelp
+sphinxcontrib-devhelp
+sphinxcontrib-htmlhelp
+sphinxcontrib-jsmath
+sphinxcontrib-plantuml
+sphinxcontrib-qthelp
+sphinxcontrib-serializinghtml
+sphinxcontrib-wiki
