@@ -1,0 +1,9 @@
+dalle_pytorch/__init__.py,sha256=OspwHCCL9cp6K2BwJzoLamZWUrnri2WiU9qi3WVhFGY,65
+dalle_pytorch/dalle_pytorch.py,sha256=Dg5I5OWhi7vtl5PAhSbRhTkE-RLntoHOX7iOt9XVaiY,14413
+dalle_pytorch/reversible.py,sha256=yWuf2ZGuc_5NSonNrwJJ9bhd204WBsr1ptiXc0nPFxs,5390
+dalle_pytorch/transformer.py,sha256=GxODFvPkTDBiKPvyfEka1THX9ASWxGyO2gF_WnR1XDc,6637
+dalle_pytorch-0.0.49.dist-info/LICENSE,sha256=_nRlQFj-K6BpgI2_Nt79biB7r4hZ82NmpqPOrlqm7MU,1066
+dalle_pytorch-0.0.49.dist-info/METADATA,sha256=E-38TlY3f93NKSbEBF4dJKiQzGChERi5ILf-0oakr7s,675
+dalle_pytorch-0.0.49.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dalle_pytorch-0.0.49.dist-info/top_level.txt,sha256=CWzEADsQ0lKh-AIqsHHOcT5bvyHcr2N_k3lgG_22JYQ,14
+dalle_pytorch-0.0.49.dist-info/RECORD,,
