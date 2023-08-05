@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ztk-api
+Version: 0.3.2
+Summary: 折淘客接口
+Home-page: https://github.com/QiYuTechDev/ztk_api
+Author: dev
+Author-email: dev@qiyutech.tech
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiohttp (>=3.7,<4)
+Requires-Dist: dataclasses-json (>=0.5,<0.6)
+Requires-Dist: pydantic (>=1.7,<2)
+Requires-Dist: requests (>=2.25,<3)
+Requires-Dist: structlog (>=20,<21)
+Description-Content-Type: text/markdown
+
+# 折淘客API
+
+![PyPI - Version](https://img.shields.io/pypi/v/ztk_api)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ztk_api)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/ztk_api)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/ztk_api)
+![GitHub repo size](https://img.shields.io/github/repo-size/qiyutechdev/ztk_api)
+![Lines of code](https://img.shields.io/tokei/lines/github/qiyutechdev/ztk_api)
+
+# WARNING
+
+this is only for internal use (use at your own risk)
+
