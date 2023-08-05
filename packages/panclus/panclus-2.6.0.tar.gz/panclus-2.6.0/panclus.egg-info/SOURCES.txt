@@ -1,0 +1,12 @@
+README.md
+setup.py
+PanclusGz/Gz.py
+PanclusGz/Installer.py
+PanclusGz/__init__.py
+PanclusGz/dependencies.py
+PanclusGz/locations.py
+panclus.egg-info/PKG-INFO
+panclus.egg-info/SOURCES.txt
+panclus.egg-info/dependency_links.txt
+panclus.egg-info/requires.txt
+panclus.egg-info/top_level.txt
