@@ -1,0 +1,13 @@
+odim/__init__.py,sha256=1jKiM-k5TEQlLvQE99kEtZvWzmeB3S9mUBes0gfc9Ss,5693
+odim/dependencies.py,sha256=VUuhyXSQtTrEKG18NdQxUGyR71fZk00usTmPJluEi7o,1448
+odim/dynmodels.py,sha256=yn4KdNVB6QMqHGCvOOrdTcCN0_jVxIlSdLPSg0BD2q0,205
+odim/helper.py,sha256=HnBPaYUj1U0r1njJOVRUWujtbOuUE6na47xJY3oU63U,2884
+odim/model_factory.py,sha256=V-1Bsj1hivA9ROVOk0xUzab-80zYcqjuvoVPeJQOgd4,8897
+odim/mongo.py,sha256=cERn3uJzxH3gzcRxq_zhVxdHSWktaDzYmVgMBZbCuLA,7897
+odim/mysql.py,sha256=hhGzypGd2F6Tkzh8Hj21u2WHcMt9lIj5VBtomAYOXuY,8374
+odim/router.py,sha256=08PCSmxYhLQYNz7OvcR981xi9kzVOp91gxdwvKhTf0s,9598
+odim-0.1.8.dist-info/LICENSE,sha256=Xn-EW9s-uIIFXq6467Ix4MKboPpp_2s6rws4FqNTkLk,1074
+odim-0.1.8.dist-info/METADATA,sha256=AwsK02xWBos0Ja20EUbgyfV6fZoJTQ0W2zfcS6T1xe0,1583
+odim-0.1.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+odim-0.1.8.dist-info/top_level.txt,sha256=nc1uqdZoqDwtOuJ9MKLO7YvVXUJfNoBFk1eVqFdtz_o,5
+odim-0.1.8.dist-info/RECORD,,
