@@ -1,0 +1,224 @@
+Metadata-Version: 1.2
+Name: N2SNUserTools
+Version: 0.1.1
+Summary: User Manipulation Tools for Python
+Home-page: https://github.com/NSLS-II/N2SNUserTools
+Author: Brookhaven National Lab
+Author-email: swilkins@bnl.gov
+License: BSD (3-clause)
+Description: =============
+        N2SNUserTools
+        =============
+        
+        Installation Instructions
+        -------------------------
+        
+        In order to install ``N2SNUserTools`` the GSSAPI python module is needed.
+        This requires the ``libkrb5-dev`` package to be installed. This can be
+        installed on debian derivatives by:
+        
+        .. code-block::
+        
+           sudo apt-get install libkrb5-dev
+        
+        Having installed these dependencies, the package can be installed in the
+        usual pythonic way:
+        
+        .. code-block::
+        
+          python setup.py install
+        
+        
+        Configuration
+        -------------
+        
+        The user scripts rely on a configuration INI file which can be instaled
+        either in ``/etc/n2sn_tools.conf`` or in the users home folder in
+        ``~/.config/n2sn_tools.conf``
+        
+        The format of the config file is:
+        
+        .. code-block::
+        
+          [common]
+          server = addressbook.bnl.gov
+          user_search = "ou=cam - users,ou=cam,dc=bnl,dc=gov"
+          group_search = "ou=n2sn,ou=ccm,dc=bnl,dc=gov"
+          default_instrument = csx
+        
+          [csx]
+          name = csx
+          user_group = n2sn-instusers-csx
+          staff_group = n2sn-inststaff-csx
+        
+        Searching for Users
+        -------------------
+        
+        To search for valid users, use the ``n2sn_find_user`` command. For example to
+        search for all the Stuarts:
+        
+        .. code-block::
+        
+          ❯ n2sn_search_user --givenname stuart
+          +------------------+-----------+-------------------+------------+-------------------+-----------+
+          | Name             | ITD Login | E-Mail            | Department | Life/Guest Number | Can Login |
+          +------------------+-----------+-------------------+------------+-------------------+-----------+
+          | Myers, Stuart F  | smyers    | smyers@bnl.gov    |     PS     |       22850       |    True   |
+          | Wilkins, Stuart  | swilkins  | swilkins@bnl.gov  |     PS     |       23580       |    True   |
+          | Campbell, Stuart | scampbell | scampbell@bnl.gov |     PS     |       25862       |    True   |
+          +------------------+-----------+-------------------+------------+-------------------+-----------+
+        
+        The surname can also be specified with ``--surnamme``:
+        
+        .. code-block::
+        
+          ❯ n2sn_search_user --surname ravel
+          +--------------+-----------+----------------+------------+-------------------+-----------+
+          | Name         | ITD Login | E-Mail         | Department | Life/Guest Number | Can Login |
+          +--------------+-----------+----------------+------------+-------------------+-----------+
+          | Ravel, Bruce | bravel    | bravel@bnl.gov |     LT     |       R5411       |   False   |
+          +--------------+-----------+----------------+------------+-------------------+-----------+
+        
+        Wildcards are also possible, however these need to be added in quotes at the shell:
+        
+        .. code-block::
+        
+          ❯ n2sn_search_user --surname 'farns*'
+          +---------------------+-----------+-------------+------------+-------------------+-----------+
+          | Name                | ITD Login | E-Mail      | Department | Life/Guest Number | Can Login |
+          +---------------------+-----------+-------------+------------+-------------------+-----------+
+          | Farnsworth, Richard | rif       | rif@bnl.gov |     PS     |       25764       |   False   |
+          +---------------------+-----------+-------------+------------+-------------------+-----------+
+        
+        In addition to these search mode, the search can be limited by department by adding the options:
+        
+        - ``--staff`` Limit to NSLS-II staff (Department code PS)
+        - ``--users`` Limit to NSLS-II users (Department code LT)
+        - ``--cfn`` Limit to CFN Staff (Department code NC)
+        
+        
+        Listing users who can login to instruments
+        ------------------------------------------
+        
+        In order to list the users who are currently able to login to a beamline, the
+        command ``n2sn_list_users`` can be used.
+        
+        .. code-block::
+        
+          ❯ n2sn_list_users
+        
+          Current users enabled for beamline CSX
+        
+          +-----------------+-----------+------------------+------------+-------------------+-----------+
+          | Name            | ITD Login | E-Mail           | Department | Life/Guest Number | Can Login |
+          +-----------------+-----------+------------------+------------+-------------------+-----------+
+          | Wilkins, Stuart | swilkins  | swilkins@bnl.gov |     PS     |       23580       |    True   |
+          +-----------------+-----------+------------------+------------+-------------------+-----------+
+        
+        At the instrument (beamline) the instrument name default should be set. This
+        can be overridden by adding the ``--instrument`` option:
+        
+        .. code-block::
+        
+          ❯ n2sn_list_users -i fxi
+        
+          Current users enabled for instrument FXI
+        
+          +-----------------+----------+------------------+------------+-------------------+-----------+
+          | Name            | Login    | E-Mail           | Department | Life/Guest Number | Can Login |
+          +-----------------+----------+------------------+------------+-------------------+-----------+
+          | Wilkins, Stuart | swilkins | swilkins@bnl.gov |     PS     |       23580       |    True   |
+          +-----------------+----------+------------------+------------+-------------------+-----------+
+        
+        Listing instrument staff
+        ------------------------
+        
+        Similar to listing users, instrument staff can be listed using the ``n2sn_list_staff``.
+        The default instrument can also be overriden using the ``-i`` argument as in the case of
+        ``n2sn_list_users``:
+        
+        .. code-block::
+        
+          ❯ n2sn_list_staff -i fxi
+        
+          Current instrument staff for instrument FXI
+        
+          +------------------+-----------+-------------------+------------+-------------------+-----------+
+          | Name             | Login     | E-Mail            | Department | Life/Guest Number | Can Login |
+          +------------------+-----------+-------------------+------------+-------------------+-----------+
+          | Xiao, Xianghui   | xiao      | xiao@bnl.gov      |     PS     |       26147       |   False   |
+          | Campbell, Stuart | scampbell | scampbell@bnl.gov |     PS     |       25862       |    True   |
+          | Ge, Mingyuan     | mingyuan  | mingyuan@bnl.gov  |     PS     |       25542       |   False   |
+          | Lee, Wah-Keat    | wklee     | wklee@bnl.gov     |     PS     |       24945       |   False   |
+          +------------------+-----------+-------------------+------------+-------------------+-----------+
+        
+        Adding and removing users
+        -------------------------
+        
+        Users can be added and removed from an instrument using the ``n2sn_add_user``
+        and ``n2sn_remove_user`` commands respectively. Users can be added using either
+        their login name or their life/guest number.
+        
+        To add a user by login:
+        
+        .. code-block::
+        
+          ❯ n2sn_add_user -u bravel
+        
+          Sucsesfully added user "Ravel, Bruce" to list of users for beamline CSX
+        
+          ❯ n2sn_list_users
+        
+          Current users enabled for beamline CSX
+        
+          +-----------------+-----------+------------------+------------+-------------------+-----------+
+          | Name            | ITD Login | E-Mail           | Department | Life/Guest Number | Can Login |
+          +-----------------+-----------+------------------+------------+-------------------+-----------+
+          | Ravel, Bruce    | bravel    | bravel@bnl.gov   |     LT     |       R5411       |   False   |
+          | Wilkins, Stuart | swilkins  | swilkins@bnl.gov |     PS     |       23580       |    True   |
+          +-----------------+-----------+------------------+------------+-------------------+-----------+
+        
+        To add a user by life number:
+        
+        .. code-block::
+        
+          ❯ n2sn_add_user -n 25764
+        
+          Sucsesfully added user "Farnsworth, Richard" to list of users for beamline CSX
+        
+          ❯ n2sn_list_users
+        
+          Current users enabled for beamline CSX
+        
+          +---------------------+-----------+------------------+------------+-------------------+-----------+
+          | Name                | ITD Login | E-Mail           | Department | Life/Guest Number | Can Login |
+          +---------------------+-----------+------------------+------------+-------------------+-----------+
+          | Farnsworth, Richard | rif       | rif@bnl.gov      |     PS     |       25764       |   False   |
+          | Ravel, Bruce        | bravel    | bravel@bnl.gov   |     LT     |       R5411       |   False   |
+          | Wilkins, Stuart     | swilkins  | swilkins@bnl.gov |     PS     |       23580       |    True   |
+          +---------------------+-----------+------------------+------------+-------------------+-----------+
+        
+        Removal of users takes the same options:
+        
+        .. code-block::
+        
+          ❯ n2sn_remove_user -n 25764
+        
+          Sucsesfully removed user "Farnsworth, Richard" from list of users for beamline CSX
+        
+          ❯ n2sn_list_users
+        
+          Current users enabled for beamline CSX
+        
+          +-----------------+-----------+------------------+------------+-------------------+-----------+
+          | Name            | ITD Login | E-Mail           | Department | Life/Guest Number | Can Login |
+          +-----------------+-----------+------------------+------------+-------------------+-----------+
+          | Ravel, Bruce    | bravel    | bravel@bnl.gov   |     LT     |       R5411       |   False   |
+          | Wilkins, Stuart | swilkins  | swilkins@bnl.gov |     PS     |       23580       |    True   |
+          +-----------------+-----------+------------------+------------+-------------------+-----------+
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
