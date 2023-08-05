@@ -1,0 +1,11 @@
+
+[dev]
+wheel
+check-manifest
+twine
+sphinx
+sphinx-rtd-theme
+cryptography
+
+[encryption]
+cryptography
