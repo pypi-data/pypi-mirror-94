@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: szczypiorek
+Version: 1.0.10
+Summary: Szczypiorek environment management for humans.
+Home-page: https://github.com/cosphere-org/szczypiorek
+Author: CoSphere Tech
+Author-email: contact@cosphere.org
+License: UNKNOWN
+Keywords: szczypiorek,environment,secrets
+Platform: UNKNOWN
+Requires-Dist: validators (>=0.12.6)
+Requires-Dist: Click (>=7.0)
+Requires-Dist: PyYAML (>=3.13)
+Requires-Dist: python-gnupg (==0.4.6)
+Requires-Dist: bash (==0.6)
+
+UNKNOWN
+
+

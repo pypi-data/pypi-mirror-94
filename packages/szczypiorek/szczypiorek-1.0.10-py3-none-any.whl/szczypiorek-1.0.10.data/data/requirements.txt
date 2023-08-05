@@ -1,0 +1,19 @@
+
+# -- set of rich validators for almost all kinds
+# DOCS: https://validators.readthedocs.io/en/latest/
+validators>=0.12.6
+
+# -- cli tools framework
+# DOCS: https://click.palletsprojects.com/en/7.x/
+Click>=7.0
+
+# -- configuration
+PyYAML>=3.13
+
+# -- encryption / decryption
+# DOCS: https://docs.red-dove.com/python-gnupg/#python-gnupg-a-python-wrapper-for-gnupg
+python-gnupg==0.4.6
+
+# -- execute bash commands
+# DOCS: https://github.com/alexcouper/bash
+bash==0.6
