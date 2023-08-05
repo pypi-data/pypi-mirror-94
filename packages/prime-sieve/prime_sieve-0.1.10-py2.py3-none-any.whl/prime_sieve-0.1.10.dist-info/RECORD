@@ -1,0 +1,11 @@
+prime_sieve/__init__.py,sha256=s0LYpNT0InBbOFm72OLSjd_nsdsbQgbWy2gczFpN_io,128
+prime_sieve/array.py,sha256=7HJi0HeezRpwMV-pGUMvIlVzkjpx4lRnjtOU0HmlxGo,1894
+prime_sieve/base.py,sha256=crL-QnWxV2zEcYuAaOh8EyNtbQdDKEukbKJLtUqaymc,8768
+prime_sieve/list.py,sha256=aU_L075LewoYC1k1-csJUWL4Z09h4QSGbsLt3rQU-NE,1413
+prime_sieve/math_utils.py,sha256=rWOZrA49KbkV7uuwv5Il1RoK9tNN5SwCA6lvJjPZbSk,327
+prime_sieve-0.1.10.dist-info/AUTHORS.rst,sha256=J6xreG1IODjA7glanmn_D96dJayUNmONLpEJ8qpppeo,154
+prime_sieve-0.1.10.dist-info/LICENSE,sha256=dYH3UfvOFvaWVfLEqzRCjs_7mkQHoKKamgcIGKql9sI,1071
+prime_sieve-0.1.10.dist-info/METADATA,sha256=NfgiFs9uYoDJlPIQT_DLrM3bROQCTglOdt8M1ITZzuU,3758
+prime_sieve-0.1.10.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+prime_sieve-0.1.10.dist-info/top_level.txt,sha256=cnx17h7i5Uthl3L0eF5DsjboYqFImquGRVeMOavvtBw,12
+prime_sieve-0.1.10.dist-info/RECORD,,
