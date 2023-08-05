@@ -1,0 +1,14 @@
+customsol_pkg/__init__.py,sha256=5YdTwwQoP6maFB-_aV12Jf5cZJMLoUeunz-pb1XWKV0,14
+customsol_pkg/dir_clean.py,sha256=Byf31yUEXXtrcvuRnKhZKnf0km3OMAU0aUWp15cEHlc,1312
+customsol_pkg/errors.py,sha256=13KEwqKxUwDfaNdY5ngb2Nob9S3Q1H_PiBucMJuBynw,368
+customsol_pkg/ftp_cleanse.py,sha256=otfRNHFMqcrXAvoFTkiQe5PJnhe9x2BNjvKn2nzOQ54,811
+customsol_pkg/ftp_down.py,sha256=SvVCWZCYWk_IIZS3Gx0H9VmDxatGtLjfbrqoO_9otBA,2174
+customsol_pkg/ftp_up.py,sha256=L5Pv65padPjYN1qOl_ey293EEj1Py-oYME-MFCwQ3J4,1677
+customsol_pkg/redash_download.py,sha256=l3PkSyKDIug41ObF2aVNPakGCfFUPS4hzw6i86zQzIM,3180
+customsol_pkg/slackbot.py,sha256=w3j7jQbJfLfNcia_R_x6XHXze1IQgNA9JE_GRdlcuG4,1783
+customsol_pkg/supp_create.py,sha256=QOEGz1wyBQGMsuokB_17XOJzCwMxBZ2xPlCg0l8-Fu8,2282
+moto_custom_solutions-0.0.1.dist-info/LICENSE,sha256=00cL5iNb4VBjpf_94eH_OJvIWEdw9xrZbhuXmRxhTDs,1056
+moto_custom_solutions-0.0.1.dist-info/METADATA,sha256=5Ha2XsuFXu7gIyZRKNbxmHmnGfs15LQZahy5yZ_BFNw,612
+moto_custom_solutions-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+moto_custom_solutions-0.0.1.dist-info/top_level.txt,sha256=lPxkUt1MBgexgy5eO4uYlO0tQ9xzR8BkfleNUaxoHBQ,14
+moto_custom_solutions-0.0.1.dist-info/RECORD,,
