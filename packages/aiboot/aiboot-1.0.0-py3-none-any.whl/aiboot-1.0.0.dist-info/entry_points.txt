@@ -1,0 +1,6 @@
+
+    [console_scripts]
+    aiboot=aiboot.aiboot:start
+    pack_model=aiboot.pack_model:pack_model
+    onboarding=aiboot.onboarding:onboarding
+    
