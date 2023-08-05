@@ -1,0 +1,13 @@
+radcad/__init__.py,sha256=-Q--wFo8fd0CEjMlAEKWZ9slBi5OExyI5o3EV7lugIM,114
+radcad/compat/cadCAD/__init__.py,sha256=XNEL06v3WNnRo-lYqLbDtyzReaLvAIswwaNePUSqmlQ,209
+radcad/compat/cadCAD/configuration/__init__.py,sha256=qZPJY3eCUDShT65Fnf0fLg-irdP9-ZF40ZeSZWmkD5o,226
+radcad/compat/cadCAD/configuration/utils/__init__.py,sha256=p9oADpzvg_BDZ9TvwSqI5ITIl974Jv4dJWIRvezzEoQ,301
+radcad/compat/cadCAD/engine/__init__.py,sha256=Rc23iKO6MC95C5fAMOIG3oOg5BLuKTBJlQ8wyt6h4n8,1321
+radcad/core.py,sha256=feD0brFawuE95tupjGmm1C-bDfFg-fRkb7cFVxRuDXA,4280
+radcad/engine.py,sha256=DcXj-jaNd8ddt9tzi9sqHv9wbhPgu0NV8Thik0CpLqA,6420
+radcad/utils.py,sha256=b32bR28WjpkBJr8V-chyQ6loB00JSSj-I3xo4IpdTUc,644
+radcad/wrappers.py,sha256=_f_PSZUL0-q6qI9536yI0YP2cIs-OVFOmjBtaAI4yJA,3191
+radcad-0.5.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+radcad-0.5.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+radcad-0.5.0.dist-info/METADATA,sha256=YGxplAumiHD3fVxbc7skHCNFd60rVyzYr4lDihEKaQM,647
+radcad-0.5.0.dist-info/RECORD,,
