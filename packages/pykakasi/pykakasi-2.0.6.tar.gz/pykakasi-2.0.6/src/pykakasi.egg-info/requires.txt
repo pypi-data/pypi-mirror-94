@@ -1,0 +1,27 @@
+klepto
+
+[:python_version < "3.8"]
+importlib_metadata
+
+[check]
+mypy==0.770
+mypy_extensions==0.4.3
+docutils
+check-manifest
+flake8
+readme-renderer
+pygments
+isort
+twine
+
+[docs]
+sphinx>=1.8
+sphinx-intl
+sphinx-py3doc-enhanced-theme
+sphinx_rtd_theme
+
+[test]
+pytest
+pytest-pep8
+pytest-cov
+coverage[toml]>=5.2
