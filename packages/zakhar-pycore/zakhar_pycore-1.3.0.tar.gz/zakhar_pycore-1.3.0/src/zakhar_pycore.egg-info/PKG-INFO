@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: zakhar-pycore
+Version: 1.3.0
+Summary: Python package used by the Zakhar project (zakhar.agramakov.me). The package contains addresses of devices, command codes, hardware interfaces, etc.
+Home-page: https://github.com/an-dr/zakhar_pycore
+Author: Andrei Gramakov
+Author-email: mail@agramakov.me
+License: MIT
+Description: # zakhar_pycore
+        
+        Base python package for the Zakhar project
+        
+        - Part of the [Zakhar's Brain](https://github.com/an-dr/zakhar_brain)
+        - Part of the [Zakhar Project](https://github.com/an-dr/zakhar)
+        
+        ## Installation
+        
+        From pypi.org:
+        
+        ```bash
+        pip install zakhar-pycore
+        ```
+        
+        From GitHub:
+        
+        ``` bash
+        pip install git+https://github.com/an-dr/zakhar_pycore
+        ```
+        
+        From GitHub for a specific branch:
+        
+        ```bash
+        pip install git+https://github.com/an-dr/zakhar_pycore@branch_name
+        ```
+        
+Keywords: robot,zakhar,robotics
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Framework :: Robot Framework :: Library
+Description-Content-Type: text/markdown
+Provides-Extra: dev
