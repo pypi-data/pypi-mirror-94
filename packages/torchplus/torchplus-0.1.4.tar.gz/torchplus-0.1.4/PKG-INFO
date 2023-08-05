@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: torchplus
+Version: 0.1.4
+Summary: This package is based on pytorch and try to provide a more user-friendly interface for pytorch
+Home-page: https://github.com/Bertie97/pyctlib/tree/main/torchplus
+Author: Zhang Yiteng & Zhou Yuncheng
+Author-email: zytfdu@icloud.com
+License: MIT Licence
+Description: We encapsulated a new type on top of torch.Tenser, which we also call it Tensor. It has the same function as torch.Tensor, but it can change to cuda device automatically. Also, we try to provide more useful module for torch users to make deep learning earier to be implemented.
+Keywords: pip,pyctlib,torchplus
+Platform: any
