@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: bibscrap
+Version: 0.0.1
+Summary: open tools for systematic literature reviews
+Home-page: https://github.com/cotterell/bibscrap
+Author: Michael E. Cotterell
+Author-email: mepcotterell@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+
+# bibscrap
+
+The **bibscrap** project includes open tools for collecting bibliographic
+information from manuscripts in a way that is convenient for the creation
+and curation of systematic literature reviews.
+
+**IN DEVELOPMENT**
+
+Fall 2021 is an initial release target.
+
+
