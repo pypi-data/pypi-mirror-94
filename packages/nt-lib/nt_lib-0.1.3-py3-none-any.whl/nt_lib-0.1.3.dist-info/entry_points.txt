@@ -1,0 +1,3 @@
+[console_scripts]
+nt-lib=nt.lib:app
+
