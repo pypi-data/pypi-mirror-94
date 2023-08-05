@@ -1,0 +1,13 @@
+AUTHORS
+COPYING
+ChangeLog
+README.rst
+setup.py
+test.html
+Jinja2_template_info.egg-info/PKG-INFO
+Jinja2_template_info.egg-info/SOURCES.txt
+Jinja2_template_info.egg-info/dependency_links.txt
+Jinja2_template_info.egg-info/requires.txt
+Jinja2_template_info.egg-info/top_level.txt
+jinja2_template_info/__init__.py
+jinja2_template_info/template_info.html

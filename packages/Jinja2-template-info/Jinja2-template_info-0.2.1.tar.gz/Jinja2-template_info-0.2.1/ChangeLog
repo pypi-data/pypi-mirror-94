@@ -1,0 +1,25 @@
+ChangeLog
+=========
+
+0.2.1
+-----
+* add missing template_info file to bdist packages
+
+0.2.0
+-----
+* jinja2_template_info is package now,
+  importlib.resources.files function can be used.
+
+0.1.2
+-----
+* package fixes
+* jinja2 dependency
+* Python 3x only
+
+0.1.1
+-----
+* package info fix
+
+0.1.0
+-----
+* first extension version
