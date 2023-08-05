@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "random_quote_generator918243"
+version = "0.1.0"
+description = ""
+authors = ["Dax <daaawx@gmail.com>"]
+packages = [
+    { include = "random_quote_generator" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+pytest-cov = "^2.11.1"
+black = "^20.8b1"
+isort = "^5.7.0"
+flake8 = "^3.8.4"
+bandit = "^1.7.0"
+safety = "^1.10.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
