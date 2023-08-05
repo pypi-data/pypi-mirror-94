@@ -1,0 +1,4 @@
+telethon>=1.19.0
+redis
+python-decouple==3.3
+cryptg
