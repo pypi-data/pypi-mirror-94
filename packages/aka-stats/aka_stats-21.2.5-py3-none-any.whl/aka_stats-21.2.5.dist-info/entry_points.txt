@@ -1,0 +1,3 @@
+[pytest11]
+mock_stats=aka_stats.testing
+
