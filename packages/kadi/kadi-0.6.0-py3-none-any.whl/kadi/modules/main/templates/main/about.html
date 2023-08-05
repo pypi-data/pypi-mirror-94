@@ -1,0 +1,89 @@
+{# Copyright 2020 Karlsruhe Institute of Technology
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License. #}
+
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="card">
+    <div class="card-header">{% trans %}About{% endtrans %}</div>
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-end">
+        <a href="{% trans %}https://www.kit.edu/english{% endtrans %}" class="mr-5">
+          <img class="img-fluid mb-4" src="{{ static_url('images/kit.png') }}" width="140">
+        </a>
+        <a href="{% trans %}https://www.iam.kit.edu/cms/english{% endtrans %}">
+          <img class="img-fluid mb-4" src="{{ static_url('images/iam.png') }}" width="120">
+        </a>
+      </div>
+      <p>
+        <strong>Kadi4Mat</strong> is the <strong>Karlsruhe Data Infrastructure for Materials Science</strong>, an open
+        source software for managing research data.
+      </p>
+      <p>
+        The goal of this project is to combine the ability to manage and exchange data, the <em>repository</em>, with
+        the possibility to analyze, visualize and transform said data, the <em>electronic lab notebook (ELN)</em>.
+        Kadi4Mat is supposed to support a close cooperation between experimenters, theorists and simulators, especially
+        in materials science, and enable the acquisition of new knowledge and the development of novel materials. This
+        is made possible by employing a modular and generic architecture, which allows to cover the specific needs of
+        different scientists, each utilizing unique workflows. At the same time, this opens up the possibility to easily
+        branch out into other disciplines in the future.
+      </p>
+      <p>
+        Kadi4Mat is being developed as part of several research projects at the
+        <a href="{% trans %}https://www.iam.kit.edu/cms/english{% endtrans %}">
+          <strong>Institute for Applied Materials - Computational Materials Science (IAM-CMS)</strong>
+        </a>
+        of the
+        <a href="{% trans %}https://www.kit.edu/english{% endtrans %}">
+          <strong>Karlsruhe Institute of Technology (KIT).</strong>
+        </a>
+      </p>
+      <hr>
+      <h5 class="font-weight-bold">Links</h5>
+      More information:
+      <a href="https://kadi.iam-cms.kit.edu">
+        <strong>https://kadi.iam-cms.kit.edu</strong>
+      </a>
+      <br>
+      Source code:
+      <a href="https://gitlab.com/iam-cms/kadi">
+        <strong>https://gitlab.com/iam-cms/kadi</strong>
+      </a>
+      <br>
+      Releases:
+      <a href="https://pypi.org/project/kadi">
+        <strong>https://pypi.org/project/kadi</strong>
+      </a>
+      <br>
+      Developer documentation:
+      <ul class="mb-0">
+        <li>
+          Latest (reflecting the <em>master</em> branch):
+          <a href="https://kadi4mat.readthedocs.io/en/latest">
+            <strong>https://kadi4mat.readthedocs.io/en/latest</strong>
+          </a>
+        </li>
+        <li>
+          Stable (reflecting the latest release):
+          <a href="https://kadi4mat.readthedocs.io/en/stable">
+            <strong>https://kadi4mat.readthedocs.io/en/stable</strong>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-footer">
+      <a class="badge badge-primary font-weight-normal" href="{{ config['CHANGELOG_URL'] }}">Kadi4Mat v{{ version }}</a>
+    </div>
+  </div>
+{% endblock %}
