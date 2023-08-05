@@ -1,0 +1,10 @@
+README.md
+setup.py
+apiclient/__init__.py
+apiclient/core.py
+apiclient/methods.py
+instant_api_client.egg-info/PKG-INFO
+instant_api_client.egg-info/SOURCES.txt
+instant_api_client.egg-info/dependency_links.txt
+instant_api_client.egg-info/requires.txt
+instant_api_client.egg-info/top_level.txt
