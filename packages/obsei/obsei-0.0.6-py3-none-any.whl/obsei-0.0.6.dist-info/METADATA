@@ -1,0 +1,193 @@
+Metadata-Version: 2.1
+Name: obsei
+Version: 0.0.6
+Summary: Observe PoI text data from the various sources, segment it and then inform about it
+Home-page: https://github.com/lalitpagaria/obsei
+Author: Lalit Pagaria
+Author-email: pagaria.lalit@gmail.com
+License: Apache Version 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: antlr4-python3-runtime (==4.8)
+Requires-Dist: app-store-reviews-reader (==1.0)
+Requires-Dist: apscheduler (==3.7.0)
+Requires-Dist: atlassian-python-api (==3.4.1)
+Requires-Dist: beautifulsoup4 (==4.9.3)
+Requires-Dist: cachetools (==4.2.1)
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: deprecated (==1.2.11)
+Requires-Dist: elasticsearch (==7.10.1)
+Requires-Dist: fastapi (==0.63.0)
+Requires-Dist: feedparser (==6.0.2)
+Requires-Dist: filelock (==3.0.12)
+Requires-Dist: flask (==1.1.2)
+Requires-Dist: google-api-core (==1.25.1)
+Requires-Dist: google-api-python-client (==1.12.8)
+Requires-Dist: google-auth-httplib2 (==0.0.4)
+Requires-Dist: google-auth (==1.24.0)
+Requires-Dist: google-play-scraper (==0.1.2)
+Requires-Dist: googleapis-common-protos (==1.52.0)
+Requires-Dist: gunicorn (==20.0.4)
+Requires-Dist: h11 (==0.12.0)
+Requires-Dist: httplib2 (==0.18.1)
+Requires-Dist: httptools (==0.1.1)
+Requires-Dist: hydra-core (==1.1.0.dev3)
+Requires-Dist: idna (==2.10)
+Requires-Dist: importlib-metadata (==3.4.0)
+Requires-Dist: importlib-resources (==5.1.0)
+Requires-Dist: itsdangerous (==1.1.0)
+Requires-Dist: jinja2 (==2.11.3)
+Requires-Dist: joblib (==1.0.0)
+Requires-Dist: markupsafe (==1.1.1)
+Requires-Dist: mmh3 (==2.5.1)
+Requires-Dist: numpy (==1.20.0)
+Requires-Dist: oauthlib (==3.1.0)
+Requires-Dist: omegaconf (==2.1.0.dev18)
+Requires-Dist: packaging (==20.9)
+Requires-Dist: praw (==7.1.0)
+Requires-Dist: prawcore (==1.5.0)
+Requires-Dist: protobuf (==3.14.0)
+Requires-Dist: pyasn1-modules (==0.2.8)
+Requires-Dist: pyasn1 (==0.4.8)
+Requires-Dist: pydantic (==1.7.3)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2021.1)
+Requires-Dist: pyyaml (==5.4.1)
+Requires-Dist: reddit-rss-reader (==1.1)
+Requires-Dist: regex (==2020.11.13)
+Requires-Dist: requests-oauthlib (==1.3.0)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: rsa (==4.7)
+Requires-Dist: sacremoses (==0.0.43)
+Requires-Dist: searchtweets-v2 (==1.0.4)
+Requires-Dist: sgmllib3k (==1.0.0)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: slack-sdk (==3.2.1)
+Requires-Dist: soupsieve (==2.1)
+Requires-Dist: sqlalchemy (==1.3.23)
+Requires-Dist: starlette (==0.13.6)
+Requires-Dist: tokenizers (==0.9.4)
+Requires-Dist: torch (==1.7.1)
+Requires-Dist: tqdm (==4.56.0)
+Requires-Dist: transformers (==4.2.2)
+Requires-Dist: tweet-preprocessor (==0.6.0)
+Requires-Dist: typing-extensions (==3.7.4.3)
+Requires-Dist: tzlocal (==2.1)
+Requires-Dist: update-checker (==0.18.0)
+Requires-Dist: uritemplate (==3.0.1)
+Requires-Dist: urllib3 (==1.26.3)
+Requires-Dist: uvicorn (==0.13.3)
+Requires-Dist: uvloop (==0.14.0)
+Requires-Dist: vadersentiment (==3.3.2)
+Requires-Dist: websocket-client (==0.57.0)
+Requires-Dist: werkzeug (==1.0.1)
+Requires-Dist: wrapt (==1.12.1)
+Requires-Dist: zipp (==3.4.0)
+
+# Obsei: OBserve, SEgment and Inform
+
+<p align="center">
+    <a href="https://github.com/lalitpagaria/obsei/actions">
+        <img alt="CI" src="https://github.com/lalitpagaria/obsei/workflows/CI/badge.svg?branch=master">
+    </a>
+    <a href="https://github.com/lalitpagaria/obsei/blob/master/LICENSE">
+        <img alt="License" src="https://img.shields.io/github/license/lalitpagaria/obsei?color=blue">
+    </a>
+    <a href="https://pypi.org/project/obsei">
+        <img src="https://img.shields.io/pypi/pyversions/obsei" alt="PyPI - Python Version" />
+    </a>
+    <a href="https://pypi.org/project/obsei/">
+        <img alt="Release" src="https://img.shields.io/pypi/v/obsei">
+    </a>
+    <a href="https://pepy.tech/project/obsei">
+        <img src="https://pepy.tech/badge/obsei/month" alt="Downloads" />
+    </a>
+    <a href="https://hub.docker.com/r/lalitpagaria/obsei">
+        <img src="https://img.shields.io/docker/pulls/lalitpagaria/obsei" alt="Docker Pulls" />
+    </a>
+    <a href="https://github.com/lalitpagaria/obsei/commits/master">
+        <img alt="Last commit" src="https://img.shields.io/github/last-commit/lalitpagaria/obsei">
+    </a>
+</p>
+
+**Note: There are major breaking changes are on the way. Please use released version instead of master branch. To track progress of next release refer [release tracker](https://github.com/lalitpagaria/obsei/projects).**
+
+
+`Obsei` is intended to be a workflow automation tool for text segmentation need. `Obsei` consist of -
+ - **OBserver**, observes platform like Twitter, Facebook, App Stores, Google reviews, Amazon reviews and feed that information to,
+ - **SEgmenter**, which perform text classification and sentiment analysis and feed that information to,
+ - **Informer**, which send it to ticketing system, data store or other places for further action and analysis.
+
+Current flow -
+
+![](https://raw.githubusercontent.com/lalitpagaria/obsei/master/images/Obsei-flow-diagram.png)
+
+A future concept (Coming Soon! :slightly_smiling_face:)
+
+![](https://raw.githubusercontent.com/lalitpagaria/obsei/master/images/Obsei-future-concept.png)
+
+
+## Upcoming Release
+Upcoming release plan and progress can be tracked at [link](https://github.com/lalitpagaria/obsei/projects) (Suggestions are welcome).
+
+## Discussion Forum
+Discussion about *Obsei* can be done at [community forum](https://github.com/lalitpagaria/obsei/discussions)
+
+## Documentation
+For detailed installation instructions, usages and example refer [documentation](https://lalitpagaria.github.io/obsei/).
+
+## Use cases
+`Obsei` use cases are following, but not limited to -
+- Automatic customer issue ticketing based on sentiment analysis
+- Proper tagging of ticket like login issue, signup issue, delivery issue etc for faster disposal
+- Checking effectiveness of social media marketing campaign
+- Extraction of deeper insight from feedbacks on various platforms
+- Research purpose
+
+## Attribution
+Refer [link](ATTRIBUTION.md) for attribution.
+
+## Contribution
+Currently, we are not accepting any pull requests. If you want a feature or something doesn't work, please create an issue.
+
+## Changelog
+Refer [releases](https://github.com/lalitpagaria/obsei/releases) and [projects](https://github.com/lalitpagaria/obsei/projects).
+
+## Citing Obsei
+If you use `obsei` in your research please use the following BibTeX entry:
+```text
+@Misc{Pagaria2020Obsei,
+  author =       {Lalit Pagaria},
+  title =        {Obsei - A workflow automation tool for text segmentation need},
+  howpublished = {Github},
+  year =         {2020},
+  url =          {https://github.com/lalitpagaria/obsei}
+}
+```
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/lalitpagaria/obsei.svg)](https://starchart.cc/lalitpagaria/obsei)
+
+## Acknowledgement
+
+We would like to thank [DailyGet](https://dailyget.in/) for continuous support and encouragement.
+Please check [DailyGet](https://dailyget.in/) out. it is a platform which can easily be configured to solve any business process automation requirements.
+
+
