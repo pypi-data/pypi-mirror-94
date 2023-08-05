@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: codechecklib
+Version: 0.3.12.1
+Summary: Simple sandbox & testing utility
+Home-page: https://hub.vanutp.dev
+Author: vanutp
+Author-email: hello@vanutp.dev
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8

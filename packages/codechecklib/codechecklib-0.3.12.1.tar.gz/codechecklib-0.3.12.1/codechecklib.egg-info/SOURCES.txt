@@ -1,0 +1,10 @@
+setup.py
+codechecklib/__init__.py
+codechecklib/const.py
+codechecklib/example_code.py
+codechecklib/sandbox.py
+codechecklib/tester.py
+codechecklib.egg-info/PKG-INFO
+codechecklib.egg-info/SOURCES.txt
+codechecklib.egg-info/dependency_links.txt
+codechecklib.egg-info/top_level.txt
