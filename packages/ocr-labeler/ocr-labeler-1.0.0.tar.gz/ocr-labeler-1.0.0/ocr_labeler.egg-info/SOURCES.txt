@@ -1,0 +1,9 @@
+README.md
+setup.py
+ocr-labeler/__init__.py
+ocr-labeler/main.py
+ocr_labeler.egg-info/PKG-INFO
+ocr_labeler.egg-info/SOURCES.txt
+ocr_labeler.egg-info/dependency_links.txt
+ocr_labeler.egg-info/requires.txt
+ocr_labeler.egg-info/top_level.txt
