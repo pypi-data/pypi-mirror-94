@@ -1,0 +1,14 @@
+README.md
+setup.py
+HostHome_cli.egg-info/PKG-INFO
+HostHome_cli.egg-info/SOURCES.txt
+HostHome_cli.egg-info/dependency_links.txt
+HostHome_cli.egg-info/entry_points.txt
+HostHome_cli.egg-info/not-zip-safe
+HostHome_cli.egg-info/requires.txt
+HostHome_cli.egg-info/top_level.txt
+hosthome/__init__.py
+hosthome/__main__.py
+hosthome/comandos.py
+hosthome/login.py
+hosthome/version.py

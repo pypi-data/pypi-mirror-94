@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: HostHome-cli
+Version: 2.0.8
+Summary: HostHome-cli para empezar con el host
+Home-page: https://github.com/HostHome-of/python-CLI
+Author: Maubg
+License: GNU
+Description: # python-CLI
+        Este es el CLI de python para HostHome
+        
+        # Como usarlo
+        ```sh
+        C:\> pip install HostHome-cli
+        ...
+        C:\> hosthome -v
+        ...
+        C:\> hosthome empezar # Y se creara tu archivo
+        ```
+        
+        ### Lenguages admitidos
+        
+        * ruby, python, nodejs, scala, clojure, cs, php)
+        
+Keywords: host,hosthome,maubg,python,py,hosty,hoster,home
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
