@@ -1,0 +1,11 @@
+setup.py
+RbxAPI/__init__.py
+RbxAPI/api.py
+RbxAPI/conversion.py
+RbxAPI/types.py
+RbxAPI/utils.py
+RbxAPI.egg-info/PKG-INFO
+RbxAPI.egg-info/SOURCES.txt
+RbxAPI.egg-info/dependency_links.txt
+RbxAPI.egg-info/requires.txt
+RbxAPI.egg-info/top_level.txt
