@@ -1,0 +1,3 @@
+[console_scripts]
+hive = pyhiveapi.hive:Hive
+
