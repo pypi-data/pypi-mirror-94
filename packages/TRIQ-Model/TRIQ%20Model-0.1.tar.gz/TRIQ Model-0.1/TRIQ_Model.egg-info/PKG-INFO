@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: TRIQ-Model
+Version: 0.1
+Summary: Random Forest Model to predict when a user should take a break
+Home-page: https://github.com/MiloVentimiglia/TRIQ-model
+Author: MiloVentimiglia
+Author-email: milo.venti84@gmail.com
+License: BSD-3
+Description: Random Forest Model to predict when a user should take a break
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown

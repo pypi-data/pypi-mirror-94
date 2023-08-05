@@ -1,0 +1,11 @@
+numpy==1.18.5
+scikit-learn==0.24.0
+pandas==0.25.3
+feature_engine==0.3.1
+joblib==0.14.1
+strictyaml==1.0.7
+pydantic==1.1.1
+marshmallow==3.9.0
+setuptools==41.6.0
+wheel==0.33.6
+twine==3.2.0
