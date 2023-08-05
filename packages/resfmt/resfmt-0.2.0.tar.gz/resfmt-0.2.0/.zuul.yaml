@@ -1,0 +1,16 @@
+- project:
+    check: &ci
+      jobs:
+        - tox-linters:
+            nodeset:
+              nodes:
+                - name: container
+                  label: zuul-worker-python
+    gate: *ci
+    release:
+      jobs:
+        - upload-pypi:
+            nodeset:
+              nodes:
+                - name: container
+                  label: zuul-worker-python
