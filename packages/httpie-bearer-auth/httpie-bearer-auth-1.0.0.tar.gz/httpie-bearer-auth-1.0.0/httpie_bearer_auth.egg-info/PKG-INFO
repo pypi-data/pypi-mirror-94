@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: httpie-bearer-auth
+Version: 1.0.0
+Summary: Bearer token Auth plugin for HTTPie.
+Home-page: https://github.com/jmsfwk/httpie-bearer-auth
+Author: James Fenwick
+Author-email: j.fenwick@me.com
+License: MIT
+Download-URL: https://github.com/jmsfwk/httpie-bearer-auth
+Description: httpie-bearer-auth
+        ==================
+        
+        Bearer auth plugin for `HTTPie <https://github.com/jkbr/httpie>`_.
+        
+        Installation
+        ------------
+        
+        .. code-block:: bash
+        
+            $ pip install httpie-bearer-auth
+        
+        You should now see ``bearer`` under ``--auth-type`` in ``$ http --help`` output.
+        
+        Usage
+        -----
+        
+        .. code-block:: bash
+        
+            $ http --auth-type=bearer --auth=94a08da1fecbb6e8b46990538c7b50b2 example.org
+        
+        License
+        -------
+        
+        Copyright (c) 2016 The Guardian. Available under the MIT License.
+        
+        Copyright (c) 2021 James Fenwick.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Plugins
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Utilities
+Description-Content-Type: text/x-rst
