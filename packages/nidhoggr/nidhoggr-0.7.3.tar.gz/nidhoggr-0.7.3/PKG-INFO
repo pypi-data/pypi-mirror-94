@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: nidhoggr
+Version: 0.7.3
+Summary: Yggdrasil protocol implementation
+Home-page: https://git.mc4ep.org/mc4ep/nidhoggr
+Author: Andriy Kushnir (Orhideous)
+Author-email: me@orhideous.name
+License: MIT
+Description: # Nidhoggr
+        
+        Yggdrasil protocol implementation
+        
+        This package provides only API and intended for developers only.
+        
+        # Development
+        
+        ## Installation
+        
+        ```bash
+        sudo apt-get install libssl-dev swig python3-dev gcc
+        python3 -m venv venv
+        source venv/bin/activate
+        pip install -r requirements_dev.txt -r requirements.txt
+        ```
+        
+        To run the all tests run:
+        
+        ```bash
+        tox
+        ```
+        
+        
+        # History
+        
+        ## 0.7.1 (2020-01-09)
+        
+        * Updated nidhoggr_core to 0.4.1
+        
+        ## 0.7.0 (2020-01-07)
+        
+        * **Breaking** Be aware of StatusResponse returned from repository
+        
+        ## 0.6.0 (2019-12-31)
+        
+        * Used nidhoggr-core
+        * Refactored and cleaned code
+        
+        ## 0.5.0 (2019-12-31)
+        
+        * Full compatibility with vanilla authlib
+        
+        ## 0.4.0 (2019-12-26)
+        
+        * **(Breaking)** Drop all texture-related features, except very basic
+          ones
+        
+        ## 0.3.0 (2019-12-26)
+        
+        * Various bugfixes
+        
+        ## 0.2.0 (2019-12-26)
+        
+        * **(Breaking)** Drop password field from User model
+        
+        ## 0.1.0 (2019-12-26)
+        
+        * First release on PyPI.
+        
+Keywords: Minecraft,Yggdrasil,Authentication
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
