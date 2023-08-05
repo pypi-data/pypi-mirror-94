@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ioproc
+Version: 2.0.1
+Summary: Framework for data pre- and postprocessing
+Home-page: https://gitlab.com/dlr-ve/ioproc
+Author: Benjamin Fuchs, Judith Riehm, Felix Nitsch, Jan Buschmann
+Author-email: ioproc@dlr.de
+License: MIT
+Keywords: workflow management,data pipeline,data science
+Platform: UNKNOWN
+Requires-Dist: arrow
+Requires-Dist: pandas
+Requires-Dist: frozendict
+Requires-Dist: pyyaml
+Requires-Dist: click
+Requires-Dist: cerberus
+Requires-Dist: tables
+
+ioProc is a light-weight workflow manager for Python ensuring robust, scalable and 
+reproducible data pipelines. The tool is developed at the German Aerospace Center (DLR) 
+for and in the scientific context of energy systems analysis, however, it is widely 
+applicable in other scientific fields.
+
+
