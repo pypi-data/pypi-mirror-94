@@ -1,0 +1,8 @@
+requests
+jsonmerge
+json5==0.9.5
+pprintpp
+pybase64
+argparse
+lxml
+bs4

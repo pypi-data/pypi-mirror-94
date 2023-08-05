@@ -1,0 +1,9 @@
+pyner/README.md,sha256=O7iWJuvIMiCluTi0KM_bKfBvB6KzUlxesHziznvaPd0,1125
+pyner/__init__.py,sha256=NJ0tAl_HcB5bhy4I3rOMS2vFA3MH28IqZjMWiwL2auU,15
+pyner/ner.py,sha256=c6LFSDWNB9XAIYcNxxhe_gjmPDvKvvaneJNQ0zb1txY,6876
+pyner/requirements.txt,sha256=E2sI5XXzXoicBhuy7M00ANjNgc_Y2Y9gBdW0qonKYpA,68
+pyner-0.0.4.dist-info/LICENSE,sha256=jeZqOKSpKTeBJ4HJWouCduhdwVHrS8_wnhe7Xfn9S_U,1062
+pyner-0.0.4.dist-info/METADATA,sha256=3rEfwTPHvqDMWsvIEJtqnVyWvVqishCnUFMbygZkVpI,2474
+pyner-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyner-0.0.4.dist-info/top_level.txt,sha256=3-FYiPvNXAq-ZtyurqXqAKG9XtDlscNsbKn2Zb5DaNU,6
+pyner-0.0.4.dist-info/RECORD,,
