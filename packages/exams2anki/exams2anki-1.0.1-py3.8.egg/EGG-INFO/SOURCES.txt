@@ -1,0 +1,11 @@
+README.md
+setup.py
+exams2anki.egg-info/PKG-INFO
+exams2anki.egg-info/SOURCES.txt
+exams2anki.egg-info/dependency_links.txt
+exams2anki.egg-info/entry_points.txt
+exams2anki.egg-info/not-zip-safe
+exams2anki.egg-info/requires.txt
+exams2anki.egg-info/top_level.txt
+src/__init__.py
+src/exams2anki.py
