@@ -1,0 +1,14 @@
+include README.rst
+include README.txt
+include CHANGES.txt
+include CONTRIBUTORS.txt
+recursive-include collective *
+recursive-include docs *
+
+exclude .coveragerc
+exclude bootstrap.*
+exclude base.cfg
+exclude buildout.cfg
+exclude test-*.cfg
+recursive-exclude src *.pyc *.pyo
+recursive-exclude collective *.pyc *.pyo

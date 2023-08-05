@@ -1,0 +1,164 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.pfg.signup">
+
+    <metal:javascript_head metal:fill-slot="javascript_head_slot">
+        <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables_themeroller.css" />
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
+    </metal:javascript_head>
+
+    <body>
+        <metal:title fill-slot="content-title">
+            <h1 id="parent-fieldname-title" class="documentFirstHeading kssattr-atfieldname-title kssattr-templateId-kss_generic_macros kssattr-macro-title-field-view">
+                Search Users
+            </h1>
+        </metal:title>
+        <metal:core fill-slot="content-core"
+                tal:define="search_view string:user_search_view;
+                            profile_view string:user_profile_view;
+                            edit_view string:user_edit_view;
+                            showAll python:request.get('showAll', '') and not view.newSearch and 'y';
+                            Batch python:modules['Products.CMFPlone'].Batch;
+                            b_start python:0 if view.newSearch else request.get('b_start',0);
+                            b_size python:len(view.searchResults) or 4;
+                            context_url context/absolute_url;
+                            portal_url context/portal_url;">
+            <a href="" tal:attributes="href string:javascript:history.back()">Return to main menu</a>
+            <p>Please select name or council name.</p>
+
+            <form action=""
+                      class="enableAutoFocus"
+                      name="users_search"
+                      method="post"
+                      tal:attributes="action string:$context_url/$search_view"
+                      tal:define="portal_users view/searchResults;
+                                  batch python:Batch(portal_users, b_size, int(b_start), orphan=1);
+                                  batchformkeys python:['searchstring','_authenticator'];
+                                  many_users view/many_users">
+                  <input type="hidden" name="form.submitted" value="1" />
+
+                  <table class="listing" summary="User Listing">
+                      <tbody>
+                          <tr class="odd">
+                              <th colspan="6" >
+                                  <label i18n:translate="label_user_search" for="user_search" style="display: inline-block">User Search</label>:
+                                  <input class="quickSearch"
+                                         type="text"
+                                         id="user_search"
+                                         name="searchstring"
+                                         value=""
+                                         tal:attributes="value view/searchString;"
+                                         />
+
+                                  <label for="user-groups" i18n:translate="label_user_group" style="display: inline-block">Group</label>:
+                                  <select name="user-groups" id="user-groups" multiple="multiple">
+                                      <tal:block repeat="group view/search_user_groups">
+                                          <tal:block tal:define="is_current python:'current' in group and group['current']" >
+                                              <tal:block tal:condition="is_current" >
+                                                  <option value="admin" selected="selected"
+                                                          tal:attributes="value group/group_id">
+                                                      <span tal:replace="group/group_title">Admin</span>
+                                                  </option>
+                                              </tal:block>
+                                              <tal:block tal:condition="not:is_current" >
+                                                  <option value="admin"
+                                                          tal:attributes="value group/group_id">
+                                                      <span tal:replace="group/group_title">Admin</span>
+                                                  </option>
+                                              </tal:block>
+                                          </tal:block>
+                                      </tal:block>
+                                  </select>
+
+                                  <input type="submit"
+                                         class="searchButton"
+                                         name="form.button.Search"
+                                         value="Find Users"
+                                         i18n:attributes="value label_search;"
+                                         />
+
+                              </th>
+                          </tr>
+                          <tal:block tal:condition="portal_users" >
+                          <tr class="odd">
+                              <th>User name / email</th>
+                              <th>Full Name</th>
+                              <th>Group</th>
+                              <th>Status</th>
+                              <th>Action</th>
+                          </tr>
+                          </tal:block>
+                          <tal:block repeat="user batch">
+                            <tr tal:define="oddrow repeat/user/odd;
+                                            userid user/userid;
+                                            loginid user/login;
+                                            userquery python:view.makeQuery(userid=userid);
+                                            userloginquery python:view.makeQuery(loginid=loginid);"
+                                tal:attributes="class python:oddrow and 'odd' or 'even'">
+
+                                <td>
+                                    <a href="user-profile-view"
+                                       tal:attributes="href string:$context_url/$profile_view?${userquery}&${userloginquery}">
+                                        <span tal:replace="loginid">username</span>
+                                    </a>
+                                    <input type="hidden" name="users.id:records" tal:attributes="value userid" />
+                                </td>
+
+                                <td>
+                                  <span tal:replace="user/fullname">Full Name</span>
+                                </td>
+
+                                <td>
+                                  <span tal:replace="user/groups">User Group</span>
+                                </td>
+
+                                <td>
+                                  <span tal:replace="user/user_status">User Active</span>
+                                </td>
+                                <td>
+                                    <a href="user-edit-view"
+                                       tal:attributes="href string:$context_url/$edit_view?${userquery}&${userloginquery}">
+                                        <span>Edit</span>
+                                    </a>
+                                </td>
+                            </tr>
+                          </tal:block>
+                          <tr tal:condition="not:batch">
+                              <td tal:condition="view/searchString"
+                                  i18n:translate="text_nomatches"
+                                  style="text-align:center;">No matches</td>
+                          </tr>
+                      </tbody>
+                  </table>
+
+                  <div metal:use-macro="context/batch_macros/macros/navigation" />
+
+                  <div class="showAllSearchResults"
+                       tal:condition="python:batch.next or batch.previous"
+                       tal:define="mq python:modules['ZTUtils'].make_query;
+                                   keys batchformkeys|nothing;
+                                   linkparams python:keys and dict([(key, request.form[key]) for key in keys if key in request]) or request.form;
+                                   url batch_base_url | string:${context/absolute_url}/${search_view}">
+                      <a tal:attributes="href python: '%s?%s' % (url, mq( linkparams, {'showAll':'y'} ))"
+                         i18n:translate="description_pas_show_all_search_results">
+                          Show all search results
+                      </a>
+                  </div>
+
+                  <input type="hidden" value="b_start" name="b_start"
+                         tal:attributes="value b_start"/>
+
+                  <input type="hidden" value="" name="showAll"
+                         tal:attributes="value showAll"/>
+
+                  <input tal:replace="structure context/@@authenticator/authenticator" />
+
+                </form>
+        </metal:core>
+    </body>
+</html>

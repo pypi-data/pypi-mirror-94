@@ -1,0 +1,11 @@
+setuptools
+Plone
+Products.PloneFormGen
+plone.api>=1.3.0
+collective.monkeypatcher
+
+[test]
+plone.app.testing
+plone.app.robotframework
+plone.api
+Products.ATContentTypes

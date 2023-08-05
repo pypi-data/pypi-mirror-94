@@ -1,0 +1,67 @@
+Changelog
+=========
+
+1.6.1 (2021-02-05)
+------------------
+
+* Use SemVer
+
+1.6 (2021-02-03)
+----------------
+
+* Fix bug with user not auto-created when user approve group is not set
+  [nngu6036]
+
+* Fix deprecation errors related to plone.app.controlpanel and Products.CMFPlone.
+  [b4oshany]
+* Add email domain verification option.
+  [ivanteoh]
+* Display Login ID rather than User ID on search, profile view and profile edit view.
+  [JeffersonBledsoe]
+* Fix users not being able to be deactivated if their login id is different to their user id.
+  [JeffersonBledsoe]
+
+1.5 (2017-03-08)
+----------------
+
+* Fix aaData contains unicode.
+  [ivanteoh]
+* Default to 'Administrators' when the TAL expression miss out the approval group.
+  [ivanteoh]
+
+1.4 (2016-07-25)
+----------------
+
+* Use Plone 5 valid email regular expression.
+  [ivanteoh]
+
+1.3 (2016-05-04)
+----------------
+
+* Change 'approval_group' to accept a list of groups instead of one group in
+  string.
+  [ivanteoh]
+
+1.2 (2015-09-10)
+----------------
+
+* Remove unused JavaScript file.
+  [ivanteoh]
+
+1.1 (2015-08-27)
+----------------
+
+* User management
+  [ivanteoh]
+
+1.0 (2013-06-20)
+----------------
+
+* User sign up management
+  [davismr, ivanteoh, djay]
+
+0.1 (2013-02-05)
+----------------
+
+* Initial implementation
+  [Pretaweb]
