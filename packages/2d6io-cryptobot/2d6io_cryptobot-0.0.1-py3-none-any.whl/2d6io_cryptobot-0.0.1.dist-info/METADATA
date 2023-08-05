@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: 2d6io-cryptobot
+Version: 0.0.1
+Summary: A crypto buy/sell analysis tool
+Home-page: https://github.com/cazantyl/2d6io-cryptobot
+Author: Steve Munson and David Wilt
+Author-email: cazantyl@gmail.com
+License: MIT
+Keywords: orderbook,trade,bitcoin,ethereum,BTC,ETH,client,api,wrapper,exchange,crypto,currency,trading,trading-api,coinbase,pro,prime,coinbasepro,cosmos,atoms,tezos,algorand
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
+Requires-Dist: cbpro (>=1.1.4)
+
+# 2d6io-cryptobot
+
+# Dependencies
+This project uses @danpaquin's excellent [coinbasepro-python](https://github.com/danpaquin/coinbasepro-python)
+
+We also use Flask to generate a restful endpoint to serve our data
+
+```python3
+pip3 install cbpro
+pip3 install flask
+```
+We also use Angular and NPM to serve a web interface for the application. 
+You will need to have [the latest version](https://nodejs.org/en/download/) of node installed.
+
+
+Run the following installs once node is complete (see [the docs](https://angular.io/cli) for more info):
+
+```SHELL
+npm install -g @angular/cli
+```
+
+# Config
+Rename `config_example.ini` to `config.ini` and update it with the right values. 
+
+
+**UNDER NO CIRCUMSTANCES SHOULD `config.ini` BE UPLOADED TO THE REPO OR SHARED WITH OTHERS**
+
+The config is already in the .gitignore so the only way this will happen is if you modify that. Don't do it.
+
+# Running
+## Restful Services
+To run from a command line run the following:
+```SHELL
+python3 app.py
+```
+This will start the flask restful service, which can be opened from your [localhost](http://localhost:5000/)
+
+This restful service has several endpoints:
+
+
+* [/api/wallet](http://localhost:5000/api/wallet) - Returns the current state of your wallet
+* [/api/analyze_coins](http://localhost:5000/api/analyze_coins) - Runs a single pass of the coin analysis process using the data feed from Coinbase
+
+
+## Web Interface
+To run the web interface, navigate from a console to `/interface` and run the following:
+```SHELL
+ng serve
+```
+
+Navigate to your [local angular server](http://localhost:4200) and you will see the wallet interface.
+
+To start the analysis service, click `Start Monitoring`. To disable the service, click `Stop Monitoring`
+
+# Donate
+
+Like the project? Donate! 
+
+Wallet: **0xe6f912cba2D254511170884AF4637689BE8758E6**
+
+![Donate](/assets/donations.png)
+
+
