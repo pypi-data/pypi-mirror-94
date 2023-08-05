@@ -1,0 +1,15 @@
+ocrfixr/__init__.py,sha256=H1J5ouK31ctm87Gw7_eDWUlsh7SbUPc2gnf7_BFS66k,192
+ocrfixr/spellcheck.py,sha256=VYk4tshWBbvsvdxH0hGOanK9jX2EPSuEMy-K6NN7Cgk,13126
+ocrfixr/unsplit.py,sha256=5PX0TqLp1_VicjkxeHFr1u5aWg1BDEOMGCsKzZHBMYk,6404
+ocrfixr/data/.DS_Store,sha256=1lFlJ5EFymdzGAUAaI30vcaaLHt3F1LwpG7xILf9jsM,6148
+ocrfixr/data/SCOWL_20.txt,sha256=3YXp4By4-wcoHxtXMHcHWoBJfdBxNolQO94zw0Hogbo,108423
+ocrfixr/data/SCOWL_70.txt,sha256=8bnDaZed4liVaU1kS_h_x2Ylq47QSj92JZv0hF1H4_k,1143930
+tests/.DS_Store,sha256=1lFlJ5EFymdzGAUAaI30vcaaLHt3F1LwpG7xILf9jsM,6148
+tests/__init__.py,sha256=gSMiGhlS42pmPKcTTDgiT582pnCLrRfanOxbyYj262g,37
+tests/test_spellcheck.py,sha256=wyYKeCMLbA97dWff09HobilJ_Mtf2yYjSV1zQmowxsI,4975
+tests/test_unsplit.py,sha256=35--wBvBFxBLFh3cWIPPugKpoSd3fzMHfJZ3KUIYHHI,4030
+OCRfixr-1.2.0.dist-info/LICENSE,sha256=YGu5Wdfp-eRsQ6Zti5OdcCZMfZ6EdsXNq9ggpUP-c5E,1632
+OCRfixr-1.2.0.dist-info/METADATA,sha256=0B5hC66UJ6fDNM6R7Thx-XP0-cktCAxKoRYvRL2fdOQ,6034
+OCRfixr-1.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+OCRfixr-1.2.0.dist-info/top_level.txt,sha256=JNVpTCI-LBtkFNVYKprldRibmxGQfTlBxWXfqBvZHAE,14
+OCRfixr-1.2.0.dist-info/RECORD,,
