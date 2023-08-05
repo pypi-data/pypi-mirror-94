@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.cfg
+fast_automl/__init__.py
+fast_automl/automl.py
+fast_automl/baseline.py
+fast_automl/cv_estimators.py
+fast_automl/ensemble.py
+fast_automl/linear_model.py
+fast_automl/metrics.py
+fast_automl/test.py
+fast_automl/utils.py
+fast_automl.egg-info/PKG-INFO
+fast_automl.egg-info/SOURCES.txt
+fast_automl.egg-info/dependency_links.txt
+fast_automl.egg-info/requires.txt
+fast_automl.egg-info/top_level.txt
