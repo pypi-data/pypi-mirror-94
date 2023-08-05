@@ -1,0 +1,3 @@
+name_1: '@float(v_1)'
+name_2: 2
+name_3: '@import(three.name.name_3.yaml)'
