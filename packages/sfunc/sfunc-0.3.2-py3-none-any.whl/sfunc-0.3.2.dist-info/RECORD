@@ -1,0 +1,11 @@
+sfunc/__init__.py,sha256=jTwJddSbAt-Oir7hID1Z9uxjANFMGKvDGzb5JN-4IDc,2446
+sfunc/apigw_request.py,sha256=7ATiwfZOI_kYgYOgTvmUjNC7DnQuMWsCYCbpx7pwigk,3075
+sfunc/apigw_response.py,sha256=A1uYNycYxkxeed8tWcicBsc2ZxQ63bzBg0sVklOWbf0,1214
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/apigw_request_test.py,sha256=U-Zu7rPawzJz8Ky6DlEVtlAJX5sSoO9KPm_0tZ5U3jI,5118
+tests/apigw_response_test.py,sha256=NoWwsbyqwBGjMGCipNrZqhz-F9LYWSG3DJF93_LJgpA,1403
+tests/sfunc_test.py,sha256=6rpw7Ug0SiqWa9YhhnUG5mRieW0v3bz6ZMAIDYmJgag,5912
+sfunc-0.3.2.dist-info/METADATA,sha256=wKEP5bxOI5Ce4L0Det4sWQwBNlCyy1UhBKAmnkSclas,3233
+sfunc-0.3.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sfunc-0.3.2.dist-info/top_level.txt,sha256=qx2tDl3Q5FKcEri7xm2wTa5lKRQIgjHMuKww7cLfdkA,12
+sfunc-0.3.2.dist-info/RECORD,,
