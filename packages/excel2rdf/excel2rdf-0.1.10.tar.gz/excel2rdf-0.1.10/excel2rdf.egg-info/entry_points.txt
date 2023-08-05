@@ -1,0 +1,3 @@
+[console_scripts]
+excel2rdf = excel2rdf.cli:main
+

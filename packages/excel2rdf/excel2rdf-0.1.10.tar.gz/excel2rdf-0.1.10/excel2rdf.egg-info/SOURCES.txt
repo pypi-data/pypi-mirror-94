@@ -1,0 +1,10 @@
+README.md
+setup.py
+excel2rdf/__init__.py
+excel2rdf/cli.py
+excel2rdf.egg-info/PKG-INFO
+excel2rdf.egg-info/SOURCES.txt
+excel2rdf.egg-info/dependency_links.txt
+excel2rdf.egg-info/entry_points.txt
+excel2rdf.egg-info/requires.txt
+excel2rdf.egg-info/top_level.txt
