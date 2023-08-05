@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+py_weather_cli.egg-info/PKG-INFO
+py_weather_cli.egg-info/SOURCES.txt
+py_weather_cli.egg-info/dependency_links.txt
+py_weather_cli.egg-info/entry_points.txt
+py_weather_cli.egg-info/requires.txt
+py_weather_cli.egg-info/top_level.txt
+weather_cli/__init__.py
+weather_cli/ascii_art.py
+weather_cli/main.py
+weather_cli/openweathermap.py
+weather_cli/utils.py
+weather_cli/weather.py
