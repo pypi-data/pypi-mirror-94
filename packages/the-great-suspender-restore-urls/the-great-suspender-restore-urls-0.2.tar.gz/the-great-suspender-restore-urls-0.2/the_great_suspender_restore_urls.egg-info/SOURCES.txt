@@ -1,0 +1,13 @@
+CHANGELOG.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+thegreatsuspender.py
+the_great_suspender_restore_urls.egg-info/PKG-INFO
+the_great_suspender_restore_urls.egg-info/SOURCES.txt
+the_great_suspender_restore_urls.egg-info/dependency_links.txt
+the_great_suspender_restore_urls.egg-info/entry_points.txt
+the_great_suspender_restore_urls.egg-info/not-zip-safe
+the_great_suspender_restore_urls.egg-info/top_level.txt
