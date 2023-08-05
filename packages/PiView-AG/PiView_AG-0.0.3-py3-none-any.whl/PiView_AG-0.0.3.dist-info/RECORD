@@ -1,0 +1,10 @@
+PiView_AG/Utils.py,sha256=YbDLda77A1ZSilzT4ildd6YHJRkamT-ibMnHpOLNWAM,2009
+PiView_AG/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_Utils_format_bytes.py,sha256=xvMoOQG48YyoIk8xRo4rPheF3RbsVRBkAbGD7HpveLM,3613
+tests/test_Utils_line_draw.py,sha256=czxJkITsr8qcjTO3LU9FEwGXrLFB1pn6WIDj21y5BWw,1211
+PiView_AG-0.0.3.dist-info/LICENSE.txt,sha256=wsujJULPOmWBPoP9vSWQINbWK2gzqhjziuyYODfcnk0,10297
+PiView_AG-0.0.3.dist-info/METADATA,sha256=gTFfUzMUIFNI7LqvbtlgdTdiuRE279V8ejL1T4yUh1Q,1619
+PiView_AG-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PiView_AG-0.0.3.dist-info/top_level.txt,sha256=CWMBICVWuFcklKihQZ8nnBwbyaWcWIqBs7TVIhf6Di4,16
+PiView_AG-0.0.3.dist-info/RECORD,,
