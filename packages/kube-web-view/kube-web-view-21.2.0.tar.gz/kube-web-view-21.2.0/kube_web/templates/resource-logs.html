@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}{{ resource.name }} ({{resource.kind}}{% if namespace: %} in {{namespace}}{% endif %}){% endblock %}
+{% block content %}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+        <li><a href="/clusters/{{ cluster }}">{{ cluster }}</a></li>
+        <li><a href="/clusters/{{ cluster }}/namespaces/{{ namespace }}">{{ namespace }}</a></li>
+        <li><a href="/clusters/{{ cluster }}/namespaces/{{ namespace }}/{{ resource.endpoint }}">{{ resource.endpoint }}</a></li>
+        <li class="is-active"><a href="#">{{ resource.name }}</a></li>
+    </ul>
+</nav>
+
+<h2 class="title">{{ resource.name }}</h2>
+<div class="tabs is-small">
+    <ul>
+        <li ><a href="/clusters/{{ cluster }}/namespaces/{{ resource.metadata.namespace }}/{{ resource.endpoint }}/{{ resource.name }}">Default</a></li>
+        <li ><a href="/clusters/{{ cluster }}/namespaces/{{ resource.metadata.namespace }}/{{ resource.endpoint }}/{{ resource.name }}?view=yaml">YAML</a></li>
+        <li class="is-active"><a>Logs</a></li>
+    </ul>
+</div>
+
+{% if not show_container_logs: %}
+
+<article class="message is-warning">
+    <div class="message-header">
+        <p>Container Logs Disabled</p>
+    </div>
+    <div class="message-body">
+        Container logs are not shown as they were disabled in Kubernetes Web View. Enable them via the "--show-container-logs" kube-web-view command line option.
+    </div>
+</article>
+
+{% else: %}
+
+<form method="get" action="#">
+    <div class="section">
+        Get last <input class="input" style="width:7rem;vertical-align:baseline" type="number" min="1" name="tail_lines" value="{{ tail_lines }}"> log lines {% if all_containers|length > 2: %} of {{container_name}} container {% else: %} per container {% endif %}for {{ pods|length }} pods
+        and filter by
+        <input class="input" style="width:10rem;vertical-align:baseline" name="filter" value="{{ filter_text or "" }}" placeholder="filter text">
+        <button type="submit" class="button is-primary">Refresh</button>
+    </div>
+</form>
+
+{% if all_container_names|length > 2: %}
+<div class="tabs is-small">
+    <ul>
+        {% for container_tab in all_container_names|sort: %}
+        {% if container_tab == container_name: %}
+        <li class="is-active"><a>{{ container_tab or "all" }}</a></li>
+        {% else: %}
+        <li ><a href="/clusters/{{ cluster }}/namespaces/{{ resource.metadata.namespace }}/{{ resource.endpoint }}/{{ resource.name }}/logs?{{ {"container": container_tab, "tail_lines": tail_lines, "filter": filter_text or ""}|urlencode }}">{{ container_tab or "all" }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<pre>
+{% for log in logs: %}<span style="color:{{ log[2] }}">{{ log[1] }}</span> {% if not container_name: %}<span class="has-text-grey">{{ log[3] }}</span> {% endif %}{{ log[0] }}{{ '\n' }}{% endfor %}
+{% if filter_text and not logs: %}<em>No matching logs found. Please note that the filter text is case sensitive!</em>{% endif %}
+</pre>
+
+{% endif %}
+
+{% endblock %}

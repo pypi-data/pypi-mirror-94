@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}{{ cluster }} Cluster{% endblock %}
+{% block content %}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+        <li class="is-active"><a href="/clusters/{{ cluster }}">{{ cluster }}</a></li>
+    </ul>
+</nav>
+
+<h1 class="title">{{ cluster }}</h1>
+
+<div class="section">
+    {% for key, val in cluster_obj.labels.items()|sort: %}
+    <a href="/clusters?selector={{key}}={{val}}"><span class="tag is-link">{{ key }}: {{ val }}</span></a>
+    {% endfor %}
+</div>
+
+<div class="section">
+    API URL: {{ cluster_obj.api.url }}
+</div>
+
+<script>
+    function toggleSearchButton() {
+        const $checked = document.querySelectorAll('input[name=namespace]:checked');
+        const $button = document.getElementById("search-namespaces-button");
+
+        if ($checked.length > 0) {
+            $button.disabled = false;
+        } else {
+            $button.disabled = true;
+        }
+    }
+</script>
+
+<div class="section">
+    <h4 class="title is-5">Namespaces</h4>
+    <form action="/search" method="get">
+        <input type="hidden" name="cluster" value="{{ cluster }}">
+        <table class="table is-stripped has-bottom-controls">
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Labels</th>
+                <th>Created</th>
+            </tr>
+            {% for resource in namespaces: %}
+            <tr>
+                <td><input type="checkbox" name="namespace" value="{{ resource.name }}" onclick="toggleSearchButton()"></td>
+                <td><a href="/clusters/{{ cluster }}/{{ resource.endpoint }}/{{ resource.name }}">{{ resource.name }}</a></td>
+                <td>
+                    {% for key, val in resource.labels.items()|sort: %}
+                    <span class="tag">{{ key }}: {{ val }}</span>
+                    {% endfor %}
+                </td>
+                <td style="color:{{ age_color(resource.metadata.creationTimestamp, days=1) }}">{{ resource.metadata.creationTimestamp.replace('T', ' ').replace('Z', '') }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="control bottom-controls">
+            <button class="button is-primary" type="submit" id="search-namespaces-button" disabled>
+                <span class="icon">
+                    <i class="fas fa-search"></i>
+                </span>
+                <span>Search in selected namespaces</span></button>
+        </div>
+    </form>
+</div>
+
+<div class="section">
+    <h4 class="title is-5">Cluster Resource Types</h4>
+    <table class="table is-stripped">
+        <tr>
+            <th>Kind</th>
+            <th>Plural</th>
+            <th>Version</th>
+        </tr>
+        {% for resource_type in resource_types: %}
+        <tr>
+            <td>{{ resource_type.kind }}</td>
+            <td><a href="/clusters/{{ cluster }}/{{ resource_type.endpoint }}">{{ resource_type.endpoint }}</a></td>
+            <td>{{ resource_type.version }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
