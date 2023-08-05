@@ -1,0 +1,3 @@
+[console_scripts]
+gitools = gitools.__main__:main
+
