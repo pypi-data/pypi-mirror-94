@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+cryptopycode.egg-info/PKG-INFO
+cryptopycode.egg-info/SOURCES.txt
+cryptopycode.egg-info/dependency_links.txt
+cryptopycode.egg-info/not-zip-safe
+cryptopycode.egg-info/requires.txt
+cryptopycode.egg-info/top_level.txt

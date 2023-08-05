@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: cryptopycode
+Version: 0.0.1
+Summary: Encryption and decryption on the key of the python module
+Home-page: https://github.com/alserious/cryptopycode
+Author: Alex
+Author-email: seriousalsir@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
