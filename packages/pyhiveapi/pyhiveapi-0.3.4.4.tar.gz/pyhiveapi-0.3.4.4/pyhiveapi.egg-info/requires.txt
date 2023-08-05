@@ -1,0 +1,9 @@
+pre-commit
+boto3>=1.16.10
+botocore>=1.19.10
+requests
+aiohttp
+pyquery
+
+[dev]
+tox
