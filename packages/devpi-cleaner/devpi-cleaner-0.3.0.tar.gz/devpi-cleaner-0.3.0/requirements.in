@@ -1,0 +1,14 @@
+# Installation requirements
+-e .
+
+# Set-up requirements
+setuptools_scm
+
+# Test requirements
+coverage
+mock
+nose
+devpi-plumber[test]
+
+# Travis requirements
+coveralls
