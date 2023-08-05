@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: django-flipt
+Version: 0.1.0
+Summary: Flipt Integration for Django and Django REST Framework
+Home-page: https://github.com/earthpyy/django-flipt
+License: MIT
+Keywords: flipt,django,django-rest-framework,feature-flag,feature-toggle
+Author: Preeti Yuankrathok
+Author-email: preetisatit@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: rest
+Requires-Dist: django (>=3.0.0,<4.0.0)
+Requires-Dist: djangorestframework (>=3.12.2,<4.0.0); extra == "rest"
+Requires-Dist: flipt-grpc-python3 (>=0.1.0,<0.2.0)
+Project-URL: Repository, https://github.com/earthpyy/django-flipt
+Description-Content-Type: text/markdown
+
+# django-flipt
+Flipt Integration for Django and Django REST Framework
+
+# Requirements
+
+- Docker
+
+# Development
+
+### Run Project
+
+```shell
+$ make
+```
+
+### Linting/Test Project
+
+```shell
+$ make lint
+$ make test
+```
+
