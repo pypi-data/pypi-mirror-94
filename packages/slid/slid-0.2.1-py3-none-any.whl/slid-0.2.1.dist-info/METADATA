@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: slid
+Version: 0.2.1
+Summary: A package for making alert windows that slide close.
+Home-page: https://pypi.com/project/slid
+Author: Ram Taralekar
+Author-email: ramtaralekar@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Slid
+
+Slid is a package that allows you to
+make alert-like windows that, when read,
+shrink keeping their ratio and closing when not seen.
+
