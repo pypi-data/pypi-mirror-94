@@ -1,0 +1,3 @@
+[console_scripts]
+phytoolkit = phytoolkit.phytoolkit:cli
+
