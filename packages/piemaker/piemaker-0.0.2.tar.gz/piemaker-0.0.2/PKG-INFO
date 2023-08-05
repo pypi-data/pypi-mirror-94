@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: piemaker
+Version: 0.0.2
+Summary: testtttt
+Home-page: https://github.com/jetmaster101/piemaker
+Author: Quantumgames
+Author-email: alex.evans@gm.fsd38.ab.ca
+License: UNKNOWN
+Description: # About
+        ---
+        
+        Write a detailed description of your Python Package here!
+        
+        Need a Markdown Guide? You can find a guide at [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown).
+        
+        You can also find more information about packaging at [Python Packaging User Guide](https://packaging.python.org/tutorials/packaging-projects/).
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
