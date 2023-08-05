@@ -1,0 +1,60 @@
+<robot name="C.U.B.I.T.U.S.  P.R.O.J.E.C.T.">
+    <joint>
+        <type type="TZ"></type>
+        <value value="115.50"></value>
+    </joint>
+    <joint>
+        <type type="RZ"></type>
+        <value value="0.0"></value>
+    </joint>
+    <joint>
+        <type type="TX"></type>
+        <value value="30.00"></value>
+    </joint>
+    <joint>
+        <type type="RY"></type>
+        <value value="0.0"></value>
+    </joint>
+    <joint>
+        <type type="TZ"></type>
+        <value value="100.00"></value>
+    </joint>
+    <joint>
+        <type type="TX"></type>
+        <value value="20.00"></value>
+    </joint>
+    <joint>
+        <type type="RY"></type>
+        <value value="0.0"></value>
+    </joint>
+    <joint>
+        <type type="TZ"></type>
+        <value value="20.00"></value>
+    </joint>
+    <joint>
+        <type type="RX"></type>
+        <value value="0.0"></value>
+    </joint>
+    <joint>
+        <type type="TX"></type>
+        <value value="112.00"></value>
+    </joint>
+    <joint>
+        <type type="RY"></type>
+        <value value="0.0"></value>
+    </joint>
+    <joint>
+        <type type="TX"></type>
+        <value value="55.00"></value>
+    </joint>
+    <joint>
+        <type type="RX"></type>
+        <value value="0.0"></value>
+    </joint>
+    <!--
+    <joint>
+        <type type="TX"></type>
+        <value value="60.00"></value>
+    </joint>
+    -->
+</robot>
