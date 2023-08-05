@@ -1,0 +1,9 @@
+README.md
+setup.py
+music_analysis/__about__.py
+music_analysis/__init__.py
+music_analysis/music_type.py
+music_analysis_noha.egg-info/PKG-INFO
+music_analysis_noha.egg-info/SOURCES.txt
+music_analysis_noha.egg-info/dependency_links.txt
+music_analysis_noha.egg-info/top_level.txt

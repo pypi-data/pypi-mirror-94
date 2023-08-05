@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: music_analysis_noha
+Version: 0.0.0
+Summary: A small example of package
+Home-page: UNKNOWN
+Author: Noha
+Author-email: noahalsultan@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
