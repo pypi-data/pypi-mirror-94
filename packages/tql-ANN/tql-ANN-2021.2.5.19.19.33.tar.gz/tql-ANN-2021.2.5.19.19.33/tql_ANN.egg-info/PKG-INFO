@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: tql-ANN
+Version: 2021.2.5.19.19.33
+Summary: description
+Home-page: https://github.com/Jie-Yuan/tql-ANN
+Author: YuanJie
+Author-email: 313303303@qq.com
+Maintainer: JieYuan
+Maintainer-email: 313303303@qq.com
+License: Apache
+Description: <h1 align = "center">:rocket: ANN :facepunch:</h1>
+        
+        ---
+        
+        # Install
+        `pip install fast-ann`
+        
+        # Usage
+        ```python
+        from ann import ANN
+        import numpy as np
+        
+        data = np.random.random((1000, 128)).astype('float32')
+        
+        ann = ANN()
+        ann.train(data, index_factory='IVF4000, Flat', noramlize=True)
+        
+        dis, idx = ann.search(data[:10])
+        
+        print(dis)
+        print(idx)
+        ```
+        
+        ---
+        # milvus镜像
+        ```
+        yum -y install python3
+        # ln -sf /usr/bin/python3 /usr/bin/python
+        # ln -sf /usr/bin/pip3 /usr/bin/pip
+        pip3 install -U --no-cache-dir -i https://mirror.baidu.com/pypi/simple pip meutils pymilvus
+        
+        rm -rf /tmp/*
+        rm -rf /root/.cache/pip*
+        
+        ```
+        
+        ---
+        - faiss不同量级对应的训练时间及内存测试
+        - 压缩方式测试
+        - 四种组合：默认是查向量返回 distance与index
+            - id => id/vector
+            - vector => id/vector
+            - push场景需要 docid => title_vector => docid
+            
+        - 线上服务
+            - id2word
+            - id2vector
+Keywords: tool wheel,yuanjie,utils
+Platform: all
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Description-Content-Type: text/markdown

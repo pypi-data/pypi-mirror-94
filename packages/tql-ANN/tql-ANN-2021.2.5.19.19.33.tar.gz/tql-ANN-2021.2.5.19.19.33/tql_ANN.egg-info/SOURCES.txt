@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+pypi.sh
+requirements.txt
+setup.py
+annzoo/__init__.py
+annzoo/ann.py
+annzoo/ann_service.py
+annzoo/faiss.py
+tql_ANN.egg-info/PKG-INFO
+tql_ANN.egg-info/SOURCES.txt
+tql_ANN.egg-info/dependency_links.txt
+tql_ANN.egg-info/entry_points.txt
+tql_ANN.egg-info/requires.txt
+tql_ANN.egg-info/top_level.txt
