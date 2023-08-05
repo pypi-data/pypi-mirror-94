@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: pycorpus
+Version: 2.2
+Summary: Easy concurrent launch of series of filebased experiments.
+Home-page: https://bitbucket.org/josu/pycorpus/
+Author: Josu Bermudez
+Author-email: josubg@gmail.com
+License: Apache License, Version 2.0
+Description: This module provide a easy, non intrusive way to process a big list of files in a parallel way. Also provides the option to process theses files with a different packs of options, evaluate and generate reports.
+        
+        
+        
+Keywords: Parallel Experiment multiconfig
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3

@@ -1,0 +1,11 @@
+LICENCE.txt
+LONG.rst
+MANIFEST.in
+README.md
+setup.py
+pycorpus/__init__.py
+pycorpus.egg-info/PKG-INFO
+pycorpus.egg-info/SOURCES.txt
+pycorpus.egg-info/dependency_links.txt
+pycorpus.egg-info/requires.txt
+pycorpus.egg-info/top_level.txt
