@@ -1,0 +1,13 @@
+flipt/__init__.py,sha256=VA4wMheHpNNJQ_1kU7kdG56mfkm3oWQjYWwpdr0-GR4,83
+flipt/apps.py,sha256=vTBqY45wCrY04E_LzAhn2rHcZY4zkALBGTy_StAbW5w,116
+flipt/clients.py,sha256=Wd49HKWeMUdJF9FQ8ovWGMzC1M1QDIyepQh5s3CUgvI,202
+flipt/decorators.py,sha256=SNrIMDQElQgZnPQcJFT09Li68C3VTJ3m3yCGhyPqj2o,891
+flipt/flags.py,sha256=4oSVFPBNb2qw02RZ97Hn1fJGmlKLfjvt0MUiv4mYhsM,716
+flipt/routers.py,sha256=ginSx3h2yVGwWxwimjJaFEIokKZYxCTzt7-oOYZYA-o,1036
+flipt/templatetags/__init__.py,sha256=CYDxlkHrrDHqyPa8EHwGyhC4YRfpHLVLKTnIjNNWYK8,46
+flipt/templatetags/feature_flags.py,sha256=1FyZJ0f4DxpCUy7_Z-gM0V4LNb2Von5mb_bG7K8lFss,1096
+flipt/views.py,sha256=byQ9IUX0UH8s3aTviBgiIySp5HMWLCaWH2rek6ou_hA,573
+django_flipt-0.1.1.dist-info/LICENSE,sha256=LMUeGx0mKMdpXmr7vz7L8vYNcd4G_PHGJiJAJjC8GUw,1075
+django_flipt-0.1.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+django_flipt-0.1.1.dist-info/METADATA,sha256=MX0-u_66M62L96F99ueZoUxJg7nJIfQU_Xym9385Tbk,1778
+django_flipt-0.1.1.dist-info/RECORD,,
