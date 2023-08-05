@@ -1,0 +1,12 @@
+nginxPlusAPI/__init__.py,sha256=KVDoy4S4mXZR0mihpWbdfsVmZ8ydmIfJoWD0PwIBTfE,100
+nginxPlusAPI/Client/Client.py,sha256=vU7dsQlJf_guc9fIS3UUF49GrlVRNeT4az6YaNEIV8E,709
+nginxPlusAPI/Client/__init__.py,sha256=uPJxw8bRdtz525KWrBMkyvxS6sNeBbb8EiKTgQ72ytI,26
+nginxPlusAPI/KeyValueStore/KeyValueStore.py,sha256=wblGCGVWr6Jgm7BrNnY07NeUaCq5tPWB8CVzmr_98EM,2486
+nginxPlusAPI/KeyValueStore/__init__.py,sha256=x-uSGeZrVbr91PiClZcvcVSqvZg7UH7pSf1f7jIAVc8,40
+nginxPlusAPI/Upstreams/Upstreams.py,sha256=5_BUI4wywXElap85UCJHgsuK0j6cJJeMgu8OK1Obk2o,4361
+nginxPlusAPI/Upstreams/__init__.py,sha256=9JDIRbQRVfvZhhm5Zbq_xvZJRLMzqUccV1VqKGwnn78,32
+nginxPlusAPI-0.0.1.dist-info/LICENSE,sha256=5YbXTt1YJslrBnMQjJ28sr_DlH4kYPINvOae5s-PAc0,1352
+nginxPlusAPI-0.0.1.dist-info/METADATA,sha256=3VrFeOOA9vQ0uDToeaQThEz9YMZuvS5Fyb4inAToRjM,475
+nginxPlusAPI-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+nginxPlusAPI-0.0.1.dist-info/top_level.txt,sha256=Adaj4Fiu61_JH2nvPeDBdl9UwX9WxwA_e2x6DEz1FpY,13
+nginxPlusAPI-0.0.1.dist-info/RECORD,,
