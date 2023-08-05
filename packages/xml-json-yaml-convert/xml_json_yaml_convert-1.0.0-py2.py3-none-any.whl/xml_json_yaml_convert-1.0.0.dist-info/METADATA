@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: xml-json-yaml-convert
+Version: 1.0.0
+Summary: Base level XML, JSON, YAML conversion tool
+Home-page: https://xml_json_yaml_convert.readthedocs.io
+Author: Benjamin P. Trachtenberg
+Author-email: e_ben_75-python@yahoo.com
+License: The MIT License (MIT)
+Project-URL: Documentation, https://xml_json_yaml_convert.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/btr1975/xml_json_yaml_convert
+Project-URL: Tracker, https://github.com/btr1975/xml_json_yaml_convert/issues
+Keywords: ipv4 ip multicast unicast network engineer
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML (~=5.4.1)
+Requires-Dist: xmltodict (~=0.12.0)
+
+# xml_json_yaml_convert
+Base level XML, JSON, YAML conversion tool
+
+## Written By: Benjamin P. Trachtenberg 
+
+### Contact Information:  e_ben_75-python@yahoo.com
+### If you have any questions e-mail me
+
+### LinkedIn: [Ben Trachtenberg](https://www.linkedin.com/in/ben-trachtenberg-3a78496)
+### Docker Hub: [Docker Hub](https://hub.docker.com/r/btr1975)
+### PyPi Page for [xml_json_yaml_convert](https://pypi.python.org/pypi/xml_json_yaml_convert)
+
+### Requirements
+
+* [requirements](./requirements.txt)
+* [requirements-dev](./requirements-dev.txt)
+
+### Installation
+
+* From source "setup.py install"
+* From pip "pip install xml_json_yaml_convert"
+
+### Languages
+
+* Python
+
+### About
+
+This is a library for a simple conversion between XML, YAML, and JSON 
+
+
