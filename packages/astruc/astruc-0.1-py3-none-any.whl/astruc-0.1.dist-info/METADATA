@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: astruc
+Version: 0.1
+Summary: A pretty Python code to graph parser.
+Home-page: http://github.com/tongling/clinicaltrial
+Author: hongqiu
+Author-email: wuhongqiu@sjtu.edu.cn
+License: UNKNOWN
+Keywords: ast,abstract syntax tree
+Platform: UNKNOWN
+Requires-Dist: asttokens
+Requires-Dist: numpy
+
+UNKNOWN
+
+
