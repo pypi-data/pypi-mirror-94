@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: eosjs-python
+Version: 0.2.3
+Summary: Python library to communicate with eosjs in order to sign blockchain transactions.
+Home-page: https://github.com/EvaCoop/eosjs_python
+Author: Raphael Gaudreault, Jean Robatto
+Author-email: raphael.gaudreault@eva.coop, jean.robatto@eva.coop
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
