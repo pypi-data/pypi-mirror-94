@@ -1,0 +1,12 @@
+tensorflow==1.15
+Pillow
+PyOpenGL
+pyyaml
+matplotlib
+pytz
+imageio==2.4.1
+gym
+moviepy
+pandas
+opencv-python<=4.2.0.32
+stable_baselines<2.4.1
