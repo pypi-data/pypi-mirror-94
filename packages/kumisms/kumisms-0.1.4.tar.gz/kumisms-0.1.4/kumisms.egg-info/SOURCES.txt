@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+kumisms/__init__.py
+kumisms.egg-info/PKG-INFO
+kumisms.egg-info/SOURCES.txt
+kumisms.egg-info/dependency_links.txt
+kumisms.egg-info/top_level.txt
