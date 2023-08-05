@@ -1,0 +1,2 @@
+{% if to_all %}[toall]{% endif %}
+{% if title %}{% include 'chatwork/_info_body.txt' with title=title body=body %}{% else %}{{ body }}{% endif %}
