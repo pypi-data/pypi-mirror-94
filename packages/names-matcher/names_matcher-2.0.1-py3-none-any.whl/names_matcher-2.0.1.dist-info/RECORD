@@ -1,0 +1,13 @@
+requirements.txt,sha256=xwsDXEAjo8glRQu0PVWNA0JP2Yf5j-2sgn9sJaRWuFo,91
+names_matcher/__init__.py,sha256=UKrYUKouxvDDjU4giQPTzzlSgQ9G8my_jjOQFr1UVqw,63
+names_matcher/__main__.py,sha256=8bM0b5DSTtkly6LA3mf1IkLHgvlJUOO25dEfaCEo398,888
+names_matcher/algorithm.py,sha256=2F4tkoDDp3WFA72LVZCtzKzQaH08lBf6-IXkV0SrHcs,10369
+names_matcher/metadata.py,sha256=h98bFC36iJObQYWEgHnDpivPxg1ucOFoF85js958j5Y,121
+names_matcher/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+names_matcher/tests/test_algorithm.py,sha256=N5MoNI7dFBsnJaw-V5ww3Yu206d9yr_WqpU3U7nSYno,1931
+names_matcher/tests/test_main.py,sha256=Ja1JTe2NOm_T1xSm1iOkfIl06AtR_qQ1yYqyF8zDcXw,630
+names_matcher-2.0.1.dist-info/LICENSE,sha256=TMoWkMMrEHvLNV1yvP0lAmisdJhEsskiSByX5StiIxM,11342
+names_matcher-2.0.1.dist-info/METADATA,sha256=RB01NlAUmb6jXrpJHQIWnDlIz3N8C1043JboATjI0k4,2790
+names_matcher-2.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+names_matcher-2.0.1.dist-info/top_level.txt,sha256=w9aH5TJEmkrNYJtQIW1AF187VOZ1Sg1iVOw3tfk_M6s,14
+names_matcher-2.0.1.dist-info/RECORD,,
