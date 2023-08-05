@@ -1,0 +1,10 @@
+rpcudp/__init__.py,sha256=tQ3Buig5KnMkv6sHB5vxE0w1NzfKZ-TQt-gsx3lHprc,22
+rpcudp/exceptions.py,sha256=1QkPdAM1ptsGNqQyCXRoxuSLHeBPw--ebm75uAZhWXM,98
+rpcudp/protocol.py,sha256=jhdT4NTRlUV2wC9K1pD7r27DS7Q5gezoBEPujO9p-Fo,5128
+rpcudp/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rpcudp/tests/test_linting.py,sha256=amZVqgqrapuM-387ueXJtbEQ5qFmzwCXl9DHuT4XSeA,683
+rpcudp-4.0.2.dist-info/LICENSE,sha256=6Ul0vBG5fWEThiPqVQA-v9oxSQYul-YtLqv9_IZO-Ug,1056
+rpcudp-4.0.2.dist-info/METADATA,sha256=WjEsxyBj_-Zh4Z3lxrpwh5Z4cugopYSploaXr8P52ZA,4273
+rpcudp-4.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+rpcudp-4.0.2.dist-info/top_level.txt,sha256=Idltdlq9WZlrUNEqsNHgJEukz3AjdPj0HuCixmrsI0I,7
+rpcudp-4.0.2.dist-info/RECORD,,
