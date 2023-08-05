@@ -1,0 +1,38 @@
+# The Underscore Class
+
+Now with even more ridiculousness!
+
+## Example
+
+```python
+from underscoreclass import _
+
+class o(_):
+    pass
+
+# Note: No comment required to validly use this emoji!
+(_^o^_)
+```
+
+## Documentation
+
+### `_Metaclass` (`_`'s Metaclass)
+
+#### `__add__`, `__sub__`, `__mul__`, `__div__`, etc.
+Returns `self`.
+
+### `_` (The Underscore Class)
+
+#### `__add__`, `__sub__`, `__mul__`, `__div__`, etc.
+Returns `self`.
+
+## FAQ
+
+### Q: Which operators does it support?
+A: All of them, including bitwise operators, `__getitem__`, and comparison operators!
+
+### Q: What's the point?
+A: Does everything need a point?
+
+### Q: This is the greatest thing I've ever seen!!! How do I support your coding?
+A: Subscribe to [My Patreon](https://www.patreon.com/sethpeace)!
