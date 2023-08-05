@@ -1,0 +1,4 @@
+PyCryptodome>=3.9.8
+boto3>=1.14.0
+docker>=4.2.0
+python-dotenv>=0.13.0
