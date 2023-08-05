@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: async8ball
+Version: 2.0
+Summary: Asynchronous 8ball response generator.
+Home-page: https://github.com/Cryptex-github/async8ball
+Author: cryptex
+License: Apache-2.0
+Description: # async_8ball
+        Asynchronous 8ball response generator.
+        Example:
+        ```py
+        import async_8ball
+        async def your_function():
+         response = await async_8ball.response()
+        ```
+        Deco Example:
+        ```py
+        from async8ball.decorators import ball_decorator
+        @ball_decorator
+        def my_function(**kwargs):
+          return kwargs['response']
+        ```
+        Discord.py command implement:
+        ```py
+        from async8ball.decorators import ball_decorator
+        @ball_decorator
+        def my_func(question, **kwargs):
+          return kwargs['response']
+        @bot.command()
+        async def my_command(ctx, *, question:str):
+          await ctx.send(ball8(question))
+        ```
+        or
+        ```py
+        import async8ball
+        @bot.command(self, ctx, *, question:str):
+         await ctx.send(await async8ball.response(question))
+         ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
