@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+pose_annotator/__init__.py
+pose_annotator/__main__.py
+pose_annotator/utils.py
+pose_annotator.egg-info/PKG-INFO
+pose_annotator.egg-info/SOURCES.txt
+pose_annotator.egg-info/dependency_links.txt
+pose_annotator.egg-info/entry_points.txt
+pose_annotator.egg-info/requires.txt
+pose_annotator.egg-info/top_level.txt
+pose_annotator/gui/__init__.py
+pose_annotator/gui/custom_widgets.py
+pose_annotator/gui/default_config.yaml
+pose_annotator/gui/main.py
+pose_annotator/gui/mainwindow.py

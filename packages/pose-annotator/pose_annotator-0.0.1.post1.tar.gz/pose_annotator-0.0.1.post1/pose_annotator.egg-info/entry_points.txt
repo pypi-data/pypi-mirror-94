@@ -1,0 +1,3 @@
+[console_scripts]
+pose_annotator = pose_annotator.gui.main:run
+
