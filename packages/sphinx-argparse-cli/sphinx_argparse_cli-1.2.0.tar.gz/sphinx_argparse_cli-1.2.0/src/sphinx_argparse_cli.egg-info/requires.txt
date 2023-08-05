@@ -1,0 +1,6 @@
+docutils-stubs>=0.0.21
+sphinx>=3
+
+[test]
+pytest>=4
+pytest-cov>=2.7
