@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pi-gan-pytorch
+Version: 0.0.7
+Summary: π-GAN - Pytorch
+Home-page: https://github.com/lucidrains/pi-gan-pytorch
+Author: Phil Wang
+Author-email: lucidrains@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: artificial intelligence,generative adversarial network
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
