@@ -1,0 +1,13 @@
+cloudmesh_abstract-4.3.5-py3.9-nspkg.pth,sha256=K4lDZyHlKS0TcVsgEjQjgNPYnsZp6PXCSyRIy68BhkI,554
+cloudmesh/abstract/ComputeNodeABC.py,sha256=1VkeTjCyoVgLxpYslRUx8NmtzHJU_dRjhqXHLrPW1hA,8801
+cloudmesh/abstract/ProcessManagerABC.py,sha256=Z89jyX-G23RtK2DsPe9K4iTQ9WQIxOC-nqkv4TKLmVU,481
+cloudmesh/abstract/State.py,sha256=RIZjx9gFEBPb3fDUV5RtREaui2-tbIoJZDTGp83-_Ss,352
+cloudmesh/abstract/StorageABC.py,sha256=fX_8we65FdaVgU_Kj9eMl8SVAO2hyVi3_eR5SmjarwI,3487
+cloudmesh/abstract/__init__.py,sha256=NYrliYxjsS6KdKfQAwEvUhfqJXk87BHG-YA6Q3DTUIY,22
+cloudmesh/abstract/__version__.py,sha256=Ij1SRdG63bTBBMs8-kM-hK3n8vwAiKABVwzwBF8roYQ,18
+cloudmesh_abstract-4.3.5.dist-info/LICENSE,sha256=w7U4P4ljhJjniTEMxSyhAcEbWHDk2Ng1FqsOG6aEgs0,769
+cloudmesh_abstract-4.3.5.dist-info/METADATA,sha256=bLQPglmCr5WScl3kwSuTQyH_yjOeR_x_u84iLvlFhEI,2684
+cloudmesh_abstract-4.3.5.dist-info/WHEEL,sha256=oh0NKYrTcu1i1-wgrI1cnhkjYIi8WJ-8qd9Jrr5_y4E,110
+cloudmesh_abstract-4.3.5.dist-info/namespace_packages.txt,sha256=aTw_KEhKv-8X8yWzikhSTeYlXkcauZxg_98rOi1SJHg,10
+cloudmesh_abstract-4.3.5.dist-info/top_level.txt,sha256=aTw_KEhKv-8X8yWzikhSTeYlXkcauZxg_98rOi1SJHg,10
+cloudmesh_abstract-4.3.5.dist-info/RECORD,,
