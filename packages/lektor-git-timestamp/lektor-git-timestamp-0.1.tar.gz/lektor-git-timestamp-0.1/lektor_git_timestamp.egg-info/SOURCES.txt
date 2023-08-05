@@ -1,0 +1,23 @@
+.gitignore
+CHANGES.md
+LICENSE
+MANIFEST.in
+README.md
+lektor_git_timestamp.py
+pyproject.toml
+setup.cfg
+setup.py
+tox.ini
+.github/workflows/tests.yml
+lektor_git_timestamp.egg-info/PKG-INFO
+lektor_git_timestamp.egg-info/SOURCES.txt
+lektor_git_timestamp.egg-info/dependency_links.txt
+lektor_git_timestamp.egg-info/entry_points.txt
+lektor_git_timestamp.egg-info/requires.txt
+lektor_git_timestamp.egg-info/top_level.txt
+tests/conftest.py
+tests/test_functional.py
+tests/test_plugin.py
+tests/test-site/Test Site.lektorproject
+tests/test-site/content/contents.lr
+tests/test-site/models/page.ini
