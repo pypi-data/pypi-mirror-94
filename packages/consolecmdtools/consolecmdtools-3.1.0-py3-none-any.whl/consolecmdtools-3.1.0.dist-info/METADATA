@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: consolecmdtools
+Version: 3.1.0
+Summary: Some console tools for console command uses
+Home-page: https://github.com/kyan001/PyConsoleCMDTools
+Author: Kai Yan
+Author-email: kai@kyan001.com
+License: MIT
+Keywords: console output toolkit
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: consoleiotools
+Requires-Dist: pillow
+
+Some console tools for console command uses
+
+
