@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: iotprovision
+Version: 2.1.2.131
+Summary: Collection of tools for cloud provisioning of Microchip IOT kits
+Home-page: http://www.microchip.com
+Author: Microchip Technology
+Author-email: support@microchip.com
+License: Microchip Technology Inc. Proprietary License
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Description-Content-Type: text/markdown
+Requires-Dist: pytz
+Requires-Dist: boto3 (>=1.15.2)
+Requires-Dist: cryptography
+Requires-Dist: pyOpenSSL
+Requires-Dist: packaging (>=20.0)
+Requires-Dist: pyyaml
+Requires-Dist: appdirs
+Requires-Dist: pyedbglib (>=2.17)
+Requires-Dist: pymcuprog (>=3.7.*)
+Requires-Dist: pydebuggerupgrade (>=3.4)
+Requires-Dist: pydebuggerconfig (>=3.5)
+Requires-Dist: pykitcommander (>=1.0.5*)
+Requires-Dist: pytrustplatform (>=0.12.*)
+Requires-Dist: pyawsutils (>=0.10.*)
+Requires-Dist: pyazureutils (>=0.5.*)
+Provides-Extra: dev
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: mock ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+# iotprovision
+iotprovision is a command-line utility for provisioning Microchip AVR-IoT and PIC-IoT kits for use with various cloud providers.
+
+## Command-line interface
+Getting help:
+```
+iotprovision --help
+```
+The amount of logging is controlled by the -v/--verbose option:
+```
+iotprovision -v debug
+```
+Possible log levels are `debug`, `info`, `warning`, `error`, `critical`.  Default is `info`.
+
+Print version info and exit:
+```
+iotprovision -V
+```
+Print release info and exit:
+```
+iotprovision -R
+```
+Provision for Amazon Web Services, using sandbox account:
+```
+iotprovision -c aws
+```
+Provision for Amazon Web Services, using MAR and custom account:
+```
+iotprovision -c aws -m mar
+```
+Provision for Amazon Web Services, using JITR and custom account:
+```
+iotprovision -c aws -m jitr
+```
+Provision for Google Cloud Platform:
+```
+iotprovision -c google
+```
+Provision for Azure:
+```
+iotprovision -c azure
+```
+## Linux systems
+This package uses pyedbglib and other libraries for USB transport and some udev rules are required.  For details see the pyedbglib package: https://pypi.org/project/pyedbglib
+
+
