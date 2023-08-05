@@ -1,0 +1,5 @@
+numpy
+requests
+s3fs
+pyproj
+netCDF4
