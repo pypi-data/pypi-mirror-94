@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+mp4analyser/mp4analyser/__init__.py
+mp4analyser/mp4analyser/core.py
+mp4analyser/mp4analyser/iso.py
+mp4analyser/mp4analyser/non_iso.py
+mp4analyser/mp4analyser/summary.py
+mp4analyser/mp4analyser/util.py
+mp4analyser/mp4analyser.egg-info/PKG-INFO
+mp4analyser/mp4analyser.egg-info/SOURCES.txt
+mp4analyser/mp4analyser.egg-info/dependency_links.txt
+mp4analyser/mp4analyser.egg-info/top_level.txt
