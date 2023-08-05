@@ -1,0 +1,15 @@
+README.md
+setup.py
+CMText/Channels.py
+CMText/Gateways.py
+CMText/Message.py
+CMText/MessageBodyTypes.py
+CMText/TextClient.py
+CMText/TextClientStatusCodes.py
+CMText/WhatsappTemplate.py
+CMText/__init__.py
+CMText/version.py
+CM_text_sdk_python.egg-info/PKG-INFO
+CM_text_sdk_python.egg-info/SOURCES.txt
+CM_text_sdk_python.egg-info/dependency_links.txt
+CM_text_sdk_python.egg-info/top_level.txt
