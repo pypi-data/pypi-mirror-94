@@ -1,0 +1,3 @@
+[console_scripts]
+rata = rata.__main__:main
+
