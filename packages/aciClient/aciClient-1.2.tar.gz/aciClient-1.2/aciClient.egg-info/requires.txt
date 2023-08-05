@@ -1,0 +1,2 @@
+requests<3,>=2.25.0
+pyOpenSSL<20,>=19.1.0
