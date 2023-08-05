@@ -1,0 +1,15 @@
+tgraphics/__init__.py,sha256=0sm-hvHrnuyTVBWNBx1fDSfFx8D_FNqjy8Csq5Tob88,115
+tgraphics/chars.py,sha256=PUwkL50n8k7IASAeuH6jHIlh_5oiqnmM7XaKKmciSWU,184
+tgraphics/errors.py,sha256=TRLFeXu2tU7syGe-mLT2KwAmMg7q6DET2clZ2ZPbwys,140
+tgraphics/screen.py,sha256=tQMnzP-JKAjAnvjQauhiyDpyl3aZQmd9QCWzk1SECVU,2756
+tgraphics/sprite.py,sha256=5iAF9CDdRzUBArxS72TeRhLEaiE4LrQV9_L3YgrGSdc,2843
+tgraphics/std.py,sha256=m39MdQIGCxSfZJOjyABlXGfHxaLPOuXHwS2PMftFDE4,413
+tgraphics/readchar/__init__.py,sha256=TEyORUQAWZ4yYtBAggzwuIR00rDwjvIKCJv-1Gw8csg,295
+tgraphics/readchar/key.py,sha256=2N0MF8BEKX1tVxJrqy-cc1rpE6N37s78HydWBat6yGQ,1680
+tgraphics/readchar/readchar.py,sha256=Ix3-lkOfxMr5Ptz0-3HtN8qEGUXJzh9EmTTkbe_UZLU,2888
+tgraphics/readchar/readchar_linux.py,sha256=-hkc2gBMdDuH2Pl3LBg3VqC0tWMdoTjKg9FWAyOioGk,412
+tgraphics/readchar/readchar_windows.py,sha256=rmXZuXJn04sM7gwv8hYfBhcrBp6dDXviykmZNpMfClI,758
+tgraphics-0.0.1.dist-info/METADATA,sha256=qiyva-xZwoP6oNwrLUtYTBq2aB9TL78HinKwb5TrJMg,305
+tgraphics-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tgraphics-0.0.1.dist-info/top_level.txt,sha256=6wo0DYM7byBBoPqEHaNVyjyrmPqeiq7KdoHKNF4TuOk,10
+tgraphics-0.0.1.dist-info/RECORD,,
