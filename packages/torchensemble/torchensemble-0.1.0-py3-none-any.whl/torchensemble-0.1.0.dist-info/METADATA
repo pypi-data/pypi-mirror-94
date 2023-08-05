@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: torchensemble
+Version: 0.1.0
+Summary: Implementations of scikit-learn like ensemble methods in Pytorch
+Home-page: https://github.com/xuyxu/Ensemble-Pytorch
+Maintainer: Yi-Xuan Xu
+Maintainer-email: xuyx@lamda.nju.edu.cn
+License: BSD 3-Clause
+Project-URL: Bug Tracker, https://github.com/xuyxu/Ensemble-Pytorch/issues
+Project-URL: Documentation, https://ensemble-pytorch.readthedocs.io
+Project-URL: Source Code, https://github.com/xuyxu/Ensemble-Pytorch
+Requires-Dist: torch (>=0.4.1)
+Requires-Dist: torchvision (>=0.2.2)
+Requires-Dist: scikit-learn (>=0.23.0)
+
+.. image:: ./docs/_images/badge_small.png
+
+
