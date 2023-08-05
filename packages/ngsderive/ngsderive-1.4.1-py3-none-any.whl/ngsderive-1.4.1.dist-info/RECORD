@@ -1,0 +1,16 @@
+ngsderive/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ngsderive/__main__.py,sha256=2JUySmCmoqRtz6NFHqEWnbrGEw5AE42PYcpic8C_bbs,9402
+ngsderive/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ngsderive/commands/encoding.py,sha256=wFbMH6-3LFmsFbfrx7sBhhNtsxju2NYNkPaCIpGOkhw,2642
+ngsderive/commands/instrument.py,sha256=KbNfWh_XuvCSehHvRoAn3QJkc5IBBpoY80p3sZWCQlI,8318
+ngsderive/commands/junction_annotation.py,sha256=MqOgI6jz4uywOLnl2S-p0h7JAMFZnSkD38giRTIz92w,10160
+ngsderive/commands/readlen.py,sha256=-oxsIwwa2rRspVLL0MOeFaKGbr9BqGYsnl5oEDJJV9g,2285
+ngsderive/commands/strandedness.py,sha256=J1PyR18yL43cHOzjsL9aXF7RWIx8vEz03EWACC5QguQ,11321
+ngsderive/readers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ngsderive/readers/bam.py,sha256=HlhO_0d_L5QfjFSsU7re_PxvH09LZszlMrHI2iOg894,13
+ngsderive/utils.py,sha256=-oIFBjSny0tL8sdV0urUEA1hUqwp8xCCL4b1PIIqjmw,14176
+ngsderive-1.4.1.dist-info/entry_points.txt,sha256=iNgbaIQbdzcqcOOGSm7Xu1TJ3b8t8j7I925A0xJWd_A,52
+ngsderive-1.4.1.dist-info/LICENSE.md,sha256=LHycDDRdAwuW2rk_xjJZVkP8fWJYxKZt76YvJmSEN8Q,1077
+ngsderive-1.4.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+ngsderive-1.4.1.dist-info/METADATA,sha256=13au8mDOtPaSczs1Op9XiqVFxorgpjiLzE7lHi_IciI,5466
+ngsderive-1.4.1.dist-info/RECORD,,
