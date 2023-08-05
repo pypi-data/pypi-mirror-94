@@ -1,0 +1,3 @@
+[console_scripts]
+uddup = uddup.main:interactive
+
