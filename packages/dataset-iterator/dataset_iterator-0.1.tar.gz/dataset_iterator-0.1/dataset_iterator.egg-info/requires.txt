@@ -1,0 +1,5 @@
+h5py>=2.9
+numpy
+scikit-learn
+scipy
+tensorflow
