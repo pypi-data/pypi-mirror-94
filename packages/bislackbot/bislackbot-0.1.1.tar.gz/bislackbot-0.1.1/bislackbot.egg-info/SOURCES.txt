@@ -1,0 +1,9 @@
+README.md
+setup.py
+bislackbot/__init__.py
+bislackbot/package.py
+bislackbot.egg-info/PKG-INFO
+bislackbot.egg-info/SOURCES.txt
+bislackbot.egg-info/dependency_links.txt
+bislackbot.egg-info/requires.txt
+bislackbot.egg-info/top_level.txt
