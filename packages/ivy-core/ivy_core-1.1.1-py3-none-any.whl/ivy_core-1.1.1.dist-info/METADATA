@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ivy-core
+Version: 1.1.1
+Summary: The templated deep learning framework, enabling framework-agnostic functions, layers and libraries.
+Home-page: UNKNOWN
+Author: Ivy Team
+Author-email: ivydl.team@gmail.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: h5py
+Requires-Dist: numpy
+Requires-Dist: termcolor
+
+UNKNOWN
+
+
