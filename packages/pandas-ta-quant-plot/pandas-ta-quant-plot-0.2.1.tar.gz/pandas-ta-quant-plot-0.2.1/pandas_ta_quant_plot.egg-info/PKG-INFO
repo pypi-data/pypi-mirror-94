@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pandas-ta-quant-plot
+Version: 0.2.1
+Summary: Augment pandas DataFrame with methods to fetch time series data for quant finance
+Home-page: https://github.com/KIC/pandas-ml-quant/pandas-ta-quant-plot
+Author: KIC
+Author-email: 
+License: MIT
+Description: # Pandas ML Quant Plot
+        
+        An independent module used to plot time series data for quant finance studies. 
+         
+        ![showcase][ghi1]
+         
+        ## Installation
+        Follow the instructions on [https://github.com/KIC/pandas-ml-quant](https://github.com/KIC/pandas-ml-quant)
+        
+        ## Documentation
+        Check out the [notebooks][ghl1]
+        
+        [ghl1]: ./examples
+        [ghi1]: ../.readme/videos/ta_plot.gif
+        
+Keywords: pandas,ml,util,quant
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
