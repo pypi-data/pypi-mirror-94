@@ -1,0 +1,9 @@
+*~
+*.pyc
+*.pyo
+/dist/
+/build/
+lektor_limit_dependencies.egg-info
+/.tox/
+/htmlcov/
+
