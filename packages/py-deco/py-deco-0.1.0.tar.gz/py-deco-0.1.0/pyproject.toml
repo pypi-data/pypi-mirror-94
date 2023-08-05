@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "py-deco"
+version = "0.1.0"
+description = "Python decorators"
+authors = ["ugo-quelhas <ugo.quelhas@edu.devinci.fr>"]
+readme = 'README.md'
+repository = "https:///github.com/quelhasu/pydeco"
+homepage = "https://github.com/quelhasu/pydeco"
+packages = [
+    { include = "pydeco.py" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+forbiddenfruit = "^0.1.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+build = "^0.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
