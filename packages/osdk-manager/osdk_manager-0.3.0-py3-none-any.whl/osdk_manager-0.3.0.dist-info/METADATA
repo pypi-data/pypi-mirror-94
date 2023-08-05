@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: osdk-manager
+Version: 0.3.0
+Summary: A script for managing Operator SDK-based operators.
+Home-page: https://git.jharmison.com/jharmison/osdk-manager
+Author: James Harmison
+Author-email: jharmison@gmail.com
+License: BSD-2-Clause
+Keywords: kubernetes operator operator-sdk
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: click
+Requires-Dist: lastversion
+Requires-Dist: python-gnupg
+Requires-Dist: PyYAML
+
+# Operator SDK Manager
+
+![coverage](https://img.shields.io/codecov/c/gh/jharmison-redhat/osdk-manager) ![build](https://img.shields.io/travis/com/jharmison-redhat/osdk-manager) ![downloads](https://img.shields.io/pypi/dm/osdk-manager)
+
+A python wrapper around the [Operator SDK](https://github.com/operator-framework/operator-sdk) and [Operator Package Manager](https://github.com/operator-framework/operator-registry) to make it easier to build CI workflows around release and versioning of an operator, operator bundle, and operator registry.
+
+## Download
+
+This package is published on PyPi as [osdk-manager](https://pypi.org/project/osdk-manager/). You can install it with `pip install osdk-manager`.
+
+## Use
+
+For detailed instructions on use, please refer to the embedded documentation in the CLI. Once installed, you can run `osdk-manager --help` to see a list of commands.
+
+

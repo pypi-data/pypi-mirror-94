@@ -1,0 +1,4 @@
+[console_scripts]
+operator-sdk-manager = osdk_manager.cli:cli
+osdk-manager = osdk_manager.cli:cli
+
