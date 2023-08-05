@@ -1,0 +1,13 @@
+ansible
+setuptools
+
+[dev]
+pytest
+
+[dev:python_version>="3.6"]
+black
+flake8
+isort[pyproject]
+
+[release]
+twine
