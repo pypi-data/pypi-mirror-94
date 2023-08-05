@@ -1,0 +1,6 @@
+coverage>=3.6
+fixtures>=0.3.12
+mock>=2.0  # BSD
+python-subunit
+testrepository>=0.0.13
+testtools>=0.9.27

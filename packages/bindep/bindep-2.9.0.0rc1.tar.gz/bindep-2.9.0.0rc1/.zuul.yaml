@@ -1,0 +1,90 @@
+- job:
+    name: bindep-base
+    description: |
+      Check that bindep itself can install packages on various platforms.
+    abstract: true
+    roles:
+      - zuul: zuul/zuul-jobs
+    run: playbooks/bindep/run.yaml
+    vars:
+      zuul_work_dir: '{{ zuul.project.src_dir }}'
+      zuul_work_virtualenv: '{{ ansible_user_dir }}/.venv'
+
+- job:
+    name: bindep-centos-7
+    parent: bindep-base
+    nodeset: centos-7
+
+- job:
+    name: bindep-centos-8
+    parent: bindep-base
+    nodeset: centos-8
+
+- job:
+    name: bindep-fedora-latest
+    parent: bindep-base
+    nodeset: fedora-latest
+
+- job:
+    name: bindep-opensuse-15
+    parent: bindep-base
+    nodeset: opensuse-15
+
+- job:
+    name: bindep-ubuntu-xenial
+    parent: bindep-base
+    nodeset: ubuntu-xenial
+
+- job:
+    name: bindep-ubuntu-bionic
+    parent: bindep-base
+    nodeset: ubuntu-bionic
+
+- job:
+    name: bindep-ubuntu-focal
+    parent: bindep-base
+    nodeset: ubuntu-focal
+
+- project:
+    vars:
+      release_python: python3
+    templates:
+      - publish-opendev-tox-docs
+    check:
+      jobs:
+        - bindep-centos-7
+        - bindep-centos-8
+        - bindep-fedora-latest
+        - bindep-opensuse-15
+        - bindep-ubuntu-xenial
+        - bindep-ubuntu-bionic
+        - bindep-ubuntu-focal
+        - build-python-release
+        - tox-pep8
+        - tox-py27
+        - tox-py35:
+            nodeset: ubuntu-xenial
+        - tox-py39:
+            nodeset: ubuntu-focal
+    gate:
+      jobs:
+        - bindep-centos-7
+        - bindep-centos-8
+        - bindep-fedora-latest
+        - bindep-opensuse-15
+        - bindep-ubuntu-xenial
+        - bindep-ubuntu-bionic
+        - bindep-ubuntu-focal
+        - build-python-release
+        - tox-pep8
+        - tox-py27
+        - tox-py35:
+            nodeset: ubuntu-xenial
+        - tox-py39:
+            nodeset: ubuntu-focal
+    promote:
+      jobs:
+        - opendev-promote-python
+    release:
+      jobs:
+        - opendev-release-python
