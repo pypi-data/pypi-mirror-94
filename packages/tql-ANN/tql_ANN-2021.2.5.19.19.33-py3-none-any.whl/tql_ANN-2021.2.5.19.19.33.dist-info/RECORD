@@ -1,0 +1,10 @@
+annzoo/__init__.py,sha256=vsILEJUExLyq1mmyub092NOnZHaZtWypGRRjXfJnzIc,247
+annzoo/ann.py,sha256=7Do-e7PBWsqceiCc0WG6tA_baMPjz0VPM-YSSpUpjpw,8226
+annzoo/ann_service.py,sha256=TvUtAsrJXXlZV4Vkb8bmFXWXPxTUdF_kTw3z5kv50xs,1176
+annzoo/faiss.py,sha256=Mk-khB-cnOsAxugu4GRDuAGcuoDPry6vL6cCRqYGJ9E,4476
+tql_ANN-2021.2.5.19.19.33.dist-info/LICENSE,sha256=VtJYCGRF2morg4JW3VfWWNdrpP6GIs6gbB3ppVdORoA,1061
+tql_ANN-2021.2.5.19.19.33.dist-info/METADATA,sha256=c56i5aV7o_S7IPanc5V8ohLLtVxtaF6SrFNVPMmpjkM,1502
+tql_ANN-2021.2.5.19.19.33.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tql_ANN-2021.2.5.19.19.33.dist-info/entry_points.txt,sha256=JVAIbY3WOTGyE6b-ICwbWxF4PUPvCgb4DwNHdg_kVa0,175
+tql_ANN-2021.2.5.19.19.33.dist-info/top_level.txt,sha256=1zCYIz__uHbQ9ukJs9_2CtOqaQyPTvM1mJYijbboJEs,7
+tql_ANN-2021.2.5.19.19.33.dist-info/RECORD,,
