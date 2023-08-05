@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: MimePost
+Version: 1.0.0
+Summary: MimePost API Reference (Beta)
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: support@mimepost.com
+License: UNKNOWN
+Description:     MimePost API for sending email.  You can find out more about MimePost at [https://mimepost.com](http://mimepost.com). For this sample, you can use the api key &#x60;special-key&#x60; to test the authorization     filters.  # noqa: E501
+            
+Keywords: Swagger,MimePost API Reference (Beta)
+Platform: UNKNOWN
