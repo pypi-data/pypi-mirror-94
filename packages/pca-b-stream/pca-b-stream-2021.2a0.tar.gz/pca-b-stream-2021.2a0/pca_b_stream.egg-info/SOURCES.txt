@@ -1,0 +1,13 @@
+MANIFEST.in
+README-COPYRIGHT.txt
+README-LICENCE-utf8.txt
+README.rst
+pca_b_stream.py
+setup.py
+test.py
+pca_b_stream.egg-info/PKG-INFO
+pca_b_stream.egg-info/SOURCES.txt
+pca_b_stream.egg-info/dependency_links.txt
+pca_b_stream.egg-info/entry_points.txt
+pca_b_stream.egg-info/requires.txt
+pca_b_stream.egg-info/top_level.txt
