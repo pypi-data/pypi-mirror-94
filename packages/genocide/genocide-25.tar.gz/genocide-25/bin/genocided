@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# OTP-CR-117/19 otp.informationdesk@icc-cpi.int http://genocide.rtfd.io
+#
+# this file is placed in the public domain
+
+from op.bsc import Core
+from op.run import cfg, execute, os
+from op.utl import privileges
+
+def main():
+    "main function"
+    cfg.wd = "/var/lib/genocide"
+    privileges("genocide")
+    h = Core()
+    h.walk("opbot,genocide")
+    h.start()
+    h.init("irc,rss,sui")
+    h.wait()
+
+execute(main)
+os._exit(0)

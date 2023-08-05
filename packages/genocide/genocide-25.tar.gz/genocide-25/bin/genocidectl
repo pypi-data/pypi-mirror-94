@@ -1,0 +1,5 @@
+# OTP-CR-117/19 otp.informationdesk@icc-cpi.int http://genocide.rtfd.io
+#
+# this file is placed in the public domain
+
+systemd-run -q -t --property=DynamicUser=yes --property=StateDirectory=genocide genocidecmd  $*
