@@ -1,0 +1,14 @@
+cbm_files/__init__.py,sha256=gkPy3KBi-cubCyWiUjhAq5T-eYuNbxpjvugtgIV8SAw,150
+cbm_files/basic_file.py,sha256=JHn0LcLgMf2fe3IDQ5l_dPKpXEFf2nYBwvT7d1LWvbQ,5344
+cbm_files/binary_file.py,sha256=LXcO6NRBAyfICb_Tlk6Q6hFJ8qgc-2Kp0b2hdlwunJI,775
+cbm_files/data_file.py,sha256=SXlYd4aVXU8Uj9XMuezhzSja2eINCj5fGDuBrkw91F4,933
+cbm_files/program_file.py,sha256=cKqEbq1h1WtZ23n2RIacGaK4mBM6GNcivyrdlD7hFuE,441
+cbm_files/tokenset_basic_v2.py,sha256=Ml_MSAsV9eLBYgImC-0Q0W0bwGRgAGw187GDRr8Tdtk,1772
+cbm_files/tokenset_escape_c64.py,sha256=S9YKngzHMBEeB_wnsztrywDrmyr3gKsz9H4xjmUVcN4,508
+cbm_files/tokenset_escape_pet.py,sha256=xND9ef9nS6zkIxMhNAvw0iD6WSRCD7KcWpOiC7jrjp0,479
+cbm_files/tokenset_escape_vic20.py,sha256=jBaTrDsd6DvTjf7OIqkheogV0c2BJ3r0DGkpimWugAY,753
+cbm_files/tokensets.py,sha256=dg16KMLd477IFddo2blqpZ_aDHquAnI9Q8Y7vTEWNtc,2478
+cbmfiles-0.1.dist-info/METADATA,sha256=LfKDDWWxke7wade4chKchXqkOoj7hLn2niFJ9voxh_g,1279
+cbmfiles-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cbmfiles-0.1.dist-info/top_level.txt,sha256=Z9kRA4eWbSMrgFzN_eDV2iLijfuHA4nXtdjaWbfJS0g,10
+cbmfiles-0.1.dist-info/RECORD,,
