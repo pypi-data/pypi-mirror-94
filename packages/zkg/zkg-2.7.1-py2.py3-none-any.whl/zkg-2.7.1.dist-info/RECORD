@@ -1,0 +1,11 @@
+zeekpkg/__init__.py,sha256=w5_axk4xbpBVC3EucU3vwwI9kRnRrzBtH3I_KMpq4CE,587
+zeekpkg/_util.py,sha256=gSKiKtEwhYswTCkDT6f-BQVoqPuL2_CC4qWIgeMN8uk,6237
+zeekpkg/manager.py,sha256=aW_DyJgheNYqUKloVtYNDSlAn0Kot8OmdxKFH0X_ZUk,109199
+zeekpkg/package.py,sha256=9HZmsaBpFP0iIkcbqbB1sy9unA1cramENLFUUSPWYUE,15290
+zeekpkg/source.py,sha256=AqVm6DTctcIdn09Rz75fzqG9XV5HELKxF_Url3ZTba0,5039
+zkg-2.7.1.data/scripts/zkg,sha256=VXdFdRzzyNJNWftjAxHmw3AvrI_vxB_4Rx4yUyx_XeA,90332
+zkg-2.7.1.dist-info/COPYING,sha256=6AkeuQf5WuCxc4DS45xn-a4Zk0GAgezUmfi3m5YoVnY,1870
+zkg-2.7.1.dist-info/METADATA,sha256=JUjuok7k_s_QmfjnjQJpavSXlTcQv3a-veXhaKBqZso,1973
+zkg-2.7.1.dist-info/WHEEL,sha256=ADKeyaGyKF5DwBNE0sRE5pvW-bSkFMJfBuhzZ3rceP4,110
+zkg-2.7.1.dist-info/top_level.txt,sha256=SJ5x_OAz0gvfaw4uDkgKtBgQC8u5MBlmD2P0cC0meac,8
+zkg-2.7.1.dist-info/RECORD,,
