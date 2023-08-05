@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+akita_django/__init__.py
+akita_django/har.py
+akita_django/test.py
+akita_django.egg-info/PKG-INFO
+akita_django.egg-info/SOURCES.txt
+akita_django.egg-info/dependency_links.txt
+akita_django.egg-info/requires.txt
+akita_django.egg-info/top_level.txt
