@@ -1,0 +1,24 @@
+{% extends 'forms/transaction_form.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block extrahead %}
+<script type="text/javascript" src="{% static '/admin/js/vendor/jquery/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static '/admin/js/jquery.init.js' %}"></script>
+{% endblock %}
+
+{% block payment_processor %}
+{% endblock %}
+
+{% block form %}
+    {% if not form.errors %}
+        {% include 'payu/payu_lu_form.html' %}
+    {% else %}
+        {% include 'payu/get_billing_details_form.html' %}
+    {% endif %}
+{% endblock %}
+
+{% block transaction %}
+    {{ block.super }}
+    {{ payment_method.data.details }}
+{% endblock %}
