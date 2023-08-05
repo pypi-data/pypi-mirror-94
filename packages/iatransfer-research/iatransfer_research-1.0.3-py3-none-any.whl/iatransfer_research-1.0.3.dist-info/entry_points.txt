@@ -1,0 +1,3 @@
+[console_scripts]
+iatransfer_pretrain = iatransfer.research.train.pretrain_models:main
+
