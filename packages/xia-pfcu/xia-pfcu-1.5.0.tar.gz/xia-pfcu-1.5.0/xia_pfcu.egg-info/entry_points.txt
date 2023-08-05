@@ -1,0 +1,3 @@
+[console_scripts]
+PFCU = xia_pfcu.tango.server:main [tango]
+
