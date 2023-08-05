@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop-application">
+  <id>org.kde.mygnuhealth</id>
+  <name>MyGNUHealth</name>
+  <name xml:lang="ca">MyGNUHealth</name>
+  <name xml:lang="ca-valencia">MyGNUHealth</name>
+  <name xml:lang="en-GB">MyGNUHealth</name>
+  <name xml:lang="es">MyGNUHealth</name>
+  <name xml:lang="fi">MyGNUHealth</name>
+  <name xml:lang="fr">MyGNUHealth</name>
+  <name xml:lang="it">MyGNUHealth</name>
+  <name xml:lang="nl">MyGNUHealth</name>
+  <name xml:lang="nn">MyGNUHealth</name>
+  <name xml:lang="pt">MyGNUHealth</name>
+  <name xml:lang="pt-BR">MyGNUHealth</name>
+  <name xml:lang="sk">MyGNUHealth</name>
+  <name xml:lang="sl">MyGNUHealth</name>
+  <name xml:lang="sv">Min GNU hälsa</name>
+  <name xml:lang="uk">MyGNUHealth</name>
+  <name xml:lang="x-test">xxMyGNUHealthxx</name>
+  <summary>GNU Health Personal Health Record</summary>
+  <summary xml:lang="ca">Registre personal de salut GNU Health</summary>
+  <summary xml:lang="ca-valencia">Registre personal de salut GNU Health</summary>
+  <summary xml:lang="en-GB">GNU Health Personal Health Record</summary>
+  <summary xml:lang="es">Registro de salud personal de GNU</summary>
+  <summary xml:lang="fi">GNUn oman terveydentilan tarkkailu</summary>
+  <summary xml:lang="fr">Enregistrement de santé personnelle « GNU »</summary>
+  <summary xml:lang="it">Cartella clinica personale di GNU Health</summary>
+  <summary xml:lang="nl">GNU Health persoonlijk medisch document</summary>
+  <summary xml:lang="nn">GNU Health personleg helsejournal</summary>
+  <summary xml:lang="pt">Registo Médico Pessoal do GNU Health</summary>
+  <summary xml:lang="pt-BR">Registro pessoal de saúde do GNU Health</summary>
+  <summary xml:lang="sk">GNU záznam osobného zdravia</summary>
+  <summary xml:lang="sl">GNU Health Personal Health Record</summary>
+  <summary xml:lang="sv">GNU hälsa personlig hälsojournal</summary>
+  <summary xml:lang="uk">Особистий запис стану здоров'я GNU Health</summary>
+  <summary xml:lang="x-test">xxGNU Health Personal Health Recordxx</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </recommends>
+  <description>
+    <p>
+      Tracking personal health records.
+    </p>
+    <p xml:lang="ca">Seguiment dels registres personals de salut.</p>
+    <p xml:lang="ca-valencia">Seguiment dels registres personals de salut.</p>
+    <p xml:lang="en-GB">Tracking personal health records.</p>
+    <p xml:lang="es">Seguimiento de registros de salud personal.</p>
+    <p xml:lang="fi">Oman terveydentilan tarkkailu.</p>
+    <p xml:lang="fr">Suivi des enregistrements de santé personnelle.</p>
+    <p xml:lang="it">Monitoraggio delle cartelle cliniche personali.</p>
+    <p xml:lang="nl">Persoonlijke medische documenten volgen.</p>
+    <p xml:lang="nn">Registrering av personlege helseopplysningar.</p>
+    <p xml:lang="pt">Acompanhamento dos registos médicos pessoais.</p>
+    <p xml:lang="pt-BR">Rastreamento de registros pessoais de saúde.</p>
+    <p xml:lang="sk">Záznam osobných zdravotným záznamov.</p>
+    <p xml:lang="sl">Beleženje izvidov osebnega zdravja.</p>
+    <p xml:lang="sv">Följer personliga journalanteckningar.</p>
+    <p xml:lang="uk">Стеження за записами особистого стану здоров'я.</p>
+    <p xml:lang="x-test">xxTracking personal health records.xx</p>
+  </description>
+  <launchable type="desktop-id">org.kde.mygnuhealth.desktop</launchable>
+</component>
