@@ -1,0 +1,6 @@
+[console_scripts]
+exhibiter-cli = exhibiter.cli:cli
+
+[gui_scripts]
+exhibiter = exhibiter.gui:gui
+

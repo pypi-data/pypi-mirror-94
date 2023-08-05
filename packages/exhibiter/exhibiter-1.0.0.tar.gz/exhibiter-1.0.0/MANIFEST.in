@@ -1,0 +1,4 @@
+include exhibiter/template.docx
+include graphics/icon.ico
+include LICENSE.md
+include README.md
