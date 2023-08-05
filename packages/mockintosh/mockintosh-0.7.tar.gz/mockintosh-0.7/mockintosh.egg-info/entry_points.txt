@@ -1,0 +1,3 @@
+[console_scripts]
+mockintosh = mockintosh:initiate
+
