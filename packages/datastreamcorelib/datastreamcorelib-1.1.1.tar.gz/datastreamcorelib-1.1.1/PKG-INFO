@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: datastreamcorelib
+Version: 1.1.1
+Summary: Helpers and utilities for https://gitlab.com/advian-oss/python-datastreamservicelib that are not eventloop specific.
+Home-page: https://gitlab.com/advian-oss/python-datastreamcorelib/
+License: MIT
+Author: Eero af Heurlin
+Author-email: eero.afheurlin@iki.fi
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: dataclasses (>=0.7,<0.8); python_version >= "3.6" and python_version < "3.7"
+Requires-Dist: msgpack (>=1.0,<2.0)
+Project-URL: Repository, https://gitlab.com/advian-oss/python-datastreamcorelib/
+Description-Content-Type: text/x-rst
+
+=================
+datastreamcorelib
+=================
+
+Core helpers and Abstract Base Classes for making use of ZMQ nice, easy and DRY.
+
+You should probably look at https://gitlab.com/advian-oss/python-datastreamservicelib and
+https://gitlab.com/advian-oss/python-datastreamserviceapp_template unless you're working
+on an adapter for yet unsupported eventloop.
+
+Development
+-----------
+
+TLDR:
+
+- make virtualenv
+- poetry install
+- pre-commit install
+
+Testing
+^^^^^^^
+
+There's Dockerfile for running tox tests (so you don't need to deal with pyenv
+and having all the required versions available)::
+
+    docker build -t datastreamcorelib:tox .
+    docker run --rm -it -v `pwd`:/app datastreamcorelib:tox
+
