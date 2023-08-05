@@ -1,0 +1,13 @@
+collective.explicitacquisition-2.0-py3.7-nspkg.pth,sha256=i6xUrA2XwWgxJ31EmKS8F0wCvv6o3Db_2POBVx1bZDM,559
+collective/explicitacquisition/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+collective/explicitacquisition/configure.zcml,sha256=kZm8yTD7JYZq48NNh7HB5k7dc9mx9ZwB28H3vtrjDjE,165
+collective/explicitacquisition/events.py,sha256=pCv8-a54MI_gfDq0mb0-WMsPq90o-E6_9HUaJGlNlFM,705
+collective/explicitacquisition/interfaces.py,sha256=yeV7S9gBoZtfbia8k4gXPpOjRz3aBAyVM5EjqTUQZu4,202
+collective/explicitacquisition/testing.py,sha256=_5AqgF0w5djQFrivA-hTg0XV0Y28Tu7DLCpVrEWNqyg,504
+collective/explicitacquisition/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+collective/explicitacquisition/tests/test_bad_acquisition.py,sha256=-NhgqIJbptpUaPpe7Me-w3_4oYQioWyigvv3MUK--Rk,3905
+collective.explicitacquisition-2.0.dist-info/METADATA,sha256=USZyUcE6poNE2yPw-gpj5rOdggAThh2yugefjn9ZP68,3027
+collective.explicitacquisition-2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+collective.explicitacquisition-2.0.dist-info/namespace_packages.txt,sha256=FyC0xnd95fkjCaKazR3nfIgNqhWMpB0mYBlzALyXKTg,11
+collective.explicitacquisition-2.0.dist-info/top_level.txt,sha256=FyC0xnd95fkjCaKazR3nfIgNqhWMpB0mYBlzALyXKTg,11
+collective.explicitacquisition-2.0.dist-info/RECORD,,

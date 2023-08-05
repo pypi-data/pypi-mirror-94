@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: collective.explicitacquisition
+Version: 2.0
+Summary: Disallow access to acquired content outside the current path.
+Home-page: https://github.com/collective/collective.explicitacquisition
+Author: Godefroid Chapelle, Johannes Raggam
+Author-email: raggam-nl@adm.at
+License: GPL
+Keywords: traversal acquisition
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 5.2
+Classifier: Framework :: Plone :: 6.0
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Zope
+Classifier: Framework :: Zope :: 4
+Classifier: Framework :: Zope :: 5
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: setuptools
+Requires-Dist: Products.CMFCore
+Provides-Extra: test
+Requires-Dist: plone.app.testing ; extra == 'test'
+Requires-Dist: plone.app.robotframework ; extra == 'test'
+
+collective.explicitacquisition
+==============================
+
+.. image:: https://github.com/collective/collective.explicitacquisition/workflows/Testing/badge.svg
+    :target: https://github.com/collective/collective.explicitacquisition/actions?query=workflow%3ATesting
+
+
+Access to acquired content in CMF/ Plone should not be allowed.
+
+This package disables content acquisition.
+
+Installation
+============
+
+Add the package to your `buildout`'s instances `eggs` section.
+Once the ZCML is loaded by Zope it is active.
+No further steps needed.
+
+
+Source Code
+===========
+
+The sources are in a GIT DVCS with its main branches at
+`github <https://github.com/collective/collective.explicitacquisition>`_.
+
+We'd be happy to see many forks and pull-requests to make collective.explicitacquisition even better.
+
+
+Contributors
+============
+
+This package is a repackaging of Godfroid Chapelle's (`gotcha <https://github.com/gotcha>`_) Products.CMFPlone branch "publication through explicit acquisition"_, which solves ticket 13793 (references old, archived bug tracker).
+
+Further contributors:
+
+- Johannes Raggam (`thetet <https://github.com/thet>`_)
+- Kim Paulissen (`spereverde <https://github.com/spereverde>`_
+- Maik Derstappen (`MrTango <https://github.com/MrTango>`_)
+- Jens Klein (`jensens <https://github.com/jensens>`_)
+
+Changelog
+=========
+
+2.0 (2021-02-05)
+----------------
+
+- Update package (black, isort, structure) [jensens]
+
+- Drop support of Python 2.7, [jensens]
+
+- Support Python 3 on Plone 5.2.x+
+  [spereverde]
+
+
+1.1 (2015-02-18)
+----------------
+
+- Add MANIFEST.in and fix release.
+  [thet]
+
+
+1.0 (2015-02-17)
+----------------
+
+- Fix issue where a user could access an unintended object through
+  acquisition magic. See https://dev.plone.org/ticket/13793.
+  [gotcha]
+
+
