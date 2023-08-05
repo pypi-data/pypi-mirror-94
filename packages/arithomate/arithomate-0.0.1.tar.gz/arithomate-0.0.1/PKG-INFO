@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: arithomate
+Version: 0.0.1
+Summary: This module helps to do Arithemetic Operations easily.
+Home-page: UNKNOWN
+Author: Sai Santosh Pal
+Author-email: saisantoshpal@gmail.com
+License: MIT
+Description: This module helps to do Arithemetic Operations easily.
+        
+        Change Log
+        ==========
+        
+        0.0.1 (04/02/2021)
+        -------------------
+        - First Release
+Keywords: operators
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
