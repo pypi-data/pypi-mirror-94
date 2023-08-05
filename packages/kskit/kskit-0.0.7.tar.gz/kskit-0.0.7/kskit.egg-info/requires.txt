@@ -1,0 +1,13 @@
+pydicom
+Numpy
+matplotlib
+pynetdicom
+requests
+xmltodict
+pandas
+pyarrow
+python-barcode[images]
+qrcode
+pyzbar[scripts]
+opencv-python
+pycryptodome
