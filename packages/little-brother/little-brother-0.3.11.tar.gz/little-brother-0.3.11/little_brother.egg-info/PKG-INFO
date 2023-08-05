@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: little-brother
+Version: 0.3.11
+Summary: Simple parental control application monitoring specific processes on Linux hosts to monitor and limit the play time of (young) children.
+Home-page: https://github.com/marcus67/little_brother
+Author: Marcus Rickert
+Author-email: little-brother@web.de
+License: UNKNOWN
+Description: Tool to monitor login time of users on Debian hosts and terminate processes if usage times are exceeded.
+Platform: UNKNOWN
