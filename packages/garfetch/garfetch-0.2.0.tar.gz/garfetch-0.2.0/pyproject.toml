@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "garfetch"
+version = "0.2.0"
+description = "Unofficial gocomics library"
+authors = ["Ave <ave@ave.zone>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://gitlab.com/a/garfetch"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+beautifulsoup4 = "^4.9.3"
+requests = "^2.25.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
