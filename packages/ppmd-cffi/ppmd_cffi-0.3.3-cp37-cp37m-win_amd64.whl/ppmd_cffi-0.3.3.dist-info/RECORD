@@ -1,0 +1,11 @@
+_ppmd.pyd,sha256=Cz6Z4_aqm6QQNE6FxN-mV4o4OB7yH-OM3WVR1hAKRRY,60928
+ppmd/__init__.py,sha256=mZF2eRAcPi9xsJym7Sk1p7wPPl3xtUGefAbhzVuUWm8,14779
+ppmd/__init__.pyi,sha256=rFsu4W_sfBeebdWjFwn0hQeBJ_BvsQESy3qS1vCJYK0,3604
+ppmd/__main__.py,sha256=L2ubunx1R46BgbO4sAFyFeMT1Hzeo0lxv2T3BBsFS6Q,62
+ppmd/__main__.pyi,sha256=0kDyiQtRibrdsxcWPkAXVNiyKYa6L6uYq7jnHoWucrU,28
+ppmd_cffi-0.3.3.dist-info/LICENSE,sha256=Hn5rrlpb3jLxrlp8N6CC0asDz4k1T3-TasQL6eOaZTE,27032
+ppmd_cffi-0.3.3.dist-info/METADATA,sha256=fOvkI_8fOwaSe3UJwk4eNPMj8nJyzG6w3kI_WNZN7GA,4187
+ppmd_cffi-0.3.3.dist-info/WHEEL,sha256=zMRqF9ZfHGxBPfvcWwE-LxcVkdB1hhr8hy4cOfZGPZU,101
+ppmd_cffi-0.3.3.dist-info/entry_points.txt,sha256=znkduPaxkEpuz7yYyK55zcJrl9dJagEbnI7oB8e6wxo,36
+ppmd_cffi-0.3.3.dist-info/top_level.txt,sha256=Esf2Mw1HibWnwu2CovO23JRLCur9ZM00T4kR4naxNZ8,11
+ppmd_cffi-0.3.3.dist-info/RECORD,,
