@@ -1,0 +1,8 @@
+README.md
+setup.py
+py_sec_log/__init__.py
+py_sec_log/pyslog.py
+py_sec_log.egg-info/PKG-INFO
+py_sec_log.egg-info/SOURCES.txt
+py_sec_log.egg-info/dependency_links.txt
+py_sec_log.egg-info/top_level.txt

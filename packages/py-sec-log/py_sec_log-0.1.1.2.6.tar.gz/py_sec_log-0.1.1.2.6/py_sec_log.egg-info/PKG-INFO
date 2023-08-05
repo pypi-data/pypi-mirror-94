@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: py-sec-log
+Version: 0.1.1.2.6
+Summary: Python Package For Login Verification
+Home-page: https://github.com/PythonProgramme/Python-Code
+Author: TechSmit
+Author-email: techsmithacker@gmail.com
+License: UNKNOWN
+Description: This Is Python Package For Login Verification If You Want To Get This Contect Me On Email
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
