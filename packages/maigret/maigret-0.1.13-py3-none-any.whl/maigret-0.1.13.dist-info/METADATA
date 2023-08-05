@@ -1,0 +1,146 @@
+Metadata-Version: 2.1
+Name: maigret
+Version: 0.1.13
+Summary: Collect a dossier on a person by username from a huge number of sites
+Home-page: https://github.com/soxoj/maigret
+Author: Soxoj
+Author-email: soxoj@protonmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp (==3.7.3)
+Requires-Dist: aiohttp-socks (==0.5.5)
+Requires-Dist: arabic-reshaper (==2.1.1)
+Requires-Dist: async-timeout (==3.0.1)
+Requires-Dist: attrs (==20.3.0)
+Requires-Dist: beautifulsoup4 (==4.9.3)
+Requires-Dist: bs4 (==0.0.1)
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: future (==0.18.2)
+Requires-Dist: future-annotations (==1.0.0)
+Requires-Dist: html5lib (==1.1)
+Requires-Dist: idna (==2.10)
+Requires-Dist: Jinja2 (==2.11.2)
+Requires-Dist: lxml (==4.6.2)
+Requires-Dist: MarkupSafe (==1.1.1)
+Requires-Dist: mock (==4.0.2)
+Requires-Dist: multidict (==5.1.0)
+Requires-Dist: Pillow (==8.1.0)
+Requires-Dist: pycountry (==20.7.3)
+Requires-Dist: PyPDF2 (==1.26.0)
+Requires-Dist: PySocks (==1.7.1)
+Requires-Dist: python-bidi (==0.4.2)
+Requires-Dist: python-socks (==1.1.2)
+Requires-Dist: reportlab (==3.5.59)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: requests-futures (==1.0.0)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: socid-extractor (>=0.0.4)
+Requires-Dist: soupsieve (==2.1)
+Requires-Dist: stem (==1.8.0)
+Requires-Dist: torrequest (==0.1.0)
+Requires-Dist: tqdm (==4.55.0)
+Requires-Dist: typing-extensions (==3.7.4.3)
+Requires-Dist: urllib3 (==1.26.2)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: xhtml2pdf (==0.2.5)
+Requires-Dist: XMind (==1.2.0)
+Requires-Dist: yarl (==1.6.3)
+
+# Maigret
+
+![PyPI](https://img.shields.io/pypi/v/maigret?style=flat-square)
+![PyPI - Downloads](https://img.shields.io/pypi/dw/maigret?style=flat-square)
+[![Chat - Gitter](https://raw.githubusercontent.com/soxoj/maigret/main/static/chat_gitter.svg)](https://gitter.im/maigret-osint/community)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/soxoj/maigret/main/static/maigret.png" />
+</p>
+
+<i>The Commissioner Jules Maigret is a fictional French police detective, created by Georges Simenon. His investigation method is based on understanding the personality of different people and their interactions.</i>
+
+## About
+
+Purpose of Maigret - **collect a dossier on a person by username only**, checking for accounts on a huge number of sites.
+
+This is a [sherlock](https://github.com/sherlock-project/) fork with cool features under heavy development.
+*Don't forget to regularly update source code from repo*.
+
+Currently supported more than 2000 sites ([full list](https://raw.githubusercontent.com/soxoj/maigret/main/sites.md)), by default search is launched against 500 popular sites in descending order of popularity.
+
+## Main features
+
+* Profile pages parsing, [extracting](https://github.com/soxoj/socid_extractor) personal info, links to other profiles, etc.
+* Recursive search by new usernames found
+* Search by tags (site categories, countries)
+* Censorship and captcha detection
+* Very few false positives
+
+## Installation
+
+**NOTE**: Python 3.6 or higher and pip is required.
+
+**Python 3.8 is recommended.**
+
+```bash
+# install from pypi
+$ pip3 install maigret
+
+# or clone and install manually
+$ git clone https://github.com/soxoj/maigret && cd maigret
+$ pip3 install .
+```
+
+## Using examples
+
+```bash
+maigret user
+
+# make HTML and PDF reports
+maigret user --html --pdf
+
+# search on sites marked with tags photo & dating
+maigret user --tags photo,dating
+
+
+# search for three usernames on all available sites
+maigret user1 user2 user3 -a
+
+```
+
+Run `maigret --help` to get arguments description. Also options are documented in [the Maigret Wiki](https://github.com/soxoj/maigret/wiki/Command-line-options).
+
+With Docker:
+```
+docker build -t maigret .
+
+docker run maigret user
+```
+
+## Demo with page parsing and recursive username search
+
+[PDF report](https://raw.githubusercontent.com/soxoj/maigret/main/static/report_alexaimephotographycars.pdf), [HTML report](https://htmlpreview.github.io/?https://raw.githubusercontent.com/soxoj/maigret/main/static/report_alexaimephotographycars.html)
+
+```bash
+maigret alexaimephotographycars
+```
+
+![animation of recursive search](https://raw.githubusercontent.com/soxoj/maigret/main/static/recursive_search.svg)
+
+![HTML report screenshot](https://raw.githubusercontent.com/soxoj/maigret/main/static/report_alexaimephotography_html_screenshot.png)
+
+![XMind report screenshot](https://raw.githubusercontent.com/soxoj/maigret/main/static/report_alexaimephotography_xmind_screenshot.png)
+
+
+[Full console output](https://raw.githubusercontent.com/soxoj/maigret/main/static/recursive_search.md)
+
+## License
+
+MIT © [Maigret](https://github.com/soxoj/maigret)<br/>
+MIT © [Sherlock Project](https://github.com/sherlock-project/)<br/>
+Original Creator of Sherlock Project - [Siddharth Dushantha](https://github.com/sdushantha)
+
+
