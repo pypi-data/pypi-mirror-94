@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: mdpo
+Version: 0.3.7
+Summary: Markdown file translation utilities using pofiles.
+Home-page: https://github.com/mondeja/mdpo
+Author: Álvaro Mondéjar Rubio
+Author-email: mondejar1994@gmail.com
+License: BSD-3-Clause
+Project-URL: Documentation, https://mdpo.readthedocs.io
+Project-URL: Source, https://github.com/mondeja/mdpo
+Project-URL: Issue Tracker, https://github.com/mondeja/mdpo/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Internationalization
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup :: Markdown
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: polib (>=1.1.0)
+Requires-Dist: pymd4c (==0.4.6.0b1)
+Provides-Extra: dev
+Requires-Dist: Sphinx (==3.4.3) ; extra == 'dev'
+Requires-Dist: bump2version (==1.0.1) ; extra == 'dev'
+Requires-Dist: flake8 (==3.8.4) ; extra == 'dev'
+Requires-Dist: flake8-implicit-str-concat (==0.2.0) ; extra == 'dev'
+Requires-Dist: flake8-print (==4.0.0) ; extra == 'dev'
+Requires-Dist: isort (==5.7.0) ; extra == 'dev'
+Requires-Dist: pre-commit (==2.10.0) ; extra == 'dev'
+Requires-Dist: pytest (==6.2.2) ; extra == 'dev'
+Requires-Dist: pytest-cov (==2.11.1) ; extra == 'dev'
+Requires-Dist: sphinx-argparse-cli (==1.2.0) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (==0.4.3) ; extra == 'dev'
+Requires-Dist: yamllint (==1.26.0) ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: Sphinx (==3.4.3) ; extra == 'docs'
+Requires-Dist: sphinx-argparse-cli (==1.2.0) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (==0.4.3) ; extra == 'docs'
+Provides-Extra: lint
+Requires-Dist: flake8 (==3.8.4) ; extra == 'lint'
+Requires-Dist: flake8-implicit-str-concat (==0.2.0) ; extra == 'lint'
+Requires-Dist: flake8-print (==4.0.0) ; extra == 'lint'
+Requires-Dist: isort (==5.7.0) ; extra == 'lint'
+Requires-Dist: yamllint (==1.26.0) ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest (==6.2.2) ; extra == 'test'
+Requires-Dist: pytest-cov (==2.11.1) ; extra == 'test'
+
+<p align="center">
+  <a href="https://github.com/mondeja/mdpo"><img src="https://raw.githubusercontent.com/mondeja/mdpo/master/mdpo.png" alt="mdpo" width="400"></a>
+</h1>
+
+<h4 align="center">Markdown file translation utilities using pofiles</h4>
+
+<p align="center">
+  <a href="https://pypi.org/project/mdpo/">
+    <img src="https://img.shields.io/pypi/v/mdpo"
+         alt="PyPI">
+  </a>
+  <a href="https://pypi.org/project/mdpo/">
+    <img src="https://img.shields.io/pypi/pyversions/mdpo?labelColor=333333">
+  </a>
+  <a href="https://github.com/mondeja/mdpo/blob/master/LICENSE">
+    <img src="https://img.shields.io/pypi/l/mdpo?color=light-green">
+  </a>
+</p>
+
+<h2 align="center">
+  <a href="https://mdpo.readthedocs.io/en/latest/">Documentation</a>
+</h2>
+
+<p align="center">
+Fully complies with <a href="https://spec.commonmark.org/0.29">CommonMark Specification v0.29</a>,
+supporting some additional features.
+</p>
+
+## Status
+
+[![Documentation status][doc-image]][doc-link]
+[![Tests][tests-image]][tests-link]
+[![Coverage status][coverage-image]][coverage-link]
+
+## Installation
+
+```bash
+pip install mdpo
+```
+
+[tests-image]: https://img.shields.io/github/workflow/status/mondeja/mdpo/Test?logo=github
+[tests-link]: https://github.com/mondeja/mdpo/actions?query=workflow%3ATest
+[coverage-image]: https://img.shields.io/coveralls/github/mondeja/mdpo?logo=coveralls
+[coverage-link]: https://coveralls.io/github/mondeja/mdpo
+[doc-image]: https://img.shields.io/readthedocs/mdpo?logo=read-the-docs&logoColor=white
+[doc-link]: https://mdpo.readthedocs.io/en/latest/
+
+
