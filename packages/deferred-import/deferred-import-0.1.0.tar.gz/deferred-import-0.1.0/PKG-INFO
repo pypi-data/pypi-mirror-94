@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: deferred-import
+Version: 0.1.0
+Summary: Lazy import and install on demand Python packages.
+Home-page: https://github.com/orsinium-labs/deferred-import
+Author: Gram
+Author-email: gram@orsinium.dev
