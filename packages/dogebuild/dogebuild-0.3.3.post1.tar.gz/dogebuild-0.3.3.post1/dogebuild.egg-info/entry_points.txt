@@ -1,0 +1,3 @@
+[console_scripts]
+doge = doge_runner:main
+

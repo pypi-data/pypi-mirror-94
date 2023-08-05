@@ -1,0 +1,5 @@
+pip
+virtualenv
+toposort==1.5
+colorlog==4.0.2
+gitsnapshot==0.1.2
