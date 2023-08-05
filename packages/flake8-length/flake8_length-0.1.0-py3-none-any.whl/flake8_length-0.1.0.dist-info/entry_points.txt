@@ -1,0 +1,3 @@
+[flake8.extension]
+LN001=flake8_length:Checker
+
