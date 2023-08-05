@@ -1,0 +1,11 @@
+nox_poetry/__init__.py,sha256=z6Z_f7wQA8owSSIsUNc4qFFCljcICh8EfCQGrss3-x8,1557
+nox_poetry/core.py,sha256=kAF_FGll-pWUrgdptlC71jQG8rV4Uk36ruxknttL_WM,3067
+nox_poetry/patch.py,sha256=OROkeFpLhwp1d012Y__QaHt41Nb-JkL0QCUGqG22idY,247
+nox_poetry/poetry.py,sha256=E4LQVnKVyPJYid0L_8X8zj5Bf_QxWm5TCAdUXyzrP64,3230
+nox_poetry/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nox_poetry/sessions.py,sha256=W41VCkKrSZAUKdMA6MZxs_c-sROnhS7Sx99U8iuj_ZI,8561
+nox_poetry/sessions.pyi,sha256=fj9kTvLk0Ta7xlGXocaLKZ_D8qz4wxwpSAMj93oDK2c,2534
+nox_poetry-0.8.1.dist-info/LICENSE.rst,sha256=_U9HKPtmfNJ-tdmOwX1djEmSdYLV_pzaIqVGZ8P7tt8,1088
+nox_poetry-0.8.1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+nox_poetry-0.8.1.dist-info/METADATA,sha256=jvV9Z9YeyyoVajQcycua_ogO75teTqZ6-MyTbbA4Jcs,8355
+nox_poetry-0.8.1.dist-info/RECORD,,
