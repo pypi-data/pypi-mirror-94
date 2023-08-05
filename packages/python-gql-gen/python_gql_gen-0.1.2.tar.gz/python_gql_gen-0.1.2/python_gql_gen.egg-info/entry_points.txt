@@ -1,0 +1,3 @@
+[console_scripts]
+python_gql_gen = python_gql_gen.cli:main
+
