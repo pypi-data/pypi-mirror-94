@@ -1,0 +1,12 @@
+triceratops/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+triceratops/funcs.py,sha256=Z9XYXH-MgPwZq9fcihRQRBZx3DwceEf7ebJZs6jVMA8,11375
+triceratops/likelihoods.py,sha256=z5ycqKthUFm2Fp5RzIp09PZlP1weILiFEwe3C52ZnKg,10840
+triceratops/marginal_likelihoods.py,sha256=POP0_l3UgmcR7qqjzPtI65yITeS8ZyCF-Hx2X6HQWyw,73355
+triceratops/priors.py,sha256=ut_8ATo-YkjBUsEbMlCsFR4_dFQ6mst1kykuXamc7tQ,24135
+triceratops/triceratops.py,sha256=5BvAn8NR7RTjwdtFZxK92tEc2F0XF2fuuCWe8JXGF3Q,52251
+triceratops/data/ldc.tsv,sha256=Q0odLaphB6iD6hn4BW7YUyt_IeUO6XQ0F6uSvNH_9Cg,663636
+triceratops-1.0.3.dist-info/LICENSE,sha256=XiIFeI9sqlz1YgriaH8CWrCk0l4KAEKT29ydMFydMzE,1082
+triceratops-1.0.3.dist-info/METADATA,sha256=6JIXsqW_obvLp2zhFeBwJ2F4Z9n5-wvwXLqm6SCS4UI,4995
+triceratops-1.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+triceratops-1.0.3.dist-info/top_level.txt,sha256=Dgbx9b3pcNMGGbZGEC7eQ_mR4CA4Gd13Xe7eKYh8h3Y,12
+triceratops-1.0.3.dist-info/RECORD,,
