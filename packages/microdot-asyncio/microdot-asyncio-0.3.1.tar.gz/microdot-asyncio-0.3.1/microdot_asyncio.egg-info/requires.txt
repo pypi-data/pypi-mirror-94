@@ -1,0 +1,4 @@
+microdot
+
+[:implementation_name == "micropython"]
+micropython-uasyncio

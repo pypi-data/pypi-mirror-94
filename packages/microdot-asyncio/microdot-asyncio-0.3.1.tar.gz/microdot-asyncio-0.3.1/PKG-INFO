@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: microdot-asyncio
+Version: 0.3.1
+Summary: AsyncIO support for the Microdot web framework
+Home-page: http://github.com/miguelgrinberg/microdot/
+Author: Miguel Grinberg
+Author-email: miguel.grinberg@gmail.com
+License: MIT
+Description: 
+        Microdot-AsyncIO
+        ----------------
+        
+        AsyncIO support for the Microdot web framework.
+        
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: MicroPython
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
