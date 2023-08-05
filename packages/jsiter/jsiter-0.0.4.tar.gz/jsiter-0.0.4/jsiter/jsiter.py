@@ -1,0 +1,39 @@
+import functools
+type_cache = {}
+
+def jsiter(self_obj):
+    if type(self_obj) in type_cache:
+        return type_cache[type(self_obj)](self_obj)
+    iter(self_obj)
+    class jsiter_class:
+        def __init__(self,self_obj):
+            self.jsiter_original_obj = self_obj
+        def map(self,func):
+            return jsiter(map(func,self.jsiter_original_obj))
+        def filter(self,func):
+            return jsiter(filter(func,self.jsiter_original_obj))
+        def reduce(self,func):
+            iter_obj = iter(self.jsiter_original_obj)
+            return functools.reduce(func,iter_obj, next(iter_obj))
+        def list(self):
+            return jsiter(list(self.jsiter_original_obj))
+        def sorted(self, *args, **kwargs):
+            return jsiter(sorted(self.jsiter_original_obj, *args, **kwargs))
+        def join(self,Jstr):
+            return Jstr.join(self)
+    def decorator_jsiter(func):
+        def _decorator_jsiter(*args, **kwargs):
+            args = [a.jsiter_original_obj if hasattr(a,"jsiter_original_obj") else a for a in args]
+            ret = func(*args, **kwargs)
+            return jsiter_class(ret) if type(ret) == type(args[0]) else ret
+        return _decorator_jsiter
+    for d in dir(type(self_obj)):
+        if d not in ["__class__","__init__","__new__","__setattr__","__getattribute__"] :
+            attrset = getattr(type(self_obj), d)
+            if callable(attrset):
+                setattr(jsiter_class,d, decorator_jsiter(attrset))
+            else:
+                setattr(jsiter_class,d, attrset)
+    jsiter_class.__name__ = "jsiter_" + type(self_obj).__name__
+    type_cache[type(self_obj)] = jsiter_class
+    return jsiter_class(self_obj)
