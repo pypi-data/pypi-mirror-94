@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: slack-integration
+Version: 0.0.4
+Summary: The funniest joke in the world
+Home-page: https://github.com/GhostNA/slack-integration
+Author: Specter NA
+Author-email: naspecter@gmail.com
+License: MIT
+Description: Really, the funniest around.
+Keywords: funniest joke comedy flying circus
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Text Processing :: Linguistic
