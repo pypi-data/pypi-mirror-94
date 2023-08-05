@@ -1,0 +1,28 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        platform: [ubuntu-16.04, macos-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.8'
+        architecture: 'x64'
+    - name: Run tests
+      run: make test
+      env:
+        FLIT_ROOT_INSTALL: "1"
+    - name: Build package
+      id: build_package
+      run: make package
+    - name: Upload package
+      uses: actions/upload-artifact@v1
+      with:
+        name: packages
+        path: dist/${{ steps.build_package.outputs.package_filename }}
