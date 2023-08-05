@@ -1,0 +1,11 @@
+numpy
+pyopencl
+mako
+pycparser
+pycparserext
+
+[dev]
+pytest
+check-manifest
+twine
+wheel
