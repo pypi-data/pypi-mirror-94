@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: big-bull
+Version: 0.3.25
+Summary: Web framework for writing asynchronous microservices
+License: MIT
+Author: Buster Styren
+Author-email: buster.styren@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiohttp (>=3.7.3,<4.0.0)
+Requires-Dist: aiokafka (>=0.7.0,<0.8.0)
+Requires-Dist: jaeger-client (>=4.4.0,<5.0.0)
+Requires-Dist: opentracing (>=2.4.0,<3.0.0)
+Requires-Dist: opentracing-instrumentation (>=3.3.1,<4.0.0)
+Requires-Dist: prometheus-client (>=0.9.0,<0.10.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Description-Content-Type: text/markdown
+
+# Big-bull
+
+Micro-framework wrapping aiohttp, aiokafka, jaeger and prometheus primarily
+aimed towards writing kubernetes services.
+

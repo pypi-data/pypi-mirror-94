@@ -1,0 +1,3 @@
+[console_scripts]
+big-bull=big_bull.big_bull:main
+
