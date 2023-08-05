@@ -1,0 +1,11 @@
+dozent/__init__.py,sha256=TchEpCjoh1Iklq8Zi_qJe1S88xkX7zBOlXLIx4A47uA,162
+dozent/__main__.py,sha256=q3POKqrtk2aSMBkC3tYp0MFEpzx7OtMeffqGj6jxZE0,2339
+dozent/catch_thread_exceptions.py,sha256=sEz2RgAXvym585LN1yNqRd96P5tendYUTzJW0BQnXwI,817
+dozent/downloader_tools.py,sha256=mbam4b6BOyzW1CDwaTIo3RDN_TBPfWWttRn0Cd5CbUY,6187
+dozent/dozent.py,sha256=LZQrimDMS2gZX0Rr-pfTnaY-7-3KKoJ6bzQ-dI47iX0,7139
+dozent/twitter-archive-stream-links.json,sha256=OMk8gUvGmtXRM0R6vKyRpKT2RY1laXX4Uw8gpROU8qM,156133
+dozent-1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dozent-1.0.dist-info/METADATA,sha256=5qvx4SrglinvizHhzhwG5L368ypeHjNYIv-FkY71NRY,5361
+dozent-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dozent-1.0.dist-info/top_level.txt,sha256=o3lmTIlIPxr9FP6wUCDU9gHGuflg5N0PVNG37BJLTdM,7
+dozent-1.0.dist-info/RECORD,,
