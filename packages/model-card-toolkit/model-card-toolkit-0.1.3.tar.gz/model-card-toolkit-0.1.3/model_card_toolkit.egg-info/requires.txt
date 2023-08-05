@@ -1,0 +1,12 @@
+absl-py<0.11,>=0.9
+jinja2<3,>=2.10
+jsonschema<4,>=3.2.0
+matplotlib<4,>=3.2.0
+ml-metadata<0.27.0,>=0.26.0
+semantic-version<3,>=2.8.0
+tensorflow-data-validation<0.27.0,>=0.26.0
+tensorflow-metadata<0.27.0,>=0.26.0
+tensorflow-model-analysis<0.27.0,>=0.26.0
+
+[:python_version < "3.7"]
+dataclasses
