@@ -1,0 +1,8 @@
+setup.py
+astruc/__init__.py
+astruc/astruc.py
+astruc.egg-info/PKG-INFO
+astruc.egg-info/SOURCES.txt
+astruc.egg-info/dependency_links.txt
+astruc.egg-info/requires.txt
+astruc.egg-info/top_level.txt
