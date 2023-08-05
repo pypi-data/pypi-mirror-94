@@ -1,0 +1,3 @@
+[console_scripts]
+covertmd = model_converter.main:main
+
