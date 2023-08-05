@@ -1,0 +1,6 @@
+[tool.towncrier]
+package = "asyncowfs"
+filename = "docs/source/history.rst"
+directory = "newsfragments"
+underlines = ["-", "~", "^"]
+issue_format = "`#{issue} <https://github.com/smurfix/asyncowfs/issues/{issue}>`__"
