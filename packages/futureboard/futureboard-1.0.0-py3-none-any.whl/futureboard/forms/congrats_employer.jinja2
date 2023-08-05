@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Saku Futureboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: "Kanit", sans-serif;
+        }
+
+        .container {
+            width: 1290px;
+            height: 675px;
+            background-color: {{ bg_color }};
+            background-image: url("https://ik.imagekit.io/tqbc8pye197/sakuguru/congrats_MtzQOl7McF.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-clip: content-box;
+            position: relative;
+        }
+
+        .content {
+            position: absolute;
+            top: 430px;
+            left: 50px;
+            right: 50px;
+            bottom: 50px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-rows: repeat(2, minmax(0, 1fr));
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .description p {
+            margin: 10px 0;
+        }
+
+        img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 100%;
+            position: absolute;
+            right: 837px;
+            bottom: 300px;
+        }
+
+        h1,
+        h2,
+        p {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 72px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 48px;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 56px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="{{ image_url }}"/>
+    <div class="content">
+        <div style="grid-column: span 2 / span 2">
+            <div style="text-align: center;"><h1>คุณ {{ job_seeker_name }}</h1></div>
+            <div style="text-align: center;"><h2>สนใจสมัครงานกับคุณ</h2></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

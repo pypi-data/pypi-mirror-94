@@ -1,0 +1,12 @@
+futureboard/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+futureboard/base.py,sha256=v2FZxuTfOtClN8xqs6NLl6MOouCClSvTncIlnBQD_Xg,735
+futureboard/colors_utils.py,sha256=vi6gblNBwtrpwRnzwk1mm5LNO22b3OWX2SWmfGAa1vA,425
+futureboard/congrats.py,sha256=0ixZrT9mVj6Yz9AWNHpBABgJf9b8kSrHYlXD27OqsYo,563
+futureboard/forms/__init__.py,sha256=pxbwGbMZLZRh4cMHdWe1fOfp-PFOfIx0HmRXLSrBdxM,374
+futureboard/forms/congrats_employee.jinja2,sha256=gykvlzKmgVKqwSilrecnLKTubbpQNNr7s9N5sajZm78,2297
+futureboard/forms/congrats_employer.jinja2,sha256=9kS16w6_vKg1ll7wFSUhkeKo1fNEnwafOvdmhoCLAH8,2300
+futureboard/forms/job_thumbnail.jinja2,sha256=EwNLJV3Ae-fZ9KC20roXyej31KER_WUq5f96QKWmfOg,2337
+futureboard/job_post.py,sha256=YUlzG270juxJbzld8tcHBVCYUP-2m9yhsWLc3J0uC3A,734
+futureboard-1.0.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+futureboard-1.0.0.dist-info/METADATA,sha256=zZiZrmbazIxlT-gBhPTYvSxTaGjA9hykc4SQIQeFJRE,2408
+futureboard-1.0.0.dist-info/RECORD,,
