@@ -1,0 +1,15 @@
+chiron_bot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chiron_bot/chiron_hangouts.py,sha256=pruHRN73XoKz74kOmkN0EMFG-Jsj24JaxoDyjiqA_e8,4979
+chiron_bot/chiron_zephyr.py,sha256=gkdHjBqY08X3XM2MQg8veBM2v12jDb9Reu5i1wN3lDg,4837
+chiron_bot/chiron_zulip.py,sha256=Xqg-pYN13FlOzp84mzdxzloTyuOfHiHZo5GOFixUKNo,2319
+chiron_bot/engine.py,sha256=4dEKhtvGcbFJmoBn2YxEJJUdbvv1aOBuoTXakSlbf40,6249
+chiron_bot/fetchers.py,sha256=u5bkD4hwG8I3wET4eoAWGlDLWMWmu27abuU5JGl3gPc,17485
+chiron_bot/main.py,sha256=K2YC0lUiec4ZwbvBJqJtvmkIHXS8RC5_zpmyBv7urkc,9489
+chiron_bot/test_doctest.py,sha256=PzeF-iSX0GTq-jTQ6b5u6_Qu7_w8sVl7WRcGBjZMpg4,964
+chiron_bot/test_engine.py,sha256=ZZ1e9zthVeCgg1M4EtKhvtu6h8IUQ-yuQntVv_rUum8,4894
+chiron_bot-0.9.1.dist-info/LICENSE,sha256=cZUwcFTR-SiEUQP5m-9mmTj2ArhSOMIdOwde1Cy6UFY,1186
+chiron_bot-0.9.1.dist-info/METADATA,sha256=q6vmhde9lGKjGZtOZtXeAag62rqYiFPp21VDQrl4odE,4130
+chiron_bot-0.9.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+chiron_bot-0.9.1.dist-info/entry_points.txt,sha256=qDgM7CJKC1nhnBc58gibweLe0yEnxFkaRE0uYMAkWkE,49
+chiron_bot-0.9.1.dist-info/top_level.txt,sha256=LQ8qatMiShF23zXkGCyTcOmlvAIUyihDKKpBeHy04SM,11
+chiron_bot-0.9.1.dist-info/RECORD,,
