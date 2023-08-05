@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: service-configuration-layer
+Version: 0.0.6
+Summary: A tool to request and store services configuration. This tool is part of the Microservices ToolBox
+Home-page: https://github.com/antoniodimariano/services_configuration_tool
+Author: Antonio Di Mariano
+Author-email: antonio.dimariano@gmail.com
+License: UNKNOWN
+Description: 
+        ## Description 
+        
+        This package is part of a toolbox that aims to make it easier to send configurations to services. 
+        Even the smallest microservice needs a few information to run, such as an endpoint to query. 
+        This service aims to make it easier to send and update configurations for microservices. At startup, each service announces itself by producing a specific message to a Kafka topic. The message will be consumed by a Services Configuration Repository component that will consume the message and send the configuration as a message to the Kafka topic where services are listening to for receiving their configuration. 
+        Similarly, suppose we need to update one service's configuration. In that case, we can do it on the fly by sending a message to the topic where services are listening to for receiving their configuration. 
+        This solution allows us to apply changes more straightforward and faster without restarting pods. 
+        Each service announces itself using its service's name.
+        By default, the topic used to retrieve services' configuration is named `tc-get-service-configuration`, and it has the following schemas:
+        
+        value:
+        ```
+        {"name":"service_name","type":"string"},
+        {"name":"application","type":"string"},
+        {"name":"timestamp","type":"string"}
+        
+        ```
+        key:
+        ```
+        "name":"service_name","type":"string"}
+        ```
+        
+        The topic where services listen to for receiving their configuration is named  `tc-set-service-configuration`, and it has the following schemas:
+        
+        ```
+        {"name":"service_name","type":"string"},{"name":"timestamp","type":"string"},{"name":"start_environment","type":"string"},{"name":"datacentre","type":"string"},{"name":"external_rest_services","type":"string"},{"name":"persistence_conf","type":"string"},{"name":"credentials","type":"string"}
+        
+        ```
+        key:
+        ```
+        "name":"service_name","type":"string"}
+        ```
+        
+        The default configuration received aims to provide the service with a generic range of information services might react.
+        
+        start_environment
+        
+        external_rest_service= a dictionary of external services to contact. 
+        Examples 
+        
+        ```
+        {
+         "deployment_proxy_url": "http://localhost:5500/api/deploy",
+         "oauth_token": "http://localhost:3001/api/token"
+        }
+        ```
+        or if you want to provide your code with more information 
+        ```
+        MY_SERVICE": {
+          "url": "https://api.myservice.com/me",
+          "method": "GET",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "body": {}
+        }
+        ```
+        
+        datacentre: more than often, services need to access data from a given data centre. Here you can insert a dictionary or a list. 
+        
+        persistence_conf: information about where to store data. 
+        credentials: credentials to use in your code
+        
+        
+        ![](services_configuration_tool.png)
+        
+        ## Infrastructure pre-requisites: 
+        
+        * K8s cluster (preferred)
+        * Apache Kafka Brokers ( with optional Schema Registry )
+        
+        
+        
+        ## How to use it: 
+        
+        If you want to use the default settings, you have to use a Confluent Apache Kafka Brokers with Schema Registry. Under the hood, this package has a dependency with the [confluent-kafka-producers-wrapper](https://pypi.org/project/confluent-kafka-producers-wrapper/), so the minimum information to provide is 
+        
+        ```
+        service_name = the name of your service, as registered in the Services Configuration Repository tool.
+        brokers  = your Confluent Apache Brokers here
+        schema_registry = your Schema Registry here 
+        ```
+        
+        Referer [to this page](https://pypi.org/project/confluent-kafka-producers-wrapper/)  for more information about how to set the  environment variables 
+        If you want to use different topics, you have to specify them using these environment variables:
+        
+        ```
+        
+        topic_for_getting_conf = the topic where services will send message to request their configuration
+        topic_for_setting_conf  = the topic the services will listen to retrieve their configuration
+        
+        topic_for_setting_conf_no_avro = 1 if the topic makes no use of the Schema Registry. 
+        topic_for_getting_conf_no_avro = 1 if the topic makes no use of the Schema Registry
+        
+        ```
+        
+        ```python
+        from service_configuration_controller.request_service_configuration import wait_to_retrieve_service_configuration
+        
+        if __name__ == '__main__':
+            if wait_to_retrieve_service_configuration():
+                print("conf received")
+        
+            import time
+        
+            while True:
+                time.sleep(2)
+                print("do my job")
+        
+        
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
