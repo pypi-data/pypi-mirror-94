@@ -1,0 +1,514 @@
+#!/usr/bin/env python
+
+"""
+Run all tests of the PyRQA project.
+"""
+
+import unittest
+
+__author__ = "Tobias Rawald"
+__copyright__ = "Copyright 2015-2021 The PyRQA project"
+__credits__ = ["Tobias Rawald",
+               "Mike Sips"]
+__license__ = "Apache-2.0"
+__maintainer__ = "Tobias Rawald"
+__email__ = "pyrqa@gmx.net"
+__status__ = "Development"
+
+
+if __name__ == "__main__":
+    loader = unittest.TestLoader()
+
+    print("""\n
+Recurrence Plot Tests
+=====================
+""")
+
+    recurrence_plot_suite = unittest.TestSuite()
+
+    recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.radius.test.RPClassicFixedRadiusTimeSeriesTestCase'))
+    recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.radius.test.RPClassicFixedRadiusEmbeddedSeriesTestCase'))
+    recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.radius.test.RPClassicRadiusCorridorTimeSeriesTestCase'))
+    recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.radius.test.RPClassicRadiusCorridorEmbeddedSeriesTestCase'))
+    recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.radius.test.RPCrossFixedRadiusTimeSeriesTestCase'))
+    recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.radius.test.RPCrossFixedRadiusEmbeddedSeriesTestCase'))
+    recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.radius.test.RPCrossRadiusCorridorTimeSeriesTestCase'))
+    recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.radius.test.RPCrossRadiusCorridorEmbeddedSeriesTestCase'))
+
+    unittest.TextTestRunner(verbosity=2).run(recurrence_plot_suite)
+
+    print("""\n
+Unthresholded Recurrence Plot Tests
+===================================
+""")
+
+    unthresholded_recurrence_plot_suite = unittest.TestSuite()
+
+    unthresholded_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.unthresholded.test.RPClassicUnthresholdedTimeSeriesTestCase'))
+    unthresholded_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.unthresholded.test.RPClassicUnthresholdedEmbeddedSeriesTestCase'))
+    unthresholded_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.unthresholded.test.RPCrossUnthresholdedTimeSeriesTestCase'))
+    unthresholded_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rp.unthresholded.test.RPCrossUnthresholdedEmbeddedSeriesTestCase'))
+
+    unittest.TextTestRunner(verbosity=2).run(unthresholded_recurrence_plot_suite)
+
+    print("""\n
+Joint Recurrence Plot Tests
+===========================
+""")
+
+    joint_recurrence_plot_suite = unittest.TestSuite()
+
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+          'pyrqa.variants.jrp.radius.test.JRPClassicClassicFixedRadiusFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicFixedRadiusFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicFixedRadiusFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicFixedRadiusFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicFixedRadiusRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicFixedRadiusRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicFixedRadiusRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicFixedRadiusRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicRadiusCorridorFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicRadiusCorridorFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicRadiusCorridorFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicRadiusCorridorFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicRadiusCorridorRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicRadiusCorridorRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicRadiusCorridorRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicClassicRadiusCorridorRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossFixedRadiusFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossFixedRadiusFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossFixedRadiusFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossFixedRadiusFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossFixedRadiusRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossFixedRadiusRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossFixedRadiusRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossFixedRadiusRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossRadiusCorridorFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossRadiusCorridorFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossRadiusCorridorFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossRadiusCorridorFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossRadiusCorridorRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossRadiusCorridorRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossRadiusCorridorRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPClassicCrossRadiusCorridorRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicFixedRadiusFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicFixedRadiusFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicFixedRadiusFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicFixedRadiusFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicFixedRadiusRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicFixedRadiusRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicFixedRadiusRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicFixedRadiusRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicRadiusCorridorFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicRadiusCorridorFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicRadiusCorridorFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicRadiusCorridorFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicRadiusCorridorRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicRadiusCorridorRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicRadiusCorridorRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossClassicRadiusCorridorRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossFixedRadiusFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossFixedRadiusFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossFixedRadiusFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossFixedRadiusFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossFixedRadiusRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossFixedRadiusRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossFixedRadiusRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossFixedRadiusRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossRadiusCorridorFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossRadiusCorridorFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossRadiusCorridorFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossRadiusCorridorFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossRadiusCorridorRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossRadiusCorridorRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossRadiusCorridorRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_plot_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrp.radius.test.JRPCrossCrossRadiusCorridorRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+
+    unittest.TextTestRunner(verbosity=2).run(joint_recurrence_plot_suite)
+
+    print("""\n
+Recurrence Quantification Analysis Tests
+========================================
+""")
+
+    recurrence_quantification_analysis_suite = unittest.TestSuite()
+
+    recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rqa.radius.test.RQAClassicFixedRadiusTimeSeriesTestCase'))
+    recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rqa.radius.test.RQAClassicFixedRadiusEmbeddedSeriesTestCase'))
+    recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rqa.radius.test.RQAClassicRadiusCorridorTimeSeriesTestCase'))
+    recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rqa.radius.test.RQAClassicRadiusCorridorEmbeddedSeriesTestCase'))
+    recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rqa.radius.test.RQACrossFixedRadiusTimeSeriesTestCase'))
+    recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rqa.radius.test.RQACrossFixedRadiusEmbeddedSeriesTestCase'))
+    recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rqa.radius.test.RQACrossRadiusCorridorTimeSeriesTestCase'))
+    recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.rqa.radius.test.RQACrossRadiusCorridorEmbeddedSeriesTestCase'))
+
+    unittest.TextTestRunner(verbosity=2).run(recurrence_quantification_analysis_suite)
+
+    print("""\n
+Joint Recurrence Quantification Analysis Tests
+==============================================
+""")
+
+    joint_recurrence_quantification_analysis_suite = unittest.TestSuite()
+
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicFixedRadiusFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicFixedRadiusFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicFixedRadiusFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicFixedRadiusFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicFixedRadiusRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicFixedRadiusRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicFixedRadiusRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicFixedRadiusRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicRadiusCorridorFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicRadiusCorridorFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicRadiusCorridorFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicRadiusCorridorFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicRadiusCorridorRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicRadiusCorridorRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicRadiusCorridorRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicClassicRadiusCorridorRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossFixedRadiusFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossFixedRadiusFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossFixedRadiusFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossFixedRadiusFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossFixedRadiusRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossFixedRadiusRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossFixedRadiusRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossFixedRadiusRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossRadiusCorridorFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossRadiusCorridorFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossRadiusCorridorFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossRadiusCorridorFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossRadiusCorridorRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossRadiusCorridorRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossRadiusCorridorRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQAClassicCrossRadiusCorridorRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicFixedRadiusFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicFixedRadiusFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicFixedRadiusFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicFixedRadiusFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicFixedRadiusRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicFixedRadiusRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicFixedRadiusRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicFixedRadiusRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicRadiusCorridorFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicRadiusCorridorFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicRadiusCorridorFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicRadiusCorridorFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicRadiusCorridorRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicRadiusCorridorRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicRadiusCorridorRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossClassicRadiusCorridorRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossFixedRadiusFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossFixedRadiusFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossFixedRadiusFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossFixedRadiusFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossFixedRadiusRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossFixedRadiusRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossFixedRadiusRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossFixedRadiusRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossRadiusCorridorFixedRadiusTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossRadiusCorridorFixedRadiusTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossRadiusCorridorFixedRadiusEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossRadiusCorridorFixedRadiusEmbeddedSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossRadiusCorridorRadiusCorridorTimeSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossRadiusCorridorRadiusCorridorTimeSeriesEmbeddedSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossRadiusCorridorRadiusCorridorEmbeddedSeriesTimeSeriesTestCase'))
+    joint_recurrence_quantification_analysis_suite.addTests(
+        loader.loadTestsFromName(
+            'pyrqa.variants.jrqa.radius.test.JRQACrossCrossRadiusCorridorRadiusCorridorEmbeddedSeriesEmbeddedSeriesTestCase'))
+
+    unittest.TextTestRunner(verbosity=2).run(joint_recurrence_quantification_analysis_suite)

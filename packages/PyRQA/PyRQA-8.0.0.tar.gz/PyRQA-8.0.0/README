@@ -1,0 +1,924 @@
+PyRQA
+=====
+
+Highlights
+----------
+
+-  Perform recurrence analysis on long time series in a time efficient
+   manner using the OpenCL framework.
+-  Conduct recurrence quantification analysis (*RQA*) and cross
+   recurrence quantification analysis (*CRQA*).
+-  Compute recurrence plots (*RP*) and cross recurrence plots (*CRP*).
+-  Compute unthresholded recurrence plots (*URP*) and unthresholded
+   cross recurrence plots (*UCRP*).
+-  Conduct joint recurrence quantification analysis (*JRQA*) and compute
+   joint recurrence plots (*JRP*).
+-  Employ the euclidean, maximum or taxicab metric for determining state
+   similarity.
+-  Choose the fixed radius or radius corridor neighbourhood condition.
+-  Use univariate time series or pre-embedded time series as input data.
+-  Select either the half, single or double floating point precision for
+   conducting the analytical computations.
+-  Leverage machine learning techniques that automatically choose the
+   fastest from a set of implementations.
+-  Apply the computing capabilities of GPUs, CPUs and other platforms
+   that support OpenCL.
+-  Use multiple computing devices of the same or different type in
+   parallel.
+
+Table of Contents
+-----------------
+
+1.  `General Information <#general-information>`__
+2.  `Recommended Citation <#recommended-citation>`__
+3.  `Installation <#installation>`__
+4.  `OpenCL Setup <#opencl-setup>`__
+5.  `Usage <#usage>`__
+6.  `Performance Tuning <#performance-tuning>`__
+7.  `Testing <#testing>`__
+8.  `Origin <#origin>`__
+9.  `Acknowledgements <#acknowledgements>`__
+10. `Publications <#publications>`__
+11. `Development Status <#development-status>`__
+12. `Release Notes <#release-notes>`__
+
+General Information
+-------------------
+
+PyRQA is a tool to conduct recurrence analysis in a massively parallel
+manner using the OpenCL framework. It is designed to efficiently process
+time series consisting of hundreds of thousands of data points.
+
+PyRQA supports the computation of the following quantitative measures:
+
+-  Recurrence rate (*RR*)
+-  Determinism (*DET*)
+-  Average diagonal line length (*L*)
+-  Longest diagonal line length (*L\_max*)
+-  Divergence (*DIV*)
+-  Entropy diagonal lines (*L\_entr*)
+-  Laminarity (*LAM*)
+-  Trapping time (*TT*)
+-  Longest vertical line length (*V\_max*)
+-  Entropy vertical lines (*V\_entr*)
+-  Average white vertical line length (*W*)
+-  Longest white vertical line length (*W\_max*)
+-  Longest white vertical line length divergence (*W\_div*)
+-  Entropy white vertical lines (*W\_entr*)
+
+PyRQA additionally allows to create the corresponding recurrence plot,
+which can be exported as an image file.
+
+Recommended Citation
+--------------------
+
+Please acknowledge the use of PyRQA by citing the following publication.
+
+    Rawald, T., Sips, M., Marwan, N. (2017): PyRQA - Conducting
+    Recurrence Quantification Analysis on Very Long Time Series
+    Efficiently. - Computers and Geosciences, 104, pp. 101-108.
+
+Installation
+------------
+
+PyRQA and all of its dependencies can be installed via the following
+command.
+
+.. code:: bash
+
+    pip install PyRQA
+
+OpenCL Setup
+------------
+
+The analytical implementations provided by PyRQA rely on features that
+are part of *OpenCL 1.1*, which is a fairly mature standard and
+supported by a large number of platforms. The OpenCL computing devices
+employed need to support at least this version to being able to use
+PyRQA.
+
+It may be required to install additional software, e.g., runtimes or
+drivers, to execute PyRQA on computing devices such as GPUs and CPUs.
+References to vendor-specific information are presented below.
+
+*AMD*:
+
+-  https://www.amd.com/en/support
+-  https://github.com/RadeonOpenCompute/ROCm
+-  https://community.amd.com/community/devgurus/opencl
+-  https://www.amd.com/en/support/kb/release-notes/amdgpu-installation
+
+*ARM*:
+
+-  https://developer.arm.com/docs/100614/0312
+
+*Intel*:
+
+-  https://software.intel.com/en-us/articles/opencl-drivers
+-  https://software.intel.com/en-us/articles/sdk-for-opencl-gsg
+
+*NVIDIA*:
+
+-  https://developer.nvidia.com/opencl
+-  https://developer.nvidia.com/cuda-downloads
+
+*Vendor-independent*:
+
+-  http://portablecl.org
+
+Usage
+-----
+
+The following subsections depict the usage of PyRQA. Each subsection
+focuses on specific functionality that is provided by the package. The
+presentation of expected output shall ensure the reproducibility of the
+analytical results.
+
+Basic Computations
+~~~~~~~~~~~~~~~~~~
+
+RQA computations are conducted as follows.
+
+.. code:: python
+
+    from pyrqa.time_series import TimeSeries
+    from pyrqa.settings import Settings
+    from pyrqa.analysis_type import Classic
+    from pyrqa.neighbourhood import FixedRadius
+    from pyrqa.metric import EuclideanMetric
+    from pyrqa.computation import RQAComputation
+    data_points = [0.1, 0.5, 1.3, 0.7, 0.8, 1.4, 1.6, 1.2, 0.4, 1.1, 0.8, 0.2, 1.3]
+    time_series = TimeSeries(data_points,
+                             embedding_dimension=2,
+                             time_delay=2)
+    settings = Settings(time_series,
+                        analysis_type=Classic,
+                        neighbourhood=FixedRadius(0.65),
+                        similarity_measure=EuclideanMetric,
+                        theiler_corrector=1)
+    computation = RQAComputation.create(settings,
+                                        verbose=True)
+    result = computation.run()
+    result.min_diagonal_line_length = 2
+    result.min_vertical_line_length = 2
+    result.min_white_vertical_line_length = 2
+    print(result)
+
+The following output is expected.
+
+::
+
+    RQA Result:
+    ===========
+
+    Minimum diagonal line length (L_min): 2
+    Minimum vertical line length (V_min): 2
+    Minimum white vertical line length (W_min): 2
+
+    Recurrence rate (RR): 0.371901
+    Determinism (DET): 0.411765
+    Average diagonal line length (L): 2.333333
+    Longest diagonal line length (L_max): 3
+    Divergence (DIV): 0.333333
+    Entropy diagonal lines (L_entr): 0.636514
+    Laminarity (LAM): 0.400000
+    Trapping time (TT): 2.571429
+    Longest vertical line length (V_max): 4
+    Entropy vertical lines (V_entr): 0.955700
+    Average white vertical line length (W): 2.538462
+    Longest white vertical line length (W_max): 6
+    Longest white vertical line length inverse (W_div): 0.166667
+    Entropy white vertical lines (W_entr): 0.839796
+
+    Ratio determinism / recurrence rate (DET/RR): 1.107190
+    Ratio laminarity / determinism (LAM/DET): 0.971429
+
+The corresponding recurrence plot is created likewise. Note that the
+parameter ``theiler_corrector`` is ignored regarding the creation of the
+plot.
+
+.. code:: python
+
+    from pyrqa.computation import RPComputation
+    from pyrqa.image_generator import ImageGenerator
+    computation = RPComputation.create(settings)
+    result = computation.run()
+    ImageGenerator.save_recurrence_plot(result.recurrence_matrix_reverse,
+                                        'recurrence_plot.png')
+
+Cross Recurrence Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PyRQA further offers the opportunity to conduct cross recurrence
+analysis (*CRQA* and *CRP*), in addition to the classic recurrence
+analysis (*RQA* and *RP*). For this purpose, two time series of
+potentially different length are provided as input. Note that the
+corresponding computations require to set the same value regarding the
+embedding dimension. Two different time delay values may be used
+regarding the first and the second time series. To enable cross
+recurrence analysis, the parameter ``analysis_type`` has to be changed
+from ``Classic`` to ``Cross``, when creating the ``Settings`` object. A
+*CRQA* example is given below.
+
+.. code:: python
+
+    from pyrqa.analysis_type import Cross
+    data_points_x = [0.9, 0.1, 0.2, 0.3, 0.5, 1.7, 0.4, 0.8, 1.5]
+    time_series_x = TimeSeries(data_points_x,
+                               embedding_dimension=2,
+                               time_delay=1)
+    data_points_y = [0.3, 1.3, 0.6, 0.2, 1.1, 1.9, 1.3, 0.4, 0.7, 0.9, 1.6]
+    time_series_y = TimeSeries(data_points_y,
+                               embedding_dimension=2,
+                               time_delay=2)
+    time_series = (time_series_x,
+                   time_series_y)
+    settings = Settings(time_series,
+                        analysis_type=Cross,
+                        neighbourhood=FixedRadius(0.73),
+                        similarity_measure=EuclideanMetric,
+                        theiler_corrector=0)
+    computation = RQAComputation.create(settings,
+                                        verbose=True)
+    result = computation.run()
+    result.min_diagonal_line_length = 2
+    result.min_vertical_line_length = 2
+    result.min_white_vertical_line_length = 2
+    print(result)
+
+The following output is expected.
+
+::
+
+    CRQA Result:
+    ============
+
+    Minimum diagonal line length (L_min): 2
+    Minimum vertical line length (V_min): 2
+    Minimum white vertical line length (W_min): 2
+
+    Recurrence rate (RR): 0.319444
+    Determinism (DET): 0.521739
+    Average diagonal line length (L): 2.400000
+    Longest diagonal line length (L_max): 3
+    Divergence (DIV): 0.333333
+    Entropy diagonal lines (L_entr): 0.673012
+    Laminarity (LAM): 0.434783
+    Trapping time (TT): 2.500000
+    Longest vertical line length (V_max): 3
+    Entropy vertical lines (V_entr): 0.693147
+    Average white vertical line length (W): 3.500000
+    Longest white vertical line length (W_max): 8
+    Longest white vertical line length inverse (W_div): 0.125000
+    Entropy white vertical lines (W_entr): 1.424130
+
+    Ratio determinism / recurrence rate (DET/RR): 1.633270
+    Ratio laminarity / determinism (LAM/DET): 0.833333
+
+The corresponding cross recurrence plot is created likewise.
+
+.. code:: python
+
+    from pyrqa.computation import RPComputation
+    from pyrqa.image_generator import ImageGenerator
+    computation = RPComputation.create(settings)
+    result = computation.run()
+    ImageGenerator.save_recurrence_plot(result.recurrence_matrix_reverse,
+                                        'cross_recurrence_plot.png')
+
+Neighbourhood Condition Selection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PyRQA currently supports the fixed radius as well as the radius corridor
+neighbourhood condition. While the first refers to a single radius, the
+latter requires the assignment of an inner and outer radius. The
+specific condition is passed using the parameter ``neighbourhood`` to
+the constructor of a ``Settings`` object. The creation of a fixed radius
+and a radius corridor neighbourhood is presented below.
+
+.. code:: python
+
+    from pyrqa.neighbourhood import FixedRadius, RadiusCorridor
+    fixed_radius = FixedRadius(radius=0.43)
+    radius_corridor = RadiusCorridor(inner_radius=0.32, 
+                                     outer_radius=0.86)          
+
+Unthresholded Recurrence Plots
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PyRQA allows to create unthresholded *RP*\ s and *CRP*\ s by selecting
+the ``Unthresholded`` neighbourhood condition. This results in a
+non-binary matrix, containing the mutual distances between the system
+states, based on the similarity measure selected. PyRQA provides
+functionality to normalize these distances to values between ``0`` and
+``1``. Additionally, the normalized matrix can be represented as a
+grayscale image. Darker shades of grey indicate smaller distances
+whereas lighter shades of grey indicate larger distances. An example on
+how to create an unthresholded cross recurrence plot is given below.
+
+.. code:: python
+
+    from pyrqa.neighbourhood import Unthresholded
+    settings = Settings(time_series,
+                        analysis_type=Cross,
+                        neighbourhood=Unthresholded(),
+                        similarity_measure=EuclideanMetric)
+    computation = RPComputation.create(settings)
+    result = computation.run()
+    ImageGenerator.save_unthresholded_recurrence_plot(result.recurrence_matrix_reverse_normalized,
+                                                      'unthresholded_cross_recurrence_plot.png')
+
+Joint Recurrence Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In addition to classic and cross recurrence analysis, PyRQA provides
+functionality to conduct joint recurrence analysis. This includes in
+particular joint recurrence quantification analysis (*JRQA*) as well as
+joint recurrence plot (*JRP*). On an abstract level, a joint recurrence
+plot is a combination of two individual plots, both having the same
+extent regarding the *X* and *Y* axis. Regarding PyRQA, each of those
+two plots may either be of the analysis type ``Classic`` or ``Cross``,
+potentially having different characteristics regarding:
+
+-  Time series data,
+-  Embedding dimension,
+-  Time delay,
+-  Neighbourhood condition, and
+-  Similarity measure.
+
+In contrast, the same value for ``theiler_corrector`` is expected
+regarding the quantitative analysis. Note that a joint recurrence plot
+by definition relies on thresholded input plots, eliminating the
+application of the ``Unthresholded`` neighbourhood condition.
+
+The settings of the two individual plots are encapsulated in a
+``JointSettings`` object. The quantification of joint recurrence plots
+is based on the same measures as for recurrence plots and cross
+recurrence plots. An example on how to conduct *JRQA* is given below.
+
+.. code:: python
+
+    from pyrqa.computation import JRQAComputation
+    from pyrqa.metric import MaximumMetric, TaxicabMetric
+    from pyrqa.settings import JointSettings
+    data_points_1 = [1.0, 0.7, 0.5, 0.1, 1.7, 1.5, 1.2, 0.4, 0.6, 1.5, 0.8, 0.3]
+    time_series_1 = TimeSeries(data_points,
+                               embedding_dimension=3,
+                               time_delay=1)
+    settings_1 = Settings(time_series_1,
+                          analysis_type=Classic,
+                          neighbourhood=RadiusCorridor(inner_radius=0.14,
+                                                       outer_radius=0.97),
+                          similarity_measure=MaximumMetric,
+                          theiler_corrector=1)
+    data_points_2_x = [0.7, 0.1, 1.1, 1.4, 1.0, 0.5, 1.0, 1.9, 1.7, 0.9, 1.5, 0.6]
+    time_series_2_x = TimeSeries(data_points_2_x,
+                                 embedding_dimension=2,
+                                 time_delay=1)
+    data_points_2_y = [0.4, 0.7, 0.9, 0.3, 1.9, 1.3, 1.2, 0.2, 1.1, 0.6, 0.8, 0.1, 0.5]
+    time_series_2_y = TimeSeries(data_points_2_y,
+                                 embedding_dimension=2,
+                                 time_delay=2)
+    time_series_2 = (time_series_2_x,
+                     time_series_2_y)
+    settings_2 = Settings(time_series_2,
+                          analysis_type=Cross,
+                          neighbourhood=FixedRadius(0.83),
+                          similarity_measure=TaxicabMetric,
+                          theiler_corrector=1)
+    joint_settings = JointSettings(settings_1,
+                                   settings_2)
+    computation = JRQAComputation.create(joint_settings,
+                                         verbose=True)
+    result = computation.run()
+    result.min_diagonal_line_length = 2
+    result.min_vertical_line_length = 1
+    result.min_white_vertical_line_length = 2
+    print(result)
+
+The following output is expected.
+
+::
+
+    JRQA Result:
+    ============
+
+    Minimum diagonal line length (L_min): 2
+    Minimum vertical line length (V_min): 1
+    Minimum white vertical line length (W_min): 2
+
+    Recurrence rate (RR): 0.157025
+    Determinism (DET): 0.263158
+    Average diagonal line length (L): 2.500000
+    Longest diagonal line length (L_max): 3
+    Divergence (DIV): 0.333333
+    Entropy diagonal lines (L_entr): 0.693147
+    Laminarity (LAM): 1.000000
+    Trapping time (TT): 1.000000
+    Longest vertical line length (V_max): 1
+    Entropy vertical lines (V_entr): 0.000000
+    Average white vertical line length (W): 3.960000
+    Longest white vertical line length (W_max): 11
+    Longest white vertical line length inverse (W_div): 0.090909
+    Entropy white vertical lines (W_entr): 1.588760
+
+    Ratio determinism / recurrence rate (DET/RR): 1.675900
+    Ratio laminarity / determinism (LAM/DET): 3.800000
+
+The corresponding joint recurrence plot is created likewise.
+
+.. code:: python
+
+    from pyrqa.computation import JRPComputation
+    computation = JRPComputation.create(joint_settings)
+    result = computation.run()
+    ImageGenerator.save_recurrence_plot(result.recurrence_matrix_reverse,
+                                        'joint_recurrence_plot.png')
+
+Time Series Embedding
+~~~~~~~~~~~~~~~~~~~~~
+
+The previous examples refer to one or multiple univariate time series as
+input data. These ``TimeSeries`` are embedded in multi-dimensional space
+using the time delay method. In addition, PyRQA allows to analyze time
+series that are already embedded in multi-dimensional space. These
+``EmbeddedSeries`` are represented as a list of *m*-dimensional arrays,
+where *m* refers to the embedding dimension. An example of using a
+pre-embedded series considering recurrence quantification analysis is
+given below.
+
+.. code:: python
+
+    from pyrqa.time_series import EmbeddedSeries
+    data_points = [[0.1, 1.3], [0.5, 0.7], [1.3, 0.8], [0.7, 1.4], [0.8, 1.6], [1.4, 1.2], [1.6, 0.4], [1.2, 1.1], [0.4, 0.8], [1.1, 0.2], [0.8, 1.3]]
+    embedded_series = EmbeddedSeries(data_points)
+    settings = Settings(embedded_series,
+                        analysis_type=Classic,
+                        neighbourhood=FixedRadius(0.65),
+                        similarity_measure=EuclideanMetric,
+                        theiler_corrector=1)
+    computation = RQAComputation.create(settings,
+                                        verbose=True)
+    result = computation.run()
+    result.min_diagonal_line_length = 2
+    result.min_vertical_line_length = 2
+    result.min_white_vertical_line_length = 2
+    print(result)
+
+The following output is expected.
+
+::
+
+    RQA Result:
+    ===========
+
+    Minimum diagonal line length (L_min): 2
+    Minimum vertical line length (V_min): 2
+    Minimum white vertical line length (W_min): 2
+
+    Recurrence rate (RR): 0.371901
+    Determinism (DET): 0.411765
+    Average diagonal line length (L): 2.333333
+    Longest diagonal line length (L_max): 3
+    Divergence (DIV): 0.333333
+    Entropy diagonal lines (L_entr): 0.636514
+    Laminarity (LAM): 0.400000
+    Trapping time (TT): 2.571429
+    Longest vertical line length (V_max): 4
+    Entropy vertical lines (V_entr): 0.955700
+    Average white vertical line length (W): 2.538462
+    Longest white vertical line length (W_max): 6
+    Longest white vertical line length inverse (W_div): 0.166667
+    Entropy white vertical lines (W_entr): 0.839796
+
+    Ratio determinism / recurrence rate (DET/RR): 1.107190
+    Ratio laminarity / determinism (LAM/DET): 0.971429
+
+Note that this example corresponds to the introductory example, which
+demonstrates the basic usage. It differs regarding the representation of
+the multi-dimensional vectors. ``EmbeddedSeries`` objects can be used
+while conducting recurrence analysis, cross recurrence analysis as well
+as joint recurrence analysis. This refers to performing quantitative
+analyses as well as creating recurrence plots. Regarding cross and joint
+recurrence analysis ``TimeSeries`` objects may be combined with
+``EmbeddedSeries`` objects.
+
+Custom OpenCL Environment
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The previous examples use the default OpenCL environment. A custom
+environment can also be created via command line input. For this
+purpose, the parameter ``command_line`` has to be set to ``True``, when
+creating an ``OpenCL`` object.
+
+.. code:: python
+
+    from pyrqa.opencl import OpenCL
+    opencl = OpenCL(command_line=True)
+
+The OpenCL platform as well as the computing devices can also be
+selected manually using their identifiers.
+
+.. code:: python
+
+    opencl = OpenCL(platform_id=0,
+                    device_ids=(0,))
+
+The ``OpenCL`` object generated is passed as a parameter while creating
+a computation object.
+
+.. code:: python
+
+    computation = RPComputation.create(settings,
+                                       verbose=True,
+                                       opencl=opencl)
+
+Floating Point Precision
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+PyRQA allows to specify the precision of the time series data, which in
+turn determines the precision of the computations conducted by the
+OpenCL devices. Currently, the following precisions are supported:
+
+-  Half precision (16-bit),
+-  Single precision (32-bit), and
+-  Double precision (64-bit).
+
+By default, the single precision is applied. Note that not all
+precisions may be supported by the OpenCL devices employed. Furthermore,
+the selected precision influences the performance of the computations on
+a particular device.
+
+The precision is set by specifying the corresponding data type, short
+``dtype``, of the time series data. The following example depicts the
+usage of double precision floating point values.
+
+.. code:: python
+
+    import numpy as np
+    data_points = [0.1, 0.5, 1.3, 0.7, 0.8, 1.4, 1.6, 1.2, 0.4, 1.1, 0.8, 0.2, 1.3]
+    time_series = TimeSeries(data_points,
+                             embedding_dimension=2,
+                             time_delay=2,
+                             dtype=np.float64)
+
+Performance Tuning
+------------------
+
+PyRQA offers the opportunity to reduce the runtime of analytical
+computations using performance tuning. There is a distinction between
+manual as well as automatic performance tuning. Both aspects are
+highlighted in the following subsections. Note that every analytical
+method implemented by PyRQA can be executed without conducting
+performance tuning. Nonetheless, it may enable significant runtime
+reductions regarding the analysis of very long time series.
+
+Adaptive Implementation Selection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Adaptive implementation selection allows to automatically select well
+performing implementations regarding RQA and recurrence plot
+computations provided by PyRQA. The approach dynamically adapts the
+selection to the current computational scenario as well as the
+properties of the OpenCL devices employed. The selection is performed
+using one of multiple strategies, each referred to as ``selector``. They
+rely on a set of customized implementation ``variants``, which may be
+parameterized using a set of keyword arguments called
+``variants_kwargs``. Note that the same selection strategies can be used
+for *RQA* and *CRQA*, *RP* and *CRP*, *URP* and *UCRP* as well as *JRQA*
+and *JRP* computations.
+
+.. code:: python
+
+    from pyrqa.variants.rqa.radius.column_no_overlap_materialisation_bit_no_recycling import ColumnNoOverlapMaterialisationBitNoRecycling
+    from pyrqa.variants.rqa.radius.column_no_overlap_materialisation_bit_recycling import ColumnNoOverlapMaterialisationBitRecycling
+    from pyrqa.variants.rqa.radius.column_no_overlap_materialisation_byte_no_recycling import ColumnNoOverlapMaterialisationByteNoRecycling
+    from pyrqa.variants.rqa.radius.column_no_overlap_materialisation_byte_recycling import ColumnNoOverlapMaterialisationByteRecycling
+    from pyrqa.variants.rqa.radius.column_no_overlap_no_materialisation import ColumnNoOverlapNoMaterialisation
+    from pyrqa.variants.rqa.radius.column_overlap_materialisation_bit_no_recycling import ColumnOverlapMaterialisationBitNoRecycling
+    from pyrqa.variants.rqa.radius.column_overlap_materialisation_bit_recycling import ColumnOverlapMaterialisationBitRecycling
+    from pyrqa.variants.rqa.radius.column_overlap_materialisation_byte_no_recycling import ColumnOverlapMaterialisationByteNoRecycling
+    from pyrqa.variants.rqa.radius.column_overlap_materialisation_byte_recycling import ColumnOverlapMaterialisationByteRecycling
+    from pyrqa.variants.rqa.radius.column_overlap_no_materialisation import ColumnOverlapNoMaterialisation
+    from pyrqa.selector import EpsilonGreedySelector
+    data_points = [0.1, 0.5, 1.3, 0.7, 0.8, 1.4, 1.6, 1.2, 0.4, 1.1, 0.8, 0.2, 1.3]
+    time_series = TimeSeries(data_points,
+                             embedding_dimension=2,
+                             time_delay=2)
+    settings = Settings(time_series,
+                        analysis_type=Classic,
+                        neighbourhood=FixedRadius(0.65),
+                        similarity_measure=EuclideanMetric,
+                        theiler_corrector=1)
+    computation = RQAComputation.create(settings,
+                                        selector=EpsilonGreedySelector(explore=10),
+                                        variants=(ColumnNoOverlapMaterialisationBitNoRecycling,
+                                                  ColumnNoOverlapMaterialisationBitRecycling,
+                                                  ColumnNoOverlapMaterialisationByteNoRecycling,
+                                                  ColumnNoOverlapMaterialisationByteRecycling,
+                                                  ColumnNoOverlapNoMaterialisation,
+                                                  ColumnOverlapMaterialisationBitNoRecycling,
+                                                  ColumnOverlapMaterialisationBitRecycling,
+                                                  ColumnOverlapMaterialisationByteNoRecycling,
+                                                  ColumnOverlapMaterialisationByteRecycling,
+                                                  ColumnOverlapNoMaterialisation))
+
+Input Data Overlapping
+~~~~~~~~~~~~~~~~~~~~~~
+
+PyRQA comprises a set of ``variants`` for each analytical method, which
+differ regarding certain implementation details. The specific
+characteristics of each variant are reflected in its name. The naming
+convention is applied accordingly to all analytical methods.
+
+One criterion is the way how the input data is represented within the
+memory of the computing devices. The multi-dimensional vectors may
+either be stored column-wise or row-wise. Considering ``TimeSeries``
+objects, to which the time delay method is applied, the columns may
+additionally be stored in an overlapped fashion. This allows leveraging
+data compression as well as potential runtime reductions. Using
+``EmbeddedSeries`` objects as input data, the multi-dimensional vectors
+may only be stored non-overlapping. As an example, variants referring to
+the joint recurrence quantification analysis are mentioned below.
+
+.. code:: python
+
+    from pyrqa.variants.jrqa.radius.column_no_overlap_materialisation_byte_no_recycling import ColumnNoOverlapMaterialisationByteNoRecycling
+    from pyrqa.variants.jrqa.radius.row_no_overlap_materialisation_byte_no_recycling import RowNoOverlapMaterialisationByteNoRecycling
+    from pyrqa.variants.jrqa.radius.column_overlap_materialisation_byte_no_recycling import ColumnOverlapMaterialisationByteNoRecycling
+
+Note that these variants have the same implementation characteristics,
+except from the representation of the input data. Only those variants
+that store the input data non-overlapping may be applied to
+``EmbeddedSeries`` objects. By default, non-overlapping variants are
+selected.
+
+OpenCL Compiler Optimisations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+OpenCL compiler optimisations aim at improving the performance of the
+operations conducted by the computing devices. Regarding PyRQA, they are
+disabled by default to ensure the comparability of the analytical
+results. They can be enabled by assigning the value ``True`` to the
+corresponding keyword argument ``optimisations_enabled``.
+
+.. code:: python
+
+    computation = RQAComputation.create(settings,
+                                        selector=EpsilonGreedySelector(explore=10),
+                                        variants=(ColumnNoOverlapMaterialisationBitNoRecycling,
+                                                  ColumnNoOverlapMaterialisationBitRecycling,
+                                                  ColumnNoOverlapMaterialisationByteNoRecycling,
+                                                  ColumnNoOverlapMaterialisationByteRecycling,
+                                                  ColumnNoOverlapNoMaterialisation,
+                                                  ColumnOverlapMaterialisationBitNoRecycling,
+                                                  ColumnOverlapMaterialisationBitRecycling,
+                                                  ColumnOverlapMaterialisationByteNoRecycling,
+                                                  ColumnOverlapMaterialisationByteRecycling,
+                                                  ColumnOverlapNoMaterialisation),
+                                        variants_kwargs={'optimisations_enabled': True})
+
+Loop Unrolling
+~~~~~~~~~~~~~~
+
+Besides gaining drastic performance improvements using parallel
+computing techniques, parts of the PyRQA kernel processing rely on
+loops. OpenCL offers the opportunity to leverage additional performance
+improvements by unrolling these loops. This is conducted by the OpenCL
+compiler that is applied to the kernel functions. Note that loop
+unrolling may not be supported by all OpenCL platforms.
+
+PyRQA offers the opportunity to manually specify loop unrolling factors
+that can be passed as a tuple when creating a selector. While creating a
+computation object, each factor is combined with each implementation
+variant. The resulting combinations are further used regarding adaptive
+implementation selection. An example on how to specify loop unrolling
+factors is given below.
+
+.. code:: python
+
+    from pyrqa.selector import EpsilonFirstSelector
+    selector = EpsilonFirstSelector(explore=15,
+                                    loop_unroll_factors=(1,2,4,8,16,32))
+
+Submatrix Edge Length
+~~~~~~~~~~~~~~~~~~~~~
+
+During the analytical processing, PyRQA subdivides the recurrence matrix
+into a number of submatrices. To get more information on the recurrence
+matrix partitioning, please refer to the publications mentioned below.
+The corresponding parameter ``edge_length`` can be set while creating a
+computation object.
+
+.. code:: python
+
+    computation = RQAComputation.create(settings,
+                                        edge_length=12800)
+
+Note that the edge length has to be chosen such that a submatrix fits in
+the memory of the OpenCL computing devices. Experiments have shown that
+values between ``10000`` and ``20000`` are a reasonable choice.
+Nonetheless, values outside of these boundaries may lead to lower
+runtimes for specific computational scenarios. Furthermore, recurrence
+matrices with a smaller extent than the value of ``edge_length`` are
+processed without being partitioned.
+
+Testing
+-------
+
+PyRQA provides a single-threaded baseline implementation for each
+analytical method. These implementations do not use OpenCL
+functionality. They serve as a ground truth regarding the analytical
+computations. The basic tests for all supported analytical methods can
+be executed cumulatively.
+
+.. code:: bash
+
+    python -m pyrqa.test
+
+The complete set of tests can be executed by adding the option
+``--all``.
+
+.. code:: bash
+
+    python -m pyrqa.test --all
+
+Note that there might occur minor deviations regarding the analytical
+results. These deviations may stem from varying precisions regarding the
+computing devices employed.
+
+Origin
+------
+
+The PyRQA package was initiated by computer scientists from the
+Humboldt-Universität zu Berlin (https://www.hu-berlin.de) and the GFZ
+German Research Centre for Geosciences (https://www.gfz-potsdam.de).
+
+Acknowledgements
+----------------
+
+We would like to thank Norbert Marwan from the Potsdam Institute for
+Climate Impact Research (https://www.pik-potsdam.de) for his continuous
+support of the project. Please visit his website
+http://recurrence-plot.tk/ for further information on recurrence
+analysis. Initial research and development of PyRQA was funded by the
+Deutsche Forschungsgemeinschaft (https://www.dfg.de/).
+
+Publications
+------------
+
+The underlying computational approach of PyRQA is described in detail
+within the following thesis, which is openly accessible at
+https://edoc.hu-berlin.de/handle/18452/19518.
+
+    Rawald, T. (2018): Scalable and Efficient Analysis of Large
+    High-Dimensional Data Sets in the Context of Recurrence Analysis,
+    PhD Thesis, Berlin : Humboldt-Universität zu Berlin, 299 p.
+
+Selected aspects of the computational approach are presented within the
+following publications.
+
+    Rawald, T., Sips, M., Marwan, N., Dransch, D. (2014): Fast
+    Computation of Recurrences in Long Time Series. - In: Marwan, N.,
+    Riley, M., Guiliani, A., Webber, C. (Eds.), Translational
+    Recurrences. From Mathematical Theory to Real-World Applications,
+    (Springer Proceedings in Mathematics and Statistics ; 103), p.
+    17-29.
+
+    Rawald, T., Sips, M., Marwan, N., Leser, U. (2015): Massively
+    Parallel Analysis of Similarity Matrices on Heterogeneous Hardware.
+    - In: Fischer, P. M., Alonso, G., Arenas, M., Geerts, F. (Eds.),
+    Proceedings of the Workshops of the EDBT/ICDT 2015 Joint Conference
+    (EDBT/ICDT), (CEUR Workshop Proceedings ; 1330), p. 56-62.
+
+Development Status
+------------------
+
+The development status of the PyRQA package is considered as *Beta*.
+Please send feature requests and bug reports to the email address that
+is listed in the project metadata.
+
+Release Notes
+-------------
+
+8.0.0
+~~~~~
+
+-  Usage of pre-embedded time series as input data.
+-  Addition of variants referring to non-overlapping column-wise storage
+   of input data.
+-  Refactoring of the public API.
+-  Updated documentation.
+
+7.0.1
+~~~~~
+
+-  Modification of the build configuration.
+-  Updated documentation.
+
+7.0.0
+~~~~~
+
+-  Addition of two variants regarding joint recurrence quantification
+   analysis computations.
+-  Removal of obsolete source code.
+-  Refactoring of the public API.
+-  Updated documentation.
+
+6.0.0
+~~~~~
+
+-  Addition of the joint recurrence quantification analysis (*JRQA*) and
+   joint recurrence plot (*JRP*) computations.
+-  Refactoring of the test implementation.
+-  Refactoring of the public API.
+-  Updated documentation.
+
+5.1.0
+~~~~~
+
+-  Addition of the unthresholded recurrence plot (*URP*) and
+   unthresholded cross recurrence plot (*UCRP*) computations.
+-  Updated documentation.
+
+5.0.0
+~~~~~
+
+-  Refactoring of the public API.
+-  Updated documentation.
+
+4.1.0
+~~~~~
+
+-  Usage of two different time delay values regarding the cross
+   recurrence plot (*CRP*) and cross recurrence quantification analysis
+   (*CRQA*).
+-  Updated documentation.
+
+4.0.0
+~~~~~
+
+-  Addition of the cross recurrence plot (*CRP*) and cross recurrence
+   quantification analysis (*CRQA*) computations.
+-  Addition of the radius corridor neighbourhood condition for
+   determining state similarity.
+-  Addition of an additional variant regarding recurrence plot
+   computations.
+-  Renaming of directories and classes referring to recurrence plot
+   computations.
+-  Removal of obsolete source code.
+-  Updated documentation.
+
+3.0.0
+~~~~~
+
+-  Source code cleanup.
+-  Renaming of the implementation variants regarding RQA and recurrence
+   plot processing.
+-  Removal of the module ``file_reader.py``. Please refer for example to
+   ``numpy.genfromtxt`` to read data from files (see
+   https://docs.scipy.org/doc/numpy/reference/generated/numpy.genfromtxt.html).
+-  Updated documentation.
+
+2.0.1
+~~~~~
+
+-  Updated documentation.
+
+2.0.0
+~~~~~
+
+-  Major refactoring.
+-  Removal of operator and variant implementations that do not refer to
+   OpenCL brute force computing.
+-  Time series data may be represented using half, single and double
+   precision floating point values, which is reflected in the
+   computations on the OpenCL devices.
+-  Several changes to the public API.
+
+1.0.6
+~~~~~
+
+-  Changes to the public API have been made, e.g., to the definition of
+   the settings. This leads to an increase in the major version number
+   (see https://semver.org/).
+-  Time series objects either consist of one or multiple series. The
+   former requires to specify a value for the embedding delay as well as
+   the time delay parameter.
+-  Regarding the RQA computations, minimum line lengths are now
+   specified on the result object. This allows to compute quantitative
+   results using different lengths without having to inspect the matrix
+   using the same parametrisation multiple times.
+-  Modules for selecting well-performing implementations based on greedy
+   selection strategies have been added. By default, the selection pool
+   consists of a single pre-defined implementation.
+-  Operators and implementation variants based on multidimensional
+   search trees and grid data structures have been added.
+-  The diagonal line based quantitative measures are modified regarding
+   the semantics of the Theiler corrector.
+-  The creation of the OpenCL environment now supports device fission.
+
+0.1.0
+~~~~~
+
+-  Initial release.
