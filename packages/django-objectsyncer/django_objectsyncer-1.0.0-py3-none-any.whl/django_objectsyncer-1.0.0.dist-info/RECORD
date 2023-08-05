@@ -1,0 +1,14 @@
+objectsyncer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+objectsyncer/admin.py,sha256=B9b9KT6tYb60iTwcf0eRvLejd9WBeYM72NlAw2upaZA,238
+objectsyncer/apps.py,sha256=cIWpE0TSJPPQji0Sirx9KI5ZeputkzNJhJSGXHHbc_g,104
+objectsyncer/models.py,sha256=lttrdZpaAaQ3U9N0eVQQwTVqVDVIQdP3-RNx7M1PGJk,8714
+objectsyncer/tests.py,sha256=571GPAF7MCjz4ufOrB_bxJnoaHUjuqjQi8tSXrhlNXo,14149
+objectsyncer/utils_cli.py,sha256=2yipP7zRkjjn6lU-OaHdCse5BSk-XiDXHrvD7heFTAI,3156
+objectsyncer/utils_srv.py,sha256=14KcNLyeLh9D7yiqQFte6lSaTXq5X9NloVRHQ5gmZ8U,6062
+objectsyncer/views.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+objectsyncer/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_objectsyncer-1.0.0.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+django_objectsyncer-1.0.0.dist-info/METADATA,sha256=DZm9-hS_8hx1X8mGtrOLC96EcnGO55Fg4R93ybQrnqk,2053
+django_objectsyncer-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_objectsyncer-1.0.0.dist-info/top_level.txt,sha256=Zk9pNH1iZgRtvP15J8jM1y25zcYTUzt3F3dG6_pQYrk,13
+django_objectsyncer-1.0.0.dist-info/RECORD,,
