@@ -1,0 +1,3 @@
+[console_scripts]
+rock_paper_scissors_bot=rock_paper_scissors_bot:main
+
