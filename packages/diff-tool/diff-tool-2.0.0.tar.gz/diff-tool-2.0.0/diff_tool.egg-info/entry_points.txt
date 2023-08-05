@@ -1,0 +1,3 @@
+[console_scripts]
+diff-tool = diff_tool.diff:main
+
