@@ -1,0 +1,11 @@
+README.md
+setup.py
+lastfmpy/__init__.py
+lastfmpy/client.py
+lastfmpy/exceptions.py
+lastfmpy/objects.py
+lastfmpy/request.py
+lastfmpy.egg-info/PKG-INFO
+lastfmpy.egg-info/SOURCES.txt
+lastfmpy.egg-info/dependency_links.txt
+lastfmpy.egg-info/top_level.txt
