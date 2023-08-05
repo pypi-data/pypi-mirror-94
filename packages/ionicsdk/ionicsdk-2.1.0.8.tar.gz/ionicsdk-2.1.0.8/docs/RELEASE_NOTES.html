@@ -1,0 +1,108 @@
+<h1>Machina SDK Release 2.1.0</h1>
+<h2>Introduction</h2>
+<p>Welcome to the 2.1 release of the Machina SDK.  This release contains significant changes to the
+underlying cryptography, including the integration (by default) of the FIPS-validated version of the OpenSSL open source library.</p>
+<p>Details are summarized below.</p>
+<h2>New Features / Improvements</h2>
+<h3>CryptoPP Usage Mostly Replaced with OpenSSL</h3>
+<ul>
+<li>SDK usage of the CryptoPP cryptography library has been replaced with the OpenSSL v1.0.2 library, which is
+<a href="https://www.openssl.org/docs/fips.html">FIPS 140-2 validated</a>.</li>
+<li>CryptoPP usage is limited to use of the
+<a href="https://www.cryptopp.com/docs/ref/class_secret_sharing.html">Shamir Secret Sharing</a> algorithm (used in
+<code>ionicsdk.secretshare.SecretSharePersistor</code>).</li>
+</ul>
+<h3>Alternative Cryptography Library (Platform-Specific) Available</h3>
+<ul>
+<li>The SDK package includes an additional platform-specific implementation of the CryptoAbstract interface.  This
+library may be used instead of the OpenSSL FIPS implementation if needed, in order to work around cross-platform
+limitations.</li>
+<li>The <code>ionicsdk.cryptoutil.setCryptoSharedLibraryCustomPath()</code> and
+<code>ionicsdk.cryptoutil.getCryptoSharedLibraryLoadedFilename()</code> APIs have been added to ascertain the version
+of the loaded cryptography library.</li>
+</ul>
+<h3>Identity Assertion Validation API Available</h3>
+<p>The API <code>ionicsdk.agent.Agent.validateassertion()</code> has been added, allowing SDK users to verify the authenticity of
+identity assertions generated both externally, and by the SDK.</p>
+<h3>Create Identity Assertion API Uses Default Nonce When None Provided</h3>
+<p>On use of SDK identity assertion APIs, a default nonce is provided when no nonce is supplied by the caller.</p>
+<ul>
+<li><code>ionicsdk.agent.Agent.createidassertion()</code></li>
+<li><code>ionicsdk.agent.Agent.validateassertion()</code></li>
+</ul>
+<h3>Additional Documentation Included with Release Distributable</h3>
+<p>The SDK release distributable now includes the following documents, in markdown and html formats:</p>
+<ul>
+<li><code>README</code>, describing high-level SDK project functionality</li>
+<li><code>LICENSE</code>, providing the Machina license agreement for Ionic resources</li>
+<li><code>CHANGELOG</code>, with line items providing summary information about the issues included in each release</li>
+<li><code>RELEASE_NOTES</code>, detailing the features and fixes included in the release</li>
+</ul>
+<h3>Machina Service Policy Decision Simulation Support</h3>
+<p>The SDK now allows the use of a flag when calling <code>CreateKey</code> to perform a policy evaluation at the service
+without creating any keys.</p>
+<h2>Issues Addressed</h2>
+<ul>
+<li>A logging issue has been addressed in the OpenXml file cipher when reading unexpected content from a PowerPoint file.</li>
+<li>Issues have been corrected that caused some <code>doxygen</code> documentation to be excluded from the SDK distributables.</li>
+<li>The <code>ISCrypto</code> library module now includes additional logging, in order to easily diagnose usage issues.</li>
+<li>KeyVault requests now properly filter expired keys out of responses.</li>
+<li>The documentation for the CreateKey operation notes the service limitation on the number of newly created keys that
+may be requested in a single request.</li>
+<li>The SDK <a href="https://pypi.org/project/ionicsdk/">pypi page</a> now includes links to Python content
+on the <a href="https://dev.ionic.com/sdk/docs/ionic_platform_sdk?language=python">Ionic Machina website</a>.</li>
+<li>The C and Python SDK implementations now provide APIs to perform multiple <code>CreateKey</code> operations
+in the context of a single call to the Machina service.</li>
+</ul>
+<h2>Discontinued Support</h2>
+<ul>
+<li>Python 2 is no longer supported.  <a href="https://www.python.org/doc/sunset-python-2/">Sunsetting Python 2</a></li>
+</ul>
+<h2>Additional Notes</h2>
+<ul>
+<li>Since Crypto initialization now loads a library module dynamically, it should not be called in startup code.</li>
+</ul>
+<h2>Supported Platforms</h2>
+<p>The Machina SDK is tested against the following platform configurations:</p>
+<table style="border-collapse: collapse;">
+<thead>
+<tr>
+<th style="border: thin solid black; padding: 3px;">Platform</th>
+<th style="border: thin solid black; padding: 3px;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: thin solid black; padding: 3px;">Linux</td>
+<td style="border: thin solid black; padding: 3px;">CentOS 7.8-2003</td>
+</tr>
+<tr>
+<td style="border: thin solid black; padding: 3px;">Linux</td>
+<td style="border: thin solid black; padding: 3px;">Ubuntu 18.04</td>
+</tr>
+<tr>
+<td style="border: thin solid black; padding: 3px;">Windows</td>
+<td style="border: thin solid black; padding: 3px;">Windows 8.1 (32 and 64 bit)</td>
+</tr>
+<tr>
+<td style="border: thin solid black; padding: 3px;">Windows</td>
+<td style="border: thin solid black; padding: 3px;">Windows 10 (32 and 64 bit)</td>
+</tr>
+<tr>
+<td style="border: thin solid black; padding: 3px;">macOS</td>
+<td style="border: thin solid black; padding: 3px;">macOS 13 (High Sierra)</td>
+</tr>
+<tr>
+<td style="border: thin solid black; padding: 3px;">macOS</td>
+<td style="border: thin solid black; padding: 3px;">macOS 14 (Mojave)</td>
+</tr>
+<tr>
+<td style="border: thin solid black; padding: 3px;">macOS</td>
+<td style="border: thin solid black; padding: 3px;">macOS 15 (Catalina)</td>
+</tr>
+<tr>
+<td style="border: thin solid black; padding: 3px;">Python</td>
+<td style="border: thin solid black; padding: 3px;">3.8.x</td>
+</tr>
+</tbody>
+</table>
