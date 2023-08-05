@@ -1,0 +1,3 @@
+[console_scripts]
+spotify-gender-ex = spotify_gender_ex.main:run
+
