@@ -1,0 +1,14 @@
+CMText/Channels.py,sha256=vo6eowXN3MDt30CfIajiC2zypdTTYxAhwtvPtlkiYSE,641
+CMText/Gateways.py,sha256=kwXBKh8ejMip2FzZW57DtIxLp3yhGaSUlXMZ9-3QpEo,447
+CMText/Message.py,sha256=aTOlRPXQywjCi0al0mUlf3lxkm4fs2rkY24nCnZVGzg,2091
+CMText/MessageBodyTypes.py,sha256=dKsWv1JEPKX5cJ6bGMN0cCyaV5w4QIQUh1R-cRPYV-I,124
+CMText/TextClient.py,sha256=_-uVxxwoDUbXGDebFTrw6mDxlLSwswMK6H0VhjAhi6Q,4970
+CMText/TextClientStatusCodes.py,sha256=VbusvZgqnFUcp13c7N48Cl-MBwSY4nbTw2qRI5LhLgk,472
+CMText/WhatsappTemplate.py,sha256=Xp56ekrLJx8-C1sbJZEMyK8Wgjsk_x6_LMVY0vXtNqo,607
+CMText/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+CMText/version.py,sha256=6hxN_X9ZamPfBGwwmdCcb2UqzczBfFt3_Qt5e3Xc_qE,39
+CM_text_sdk_python-1.1.0.dist-info/LICENSE,sha256=TAE5eICZOVikrV4lKxMj3eZ5N0ZQM2dtXkpl-JFjzU8,1082
+CM_text_sdk_python-1.1.0.dist-info/METADATA,sha256=xy1zV9rqX3dRoStg407HauUWFrB7Scw_zd_AOOWVNHM,3294
+CM_text_sdk_python-1.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+CM_text_sdk_python-1.1.0.dist-info/top_level.txt,sha256=0N34uG4AxA2c7FdrvF2kt3TnMfQzfhqmPwqXWG5pwkw,7
+CM_text_sdk_python-1.1.0.dist-info/RECORD,,
