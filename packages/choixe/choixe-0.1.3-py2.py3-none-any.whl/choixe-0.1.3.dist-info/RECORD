@@ -1,0 +1,16 @@
+choixe/__init__.py,sha256=wzzuor_5QsZxWDU8ctj48nRQaiZv6b9mqlyJJATdHPk,141
+choixe/choixe.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+choixe/configurations.py,sha256=ZOX9Xe5NKyW0f8VsHMcb82IYtQXkxScEFOFRZfXgFJM,13072
+choixe/directives.py,sha256=f_HdXuSd3lABtj5ue4HFMjdhdmixrVBQtPm4V-JBQ1U,2438
+choixe/importers.py,sha256=XkQXUmAEl5hX8oviu338wOzY80nWvL_NKoNzdHYs8Ts,1480
+choixe/placeholders.py,sha256=wQxq4ABQdMn4Q6btJwMFKw42txAxpY0HwSLLPxupjdw,3120
+choixe/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+choixe/cli/check.py,sha256=yZOlV0ZG6xXpBNcSPI_GDV4Q6LE7nJglV3LiNwQLKGI,758
+choixe/cli/compile.py,sha256=eU4oflF3cI1w0HpsPj67jZjqbJQtNazXVHU5gLKtxko,1214
+choixe/cli/main.py,sha256=oxoc6EfVcf2R-gfAu1sKFK1bNwadIU16PVFxkTcuJ8Q,183
+choixe-0.1.3.dist-info/LICENSE,sha256=6AAGPJl-9HUmJ_neY5ySFxWpJXAyShzZvTJp_8IVSq8,1548
+choixe-0.1.3.dist-info/METADATA,sha256=AewOL4sdTb7-USRbJZlnUlynsB6WQAlvVOG7TbAP3EM,1462
+choixe-0.1.3.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+choixe-0.1.3.dist-info/entry_points.txt,sha256=CXY0DRpKBvGYgse6Ywb6aRlOUaTz16ZUgIwA9vdiOxE,51
+choixe-0.1.3.dist-info/top_level.txt,sha256=KT84uHekxbRcynOJeZnuW1buCwSl4WIgCJUgy0ff-0c,7
+choixe-0.1.3.dist-info/RECORD,,
