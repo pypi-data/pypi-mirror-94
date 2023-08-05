@@ -1,0 +1,6 @@
+[console_scripts]
+delete_tei_categories = tei2neo.import_files:delete_all_categories
+import_tei_categories = tei2neo.import_files:import_categories_from_path
+import_tei_from_path = tei2neo.import_files:import_tei_from_path
+tei2neo = tei2neo.import_files:cli
+
