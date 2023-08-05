@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: vre-eoles
+Version: 0.1.4
+Summary: toolbox for computing charge factor used in EOLES model
+Home-page: https://github.com/Bertin-fap/CIRED-ENS
+Author: ArrayStream(François Bertin)
+Author-email: francois.bertin7@wanadoo.fr
+License: MIT
+Description: ## Product Name
+        Toolbox to:
+        - automatize extraction of wind speed and wind turbine FC via the renewable.ninja API  (https://www.renewables.ninja/).
+        - build aggregated FC at the France level (B. Shirizadeh et al. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3592447, https://github.com/BehrangShirizadeh/EOLES_elecRES )
+        - compare simulated wind turbine FC with the RTE experimental ones.
+        - plot the results with geographical representation
+        
+        ## Installation
+        Run the following to install:
+        ```python
+        pip install vre_eoles 
+        ```
+        
+        ## Usage example
+        **refer to** [image_features_extract-examples](https://github.com/Bertin-fap/EOLES_elecRES).
+        
+        
+        # Release History
+        0.1.0 
+        
+        # Meta
+        	- François Bertin– francois.bertin7@wanadoo.fr 
+        
+        Distributed under the [MIT license](https://mit-license.org/)
+        
+        # About the authors
+        	- François Bertin retired, formally senior scientist at CEA-LETI
+Keywords: Image,data processing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
