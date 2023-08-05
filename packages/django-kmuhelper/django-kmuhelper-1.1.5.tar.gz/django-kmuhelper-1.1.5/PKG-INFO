@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: django-kmuhelper
+Version: 1.1.5
+Summary: Ein Helfer für schweizer KMU
+Home-page: https://rafaelurben.github.io/django-kmuhelper
+Author: Rafael Urben
+Author-email: github@rafaelurben.ch
+Maintainer: Rafael Urben
+Maintainer-email: github@rafaelurben.ch
+License: GNU General Public License v3 (GPLv3)
+Project-URL: Docs, https://rafaelurben.github.io/django-kmuhelper
+Project-URL: GitHub, https://github.com/rafaelurben/django-kmuhelper
+Project-URL: Issues, https://github.com/rafaelurben/django-kmuhelper/issues
+Description: # KMUHelper
+        
+        Der KMUHelper ist, wie der Name schon sagt, ein Helfer für KMU, hauptsächlich für Schweizer, da der Hauptgrund für
+        die Entwicklung dieser Djangoapp die neue schweizer QR-Rechnung ist.
+        
+        Diverse Infos über den KMUHelper gibt's auf der [Webseite](https://rafaelurben.github.io/kmuhelper/) sowie in der [Dokumentation](https://rafaelurben.github.io/django-kmuhelper/)
+        
+        Bei Fragen oder Probleme bitte unbedingt [mich kontaktieren](https://rafaelurben.github.io/kmuhelper/kontakt) oder ein [Issue](https://github.com/rafaelurben/django-kmuhelper/issues) eröffnen!
+        
+        ## Installation
+        
+        Siehe [hier](https://rafaelurben.github.io/django-kmuhelper/installation).
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
