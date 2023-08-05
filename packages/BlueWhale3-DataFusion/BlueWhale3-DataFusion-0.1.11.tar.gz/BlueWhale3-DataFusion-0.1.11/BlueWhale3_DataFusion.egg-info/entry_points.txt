@@ -1,0 +1,12 @@
+[orange.canvas.help]
+html-index = orangecontrib.datafusion.widgets:WIDGET_HELP_PATH
+
+[orange.widgets]
+Data Fusion = orangecontrib.datafusion.widgets
+
+[orange.widgets.tutorials]
+fusiontutorials = orangecontrib.datafusion.tutorials
+
+[orange3.addon]
+datafusion = orangecontrib.datafusion
+

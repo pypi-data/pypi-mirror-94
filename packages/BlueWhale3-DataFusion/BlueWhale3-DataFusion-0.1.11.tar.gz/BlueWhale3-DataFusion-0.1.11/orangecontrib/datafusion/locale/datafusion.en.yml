@@ -1,0 +1,155 @@
+package_label: "Data Fusion"
+package_desc: "Data Fusion"
+
+common:
+  relation: "Relation"
+  fit_fusion_graph: "Fitted fusion graph"
+  fusion_graph: "Fusion Graph"
+  filter: "Filter"
+  movie_actor: "Movie Actors"
+  costar_actor: "Costarring Actors"
+  mean_fit_fusion_graph: "Mean-fitted fusion graph"
+  row_type: "Row Type"
+  genres: "Genres"
+  ratings: "Ratings"
+  data: "Data"
+  in_sample_data: "In-sample Data"
+  out_sample_data: "Out-of-sample Data"
+
+object:
+  user: "Users"
+  movie: "Movies"
+  actor: "Actors"
+  genres: "Genres"
+
+relation:
+  like: "like"
+  fans: "are fans of"
+  rated: "rated"
+  mated: "mated"
+  play_in: "play in"
+  prefer: "prefer"
+  belong_to: "belong to"
+  dislike: "don't like"
+  marry_to: "married to"
+  feature: "feature"
+  feature_in: "feature in"
+
+owchaining:
+  name: "Chaining"
+  desc: "Profile objects of one type in the feature space of another type through chaining of latent factors."
+  box_latent_chains: "Latent chains"
+  label_complete_chain_to: "Complete chain to:"
+  btn_latent_space: "latent space"
+  btn_feature_space: "feature space"
+
+owcompletionscoring:
+  name: "Completion Scoring"
+  desc: "Score the quality of matrix completion using root mean squared error (RMSE)."
+  box_rmse: "RMSE"
+  warn_relation_miss_value: "Relation '{}' has no missing values (mask)"
+  label_my_dfmc: "My dfmc<3"
+
+owfusiongraph:
+  name: "Fusion Graph"
+  desc: "Construct data fusion graph and run collective matrix factorization."
+  label:
+    object_type: "%(n_object_types)d object types"
+    relation: "%(n_relations)d relations"
+  row:
+    fuser_name: "Fuser name:"
+    maximum_iterations: "Maximum number of iterations"
+    factorization_rank: "Factorization rank"
+  btn:
+    decomposition_algorithm: "Decomposition algorithm"
+    initialization_algorithm: "Initialization algorithm"
+    run_after_change: "Run after any change  "
+    run: "Run"
+    random: "Random"
+    random_c: "Random C"
+    random_vcol: "Random Vcol"
+    matrix_tri-factorization: "Matrix tri-factorization"
+    matrix_tri-completion: "Matrix tri-completion"
+  box:
+    info: "Info"
+    relation: "Relations"
+
+owimdbactors:
+  name: "IMDb Actors"
+  desc: "Construct a movie-actor and actor-actor relation matrix."
+  box_select_actor: "Select Actors"
+  btn_apply: "&Apply"
+
+owlatentfactors:
+  name: "Latent Factors"
+  desc: "Visualize data fusion graph with latent factors. Can select a latent factor for further analysis."
+  box:
+    info: "Info"
+    recipe_factor: "Recipe factors"
+    backbone_factor: "Backbone factors"
+    complete_relation: "Completed relations"
+  label:
+    object_type: "%(n_object_types)d object types"
+    relation: "%(n_relations)d relations"
+
+owmeanfuser:
+  name: "Mean Fuser"
+  box:
+    mean_fuser: "Mean fuser"
+    output_completed_relation: "Output completed relation"
+  label:
+    masked_value_mean: "Calculate masked values as mean by:"
+    not_mask: "(not masked)"
+  gbox:
+    rows: "Rows"
+    columns: "Columns"
+    all_values: "All values"
+
+owmoviegenres:
+  name: "Movie Genres"
+  desc: "Construct movies-genres or actors-genres relation matrix."
+  box:
+    genre: "Genres"
+
+owmovieratings:
+  name: "Movie Ratings"
+  desc: "Construct a relation matrix of user ratings for movies."
+  box_movie_selection: "Movie Selection (from %d)"
+  btn:
+    fraction_movie: "Fraction of movies"
+    time_period: "Time period:"
+    apply: "&Apply"
+  label:
+    start_year: "Starting year: "
+    end_year: "Ending year: "
+
+owsamplematrix:
+  name: "Matrix Sampler"
+  desc: "Sample a relation matrix."
+  box_sample_method: "Sampling method"
+  box_data_sample_proportion: "Proportion of data in the sample"
+  row:
+    row_type: "Row Type"
+    column_type: "Column Type"
+  btn:
+    rows: "Rows"
+    columns: "Columns"
+    rows_columns: "Rows and columns"
+    entries: "Entries"
+    apply: "&Apply"
+
+owtabletorelation:
+  name: "Table to Relation"
+  desc: "Convert data table to relation matrix. Label matrix axis."
+  checkbox_transpose: "Transpose"
+  btn_send: "Send"
+  placeholder_none: "(None)"
+  box:
+    relation: "Relation"
+    row: "Row"
+    object_name: "Object Names"
+  row:
+    name: "Name"
+    column: "Column"
+    object_type: "Object Type"
+    auto_send: "Auto-send"

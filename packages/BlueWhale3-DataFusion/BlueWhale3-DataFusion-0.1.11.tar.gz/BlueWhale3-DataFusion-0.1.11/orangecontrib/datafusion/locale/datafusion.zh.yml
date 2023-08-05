@@ -1,0 +1,155 @@
+package_label: "数据融合"
+package_desc: "数据融合"
+
+common:
+  relation: "关系"
+  fit_fusion_graph: "拟合融合图"
+  fusion_graph: "融合图"
+  filter: "筛选器"
+  movie_actor: "影视演员"
+  costar_actor: "配角演员"
+  mean_fit_fusion_graph: "均值拟合融合图"
+  row_type: "行类型"
+  genres: "流派"
+  ratings: "评价"
+  data: "数据"
+  in_sample_data: "样本内数据"
+  out_sample_data: "样本外数据"
+
+object:
+  user: "用户"
+  movie: "影视"
+  actor: "演员"
+  genres: "流派"
+
+relation:
+  like: "喜欢"
+  fans: "是…的影迷"
+  rated: "评价"
+  mated: "配对"
+  play_in: "参加"
+  prefer: "更喜欢"
+  belong_to: "属于"
+  dislike: "不喜欢"
+  marry_to: "和…结婚"
+  feature: "特征"
+  feature_in: "特征"
+
+owchaining:
+  name: "连锁"
+  desc: "通过潜在因素的链接，在另一类型的特征空间中描绘一种类型的对象。"
+  box_latent_chains: "潜在链接"
+  label_complete_chain_to: "完整链接："
+  btn_latent_space: "潜在空间"
+  btn_feature_space: "特征空间"
+
+owcompletionscoring:
+  name: "完成评分"
+  desc: "使用均方根误差（RMSE）对矩阵完成的质量进行评分。"
+  box_rmse: "RMSE"
+  warn_relation_miss_value: "关系'{}'没有缺失值（掩饰）"
+  label_my_dfmc: "我的dfmc<3"
+
+owfusiongraph:
+  name: "融合图"
+  desc: "构造数据融合图并运行集合矩阵分解。"
+  label:
+    object_type: "%(n_object_types)d 对象类型"
+    relation: "%(n_relations)d 关系"
+  row:
+    fuser_name: "融合名称："
+    maximum_iterations: "最大迭代次数"
+    factorization_rank: "分解秩"
+  btn:
+    decomposition_algorithm: "分解算法"
+    initialization_algorithm: "初始化算法"
+    run_after_change: "更改后运行"
+    run: "运行"
+    random: "随机"
+    random_c: "随机 C"
+    random_vcol: "随机 Vcol"
+    matrix_tri-factorization: "矩阵三因子分解"
+    matrix_tri-completion: "矩阵三次完成"
+  box:
+    info: "信息"
+    relation: "关系"
+
+owimdbactors:
+  name: "IMDb演员"
+  desc: "构建电影演员与演员关系矩阵。"
+  box_select_actor: "选择演员"
+  btn_apply: "&应用"
+
+owlatentfactors:
+  name: "潜在因素"
+  desc: "可视化具有潜在因素的数据融合图。可以选择一个潜在因素进行进一步分析。"
+  box:
+    info: "信息"
+    recipe_factor: "配方因素"
+    backbone_factor: "主干因子"
+    complete_relation: "已完成关系"
+  label:
+    object_type: "%(n_object_types)d 对象类型"
+    relation: "%(n_relations)d 关系"
+
+owmeanfuser:
+  name: "均值融合"
+  box:
+    mean_fuser: "均值融合"
+    output_completed_relation: "输出完成关系"
+  label:
+    masked_value_mean: "计算屏蔽值的平均值："
+    not_mask: "（不掩饰）"
+  gbox:
+    rows: "行"
+    columns: "列"
+    all_values: "所有值"
+
+owmoviegenres:
+  name: "电影类型"
+  desc: "构建电影流派或演员流派关系矩阵。"
+  box:
+    genre: "流派"
+
+owmovieratings:
+  name: "电影分级"
+  desc: "构建电影用户评价关系矩阵。"
+  box_movie_selection: "电影选择（来自%d）"
+  btn:
+    fraction_movie: "电影的分数"
+    time_period: "时间段："
+    apply: "&应用"
+  label:
+    start_year: "起始年份："
+    end_year: "结束年份："
+
+owsamplematrix:
+  name: "矩阵采样器"
+  desc: "抽样一个关系矩阵。"
+  box_sample_method: "抽样方法"
+  box_data_sample_proportion: "样本中数据的比例"
+  row:
+    row_type: "行类型"
+    column_type: "列类型"
+  btn:
+    rows: "行"
+    columns: "列"
+    rows_columns: "行和列"
+    entries: "条目"
+    apply: "&应用"
+
+owtabletorelation:
+  name: "关系表"
+  desc: "将数据表转换为关系矩阵。标记矩阵轴。"
+  checkbox_transpose: "转置"
+  btn_send: "发送"
+  placeholder_none: "（无）"
+  box:
+    relation: "关系"
+    row: "行"
+    object_name: "对象名"
+  row:
+    name: "名称"
+    column: "列"
+    object_type: "对象类型"
+    auto_send: "自动发送"
