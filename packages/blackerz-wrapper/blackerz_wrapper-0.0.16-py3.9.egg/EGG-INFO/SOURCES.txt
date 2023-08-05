@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+blackerz_wrapper/__init__.py
+blackerz_wrapper.egg-info/PKG-INFO
+blackerz_wrapper.egg-info/SOURCES.txt
+blackerz_wrapper.egg-info/dependency_links.txt
+blackerz_wrapper.egg-info/top_level.txt
