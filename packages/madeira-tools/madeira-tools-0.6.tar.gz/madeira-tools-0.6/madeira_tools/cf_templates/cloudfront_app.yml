@@ -1,0 +1,291 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+
+  ApiConfigurationSecretJson:
+    Description: JSON-encoded representation of API configuration secret
+    Type: String
+
+  AppName:
+    Description: Owner-defined name for the application
+    Type: String
+
+  ApiPersistenceBucketName:
+    Description: S3 bucket for backend application data
+    Type: String
+
+  ApiRouterFunctionCode:
+    Description: The API router lambda function code (<=4096 chars)
+    Type: String
+
+  ApiRouterFunctionLayerArns:
+    Description: Comma-separated list of Lambda Layers to be used by ApiRouterFunction
+    Type: String
+
+  CdnBucketName:
+    Description: S3 bucket from which front end assets will be cached by CDN
+    Type: String
+
+  CdnName:
+    Description: Content distribution name (comment)
+    Type: String
+
+  CertificateArn:
+    Description: ACM certificate ARN (from us-east-1) to be used by front-end web service
+    Type: String
+
+  HostName:
+    Description: Host name of front-end (custom domain name)
+    Type: String
+
+Resources:
+
+  ############################################################
+  # UI resources
+  ############################################################
+  CloudFrontIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: !Sub "CDN User for access to S3 bucket: ${CdnBucketName}"
+
+  CdnBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref CdnBucketName
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  CdnBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref CdnBucketName
+      # see also https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Action:
+            - s3:GetObject
+            Effect: Allow
+            Principal:
+              CanonicalUser: !GetAtt CloudFrontIdentity.S3CanonicalUserId
+            Resource: !Sub "arn:aws:s3:::${CdnBucket}/*"
+
+  FrontEndCdn:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - !Ref HostName
+
+        # Effectively forwards requests to '/api' so we don't need a separate domain + cert nor
+        # special UI logic to figure out the API base URL.
+        CacheBehaviors:
+          - AllowedMethods: [HEAD, DELETE, POST, GET, OPTIONS, PUT, PATCH]
+            # Managed-CachingDisabled
+            CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad
+            PathPattern: /api/*
+            OriginRequestPolicyId: !Ref ApiCdnOriginRequestPolicy
+            TargetOriginId: Api
+            ViewerProtocolPolicy: https-only
+        Comment: !Ref CdnName
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+          # Managed-CachingOptimizedForUncompressedObjects
+          CachePolicyId: b2884449-e4de-46a7-ac36-70bc7f1ddd6d
+          Compress: true
+          # Managed-CORS-S3Origin
+          OriginRequestPolicyId: 88a5eaf4-2fd4-4709-b370-b4c650ea3fcf
+          TargetOriginId: S3
+          ViewerProtocolPolicy: redirect-to-https
+
+        DefaultRootObject: index.html
+        Enabled: true
+        HttpVersion: http2
+        IPV6Enabled: true
+
+        Origins:
+          - Id: S3
+            S3OriginConfig:
+              OriginAccessIdentity: !Sub "origin-access-identity/cloudfront/${CloudFrontIdentity}"
+            DomainName: !Sub "${CdnBucketName}.s3.${AWS::Region}.amazonaws.com"
+          - Id: Api
+            CustomOriginConfig:
+              OriginProtocolPolicy: https-only
+              OriginSSLProtocols:
+                - TLSv1.2
+            DomainName: !Select [1, !Split ["https://", !GetAtt ApiGateway.ApiEndpoint]]
+
+        PriceClass: PriceClass_100
+        Restrictions:
+          GeoRestriction:
+            Locations:
+              - US
+            RestrictionType: whitelist
+        ViewerCertificate:
+          AcmCertificateArn: !Ref CertificateArn
+          MinimumProtocolVersion: TLSv1.2_2019
+          SslSupportMethod: sni-only
+      Tags:
+        - Key: Name
+          Value: !Sub "${AppName}-app"
+
+  ############################################################
+  # API resources
+  ############################################################
+  ApiPersistenceBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref ApiPersistenceBucketName
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  ApiCdnOriginRequestPolicy:
+    Type: AWS::CloudFront::OriginRequestPolicy
+    Properties:
+      OriginRequestPolicyConfig:
+        CookiesConfig:
+          CookieBehavior: none
+        # NOTE: when changing this, be sure to use settings that restrict the headers
+        #  sent to the origin. Any policy that lets CloudFront send the 'Host' header will result in
+        #  403 responses from API Gateway (requests will not be routed to the intended API Gateway
+        #  instance, and no logs will be visible)
+        HeadersConfig:
+          HeaderBehavior: whitelist
+          Headers:
+            - Origin
+            - Referer
+            - User-Agent
+            - X-Forwarded-For
+            - Access-Control-Request-Headers
+            - Access-Control-Request-Method
+        Name: !Sub "${AppName}ApiCdnOriginRequestPolicy"
+        QueryStringsConfig:
+          QueryStringBehavior: all
+
+  ApiGatewayRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${AppName}ApiGatewayRole"
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: apigateway.amazonaws.com
+      Policies:
+        - PolicyName: !Sub "${AppName}ApiGatewayPolicy"
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Action: lambda:InvokeFunction
+                Effect: Allow
+                Resource: !GetAtt ApiRouterFunction.Arn
+
+  ApiGateway:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      CorsConfiguration:
+        AllowMethods:
+          - HEAD
+          - GET
+          - POST
+          - PUT
+          - OPTIONS
+        AllowOrigins:
+          - !Sub "https://${HostName}"
+      CredentialsArn: !GetAtt ApiGatewayRole.Arn
+      Name: !Sub "${AppName} API"
+      ProtocolType: HTTP
+      Target: !GetAtt ApiRouterFunction.Arn
+
+  ApiRouterFunction:
+    Type: AWS::Lambda::Function
+    DependsOn: ApiRouterFunctionLogGroup
+    Properties:
+      Code:
+        ZipFile: !Ref ApiRouterFunctionCode
+      Description: !Sub "${AppName} API request router"
+      Environment:
+        Variables:
+          API_CONFIG_SECRET_NAME: !Sub "${AppName}_config"
+          LOG_LEVEL: INFO
+      FunctionName: !Sub "${AppName}_api_router"
+      Handler: index.handler
+      Layers: !Split [",", !Ref ApiRouterFunctionLayerArns ]
+      MemorySize: 128
+      PackageType: Zip
+      Role: !GetAtt ApiLambdaRole.Arn
+      Runtime: python3.8
+      Timeout: 30
+
+  ApiRouterFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/${AppName}_api_router"
+      RetentionInDays: 3
+
+  ApiLambdaRole:
+    Type: AWS::IAM::Role
+    DependsOn: ApiRouterFunctionLogGroup
+    Properties:
+      RoleName:  !Sub "${AppName}ApiLambdaRole"
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+      Description: "For any lambda that services API gateway requests"
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName:  !Sub "${AppName}ApiLambdaPolicy"
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              # Needed so that we will have permission to know about objects that do not exist!
+              # https://github.com/aws/aws-cli/issues/2041
+              - Action:
+                  - s3:ListBucket
+                Effect: Allow
+                Resource: !Sub "arn:aws:s3:::${ApiPersistenceBucket}"
+              - Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                Effect: Allow
+                Resource: !Sub "arn:aws:s3:::${ApiPersistenceBucket}/*"
+              - Action:
+                  - secretsmanager:DescribeSecret
+                  - secretsmanager:GetSecretValue
+                  - secretsmanager:UpdateSecret
+                Effect: Allow
+                Resource: !Ref ApiConfigurationSecret
+              - Action:
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Effect: Allow
+                Resource:
+                - !Sub "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/${AppName}_api_router"
+                - !Sub "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/${AppName}_api_router:*"
+                - !Sub "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/${AppName}_api_router:*:*"
+
+
+  ApiConfigurationSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub "${AppName}_config"
+      Description: 'API credentials'
+      Tags:
+        - Key: StackID
+          Value: !Ref 'AWS::StackId'
+      SecretString: !Ref ApiConfigurationSecretJson

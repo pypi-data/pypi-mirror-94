@@ -1,0 +1,102 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+
+  AppName:
+    Description: Owner-defined name for the application
+    Type: String
+
+  CdnBucketName:
+    Description: S3 bucket from which front end assets will be cached by CDN
+    Type: String
+
+  CdnName:
+    Description: Content distribution name (comment)
+    Type: String
+
+  CertificateArn:
+    Description: ACM certificate ARN (from us-east-1) to be used by front-end web service
+    Type: String
+
+  HostName:
+    Description: Host name of front-end (custom domain name)
+    Type: String
+
+Resources:
+
+  ############################################################
+  # UI resources
+  ############################################################
+  CdnBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref CdnBucketName
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  CdnBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref CdnBucketName
+      # see also https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Action:
+            - s3:GetObject
+            Effect: Allow
+            Principal:
+              CanonicalUser: !GetAtt CloudFrontIdentity.S3CanonicalUserId
+            Resource: !Sub "arn:aws:s3:::${CdnBucket}/*"
+
+  CloudFrontIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: !Sub "CDN User for access to S3 bucket: ${CdnBucketName}"
+
+  FrontEndCdn:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - !Ref HostName
+        Comment: !Ref CdnName
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+          # Managed-CachingOptimizedForUncompressedObjects
+          CachePolicyId: b2884449-e4de-46a7-ac36-70bc7f1ddd6d
+          Compress: true
+          # Managed-CORS-S3Origin
+          OriginRequestPolicyId: 88a5eaf4-2fd4-4709-b370-b4c650ea3fcf
+          TargetOriginId: S3
+          ViewerProtocolPolicy: redirect-to-https
+
+        DefaultRootObject: index.html
+        Enabled: true
+        HttpVersion: http2
+        IPV6Enabled: true
+
+        Origins:
+          - Id: S3
+            S3OriginConfig:
+              OriginAccessIdentity: !Sub "origin-access-identity/cloudfront/${CloudFrontIdentity}"
+            DomainName: !Sub "${CdnBucketName}.s3.${AWS::Region}.amazonaws.com"
+
+        PriceClass: PriceClass_100
+        Restrictions:
+          GeoRestriction:
+            Locations:
+              - US
+            RestrictionType: whitelist
+        ViewerCertificate:
+          AcmCertificateArn: !Ref CertificateArn
+          MinimumProtocolVersion: TLSv1.2_2019
+          SslSupportMethod: sni-only
+      Tags:
+        - Key: Name
+          Value: !Sub "${AppName}-app"

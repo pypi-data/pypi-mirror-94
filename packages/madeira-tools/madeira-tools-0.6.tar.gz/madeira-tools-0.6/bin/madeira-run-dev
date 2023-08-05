@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+set -e
+
+app=$(basename "${PWD}")
+docker_dir="${PWD}/docker"
+
+if [ ! -d "${docker_dir}" ]; then
+
+  echo "${docker_dir} not found or is not a directory"
+  exit 1
+fi
+
+source "${docker_dir}/common.src"
+
+if ! which xfce4-terminal >/dev/null; then
+
+  echo "xfce4-terminal not found"
+  return
+fi
+
+for container in "${api_image_name}" "${ui_image_name}"; do
+  container_is_running=$(docker ps -q -f name="${container}")
+  if [ "${container_is_running}" ]; then
+    docker stop "${container}"
+  fi
+done
+
+echo "Starting terminal for ${app} dev"
+xfce4-terminal \
+      --title strava_ui  --working-directory "${docker_dir}" --command ./run_ui.sh \
+--tab --title strava_api --working-directory "${docker_dir}" --command ./run_api.sh
