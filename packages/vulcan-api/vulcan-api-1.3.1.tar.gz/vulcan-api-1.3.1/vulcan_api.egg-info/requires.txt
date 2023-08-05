@@ -1,0 +1,16 @@
+requests
+pyopenssl
+uonet-request-signer
+uonet-request-signer-hebe
+pytz
+aenum
+related
+asyncio
+aiohttp
+cchardet
+aiodns
+yarl
+
+[testing]
+pytest
+python-dotenv
