@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: revdb
+Version: 0.0.4
+Summary: database sdk for revteltech
+Home-page: https://github.com/revtel/revdb
+Author: Chien Hsiao
+Author-email: chien.hsiao@revteltech.com
+License: MIT
+Keywords: revteltech,sdk
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: mjango (>=0.2.0)
+Requires-Dist: requests
+
+UNKNOWN
+
+

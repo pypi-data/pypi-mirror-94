@@ -1,0 +1,13 @@
+revdb/__init__.py,sha256=OP9lEoaAobiJSdy0AwEgwYPV-8uj8I7ujvMTCGtZ3Lk,62
+revdb/db.py,sha256=BhcW7ADBBEqtFaIsveF7JGVKrzOeQAwdqHuZXjLjanI,221
+revdb/exceptions.py,sha256=-6jPX2Y4oQL5WoZh9GZcva0CNBlpaWXQaA5J-c2rwiE,155
+revdb/jstorage.py,sha256=cY3NsFfIM13b5INHhYbgN-QT8YRoij_U1RuZYZTbrMI,46
+revdb/manager.py,sha256=Cu5Qf8Mo-u_FPlnjlD4a0GujpLEWbXrGgWQq3fV7vJ0,1648
+revdb/models.py,sha256=8CXg23sqkqTHLHoYjPmleQnwLViqTxHgpfqfmpmxK6Q,158
+revdb/operators.py,sha256=sC2zichpzcRfPMHaXhJE3u239i4bp9cQR9fnt0Xzsvg,1262
+revdb/query.py,sha256=M68yEEsDX-HLo67GbNUBRJsztB2q18NQGbCyad-pjR8,2281
+revdb/settings.py,sha256=aTPs_av0ber6xf3q7u7n5Q3lWnCB2-4YGF6Zi3nd-Zo,1665
+revdb-0.0.4.dist-info/METADATA,sha256=w3OF7fxbtvm0LoupSsWK3QcMYb6ziQ_UeWu355rqLRM,657
+revdb-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+revdb-0.0.4.dist-info/top_level.txt,sha256=91SuXtssHswjZCkJagZWjaWXU8mjQJeLcD42DaTNAMU,6
+revdb-0.0.4.dist-info/RECORD,,
