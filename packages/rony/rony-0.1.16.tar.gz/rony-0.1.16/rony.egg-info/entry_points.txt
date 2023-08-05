@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        rony=rony.cli:cli
+    
