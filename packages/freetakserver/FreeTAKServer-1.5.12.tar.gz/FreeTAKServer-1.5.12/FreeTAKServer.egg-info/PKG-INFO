@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: FreeTAKServer
+Version: 1.5.12
+Summary: An open source server for the TAK family of applications.
+Home-page: https://github.com/FreeTAKTeam/FreeTakServer
+Author: FreeTAKTeam
+Author-email: your.email@domain.com
+License: Eclipse License
+Download-URL: https://github.com/Tapawingo/FreeTakServer/archive/v0.8.4-Beta.tar.gz
+Description: An open source server for the TAK family of applications.
+Keywords: TAK,OPENSOURCE
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Provides-Extra: ui
