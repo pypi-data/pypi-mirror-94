@@ -1,0 +1,4 @@
+einops>=0.3
+fire
+numpy
+torch>=1.6

@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+tr_rosetta_pytorch/__init__.py
+tr_rosetta_pytorch/cli.py
+tr_rosetta_pytorch/tr_rosetta_pytorch.py
+tr_rosetta_pytorch/utils.py
+tr_rosetta_pytorch.egg-info/PKG-INFO
+tr_rosetta_pytorch.egg-info/SOURCES.txt
+tr_rosetta_pytorch.egg-info/dependency_links.txt
+tr_rosetta_pytorch.egg-info/entry_points.txt
+tr_rosetta_pytorch.egg-info/requires.txt
+tr_rosetta_pytorch.egg-info/top_level.txt
+tr_rosetta_pytorch/models/models.tar.gz
