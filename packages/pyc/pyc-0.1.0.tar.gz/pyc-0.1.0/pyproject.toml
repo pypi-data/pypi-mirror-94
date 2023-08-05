@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pyc"
+version = "0.1.0"
+description = "Compile Python code to binary"
+authors = ["Jukka Aho <ahojukka5@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Cython = "^0.29.21"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^20.8b1", allow-prereleases = true}
+flake8 = "^3.8.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pyc = "pyc.cli:compile"
+python-pyc = "pyc.cli:compile_and_run"
