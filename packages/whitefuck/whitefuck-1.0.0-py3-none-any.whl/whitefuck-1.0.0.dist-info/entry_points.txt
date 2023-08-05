@@ -1,0 +1,4 @@
+[console_scripts]
+wf = whitefuck.__main__:main
+whitefuck = whitefuck.__main__:main
+
