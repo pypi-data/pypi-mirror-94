@@ -1,0 +1,9 @@
+black
+numpy
+opt-einsum
+pyflakes
+pyro-api
+pyro-ppl
+pytest
+torch
+virtualenv

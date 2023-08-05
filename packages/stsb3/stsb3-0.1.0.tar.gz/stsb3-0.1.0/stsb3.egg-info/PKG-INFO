@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: stsb3
+Version: 0.1.0
+Summary: Structural time series building blocks
+Home-page: https://gitlab.com/daviddewhurst/stsb3
+Author: David Dewhurst
+Author-email: drd@davidrushingdewhurst.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
