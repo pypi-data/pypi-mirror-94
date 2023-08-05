@@ -1,0 +1,3 @@
+[console_scripts]
+ert3=ert3.console:main
+
