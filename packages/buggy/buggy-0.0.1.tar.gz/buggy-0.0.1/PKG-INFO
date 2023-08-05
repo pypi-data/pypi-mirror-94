@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: buggy
+Version: 0.0.1
+Summary: CLI tool to report bugs in Python packages.
+Home-page: https://github.com/orsinium-labs/flake8-length
+Author: Gram
+Author-email: gram@orsinium.dev
