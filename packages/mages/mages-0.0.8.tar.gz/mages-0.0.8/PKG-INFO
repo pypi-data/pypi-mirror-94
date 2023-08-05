@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: mages
+Version: 0.0.8
+Summary: Cute little python module full of magic and wonder
+Home-page: https://github.com/ncoop57/mages/tree/master/
+Author: Nathan Cooper
+Author-email: nathanallencooper@gmail.com
+License: Apache Software License 2.0
+Description: # Mages
+        > Cute little python module full of magic and wonder.
+        
+        
+        ## Install
+        
+        `pip install mages`
+        
+        ## How to use
+        
+        Type mages into your command line to play the game:
+        
+        `mages`
+        
+Keywords: text-based text game magic mages
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
