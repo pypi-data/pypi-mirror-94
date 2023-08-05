@@ -1,0 +1,111 @@
+CHANGES
+=======
+
+0.4.8
+-----
+
+* Yet another attempt to fix deployment
+
+0.4.7
+-----
+
+* Only deploy for Python 3.9
+
+0.4.6
+-----
+
+* Only try to deploy once, not for each environment
+* Ignore the .eggs folder generated at deploy time
+
+0.4.5
+-----
+
+* Fix PyPi token to work on Travis.org and not Travis.com
+* Fix Table so that it is generic at runtime. (#45)
+
+0.4.4
+-----
+
+* Start CI by Python 3.9
+* Fix requirements: we don't need mock
+
+0.4.3
+-----
+
+* Yet more type fixes
+* Migrate distribution to use pbr and deploy to PyPi in CI/CD when a new (#42)
+* Expose the airtable.Record type. (#44)
+* Fix types by adding the get accessor to records
+
+0.4.2
+-----
+
+* Version 0.4.2 to release the fix on typing stubs
+* Add tests for typing and fix those. (#41)
+
+0.4.1
+-----
+
+* Bump version number before release
+* Add a test for iterate and fix it. (#40)
+
+0.4.0
+-----
+
+* Bump version number before release (#28)
+* Add a direct access to tables, for stronger typing. (#33)
+* Raise AirtableError exceptions on failure (#38)
+* Check for proper types in CI and fix them. (#37)
+* Fix CI: run on Python 2 and Python 3. (#36)
+* Fix tests for newer version of requests package. (#32)
+* Strong type the airtable record dict. (#31)
+* Style updates
+* quick updates
+* Add an option to use the class used to create dictionaries
+* Fix Python 2/3 types compatibilities by using the six library
+* mod travis & improve readme
+* Update README.md
+* fix travis status
+* Revert "more trav"
+* more trav
+* more trav
+* travis fix
+* Updated the minimum requests package required
+* updated setup.py
+* Allow "from airtable import Airtable" (#24)
+* Add [PEP 484](https://www.python.org/dev/peps/pep-0484/) type hints
+* Fixed travis error message (option --use-mirrors is invalid)
+* Added git ignore for compiled files and setup stuff
+* Added max\_records and fields options to get/iterate methods. Updated documentation and version accordingly
+* Fixes issue with check string for unicode
+* Fix compatibility with python 3.x
+* fixed import path in documentation
+* fixed path joining error on windows
+* Add info to setup.py to automatically populate the info on PyPi
+
+0.3.1
+-----
+
+* Bump version number to 0.3.1
+* Enable getting only a partial AirTable table by view and/or formula
+
+0.3.0
+-----
+
+* Bump version number before release
+* Add an iterate method to iterate over all records of a table
+
+0.2.0
+-----
+
+* put the test back where it was so it would pass CI checks
+* moved tests to main dir, few cosmetic changes, was able to get it working on my machine
+* removed parenthesis from line 40 of airtable.py--import now working smoothly
+* Downgrading version from 1.0.0 to 0.2.0
+* Using OrderedDict to preserve the order of fields
+* Adding a setup.py file to allow for distribution
+* Create README.md
+* Adding Travis CI file
+* Added create and update methods
+* Refactoring package into folder. Adding tests for get and delete functions
+* Initial commit

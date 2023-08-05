@@ -1,0 +1,26 @@
+language: python
+python:
+- 3.9
+- 2.7
+install:
+- pip install -r requirements.txt
+- pip install -r requirements-test.txt
+- "[[ $TRAVIS_PYTHON_VERSION == 2.7 ]] || pip install mypy"
+script:
+- python test_airtable.py
+- "[[ $TRAVIS_PYTHON_VERSION == 2.7 ]] || PYTHONPATH=. stubtest airtable"
+- "[[ $TRAVIS_PYTHON_VERSION == 2.7 ]] || PYTHONPATH=. mypy typetests --strict"
+notifications:
+  email:
+  - joseph@bestjames.com
+deploy:
+  provider: pypi
+  username: __token__
+  password:
+    secure: XHwgDbubXEIhKHVhUrpYfeR81MU0FfDaOaQz7J+Jh6z1/VrKN0TpDxjaekHr5c9HP8Vr+nq2iuB+X60FvK/9J6Qe6AtYH0zv8l9HI/vVkbNwL0Jd9XXAbrCVm4jsCYz4Epd9jeWxAqeRJNGe221jGCaBk9xkq03ZNDn4uYSzbtrFlkwlTsOf4Zo3MFFCVDXuQV0az+49CqhNuYwsVQecse/niXbJfP+WO4dw9EgeTjHk3ofO1em0dhI3T/57163g5HlyYM5kQgPVxzQqruFPcjFzKZpw664Foy7NpptfUl6cvFfUHcUXT0CV1oloyUAUdwKQQpjrw1fhW4nJgw9eWv6RYL6v8d2rD16Ebfdzmlbhrxf1okT0xk/OgL7lXmjpeBWQCV3rmggqNSqy1QxDFZIRKKOCHWWB3BKjwjMTYSF4hdvsG5TmzFSsUVriBgPI2eyhz/rLTS1gUFqfb6SzOKylR3DJFwIRY1mUczooFHuuNK5Kw73MSk+GyZXHb78ewws7iv1nO502PB4UtVntd0xxoDSedKBNdSQhDkPfVLXyZfCMO5pQsxHZMTilI5eMXn/4gDZe5ABjZvm5DgZVBHTPCsX5r9/eNi1lRRqmrb7n9vLgjV4O4UReDHhEfCaBXAr+EjmgmEkLjTKqlhv/Tn+XffJh2Pw/QhW7qAKU6iY=
+  distributions: sdist bdist_wheel
+  on:
+    tags: true
+    python: 3.9
+    all_branches: true
+    repo: josephbestjames/airtable.py
