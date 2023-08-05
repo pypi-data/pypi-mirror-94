@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: badurls
+Version: 0.2
+Summary: Simple URL obfuscation tool
+Home-page: https://github.com/Anish-M-code/URL-obfuscator
+Author: Anish M
+Author-email: aneesh25861@gmail.com
+License: GPLv3
+Description: Python Program to obfuscate URLs to make Phishing attacks more difficult to detect. Uses Active open redirect list and other URL obfuscation techniques.
+Keywords: social engineering,cybersecurity
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
