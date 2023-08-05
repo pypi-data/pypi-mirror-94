@@ -1,0 +1,3 @@
+[console_scripts]
+fastapi-manage=fastapi_manage.main:app
+
