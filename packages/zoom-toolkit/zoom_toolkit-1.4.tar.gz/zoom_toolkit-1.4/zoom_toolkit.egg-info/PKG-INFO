@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: zoom-toolkit
+Version: 1.4
+Summary: This is a simple yet useful toolkit implemented for working on zoom records.
+Home-page: https://github.com/OnurArdaB/Zoom-Toolkit
+Author: Onur Arda Bodur
+Author-email: onurarda@sabanciuniv.edu
+License: MIT
+Download-URL: https://github.com/OnurArdaB/Zoom-Toolkit/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: Zoom,Automated,Video Processing
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
