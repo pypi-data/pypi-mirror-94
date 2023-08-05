@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+metapan/__init__.py
+metapan/metapan.py
+metapan.egg-info/PKG-INFO
+metapan.egg-info/SOURCES.txt
+metapan.egg-info/dependency_links.txt
+metapan.egg-info/entry_points.txt
+metapan.egg-info/top_level.txt
+metapan.egg-info/zip-safe
+metapan/modules/__init__.py
+metapan/statsmodules/__init__.py
