@@ -1,0 +1,5 @@
+[robotpybuild]
+ctre = ctre.pkgcfg
+ctre_simtalonsrx = ctre._simtalonsrx.pkgcfg
+ctre_simvictorspx = ctre._simvictorspx.pkgcfg
+
