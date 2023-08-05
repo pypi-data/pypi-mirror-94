@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pybit-lib
+Version: 0.1.0
+Summary: A python bit calculator.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT License
+Platform: UNKNOWN
+
+# pybit-lib
+
+## About pybit-lib  
+
+## Usage
+### How to run tests  
+Example:
+```
+pytest 
+```
+

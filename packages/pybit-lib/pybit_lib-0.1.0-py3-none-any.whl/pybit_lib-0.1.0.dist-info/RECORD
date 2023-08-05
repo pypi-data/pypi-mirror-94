@@ -1,0 +1,9 @@
+pybit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pybit/bits.py,sha256=r2aR0h3k3Gi2uBLLl79cdx8AV4m3e6fpHHoYboz7KKA,9323
+pybit/multiplication.py,sha256=vpDp1rk7m8uDosG10txEA5JXQk59rBvOZa31aAQvifM,6098
+pybit/radix_convert.py,sha256=EzlKB-0tIJh8NDavxpVTrI5IA5HdYNy4irWgHt8dfY4,2313
+pybit_lib-0.1.0.dist-info/LICENSE,sha256=78RbBVOOTMy9ytoCVX4moh3igY_EQrn5tzkIG7WSFcM,1092
+pybit_lib-0.1.0.dist-info/METADATA,sha256=lg5XuzA2G8HJyeHYC1os5eAxweWFFFAQsT67ZGBnXC8,277
+pybit_lib-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pybit_lib-0.1.0.dist-info/top_level.txt,sha256=0VlDVIrdQTFo4nlkKyeAEOPoSNmPLbN8YQeAVwUOQIQ,6
+pybit_lib-0.1.0.dist-info/RECORD,,
