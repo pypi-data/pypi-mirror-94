@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: bokeh-garden
+Version: 0.0.2
+Summary: Additional widgets for Bokeh
+Home-page: https://github.com/EMeraldGeo/BokehGarden
+Author: Egil Moeller
+Author-email: em@emeraldgeo.no
+License: UNKNOWN
+Description: Additional widgets for Bokeh plots:
+        
+        * Interactive colorbar that allows adjusting the color map by pan and zoom
+        * LaTeX labels
+            
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
