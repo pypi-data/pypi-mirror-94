@@ -1,0 +1,10 @@
+setup.py
+autoBoostcamp/__init__.py
+autoBoostcamp/__main__.py
+autoBoostcamp/backend.py
+autoBoostcamp/test.py
+autoBoostcamp.egg-info/PKG-INFO
+autoBoostcamp.egg-info/SOURCES.txt
+autoBoostcamp.egg-info/dependency_links.txt
+autoBoostcamp.egg-info/requires.txt
+autoBoostcamp.egg-info/top_level.txt
