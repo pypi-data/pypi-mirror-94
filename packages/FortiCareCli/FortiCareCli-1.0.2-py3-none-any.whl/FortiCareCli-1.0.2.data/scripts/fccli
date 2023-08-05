@@ -1,0 +1,205 @@
+#!python
+# vim: tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+import argparse, configparser
+import os,sys,re
+import datetime
+from datetime import timezone
+import logging
+from tabulate import tabulate
+
+from FortiCare import FortiCare
+from FortiCare import RateLimitException, FCRStatusException
+
+from FortiCareCli import customLogging
+
+def handleCommands(args):
+    # prepare library
+    fc = FortiCare(token=args.token, ratelimit=(not args.no_ratelimit))
+
+    if args.proxy:
+        fc.proxy = args.proxy
+
+    # handle the commands
+    # "download" command to download the VM license file
+    if args.operation == "download":
+        # Here we surely have 'serial' with serial number filled by user
+        # and possible 'file' where to store the license (it can be empty,
+        # in wich case we will print it on standard output).
+        license = fc.DownloadLicense(args.serial)
+
+        if args.file:
+            with open(args.file, 'w') as f: f.write(license)
+            print("License saved in {}".format(args.file))
+        else:
+            print("{}".format(license), end='')
+
+    # "register" a set of devices via serial numbers 
+    elif args.operation == "registerunits":
+
+        for i in range(0, len(args.serials), 10):
+            toRegister = args.serials[i:i+10]
+
+            try:
+                fc.RegisterDevices(toRegister, args.government)
+                print("Your devices {} are correctly registered".format(", ".join(toRegister)))
+
+            except FCRStatusException as e:
+                print(str(e))
+                
+                originalResponse = e.fullResponse()
+                if 'Assets' in originalResponse and originalResponse['Assets'] != None:
+                    print("Per-asset status:")
+                    for asset in originalResponse['Assets']:
+                        print('- {} {}'.format(asset['Serial_Number'], asset['Message']))
+        
+    # "register" command to register new VM (by code)
+    elif args.operation == "registervm":
+        # Here we need to check wherther either 'code' or 
+        # 'pdf' was given and behave accordingly.
+        # If none was given, return error
+        code = None
+
+        # First retrieve the code
+        # if file was given, read the code from pdf file
+        if args.pdf:
+            # invalid path to pdf file?
+            if not os.path.isfile(args.pdf):
+                print("PDF file {} was not found.".format(args.pdf), file=sys.stderr)
+                sys.exit(1)
+
+            code = fc.GetRegistrationCodeFromPDF(args.pdf)
+        
+        elif args.code:
+            code = args.code
+
+        else:
+            print('Either code or path to PDF file must be specified', file=sys.stderr) 
+            sys.exit(1)
+
+        serial = fc.RegisterLicense(code, args.ip, args.government)
+        print("Registered as {}".format(serial))
+
+    # "get" command is to get basic information about bunch of devices
+    # passed serial number can be only partial - matching more devices
+    elif args.operation == "get":
+        asset = fc.GetAsset(serialNumber=args.serial)
+        print(asset)
+
+    # List all registered devices and list them via serial number via serial number 
+    elif args.operation == "list":
+        Assets = fc.GetAssets()
+        headers = ["Product Model", "Serial Number"]
+        data = []
+        reg = args.snre if args.snre else ''
+        for asset in Assets:
+            if re.search(reg, asset.serialNumber) or (not args.snre):
+                data.append([asset.productModel,
+                            asset.serialNumber])
+        print(tabulate(data,headers=headers))
+
+    # Update asset description
+    elif args.operation == "description":
+        if args.desc:
+            # Update API doesn't return error even if it fails to
+            # change the Description, so let's verify it on our own
+            fc.UpdateAssetDescription(args.serial, args.desc)
+            asset = fc.GetAsset(args.serial)
+            if asset.description != args.desc:
+                print('Unknown error when updating description')
+            else:
+                print(f"Description set for {asset.serialNumber}")
+        else:
+            asset = fc.GetAsset(args.serial)
+            print(asset.description)
+
+    # List all devices expiring in args.days days
+    elif args.operation == "expire":
+        now = datetime.datetime.now(tz=timezone.utc)
+        expireTime = now + datetime.timedelta(int(args.days))
+        Assets = fc.GetAssets(expire=expireTime)
+        headers = ["Product Model", "Serial Number", "Expiration date"]
+        data = []
+        for asset in Assets:
+            data.append([asset.productModel,
+                        asset.serialNumber])
+        print(tabulate(data,headers=headers))
+
+    else:
+        print("No command specified.\nUse -h to get a list of recognized commands.", file=sys.stderr)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-v', '--verbose', dest='verbose', action='store_true', help='Enable verbose output for troubleshooting')
+    parser.add_argument('-p', '--proxy',   dest='proxy',                        help='Set a proxy to use')
+    parser.add_argument('-r', '--no-ratelimit', dest='no_ratelimit', action='store_true', help='Do not enforce local rate-limiting')
+    parser.add_argument('-c', '--config', dest='config_file',                   help='Load settings from config file (default "'+os.path.expanduser("~/.fccli.conf")+')', default=os.path.expanduser("~/.fccli.conf"))
+    parser.add_argument('-t', '--token',  dest='token',                         help='Personal token for FortiCare API')
+
+    subparsers = parser.add_subparsers(help='sub-command help', dest='operation')
+
+    subparser = subparsers.add_parser('download', help='Download license file for virtual devices')
+    subparser.add_argument('-s', '--serial', dest='serial', required=True, help='Device serial number')
+    subparser.add_argument('-f', '--file',   dest='file',                  help='File to store the license')
+
+    subparser = subparsers.add_parser('registerunits', help='Register one or more devices via serial number')
+    subparser.add_argument('-g', '--government', dest='government', default=False, action='store_true', help='Device used in govenment account')
+    subparser.add_argument('-s', '--serials', dest='serials', nargs='+', required=True, help='Device serial numbers')
+   
+    subparser = subparsers.add_parser('registervm', help='Register new VM')
+    subparser.add_argument('-i', '--ip',   dest='ip', help='Specify the IP to couple with the device')
+    subparser.add_argument('-g', '--government', dest='government', default=False, action='store_true', help='Device used in govenment account')
+    group = subparser.add_mutually_exclusive_group(required=True)
+    group.add_argument('-f', '--pdf',  dest='pdf',  help='Path to the PDF file to read code from')
+    group.add_argument('-c', '--code', dest='code', help='Code specified directly')
+    
+    subparser = subparsers.add_parser('get', help='Get multiple assets')
+    subparser.add_argument('-s', '--serial', required=True, dest='serial', help='Specify serial number which can only be partial (like "FGVM")')
+
+    subparser = subparsers.add_parser('expire', help='Get expiring devices')
+    subparser.add_argument('-d', '--days', required=True, dest='days', help='Get the list of expiring devices in X days')
+
+    subparser = subparsers.add_parser('list', help='List Registered devices')
+    subparser.add_argument('--snre', dest='snre',  help='Serial Number regular expression to retrieve particular devices')
+    
+    subparser = subparsers.add_parser('description', help='Get or update description for the asset')
+    subparser.add_argument('-s', '--serial', dest='serial', required=True, help='Specify serial number')
+    subparser.add_argument('-d', '--description', dest='desc', help='New asset descritpion')
+
+    args, remaining_argv = parser.parse_known_args()
+
+    # setup logging and show level based of -v argument
+    if args.verbose:
+        customLogging.setup(logging.DEBUG)
+        logging.getLogger("filelock").setLevel(logging.DEBUG)
+    else:
+        customLogging.setup(logging.INFO)
+        logging.getLogger("filelock").setLevel(logging.WARNING)
+
+    
+    # load defaults from config file, all can be overwrite by specifying the parameter explicitly
+    defaults = {}
+    config = None
+
+    if args.config_file and os.path.isfile(args.config_file):
+        config = configparser.ConfigParser()
+        config.read([args.config_file])
+        if not config.has_section('default'):
+            print("[default] section is not present in {}".format(args.config_file), file=sys.stderr)
+            sys.exit(1)
+        defaults.update(dict(config.items("default")))
+
+    # parser command line arguments
+    parser.set_defaults(**defaults)
+    args = parser.parse_args()
+
+    # token must be present either in config or as paramter
+    if not args.token:
+        print("Token must be present either in config file or as command line argument!", file=sys.stderr)
+        exit(1)
+ 
+    #
+    try:
+        handleCommands(args)
+    except RateLimitException:
+        print("Rate limit exceeeded")

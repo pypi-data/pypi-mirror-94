@@ -1,0 +1,320 @@
+Metadata-Version: 2.1
+Name: FortiCareCli
+Version: 1.0.2
+Summary: Example application to interact with FortiCare library
+Home-page: https://pypi.org/project/FortiCareCli/
+Author: See "Authors" section
+Author-email: 
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: FortiCare (==1.0.2)
+
+
+# Abstract
+
+This package installs `fccli` command that uses [FortiCare library](/project/FortiCare/) to manage devices in Fortinet FortiCare system.
+
+This is mainly meant as the reference implementation of the [FortiCare library](/project/FortiCare/), but it is fully working and usable for simple device management.
+
+# Authors
+
+This project is managed by API team of Fortinet Support EMEA. Code was written by Luca Pizziniaco (lpizziniaco at fortinet dot com) and Ondrej Holecek (oholecek at fortinet dot com). 
+
+# Usage
+
+Utility `fccli` is automatically installed from `pip3` into Python scripts directly, which is normally in `PATH` on Windows, Linux and MacOS. On Windows this must be called as `fccli.py`.
+
+```
+usage: fccli [-h] [-v] [-p PROXY] [-r] [-c CONFIG_FILE] [-t TOKEN] {download,registerunits,registervm,get,expire,list,description} ...
+
+positional arguments:
+  {download,registerunits,registervm,get,expire,list,description}
+                        sub-command help
+    download            Download license file for virtual devices
+    registerunits       Register one or more devices via serial number
+    registervm          Register new VM
+    get                 Get multiple assets
+    expire              Get expiring devices
+    list                List Registered devices
+    description         Get or update description for the asset
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --verbose         Enable verbose output for troubleshooting
+  -p PROXY, --proxy PROXY
+                        Set a proxy to use
+  -r, --no-ratelimit    Do not enforce local rate-limiting
+  -c CONFIG_FILE, --config CONFIG_FILE
+                        Load settings from config file (default "/Users/oho/.fccli.conf)
+  -t TOKEN, --token TOKEN
+                        Personal token for FortiCare API
+```
+
+## Token
+
+Token is mandatory parameter and must be provided either as command line argument or loaded from config file. To get the token, employees can use _Service Access Requests form_ and customers need to contact their SE.
+
+## Config file
+
+To prevent writing token and other possible parameters on command line with every request, it is possible to create a config file and store it there. By default the config file is loaded from home directory from ".fccli.conf" (check `-h` output for the exact path on your operating system). This can be changed using `--config` command line parameter.
+
+Example of config file:
+
+```
+[default]
+token = XYZT-ABCDE-PNZ1-RNQF-1234-6P3B-5678-IAWQ
+```
+
+## Proxy
+
+Because the token is bound to a specific source IP, it is necessary to use some HTTP(s) proxy when accessing it from different address. For that the `--proxy` parameter is present. It can be stored in the config file same as the token.
+
+```
+[default]
+token = XYZT-ABCDE-PNZ1-RNQF-1234-6P3B-5678-IAWQ
+proxy = http://myproxy:3128
+```
+
+Proxy can be HTTP or HTTPs and it can also contain proxy authentication string like `https://user:pass@myproxy:3128`.
+
+## Ratelimit
+
+To prevent hitting request limits set on FortiCare servers, the ratelimit is also enforced locally by default. This can be disabled with `--no-ratelimit` optional parameter.
+
+## Commands
+
+### list
+
+```
+$ fccli list -h
+usage: fccli list [-h] [--snre SNRE]
+
+optional arguments:
+  -h, --help   show this help message and exit
+  --snre SNRE  Serial Number regular expression to retrieve particular devices
+```
+
+Without any parameters it lists all devices in the account. 
+
+With optional `--snre` parameter, this regular expression is used for filter the serial numbers. This is done locally after retrieving all serial numbers via FortiCare library.
+
+Example:
+
+```
+$ fccli -c ../config.conf list
+Product Model                  Serial Number
+-----------------------------  ----------------
+FortiGate 6500F                F6KF50XXXXXXXXXX
+FortiGate 6500F                F6KF50XXXXXXXXXX
+FortiAuthenticator VM          FAC-VMTM2XXXXXXX
+FortiAuthenticator VM          FAC-VMTM2XXXXXXX
+FortiGate 3000D                FGT3KDXXXXXXXXXX
+FortiGate 3000D                FGT3KDXXXXXXXXXX
+FortiGate 40F                  FGT40FXXXXXXXXXX
+FortiGate 40F                  FGT40FXXXXXXXXXX
+FortiGate 500D                 FGT5HDXXXXXXXXXX
+FortiGate 500D                 FGT5HDXXXXXXXXXX
+FortiGate 60F                  FGT60FXXXXXXXXXX
+FortiGate 60F                  FGT60FXXXXXXXXXX
+FortiGate 61F                  FGT61FXXXXXXXXXX
+FortiGate 61F                  FGT61FXXXXXXXXXX
+FortiGate 600D                 FGT6HDXXXXXXXXXX
+FortiGate 600D                 FGT6HDXXXXXXXXXX
+FortiGate 80E                  FGT80EXXXXXXXXXX
+FortiGate 80E                  FGT80EXXXXXXXXXX
+FortiGate VM01                 FGVM01XXXXXXXXXX
+FortiGate VM01                 FGVM01XXXXXXXXXX
+FortiTester VM 16 CPU          FTSV16XXXXXXXXXX
+FortiTester VM 16 CPU          FTSV16XXXXXXXXXX
+FortiWeb 3000E                 FV-3KEXXXXXXXXXX
+FortiWebVM 1 CPU               FVVM01XXXXXXXXXX
+FortiWebVM 1 CPU               FVVM01XXXXXXXXXX
+FortiWebVM 1 CPU               FVVM01XXXXXXXXXX
+```
+
+```
+$ fccli -c ../config.conf list --snre ^F6KF
+Product Model    Serial Number
+---------------  ----------------
+FortiGate 6500F  F6KF50XXXXXXXXXX
+FortiGate 6500F  F6KF50XXXXXXXXXX
+```
+
+### get
+
+```
+$ fccli -c ../config.conf get -h
+usage: fccli get [-h] -s SERIAL
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SERIAL, --serial SERIAL
+                        Specify serial number which can only be partial (like "FGVM")
+```
+
+Show details about specific device. Parameter `--serial` is manadary. It also shows entitlements information - what features are enabled with the license and their validity dates.
+
+```
+$ fccli -c ../config.conf get -s FGVM02XXXXXXXXXX 
+Model: FortiGate VM02
+Serial Number: FGVM02XXXXXXXXXX
+SKU: None
+Registration Date: 2020-03-22 06:34:06 +0100
+Entitlements:
+  Type    Level  Start Date              End Date                  Remaining Days  Description
+------  -------  ----------------------  ----------------------  ----------------  ---------------------------
+     2        6  2020-03-22 01:00 +0100  2021-03-22 01:00 +0100                48  Firmware & General Updates
+    11       10  2020-03-22 01:00 +0100  2021-03-22 01:00 +0100                48  Enhanced Support
+    21        6  2020-03-22 01:00 +0100  2021-03-22 01:00 +0100                48  Advanced Malware Protection
+    22        6  2020-03-22 01:00 +0100  2021-03-22 01:00 +0100                48  NGFW
+    41        6  2020-03-22 01:00 +0100  2021-03-22 01:00 +0100                48  Web Filtering
+    51        6  2020-03-22 01:00 +0100  2021-03-22 01:00 +0100                48  AntiSpam
+    54        6  2020-03-22 01:00 +0100  2021-03-22 01:00 +0100                48  Industrial Security Service
+    80        6  2020-03-22 01:00 +0100  2021-03-22 01:00 +0100                48  Security Rating Update
+```
+
+### download
+
+```
+fccli -c ../config.conf download -h
+usage: fccli download [-h] -s SERIAL [-f FILE]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SERIAL, --serial SERIAL
+                        Device serial number
+  -f FILE, --file FILE  File to store the license
+```
+
+Download the VM license file. Parameter `--serial` is the mandatory VM serial number. With no other parameters, the license is printed on standard output, but it can be saved to file using `--file` optional parameter.
+
+```
+$ fccli -c ../config.conf download -s FGVM02XXXXXXXXXX
+-----BEGIN FGT VM LICENSE-----
+QAAAANsdfsdr3gdfG44wFDGGdfw4gdfhHFG4dgdfh543GDGuu45egdh/gdfhe4tf
+[...]
+Trgdfhrst56w3+gdfhd/gdfhf3gd53gd
+-----END FGT VM LICENSE-----
+```
+
+### expire
+
+```
+$ fccli -c ../config.conf expire -h
+usage: fccli expire [-h] -d DAYS
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DAYS, --days DAYS  Get the list of expiring devices in X days
+```
+
+Show devices that are going to expire in specied amount of days.
+
+```
+$ fccli -c ../config.conf expire -d 10
+Product Model                  Serial Number
+-----------------------------  ----------------
+FortiVoiceEnterprise VM 2000   FOV-2KXXXXXXXXXX
+FortiVoiceEnterprise VM 2000   FOV-2KXXXXXXXXXX
+FortiVoiceEnterprise VM 2000   FOV-2KXXXXXXXXXX
+FortiVoiceEnterprise VM 2000   FOV-2KXXXXXXXXXX
+FortiVoiceEnterprise VM 2000   FOV-2KXXXXXXXXXX
+FortiVoiceEnterprise VM 50     FOV-50XXXXXXXXXX
+FortiVoiceEnterprise VM 50     FOV-50XXXXXXXXXX
+```
+
+Use `get` command for more details:
+
+```
+$ fccli -c ../config.conf get -s FOV-2KXXXXXXXXXX -f
+Model: FortiVoiceEnterprise VM 2000
+[...]
+  Type    Level  Start Date              End Date                  Remaining Days  Description
+------  -------  ----------------------  ----------------------  ----------------  --------------------------
+     2        6  2020-01-13 01:00 +0100  2021-02-11 01:00 +0100                 9  Firmware & General Updates
+     2        6  2020-01-13 01:00 +0100  2021-02-11 01:00 +0100                 9  Firmware & General Updates
+    11       20  2020-01-13 01:00 +0100  2021-02-11 01:00 +0100                 9  Enhanced Support
+    11       20  2020-01-13 01:00 +0100  2021-02-11 01:00 +0100                 9  Enhanced Support
+    12       20  2020-01-13 01:00 +0100  2021-02-11 01:00 +0100                 9  Telephone Support
+    12       20  2020-01-13 01:00 +0100  2021-02-11 01:00 +0100                 9  Telephone Support
+```
+
+### description
+
+```
+$ fccli -c ../config.conf description -h
+usage: fccli description [-h] -s SERIAL [-d DESC]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SERIAL, --serial SERIAL
+                        Specify serial number
+  -d DESC, --description DESC
+                        New asset descritpion
+```
+
+Update description string stored in FortiCare for each registered device. This is a custom string that can contain anything you find useful. Without any parameter current description is returned, with optional parameter `--description` it is updated.
+
+```
+$ fccli -c ../config.conf description  -s FPXVM2XXXXXXXXXX
+- FPXVM2XXXXXXXXXX:
+
+$ fccli -c ../config.conf description  -s FPXVM2XXXXXXXXXX -d test
+- FPXVM2XXXXXXXXXX: test
+
+$ fccli -c ../config.conf description  -s FPXVM2XXXXXXXXXX
+- FPXVM2XXXXXXXXXX: test
+```
+
+If the description is not empty, it is show in the basic output of `get` command:
+
+```
+$ fccli -c ../config.conf get -s FPXVM2XXXXXXXXXX
+Model: FortiProxy VM2
+Serial Number: FPXVM2XXXXXXXXXX
+SKU: None
+Registration Date: 2020-03-22 08:41:34 +0100
+Asset Description: test
+```
+
+### registervm
+
+```
+$ fccli -c ../config.conf  registervm -h
+usage: fccli registervm [-h] [-i IP] (-f PDF | -c CODE)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i IP, --ip IP        Specify the IP to couple with the device
+  -f PDF, --pdf PDF     Path to the PDF file to read code from
+  -c CODE, --code CODE  Code specified directly
+```
+
+Register VM license. The `--code` parameter is mandatory unless you specify `--pdf`, in which the case the code is automatically extracted from the given PDF file received from Fortinet.
+
+Be aware the the code is not the serial number. It is rather long strig like `ZN121-AC76A-34X7C-642DV-W365TA`, which - when registered correctly - will generate a VM license with unique (and different) serial number.
+
+Some devices required also registering the maangement IP they are going to have in your network, which can be done with optional `--ip` parameter.
+
+### registerunits
+
+```
+$ fccli -c ../config.conf  registerunits -h
+usage: fccli registerunits [-h] -s SERIALS [SERIALS ...]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SERIALS [SERIALS ...], --serials SERIALS [SERIALS ...]
+                        Device serial numbers
+```
+
+Register one or more physical devices by their serial numbers.
+
+The library (and the FortiCare registration API) limits the number of serial numbers in one API request to 10 - if there are more serial numbers, `fccli` will create groups by 10 and submit multiple reqistration requests. Be aware that it might be uncomfortable to recover from batch registration errors, therefore it is suggested to register devices one by one.
+
+
