@@ -1,0 +1,7 @@
+[build-system]
+# minimum requirement to get setup.py working
+requires = [
+    'numpy==1.20.0',
+    'setuptools',
+]
+build-backend = 'setuptools.build_meta'
