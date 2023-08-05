@@ -1,0 +1,14 @@
+rcsb/__init__.py,sha256=ED6jHcYiuYpr_0vjGz0zx2lrrmJT9sDJCzIljoDfmlM,65
+rcsb/utils/__init__.py,sha256=ED6jHcYiuYpr_0vjGz0zx2lrrmJT9sDJCzIljoDfmlM,65
+rcsb/utils/ccdc/CcdcGeomAnal.py,sha256=cplO73JPvD4z71uKDG4NltwF7jzbhL1OJlXUVfw0UEY,7362
+rcsb/utils/ccdc/CcdcSearch.py,sha256=1eE5Kzy3IBP1SKJx5bcruBzkK9lV3bOQtqwxXzF3P5o,15488
+rcsb/utils/ccdc/CcdcSearchExec.py,sha256=Q_7xzLANsLCw81zylPnYMmjCEO3X0uuZfPnsyBbkWlE,4207
+rcsb/utils/ccdc/CcdcSearchExecMp.py,sha256=K5HMRA9yy-cqUsxr_NqXxlojD3B6rGX2K_o6TU-8Yyg,5336
+rcsb/utils/ccdc/CcdcSearchMp.py,sha256=9iE4ee8VGd-TxPPwHAdBCcjjBSpM1fmAQE3ZTXYBmUw,3917
+rcsb/utils/ccdc/__init__.py,sha256=ony1sJGrm7V8aB7c-ShTR2eULZ67ONMcWW4wUljywDE,154
+rcsb.utils.ccdc-0.18.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+rcsb.utils.ccdc-0.18.dist-info/METADATA,sha256=eTp9stgPCXDwVezDfDzpdpkfZ0nA0Mn01RYfMwYCBFE,866
+rcsb.utils.ccdc-0.18.dist-info/WHEEL,sha256=oh0NKYrTcu1i1-wgrI1cnhkjYIi8WJ-8qd9Jrr5_y4E,110
+rcsb.utils.ccdc-0.18.dist-info/entry_points.txt,sha256=AQyfXH3pdVqsbCPVxofkHE4dmoF47oB8b3KDkto2iLM,73
+rcsb.utils.ccdc-0.18.dist-info/top_level.txt,sha256=o9JzKwjXZKvIt99MG_WvJuOnR1DZn6_CIPtgWgUB0E8,5
+rcsb.utils.ccdc-0.18.dist-info/RECORD,,

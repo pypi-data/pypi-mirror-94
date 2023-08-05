@@ -1,0 +1,3 @@
+[console_scripts]
+ccdc_search_cli = rcsb.utils.ccdc.CcdcSearchExec:main
+

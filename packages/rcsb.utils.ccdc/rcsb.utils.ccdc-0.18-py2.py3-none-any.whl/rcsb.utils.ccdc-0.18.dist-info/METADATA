@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: rcsb.utils.ccdc
+Version: 0.18
+Summary: RCSB Python utility classes support CCDC search
+Home-page: https://github.com/rcsb/py-rcsb_utils_ccdc.git
+Author: John Westbrook
+Author-email: john.westbrook@rcsb.org
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: mmcif (>=0.61)
+Requires-Dist: rcsb.utils.io (>=0.99)
+Requires-Dist: rcsb.utils.multiproc (>=0.18)
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+See:  README.md
+
+
