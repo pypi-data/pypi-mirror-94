@@ -1,0 +1,12 @@
+README.md
+setup.py
+gitea/__init__.py
+gitea/basicGiteaApiObject.py
+gitea/exceptions.py
+gitea/gitea.py
+gitea/giteaApiObject.py
+py_gitea.egg-info/PKG-INFO
+py_gitea.egg-info/SOURCES.txt
+py_gitea.egg-info/dependency_links.txt
+py_gitea.egg-info/requires.txt
+py_gitea.egg-info/top_level.txt
