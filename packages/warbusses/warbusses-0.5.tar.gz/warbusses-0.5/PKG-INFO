@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: warbusses
+Version: 0.5
+Summary: Useful info about warsaw busses
+Home-page: https://github.com/szczor/warbusses
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: This project contains some information about busses in Warsaw. You can check out
+        locations where busses exceed 50km/h in calculate_speed.py module. Also you can track 
+        the busses and their times on particular bus_stops in check_punctuality.py module.
+        
+        Modules with 'create' in their names are responsible for creating useful dataframes and saving
+        them in .csv files. 
+        
+        bus_coordinates.csv contains busses and their coordinates measured at specific time.
+        
+        bus_stops.csv contains bus_stops: their names and coordinates. 
+        
+        coordinates_speed.csv contains coordinates of busses.
+        
+        speed.csv contains speeds of busses between time periods. 
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
