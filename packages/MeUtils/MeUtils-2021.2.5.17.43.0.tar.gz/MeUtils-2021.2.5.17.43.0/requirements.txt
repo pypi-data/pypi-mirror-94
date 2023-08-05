@@ -1,0 +1,38 @@
+# utils
+iteration_utilities
+
+# common
+tqdm
+joblib
+pandas
+scikit-learn
+Pillow-PIL
+
+# log
+loguru
+pretty_errors
+
+
+# cli
+fire
+
+
+# config
+kazoo
+pyyaml
+jmespath
+
+# http
+# httpx
+requests
+
+# struct
+pydantic
+# https://github.com/python-attrs/attrs
+
+# cache
+# from cachetools import cached, LRUCache, TTLCache
+
+
+
+

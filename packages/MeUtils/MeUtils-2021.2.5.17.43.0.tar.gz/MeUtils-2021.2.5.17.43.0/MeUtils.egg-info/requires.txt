@@ -1,0 +1,14 @@
+iteration_utilities
+tqdm
+joblib
+pandas
+scikit-learn
+Pillow-PIL
+loguru
+pretty_errors
+fire
+kazoo
+pyyaml
+jmespath
+requests
+pydantic
