@@ -1,0 +1,11 @@
+lmdb/__init__.py,sha256=XI0LolyP3ydhPmwRPKCfJpCJkPFqcMw8CmeWXL55wL0,1763
+lmdb/__main__.py,sha256=Ys2Hq2zl4SUcYzN0udOeRvT4cj-cVvvtIC7hz8UA0yo,885
+lmdb/_config.py,sha256=Crx1g1M2C8_zWz8OwPN4bxT0c9N-XWVGYy7wFp983IM,288
+lmdb/cffi.py,sha256=ecCNRcQjWntdWPr4Y0xMffxUSqU79B99K-luu9zFC1A,93400
+lmdb/cpython.cp37-win_amd64.pyd,sha256=gVA40jw6JL3uyYhY_1aj1VZDamZ1GZ95_rDro6Sy1yE,143872
+lmdb/tool.py,sha256=inV_kEddKSJNSq_6H0wRX0H3dvzm7zpFWfvAXAcpRR4,20299
+lmdb-1.1.1.dist-info/LICENSE,sha256=jIW61fF5Y8r-DlSjsgdcba8lVAerODP2fUNxqedX9Fw,2261
+lmdb-1.1.1.dist-info/METADATA,sha256=tAh_HFB2gyG9ObLRVOePa8R6NzbCGnX2sVz7GUJCEY0,1064
+lmdb-1.1.1.dist-info/WHEEL,sha256=zMRqF9ZfHGxBPfvcWwE-LxcVkdB1hhr8hy4cOfZGPZU,101
+lmdb-1.1.1.dist-info/top_level.txt,sha256=qOkC5Hl6beBqEvdM6eZ-XU2LK4zbo3QHaTOUeHIc7s4,13
+lmdb-1.1.1.dist-info/RECORD,,
