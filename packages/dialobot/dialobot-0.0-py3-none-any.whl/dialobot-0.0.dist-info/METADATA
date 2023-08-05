@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: dialobot
+Version: 0.0
+Summary: Opensource Multilingual Chatbot Framework
+Home-page: https://github.com/dialobot/dialobot
+Author: Dialobot
+Author-email: kevin.woong@kakaobrain.com
+License: Apache 2.0
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+# Dialobot: Opensource Multilingual Chatbot Framework
+
+... Work in process ...
+
+<br>
+
+## Citation
+```
+@misc{dialobot,
+  author       = {Ko, Hyunwoong and Kim, Sunghyun and Na, Youngyun and Lee, Sangji and 
+                  Yang, Sooyoung and Lee, Yoonjae and Jung, Hwansuk},
+  title        = {Dialobot: Opensource Multilingual Chatbot Framework},
+  howpublished = {\url{https://github.com/dialobot/dialobot}},
+  year         = {2021},
+}
+```
+
+<br>
+
+## Contributor
+[Hyunwoong Ko](https://github.com/hyunwoongko), Sunghyun Kim, [Youngyun Na](https://github.com/fightnyy), [Sangji Lee](https://github.com/sangdee), Sooyoung Yang, [Yoonjae Lee](https://github.com/gityunjae) and [Hwanseok Jeong](https://github.com/jayden5744)
+
+<br>
+
+## License
+Dialobot project is licensed under the terms of the Apache License 2.0.
+
+Copyright 2021 [Dialobot](https://github.com/dialobot). All Rights Reserved.
+
+
+
