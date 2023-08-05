@@ -1,0 +1,17 @@
+sense2vec/__init__.py,sha256=ZKY_KxH5kRiBKjby5T0pWiZk_qsS_kRfl58HO8GEa1Y,374
+sense2vec/component.py,sha256=J4IiTVArgYtNtsimAeoJGB_8dmJPz8PQ2rrsFqVihbQ,8972
+sense2vec/prodigy_recipes.py,sha256=nuKVpbUNGaxCP02uE3mBC3FilULwMYAVbx_wdpy1Zlc,27566
+sense2vec/sense2vec.py,sha256=yInviI6ePEjAf2Fp8j51Ms60dJgoRr5rrOu8_wOno9I,14002
+sense2vec/util.py,sha256=9aP3hTkjRkRz6FjjdOjF3tGNwQS0fZSYdEQHEOPQQi8,7082
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_component.py,sha256=t4m6AZCYgnH9GUaf5J3hhgsLBU5iX0eb8p7gh0TkO80,3500
+tests/test_model.py,sha256=d4-mX9JkIkuzku1AnxPgKYgTDTPBLW7m7st9x6EdY0g,1715
+tests/test_sense2vec.py,sha256=ewKPoJ-pjDYdsHj1Cwj-PP8PVKsGHBMzSh-VK5mcwNI,6331
+tests/test_util.py,sha256=CnjNwantQE6lWmjaUrsHSAZvGbkdpECrZGQ83Llwyc0,2489
+sense2vec-1.0.3.dist-info/LICENSE,sha256=cX74Uq7qnz0DmLkoydCufSMr8N_9AoWLB1sFTUTnUNw,1083
+sense2vec-1.0.3.dist-info/METADATA,sha256=JMqa-UAxeniY3im-FWtx0erc1JuQaVyJ90wC81R_3C4,53763
+sense2vec-1.0.3.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+sense2vec-1.0.3.dist-info/entry_points.txt,sha256=cW1c2jijhRNcpYqDYbqI-EAiLvSjiJU9h0V1V6ucBIA,379
+sense2vec-1.0.3.dist-info/top_level.txt,sha256=vFobBU0bKnlCKKCbPFVWHwcCydAQfpt2UZYHsjny-X8,16
+sense2vec-1.0.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+sense2vec-1.0.3.dist-info/RECORD,,
