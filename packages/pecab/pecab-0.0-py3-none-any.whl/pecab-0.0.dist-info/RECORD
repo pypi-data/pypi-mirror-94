@@ -1,0 +1,10 @@
+mecab/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mecab/data_structure.py,sha256=nKmWyw_IPEa_fzJNfIZnxx90YJQah4v-rexvXreXY1A,1585
+mecab/lattice.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mecab/mecab.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mecab/model.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mecab/tagger.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pecab-0.0.dist-info/METADATA,sha256=NPS2u_l8P1TdekqMa27K3twuiRzBH7wW7OabSajKnkA,1578
+pecab-0.0.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+pecab-0.0.dist-info/top_level.txt,sha256=x8WZ0UArm7kuCMkR2-XXfVKcI1RoSzC6PynQAtwnQsY,6
+pecab-0.0.dist-info/RECORD,,

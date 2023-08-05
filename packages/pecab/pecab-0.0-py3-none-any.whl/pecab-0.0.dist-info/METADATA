@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: pecab
+Version: 0.0
+Summary: Pure python mecab analyzer for Korean & Japanese
+Home-page: https://github.com/hyunwoongko/kss
+Author: Hyunwoong Ko
+Author-email: kevin.woong@kakaobrain.com
+License: Apache 2.0
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+# Pecab: Pure python mecab analyzer for Korean & Japanese
+[![PyPI version](https://badge.fury.io/py/pecab.svg)](https://badge.fury.io/py/pecab)
+![GitHub](https://img.shields.io/github/license/hyunwoongko/pecab)
+
+... Work in process ...
+
+<br><br>
+
+## Citation
+```
+@misc{pecab,
+  author       = {Ko, Hyunwoong and Jang, Wonjun and Lee, Ilkyu and Son, Euibeom},
+  title        = {Pecab: Pure python mecab analyzer for Korean & Japanese},
+  howpublished = {\url{https://github.com/hyunwoongko/pecab}},
+  year         = {2021},
+}
+```
+
+<br><br>
+
+## Contributor
+[Hyunwoong Ko](https://github.com/hyunwoongko), Wonjun Jang, Ilkyu Lee and Euibeom Son
+
+<br><br>
+
+## License
+Pecab project is licensed under the terms of the Apache License 2.0.
+
+Copyright 2021 [Hyunwoong Ko](https://github.com/hyunwoongko). All Rights Reserved.
+
+
+
