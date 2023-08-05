@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: intense
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: https://www.github.com/nclwater/intense-qc
+Author: Elizabeth Lewis, David Pritchard, Roberto Villalobos-Herrera, Fergus McClean
+Author-email: fergus.mcclean@newcastle.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Requires-Dist: pandas (>=1)
+Requires-Dist: rpy2 (>=2.9)
+Requires-Dist: xarray (>=0.15)
+Requires-Dist: scipy (>=1.4)
+Requires-Dist: netCDF4 (>=1.5)
+
+UNKNOWN
+
+
