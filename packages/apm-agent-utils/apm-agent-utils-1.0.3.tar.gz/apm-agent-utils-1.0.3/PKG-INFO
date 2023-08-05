@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: apm-agent-utils
+Version: 1.0.3
+Summary: This package can help you create Elastic APM instrumentations using regex
+Home-page: https://github.com/vuonglv1612/apm-agent-utils
+License: MIT
+Keywords: apm,elastic,utils,apm-utils,agent
+Author: vuonglv
+Author-email: it.vuonglv@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: elastic-apm (>=5.8.0,<6.0.0)
+Project-URL: Repository, https://github.com/vuonglv1612/apm-agent-utils
+Description-Content-Type: text/markdown
+
+## Elastic APM Agent Utils
+This package can help you create Elastic APM instrumentations using regex.
+
+### Dependencies
+1. `python3.6+`  
+2. `elastic-apm`  
+
+### Installation
+```sh
+pip install apm-agent-utils
+```

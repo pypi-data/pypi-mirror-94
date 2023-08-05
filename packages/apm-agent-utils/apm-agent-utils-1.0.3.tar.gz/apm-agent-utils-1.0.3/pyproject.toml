@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "apm-agent-utils"
+version = "1.0.3"
+description = "This package can help you create Elastic APM instrumentations using regex"
+authors = ["vuonglv <it.vuonglv@gmail.com>"]
+keywords = ["apm", "elastic", "utils", "apm-utils", "agent"]
+homepage = "https://github.com/vuonglv1612/apm-agent-utils"
+repository = "https://github.com/vuonglv1612/apm-agent-utils"
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+elastic-apm = "^5.8.0"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^20.8b1", allow-prereleases = true}
+
+[tool.black]
+line_length = 79
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
