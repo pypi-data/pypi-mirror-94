@@ -1,0 +1,15 @@
+README.rst
+setup.py
+mmcq/__init__.py
+mmcq/color.py
+mmcq/constant.py
+mmcq/math_.py
+mmcq/palette.py
+mmcq/quantize.py
+mmcq/region.py
+mmcq/struct.py
+mmcq.py.egg-info/PKG-INFO
+mmcq.py.egg-info/SOURCES.txt
+mmcq.py.egg-info/dependency_links.txt
+mmcq.py.egg-info/requires.txt
+mmcq.py.egg-info/top_level.txt
