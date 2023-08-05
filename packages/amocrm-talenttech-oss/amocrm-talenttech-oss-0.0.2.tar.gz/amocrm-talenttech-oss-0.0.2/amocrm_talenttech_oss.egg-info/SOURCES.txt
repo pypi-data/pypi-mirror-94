@@ -1,0 +1,14 @@
+README.md
+setup.py
+amocrm_talenttech_oss.egg-info/PKG-INFO
+amocrm_talenttech_oss.egg-info/SOURCES.txt
+amocrm_talenttech_oss.egg-info/dependency_links.txt
+amocrm_talenttech_oss.egg-info/requires.txt
+amocrm_talenttech_oss.egg-info/top_level.txt
+api/__init__.py
+api/api_loader_amocrm_v2.py
+api/api_loader_amocrm_v4.py
+db/__init__.py
+db/clickhouse_uploader.py
+db/vertica_uploader.py
+test/test_amocrm.py
