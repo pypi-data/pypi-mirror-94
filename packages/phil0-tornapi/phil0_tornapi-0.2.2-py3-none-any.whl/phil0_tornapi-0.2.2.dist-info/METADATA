@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: phil0-tornapi
+Version: 0.2.2
+Summary: An API wrapper for Torn City.
+Home-page: https://github.com/Phil-0/TornAPI/
+Author: Phil-0, PhilMe [2590086]
+Author-email: UNKNOWN
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests (~=2.25.1)
+
+UNKNOWN
+
+
