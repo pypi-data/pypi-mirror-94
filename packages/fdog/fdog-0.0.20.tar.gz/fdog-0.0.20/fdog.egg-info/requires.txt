@@ -1,0 +1,6 @@
+biopython
+tqdm
+ete3
+six
+PyYAML
+greedyFAS>=1.5.0
