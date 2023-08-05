@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+bin/fhcollector
+fhmediacollector/__init__.py
+fhmediacollector.egg-info/PKG-INFO
+fhmediacollector.egg-info/SOURCES.txt
+fhmediacollector.egg-info/dependency_links.txt
+fhmediacollector.egg-info/not-zip-safe
+fhmediacollector.egg-info/requires.txt
+fhmediacollector.egg-info/top_level.txt
