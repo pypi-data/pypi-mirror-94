@@ -1,0 +1,3 @@
+[console_scripts]
+qat = QATLibrary.cli:main
+

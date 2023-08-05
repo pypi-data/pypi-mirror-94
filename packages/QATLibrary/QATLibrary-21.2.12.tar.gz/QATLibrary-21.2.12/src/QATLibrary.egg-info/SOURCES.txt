@@ -1,0 +1,17 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+src/QATLibrary/QATLibrary.py
+src/QATLibrary/__init__.py
+src/QATLibrary/__main__.py
+src/QATLibrary/cli.py
+src/QATLibrary/templates.py
+src/QATLibrary/version.py
+src/QATLibrary.egg-info/PKG-INFO
+src/QATLibrary.egg-info/SOURCES.txt
+src/QATLibrary.egg-info/dependency_links.txt
+src/QATLibrary.egg-info/entry_points.txt
+src/QATLibrary.egg-info/not-zip-safe
+src/QATLibrary.egg-info/requires.txt
+src/QATLibrary.egg-info/top_level.txt
