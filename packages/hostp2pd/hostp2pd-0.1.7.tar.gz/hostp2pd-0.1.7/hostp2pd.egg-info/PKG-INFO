@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: hostp2pd
+Version: 0.1.7
+Summary: Wi-Fi Direct Session Manager, implementing a host AP daemon in Wi-Fi Direct mode, including P2P WPS enrollment
+Home-page: https://github.com/Ircama/hostp2pd
+Author: Ircama
+License: CC-BY-NC-SA-4.0
+Description: hostp2pd
+        ========
+        
+        __The Wi-Fi Direct Session Manager__
+        
+        *hostp2pd* implements a soft host [Access Point](https://en.wikipedia.org/wiki/Wireless_access_point) (AP) software in [Wi-Fi Direct](https://en.wikipedia.org/wiki/Wi-Fi_Direct) mode, enabling a [wireless network interface card](https://en.wikipedia.org/wiki/Wireless_network_interface_controller) to act as *Ad hoc* access point and [Wi-Fi Protected Setup](https://en.wikipedia.org/wiki/Wi-Fi_Protected_Setup) (WPS) [authentication server](https://en.wikipedia.org/wiki/Authentication_server). It features basic functionalities roughly similar to [hostapd](https://en.wikipedia.org/wiki/Hostapd) (with its [hostapd.conf](https://w1.fi/cgit/hostap/plain/hostapd/hostapd.conf) configuration file), which is the common AP software integrated with *wpa_supplicant*, generally used for [infrastructure mode networking](https://en.wikipedia.org/wiki/Service_set_(802.11_network)#Infrastructure_mode). When implementing a [P2P persistent group](https://praneethwifi.in/2019/11/23/p2p-group-formation-procedure-persistent-method/), [wpa_supplicant](https://en.wikipedia.org/wiki/Wpa_supplicant) offers the [P2P-GO](https://en.wikipedia.org/wiki/Wireless_LAN#Peer-to-peer) features enabled by *hostp2pd* to connect P2P Clients like Android smartphones, as well as provide the standard infrastructure AP mode to the same P2P-GO group, without the need of *hostapd*.
+        
+        In order to accept [Wi-Fi Direct](https://www.wi-fi.org/discover-wi-fi/wi-fi-direct) connections from P2P Clients, to activate a local [P2P-GO](https://w1.fi/wpa_supplicant/devel/p2p.html) (Wi-Fi Direct Group Owner) and to perform WPS authentication, *hostp2pd* fully relies on *wpa_supplicant*, interfacing it through the [wpa_cli](https://manpages.debian.org/stretch/wpasupplicant/wpa_cli.8.en.html) command-line interface ([CLI](https://en.wikipedia.org/wiki/Command-line_interface)): *wpa_cli* is run in background and [p2p commands](https://w1.fi/cgit/hostap/plain/wpa_supplicant/README-P2P) are piped via pseudo-tty communication, while events returned by *wpa_cli* are read and processed.
+        
+        *hostp2pd* includes a command-line interface mode for monitoring and controlling; it can be executed as a batch or as a daemon and provides an API for integration into other Python programs.
+        
+        
+        Full information and usage details at the [hostp2pd GitHub repository](https://github.com/Ircama/hostp2pd).
+        
+Keywords: wi-fi-direct p2p wpa-supplicant wpa-cli
+Platform: UNKNOWN
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: Other/Proprietary License
+Classifier: Topic :: Communications
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: Intended Audience :: Developers
+Requires-Python: >3.5
+Description-Content-Type: text/markdown

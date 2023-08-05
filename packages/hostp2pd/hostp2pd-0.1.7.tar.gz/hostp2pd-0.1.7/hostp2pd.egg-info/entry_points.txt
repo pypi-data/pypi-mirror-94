@@ -1,0 +1,3 @@
+[console_scripts]
+hostp2pd = hostp2pd:main
+
