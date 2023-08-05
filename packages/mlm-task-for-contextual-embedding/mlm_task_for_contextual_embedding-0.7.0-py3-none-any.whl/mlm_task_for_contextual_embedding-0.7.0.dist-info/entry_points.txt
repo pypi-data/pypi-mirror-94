@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    camembert_mlm_ft=src.models.camembert_mlm_ft:main
+    
