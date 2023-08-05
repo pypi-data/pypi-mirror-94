@@ -1,0 +1,9 @@
+README.md
+setup.py
+uddup/__init__.py
+uddup/main.py
+uddup.egg-info/PKG-INFO
+uddup.egg-info/SOURCES.txt
+uddup.egg-info/dependency_links.txt
+uddup.egg-info/entry_points.txt
+uddup.egg-info/top_level.txt
