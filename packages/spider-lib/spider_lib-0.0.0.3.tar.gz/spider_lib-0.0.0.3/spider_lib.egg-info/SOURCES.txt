@@ -1,0 +1,10 @@
+README.md
+setup.py
+spider_lib/__init__.py
+spider_lib/spider.py
+spider_lib/spider_demo.py
+spider_lib.egg-info/PKG-INFO
+spider_lib.egg-info/SOURCES.txt
+spider_lib.egg-info/dependency_links.txt
+spider_lib.egg-info/requires.txt
+spider_lib.egg-info/top_level.txt
