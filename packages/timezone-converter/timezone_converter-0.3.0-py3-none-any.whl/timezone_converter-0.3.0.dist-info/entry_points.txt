@@ -1,0 +1,3 @@
+[console_scripts]
+timezone-converter = timezone_converter.main:main
+
