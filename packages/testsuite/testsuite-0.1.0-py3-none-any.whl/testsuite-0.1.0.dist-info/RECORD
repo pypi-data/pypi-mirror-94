@@ -1,0 +1,12 @@
+testsuite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testsuite/clean_xml.py,sha256=h9HKcRV3I9qopcl6hoCwsU_GeF7TaaqvbB5gXWHk2oU,645
+testsuite/console.py,sha256=LMRnb2LhcBaokUcAp0DQsRMCwqJY5K1It3k29e2B_j4,6100
+testsuite/constants.py,sha256=IxmuHrEmEgocPTnVIrkBLta8TRzGOkt25-JMvjv-vIM,245
+testsuite/generate_sch.py,sha256=oeGbHOlGYhXisPfxSOyD7xK_VnyTduPDKmrcHVSDy14,12158
+testsuite/tests/test_generate_sch.py,sha256=O-lqZhGc2sJ6ao8bvgOXpy1SbDYcnRBISSsFY1SIhNQ,5979
+testsuite/tests/test_validate_sch.py,sha256=juJvAwohvq2uDqpRA4nAr8W14CYxgDnkfYb8_7096gg,8099
+testsuite/validate_sch.py,sha256=a9Jxfroq7kqD6_ylHVLj8Yp8toMiXEPrrZuUMFKe48E,7123
+testsuite-0.1.0.dist-info/entry_points.txt,sha256=mOztdZRITpv6IAi6UCwsISfoSCRAoYu6YjkM2ImsS_s,52
+testsuite-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+testsuite-0.1.0.dist-info/METADATA,sha256=yufwZU9oEaJmiiXDkBfWldvQAv6KOOPRAYgFQ-hdBfU,424
+testsuite-0.1.0.dist-info/RECORD,,
