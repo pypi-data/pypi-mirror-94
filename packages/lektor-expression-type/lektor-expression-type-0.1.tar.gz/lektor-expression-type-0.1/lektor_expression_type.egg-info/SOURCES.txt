@@ -1,0 +1,26 @@
+CHANGES.md
+LICENSE
+MANIFEST.in
+README.md
+lektor_expression_type.py
+pyproject.toml
+setup.cfg
+setup.py
+tox.ini
+.github/workflows/tests.yml
+lektor_expression_type.egg-info/PKG-INFO
+lektor_expression_type.egg-info/SOURCES.txt
+lektor_expression_type.egg-info/dependency_links.txt
+lektor_expression_type.egg-info/entry_points.txt
+lektor_expression_type.egg-info/top_level.txt
+tests/conftest.py
+tests/test_plugin.py
+tests/test-site/Test Site.lektorproject
+tests/test-site/assets/static/style.css
+tests/test-site/content/contents.lr
+tests/test-site/content/about/contents.lr
+tests/test-site/content/projects/contents.lr
+tests/test-site/models/page.ini
+tests/test-site/templates/layout.html
+tests/test-site/templates/page.html
+tests/test-site/templates/macros/pagination.html
