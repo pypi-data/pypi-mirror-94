@@ -1,0 +1,6 @@
+sam-algorithm>=0.8.1
+scanpy
+hnswlib
+dill
+h5py<=2.10
+leidenalg
