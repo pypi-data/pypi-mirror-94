@@ -1,0 +1,65 @@
+Metadata-Version: 1.1
+Name: crisps
+Version: 0.0.3
+Summary: Eat and get fat.
+Home-page: UNKNOWN
+Author: IYEIds
+Author-email: yigidogulay@gmail.com
+License: MIT
+Description: # Crisps
+        
+        You can eat and get fat. Just by 1 line of 
+        code you can start your profile and start to eat crisps. More fat more powerfull!!
+        
+        ## Installation
+        
+        The pip code for installing Crisps:
+        
+        ```
+        pip install crisps
+        ```
+        
+        ## How to use Crisps?
+        
+        In version 0.0.2 you have to write this code for your profile:
+        
+        ```python
+        profilename = crisps.new("Your Name", "Your kilogram") 
+        ```
+        
+        ### Printing Your Info:
+        
+        You just need to print like this
+        
+        ```python
+        print(profilename.name)
+        ```
+        
+        
+        
+        Change Log
+        ==========
+        
+        0.0.1 (7/2/2021)
+        -------------------
+        - First Release
+        
+        0.0.2 (7/2/2021)
+        ----------------
+        - Added first class called New
+        - Tested out library
+        - Added profile mechanism
+        
+        0.0.3 (7/2/2021)
+        ----------------
+        - Added eat mechanisms little part
+        - Used with Django to test for web
+        - Fixed all of the README.txt
+        - Added Doctor
+Keywords: crisps,fat,chabby,eat
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
