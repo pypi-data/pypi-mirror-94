@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+cbpi4-brewpi-ssr/__init__.py
+cbpi4_brewpi_ssr.egg-info/PKG-INFO
+cbpi4_brewpi_ssr.egg-info/SOURCES.txt
+cbpi4_brewpi_ssr.egg-info/dependency_links.txt
+cbpi4_brewpi_ssr.egg-info/top_level.txt
