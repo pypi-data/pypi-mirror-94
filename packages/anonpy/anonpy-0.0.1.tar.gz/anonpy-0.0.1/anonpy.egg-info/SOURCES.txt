@@ -1,0 +1,9 @@
+README.md
+setup.py
+anonpy/__init__.py
+anonpy/api.py
+anonpy.egg-info/PKG-INFO
+anonpy.egg-info/SOURCES.txt
+anonpy.egg-info/dependency_links.txt
+anonpy.egg-info/requires.txt
+anonpy.egg-info/top_level.txt

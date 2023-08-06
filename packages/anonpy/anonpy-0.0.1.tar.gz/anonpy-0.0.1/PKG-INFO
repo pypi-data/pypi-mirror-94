@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: anonpy
+Version: 0.0.1
+Summary: Wrapper around the anonfiles.com API
+Home-page: https://github.com/aaronlyy/anonpy
+Author: Aaron Levi Can (aaronlyy)
+License: GNU General Public License Version 3
+Download-URL: https://github.com/aaronlyy/anonpy/archive/v0.0.1.tar.gz
+Description: # anonpy - Upload files anonymously
+        
+        Wrapper around the anonfiles.com API
+        
+Keywords: api,wrapper,files,hosting,filehosting
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
