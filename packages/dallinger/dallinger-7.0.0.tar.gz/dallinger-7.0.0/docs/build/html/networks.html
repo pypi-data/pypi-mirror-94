@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Networks &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dallinger with Docker" href="docker_setup.html" />
+    <link rel="prev" title="Creating an Experiment" href="creating_an_experiment.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Networks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nodes-and-sources">Nodes and Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#node-connections">Node connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-a-network">Using a network</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-networks">Multiple networks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#common-networks-in-dallinger">Common networks in Dallinger</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#empty">Empty</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chain">Chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delayedchain">DelayedChain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#star">Star</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#burst">Burst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fullyconnected">FullyConnected</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#other-available-networks">Other available networks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#discretegenerational">DiscreteGenerational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scalefree">ScaleFree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sequentialmicrosociety">SequentialMicrosociety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#splitsamplenetwork">SplitSampleNetwork</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-network">Creating a network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Networks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/networks.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="networks">
+<h1>Networks<a class="headerlink" href="#networks" title="Permalink to this headline">¶</a></h1>
+<p>Depending on an experiment’s objectives, there are different ways that
+experiment participants can interact with each other and with the
+experiment’s stimuli. For some experiments, participants may receive the
+same initial stimuli and process it individually. For other experiments,
+they may sequentially interact with the stimuli. Some experiments may
+require participants to interact among themselves in various ways.</p>
+<p>In Dallinger, these interactions among participants and stimuli are
+represented using networks. Each participant and each stimulus represent a
+node in a network. The way these nodes are connected to each other is known
+as a <cite>network topology</cite>. For brevity, we will use the term <cite>network</cite> from now
+on when discussing Dallinger network topologies.</p>
+<p>Dallinger comes with a variety of networks that can be used by experimenters,
+and it’s possible both to extend these networks or create completely new ones
+as well. The networks included in Dallinger are:</p>
+<ul class="simple">
+<li><p>Empty</p></li>
+<li><p>Chain</p></li>
+<li><p>DelayedChain</p></li>
+<li><p>Star</p></li>
+<li><p>Burst</p></li>
+<li><p>FullyConnected</p></li>
+<li><p>DiscreteGenerational</p></li>
+<li><p>ScaleFree</p></li>
+<li><p>SequentialMicrosociety</p></li>
+<li><p>SplitSampleNetwork</p></li>
+</ul>
+<div class="section" id="nodes-and-sources">
+<h2>Nodes and Sources<a class="headerlink" href="#nodes-and-sources" title="Permalink to this headline">¶</a></h2>
+<p>In these networks, each participant is considered as a node. There is also a
+special kind of node, known as a <cite>source</cite>, which transmits information to
+other nodes. Sources are used in Dallinger as a means to send the stimuli to
+the participants. Not all experiments have sources, though. A chatroom
+experiment, for example, could just rely on user interactions and not
+require any other stimuli.</p>
+<p>All nodes have methods named <code class="docutils literal notranslate"><span class="pre">transmit</span></code> and <code class="docutils literal notranslate"><span class="pre">receive</span></code>, for sending and
+receiving information to or from other nodes. These methods can be used when
+adding a node to allow any specialized communication between nodes that an
+experiment may require.</p>
+<p>Nodes can have a <code class="docutils literal notranslate"><span class="pre">fitness</span></code> property, which is a number that can be used in
+some network models. The basic networks do not use this property.</p>
+<p>Some networks require that nodes have other properties, so for properly using
+those networks, an experiment would need to add these properties to its
+nodes.</p>
+</div>
+<div class="section" id="node-connections">
+<h2>Node connections<a class="headerlink" href="#node-connections" title="Permalink to this headline">¶</a></h2>
+<p>A node can be connected to another node in three ways:</p>
+<ol class="arabic simple">
+<li><p>“to” - a single direction connection to another node</p></li>
+<li><p>“from” - a single direction connection from another node</p></li>
+<li><p>“both” - a bidirectional connection to another node</p></li>
+</ol>
+<p>A node can transmit information when connected <cite>to</cite> another node. It can
+receive information when connected <cite>from</cite> another node. If it is connected to
+another node in <cite>both</cite> directions, it can both receive and transmit.</p>
+<p>Nodes have a <code class="docutils literal notranslate"><span class="pre">connect</span></code> method that is used to connect them to other nodes.
+This method can specify the direction of a connection:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_node</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">some_node</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+<span class="n">my_node</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">another_node</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;from&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The default direction is “to”. The following example will make a <cite>to</cite>
+connection:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_node</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">another_node</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that sources can only transmit information, so the only connection type
+allowed for a source node is <cite>to</cite> another node:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_source</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">receiver_node</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-a-network">
+<h2>Using a network<a class="headerlink" href="#using-a-network" title="Permalink to this headline">¶</a></h2>
+<p>To use a specific network, an experiment needs to define a <code class="docutils literal notranslate"><span class="pre">create_network</span></code>
+method in its code. For example, to use a <code class="docutils literal notranslate"><span class="pre">Chain</span></code> network:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dallinger.experiment</span> <span class="kn">import</span> <span class="n">Experiment</span>
+<span class="kn">from</span> <span class="nn">dallinger.networks</span> <span class="kn">import</span> <span class="n">Chain</span>
+
+<span class="k">class</span> <span class="nc">MyExperiment</span><span class="p">(</span><span class="n">Experiment</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">create_network</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Chain</span><span class="p">(</span><span class="n">max_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Like the example shows, to use a network it’s necessary to import it from
+<code class="docutils literal notranslate"><span class="pre">dallinger.networks</span></code> using the network class name (the name from the list
+given above). Once imported, it needs to be initialized as part of the
+experiment, which is done using the <code class="docutils literal notranslate"><span class="pre">create_network</span></code> method.</p>
+<p>All networks accept the <code class="docutils literal notranslate"><span class="pre">max_size</span></code> parameter, which is illustrated above. It
+represents the maximum number of nodes that a network can have. In the
+example above, maximum size is 5 nodes. The <code class="docutils literal notranslate"><span class="pre">full</span></code> method of the network can
+be used to check if a network is full.</p>
+<div class="section" id="multiple-networks">
+<h3>Multiple networks<a class="headerlink" href="#multiple-networks" title="Permalink to this headline">¶</a></h3>
+<p>In experiments configured for a number of <code class="docutils literal notranslate"><span class="pre">practice_repeats</span></code> or
+<code class="docutils literal notranslate"><span class="pre">experiment_repeats</span></code> higher than one, the <code class="docutils literal notranslate"><span class="pre">create_network</span></code> method is called
+multiple times, once for every repeat. This means that an experiment can have
+multiple networks at the same time.</p>
+<p>The experiment setup code assigns each network a role of <cite>practice</cite> or
+<cite>experiment</cite>, depending on how it was created. The experiment class allows
+experiment developers to query networks by role (practice, experiment), or by
+state (full, not full). For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">all_networks</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">networks</span><span class="p">()</span>
+<span class="n">full_networks</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">networks</span><span class="p">(</span><span class="n">full</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">not_full_networks</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">networks</span><span class="p">(</span><span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">practice_networks</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">networks</span><span class="p">(</span><span class="n">role</span><span class="o">=</span><span class="s1">&#39;practice&#39;</span><span class="p">)</span>
+<span class="n">full_experiment_networks</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">networks</span><span class="p">(</span><span class="n">role</span><span class="o">=</span><span class="s1">&#39;experiment&#39;</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Generally, the networks created at experiment setup will all be of the same
+type, but there’s nothing to stop an imaginative experimenter from creating a
+different network type based on some condition, thus having multiple networks
+of different types.</p>
+</div>
+</div>
+<div class="section" id="common-networks-in-dallinger">
+<h2>Common networks in Dallinger<a class="headerlink" href="#common-networks-in-dallinger" title="Permalink to this headline">¶</a></h2>
+<p>Many experiments will be able to just use one of Dallinger’s existing
+networks, rather than defining their own. Lets look at the basic networks
+that can be used out of the box.</p>
+<div class="section" id="empty">
+<h3>Empty<a class="headerlink" href="#empty" title="Permalink to this headline">¶</a></h3>
+<p>There are experiments where participants do not need to interact with each
+other at all. Generally, in this case, a source will be required. The Empty
+network does not connect any nodes with each other, which results in a
+series of isolated nodes. The only exception is, if a source node is added,
+it will be connected to all existing nodes, which means that it’s possible to
+send a stimulus to all network nodes, regardless of their isolation.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/empty.jpg"><img alt="Empty Network" src="_images/empty.jpg" style="width: 350.5px; height: 265.5px;" /></a>
+<p class="caption"><span class="caption-text">Empty Network</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="chain">
+<h3>Chain<a class="headerlink" href="#chain" title="Permalink to this headline">¶</a></h3>
+<p>A Chain network, also known as <cite>line</cite> network, connects each new node to the
+previous one, so that nodes can receive information from their parent, but
+cannot send information back. In other words, it’s a one way transmission
+chain. In general, it’s useful to have a source as the first node, so that
+an initial experiment stimulus is transmitted to the each node through the
+chain. Note that this network explicitly prohibits a source to be added after
+any node, so the source has to come first.</p>
+<p>This network can be useful for experiments where some piece of information,
+for example, a text, needs to be modified or interpreted by each participant
+in succession.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="_images/chain.png"><img alt="Chain Network" src="_images/chain.png" style="width: 368.0px; height: 100.5px;" /></a>
+<p class="caption"><span class="caption-text">Chain Network</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="delayedchain">
+<h3>DelayedChain<a class="headerlink" href="#delayedchain" title="Permalink to this headline">¶</a></h3>
+<p>DelayedChain is a special Chain network designed to work within the limits of
+MTurk configuration, which sometimes requires at least 10 participants from
+the start. In this case, for a Chain network, it would be impractical to make
+participants sign on from the beginning and then wait for their turn  in the
+Chain for a long time. To avoid this, DelayedChain basically ignores the
+first 9 participants, and then starts the Chain from the 10th participant on.</p>
+<p>This is intended to be used with a source, in order to form a long running
+chain where participants are recruited as soon as the previous participant
+has finished. If there’s no source, the first eleven nodes have no parent.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="_images/delayed.png"><img alt="DelayedChain Network" src="_images/delayed.png" style="width: 375.5px; height: 220.5px;" /></a>
+<p class="caption"><span class="caption-text">DelayedChain Network</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="star">
+<h3>Star<a class="headerlink" href="#star" title="Permalink to this headline">¶</a></h3>
+<p>A Star network uses its first node as a central node, and nodes created
+after that have a bidirectional connection (<cite>both</cite>) with that node. This
+means the central node can send and receive information from/to all nodes,
+but every other node in the network can only communicate with the central
+node.</p>
+<p>A source can’t be used as a first node, since the connections to it need to
+be in both directions.</p>
+<p>This network can be useful for experiments where one user has a supervisory
+role over others who are working individually, for example making a decision
+based on advice from the other players</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="_images/star.png"><img alt="Star Network" src="_images/star.png" style="width: 240.5px; height: 240.5px;" /></a>
+<p class="caption"><span class="caption-text">Star Network</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="burst">
+<h3>Burst<a class="headerlink" href="#burst" title="Permalink to this headline">¶</a></h3>
+<p>A Burst network is very similar to a Star network, except the central node is
+connected to the other nodes using a <cite>to</cite> connection. In this case, a source
+can be used as a central node.</p>
+<p>This type of network can be used for experiments where participants do not
+need to interact, but require the same stimuli or directions as the others.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="_images/burst.png"><img alt="Burst Network" src="_images/burst.png" style="width: 240.5px; height: 240.5px;" /></a>
+<p class="caption"><span class="caption-text">Burst Network</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="fullyconnected">
+<h3>FullyConnected<a class="headerlink" href="#fullyconnected" title="Permalink to this headline">¶</a></h3>
+<p>A FullyConnected network is one where all the nodes are connected to each
+other in both directions, thus allowing any node to transmit and receive from
+any other node. This can be very useful for cooperation experiments or
+chatrooms.</p>
+<p>A source is allowed as a node in this network. However, it will use a <cite>to</cite>
+connection to the other nodes, so transmitting to it will not be allowed.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="_images/full.png"><img alt="FullyConnected Network" src="_images/full.png" style="width: 429.0px; height: 249.0px;" /></a>
+<p class="caption"><span class="caption-text">FullyConnected Network</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="other-available-networks">
+<h2>Other available networks<a class="headerlink" href="#other-available-networks" title="Permalink to this headline">¶</a></h2>
+<p>There are other, somewhat more specialized networks that an experiment can
+use. Here’s a quick rundown.</p>
+<div class="section" id="discretegenerational">
+<h3>DiscreteGenerational<a class="headerlink" href="#discretegenerational" title="Permalink to this headline">¶</a></h3>
+<p>In this network, nodes are arranged into “generations”. This network accepts
+some new parameters: <code class="docutils literal notranslate"><span class="pre">generations</span></code> (number of generations), <code class="docutils literal notranslate"><span class="pre">generation_size</span></code>
+(how many nodes in a generation) and <code class="docutils literal notranslate"><span class="pre">initial_source</span></code>. If there is an initial
+source, it will be used as the parent for all first generation nodes. After
+the first generation, the parent from each new node will be selected from the
+previous generation, using the <code class="docutils literal notranslate"><span class="pre">fitness</span></code> attribute of the nodes to select it.
+The higher the fitness, the higher the probability that a node will be a
+parent.</p>
+<p>Note that for this network to function correctly, the experiment nodes need
+to have a <code class="docutils literal notranslate"><span class="pre">generation</span></code> property defined.</p>
+</div>
+<div class="section" id="scalefree">
+<h3>ScaleFree<a class="headerlink" href="#scalefree" title="Permalink to this headline">¶</a></h3>
+<p>This network takes two parameters: <code class="docutils literal notranslate"><span class="pre">m0</span></code> and <code class="docutils literal notranslate"><span class="pre">m</span></code>. The first (m0) is the
+number of initial nodes. These initial nodes will be connected in a fully
+connected network among each other. The second parameter (m) is the number of
+connections that every subsequent node will have. The nodes for this limited
+number of connections will be chosen randomly, but nodes with more
+connections will have a higher probability of being selected.</p>
+</div>
+<div class="section" id="sequentialmicrosociety">
+<h3>SequentialMicrosociety<a class="headerlink" href="#sequentialmicrosociety" title="Permalink to this headline">¶</a></h3>
+<p>A network in which each new node will be connected using a <cite>to</cite> connection to
+a limited set of its most recent predecessors. The number of recent
+predecessors is passed in as an argument (n) at network creation.</p>
+</div>
+<div class="section" id="splitsamplenetwork">
+<h3>SplitSampleNetwork<a class="headerlink" href="#splitsamplenetwork" title="Permalink to this headline">¶</a></h3>
+<p>This network helps when implementing split sample experiment designs. It
+assigns a random boolean value to a property named <code class="docutils literal notranslate"><span class="pre">exploratory</span></code>. When this
+property is True, it means that the current network is part of the
+exploratory data subset.</p>
+</div>
+</div>
+<div class="section" id="creating-a-network">
+<h2>Creating a network<a class="headerlink" href="#creating-a-network" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the available networks, it’s fairly simple to create a custom
+network, in case an experiment design calls for different node
+interconnections. To create one, we can subclass from the Network model:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dallinger.models</span> <span class="kn">import</span> <span class="n">Network</span>
+<span class="kn">from</span> <span class="nn">dallinger.nodes</span> <span class="kn">import</span> <span class="n">Source</span>
+
+
+<span class="k">class</span> <span class="nc">Ring</span><span class="p">(</span><span class="n">Network</span><span class="p">):</span>
+
+    <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;polymorphic_identity&quot;</span><span class="p">:</span> <span class="s2">&quot;ring&quot;</span><span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">add_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+        <span class="n">other_nodes</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">()</span> <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">id</span> <span class="o">!=</span> <span class="n">node</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">Source</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+                <span class="s2">&quot;Ring network cannot contain sources.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">other_nodes</span><span class="p">:</span>
+            <span class="n">parent</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">other_nodes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">&#39;creation_time&#39;</span><span class="p">))</span>
+            <span class="n">parent</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">whom</span><span class="o">=</span><span class="n">node</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nodes</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_size</span><span class="p">:</span>
+                <span class="n">parent</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">other_nodes</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">&#39;creation_time&#39;</span><span class="p">))</span>
+                <span class="n">node</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">whom</span><span class="o">=</span><span class="n">parent</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the above example, we create a simple ring network, where each node is
+connected in chain to the next one, until we get to the last one, which is
+connected back to the first, making a full circle (thus, the ‘ring’ name).</p>
+<p>Our <code class="docutils literal notranslate"><span class="pre">Ring</span></code> network is a subclass of <code class="docutils literal notranslate"><span class="pre">dallinger.models.Network</span></code>, which contains the basic
+network model and implementation. The <code class="docutils literal notranslate"><span class="pre">__mapper_args__</span></code> assignment at the
+top is for differentiating this network from others, so that data exports
+don’t give incorrect results. Usually the safe thing is to use the same name
+as the subclass, to avoid confusion.</p>
+<p>Most simple networks will only need to override the <code class="docutils literal notranslate"><span class="pre">add_node</span></code> method. This
+method is called after a node is added, with the added node as a parameter.
+This method then can decide how and when to connect this node to other nodes
+in the network.</p>
+<p>In our code, we first get all nodes in the network (except the new one). If
+the new node is a source, we raise an exception, because due to the circular
+nature of our network, there can be no sources (they don’t accept <cite>from</cite>
+connections and can only transmit).</p>
+<p>After that, we take the most recent node and connect it to the new node. At
+this point, this is almost the same as a chain network, but when we get to
+the last node, we connect the new node to the first node, in addition to its
+connection to the previous node.</p>
+<p>The code in the <code class="docutils literal notranslate"><span class="pre">add_node</span></code> method can be as complex as needed, so very
+complex networks are possible. In most cases, to create a more advanced
+network it will be necessary to add custom properties to it. This is done by
+overriding the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method of the network to add the properties. The
+following example shows how to do that:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_property1</span><span class="p">,</span> <span class="n">new_property2</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">property1</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">new_property1</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">property2</span> <span class="o">=</span> <span class="nb">repr</span><span class="p">(</span><span class="n">new_property2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The properties are added as parameters to the network on creation. A custom
+property need not be persistent, but in general it’s better to save it as
+part of the network using the persistent custom properties available in all
+Dallinger models. If they are not stored, any calculations that rely on them
+have to be performed at initialization time. Once they are stored, they can
+be used in any part of the network code, like in the <code class="docutils literal notranslate"><span class="pre">add_node</span></code> method.</p>
+<p>In the code above, we use <code class="docutils literal notranslate"><span class="pre">repr</span></code> when storing the property value. This is
+because Dallinger custom properties are all of the text type, so even if a
+custom property represents a number, it has to be stored as a string. If the
+property is a string to begin with, it’s not necessary to convert it.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="docker_setup.html" class="btn btn-neutral float-right" title="Dallinger with Docker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="creating_an_experiment.html" class="btn btn-neutral float-left" title="Creating an Experiment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

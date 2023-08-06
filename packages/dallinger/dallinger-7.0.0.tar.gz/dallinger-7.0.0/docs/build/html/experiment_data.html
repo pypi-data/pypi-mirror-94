@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Experiment Data &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Viewing the PostgreSQL Database" href="postico_and_postgres.html" />
+    <link rel="prev" title="Monitoring a Live Experiment" href="monitoring_a_live_experiment.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Experiment Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/experiment_data.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="experiment-data">
+<h1>Experiment Data<a class="headerlink" href="#experiment-data" title="Permalink to this headline">¶</a></h1>
+<p>Dallinger keeps track of experiment data using the database. All generated
+data about Dallinger constructs, like networks, nodes, and participants, is
+tracked by the system. In addition, experiment specific data, such as
+questions and infos, can be stored.</p>
+<p>The <cite>info</cite> table is perhaps the most useful for experiment creators. It is
+intended for saving data specific to an experiment. Whenever an important
+event needs to be recorded for an experiment, an Info can be created:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">record_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">contents</span><span class="p">,</span> <span class="n">details</span><span class="p">):</span>
+    <span class="n">info</span> <span class="o">=</span> <span class="n">Info</span><span class="p">(</span><span class="n">origin</span><span class="o">=</span><span class="n">node</span><span class="p">,</span> <span class="n">contents</span><span class="o">=</span><span class="n">contents</span><span class="p">,</span> <span class="n">details</span><span class="o">=</span><span class="n">details</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In the above example, we have a function to record an event that would be
+part of a long experiment code. Each time something important happens in the
+experiment, the function will be called. In this case, we take the related
+node as the first parameter, then a string representation of the event, and
+finally an optional details parameter, which can include a dictionary, or
+other data structure with details.</p>
+<p>Dallinger allows users to export experiment data for performing analysis with
+the tools of their choice. Data from all experiment tables are exported in CSV
+format, which makes it easy to use in a variety of tools.</p>
+<p>To export the data, the Dallinger <cite>export</cite> command is used. The command
+requires passing in the application id. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ dallinger export --app 6ab5e918-44c0-f9bc-5d97-a5ddbbddb68a
+</pre></div>
+</div>
+<p>This will connect to the database and export the data, which will be saved as
+a zip file inside the <cite>data</cite> directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls data
+6ab5e918-44c0-f9bc-5d97-a5ddbbddb68a.zip
+</pre></div>
+</div>
+<p>To use the exported data, it is recommended that you unzip the file inside a
+working directory. This will create a new <cite>data</cite> directory, which will
+contain the experiment’s exported tables as CSV files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ unzip 6ab5e918-44c0-f9bc-5d97-a5ddbbddb68a.zip
+Archive:  6ab5e918-44c0-f9bc-5d97-a5ddbbddb68a-data.zip
+  inflating: experiment_id.md
+  inflating: data/network.csv
+  inflating: data/info.csv
+  inflating: data/notification.csv
+  inflating: data/question.csv
+  inflating: data/transformation.csv
+  inflating: data/vector.csv
+  inflating: data/transmission.csv
+  inflating: data/participant.csv
+  inflating: data/node.csv
+</pre></div>
+</div>
+<p>Once the data is uncompressed, you can analyze it using many different
+applications. Excel, for example, will easily import the data, just by double
+clicking on one of the files.</p>
+<p>In Python, pandas are a popular way of manipulating data. The library is
+required by Dallinger, so if you already have Dallinger running you can begin
+using it right away:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python
+&gt;&gt;&gt; import pandas
+&gt;&gt;&gt; df = pandas.read_csv(&#39;question.csv&#39;)
+</pre></div>
+</div>
+<p>Pandas has a handy <cite>read_csv</cite> method, which will read a CSV file and convert
+it to a DataFrame, which is a sort of spreadsheet-like structure used by
+Pandas to work with data. Once the data is in a DataFrame, we can use all the
+DataFrame features to work with the data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="go">    &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;</span>
+<span class="go">    RangeIndex: 6 entries, 0 to 5</span>
+<span class="go">    Data columns (total 14 columns):</span>
+<span class="go">    id                6 non-null int64</span>
+<span class="go">    creation_time     6 non-null datetime64[ns]</span>
+<span class="go">    property1         0 non-null object</span>
+<span class="go">    property2         0 non-null object</span>
+<span class="go">    property3         0 non-null object</span>
+<span class="go">    property4         0 non-null object</span>
+<span class="go">    property5         0 non-null object</span>
+<span class="go">    failed            6 non-null object</span>
+<span class="go">    time_of_death     0 non-null object</span>
+<span class="go">    type              6 non-null object</span>
+<span class="go">    participant_id    6 non-null int64</span>
+<span class="go">    number            6 non-null int64</span>
+<span class="go">    question          6 non-null object</span>
+<span class="go">    response          6 non-null object</span>
+<span class="go">    dtypes: datetime64[ns](1), int64(3), object(10)</span>
+<span class="go">    memory usage: 744.0+ bytes</span>
+<span class="go">    None</span>
+<span class="go">    &gt;&gt;&gt; df.response.describe()</span>
+<span class="go">    count                                       6</span>
+<span class="go">    unique                                      5</span>
+<span class="go">    top       {&quot;engagement&quot;:&quot;7&quot;,&quot;difficulty&quot;:&quot;4&quot;}</span>
+<span class="go">    freq                                        2</span>
+<span class="go">    Name: response, dtype: object</span>
+</pre></div>
+</div>
+<p>In this case, let’s say we want to analyze questionnaire responses at the end
+of an experiment. We will only need the <cite>response</cite> column from the <cite>question</cite>
+table. Also, since this column is stored as a string, but holds a dictionary
+with the answers to the questions, we need to convert it into a suitable
+format for analysis:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;question.csv&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">],</span>
+<span class="go">            converters={&#39;response&#39;: lambda x:eval(x).values()})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span>
+<span class="go">      response</span>
+<span class="go">    0   [4, 7]</span>
+<span class="go">    1   [1, 6]</span>
+<span class="go">    2   [4, 7]</span>
+<span class="go">    3   [7, 7]</span>
+<span class="go">    4   [3, 6]</span>
+<span class="go">    5   [0, 3]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">responses</span><span class="o">=</span><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span>
+<span class="go">            columns=[&#39;engagement&#39;, &#39;difficulty&#39;], dtype=&#39;int64&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">responses</span>
+<span class="go">      engagement difficulty</span>
+<span class="go">    0          4          7</span>
+<span class="go">    1          1          6</span>
+<span class="go">    2          4          7</span>
+<span class="go">    3          7          7</span>
+<span class="go">    4          3          6</span>
+<span class="go">    5          0          3</span>
+</pre></div>
+</div>
+<p>First we create a DataFrame using <cite>read_csv</cite> as before, but this time, we
+specify which columns to use using the <cite>usecols</cite> parameter. To get the
+numeric values for the responses, we use a converter to convert the string
+back into a dictionary and extract the values.</p>
+<p>At this point, we have both values in the response column. We really want to
+have one column for each value, so we create a new dataframe, converting the
+response values to a list and assigning each to a named column. We also make
+sure the values are integers, with the <cite>dtype</cite> parameter. This makes them
+plottable.</p>
+<p>We can now make a simple bar chart of the responses using plot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">responses</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="go">&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f7f0092dc90&gt;</span>
+</pre></div>
+</div>
+<p>If you are running this in a <a class="reference external" href="https://jupyter.org/">Jupyter notebook</a>, this
+would be the result:</p>
+<div class="figure align-default">
+<img alt="" src="_images/barplot.png" />
+</div>
+<p>Of course these are very simple examples. Pandas are a powerful library, and
+offer many analysis and visualization methods, but this should at least give
+an idea of what can be achieved.</p>
+<p>Dallinger also has a helper class that allows us to handle experiment data in
+different formats. You can get the DataFrame using this, as well:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python
+&gt;&gt;&gt; from dallinger.data import Table
+&gt;&gt;&gt; data = Table(&#39;info.csv&#39;)
+&gt;&gt;&gt; df = data.df
+</pre></div>
+</div>
+<p>It might seem like a roundabout way to get the DataFrame, but the table class
+has the advantage that the data can easily be converted to many other
+formats. All of these formats are accessed as properties of the Table
+instance, like <cite>data.df</cite> above. Supported formats are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>csv. Comma-separated values.</p></li>
+<li><p>dict. A python dictionary.</p></li>
+<li><p>df. A pandas DataFrame.</p></li>
+<li><p>html. An html table.</p></li>
+<li><p>latex. A LaTex table.</p></li>
+<li><p>list. A python list.</p></li>
+<li><p>ods. An open document spreadsheet.</p></li>
+<li><p>tsv. Tab separated values.</p></li>
+<li><p>xls. Legacy Excel spreadsheet.</p></li>
+<li><p>xlsx. Excel spreadsheet.</p></li>
+<li><p>yaml. YAML format.</p></li>
+</ul>
+</div></blockquote>
+<p>From the list above <cite>dict</cite>, <cite>df</cite>, and <cite>list</cite> can be used to handle the data
+inside a python interpreter or program, and the rest are better suited for
+display or analysis using other tools.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="postico_and_postgres.html" class="btn btn-neutral float-right" title="Viewing the PostgreSQL Database" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="monitoring_a_live_experiment.html" class="btn btn-neutral float-left" title="Monitoring a Live Experiment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

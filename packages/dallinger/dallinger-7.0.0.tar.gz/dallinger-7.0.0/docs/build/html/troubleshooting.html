@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Troubleshooting &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dallinger Demos" href="demo_index.html" />
+    <link rel="prev" title="Registration on the OSF" href="registration_on_OSF.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-processes-kept-alive">Python Processes Kept Alive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#known-postgres-issues">Known Postgres issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-sandbox-error">Common Sandbox Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#combining-dallinger-core-development-and-running-experiments">Combining Dallinger core development and running experiments</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Troubleshooting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/troubleshooting.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<p>A few common issues are reported when trying to run Dallinger. Always run with the <cite>–verbose</cite> flag for full logs</p>
+<div class="section" id="python-processes-kept-alive">
+<h2>Python Processes Kept Alive<a class="headerlink" href="#python-processes-kept-alive" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes when trying to run experiments consecutively in Debug mode, a straggling process creates Server 500 errors.
+These are caused by background python processes and/or gunicorn workers. Filter for them using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ps</span> <span class="o">-</span><span class="n">ef</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">-</span><span class="n">E</span> <span class="s2">&quot;python|gunicorn&quot;</span>
+</pre></div>
+</div>
+<p>This will display all running processes that have the name <cite>python</cite> or <cite>gunicorn</cite>. To kill all of them, run these commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pkill</span> <span class="n">python</span>
+<span class="n">pkill</span> <span class="n">gunicorn</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="known-postgres-issues">
+<h2>Known Postgres issues<a class="headerlink" href="#known-postgres-issues" title="Permalink to this headline">¶</a></h2>
+<p>If you get an error like the following…</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>createuser: could not connect to database postgres: could not connect to server:
+    Is the server running locally and accepting
+    connections on Unix domain socket &quot;/tmp/.s.PGSQL.5432&quot;?
+</pre></div>
+</div>
+<p>…then you probably did not start the app.</p>
+<p>If you get a fatal error that your ROLE does not exist, run these commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">createuser</span> <span class="n">dallinger</span>
+<span class="n">dropdb</span> <span class="n">dallinger</span>
+<span class="n">createdb</span> <span class="o">-</span><span class="n">O</span> <span class="n">dallinger</span> <span class="n">dallinger</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="common-sandbox-error">
+<h2>Common Sandbox Error<a class="headerlink" href="#common-sandbox-error" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>❯❯ Launching the experiment on MTurk...
+
+❯❯ Error parsing response from /launch, check web dyno logs for details: &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Application Error&lt;/title&gt;
+        &lt;style media=&quot;screen&quot;&gt;
+          html,body,iframe {
+            margin: 0;
+            padding: 0;
+          }
+          html,body {
+            height: 100%;
+            overflow: hidden;
+          }
+          iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+          }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;iframe src=&quot;//www.herokucdn.com/error-pages/application-error.html&quot;&gt;&lt;/iframe&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+Traceback (most recent call last):
+  File &quot;/Users/user/.virtualenvs/dallinger/bin/dallinger&quot;, line 11, in &lt;module&gt;
+    load_entry_point(&#39;dallinger&#39;, &#39;console_scripts&#39;, &#39;dallinger&#39;)()
+  File &quot;/Users/user/.virtualenvs/dallinger/lib/python3.6/site-packages/click/core.py&quot;, line 722, in __call__
+    return self.main(*args, **kwargs)
+  File &quot;/Users/user/.virtualenvs/dallinger/lib/python3.6/site-packages/click/core.py&quot;, line 697, in main
+    rv = self.invoke(ctx)
+  File &quot;/Users/user/.virtualenvs/dallinger/lib/python3.6/site-packages/click/core.py&quot;, line 1066, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File &quot;/Users/user/.virtualenvs/dallinger/lib/python3.6/site-packages/click/core.py&quot;, line 895, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File &quot;/Users/user/.virtualenvs/dallinger/lib/python3.6/site-packages/click/core.py&quot;, line 535, in invoke
+    return callback(*args, **kwargs)
+  File &quot;/Users/user/Dallinger/dallinger/command_line.py&quot;, line 558, in sandbox
+    _deploy_in_mode(u&#39;sandbox&#39;, app, verbose)
+  File &quot;/Users/user/Dallinger/dallinger/command_line.py&quot;, line 550, in _deploy_in_mode
+    deploy_sandbox_shared_setup(verbose=verbose, app=app)
+  File &quot;/Users/user/Dallinger/dallinger/command_line.py&quot;, line 518, in deploy_sandbox_shared_setup
+    launch_data = _handle_launch_data(&#39;{}/launch&#39;.format(heroku_app.url))
+  File &quot;/Users/user/Dallinger/dallinger/command_line.py&quot;, line 386, in _handle_launch_data
+    launch_data = launch_request.json()
+  File &quot;/Users/user/.virtualenvs/dallinger/lib/python3.6/site-packages/requests/models.py&quot;, line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/__init__.py&quot;, line 339, in loads
+    return _default_decoder.decode(s)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py&quot;, line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/json/decoder.py&quot;, line 382, in raw_decode
+    raise ValueError(&quot;No JSON object could be decoded&quot;)
+</pre></div>
+</div>
+<p>If you get this from the sandbox, this usually means there’s a deeper issue that requires <cite>dallinger logs –app XXXXXX.</cite> Usually this could be a requirements.txt file error (missing dependency or reference to an incorrect branch).</p>
+</div>
+<div class="section" id="combining-dallinger-core-development-and-running-experiments">
+<h2>Combining Dallinger core development and running experiments<a class="headerlink" href="#combining-dallinger-core-development-and-running-experiments" title="Permalink to this headline">¶</a></h2>
+<p>A common pitfall while doing development on the dallinger codebase while also
+working on external experiments which include dallinger as a dependency: you
+pip install a demo experiment in your active virtual environment, and it
+overwrites the dallinger.egg-link file in that environment’s site-packages
+directory with an actual copy of the dallinger package.</p>
+<p>When installing dallinger with the intent to work on dallinger, the recommended
+way to install dallinger itself is with pip’s “editable mode”, by passing the
+-e or –editable flag to pip install:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span><span class="p">[</span><span class="n">data</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>This creates a form of symbolic link in the active python’s site-packages
+directory to the working copy of dallinger you’re sitting in. This allows you to
+make changes to python files in the dallinger working copy and have them
+immediately active when using dallinger commands or any other actions that
+invoke the active python interpreter.</p>
+<p>Running pip install without the -e flag, either while installing dallinger
+directly, or while installing a separate experiment which includes dallinger as
+a dependency, will instead place a copy of the dallinger package in the
+site-packages directory. These files will then be executed when the active
+python is running, and any changes to the files you’re working on will be
+ignored.</p>
+<p>You can check to see if you are working in “editable mode” by inspecting the
+contents of your active virtual environment’s site-packages folder. In
+“editable mode”, you will see a dallinger.egg-link file listed in the directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>    <span class="mi">9</span> <span class="n">jesses</span>  <span class="n">staff</span>   <span class="mi">306</span><span class="n">B</span> <span class="n">May</span> <span class="mi">29</span> <span class="mi">12</span><span class="p">:</span><span class="mi">30</span> <span class="n">coverage_pth</span><span class="o">-</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">2.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>    <span class="mi">1</span> <span class="n">jesses</span>  <span class="n">staff</span>    <span class="mi">44</span><span class="n">B</span> <span class="n">May</span> <span class="mi">29</span> <span class="mi">12</span><span class="p">:</span><span class="mi">30</span> <span class="n">coverage_pth</span><span class="o">.</span><span class="n">pth</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>    <span class="mi">1</span> <span class="n">jesses</span>  <span class="n">staff</span>    <span class="mi">33</span><span class="n">B</span> <span class="n">Jun</span> <span class="mi">14</span> <span class="mi">16</span><span class="p">:</span><span class="mi">08</span> <span class="n">dallinger</span><span class="o">.</span><span class="n">egg</span><span class="o">-</span><span class="n">link</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>   <span class="mi">21</span> <span class="n">jesses</span>  <span class="n">staff</span>   <span class="mi">714</span><span class="n">B</span> <span class="n">Mar</span> <span class="mi">19</span> <span class="mi">17</span><span class="p">:</span><span class="mi">24</span> <span class="n">datashape</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>   <span class="mi">10</span> <span class="n">jesses</span>  <span class="n">staff</span>   <span class="mi">340</span><span class="n">B</span> <span class="n">Mar</span> <span class="mi">19</span> <span class="mi">17</span><span class="p">:</span><span class="mi">24</span> <span class="n">datashape</span><span class="o">-</span><span class="mf">0.5</span><span class="o">.</span><span class="mf">2.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>The contents of this file will include the path to the working copy that’s
+active. If you instead see a directory tree with actual dallinger files, you can
+restore “editable mode” by re-running the installation steps for dallinger from
+the <a class="reference internal" href="developing_dallinger_setup_guide.html"><span class="doc">Developer Installation</span></a> documentation.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="demo_index.html" class="btn btn-neutral float-right" title="Dallinger Demos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="registration_on_OSF.html" class="btn btn-neutral float-left" title="Registration on the OSF" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

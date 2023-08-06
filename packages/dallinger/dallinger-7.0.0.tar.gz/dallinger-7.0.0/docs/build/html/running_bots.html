@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Running bots as participants &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Registration on the OSF" href="registration_on_OSF.html" />
+    <link rel="prev" title="Viewing the PostgreSQL Database" href="postico_and_postgres.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running bots as participants</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-an-experiment-locally-with-bots">Running an experiment locally with bots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-an-experiment-with-a-mix-of-bots-and-real-participants">Running an experiment with a mix of bots and real participants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-a-single-bot">Running a single bot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Running bots as participants</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/running_bots.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="running-bots-as-participants">
+<h1>Running bots as participants<a class="headerlink" href="#running-bots-as-participants" title="Permalink to this headline">¶</a></h1>
+<p>Dallinger supports running simulated experiments using bots
+that participate in the experiment automatically.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not all experiments will have bots available.
+The <a class="reference internal" href="demos/bartlett1932/index.html"><span class="doc">Bartlett (1932), stories</span></a> demo does have bots available.</p>
+</div>
+<div class="section" id="running-an-experiment-locally-with-bots">
+<h2>Running an experiment locally with bots<a class="headerlink" href="#running-an-experiment-locally-with-bots" title="Permalink to this headline">¶</a></h2>
+<p>To run the experiment in debug mode using bots, use the <cite>–bot</cite> flag:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ dallinger debug --bot
+</pre></div>
+</div>
+<p>This overrides the <cite>recruiter</cite> configuration key to use the
+<code class="xref py py-class docutils literal notranslate"><span class="pre">BotRecruiter</span></code>.
+Instead of printing the URL for a participant or recruiting participants
+using Mechanical Turk, the bot recruiter will start running bots.</p>
+<p>You may also set the configuration value <code class="docutils literal notranslate"><span class="pre">recruiter='bots'</span></code> in local or global
+configurations, as an environment variable or as a keyword argument to
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bots are run by worker processes. If the experiment recruits many bots
+at the same time, you may need to increase the <code class="docutils literal notranslate"><span class="pre">num_dynos_worker</span></code> config setting
+to run additional worker processes. Each worker process can run up to 20 bots
+(though if the bots are implemented using selenium to run a real browser,
+you’ll probably hit resource limits before that).</p>
+</div>
+</div>
+<div class="section" id="running-an-experiment-with-a-mix-of-bots-and-real-participants">
+<h2>Running an experiment with a mix of bots and real participants<a class="headerlink" href="#running-an-experiment-with-a-mix-of-bots-and-real-participants" title="Permalink to this headline">¶</a></h2>
+<p>It’s also possible to run an experiment that mixes bot participants
+with real participants. To do this, edit the experiment’s <code class="docutils literal notranslate"><span class="pre">config.txt</span></code>
+to specify recruiter configuration like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">recruiter</span> <span class="o">=</span> <span class="n">multi</span>
+<span class="n">recruiters</span> <span class="o">=</span> <span class="n">bots</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cli</span><span class="p">:</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">recruiters</span></code> config setting is a specification of how many
+participants to recruit from which recruiters in what order. This
+example says to use the bot recruiter the first 2 times that the
+experiment requests a participant to be recruited, followed by
+the CLI recruiter the third time. (The CLI recruiter writes the
+participant’s URL to the log, which triggers opening it in your
+browser if you are running in debug mode.)</p>
+<p>To start the experiment with this configuration, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ dallinger debug
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-a-single-bot">
+<h2>Running a single bot<a class="headerlink" href="#running-a-single-bot" title="Permalink to this headline">¶</a></h2>
+<p>If you want to run a single bot as part of an ongoing experiment, you can use
+the <a class="reference internal" href="command_line_utility.html#dallinger-bot"><span class="std std-ref">bot</span></a> command. This is useful for testing a single
+bot’s behavior as part of a longer-running experiment, and allows easy access
+to the Python pdb debugger.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="registration_on_OSF.html" class="btn btn-neutral float-right" title="Registration on the OSF" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="postico_and_postgres.html" class="btn btn-neutral float-left" title="Viewing the PostgreSQL Database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

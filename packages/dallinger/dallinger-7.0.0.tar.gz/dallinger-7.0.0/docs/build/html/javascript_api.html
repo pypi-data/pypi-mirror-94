@@ -1,0 +1,669 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Javascript API &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Rewarding participants" href="rewarding_participants.html" />
+    <link rel="prev" title="Communicating With the Server" href="communicating_with_the_server.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Javascript API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-dallinger-object">The <cite>dallinger</cite> object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#making-requests-to-experiment-routes">Making requests to experiment routes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deferred-objects"><cite>Deferred</cite> objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#experiment-initialization-and-completion">Experiment Initialization and Completion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#helper-functions-and-properties">Helper functions and properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Javascript API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/javascript_api.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="javascript-api">
+<h1>Javascript API<a class="headerlink" href="#javascript-api" title="Permalink to this headline">¶</a></h1>
+<p>Dallinger provides a javascript API to facilitate creating web-based
+experiments. All of the dallinger demos use this API to communicate
+with the experiment server. The API is defined in the <cite>dallinger2.js</cite>
+script, which is included in the default experiment templates.</p>
+<div class="section" id="the-dallinger-object">
+<h2>The <cite>dallinger</cite> object<a class="headerlink" href="#the-dallinger-object" title="Permalink to this headline">¶</a></h2>
+<p>Any page that includes <cite>dallinger2.js</cite> script will have a <cite>dallinger</cite>
+object added to the <cite>window</cite> global namespace. This object defines a
+number of functions for interacting with Dallinger experiments.</p>
+<div class="section" id="making-requests-to-experiment-routes">
+<h3>Making requests to experiment routes<a class="headerlink" href="#making-requests-to-experiment-routes" title="Permalink to this headline">¶</a></h3>
+<p><cite>dallinger</cite> provides functions which can be used to asynchronously
+interact with any of the experiment routes described in
+<a class="reference internal" href="web_api.html"><span class="doc">Web API</span></a>:</p>
+<dl class="js function">
+<dt id="dallinger.get">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">route</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for making an AJAX <code class="docutils literal notranslate"><span class="pre">GET</span></code> request to a specified
+route. Any callbacks provided to the <cite>done()</cite> method of the returned
+<cite>Deferred</cite> object will be passed the JSON object returned by the the
+API route (referred to as <cite>data</cite> below). Any callbacks provided to the
+<cite>fail()</cite> method of the returned <cite>Deferred</cite> object will be passed an
+instance of <cite>AjaxRejection</cite>, see <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>route</strong> (<em>string</em>) – Experiment route, e.g. <code class="docutils literal notranslate"><span class="pre">/info/$nodeId</span></code></p></li>
+<li><p><strong>data</strong> (<em>object</em>) – Optional data to include in request</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/participant/1&#39;</span><span class="p">);</span>
+<span class="c1">// Wait for response and handle data</span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{...});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.post">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">post</code><span class="sig-paren">(</span><em class="sig-param">route</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for making an AJAX <code class="docutils literal notranslate"><span class="pre">POST</span></code> request to a specified
+route.  Any callbacks provided to the <cite>done()</cite> method of the returned
+<cite>Deferred</cite> object will be passed the JSON object returned by the the
+API route (referred to as <cite>data</cite> below). Any callbacks provided to the
+<cite>fail()</cite> method of the returned <cite>Deferred</cite> object will be passed an
+instance of <cite>AjaxRejection</cite>, see <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>route</strong> (<em>string</em>) – Experiment route, e.g. <code class="docutils literal notranslate"><span class="pre">/info/$nodeId</span></code></p></li>
+<li><p><strong>data</strong> (<em>object</em>) – Optional data to include in request</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/info/1&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">details</span><span class="o">:</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mf">1</span><span class="p">}});</span>
+<span class="c1">// Wait for response and handle data or failure</span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{...}).</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">rejection</span><span class="p">)</span> <span class="p">{...});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p>The <cite>dallinger</cite> object also provides functions that make requests
+to specific experiment routes:</p>
+<dl class="js function">
+<dt id="dallinger.createAgent">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">createAgent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.createAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new experiment <cite>Node</cite> for the current partcipant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">createAgent</span><span class="p">();</span>
+<span class="c1">// Wait for response</span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{...</span> <span class="nx">handle</span> <span class="nx">data</span><span class="p">.</span><span class="nx">node</span> <span class="p">...});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.createInfo">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">createInfo</code><span class="sig-paren">(</span><em class="sig-param">nodeId</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.createInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new <cite>Info</cite> object in the experiment database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodeId</strong> (<em>number</em>) – The id of the participant’s experiment node</p></li>
+<li><p><strong>data</strong> (<em>Object</em>) – Experimental data (see <a class="reference internal" href="classes.html#dallinger.models.Info" title="dallinger.models.Info"><code class="xref py py-class docutils literal notranslate"><span class="pre">Info</span></code></a>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">createInfo</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="p">{</span><span class="nx">details</span><span class="o">:</span> <span class="p">{</span><span class="nx">a</span><span class="o">:</span> <span class="mf">1</span><span class="p">}});</span>
+<span class="c1">// Wait for response</span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{...</span> <span class="nx">handle</span> <span class="nx">data</span><span class="p">.</span><span class="nx">info</span> <span class="p">...});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.getInfo">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">getInfo</code><span class="sig-paren">(</span><em class="sig-param">nodeId</em>, <em class="sig-param">infoId</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.getInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a specific <cite>Info</cite> object from the experiment database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodeId</strong> (<em>number</em>) – The id of an experiment node</p></li>
+<li><p><strong>infoId</strong> (<em>number</em>) – The id of the Info object to be retrieved</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">getInfo</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
+<span class="c1">// Wait for response</span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{...</span> <span class="nx">handle</span> <span class="nx">data</span><span class="p">.</span><span class="nx">info</span> <span class="p">...});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.getInfos">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">getInfos</code><span class="sig-paren">(</span><em class="sig-param">nodeId</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.getInfos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all <cite>Info</cite> objects for the specified node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodeId</strong> (<em>number</em>) – The id of an experiment node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">getInfos</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
+<span class="c1">// Wait for response</span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{...</span> <span class="nx">handle</span> <span class="nx">data</span><span class="p">.</span><span class="nx">infos</span> <span class="p">...});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.getReceivedInfos">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">getReceivedInfos</code><span class="sig-paren">(</span><em class="sig-param">nodeId</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.getReceivedInfos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all the <cite>Info</cite> objects a node has been sent and has received.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodeId</strong> (<em>number</em>) – The id of an experiment node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">getReceivedInfostInfos</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="c1">// Wait for response</span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{...</span> <span class="nx">handle</span> <span class="nx">data</span><span class="p">.</span><span class="nx">infos</span> <span class="p">...});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.getTransmissions">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">getTransmissions</code><span class="sig-paren">(</span><em class="sig-param">nodeId</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.getTransmissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all <cite>Transmission</cite> objects connected to a node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodeId</strong> (<em>number</em>) – The id of an experiment node.</p></li>
+<li><p><strong>data</strong> (<em>Object</em>) – Additional parameters, specifically <code class="docutils literal notranslate"><span class="pre">direction</span></code> (to/from/all) and <code class="docutils literal notranslate"><span class="pre">status</span></code> (all/pending/received).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">getTransmissions</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="p">{</span><span class="nx">direction</span><span class="o">:</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="nx">status</span><span class="o">:</span> <span class="s2">&quot;all&quot;</span><span class="p">});</span>
+<span class="c1">// Wait for response</span>
+<span class="nx">response</span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{...</span> <span class="nx">handle</span> <span class="nx">data</span><span class="p">.</span><span class="nx">transmissions</span> <span class="p">...});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p>Additionally, there is a helper method to handle error responses
+from experiment API calls (see <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a> below):</p>
+<dl class="js function">
+<dt id="dallinger.error">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">error</code><span class="sig-paren">(</span><em class="sig-param">rejection</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles experiment errors by requesting feedback from the participant and
+attempts to complete the experiment (and compensate participants).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rejection</strong> (<em>dallinger.AjaxRejection</em>) – information about the AJAX error.</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Let dallinger handle the error</span>
+<span class="nx">dallinger</span><span class="p">.</span><span class="nx">createAgent</span><span class="p">().</span><span class="nx">fail</span><span class="p">(</span><span class="nx">dallinger</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+
+<span class="c1">// Custom handling, then request feedback and complete if possible</span>
+<span class="nx">dallinger</span><span class="p">.</span><span class="nx">getInfo</span><span class="p">(</span><span class="nx">info</span><span class="p">).</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">rejection</span><span class="p">)</span> <span class="p">{</span>
+ <span class="p">...</span> <span class="nx">handle</span> <span class="nx">rejection</span> <span class="nx">data</span> <span class="p">...</span>
+ <span class="nx">dallinger</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">rejection</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="deferred-objects">
+<span id="deferreds-label"></span><h3><cite>Deferred</cite> objects<a class="headerlink" href="#deferred-objects" title="Permalink to this headline">¶</a></h3>
+<p>All of the above functions make use of <a class="reference external" href="https://api.jquery.com/jquery.deferred/">jQuery.Deferred</a>,
+and return <cite>Deferred</cite> objects. These <cite>Deferred</cite> objects provide the following
+methods to facilitate handling asynchronous responses once they’ve completed:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.done(callback)</span></code>: Provide a callback to handle data from a successful
+response</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.fail(fail_callback)</span></code>: Provide a callback to handle error responses</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.then(callback[,</span> <span class="pre">fail_callback,</span> <span class="pre">progress_callback])</span></code>: Provide
+callbacks to handle successes, failures, and progress updates.</p></li>
+</ul>
+</div></blockquote>
+<p>The fail_callback function will be passed a <cite>dallinger.AjaxRejection</cite> object which
+includes detailed information about the error. Unexpected errors should be handled
+by calling the <code class="xref py py-func docutils literal notranslate"><span class="pre">dallinger.error()</span></code> method with the <cite>AjaxRejection</cite> object.</p>
+</div>
+<div class="section" id="experiment-initialization-and-completion">
+<h3>Experiment Initialization and Completion<a class="headerlink" href="#experiment-initialization-and-completion" title="Permalink to this headline">¶</a></h3>
+<p>In addition to the request functions above, there are a few functions that are
+used by the default experiment templates to setup and complete an experiment.
+If you are writing a highly customized experiment, you may need to use
+these explicitly:</p>
+<dl class="js function">
+<dt id="dallinger.createParticipant">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">createParticipant</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.createParticipant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new experiment <cite>Participant</cite> by making a <code class="docutils literal notranslate"><span class="pre">POST</span></code> request to
+the experiment <cite>/participant/</cite> route. If the experiment requires a
+quorum, the response will not resolve until the quorum is met. If the
+participant is requested after the quorum has already been reached, the
+<code class="docutils literal notranslate"><span class="pre">dallinger.skip_experiment</span></code> flag will be set and the experiment will
+be skipped.</p>
+<p>This method is called automatically by the default waiting room page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.loadParticipant">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">loadParticipant</code><span class="sig-paren">(</span><em class="sig-param">assignment_id</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.loadParticipant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an existing <cite>Participant</cite> into the dlgr.identity by making a <code class="docutils literal notranslate"><span class="pre">POST</span></code>
+request to the experiment <cite>/participant</cite> route with an <code class="docutils literal notranslate"><span class="pre">assignment_id</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.hasAdBlocker">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">hasAdBlocker</code><span class="sig-paren">(</span><em class="sig-param">callback</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.hasAdBlocker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the user has an ad blocker installed. If an ad blocker is detected
+the callback will be executed asynchronously after a small delay.</p>
+<p>This method is called automatically from the experiment default template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – a function, with no arguments, to call if an ad blocker is running.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.submitAssignment">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">submitAssignment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.submitAssignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notify the experiment that the participant’s assignment is complete.
+Performs a <code class="docutils literal notranslate"><span class="pre">GET</span></code> request to the experiment’s <code class="docutils literal notranslate"><span class="pre">/worker_complete</span></code> route.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Mark the assignment complete and perform a custom function when successful</span>
+<span class="nx">result</span> <span class="o">=</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">submitAssignment</span><span class="p">();</span>
+<span class="nx">result</span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{...</span> <span class="nx">handle</span> <span class="sb">``</span><span class="nx">data</span><span class="p">.</span><span class="nx">status</span><span class="sb">``</span> <span class="p">...}).</span><span class="nx">fail</span><span class="p">(</span>
+    <span class="nx">dallinger</span><span class="p">.</span><span class="nx">error</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.submitQuestionnaire">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">submitQuestionnaire</code><span class="sig-paren">(</span><em class="sig-param">name=&quot;questionnaire&quot;</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.submitQuestionnaire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submits a <cite>Question</cite> object to the experiment server.
+This method is called automatically from the default questionnaire page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – optional questionnaire name</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.waitForQuorum">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">waitForQuorum</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.waitForQuorum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits for a WebSocket message indicating that quorum has been reached.</p>
+<p>This method is called automatically within <cite>createParticipant()</cite> and the
+default waiting room page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>jQuery.Deferred</strong> – See <a class="reference internal" href="#deferreds-label"><span class="std std-ref">Deferred objects</span></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="helper-functions-and-properties">
+<h3>Helper functions and properties<a class="headerlink" href="#helper-functions-and-properties" title="Permalink to this headline">¶</a></h3>
+<p>Finally, there are a few miscellaneous utility functions and properties
+which are useful when writing a custom experiment:</p>
+<dl class="js function">
+<dt id="dallinger.getUrlParameter">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">getUrlParameter</code><span class="sig-paren">(</span><em class="sig-param">sParam</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.getUrlParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a url query string value given the parameter name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sParam</strong> (<em>string</em>) – name of url parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>string|boolean</strong> – the parameter value if available; <code class="docutils literal notranslate"><span class="pre">true</span></code> if parameter is in the url but has no value;</p>
+</dd>
+</dl>
+<p><strong>Examples:</strong></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Given a url with ``?param1=aaa&amp;param2``, the following returns &quot;aaa&quot;</span>
+<span class="nx">dallinger</span><span class="p">.</span><span class="nx">getUrlParameter</span><span class="p">(</span><span class="s2">&quot;param1&quot;</span><span class="p">);</span>
+<span class="c1">// this returns true</span>
+<span class="nx">dallinger</span><span class="p">.</span><span class="nx">getUrlParameter</span><span class="p">(</span><span class="s2">&quot;param2&quot;</span><span class="p">);</span>
+<span class="c1">// and this returns null</span>
+<span class="nx">dallinger</span><span class="p">.</span><span class="nx">getUrlParameter</span><span class="p">(</span><span class="s2">&quot;param3&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt id="dallinger.goToPage">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">goToPage</code><span class="sig-paren">(</span><em class="sig-param">page</em><span class="sig-paren">)</span><a class="headerlink" href="#dallinger.goToPage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Advance the participant to a given html page;
+the <code class="docutils literal notranslate"><span class="pre">participant_id</span></code> will be included in the url query string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Arguments</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>page</strong> (<em>string</em>) – Name of page to load, the .html extension should not be included.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js attribute">
+<dt id="dallinger.identity">
+<code class="sig-prename descclassname">dallinger.</code><code class="sig-name descname">identity</code><a class="headerlink" href="#dallinger.identity" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">dallinger.identity</span></code> provides information about the participant.
+It has the following string properties:</p>
+<p><code class="docutils literal notranslate"><span class="pre">recruiter</span></code>     - Type of recruiter</p>
+<p><code class="docutils literal notranslate"><span class="pre">hitId</span></code>         - MTurk HIT Id</p>
+<p><code class="docutils literal notranslate"><span class="pre">workerId</span></code>      - MTurk Worker Id</p>
+<p><code class="docutils literal notranslate"><span class="pre">assignmentId</span></code>  - MTurk Assignment Id</p>
+<p><code class="docutils literal notranslate"><span class="pre">mode</span></code>          - Dallinger experiment mode</p>
+<p><code class="docutils literal notranslate"><span class="pre">participantId</span></code> - Dallinger participant Id</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="rewarding_participants.html" class="btn btn-neutral float-right" title="Rewarding participants" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="communicating_with_the_server.html" class="btn btn-neutral float-left" title="Communicating With the Server" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

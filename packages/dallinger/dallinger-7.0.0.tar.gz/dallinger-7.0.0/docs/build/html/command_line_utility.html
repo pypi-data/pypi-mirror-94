@@ -1,0 +1,488 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Command-Line Utility &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration" href="configuration.html" />
+    <link rel="prev" title="Demoing Dallinger" href="demoing_dallinger.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command-Line Utility</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#verify">verify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bot">bot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#debug">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sandbox">sandbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deploy">deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logs">logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#export">export</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#email-test">email_test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compensate">compensate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#qualify">qualify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#revoke">revoke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hibernate">hibernate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#awaken">awaken</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#destroy">destroy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hits">hits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expire">expire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extend-mturk-hit">extend_mturk_hit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#apps">apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#monitor">monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#load">load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup">setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uuid">uuid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rq-worker">rq_worker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Command-Line Utility</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/command_line_utility.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-utility">
+<h1>Command-Line Utility<a class="headerlink" href="#command-line-utility" title="Permalink to this headline">¶</a></h1>
+<p>Dallinger is executed from the command line within the experiment directory with the following commands:</p>
+<div class="section" id="verify">
+<span id="dallinger-verify"></span><h2>verify<a class="headerlink" href="#verify" title="Permalink to this headline">¶</a></h2>
+<p>Verify that a directory is a Dallinger-compatible app. A number of checks are run here:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Required files are verified to exist</p></li>
+<li><p>The cumulative size of all experiment files is checked to make sure large files or
+directories are not accidentally included (note that files excluded with a .gitignore
+file are <strong>not</strong> included in this size total)</p></li>
+<li><p>The experiment.py file is checked to make sure it includes a single Experiment subclass</p></li>
+<li><p>The configuration for <code class="docutils literal notranslate"><span class="pre">base_payment</span></code> from config.txt is validated</p></li>
+<li><p>Included files are checked for name conflicts with core Dallinger files</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="bot">
+<span id="dallinger-bot"></span><h2>bot<a class="headerlink" href="#bot" title="Permalink to this headline">¶</a></h2>
+<p>Spawn a bot and attach it to the specified application. The <code class="docutils literal notranslate"><span class="pre">--debug</span></code> parameter
+connects the bot to the locally running instance of Dallinger. Alternatively,
+the <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter specifies a live experiment by its id.</p>
+</div>
+<div class="section" id="debug">
+<h2>debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h2>
+<p>Run the experiment locally. An optional <code class="docutils literal notranslate"><span class="pre">--verbose</span></code> flag prints more detailed
+logs to the command line. Use the optional <code class="docutils literal notranslate"><span class="pre">--bot</span></code> flag to use a bot to
+complete the experiment and the optional <code class="docutils literal notranslate"><span class="pre">--proxy</span></code> parameter can be used to
+specify an alternative port when opening browser windows.</p>
+</div>
+<div class="section" id="sandbox">
+<h2>sandbox<a class="headerlink" href="#sandbox" title="Permalink to this headline">¶</a></h2>
+<p>Runs the experiment on MTurk’s sandbox using Heroku as a server.
+An optional <code class="docutils literal notranslate"><span class="pre">--verbose</span></code> flag prints more detailed logs to the command line.
+An optional <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter specifies the experiment id. If not specified, a new
+unique experiment experiment id is automatically generated.
+An optional <code class="docutils literal notranslate"><span class="pre">--archive</span> <span class="pre">&lt;relative</span> <span class="pre">file</span> <span class="pre">path&gt;</span></code> parameter specifies an experiment archive
+(previously created with <code class="docutils literal notranslate"><span class="pre">dallinger</span> <span class="pre">export</span></code>) from which to pre-populate the database
+before starting recruitment.</p>
+</div>
+<div class="section" id="deploy">
+<h2>deploy<a class="headerlink" href="#deploy" title="Permalink to this headline">¶</a></h2>
+<p>Runs the experiment live on MTurk using Heroku as a server. An optional
+<code class="docutils literal notranslate"><span class="pre">--verbose</span></code> flag prints more detailed logs to the command line. An optional
+<code class="docutils literal notranslate"><span class="pre">--bot</span></code> flag forces the bot recruiter to be used, rather than the configured
+recruiter. An optional <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter specifies the experiment id,
+if not specified, a new unique experiment id is automatically generated.
+An optional <code class="docutils literal notranslate"><span class="pre">--archive</span> <span class="pre">&lt;relative</span> <span class="pre">file</span> <span class="pre">path&gt;</span></code> parameter specifies an experiment archive
+(previously created with <code class="docutils literal notranslate"><span class="pre">dallinger</span> <span class="pre">export</span></code>) from which to pre-populate the database
+before starting recruitment.</p>
+</div>
+<div class="section" id="logs">
+<h2>logs<a class="headerlink" href="#logs" title="Permalink to this headline">¶</a></h2>
+<p>Open the app’s logs in Papertrail. A required <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter
+specifies the experiment by its id.</p>
+</div>
+<div class="section" id="summary">
+<h2>summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Return a summary of an experiment. A required <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter
+specifies the experiment by its id.</p>
+</div>
+<div class="section" id="export">
+<h2>export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h2>
+<p>Download the database and partial server logs to a zipped folder within
+the data directory of the experimental folder. Databases are stored in
+CSV format. A required <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter specifies the experiment by its
+id. Use the optional <code class="docutils literal notranslate"><span class="pre">--local</span></code> flag if exporting a local experiment data.
+An optional <code class="docutils literal notranslate"><span class="pre">--no-scrub</span></code> flag will stop the scrubbing of personally
+identifiable information in the export. The scrubbing of PII is enabled by
+default.</p>
+<div class="section" id="email-test">
+<h3>email_test<a class="headerlink" href="#email-test" title="Permalink to this headline">¶</a></h3>
+<p>Validate email settings derived from Dallinger Configuration and send a test
+email if the configuration appears valid.</p>
+<p>The test email will use <code class="docutils literal notranslate"><span class="pre">dallinger_email_address</span></code> as the sender and
+<code class="docutils literal notranslate"><span class="pre">contact_email_on_error</span></code> as the recipient.</p>
+</div>
+<div class="section" id="compensate">
+<h3>compensate<a class="headerlink" href="#compensate" title="Permalink to this headline">¶</a></h3>
+<p>Compensate a worker a specific amount in US dollars. This is useful if something
+goes wrong with the experiment and you need to pay workers for their wasted
+time. Currently only the <code class="docutils literal notranslate"><span class="pre">mturk</span></code> recruiter is supported, and is the default,
+so doesn’t need to be specified.</p>
+<dl class="simple">
+<dt>For Mechanical Turk, compensation is acheived by:</dt><dd><ol class="arabic simple">
+<li><p>Creating a unique qualification and assigning it to the worker</p></li>
+<li><p>Creating a very simple HIT which is only visible to workers with this
+qualification, using the dollar amount specified in the command as the
+base payment</p></li>
+<li><p>Automatically approving (and thus granting base payment) when the HIT
+is submitted.</p></li>
+</ol>
+</dd>
+<dt>Usage:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--worker_id</span></code> (required) - The worker’s identifier</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--dollars</span></code> (required) - The amount to pay, in US dollars</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--sandbox</span></code> (optional flag) - If present, the compensation will be made
+via the test platform (the MTurk Sandbox)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--email</span></code> (optional) - An email address, which if present, will be
+used to notify the worker that they’ve been compensated</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="qualify">
+<h2>qualify<a class="headerlink" href="#qualify" title="Permalink to this headline">¶</a></h2>
+<p>Assign a Mechanical Turk qualification to one or more workers.
+This is useful when compensating workers if something goes wrong with
+the experiment. Requires a <code class="docutils literal notranslate"><span class="pre">--qualification</span></code> parameter, which is a
+qualification ID, (or, if the <code class="docutils literal notranslate"><span class="pre">--by_name</span></code> is used, a qualification name),
+value <code class="docutils literal notranslate"><span class="pre">--value</span></code> parameter, and a list of one or more worker IDs, passed at
+the end of the command. The optional <code class="docutils literal notranslate"><span class="pre">--notify</span></code> flag can be used to notify
+workers via email. You can also optionally specify the <code class="docutils literal notranslate"><span class="pre">--sandbox</span></code> flag to use
+the MTurk sandbox.</p>
+</div>
+<div class="section" id="revoke">
+<h2>revoke<a class="headerlink" href="#revoke" title="Permalink to this headline">¶</a></h2>
+<p>Revoke a Mechanical Turk qualification for one or more workers.
+This is useful when developing an experiment with “insider” participants,
+who would otherwise be prevented from accepting a HIT for an experiment
+they’ve already participated in.
+Requires a <code class="docutils literal notranslate"><span class="pre">--qualification</span></code>, which is a qualification ID, (or, if
+the <code class="docutils literal notranslate"><span class="pre">--by_name</span></code> is used, a qualification name), an optional <code class="docutils literal notranslate"><span class="pre">--reason</span></code>
+string, and a list of one or more MTurk worker IDs. You can also optionally
+specify the <code class="docutils literal notranslate"><span class="pre">--sandbox</span></code> flag to use the MTurk sandbox.</p>
+</div>
+<div class="section" id="hibernate">
+<h2>hibernate<a class="headerlink" href="#hibernate" title="Permalink to this headline">¶</a></h2>
+<p>Temporarily scales down the specified app to save money. All dynos are
+removed and so are many of the add-ons. Hibernating apps are
+non-functional. It is likely that the app will not be entirely free
+while hibernating. To restore the app use <code class="docutils literal notranslate"><span class="pre">awaken</span></code>. A required
+<code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter specifies the experiment by its id.</p>
+</div>
+<div class="section" id="awaken">
+<h2>awaken<a class="headerlink" href="#awaken" title="Permalink to this headline">¶</a></h2>
+<p>Restore a hibernating app. A required <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter specifies the
+experiment by its id.</p>
+</div>
+<div class="section" id="destroy">
+<h2>destroy<a class="headerlink" href="#destroy" title="Permalink to this headline">¶</a></h2>
+<p>Tear down an experiment server. A required <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter
+specifies the experiment by its id. Optional <code class="docutils literal notranslate"><span class="pre">--expire-hit</span></code> flag
+can be provided to force expiration of MTurk HITs associated with the
+app (<code class="docutils literal notranslate"><span class="pre">--no-expire-hit</span></code> can be used to disable HIT expiration). If app
+is sandboxed, you will need to use the <code class="docutils literal notranslate"><span class="pre">--sandbox</span></code> flag to expire HITs
+from the MTurk sandbox.</p>
+</div>
+<div class="section" id="hits">
+<h2>hits<a class="headerlink" href="#hits" title="Permalink to this headline">¶</a></h2>
+<p>List all MTurk HITs for a dallinger app. A required <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code>
+parameter specifies the experiment by its id. An optional <code class="docutils literal notranslate"><span class="pre">--sandbox</span></code>
+flag indicates to look for HITs in the MTurk sandbox.</p>
+</div>
+<div class="section" id="expire">
+<h2>expire<a class="headerlink" href="#expire" title="Permalink to this headline">¶</a></h2>
+<p>Expire all MTurk HITs for a dallinger app. A required <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code>
+parameter specifies the experiment by its id. An optional <code class="docutils literal notranslate"><span class="pre">--sandbox</span></code>
+flag indicates to look for HITs in the MTurk sandbox.</p>
+</div>
+<div class="section" id="extend-mturk-hit">
+<h2>extend_mturk_hit<a class="headerlink" href="#extend-mturk-hit" title="Permalink to this headline">¶</a></h2>
+<p>Extend an MTurk HIT by a some number of assignments, and optionally, an
+additional number of hours.
+A required <code class="docutils literal notranslate"><span class="pre">--hit_id</span></code> parameter should contain
+the MTurk HIT Id, <code class="docutils literal notranslate"><span class="pre">--assignments</span></code> should contain the additional number of
+HIT assigments to create. To extend the duration of the HIT, also include
+a <code class="docutils literal notranslate"><span class="pre">duration_hours</span></code> parameter, which may be a decimal (<code class="docutils literal notranslate"><span class="pre">--duration_hours</span> <span class="pre">2.5</span></code>
+is acceptable input.) If your HIT is in the MTurk sandbox, you must add a
+<code class="docutils literal notranslate"><span class="pre">--sandbox</span></code> flag.</p>
+</div>
+<div class="section" id="apps">
+<h2>apps<a class="headerlink" href="#apps" title="Permalink to this headline">¶</a></h2>
+<p>List all running heroku apps associated with the currently logged in
+heroku account. Returns the Dallinger app UID, app launch timestamp,
+and heroku app url for each running app.</p>
+</div>
+<div class="section" id="monitor">
+<h2>monitor<a class="headerlink" href="#monitor" title="Permalink to this headline">¶</a></h2>
+<p>Monitor a live Dallinger experiment. A required <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter
+specifies the experiment by its id.</p>
+</div>
+<div class="section" id="load">
+<h2>load<a class="headerlink" href="#load" title="Permalink to this headline">¶</a></h2>
+<p>Import database state from an exported zip file and leave the server
+running until stopping the process with &lt;control&gt;-c.
+A required <code class="docutils literal notranslate"><span class="pre">--app</span> <span class="pre">&lt;app&gt;</span></code> parameter specifies the experiment by its id.
+An optional <code class="docutils literal notranslate"><span class="pre">--verbose</span></code> flag prints more detailed logs to the command line.
+Use the optional <code class="docutils literal notranslate"><span class="pre">--replay</span></code> flag to start the experiment locally in replay
+mode after loading the data into the local database.</p>
+</div>
+<div class="section" id="setup">
+<h2>setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>Create the Dallinger config file if it does not already exist.</p>
+</div>
+<div class="section" id="uuid">
+<h2>uuid<a class="headerlink" href="#uuid" title="Permalink to this headline">¶</a></h2>
+<p>Generate a new unique identifier.</p>
+</div>
+<div class="section" id="rq-worker">
+<h2>rq_worker<a class="headerlink" href="#rq-worker" title="Permalink to this headline">¶</a></h2>
+<p>Start an rq worker in the context of Dallinger.
+This command can potentially be useful during the development/debugging process.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="configuration.html" class="btn btn-neutral float-right" title="Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="demoing_dallinger.html" class="btn btn-neutral float-left" title="Demoing Dallinger" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

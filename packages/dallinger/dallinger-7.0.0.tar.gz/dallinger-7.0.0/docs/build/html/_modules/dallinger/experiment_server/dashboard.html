@@ -1,0 +1,1007 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>dallinger.experiment_server.dashboard &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>dallinger.experiment_server.dashboard</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for dallinger.experiment_server.dashboard</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">import</span> <span class="nn">timeago</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+<span class="kn">from</span> <span class="nn">six.moves.urllib.parse</span> <span class="kn">import</span> <span class="n">urlencode</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">current_app</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">abort</span><span class="p">,</span> <span class="n">flash</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">url_for</span>
+<span class="kn">from</span> <span class="nn">flask.wrappers</span> <span class="kn">import</span> <span class="n">Response</span>
+<span class="kn">from</span> <span class="nn">flask_wtf</span> <span class="kn">import</span> <span class="n">FlaskForm</span>
+<span class="kn">from</span> <span class="nn">tzlocal</span> <span class="kn">import</span> <span class="n">get_localzone</span>
+<span class="kn">from</span> <span class="nn">wtforms</span> <span class="kn">import</span> <span class="n">StringField</span><span class="p">,</span> <span class="n">PasswordField</span><span class="p">,</span> <span class="n">BooleanField</span><span class="p">,</span> <span class="n">SubmitField</span><span class="p">,</span> <span class="n">HiddenField</span>
+<span class="kn">from</span> <span class="nn">wtforms.validators</span> <span class="kn">import</span> <span class="n">DataRequired</span><span class="p">,</span> <span class="n">ValidationError</span>
+<span class="kn">from</span> <span class="nn">flask_login</span> <span class="kn">import</span> <span class="n">current_user</span><span class="p">,</span> <span class="n">login_required</span><span class="p">,</span> <span class="n">login_user</span><span class="p">,</span> <span class="n">logout_user</span>
+<span class="kn">from</span> <span class="nn">flask_login</span> <span class="kn">import</span> <span class="n">UserMixin</span>
+<span class="kn">from</span> <span class="nn">flask_login.utils</span> <span class="kn">import</span> <span class="n">login_url</span> <span class="k">as</span> <span class="n">make_login_url</span>
+<span class="kn">from</span> <span class="nn">dallinger</span> <span class="kn">import</span> <span class="n">recruiters</span>
+<span class="kn">from</span> <span class="nn">dallinger.heroku.tools</span> <span class="kn">import</span> <span class="n">HerokuApp</span>
+<span class="kn">from</span> <span class="nn">dallinger.config</span> <span class="kn">import</span> <span class="n">get_config</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">date_handler</span><span class="p">,</span> <span class="n">error_response</span><span class="p">,</span> <span class="n">success_response</span>
+
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">UserMixin</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">userid</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">userid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span>
+
+
+<div class="viewcode-block" id="DashboardTab"><a class="viewcode-back" href="../../../monitoring_a_live_experiment.html#dallinger.experiment_server.dashboard.DashboardTab">[docs]</a><span class="k">class</span> <span class="nc">DashboardTab</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="DashboardTab.__init__"><a class="viewcode-back" href="../../../monitoring_a_live_experiment.html#dallinger.experiment_server.dashboard.DashboardTab.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">route_name</span><span class="p">,</span> <span class="n">children_function</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates a new dashboard tab</span>
+
+<span class="sd">        :param title: Title string to appear in the dashboard HTML</span>
+<span class="sd">        :type title: str</span>
+<span class="sd">        :param route_name: The registered route name (optionally prefixed with ``dashboard.``)</span>
+<span class="sd">        :type route_name: str</span>
+<span class="sd">        :param children_function: A callable that returns an iterable of ``DashboardTab`` to be displayed as children of this tab</span>
+<span class="sd">        :type position: function, optional</span>
+<span class="sd">        :param params: A mapping of url query string parameters used when generating the route url.</span>
+<span class="sd">        :type position: dict, optional</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">route_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;dashboard.&quot;</span><span class="p">):</span>
+            <span class="n">route_name</span> <span class="o">=</span> <span class="s2">&quot;dashboard.&quot;</span> <span class="o">+</span> <span class="n">route_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">route_name</span> <span class="o">=</span> <span class="n">route_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children_function</span> <span class="o">=</span> <span class="n">children_function</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="n">params</span></div>
+
+    <span class="k">def</span> <span class="nf">url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">url_for</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">route_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">url</span> <span class="o">+=</span> <span class="s2">&quot;?&quot;</span> <span class="o">+</span> <span class="n">urlencode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">url</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">has_children</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">children_function</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__class__</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span> <span class="o">==</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span> <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_children</span><span class="p">:</span>
+            <span class="n">children</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">children_function</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">child</span></div>
+
+
+<div class="viewcode-block" id="DashboardTabs"><a class="viewcode-back" href="../../../monitoring_a_live_experiment.html#dallinger.experiment_server.dashboard.DashboardTabs">[docs]</a><span class="k">class</span> <span class="nc">DashboardTabs</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">tabs</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tabs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tabs</span><span class="p">)</span> <span class="ow">or</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="DashboardTabs.insert"><a class="viewcode-back" href="../../../monitoring_a_live_experiment.html#dallinger.experiment_server.dashboard.DashboardTabs.insert">[docs]</a>    <span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">route_name</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates a new dashboard tab and inserts it (optionally at a specific position)</span>
+
+<span class="sd">        :param title: Title string to appear in the dashboard HTML</span>
+<span class="sd">        :type title: str</span>
+<span class="sd">        :param route_name: The registered route name (optionally prefixed with ``dashboard.``)</span>
+<span class="sd">        :type route_name: str</span>
+<span class="sd">        :param position: The 0-based index where the tab should be inserted. By default tabs will be appended to the end.</span>
+<span class="sd">        :type position: int, optional</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">tab</span> <span class="o">=</span> <span class="n">DashboardTab</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">route_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">insert_tab</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DashboardTabs.insert_tab"><a class="viewcode-back" href="../../../monitoring_a_live_experiment.html#dallinger.experiment_server.dashboard.DashboardTabs.insert_tab">[docs]</a>    <span class="k">def</span> <span class="nf">insert_tab</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Insert a new dashboard tab (optionally at a specific position)</span>
+
+<span class="sd">        :param tab: DashboardTab instance</span>
+<span class="sd">        :type tab: DashboardTab</span>
+<span class="sd">        :param position: The 0-based index where the tab should be inserted. By default tabs will be appended to the end.</span>
+<span class="sd">        :type position: int, optional</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">position</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tabs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tabs</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">tab</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DashboardTabs.insert_before_route"><a class="viewcode-back" href="../../../monitoring_a_live_experiment.html#dallinger.experiment_server.dashboard.DashboardTabs.insert_before_route">[docs]</a>    <span class="k">def</span> <span class="nf">insert_before_route</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">route_name</span><span class="p">,</span> <span class="n">before_route</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates a new dashboard tab and inserts it before an existing tab by route name</span>
+
+<span class="sd">        :param title: Title string to appear in the dashboard HTML</span>
+<span class="sd">        :type title: str</span>
+<span class="sd">        :param route_name: The registered route name (optionally prefixed with ``dashboard.``)</span>
+<span class="sd">        :type route_name: str</span>
+<span class="sd">        :param before_route: The route name to insert this tab before.</span>
+<span class="sd">        :type before_route: str</span>
+<span class="sd">        :raises ValueError: When ``before_route`` is not found in registered tabs</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">tab</span> <span class="o">=</span> <span class="n">DashboardTab</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">route_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">insert_tab_before_route</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">before_route</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DashboardTabs.insert_tab_before_route"><a class="viewcode-back" href="../../../monitoring_a_live_experiment.html#dallinger.experiment_server.dashboard.DashboardTabs.insert_tab_before_route">[docs]</a>    <span class="k">def</span> <span class="nf">insert_tab_before_route</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="n">before_route</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Insert a new dashboard tab before an existing tab by route name</span>
+
+<span class="sd">        :param tab: DashboardTab instance</span>
+<span class="sd">        :type tab: DashboardTab</span>
+<span class="sd">        :param before_route: The route name to insert this tab before.</span>
+<span class="sd">        :type before_route: str</span>
+<span class="sd">        :raises ValueError: When ``before_route`` is not found in registered tabs</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">before_check</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">((</span><span class="n">before_route</span><span class="p">,</span> <span class="s2">&quot;dashboard.&quot;</span> <span class="o">+</span> <span class="n">before_route</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cur_tab</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tabs</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">cur_tab</span><span class="o">.</span><span class="n">route_name</span> <span class="ow">in</span> <span class="n">before_check</span><span class="p">:</span>
+                <span class="n">position</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Route </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">before_route</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">insert_tab</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DashboardTabs.insert_after_route"><a class="viewcode-back" href="../../../monitoring_a_live_experiment.html#dallinger.experiment_server.dashboard.DashboardTabs.insert_after_route">[docs]</a>    <span class="k">def</span> <span class="nf">insert_after_route</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">route_name</span><span class="p">,</span> <span class="n">after_route</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates a new dashboard tab and inserts it after an existing tab by route name</span>
+
+<span class="sd">        :param title: Title string to appear in the dashboard HTML</span>
+<span class="sd">        :type title: str</span>
+<span class="sd">        :param route_name: The registered route name (optionally prefixed with ``dashboard.``)</span>
+<span class="sd">        :type route_name: str</span>
+<span class="sd">        :param after_route: The route name to insert this tab after.</span>
+<span class="sd">        :type after_route: str</span>
+<span class="sd">        :raises ValueError: When ``after_route`` is not found in registered tabs</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">tab</span> <span class="o">=</span> <span class="n">DashboardTab</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">route_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">insert_tab_after_route</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">after_route</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DashboardTabs.insert_tab_after_route"><a class="viewcode-back" href="../../../monitoring_a_live_experiment.html#dallinger.experiment_server.dashboard.DashboardTabs.insert_tab_after_route">[docs]</a>    <span class="k">def</span> <span class="nf">insert_tab_after_route</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="n">after_route</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Insert a new dashboard tab after an existing tab by route name</span>
+
+<span class="sd">        :param tab: DashboardTab instance</span>
+<span class="sd">        :type tab: DashboardTab</span>
+<span class="sd">        :param after_route: The route name to insert this tab after.</span>
+<span class="sd">        :type after_route: str</span>
+<span class="sd">        :raises ValueError: When ``after_route`` is not found in registered tabs</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">after_check</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">((</span><span class="n">after_route</span><span class="p">,</span> <span class="s2">&quot;dashboard.&quot;</span> <span class="o">+</span> <span class="n">after_route</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cur_tab</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tabs</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">cur_tab</span><span class="o">.</span><span class="n">route_name</span> <span class="ow">in</span> <span class="n">after_check</span><span class="p">:</span>
+                <span class="n">position</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Route </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">after_route</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">insert_tab</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DashboardTabs.remove"><a class="viewcode-back" href="../../../monitoring_a_live_experiment.html#dallinger.experiment_server.dashboard.DashboardTabs.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">route_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Remove a tab by route name</span>
+
+<span class="sd">        :param route_name: The registered route name (optionally prefixed with ``dashboard.``)</span>
+<span class="sd">        :type route_name: str</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">route_check</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">((</span><span class="n">route_name</span><span class="p">,</span> <span class="s2">&quot;dashboard.&quot;</span> <span class="o">+</span> <span class="n">route_name</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tabs</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tabs</span> <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">route_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">route_check</span><span class="p">]</span></div>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tabs</span><span class="p">)</span></div>
+
+
+<span class="n">BROWSEABLE_MODELS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Info&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Network&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Node&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Participant&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Question&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Transformation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Transmission&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">database_children</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">model_type</span> <span class="ow">in</span> <span class="n">BROWSEABLE_MODELS</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">DashboardTab</span><span class="p">(</span>
+            <span class="n">model_type</span> <span class="o">+</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;dashboard.database&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;model_type&quot;</span><span class="p">:</span> <span class="n">model_type</span><span class="p">}</span>
+        <span class="p">)</span>
+
+
+<span class="n">dashboard_tabs</span> <span class="o">=</span> <span class="n">DashboardTabs</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">DashboardTab</span><span class="p">(</span><span class="s2">&quot;Home&quot;</span><span class="p">,</span> <span class="s2">&quot;dashboard.index&quot;</span><span class="p">),</span>
+        <span class="n">DashboardTab</span><span class="p">(</span><span class="s2">&quot;Heroku&quot;</span><span class="p">,</span> <span class="s2">&quot;dashboard.heroku&quot;</span><span class="p">),</span>
+        <span class="n">DashboardTab</span><span class="p">(</span><span class="s2">&quot;MTurk&quot;</span><span class="p">,</span> <span class="s2">&quot;dashboard.mturk&quot;</span><span class="p">),</span>
+        <span class="n">DashboardTab</span><span class="p">(</span><span class="s2">&quot;Monitoring&quot;</span><span class="p">,</span> <span class="s2">&quot;dashboard.monitoring&quot;</span><span class="p">),</span>
+        <span class="n">DashboardTab</span><span class="p">(</span><span class="s2">&quot;Lifecycle&quot;</span><span class="p">,</span> <span class="s2">&quot;dashboard.lifecycle&quot;</span><span class="p">),</span>
+        <span class="n">DashboardTab</span><span class="p">(</span><span class="s2">&quot;Database&quot;</span><span class="p">,</span> <span class="s2">&quot;dashboard.database&quot;</span><span class="p">,</span> <span class="n">database_children</span><span class="p">),</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">load_user</span><span class="p">(</span><span class="n">userid</span><span class="p">):</span>
+    <span class="n">admin_user</span> <span class="o">=</span> <span class="n">current_app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ADMIN_USER&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">userid</span> <span class="o">!=</span> <span class="n">admin_user</span><span class="o">.</span><span class="n">id</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">return</span> <span class="n">admin_user</span>
+
+
+<span class="k">def</span> <span class="nf">load_user_from_request</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">admin_user</span> <span class="o">=</span> <span class="n">current_app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ADMIN_USER&quot;</span><span class="p">)</span>
+    <span class="n">auth</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">authorization</span>
+    <span class="k">if</span> <span class="n">auth</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">auth</span><span class="p">[</span><span class="s2">&quot;username&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">admin_user</span><span class="o">.</span><span class="n">id</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">auth</span><span class="p">[</span><span class="s2">&quot;password&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">admin_user</span><span class="o">.</span><span class="n">password</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">admin_user</span>
+    <span class="k">return</span>
+
+
+<span class="k">def</span> <span class="nf">unauthorized</span><span class="p">():</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;debug&quot;</span><span class="p">:</span>
+        <span class="n">abort</span><span class="p">(</span><span class="mi">401</span><span class="p">)</span>
+
+    <span class="n">redirect_url</span> <span class="o">=</span> <span class="n">make_login_url</span><span class="p">(</span><span class="s2">&quot;dashboard.login&quot;</span><span class="p">,</span> <span class="n">next_url</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">redirect_url</span><span class="p">)</span>
+
+
+<span class="n">dashboard</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s2">&quot;dashboard&quot;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">,</span> <span class="n">url_prefix</span><span class="o">=</span><span class="s2">&quot;/dashboard&quot;</span><span class="p">)</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">401</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">custom_401</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span>
+        <span class="s2">&quot;Unauthorized&quot;</span><span class="p">,</span> <span class="mi">401</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;WWW-Authenticate&quot;</span><span class="p">:</span> <span class="s1">&#39;Basic realm=&quot;Login Required&quot;&#39;</span><span class="p">}</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">validate_username</span><span class="p">(</span><span class="n">form</span><span class="p">,</span> <span class="n">field</span><span class="p">):</span>
+    <span class="n">admin_user</span> <span class="o">=</span> <span class="n">current_app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ADMIN_USER&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">field</span><span class="o">.</span><span class="n">data</span> <span class="o">!=</span> <span class="n">admin_user</span><span class="o">.</span><span class="n">id</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="s2">&quot;Unknown user&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">next_default</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;next&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">LoginForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
+    <span class="nb">next</span> <span class="o">=</span> <span class="n">HiddenField</span><span class="p">(</span><span class="s2">&quot;next&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">next_default</span><span class="p">)</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">StringField</span><span class="p">(</span><span class="s2">&quot;Username&quot;</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">(),</span> <span class="n">validate_username</span><span class="p">])</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">PasswordField</span><span class="p">(</span><span class="s2">&quot;Password&quot;</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+    <span class="n">remember_me</span> <span class="o">=</span> <span class="n">BooleanField</span><span class="p">(</span><span class="s2">&quot;Remember Me&quot;</span><span class="p">)</span>
+    <span class="n">submit</span> <span class="o">=</span> <span class="n">SubmitField</span><span class="p">(</span><span class="s2">&quot;Sign In&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">is_safe_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">base</span> <span class="o">=</span> <span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">url</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">url</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/login&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;POST&quot;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="n">next_url</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;next&quot;</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;next&quot;</span><span class="p">))</span>
+    <span class="n">next_url</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">next_url</span> <span class="k">if</span> <span class="n">next_url</span> <span class="ow">and</span> <span class="n">is_safe_url</span><span class="p">(</span><span class="n">next_url</span><span class="p">)</span> <span class="k">else</span> <span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;dashboard.index&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">current_user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">next_url</span><span class="p">)</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">LoginForm</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">form</span><span class="o">.</span><span class="n">is_submitted</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&quot;login.html&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sign In&quot;</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+        <span class="n">admin_user</span> <span class="o">=</span> <span class="n">current_app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ADMIN_USER&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">admin_user</span><span class="o">.</span><span class="n">password</span> <span class="o">==</span> <span class="n">form</span><span class="o">.</span><span class="n">password</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;Invalid username or password&quot;</span><span class="p">,</span> <span class="s2">&quot;danger&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;dashboard.login&quot;</span><span class="p">))</span>
+
+        <span class="n">login_user</span><span class="p">(</span><span class="n">admin_user</span><span class="p">,</span> <span class="n">remember</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">remember_me</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;You are now logged in!&quot;</span><span class="p">,</span> <span class="s2">&quot;success&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">next_url</span><span class="p">)</span>
+    <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;There was a problem with your submission&quot;</span><span class="p">,</span> <span class="s2">&quot;danger&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&quot;login.html&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Sign In&quot;</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/logout&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">logout</span><span class="p">():</span>
+    <span class="n">logout_user</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s2">&quot;dashboard.index&quot;</span><span class="p">))</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/index&quot;</span><span class="p">)</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Displays active experiment configuation&quot;&quot;&quot;</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">get_config</span><span class="p">()</span><span class="o">.</span><span class="n">as_dict</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span>
+        <span class="s2">&quot;dashboard_home.html&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Dashboard Home&quot;</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="n">config</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/heroku&quot;</span><span class="p">)</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">heroku</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Assemble links from Heroku add-on info, stored in config, plus some</span>
+<span class="sd">    standard dashboard links.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;debug&quot;</span><span class="p">:</span>
+        <span class="n">flash</span><span class="p">(</span>
+            <span class="s2">&quot;This experiment is running in debug mode and is not deployed to Heroku&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&quot;dashboard_heroku.html&quot;</span><span class="p">,</span> <span class="n">links</span><span class="o">=</span><span class="p">[])</span>
+
+    <span class="n">heroku_app</span> <span class="o">=</span> <span class="n">HerokuApp</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;heroku_app_id_root&quot;</span><span class="p">))</span>
+    <span class="n">links</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">heroku_app</span><span class="o">.</span><span class="n">dashboard_url</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Heroku dashboard&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">heroku_app</span><span class="o">.</span><span class="n">dashboard_metrics_url</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Heroku metrics&quot;</span><span class="p">},</span>
+    <span class="p">]</span>
+    <span class="n">details</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;infrastructure_debug_details&quot;</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">))</span>
+    <span class="p">)</span>
+    <span class="n">links</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+        <span class="p">[{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">(),</span> <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]}</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">details</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&quot;dashboard_heroku.html&quot;</span><span class="p">,</span> <span class="n">links</span><span class="o">=</span><span class="n">links</span><span class="p">)</span>
+
+
+<span class="n">tz</span> <span class="o">=</span> <span class="n">get_localzone</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">when_with_relative_time</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">tz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+    <span class="n">formatted</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%a</span><span class="s2"> %b </span><span class="si">%-d</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> (</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">formatted</span><span class="p">,</span> <span class="n">timeago</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">now</span><span class="p">))</span>
+
+
+<span class="k">class</span> <span class="nc">NotUsingMTurkRecruiter</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The experiment does not use the MTurk Recruiter&quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">MTurkDataSource</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recruiter</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recruiter</span> <span class="o">=</span> <span class="n">recruiter</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_mturk</span> <span class="o">=</span> <span class="n">recruiter</span><span class="o">.</span><span class="n">mturkservice</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">NotUsingMTurkRecruiter</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_sandbox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recruiter</span><span class="o">.</span><span class="n">is_sandbox</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_mturk_root</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_sandbox</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;https://requestersandbox.mturk.com&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;https://requester.mturk.com&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">account_balance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mturk</span><span class="o">.</span><span class="n">account_balance</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ad_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">hit_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recruiter</span><span class="o">.</span><span class="n">current_hit_id</span><span class="p">()</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&amp;assignmentId=ASSIGNMENT_ID_NOT_AVAILABLE&amp;hitId=</span><span class="si">{}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="n">hit_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_recruiter</span><span class="o">.</span><span class="n">ad_url</span><span class="p">,</span> <span class="n">hit_id</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">current_hit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">hit_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recruiter</span><span class="o">.</span><span class="n">current_hit_id</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;HIT is: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hit_id</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">hit_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mturk</span><span class="o">.</span><span class="n">get_hit</span><span class="p">(</span><span class="n">hit_id</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">requester_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/manage&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_mturk_root</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qualification_types_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/qualification_types&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_mturk_root</span><span class="p">)</span>
+
+
+<span class="n">_fake_hit_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;annotation&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="s2">&quot;assignments_available&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;assignments_completed&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;assignments_pending&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;created&quot;</span><span class="p">:</span> <span class="n">tz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">10</span><span class="p">)),</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Fake HIT Description&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;expiration&quot;</span><span class="p">:</span> <span class="n">tz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">6</span><span class="p">)),</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3X7837UUADRXYCA1K7JAJLKC66DJ60&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;testkw1&quot;</span><span class="p">,</span> <span class="s2">&quot;testkw2&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;max_assignments&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;qualification_type_ids&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;000000000000000000L0&quot;</span><span class="p">,</span> <span class="s2">&quot;00000000000000000071&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;review_status&quot;</span><span class="p">:</span> <span class="s2">&quot;NotReviewed&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;reward&quot;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
+    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Assignable&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Fake HIT Title&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type_id&quot;</span><span class="p">:</span> <span class="s2">&quot;3V76OXST9SAE3THKN85FUPK7730050&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;worker_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://workersandbox.mturk.com/projects/3V76OXST9SAE3THKN85FUPK7730050/tasks&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">FakeMTurkDataSource</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">account_balance</span> <span class="o">=</span> <span class="mf">1234.5</span>
+    <span class="n">ad_url</span> <span class="o">=</span> <span class="s2">&quot;http://unicodesnowmanforyou.com/&quot;</span>
+    <span class="n">requester_url</span> <span class="o">=</span> <span class="s2">&quot;https://fakerequesterurl.com&quot;</span>
+    <span class="n">qualification_types_url</span> <span class="o">=</span> <span class="s2">&quot;https://fakequalificationtypes.com&quot;</span>
+    <span class="n">is_sandbox</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_hit</span> <span class="o">=</span> <span class="n">_fake_hit_data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">MTurkDashboardInformation</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">data_source</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_source</span> <span class="o">=</span> <span class="n">data_source</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">hit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source</span><span class="o">.</span><span class="n">current_hit</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">hit_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">hit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span>
+        <span class="k">if</span> <span class="n">hit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;HIT Id&quot;</span><span class="p">:</span> <span class="n">hit</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;Title&quot;</span><span class="p">:</span> <span class="n">hit</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;Keywords&quot;</span><span class="p">:</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">hit</span><span class="p">[</span><span class="s2">&quot;keywords&quot;</span><span class="p">]),</span>
+                <span class="s2">&quot;Base payment&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">hit</span><span class="p">[</span><span class="s2">&quot;reward&quot;</span><span class="p">]),</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="n">hit</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;Creation time&quot;</span><span class="p">:</span> <span class="n">when_with_relative_time</span><span class="p">(</span><span class="n">hit</span><span class="p">[</span><span class="s2">&quot;created&quot;</span><span class="p">]),</span>
+                <span class="s2">&quot;Expiration time&quot;</span><span class="p">:</span> <span class="n">when_with_relative_time</span><span class="p">(</span><span class="n">hit</span><span class="p">[</span><span class="s2">&quot;expiration&quot;</span><span class="p">]),</span>
+                <span class="s2">&quot;Assignments requested&quot;</span><span class="p">:</span> <span class="n">hit</span><span class="p">[</span><span class="s2">&quot;max_assignments&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;Assignments available&quot;</span><span class="p">:</span> <span class="n">hit</span><span class="p">[</span><span class="s2">&quot;assignments_available&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;Assignments completed&quot;</span><span class="p">:</span> <span class="n">hit</span><span class="p">[</span><span class="s2">&quot;assignments_completed&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;Assignments pending&quot;</span><span class="p">:</span> <span class="n">hit</span><span class="p">[</span><span class="s2">&quot;assignments_pending&quot;</span><span class="p">],</span>
+            <span class="p">}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">hit_expiration_isoformat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">hit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span>
+        <span class="k">if</span> <span class="n">hit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="p">[</span><span class="s2">&quot;expiration&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_sandbox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source</span><span class="o">.</span><span class="n">is_sandbox</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">account_balance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;$</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_source</span><span class="o">.</span><span class="n">account_balance</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">last_updated</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%X</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ad_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source</span><span class="o">.</span><span class="n">ad_url</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">requester_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source</span><span class="o">.</span><span class="n">requester_url</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qualification_types_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source</span><span class="o">.</span><span class="n">qualification_types_url</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">expire_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">app_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+        <span class="n">sandbox_option</span> <span class="o">=</span> <span class="s2">&quot; --sandbox &quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_source</span><span class="o">.</span><span class="n">is_sandbox</span> <span class="k">else</span> <span class="s2">&quot; &quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;dallinger expire</span><span class="si">{}</span><span class="s2">--app </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sandbox_option</span><span class="p">,</span> <span class="n">app_id</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">mturk_data_source</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+    <span class="n">recruiter</span> <span class="o">=</span> <span class="n">recruiters</span><span class="o">.</span><span class="n">from_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">MTurkDataSource</span><span class="p">(</span><span class="n">recruiter</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">NotUsingMTurkRecruiter</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;debug&quot;</span><span class="p">:</span>
+            <span class="n">flash</span><span class="p">(</span>
+                <span class="s2">&quot;Debug mode: Fake MTurk information provided for testing only.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;warning&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">FakeMTurkDataSource</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/mturk&quot;</span><span class="p">)</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">mturk</span><span class="p">():</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">data_source</span> <span class="o">=</span> <span class="n">mturk_data_source</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">NotUsingMTurkRecruiter</span><span class="p">:</span>
+        <span class="n">flash</span><span class="p">(</span><span class="s2">&quot;This experiment does not use the MTurk Recruiter.&quot;</span><span class="p">,</span> <span class="s2">&quot;danger&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span>
+            <span class="s2">&quot;dashboard_mturk.html&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;MTurk Dashboard&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span>
+        <span class="p">)</span>
+
+    <span class="n">helper</span> <span class="o">=</span> <span class="n">MTurkDashboardInformation</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">data_source</span><span class="p">)</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;account_balance&quot;</span><span class="p">:</span> <span class="n">helper</span><span class="o">.</span><span class="n">account_balance</span><span class="p">,</span>
+        <span class="s2">&quot;ad_url&quot;</span><span class="p">:</span> <span class="n">helper</span><span class="o">.</span><span class="n">ad_url</span><span class="p">,</span>
+        <span class="s2">&quot;hit_info&quot;</span><span class="p">:</span> <span class="n">helper</span><span class="o">.</span><span class="n">hit_info</span><span class="p">,</span>
+        <span class="s2">&quot;hit_expiration&quot;</span><span class="p">:</span> <span class="n">helper</span><span class="o">.</span><span class="n">hit_expiration_isoformat</span><span class="p">,</span>
+        <span class="s2">&quot;last_updated&quot;</span><span class="p">:</span> <span class="n">helper</span><span class="o">.</span><span class="n">last_updated</span><span class="p">,</span>
+        <span class="s2">&quot;requester_url&quot;</span><span class="p">:</span> <span class="n">helper</span><span class="o">.</span><span class="n">requester_url</span><span class="p">,</span>
+        <span class="s2">&quot;is_sandbox&quot;</span><span class="p">:</span> <span class="n">helper</span><span class="o">.</span><span class="n">is_sandbox</span><span class="p">,</span>
+        <span class="s2">&quot;qualification_types_url&quot;</span><span class="p">:</span> <span class="n">helper</span><span class="o">.</span><span class="n">qualification_types_url</span><span class="p">,</span>
+        <span class="s2">&quot;expire_command&quot;</span><span class="p">:</span> <span class="n">helper</span><span class="o">.</span><span class="n">expire_command</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&quot;dashboard_mturk.html&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;MTurk Dashboard&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/monitoring&quot;</span><span class="p">)</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">monitoring</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">distinct</span><span class="p">,</span> <span class="n">func</span>
+    <span class="kn">from</span> <span class="nn">dallinger.experiment_server.experiment_server</span> <span class="kn">import</span> <span class="n">Experiment</span><span class="p">,</span> <span class="n">session</span>
+    <span class="kn">from</span> <span class="nn">dallinger.models</span> <span class="kn">import</span> <span class="n">Network</span>
+
+    <span class="n">exp</span> <span class="o">=</span> <span class="n">Experiment</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
+    <span class="n">panes</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">monitoring_panels</span><span class="p">(</span><span class="o">**</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">flat</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+    <span class="n">network_structure</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">network_structure</span><span class="p">(</span><span class="o">**</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">flat</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+    <span class="n">vis_options</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">node_visualization_options</span><span class="p">()</span>
+    <span class="n">net_roles</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Network</span><span class="o">.</span><span class="n">role</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">Network</span><span class="o">.</span><span class="n">role</span><span class="p">))</span>
+        <span class="o">.</span><span class="n">group_by</span><span class="p">(</span><span class="n">Network</span><span class="o">.</span><span class="n">role</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">Network</span><span class="o">.</span><span class="n">role</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">net_ids</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">distinct</span><span class="p">(</span><span class="n">Network</span><span class="o">.</span><span class="n">id</span><span class="p">))</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">Network</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span>
+        <span class="s2">&quot;dashboard_monitor.html&quot;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Experiment Monitoring&quot;</span><span class="p">,</span>
+        <span class="n">panes</span><span class="o">=</span><span class="n">panes</span><span class="p">,</span>
+        <span class="n">network_structure</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">network_structure</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">date_handler</span><span class="p">),</span>
+        <span class="n">net_roles</span><span class="o">=</span><span class="n">net_roles</span><span class="p">,</span>
+        <span class="n">net_ids</span><span class="o">=</span><span class="n">net_ids</span><span class="p">,</span>
+        <span class="n">vis_options</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">vis_options</span><span class="p">),</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/node_details/&lt;object_type&gt;/&lt;obj_id&gt;&quot;</span><span class="p">)</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">node_details</span><span class="p">(</span><span class="n">object_type</span><span class="p">,</span> <span class="n">obj_id</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">dallinger.experiment_server.experiment_server</span> <span class="kn">import</span> <span class="n">Experiment</span><span class="p">,</span> <span class="n">session</span>
+
+    <span class="n">exp</span> <span class="o">=</span> <span class="n">Experiment</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
+    <span class="n">html_data</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">node_visualization_html</span><span class="p">(</span><span class="n">object_type</span><span class="p">,</span> <span class="n">obj_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">html_data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">mimetype</span><span class="o">=</span><span class="s2">&quot;text/html&quot;</span><span class="p">)</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/lifecycle&quot;</span><span class="p">)</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">lifecycle</span><span class="p">():</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">mturk</span> <span class="o">=</span> <span class="n">MTurkDashboardInformation</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">mturk_data_source</span><span class="p">(</span><span class="n">config</span><span class="p">))</span>
+    <span class="k">except</span> <span class="n">NotUsingMTurkRecruiter</span><span class="p">:</span>
+        <span class="n">mturk</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">sandbox_option</span> <span class="o">=</span> <span class="s2">&quot; --sandbox &quot;</span> <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;sandbox&quot;</span> <span class="k">else</span> <span class="s2">&quot; &quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;heroku_app_id&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;heroku_app_id_root&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;expire_command&quot;</span><span class="p">:</span> <span class="n">mturk</span><span class="o">.</span><span class="n">expire_command</span> <span class="k">if</span> <span class="n">mturk</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;sandbox_option&quot;</span><span class="p">:</span> <span class="n">sandbox_option</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span>
+        <span class="s2">&quot;dashboard_lifecycle.html&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Experiment lifecycle Dashboard&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">data</span>
+    <span class="p">)</span>
+
+
+<span class="n">TABLE_DEFAULTS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;dom&quot;</span><span class="p">:</span> <span class="s2">&quot;frtilBpP&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ordering&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;searching&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;select&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;paging&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;lengthChange&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;searchPanes&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;threshold&quot;</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">},</span>
+    <span class="s2">&quot;buttons&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;extend&quot;</span><span class="p">:</span> <span class="s2">&quot;collection&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Export&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;buttons&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;export_json&quot;</span><span class="p">,</span> <span class="s2">&quot;csvHtml5&quot;</span><span class="p">,</span> <span class="s2">&quot;print&quot;</span><span class="p">],</span>
+        <span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">prep_datatables_options</span><span class="p">(</span><span class="n">table_data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Attempts to generate a reasonable a DataTables config&quot;&quot;&quot;</span>
+    <span class="n">datatables_options</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">TABLE_DEFAULTS</span><span class="p">)</span>
+    <span class="n">datatables_options</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">table_data</span><span class="p">))</span>
+    <span class="c1"># Display objects and arrays in useful ways</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">datatables_options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="p">[]):</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">datatables_options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;columns&quot;</span><span class="p">,</span> <span class="p">[]):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">col</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">key</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">key</span> <span class="o">=</span> <span class="n">data</span>
+
+            <span class="n">display_key</span> <span class="o">=</span> <span class="n">key</span> <span class="o">+</span> <span class="s2">&quot;_display&quot;</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="n">row</span><span class="p">[</span><span class="n">display_key</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;code&gt;</span><span class="si">{}</span><span class="s2">&lt;/code&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">date_handler</span><span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)):</span>
+                <span class="n">col</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;_&quot;</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span>
+                    <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span>
+                    <span class="s2">&quot;display&quot;</span><span class="p">:</span> <span class="n">display_key</span><span class="p">,</span>
+                <span class="p">}</span>
+                <span class="n">col</span><span class="p">[</span><span class="s2">&quot;searchPanes&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;orthogonal&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;display&quot;</span><span class="p">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;sort&quot;</span><span class="p">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;search&quot;</span><span class="p">:</span> <span class="s2">&quot;filter&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="s2">&quot;render&quot;</span> <span class="ow">in</span> <span class="n">col</span><span class="p">:</span>
+                    <span class="k">del</span> <span class="n">col</span><span class="p">[</span><span class="s2">&quot;render&quot;</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="c1"># Make sure SearchPanes can show dict values reasonably</span>
+                <span class="n">row</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">date_handler</span><span class="p">)</span>
+                <span class="c1"># Add indentation</span>
+                <span class="n">row</span><span class="p">[</span><span class="n">display_key</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;code&gt;</span><span class="si">{}</span><span class="s2">&lt;/code&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">date_handler</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="c1"># Make sure SearchPanes can show list values reasonably</span>
+                <span class="n">row</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">date_handler</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">datatables_options</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/database&quot;</span><span class="p">)</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">database</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="nn">dallinger.experiment_server.experiment_server</span> <span class="kn">import</span> <span class="n">Experiment</span><span class="p">,</span> <span class="n">session</span>
+
+    <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Database View&quot;</span>
+    <span class="n">exp</span> <span class="o">=</span> <span class="n">Experiment</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
+    <span class="n">model_type</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;model_type&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model_type</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Database View: </span><span class="si">{}</span><span class="s2">s&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_type</span><span class="p">)</span>
+    <span class="n">datatables_options</span> <span class="o">=</span> <span class="n">prep_datatables_options</span><span class="p">(</span>
+        <span class="n">exp</span><span class="o">.</span><span class="n">table_data</span><span class="p">(</span><span class="o">**</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">flat</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+    <span class="p">)</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">c</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">datatables_options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;columns&quot;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Extend with custom actions</span>
+    <span class="n">actions</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;extend&quot;</span><span class="p">:</span> <span class="s2">&quot;collection&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Actions&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;buttons&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="p">}</span>
+    <span class="n">buttons</span> <span class="o">=</span> <span class="n">actions</span><span class="p">[</span><span class="s2">&quot;buttons&quot;</span><span class="p">]</span>
+
+    <span class="n">exp_actions</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">dashboard_database_actions</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">exp_actions</span><span class="p">:</span>
+        <span class="n">buttons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;extend&quot;</span><span class="p">:</span> <span class="s2">&quot;route_action&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">action</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;route_name&quot;</span><span class="p">:</span> <span class="n">action</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+
+    <span class="n">is_sandbox</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">recruiters</span><span class="o">.</span><span class="n">from_config</span><span class="p">(</span><span class="n">get_config</span><span class="p">()),</span> <span class="s2">&quot;is_sandbox&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">is_sandbox</span> <span class="ow">is</span> <span class="kc">True</span> <span class="ow">or</span> <span class="n">is_sandbox</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="n">buttons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;compensate&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">is_sandbox</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">buttons</span><span class="p">):</span>
+        <span class="n">datatables_options</span><span class="p">[</span><span class="s2">&quot;buttons&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">actions</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span>
+        <span class="s2">&quot;dashboard_database.html&quot;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span>
+        <span class="n">is_sandbox</span><span class="o">=</span><span class="n">is_sandbox</span><span class="p">,</span>
+        <span class="n">datatables_options</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span>
+            <span class="n">datatables_options</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">date_handler</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">),</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/database/action/&lt;route_name&gt;&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;POST&quot;</span><span class="p">])</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">database_action</span><span class="p">(</span><span class="n">route_name</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">dallinger.experiment_server.experiment_server</span> <span class="kn">import</span> <span class="n">Experiment</span><span class="p">,</span> <span class="n">session</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span>
+    <span class="n">exp</span> <span class="o">=</span> <span class="n">Experiment</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">route_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">exp</span><span class="o">.</span><span class="n">dashboard_database_actions</span><span class="p">()}:</span>
+        <span class="k">return</span> <span class="n">error_response</span><span class="p">(</span>
+            <span class="n">error_text</span><span class="o">=</span><span class="s2">&quot;Access to </span><span class="si">{}</span><span class="s2"> not allowed&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">route_name</span><span class="p">),</span> <span class="n">status</span><span class="o">=</span><span class="mi">403</span>
+        <span class="p">)</span>
+    <span class="n">route_func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">exp</span><span class="p">,</span> <span class="n">route_name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">route_func</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">error_response</span><span class="p">(</span>
+            <span class="n">error_text</span><span class="o">=</span><span class="s2">&quot;Method </span><span class="si">{}</span><span class="s2"> not found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">route_name</span><span class="p">),</span> <span class="n">status</span><span class="o">=</span><span class="mi">404</span>
+        <span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">route_func</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">):</span>
+        <span class="n">flash</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">],</span> <span class="s2">&quot;success&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">success_response</span><span class="p">(</span><span class="o">**</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

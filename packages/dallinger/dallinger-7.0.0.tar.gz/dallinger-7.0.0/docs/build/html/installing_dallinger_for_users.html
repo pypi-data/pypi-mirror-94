@@ -1,0 +1,683 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Installation &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Setting Up AWS, Mechanical Turk, and Heroku" href="aws_etc_keys.html" />
+    <link rel="prev" title="Dallinger" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-options">Installation Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-dallinger-with-docker">Using Dallinger with Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mac-os-x">Mac OS X</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-python">Install Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-postgresql">Install Postgresql</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-the-databases">Create the databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-heroku">Install Heroku</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-redis">Install Redis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-git">Install Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-a-virtual-environment">Set up a virtual environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-dallinger">Install Dallinger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu">Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Install Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Install Postgresql</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Create the databases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Install Heroku</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Install Redis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Install Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Set up a virtual environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Install Dallinger</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/installing_dallinger_for_users.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>If you would like to contribute to Dallinger, please follow these
+<a class="reference internal" href="developing_dallinger_setup_guide.html"><span class="doc">alternative install
+instructions</span></a>.</p>
+<div class="section" id="installation-options">
+<h2>Installation Options<a class="headerlink" href="#installation-options" title="Permalink to this headline">¶</a></h2>
+<p>Dallinger is tested with Ubuntu 18.04 LTS, 16.04 LTS, 14.04 LTS and Mac OS X locally.
+We do not recommended running Dallinger with Microsoft Windows, however if you do, running Ubuntu in a virtual machine is the recommend method.</p>
+</div>
+<div class="section" id="using-dallinger-with-docker">
+<h2>Using Dallinger with Docker<a class="headerlink" href="#using-dallinger-with-docker" title="Permalink to this headline">¶</a></h2>
+<p>Docker is a containerization tool used for developing isolated software environments. Read more about using Dallinger with Docker <a class="reference internal" href="docker_setup.html"><span class="doc">here</span></a>.</p>
+</div>
+<div class="section" id="mac-os-x">
+<h2>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-python">
+<h3>Install Python<a class="headerlink" href="#install-python" title="Permalink to this headline">¶</a></h3>
+<p>Dallinger is written in the language Python. For it to work, you will need
+to have Python 3.7 or higher. You can check what version of Python you have
+by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will also need to have <a class="reference external" href="https://pip.pypa.io/en/stable">pip</a> installed. It is included in some of the later versions of Python 3, but not all. (pip is a package manager for Python packages, or modules if you like.) If you are using Python 3, you may find that you may need to use the <code class="docutils literal notranslate"><span class="pre">pip3</span></code> command instead of <code class="docutils literal notranslate"><span class="pre">pip</span></code> where applicable in the instructions that follow.</p>
+</div>
+<p>Using Homebrew will install the latest version of Python and pip by default.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">python</span>
+</pre></div>
+</div>
+<p>This will install the latest Python3 and pip3.</p>
+<p>You should now be able to run the <code class="docutils literal notranslate"><span class="pre">python3</span></code> command from the terminal.
+If the command cannot be found, check the Homebrew installation log to see
+if there were any errors. Sometimes there are problems symlinking Python 3 to
+the python3 command. If this is the case for you, look <a class="reference external" href="https://stackoverflow.com/questions/27784545/brew-error-could-not-symlink-path-is-not-writable">here</a> for clues to assist you.</p>
+<p>Should that not work for whatever reason, you can search <a class="reference external" href="https://docs.python-guide.org/">here</a> for more clues.</p>
+</div>
+<div class="section" id="install-postgresql">
+<h3>Install Postgresql<a class="headerlink" href="#install-postgresql" title="Permalink to this headline">¶</a></h3>
+<p>On Mac OS X, we recommend installing using Homebrew:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">postgresql</span><span class="o">@</span><span class="mi">12</span>
+<span class="n">brew</span> <span class="n">link</span> <span class="n">postgresql</span><span class="o">@</span><span class="mi">12</span>
+</pre></div>
+</div>
+<p>Postgresql can then be started and stopped using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">services</span> <span class="n">start</span> <span class="n">postgresql</span><span class="o">@</span><span class="mi">12</span>
+<span class="n">brew</span> <span class="n">services</span> <span class="n">stop</span> <span class="n">postgresql</span><span class="o">@</span><span class="mi">12</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-the-databases">
+<h3>Create the databases<a class="headerlink" href="#create-the-databases" title="Permalink to this headline">¶</a></h3>
+<p>After installing Postgres, you will need to create two databases:
+one for your experiments to use, and a second to support importing saved
+experiments. It is recommended that you also create a database user.</p>
+<p>Naviagate to a terminal and type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">createuser</span> <span class="o">-</span><span class="n">P</span> <span class="n">dallinger</span> <span class="o">--</span><span class="n">createdb</span>
+<span class="p">(</span><span class="n">Password</span><span class="p">:</span> <span class="n">dallinger</span><span class="p">)</span>
+<span class="n">createdb</span> <span class="o">-</span><span class="n">O</span> <span class="n">dallinger</span> <span class="n">dallinger</span>
+<span class="n">createdb</span> <span class="o">-</span><span class="n">O</span> <span class="n">dallinger</span> <span class="n">dallinger</span><span class="o">-</span><span class="kn">import</span>
+</pre></div>
+</div>
+<p>The first command will create a user named <code class="docutils literal notranslate"><span class="pre">dallinger</span></code> and prompt you for a
+password. The second and third command will create the <code class="docutils literal notranslate"><span class="pre">dallinger</span></code> and
+<code class="docutils literal notranslate"><span class="pre">dallinger-import</span></code> databases, setting the newly created user as the owner.</p>
+<p>You can optionally inspect your databases by entering <code class="docutils literal notranslate"><span class="pre">psql</span> <span class="pre">dallinger</span></code>.
+Inside psql you can use commands to see the roles and database tables:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">du</span>
+\<span class="n">l</span>
+</pre></div>
+</div>
+<p>To quit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">q</span>
+</pre></div>
+</div>
+<p>If you get an error like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>createuser: could not connect to database postgres: could not connect to server:
+    Is the server running locally and accepting
+    connections on Unix domain socket &quot;/tmp/.s.PGSQL.5432&quot;?
+</pre></div>
+</div>
+<p>then postgres is not running. Start postgres as described in the Install Postgresql section above.</p>
+</div>
+<div class="section" id="install-heroku">
+<h3>Install Heroku<a class="headerlink" href="#install-heroku" title="Permalink to this headline">¶</a></h3>
+<p>To run experiments locally or on the internet, you will need the Heroku Command
+Line Interface installed, version 3.28.0 or better. If you want to launch experiments on the internet, then
+you will also need a Heroku.com account, however this is not needed for local debugging.</p>
+<p>To check which version of the Heroku CLI you have installed, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">heroku</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>To install:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">heroku</span><span class="o">/</span><span class="n">brew</span><span class="o">/</span><span class="n">heroku</span>
+</pre></div>
+</div>
+<p>More information on the Heroku CLI is available at <a class="reference external" href="https://devcenter.heroku.com/articles/heroku-cli">heroku.com</a> along with alternative installation instructions, if needed.</p>
+</div>
+<div class="section" id="install-redis">
+<h3>Install Redis<a class="headerlink" href="#install-redis" title="Permalink to this headline">¶</a></h3>
+<p>Debugging experiments requires you to have Redis installed and the Redis
+server running.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">redis</span>
+</pre></div>
+</div>
+<p>Start Redis on Mac OS X with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">services</span> <span class="n">start</span> <span class="n">redis</span>
+</pre></div>
+</div>
+<p>You can find more details and other installation instructions at <a class="reference external" href="https://redis.io/topics/quickstart">redis.com</a>.</p>
+</div>
+<div class="section" id="install-git">
+<h3>Install Git<a class="headerlink" href="#install-git" title="Permalink to this headline">¶</a></h3>
+<p>Dallinger uses Git, a distributed version control system, for version control of its code.
+If you do not have it installed, you can install it as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span>
+</pre></div>
+</div>
+<p>You will need to configure your Git name and email:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;you@example.com&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Your Name&quot;</span>
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">you&#64;example.com</span></code> and <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">Name</span></code> with your email and name to set your account’s default identity.
+Omit –global to set the identity only in this repository. You can read more about configuring Git <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup/">here</a>.</p>
+</div>
+<div class="section" id="set-up-a-virtual-environment">
+<h3>Set up a virtual environment<a class="headerlink" href="#set-up-a-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<p>Why use virtualenv?</p>
+<p>Virtualenv solves a very specific problem: it allows multiple Python projects
+that have different (and often conflicting) requirements, to coexist on the same computer.
+If you want to understand this in detail, you can read more about it <a class="reference external" href="https://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/">here</a>.</p>
+<p>Now let’s set up a virtual environment by running the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>pip3 install virtualenv
+pip3 install virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+mkdir -p $WORKON_HOME
+export VIRTUALENVWRAPPER_PYTHON=$(which python3.9)
+source $(which virtualenvwrapper.sh)
+</pre></div>
+</div>
+<p>Now create the virtual environment using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="n">dlgr_env</span> <span class="o">--</span><span class="n">python</span> <span class="o">&lt;</span><span class="n">specify_your_python_path_here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<p>Using homebrew installed Python 3.9:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="n">dlgr_env</span> <span class="o">--</span><span class="n">python</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">9</span>
+</pre></div>
+</div>
+<p>Virtualenvwrapper provides an easy way to switch between virtual environments
+by simply typing: <code class="docutils literal notranslate"><span class="pre">workon</span> <span class="pre">[virtual</span> <span class="pre">environment</span> <span class="pre">name]</span></code>.</p>
+<p>The technical details:</p>
+<p>These commands use <code class="docutils literal notranslate"><span class="pre">pip/pip3</span></code>, the Python package manager, to install two
+packages <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> and <code class="docutils literal notranslate"><span class="pre">virtualenvwrapper</span></code>. They set up an
+environmental variable named <code class="docutils literal notranslate"><span class="pre">WORKON_HOME</span></code> with a string that gives a
+path to a subfolder of your home directory (<code class="docutils literal notranslate"><span class="pre">~</span></code>) called <code class="docutils literal notranslate"><span class="pre">Envs</span></code>,
+which the next command (<code class="docutils literal notranslate"><span class="pre">mkdir</span></code>) then makes according to the path
+described in <code class="docutils literal notranslate"><span class="pre">$WORKON_HOME</span></code> (recursively, due to the <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag).
+That is where your environments will be stored. The <code class="docutils literal notranslate"><span class="pre">source</span></code> command
+will run the command that follows, which in this case locates the
+<code class="docutils literal notranslate"><span class="pre">virtualenvwrapper.sh</span></code> shell script, the contents of which are beyond
+the scope of this setup tutorial. If you want to know what it does, a
+more in depth description can be found on the <a class="reference external" href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html#python-interpreter-virtualenv-and-path">documentation site for virtualenvwrapper</a>.</p>
+<p>Finally, the <code class="docutils literal notranslate"><span class="pre">mkvirtualenv</span></code> makes your first virtual environment which
+you’ve named <code class="docutils literal notranslate"><span class="pre">dlgr_env</span></code>. We have explicitly passed it the location of the Python
+that the virtualenv should use. This Python has been mapped to the <code class="docutils literal notranslate"><span class="pre">python</span></code>
+command inside the virtual environment.</p>
+<p>The how-to:</p>
+<p>In the future, you can work on your virtual environment by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export VIRTUALENVWRAPPER_PYTHON=$(which python3.9)
+source $(which virtualenvwrapper.sh)
+workon dlgr_env
+</pre></div>
+</div>
+<p>NB: To stop working in the virtual environment, run <code class="docutils literal notranslate"><span class="pre">deactivate</span></code>. To
+list all available virtual environments, run <code class="docutils literal notranslate"><span class="pre">workon</span></code> with no
+arguments.</p>
+<p>If you plan to do a lot of work with Dallinger, you can make your shell
+execute the <code class="docutils literal notranslate"><span class="pre">virtualenvwrapper.sh</span></code> script everytime you open a terminal. To
+do that type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;export VIRTUALENVWRAPPER_PYTHON=$(which python3.9)&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bash_profile</span>
+<span class="n">echo</span> <span class="s2">&quot;source $(which virtualenvwrapper.sh)&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bash_profile</span>
+</pre></div>
+</div>
+<p>From then on, you only need to use the <code class="docutils literal notranslate"><span class="pre">workon</span></code> command before starting.</p>
+</div>
+<div class="section" id="install-dallinger">
+<h3>Install Dallinger<a class="headerlink" href="#install-dallinger" title="Permalink to this headline">¶</a></h3>
+<p>Install Dallinger from the terminal by running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">dallinger</span><span class="p">[</span><span class="n">data</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Test that your installation works by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dallinger</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>Next, you’ll need <a class="reference internal" href="aws_etc_keys.html"><span class="doc">access keys for AWS, Heroku,
+etc.</span></a>.</p>
+</div>
+</div>
+<div class="section" id="ubuntu">
+<h2>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Install Python<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Dallinger is written in the language Python. For it to work, you will need
+to have Python 3.7 or higher. You can check what version of Python you have
+by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>Ubuntu 18.04 LTS ships with Python 3.6.</p>
+<p>Ubuntu 16.04 LTS ships with Python 3.5, while Ubuntu 14.04 LTS ships with Python 3.4.
+In case you are using one of these distributions of Ubuntu, you will need to upgrade
+to the latest Python 3.x on your own.</p>
+<p>If you do not have Python 3 installed, you can install it from the
+<a class="reference external" href="https://www.python.org/downloads/">Python website</a>.</p>
+<p>Also make sure you have the python headers installed. The python-dev package
+contains the header files you need to build Python extensions appropriate to the Python version you will be using.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will also need to have <a class="reference external" href="https://pip.pypa.io/en/stable">pip</a> installed.     It is included in some of the later versions of Python 3, but not all. (pip is a package manager for Python packages, or modules if you like.) If you are using Python 3, you may find that you may need to use the <code class="docutils literal notranslate"><span class="pre">pip3</span></code> command instead of <code class="docutils literal notranslate"><span class="pre">pip</span></code> where applicable in the instructions that follow.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Install Postgresql<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The lowest version of Postgresql that Dallinger v5 supports is 9.4.</p>
+<p>This is fine for Ubuntu 18.04 LTS and 16.04 LTS as they
+ship with Postgresql 10.4 and 9.5 respectively, however Ubuntu 14.04 LTS ships with Postgresql 9.3</p>
+<p>Postgres can be installed using the following instructions:</p>
+<p><strong>Ubuntu 18.04 LTS</strong> or <strong>Ubuntu 16.04 LTS:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">postgresql</span> <span class="n">postgresql</span><span class="o">-</span><span class="n">contrib</span> <span class="n">libpq</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<p>To run postgres, use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">postgresql</span> <span class="n">start</span>
+</pre></div>
+</div>
+<p><strong>Ubuntu 14.04 LTS:</strong></p>
+<p>Create the file /etc/apt/sources.list.d/pgdg.list and add a line for the repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main&quot; &gt;&gt; /etc/apt/sources.list.d/pgdg.list&#39;</span>
+</pre></div>
+</div>
+<p>Import the repository signing key, update the package lists and install postgresql:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">q</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">postgresql</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">keys</span><span class="o">/</span><span class="n">ACCC4CF8</span><span class="o">.</span><span class="n">asc</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">add</span> <span class="o">-</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">postgresql</span> <span class="n">postgresql</span><span class="o">-</span><span class="n">contrib</span>
+</pre></div>
+</div>
+<p>To run postgres, use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">postgresql</span> <span class="n">start</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Create the databases<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Make sure that postgres is running. Switch to the postgres user:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">i</span>
+</pre></div>
+</div>
+<p>Run the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">createuser</span> <span class="o">-</span><span class="n">P</span> <span class="n">dallinger</span> <span class="o">--</span><span class="n">createdb</span>
+<span class="p">(</span><span class="n">Password</span><span class="p">:</span> <span class="n">dallinger</span><span class="p">)</span>
+<span class="n">createdb</span> <span class="o">-</span><span class="n">O</span> <span class="n">dallinger</span> <span class="n">dallinger</span>
+<span class="n">createdb</span> <span class="o">-</span><span class="n">O</span> <span class="n">dallinger</span> <span class="n">dallinger</span><span class="o">-</span><span class="kn">import</span>
+<span class="nn">exit</span>
+</pre></div>
+</div>
+<p>The second command will create a user named <code class="docutils literal notranslate"><span class="pre">dallinger</span></code> and prompt you for a
+password. The third and fourth commands will create the <code class="docutils literal notranslate"><span class="pre">dallinger</span></code> and <code class="docutils literal notranslate"><span class="pre">dallinger-import</span></code> databases, setting
+the newly created user as the owner.</p>
+<p>Finally restart postgresql:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">postgresql</span> <span class="n">reload</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Install Heroku<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>To run experiments locally or on the internet, you will need the Heroku Command
+Line Interface installed, version 3.28.0 or better. If you want to launch experiments on the internet, then
+you will also need a Heroku.com account, however this is not needed for local debugging.</p>
+<p>To check which version of the Heroku CLI you have installed, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">heroku</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>To install:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">curl</span>
+<span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cli</span><span class="o">-</span><span class="n">assets</span><span class="o">.</span><span class="n">heroku</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">sh</span>
+</pre></div>
+</div>
+<p>More information on the Heroku CLI is available at <a class="reference external" href="https://devcenter.heroku.com/articles/heroku-cli">heroku.com</a> along with alternative installation instructions, if needed.</p>
+</div>
+<div class="section" id="id5">
+<h3>Install Redis<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Debugging experiments requires you to have Redis installed and the Redis
+server running.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">redis</span><span class="o">-</span><span class="n">server</span>
+</pre></div>
+</div>
+<p>Start Redis on Ubuntu with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">service</span> <span class="n">redis</span><span class="o">-</span><span class="n">server</span> <span class="n">start</span>
+</pre></div>
+</div>
+<p>You can find more details and other installation instructions at <a class="reference external" href="https://redis.io/topics/quickstart">redis.com</a>.</p>
+</div>
+<div class="section" id="id6">
+<h3>Install Git<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Dallinger uses Git, a distributed version control system, for version control of its code.
+If you do not have it installed, you can install it as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">git</span>
+</pre></div>
+</div>
+<p>You will need to configure your Git name and email:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;you@example.com&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Your Name&quot;</span>
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">you&#64;example.com</span></code> and <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">Name</span></code> with your email and name to set your account’s default identity.
+Omit –global to set the identity only in this repository. You can read more about configuring Git <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup/">here</a>.</p>
+</div>
+<div class="section" id="id7">
+<h3>Set up a virtual environment<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Why use virtualenv?</p>
+<p>Virtualenv solves a very specific problem: it allows multiple Python projects
+that have different (and often conflicting) requirements, to coexist on the same computer.
+If you want to understand this in detail, you can read more about it <a class="reference external" href="https://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/">here</a>.</p>
+<p>Now let’s set up a virtual environment by running the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo pip3 install virtualenv
+sudo pip3 install virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+mkdir -p $WORKON_HOME
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the last line failed with “No such file or directory”. Try using <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/usr/local/bin/virtualenvwrapper.sh</span></code> instead. Pip installs <cite>virtualenvwrapper.sh</cite> to different locations depending on the Ubuntu version.</p>
+</div>
+<p>Now create the virtualenv using the <code class="docutils literal notranslate"><span class="pre">mkvirtualenv</span></code> command as follows:</p>
+<p>If you are using Python 3 that is part of your Ubuntu installation (Ubuntu 18.04):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="n">dlgr_env</span> <span class="o">--</span><span class="n">python</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span>
+</pre></div>
+</div>
+<p>If you are using another Python version
+(eg. custom installed Python 3.x on Ubuntu 16.04 or Ubuntu 14.04):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="n">dlgr_env</span> <span class="o">--</span><span class="n">python</span> <span class="o">&lt;</span><span class="n">specify_your_python_path_here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Virtualenvwrapper provides an easy way to switch between virtual environments
+by simply typing: <code class="docutils literal notranslate"><span class="pre">workon</span> <span class="pre">[virtual</span> <span class="pre">environment</span> <span class="pre">name]</span></code>.</p>
+<p>The technical details:</p>
+<p>These commands use <code class="docutils literal notranslate"><span class="pre">pip</span></code>, the Python package manager, to install two
+packages <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> and <code class="docutils literal notranslate"><span class="pre">virtualenvwrapper</span></code>. They set up an
+environmental variable named <code class="docutils literal notranslate"><span class="pre">WORKON_HOME</span></code> with a string that gives a
+path to a subfolder of your home directory (<code class="docutils literal notranslate"><span class="pre">~</span></code>) called <code class="docutils literal notranslate"><span class="pre">Envs</span></code>,
+which the next command (<code class="docutils literal notranslate"><span class="pre">mkdir</span></code>) then makes according to the path
+described in <code class="docutils literal notranslate"><span class="pre">$WORKON_HOME</span></code> (recursively, due to the <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag).
+That is where your environments will be stored. The <code class="docutils literal notranslate"><span class="pre">source</span></code> command
+will run the command that follows, which in this case locates the
+<code class="docutils literal notranslate"><span class="pre">virtualenvwrapper.sh</span></code> shell script, the contents of which are beyond
+the scope of this setup tutorial. If you want to know what it does, a
+more in depth description can be found on the <a class="reference external" href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html#python-interpreter-virtualenv-and-path">documentation site for virtualenvwrapper</a>.</p>
+<p>Finally, the <code class="docutils literal notranslate"><span class="pre">mkvirtualenv</span></code> makes your first virtual environment which
+you’ve named <code class="docutils literal notranslate"><span class="pre">dlgr_env</span></code>. We have explicitly passed it the location of the Python
+that the virtualenv should use. This Python has been mapped to the <code class="docutils literal notranslate"><span class="pre">python</span></code>
+command inside the virtual environment.</p>
+<p>The how-to:</p>
+<p>In the future, you can work on your virtual environment by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">virtualenvwrapper</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">workon</span> <span class="n">dlgr_env</span>
+</pre></div>
+</div>
+<p>NB: To stop working in the virtual environment, run <code class="docutils literal notranslate"><span class="pre">deactivate</span></code>. To
+list all available virtual environments, run <code class="docutils literal notranslate"><span class="pre">workon</span></code> with no
+arguments.</p>
+<p>If you plan to do a lot of work with Dallinger, you can make your shell
+execute the <code class="docutils literal notranslate"><span class="pre">virtualenvwrapper.sh</span></code> script everytime you open a terminal. To
+do that:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;source /usr/local/bin/virtualenvwrapper.sh&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p>From then on, you only need to use the <code class="docutils literal notranslate"><span class="pre">workon</span></code> command before starting.</p>
+</div>
+<div class="section" id="id8">
+<h3>Install Dallinger<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Install Dallinger from the terminal by running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">dallinger</span><span class="p">[</span><span class="n">data</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Test that your installation works by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dallinger</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>Next, you’ll need <a class="reference internal" href="aws_etc_keys.html"><span class="doc">access keys for AWS, Heroku,
+etc.</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="aws_etc_keys.html" class="btn btn-neutral float-right" title="Setting Up AWS, Mechanical Turk, and Heroku" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Dallinger" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Writing bots &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Extra Configuration" href="extra_configuration.html" />
+    <link rel="prev" title="Waiting rooms" href="waiting_rooms.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing bots</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#high-performance-bots">High-performance bots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api-documentation">API documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#selenium-bots">Selenium bots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">API documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scaling-selenium-bots">Scaling Selenium bots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Writing bots</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/writing_bots.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="writing-bots">
+<h1>Writing bots<a class="headerlink" href="#writing-bots" title="Permalink to this headline">¶</a></h1>
+<p>When you run an experiment using the bot recruiter,
+it will look for a class named <code class="docutils literal notranslate"><span class="pre">Bot</span></code> in your <code class="docutils literal notranslate"><span class="pre">experiment.py</span></code> module.</p>
+<p>The Bot class should typically be a subclass of either
+<a class="reference internal" href="#dallinger.bots.BotBase" title="dallinger.bots.BotBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BotBase</span></code></a> (for bots that interact with the
+experiment by controlling a real browser using <code class="docutils literal notranslate"><span class="pre">selenium</span></code>) or
+<a class="reference internal" href="#dallinger.bots.HighPerformanceBotBase" title="dallinger.bots.HighPerformanceBotBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">HighPerformanceBotBase</span></code></a> (for bots that
+interact with the experiment server directly via HTTP or websockets).</p>
+<p>The interaction of the base bots with the experiment takes place in several phases:</p>
+<ol class="arabic simple">
+<li><p>Signup (including creating a Participant)</p></li>
+<li><p>Participation in the experiment</p></li>
+<li><p>Signoff (including completing the questionnaire)</p></li>
+<li><p>Recording completion (complete or failed)</p></li>
+</ol>
+<p>To build a bot, you will definitely need to implement the <code class="docutils literal notranslate"><span class="pre">participate</span></code> method
+which will be called once the bot has navigated to the main experiment page.
+If the structure of your ad, consent, instructions or questionnaire pages
+differs significantly from the demo experiments, you may need to override other
+methods too.</p>
+<div class="section" id="high-performance-bots">
+<h2>High-performance bots<a class="headerlink" href="#high-performance-bots" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="#dallinger.bots.HighPerformanceBotBase" title="dallinger.bots.HighPerformanceBotBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">HighPerformanceBotBase</span></code></a> can be used as a basis for a bot that
+interacts with the experiment server directly over HTTP rather than using a real browser.
+This scales better than using Selenium bots, but requires expressing the bot’s
+behavior in terms of HTTP requests rather than in terms of DOM interactions.</p>
+<p>For a guide to Dallinger’s web API, see <a class="reference internal" href="web_api.html"><span class="doc">Web API</span></a>.</p>
+<p>For an example of a high-performance bot implementation, see the <a class="reference external" href="https://github.com/Dallinger/Griduniverse/blob/master/dlgr/griduniverse/bots.py">Griduniverse bots</a>.
+These bots interact primarily via websockets rather than HTTP.</p>
+<div class="section" id="api-documentation">
+<h3>API documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="dallinger.bots.HighPerformanceBotBase">
+<em class="property">class </em><code class="sig-prename descclassname">dallinger.bots.</code><code class="sig-name descname">HighPerformanceBotBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">URL</span></em>, <em class="sig-param"><span class="n">assignment_id</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">worker_id</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">participant_id</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">hit_id</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#HighPerformanceBotBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.HighPerformanceBotBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>A base class for bots that do not interact using a real browser.</p>
+<p>Instead, this kind of bot makes requests directly to the experiment server.</p>
+<dl class="py method">
+<dt id="dallinger.bots.HighPerformanceBotBase.complete_experiment">
+<code class="sig-name descname">complete_experiment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">status</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#HighPerformanceBotBase.complete_experiment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.HighPerformanceBotBase.complete_experiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record worker completion status to the experiment server.</p>
+<p>This is done using a GET request to the /worker_complete
+or /worker_failed endpoints.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.HighPerformanceBotBase.complete_questionnaire">
+<code class="sig-name descname">complete_questionnaire</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#HighPerformanceBotBase.complete_questionnaire"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.HighPerformanceBotBase.complete_questionnaire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Complete the standard debriefing form.</p>
+<p>Answers the questions in the base questionnaire.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.HighPerformanceBotBase.driver">
+<em class="property">property </em><code class="sig-name descname">driver</code><a class="headerlink" href="#dallinger.bots.HighPerformanceBotBase.driver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Selenium WebDriver instance of the type requested in the
+configuration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.HighPerformanceBotBase.on_signup">
+<code class="sig-name descname">on_signup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#HighPerformanceBotBase.on_signup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.HighPerformanceBotBase.on_signup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take any needed action on response from /participant call.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.HighPerformanceBotBase.run_experiment">
+<code class="sig-name descname">run_experiment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#HighPerformanceBotBase.run_experiment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.HighPerformanceBotBase.run_experiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the phases of interacting with the experiment
+including signup, participation, signoff, and recording completion.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.HighPerformanceBotBase.sign_off">
+<code class="sig-name descname">sign_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#HighPerformanceBotBase.sign_off"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.HighPerformanceBotBase.sign_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submit questionnaire and finish.</p>
+<p>This is done using a POST request to the /question/ endpoint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.HighPerformanceBotBase.sign_up">
+<code class="sig-name descname">sign_up</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#HighPerformanceBotBase.sign_up"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.HighPerformanceBotBase.sign_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs up a participant for the experiment.</p>
+<p>This is done using a POST request to the /participant/ endpoint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.HighPerformanceBotBase.subscribe_to_quorum_channel">
+<code class="sig-name descname">subscribe_to_quorum_channel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#HighPerformanceBotBase.subscribe_to_quorum_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.HighPerformanceBotBase.subscribe_to_quorum_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>In case the experiment enforces a quorum, listen for notifications
+before creating Partipant objects.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="selenium-bots">
+<h2>Selenium bots<a class="headerlink" href="#selenium-bots" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="#dallinger.bots.BotBase" title="dallinger.bots.BotBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">BotBase</span></code></a> provides a basis for a bot that interacts with an experiment using
+Selenium, which means that a separate, real browser session is controlled
+by each bot. This approach does not scale very well because there is a lot of
+overhead to running a browser, but it does allow for interacting with the
+experiment in a way similar to real participants.</p>
+<p>By default, Selenium will try to run PhantomJS, a headless browser meant for scripting.
+However, it also supports using Firefox and Chrome through configuration variables.</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">webdriver_type</span> <span class="o">=</span> <span class="s">firefox</span>
+</pre></div>
+</div>
+<p>We recommend using Firefox when writing bots, as it allows you to visually see
+its output and allows you to attach the development console directly to the
+bot’s browser session.</p>
+<p>For an example of a selenium bot implementation, see the <a class="reference external" href="https://github.com/Dallinger/Dallinger/blob/master/demos/dlgr/demos/bartlett1932/experiment.py">Bartlett1932 bots</a>.</p>
+<p>For documentation of the Python Selenium WebDriver API, see <a class="reference external" href="http://selenium-python.readthedocs.io/index.html">Selenium with Python</a>.</p>
+<div class="section" id="id1">
+<h3>API documentation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="dallinger.bots.BotBase">
+<em class="property">class </em><code class="sig-prename descclassname">dallinger.bots.</code><code class="sig-name descname">BotBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">URL</span></em>, <em class="sig-param"><span class="n">assignment_id</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">worker_id</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">participant_id</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">hit_id</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#BotBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.BotBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>A base class for bots that works with the built-in demos.</p>
+<p>This kind of bot uses Selenium to interact with the experiment
+using a real browser.</p>
+<dl class="py method">
+<dt id="dallinger.bots.BotBase.complete_experiment">
+<code class="sig-name descname">complete_experiment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">status</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#BotBase.complete_experiment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.BotBase.complete_experiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends worker status (‘worker_complete’ or ‘worker_failed’)
+to the experiment server.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.BotBase.complete_questionnaire">
+<code class="sig-name descname">complete_questionnaire</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#BotBase.complete_questionnaire"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.BotBase.complete_questionnaire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Complete the standard debriefing form.</p>
+<p>Answers the questions in the base questionnaire.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="dallinger.bots.BotBase.driver">
+<code class="sig-name descname">driver</code><a class="headerlink" href="#dallinger.bots.BotBase.driver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Selenium WebDriver instance of the type requested in the
+configuration.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.BotBase.participate">
+<code class="sig-name descname">participate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#BotBase.participate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.BotBase.participate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Participate in the experiment.</p>
+<p>This method must be implemented by subclasses of <code class="docutils literal notranslate"><span class="pre">BotBase</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.BotBase.run_experiment">
+<code class="sig-name descname">run_experiment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#BotBase.run_experiment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.BotBase.run_experiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sign up, run the <code class="docutils literal notranslate"><span class="pre">participate</span></code> method, then sign off and close
+the driver.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.BotBase.sign_off">
+<code class="sig-name descname">sign_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#BotBase.sign_off"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.BotBase.sign_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submit questionnaire and finish.</p>
+<p>This uses Selenium to click the submit button on the questionnaire
+and return to the original window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.bots.BotBase.sign_up">
+<code class="sig-name descname">sign_up</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/bots.html#BotBase.sign_up"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.bots.BotBase.sign_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accept HIT, give consent and start experiment.</p>
+<p>This uses Selenium to click through buttons on the ad,
+consent, and instruction pages.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="scaling-selenium-bots">
+<h3>Scaling Selenium bots<a class="headerlink" href="#scaling-selenium-bots" title="Permalink to this headline">¶</a></h3>
+<p>For example you may want to run a dedicated computer on your lab network to host
+bots, without slowing down experimenter computers. It is recommended that you
+run Selenium in a hub configuration, as a single Selenium instance will limit
+the number of concurrent sessions.</p>
+<p>You can also provide a URL to a Selenium WebDriver instance using the
+<code class="docutils literal notranslate"><span class="pre">webdriver_url</span></code> configuration setting. This is required if you’re running
+Selenium in a hub configuration. The hub does not need to be on the same computer
+as Dallinger, but it does need to be able to access the computer running
+Dallinger directly by its IP address.</p>
+<p>On Apple macOS, we recommend using Homebrew to install and run selenium, using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">selenium</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">standalone</span>
+<span class="n">selenium</span><span class="o">-</span><span class="n">server</span> <span class="o">-</span><span class="n">port</span> <span class="mi">4444</span>
+</pre></div>
+</div>
+<p>On other platforms, download the latest <code class="docutils literal notranslate"><span class="pre">selenium-server-standalone.jar</span></code> file
+from <a class="reference external" href="http://www.seleniumhq.org/download/">SeleniumHQ</a> and run a hub using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">selenium</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">standalone</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mf">1.</span><span class="n">jar</span> <span class="o">-</span><span class="n">role</span> <span class="n">hub</span>
+</pre></div>
+</div>
+<p>and attach multiple nodes by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">selenium</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">standalone</span><span class="o">-</span><span class="mf">3.3</span><span class="o">.</span><span class="mf">1.</span><span class="n">jar</span> <span class="o">-</span><span class="n">role</span> <span class="n">node</span> <span class="o">-</span><span class="n">hub</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">hubcomputer</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="mi">4444</span><span class="o">/</span><span class="n">grid</span><span class="o">/</span><span class="n">register</span>
+</pre></div>
+</div>
+<p>These nodes may be on other computers on the local network or on the same host
+machine. If they are on the same host you will need to add <code class="docutils literal notranslate"><span class="pre">-port</span> <span class="pre">4446</span></code> (for
+some port number) such that each Selenium node on the same server is listening
+on a different port.</p>
+<p>You will also need to set up the browser interfaces on each computer that’s running
+a node. This requires being able to run the browser and having the correct driver
+available in the system path, so the Selenium server can run it.</p>
+<p>We recommend using Chrome when running large numbers of bots, as it is more
+feature-complete than PhantomJS but with better performance at scale than Firefox. It
+is best to run at most three Firefox sessions on commodity hardware, so for best
+results 16 bots should be run over 6 Selenium servers. This will depend on how
+processor intensive your experiment is. It may be possible to run more sessions
+without performance degradation.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="extra_configuration.html" class="btn btn-neutral float-right" title="Extra Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="waiting_rooms.html" class="btn btn-neutral float-left" title="Waiting rooms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

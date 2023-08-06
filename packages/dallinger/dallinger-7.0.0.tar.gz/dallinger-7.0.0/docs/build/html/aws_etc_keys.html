@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Setting Up AWS, Mechanical Turk, and Heroku &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Demoing Dallinger" href="demoing_dallinger.html" />
+    <link rel="prev" title="Installation" href="installing_dallinger_for_users.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting Up AWS, Mechanical Turk, and Heroku</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-the-configuration-file">Create the configuration file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#amazon-web-services-api-keys">Amazon Web Services API Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#amazon-mechanical-turk">Amazon Mechanical Turk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#heroku">Heroku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open-science-framework-optional">Open Science Framework (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#done">Done?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Setting Up AWS, Mechanical Turk, and Heroku</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/aws_etc_keys.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="setting-up-aws-mechanical-turk-and-heroku">
+<h1>Setting Up AWS, Mechanical Turk, and Heroku<a class="headerlink" href="#setting-up-aws-mechanical-turk-and-heroku" title="Permalink to this headline">¶</a></h1>
+<p>Before you can use Dallinger, you will need accounts with Amazon Web
+Services, Amazon Mechanical Turk, and Heroku. You will then need to
+create a configuration file and set up your environment so that
+Dallinger can access your accounts.</p>
+<div class="section" id="create-the-configuration-file">
+<h2>Create the configuration file<a class="headerlink" href="#create-the-configuration-file" title="Permalink to this headline">¶</a></h2>
+<p>The first step is to create the Dallinger configuration file in your home
+directory. You can do this using the Dallinger command-line utility
+through</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dallinger</span> <span class="n">setup</span>
+</pre></div>
+</div>
+<p>which will prepopulate a hidden file <code class="docutils literal notranslate"><span class="pre">.dallingerconfig</span></code> in your home
+directory. Alternatively, you can create this file yourself and fill it
+in like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[AWS Access]
+aws_access_key_id = ???
+aws_secret_access_key = ???
+aws_region = us-east-1
+</pre></div>
+</div>
+<p>In the next steps, we’ll fill in your config file with keys.</p>
+<p>Note: The <code class="docutils literal notranslate"><span class="pre">.dallingerconfig</span></code> can be configured with many different parameters, see
+<a class="reference internal" href="configuration.html"><span class="doc">Configuration</span></a> for detailed explanation of each configuration option.</p>
+</div>
+<div class="section" id="amazon-web-services-api-keys">
+<h2>Amazon Web Services API Keys<a class="headerlink" href="#amazon-web-services-api-keys" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways to get API keys for Amazon Web Services. If you are the only
+user in your AWS account, the simplest thing to do is generate root user access
+keys, by <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html">following these instructions</a>.
+You might be presented a dialog box with options to continue to security
+credentials, or get started with IAM users. If you are the only user, or you
+are otherwise certain that this is what you want to do (see the following note),
+choose “Continue to Security Credentials”.</p>
+<p><strong>N.B.</strong> One feature of AWS API keys is that they are only displayed
+once, and though they can be regenerated, doing so will render invalid
+previously generated keys. If you are running experiments using a
+laboratory account (or any other kind of group-owned account),
+regenerating keys will stop other users who have previously generated
+keys from being able to use the AWS account. Unless you are sure that
+you will not be interrupting others’ workflows, it is advised that you
+do <strong>not</strong> generate new API keys. If you are not the primary user of the
+account, see if you can obtain these keys from others who have
+successfully used AWS.</p>
+<p>If you are not the primary user of your AWS account, or are part of a working
+group that shares the account, the recommended way to create the access keys is
+by creating IAM users and generating keys for them. If someone else manages
+the AWS account, ask them to generate the user and keys for you. If you need
+to manage the users and keys by yourself, <a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html">follow these instructions</a>.</p>
+<p>If you are using an IAM user instead of an AWS root account, then you will
+need to ensure the IAM user is granted the following permissions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AmazonS3FullAccess</span>
+<span class="n">AmazonMechanicalTurkFullAccess</span>
+<span class="n">AmazonSNSFullAccess</span>
+</pre></div>
+</div>
+<p>You may want to assign these permissions by creating a Dallinger Group in
+the IAM console and assigning users to it.</p>
+<div class="figure align-default" id="id1">
+<img alt="Dallinger IAM Group" src="_images/Dallinger AWS Group.png" />
+<p class="caption"><span class="caption-text">Example Dallinger IAM Group</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>After you have generated and saved your AWS access keys, fill in the following
+lines of <code class="docutils literal notranslate"><span class="pre">.dallingerconfig</span></code>, replacing <code class="docutils literal notranslate"><span class="pre">???</span></code> with your keys:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[AWS Access]
+aws_access_key_id = ???
+aws_secret_access_key = ???
+</pre></div>
+</div>
+</div>
+<div class="section" id="amazon-mechanical-turk">
+<h2>Amazon Mechanical Turk<a class="headerlink" href="#amazon-mechanical-turk" title="Permalink to this headline">¶</a></h2>
+<p>It’s worth signing up for Amazon Mechanical Turk (perhaps using your AWS
+account from above), both as a
+<a class="reference external" href="https://requester.mturk.com/mturk/beginsignin">requester</a> and as a
+<a class="reference external" href="https://www.mturk.com/mturk/beginsignin">worker</a>. You’ll use this to
+test and monitor experiments. You should also sign in to each sandbox,
+<a class="reference external" href="https://requester.mturk.com/begin_signin">requester</a> and
+<a class="reference external" href="https://workersandbox.mturk.com/mturk/welcome">worker</a> using the
+same account. Store this account and password somewhere, but you don’t
+need to tell it to Dallinger.</p>
+</div>
+<div class="section" id="heroku">
+<h2>Heroku<a class="headerlink" href="#heroku" title="Permalink to this headline">¶</a></h2>
+<p>Next, sign up for a <a class="reference external" href="https://www.heroku.com/">Heroku</a> account.</p>
+<p>You should see an interface that looks something like the following:</p>
+<div class="figure align-default" id="id2">
+<img alt="This is the interface with the Heroku app" src="_images/heroku.jpg" />
+<p class="caption"><span class="caption-text">This is the interface with the Heroku app</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Then, log in from the command line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">heroku</span> <span class="n">login</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-science-framework-optional">
+<h2>Open Science Framework (optional)<a class="headerlink" href="#open-science-framework-optional" title="Permalink to this headline">¶</a></h2>
+<p>There is an optional integration that uses the <a class="reference external" href="https://osf.io/">Open Science Framework</a> (OSF) to register experiments. First, create an account
+on the OSF. Next create a new OSF personal access token on the <a class="reference external" href="https://osf.io/settings/tokens/">OSF settings
+page</a>. Since experiment registration
+requires writing to the OSF account, be sure to grant the full write scope
+when creating the token, by checking the osf.full_write box before creation.</p>
+<p>Finally, fill in the appropriate section of <code class="docutils literal notranslate"><span class="pre">.dallingerconfig</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[OSF]
+osf_access_token = ???
+</pre></div>
+</div>
+</div>
+<div class="section" id="done">
+<h2>Done?<a class="headerlink" href="#done" title="Permalink to this headline">¶</a></h2>
+<p>Done. You’re now all set up with the tools you need to work with
+Dallinger.</p>
+<p>Next, we’ll <a class="reference internal" href="demoing_dallinger.html"><span class="doc">test Dallinger to make sure it’s working on your
+system</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="demoing_dallinger.html" class="btn btn-neutral float-right" title="Demoing Dallinger" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installing_dallinger_for_users.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

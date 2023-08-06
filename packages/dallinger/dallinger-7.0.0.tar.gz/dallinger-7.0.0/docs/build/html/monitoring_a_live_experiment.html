@@ -1,0 +1,638 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Monitoring a Live Experiment &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Experiment Data" href="experiment_data.html" />
+    <link rel="prev" title="Running Experiments Programmatically" href="python_module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Monitoring a Live Experiment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-tools">Command line tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-dashboard">The Dashboard</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-dallinger.experiment_server.dashboard">Customizing the Dashboard</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#papertrail">Papertrail</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-alerts">Setting up alerts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Monitoring a Live Experiment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/monitoring_a_live_experiment.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="monitoring-a-live-experiment">
+<h1>Monitoring a Live Experiment<a class="headerlink" href="#monitoring-a-live-experiment" title="Permalink to this headline">¶</a></h1>
+<p>There are a number of ways that you can monitor a live experiment:</p>
+<div class="section" id="command-line-tools">
+<h2>Command line tools<a class="headerlink" href="#command-line-tools" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">dallinger</span> <span class="pre">summary</span> <span class="pre">--app</span> <span class="pre">{#id}</span></code>, where <code class="docutils literal notranslate"><span class="pre">{#id}</span></code> is the id (<code class="docutils literal notranslate"><span class="pre">w...</span></code>) of
+the application.</p>
+<p>This will print a summary showing the number of participants with each
+status code, as well as the overall yield:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">status</span>  <span class="o">|</span> <span class="n">count</span>
+<span class="o">----------------</span>
+<span class="mi">1</span>   <span class="o">|</span> <span class="mi">26</span>
+<span class="mi">101</span> <span class="o">|</span> <span class="mi">80</span>
+<span class="mi">103</span> <span class="o">|</span> <span class="mi">43</span>
+<span class="mi">104</span> <span class="o">|</span> <span class="mi">2</span>
+
+<span class="n">Yield</span><span class="p">:</span> <span class="mf">64.00</span><span class="o">%</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-dashboard">
+<h2>The Dashboard<a class="headerlink" href="#the-dashboard" title="Permalink to this headline">¶</a></h2>
+<p>The Dallinger experiment server provides a dashboard view for experiment
+administrators to monitor running experiments. The dasboard can be found at
+<code class="docutils literal notranslate"><span class="pre">/dashboard</span></code>, and requires login credentials that are provided by the
+commandline output when launching an experiment using <code class="docutils literal notranslate"><span class="pre">dallinger</span> <span class="pre">debug</span></code>,
+<code class="docutils literal notranslate"><span class="pre">dallinger</span> <span class="pre">sandbox</span></code>, or <code class="docutils literal notranslate"><span class="pre">dallinger</span> <span class="pre">deploy</span></code>.</p>
+<p>When running under <code class="docutils literal notranslate"><span class="pre">dallinger</span> <span class="pre">debug</span></code> a browser window should open with the
+dashboard already logged in. The dashboard username and password can also be
+found in the <code class="docutils literal notranslate"><span class="pre">dashboard_user</span></code> and <code class="docutils literal notranslate"><span class="pre">dashboard_password</span></code> configuration
+parameters in the deployed <code class="docutils literal notranslate"><span class="pre">config.txt</span></code> configuration file. By default the
+user is named <code class="docutils literal notranslate"><span class="pre">admin</span></code> and the password is generated randomly, but the user
+name and password can be specified using configuration files.</p>
+<div class="section" id="module-dallinger.experiment_server.dashboard">
+<span id="customizing-the-dashboard"></span><h3>Customizing the Dashboard<a class="headerlink" href="#module-dallinger.experiment_server.dashboard" title="Permalink to this headline">¶</a></h3>
+<p>You can add custom tabs to the Dallinger Dashboard by adding and registering
+new <a class="reference external" href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#routing">Flask routes</a> on the <code class="docutils literal notranslate"><span class="pre">dashboard</span></code> <a class="reference external" href="https://flask.palletsprojects.com/en/1.1.x/tutorial/views/">Blueprint</a>, and resgistering the view as a <code class="docutils literal notranslate"><span class="pre">dashboard_tab</span></code>. For example in your <code class="docutils literal notranslate"><span class="pre">experiment.py</span></code> you
+could add the following code to add a “My Experiment” tab to the dashboard:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dallinger.experiment_server.dashboard</span> <span class="kn">import</span> <span class="n">dashboard</span><span class="p">,</span> <span class="n">dashboard_tabs</span>
+
+<span class="nd">@dashboard</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;my-experiment&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">my_experiment</span><span class="p">():</span>
+  <span class="k">return</span> <span class="s2">&quot;Hello, World. This is some information about My Experiment&quot;</span>
+
+<span class="n">dashboard_tabs</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s2">&quot;My Experiment&quot;</span><span class="p">,</span> <span class="s2">&quot;my-experiment&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The dashboard also supports nested tab/menus using the <a class="reference internal" href="#dallinger.experiment_server.dashboard.DashboardTab" title="dallinger.experiment_server.dashboard.DashboardTab"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DashboardTab</span></code></a> object:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dallinger.experiment_server.dashboard</span> <span class="kn">import</span> <span class="n">dashboard_tabs</span><span class="p">,</span> <span class="n">DashboardTab</span>
+
+<span class="k">def</span> <span class="nf">child_tabs</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">DashboardTab</span><span class="p">(</span><span class="s1">&#39;Child1&#39;</span><span class="p">,</span> <span class="s1">&#39;child1&#39;</span><span class="p">),</span> <span class="n">DashboardTab</span><span class="p">(</span><span class="s1">&#39;Child2&#39;</span><span class="p">,</span> <span class="s1">&#39;child2&#39;</span><span class="p">)]</span>
+
+<span class="n">complex_tab</span> <span class="o">=</span> <span class="n">DashboardTab</span><span class="p">(</span><span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="s1">&#39;route_name&#39;</span><span class="p">,</span> <span class="n">child_tabs</span><span class="p">)</span>
+<span class="n">dashboard_tabs</span><span class="o">.</span><span class="n">insert_tab</span><span class="p">(</span><span class="n">complex_tab</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">dashboard_tabs</span></code> object supports the following methods for managing the
+available tabs on your experiment’s dashboard:</p>
+<dl class="py class">
+<dt id="dallinger.experiment_server.dashboard.DashboardTabs">
+<em class="property">class </em><code class="sig-prename descclassname">dallinger.experiment_server.dashboard.</code><code class="sig-name descname">DashboardTabs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tabs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment_server/dashboard.html#DashboardTabs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment_server.dashboard.DashboardTabs" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="dallinger.experiment_server.dashboard.DashboardTabs.insert">
+<code class="sig-name descname">insert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title</span></em>, <em class="sig-param"><span class="n">route_name</span></em>, <em class="sig-param"><span class="n">position</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment_server/dashboard.html#DashboardTabs.insert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment_server.dashboard.DashboardTabs.insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new dashboard tab and inserts it (optionally at a specific position)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – Title string to appear in the dashboard HTML</p></li>
+<li><p><strong>route_name</strong> (<em>str</em>) – The registered route name (optionally prefixed with <code class="docutils literal notranslate"><span class="pre">dashboard.</span></code>)</p></li>
+<li><p><strong>position</strong> (<em>int</em><em>, </em><em>optional</em>) – The 0-based index where the tab should be inserted. By default tabs will be appended to the end.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.experiment_server.dashboard.DashboardTabs.insert_tab">
+<code class="sig-name descname">insert_tab</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tab</span></em>, <em class="sig-param"><span class="n">position</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment_server/dashboard.html#DashboardTabs.insert_tab"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment_server.dashboard.DashboardTabs.insert_tab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a new dashboard tab (optionally at a specific position)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tab</strong> (<a class="reference internal" href="#dallinger.experiment_server.dashboard.DashboardTab" title="dallinger.experiment_server.dashboard.DashboardTab"><em>DashboardTab</em></a>) – DashboardTab instance</p></li>
+<li><p><strong>position</strong> (<em>int</em><em>, </em><em>optional</em>) – The 0-based index where the tab should be inserted. By default tabs will be appended to the end.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.experiment_server.dashboard.DashboardTabs.insert_before_route">
+<code class="sig-name descname">insert_before_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title</span></em>, <em class="sig-param"><span class="n">route_name</span></em>, <em class="sig-param"><span class="n">before_route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment_server/dashboard.html#DashboardTabs.insert_before_route"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment_server.dashboard.DashboardTabs.insert_before_route" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new dashboard tab and inserts it before an existing tab by route name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – Title string to appear in the dashboard HTML</p></li>
+<li><p><strong>route_name</strong> (<em>str</em>) – The registered route name (optionally prefixed with <code class="docutils literal notranslate"><span class="pre">dashboard.</span></code>)</p></li>
+<li><p><strong>before_route</strong> (<em>str</em>) – The route name to insert this tab before.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">before_route</span></code> is not found in registered tabs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.experiment_server.dashboard.DashboardTabs.insert_tab_before_route">
+<code class="sig-name descname">insert_tab_before_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tab</span></em>, <em class="sig-param"><span class="n">before_route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment_server/dashboard.html#DashboardTabs.insert_tab_before_route"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment_server.dashboard.DashboardTabs.insert_tab_before_route" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a new dashboard tab before an existing tab by route name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tab</strong> (<a class="reference internal" href="#dallinger.experiment_server.dashboard.DashboardTab" title="dallinger.experiment_server.dashboard.DashboardTab"><em>DashboardTab</em></a>) – DashboardTab instance</p></li>
+<li><p><strong>before_route</strong> (<em>str</em>) – The route name to insert this tab before.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">before_route</span></code> is not found in registered tabs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.experiment_server.dashboard.DashboardTabs.insert_after_route">
+<code class="sig-name descname">insert_after_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title</span></em>, <em class="sig-param"><span class="n">route_name</span></em>, <em class="sig-param"><span class="n">after_route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment_server/dashboard.html#DashboardTabs.insert_after_route"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment_server.dashboard.DashboardTabs.insert_after_route" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new dashboard tab and inserts it after an existing tab by route name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – Title string to appear in the dashboard HTML</p></li>
+<li><p><strong>route_name</strong> (<em>str</em>) – The registered route name (optionally prefixed with <code class="docutils literal notranslate"><span class="pre">dashboard.</span></code>)</p></li>
+<li><p><strong>after_route</strong> (<em>str</em>) – The route name to insert this tab after.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">after_route</span></code> is not found in registered tabs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.experiment_server.dashboard.DashboardTabs.insert_tab_after_route">
+<code class="sig-name descname">insert_tab_after_route</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tab</span></em>, <em class="sig-param"><span class="n">after_route</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment_server/dashboard.html#DashboardTabs.insert_tab_after_route"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment_server.dashboard.DashboardTabs.insert_tab_after_route" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a new dashboard tab after an existing tab by route name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tab</strong> (<a class="reference internal" href="#dallinger.experiment_server.dashboard.DashboardTab" title="dallinger.experiment_server.dashboard.DashboardTab"><em>DashboardTab</em></a>) – DashboardTab instance</p></li>
+<li><p><strong>after_route</strong> (<em>str</em>) – The route name to insert this tab after.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – When <code class="docutils literal notranslate"><span class="pre">after_route</span></code> is not found in registered tabs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.experiment_server.dashboard.DashboardTabs.remove">
+<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route_name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment_server/dashboard.html#DashboardTabs.remove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment_server.dashboard.DashboardTabs.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a tab by route name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>route_name</strong> (<em>str</em>) – The registered route name (optionally prefixed with <code class="docutils literal notranslate"><span class="pre">dashboard.</span></code>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p>The <a class="reference internal" href="#dallinger.experiment_server.dashboard.DashboardTab" title="dallinger.experiment_server.dashboard.DashboardTab"><code class="xref py py-attr docutils literal notranslate"><span class="pre">DashboardTab</span></code></a> object used by the various <code class="docutils literal notranslate"><span class="pre">insert_tab*</span></code> methods provide the following API:</p>
+<dl class="py class">
+<dt id="dallinger.experiment_server.dashboard.DashboardTab">
+<em class="property">class </em><code class="sig-prename descclassname">dallinger.experiment_server.dashboard.</code><code class="sig-name descname">DashboardTab</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title</span></em>, <em class="sig-param"><span class="n">route_name</span></em>, <em class="sig-param"><span class="n">children_function</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">params</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment_server/dashboard.html#DashboardTab"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment_server.dashboard.DashboardTab" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="dallinger.experiment_server.dashboard.DashboardTab.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title</span></em>, <em class="sig-param"><span class="n">route_name</span></em>, <em class="sig-param"><span class="n">children_function</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">params</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment_server/dashboard.html#DashboardTab.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment_server.dashboard.DashboardTab.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new dashboard tab</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – Title string to appear in the dashboard HTML</p></li>
+<li><p><strong>route_name</strong> (<em>str</em>) – The registered route name (optionally prefixed with <code class="docutils literal notranslate"><span class="pre">dashboard.</span></code>)</p></li>
+<li><p><strong>children_function</strong> – A callable that returns an iterable of <code class="docutils literal notranslate"><span class="pre">DashboardTab</span></code> to be displayed as children of this tab</p></li>
+<li><p><strong>params</strong> – A mapping of url query string parameters used when generating the route url.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p>The dashboard monitoring view can be extended by adding panes to the sidebar or
+extending the existing panes. This can be done customizing the
+<a class="reference internal" href="#dallinger.experiment.Experiment.monitoring_panels" title="dallinger.experiment.Experiment.monitoring_panels"><code class="xref py py-attr docutils literal notranslate"><span class="pre">monitoring_panels</span></code></a> and/or
+<a class="reference internal" href="#dallinger.experiment.Experiment.monitoring_statistics" title="dallinger.experiment.Experiment.monitoring_statistics"><code class="xref py py-attr docutils literal notranslate"><span class="pre">monitoring_statistics</span></code></a> methods of
+your experiment class. Additionally, you can customize the display of the selected
+nodes customizing the <a class="reference internal" href="#dallinger.experiment.Experiment.node_visualization_html" title="dallinger.experiment.Experiment.node_visualization_html"><code class="xref py py-attr docutils literal notranslate"><span class="pre">node_visualization_html</span></code></a>
+method, or the <a class="reference internal" href="classes.html#dallinger.models.SharedMixin.visualization_html" title="dallinger.models.SharedMixin.visualization_html"><code class="xref py py-attr docutils literal notranslate"><span class="pre">visualization_html</span></code></a> property on your
+model class. Finally, the layout of the visualization can be configured by customizing the
+<a class="reference internal" href="#dallinger.experiment.Experiment.node_visualization_options" title="dallinger.experiment.Experiment.node_visualization_options"><code class="xref py py-attr docutils literal notranslate"><span class="pre">node_visualization_options</span></code></a> method to return
+a dictionary of
+<a class="reference external" href="https://visjs.github.io/vis-network/docs/network/#options">vis.js configuration options</a>.</p>
+<p>The dashboard database view can be customized by customizing the
+<a class="reference internal" href="classes.html#dallinger.models.SharedMixin.json_data" title="dallinger.models.SharedMixin.json_data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">json_data</span></code></a> method on your model classes to
+add/modify data provided by each model to the dashboard views, or by modifying
+the DataTables data returned by the
+<a class="reference internal" href="#dallinger.experiment.Experiment.table_data" title="dallinger.experiment.Experiment.table_data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">table_data</span></code></a> method in your
+<code class="docutils literal notranslate"><span class="pre">Experiment</span></code> class.</p>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">dallinger.experiment.</code><code class="sig-name descname">Experiment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment.html#Experiment"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Define the structure of an experiment.</p>
+<blockquote>
+<div><dl class="py method">
+<dt id="dallinger.experiment.Experiment.monitoring_panels">
+<code class="sig-name descname">monitoring_panels</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment.html#Experiment.monitoring_panels"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment.Experiment.monitoring_panels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides monitoring dashboard sidebar panels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**kw</strong> – arguments passed in from the request</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An <code class="docutils literal notranslate"><span class="pre">OrderedDict()</span></code> mapping panel titles to HTML strings
+to render in the dashboard sidebar.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.experiment.Experiment.monitoring_statistics">
+<code class="sig-name descname">monitoring_statistics</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment.html#Experiment.monitoring_statistics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment.Experiment.monitoring_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default data used for the monitoring panels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**kw</strong> – arguments passed in from the request</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An <code class="docutils literal notranslate"><span class="pre">OrderedDict()</span></code> mapping panel titles to data structures
+describing the experiment state.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.experiment.Experiment.node_visualization_html">
+<code class="sig-name descname">node_visualization_html</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">object_type</span></em>, <em class="sig-param"><span class="n">obj_id</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment.html#Experiment.node_visualization_html"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment.Experiment.node_visualization_html" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string with custom HTML visualization for a given object
+referenced by the object base type and id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object_type</strong> (<em>str</em>) – The base object class name, e.g. <code class="docutils literal notranslate"><span class="pre">Network</span></code>, <code class="docutils literal notranslate"><span class="pre">Node</span></code>, <code class="docutils literal notranslate"><span class="pre">Info</span></code>, <code class="docutils literal notranslate"><span class="pre">Participant</span></code>, etc.</p></li>
+<li><p><strong>id</strong> (<em>int</em>) – The <code class="docutils literal notranslate"><span class="pre">id</span></code> of the object</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A valid HTML string to be inserted into the monitoring dashboard</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.experiment.Experiment.node_visualization_options">
+<code class="sig-name descname">node_visualization_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment.html#Experiment.node_visualization_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment.Experiment.node_visualization_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides custom vis.js configuration options for the
+Network Monitoring Dashboard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dict with <a class="reference external" href="https://visjs.github.io/vis-network/docs/network/#options">vis.js option values</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dallinger.experiment.Experiment.table_data">
+<code class="sig-name descname">table_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment.html#Experiment.table_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dallinger.experiment.Experiment.table_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates DataTablesJS data and configuration for the experiment. The data
+is compiled from the models’ <code class="docutils literal notranslate"><span class="pre">__json__</span></code> methods, and can be customized by either
+overriding this method or using the <code class="docutils literal notranslate"><span class="pre">json_data</span></code> method on the model to return
+additional serializable data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>**kw</strong> – arguments passed in from the request. The <code class="docutils literal notranslate"><span class="pre">model_type</span></code> parameter
+takes a <code class="docutils literal notranslate"><span class="pre">str</span></code> or iterable and queries all objects of those types,
+ordered by <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns a <code class="docutils literal notranslate"><span class="pre">dict</span></code> with DataTablesJS data and configuration, filters using
+arbitrary keyword arguments. Should contain <code class="docutils literal notranslate"><span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">columns</span></code> keys
+at least, with <code class="docutils literal notranslate"><span class="pre">columns</span></code> containing data for all fields on all returned
+objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">dashboard_database_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dallinger/experiment.html#Experiment.dashboard_database_actions"><span class="viewcode-link">[source]</span></a></dt>
+<dd><p>Returns a sequence of custom actions for the database dashboard. Each action
+must have a <code class="docutils literal notranslate"><span class="pre">title</span></code> and a <code class="docutils literal notranslate"><span class="pre">name</span></code> corresponding to a method on the
+experiment class.</p>
+<p>The named methods should take a single <code class="docutils literal notranslate"><span class="pre">data</span></code> argument
+which will be a list of dicts representing the datatables rendering of
+a Dallinger model object. The named methods should return a <code class="docutils literal notranslate"><span class="pre">dict</span></code>
+containing a <code class="docutils literal notranslate"><span class="pre">&quot;message&quot;</span></code> which will be displayed in the dashboard.</p>
+<p>Returns a single action referencing the
+<a class="reference internal" href="the_experiment_class.html#dallinger.experiment.Experiment.dashboard_fail" title="dallinger.experiment.Experiment.dashboard_fail"><code class="xref py py-func docutils literal notranslate"><span class="pre">dashboard_fail()</span></code></a>
+method by default.</p>
+</dd></dl>
+
+</div></blockquote>
+</dd></dl>
+
+<p>You may also add new actions to the dashboard database view by adding additional
+<code class="docutils literal notranslate"><span class="pre">title</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> pairs to the
+<a class="reference internal" href="the_experiment_class.html#dallinger.experiment.Experiment.dashboard_database_actions" title="dallinger.experiment.Experiment.dashboard_database_actions"><code class="xref py py-func docutils literal notranslate"><span class="pre">dashboard_database_actions()</span></code></a> output along
+with corresponding methods that process submitted data. The
+<a class="reference internal" href="the_experiment_class.html#dallinger.experiment.Experiment.dashboard_fail" title="dallinger.experiment.Experiment.dashboard_fail"><code class="xref py py-func docutils literal notranslate"><span class="pre">dashboard_fail()</span></code></a> method is an example of
+such an action.</p>
+</div>
+</div>
+<div class="section" id="papertrail">
+<h2>Papertrail<a class="headerlink" href="#papertrail" title="Permalink to this headline">¶</a></h2>
+<p>You can use Papertrail to view and search the live logs of your
+experiment. You can access the logs either through the Heroku
+dashboard’s Resources panel
+(<a class="reference external" href="https://dashboard.heroku.com/apps">https://dashboard.heroku.com/apps</a>/{#id}/resources), where {#id} is the
+id of your experiment, or directly through Papertrail.com
+(<a class="reference external" href="https://papertrailapp.com/systems">https://papertrailapp.com/systems</a>/{#id}/events).</p>
+<div class="section" id="setting-up-alerts">
+<h3>Setting up alerts<a class="headerlink" href="#setting-up-alerts" title="Permalink to this headline">¶</a></h3>
+<p>You can set up Papertrail to send error notifications to Slack or
+another communications platform.</p>
+<ol class="arabic simple" start="0">
+<li><p>Take a deep breath.</p></li>
+<li><p>Open the Papertrail logs.</p></li>
+<li><p>Search for the term <code class="docutils literal notranslate"><span class="pre">error</span></code>.</p></li>
+<li><p>To the right of the search bar, you will see a button titled “+ Save
+Search”. Click it. Name the search “Errors”. Then click “Save &amp;
+Setup an Alert”, which is to the right of “Save Search”.</p></li>
+<li><p>You will be directed to a page with a list of services that you can
+use to set up an alert.</p></li>
+<li><p>Click, e.g., Slack.</p></li>
+<li><p>Choose the desired frequency of alert. We recommend the minimum, 1
+minute.</p></li>
+<li><p>Under the heading “Slack details”, open (<em>in a new tab or window</em>)
+the link <a class="reference external" href="link%20https://slack.com/services/new/papertrail">new Papertrail
+integration</a>.</p></li>
+<li><p>This will bring you to a Slack page where you will choose a channel
+to post to. You may need to log in.</p></li>
+<li><p>Select the desired channel.</p></li>
+<li><p>Click “Add Papertrail Integration”.</p></li>
+<li><p>You will be brought to a page with more information about the
+integration.</p></li>
+<li><p>Scroll down to Step 3 to get the Webhook URL. It should look
+something like
+<code class="docutils literal notranslate"><span class="pre">https://hooks.slack.com/services/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</span></code>.</p></li>
+<li><p>Copy this link to your clipboard.</p></li>
+<li><p>Change anything else you want and then scroll to the bottom and
+click “Save integration”.</p></li>
+<li><p>Go back to Papertrail page that you left in Step 7.</p></li>
+<li><p>Paste the copied URL into the input text box labeled “Integration’s
+Webhook URL” under the “Slack Details” heading.</p></li>
+<li><p>Click “Create Alert” on the same page.</p></li>
+<li><p>Victory.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="experiment_data.html" class="btn btn-neutral float-right" title="Experiment Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="python_module.html" class="btn btn-neutral float-left" title="Running Experiments Programmatically" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

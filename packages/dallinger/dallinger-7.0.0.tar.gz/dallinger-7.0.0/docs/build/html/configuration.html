@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Configuration &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Email Notification Setup" href="email_setup.html" />
+    <link rel="prev" title="Command-Line Utility" href="command_line_utility.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#built-in-configuration">Built-in configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recruitment-general">Recruitment (General)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#amazon-mechanical-turk-recruitment">Amazon Mechanical Turk Recruitment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#preventing-repeat-participants">Preventing Repeat Participants</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#email-notifications">Email Notifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deployment-configuration">Deployment Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#choosing-configuration-values">Choosing configuration values</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Configuration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/configuration.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>The Dallinger <code class="docutils literal notranslate"><span class="pre">configuration</span></code> module provides tools for reading and writing
+configuration parameters that control the behavior of an experiment. To use the
+configuration, first import the module and get the configuration object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dallinger</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">dallinger</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_config</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You can then get and set parameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;duration&quot;</span><span class="p">)</span>
+<span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;duration&quot;</span><span class="p">,</span> <span class="mf">0.50</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When retrieving a configuration parameter, Dallinger will look for the parameter
+first among environment variables, then in a <code class="docutils literal notranslate"><span class="pre">config.txt</span></code> in the experiment
+directory, and then in the <code class="docutils literal notranslate"><span class="pre">.dallingerconfig</span></code> file, using whichever value
+is found first. If the parameter is not found, Dallinger will use the default.</p>
+<p>If a value is extracted from the environment or a config file it will be converted
+to the correct type. You can also specify a value of <code class="docutils literal notranslate"><span class="pre">file:/path/to/file</span></code> to
+use the contents of that file on your local computer.</p>
+<div class="section" id="built-in-configuration">
+<h2>Built-in configuration<a class="headerlink" href="#built-in-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Built-in configuration parameters, grouped into categories:</p>
+<div class="section" id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">mode</span></code> <em>unicode</em></dt><dd><p>Run the experiment in this mode. Options include <code class="docutils literal notranslate"><span class="pre">debug</span></code> (local testing),
+<code class="docutils literal notranslate"><span class="pre">sandbox</span></code> (MTurk sandbox), and <code class="docutils literal notranslate"><span class="pre">live</span></code> (MTurk).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">logfile</span></code> <em>unicode</em></dt><dd><p>Where to write logs.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">loglevel</span></code> <em>unicode</em></dt><dd><p>A number between 0 and 4 that controls the verbosity of logs, from <code class="docutils literal notranslate"><span class="pre">debug</span></code>
+to <code class="docutils literal notranslate"><span class="pre">critical</span></code>. Note that <code class="docutils literal notranslate"><span class="pre">dallinger</span> <span class="pre">debug</span></code> ignores this setting and always
+runs at 0 (<code class="docutils literal notranslate"><span class="pre">debug</span></code>).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">whimsical</span></code> <em>boolean</em></dt><dd><p>What’s life without whimsy? Controls whether email notifications sent
+regarding various experiment errors are whimsical in tone, or more
+matter-of-fact.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">dashboard_password</span></code> <em>unicode</em></dt><dd><p>An optional password for accessing the Dallinger Dashboard interface. If not
+specified, a random password will be generated.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">dashboard_user</span></code> <em>unicode</em></dt><dd><p>An optional login name for accessing the Dallinger Dashboard interface. If not
+specified <code class="docutils literal notranslate"><span class="pre">admin</span></code> will be used.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">enable_global_experiment_registry</span></code> <em>boolean</em></dt><dd><p>Enable a global experiment id registration. When enabled, the <code class="docutils literal notranslate"><span class="pre">collect</span></code> API
+check this registry to see if an experiment has already been run and reject
+re-running an experiment if it has been.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="recruitment-general">
+<h3>Recruitment (General)<a class="headerlink" href="#recruitment-general" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">auto_recruit</span></code> <em>boolean</em></dt><dd><p>A boolean on whether recruitment should be automatic.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">browser_exclude_rule</span></code> <em>unicode - comma separated</em></dt><dd><p>A set of rules you can apply to prevent participants with unsupported web
+browsers from participating in your experiment.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">recruiter</span></code> <em>unicode</em></dt><dd><p>The recruiter class to use during the experiment run. While this can be a
+full class name, it is more common to use the class’s <code class="docutils literal notranslate"><span class="pre">nickname</span></code> property
+for this value; for example <code class="docutils literal notranslate"><span class="pre">mturk</span></code>, <code class="docutils literal notranslate"><span class="pre">cli</span></code>, <code class="docutils literal notranslate"><span class="pre">bots</span></code>, or <code class="docutils literal notranslate"><span class="pre">multi</span></code>.
+NOTE: when running in debug mode, the HotAir (<code class="docutils literal notranslate"><span class="pre">hotair</span></code>) recruiter will
+always be used. The exception is if the <code class="docutils literal notranslate"><span class="pre">--bots</span></code> option is passed to
+<code class="docutils literal notranslate"><span class="pre">dallinger</span> <span class="pre">debug</span></code>, in which case the BotRecruiter will be used instead.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">recruiters</span></code> <em>unicode - custom format</em></dt><dd><p>When using multiple recruiters in a single experiment run via the <code class="docutils literal notranslate"><span class="pre">multi</span></code>
+setting for the <code class="docutils literal notranslate"><span class="pre">recruiter</span></code> config key, <code class="docutils literal notranslate"><span class="pre">recruiters</span></code> allows you to
+specify which recruiters you’d like to use, and how many participants to
+recruit from each. The special syntax for this value is:</p>
+<p><code class="docutils literal notranslate"><span class="pre">recruiters</span> <span class="pre">=</span> <span class="pre">[nickname</span> <span class="pre">1]:</span> <span class="pre">[recruits],</span> <span class="pre">[nickname</span> <span class="pre">2]:</span> <span class="pre">[recruits],</span> <span class="pre">etc.</span></code></p>
+<p>For example, to recruit 5 human participants via MTurk, and 5 bot participants,
+the configuration would be:</p>
+<p><code class="docutils literal notranslate"><span class="pre">recruiters</span> <span class="pre">=</span> <span class="pre">mturk:</span> <span class="pre">5,</span> <span class="pre">bots:</span> <span class="pre">5</span></code></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="amazon-mechanical-turk-recruitment">
+<h3>Amazon Mechanical Turk Recruitment<a class="headerlink" href="#amazon-mechanical-turk-recruitment" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">aws_access_key_id</span></code> <em>unicode</em></dt><dd><p>AWS access key ID.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">aws_secret_access_key</span></code> <em>unicode</em></dt><dd><p>AWS access key secret.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">aws_region</span></code> <em>unicode</em></dt><dd><p>AWS region to use. Defaults to <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ad_group</span></code> <em>unicode</em></dt><dd><p>Obsolete. See <code class="docutils literal notranslate"><span class="pre">group_name</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">assign_qualifications</span></code> <em>boolean</em></dt><dd><p>A boolean which controls whether an experiment-specific qualification
+(based on the experiment ID), and a group qualification (based on the value
+of <code class="docutils literal notranslate"><span class="pre">group_name</span></code>) will be assigned to participants by the recruiter.
+This feature assumes a recruiter which supports qualifications,
+like the <code class="docutils literal notranslate"><span class="pre">MTurkRecruiter</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">group_name</span></code> <em>unicode</em></dt><dd><p>Assign a named qualification to workers who complete a HIT.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mturk_qualification_blocklist</span></code> <em>unicode - comma seperated</em></dt><dd><p>Comma-separated list of qualification names. Workers with qualifications in
+this list will be prevented from viewing and accepting the HIT.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mturk_qualification_requirements</span></code> <em>unicode - JSON formatted</em></dt><dd><p>A JSON list of qualification documents to pass to Amazon Mechanical Turk.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">title</span></code> <em>unicode</em></dt><dd><p>The title of the HIT on Amazon Mechanical Turk.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">description</span></code> <em>unicode</em></dt><dd><p>The description of the HIT on Amazon Mechanical Turk.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">keywords</span></code> <em>unicode</em></dt><dd><p>A comma-separated list of keywords to use on Amazon Mechanical Turk.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">lifetime</span></code> <em>integer</em></dt><dd><p>How long in hours that your HIT remains visible to workers.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">duration</span></code> <em>float</em></dt><dd><p>How long in hours participants have until the HIT will time out.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">us_only</span></code> <em>boolean</em></dt><dd><p>Controls whether this HIT is available only to MTurk workers in the U.S.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">base_payment</span></code> <em>float</em></dt><dd><p>Base payment in U.S. dollars. All workers who accept the HIT are guaranteed
+this much compensation.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">approve_requirement</span></code> <em>integer</em></dt><dd><p>The percentage of past MTurk HITs that must have been approved for a worker
+to qualify to participate in your experiment. 1-100.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">organization_name</span></code> <em>unicode</em></dt><dd><p>Obsolete.</p>
+</dd>
+</dl>
+<div class="section" id="preventing-repeat-participants">
+<h4>Preventing Repeat Participants<a class="headerlink" href="#preventing-repeat-participants" title="Permalink to this headline">¶</a></h4>
+<p>If you set a <code class="docutils literal notranslate"><span class="pre">group_name</span></code> and <code class="docutils literal notranslate"><span class="pre">assign_qualifications</span></code> is also set to
+<code class="docutils literal notranslate"><span class="pre">true</span></code>, workers who complete your HIT will be given an MTurk qualification for
+your <code class="docutils literal notranslate"><span class="pre">group_name</span></code>. In the future, you can prevent these workers from
+participating in a HIT with the same <code class="docutils literal notranslate"><span class="pre">group_name</span></code> by including that name in
+the <code class="docutils literal notranslate"><span class="pre">qualification_blacklist</span></code> configuration. These four configuration keys
+work together to create a system to prevent recuiting workers who have already
+completed a prior run of the same experiment.</p>
+</div>
+</div>
+<div class="section" id="email-notifications">
+<h3>Email Notifications<a class="headerlink" href="#email-notifications" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference internal" href="email_setup.html"><span class="doc">Email Notification Setup</span></a> for a much more detailed
+explanation of these values and their use.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">contact_email_on_error</span></code> <em>unicode</em></dt><dd><p>The email address used as the recipient for error report emails, and the email displayed to workers when there is an error.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">dallinger_email_address</span></code> <em>unicode</em></dt><dd><p>An email address for use by Dallinger to send status emails.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">smtp_host</span></code> <em>unicode</em></dt><dd><p>Hostname and port of a mail server for outgoing mail. Defaults to <code class="docutils literal notranslate"><span class="pre">smtp.gmail.com:587</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">smtp_username</span></code> <em>unicode</em></dt><dd><p>Username for outgoing mail host.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">smtp_password</span></code> <em>unicode</em></dt><dd><p>Password for the outgoing mail host.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="deployment-configuration">
+<h3>Deployment Configuration<a class="headerlink" href="#deployment-configuration" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">database_url</span></code> <em>unicode</em></dt><dd><p>URI of the Postgres database.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">database_size</span></code> <em>unicode</em></dt><dd><p>Size of the database on Heroku. See <a class="reference external" href="https://devcenter.heroku.com/articles/heroku-postgres-plans">Heroku Postgres plans</a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">dyno_type</span></code> <em>unicode</em></dt><dd><p>Heroku dyno type to use. See <a class="reference external" href="https://devcenter.heroku.com/articles/dyno-types">Heroku dynos types</a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">redis_size</span></code> <em>unicode</em></dt><dd><p>Size of the redis server on Heroku. See <a class="reference external" href="https://elements.heroku.com/addons/heroku-redis">Heroku Redis</a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">num_dynos_web</span></code> <em>integer</em></dt><dd><p>Number of Heroku dynos to use for processing incoming HTTP requests. It is
+recommended that you use at least two.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">num_dynos_worker</span></code> <em>integer</em></dt><dd><p>Number of Heroku dynos to use for performing other computations.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">host</span></code> <em>unicode</em></dt><dd><p>IP address of the host.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">port</span></code> <em>unicode</em></dt><dd><p>Port of the host.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">clock_on</span></code> <em>boolean</em></dt><dd><p>If the clock process is on, it will perform a series of checks that ensure
+the integrity of the database.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">heroku_python_version</span></code> <em>unicode</em></dt><dd><p>The python version to be used on Heroku deployments. The version specification will
+be deployed to Heroku in a <cite>runtime.txt</cite> file in accordance with Heroku’s deployment
+API. Note that only the version number should be provided (eg: “2.7.14”) and not the
+“python-” prefix included in the final <cite>runtime.txt</cite> format.
+See Dallinger’s <cite>global_config_defaults.txt</cite> for the current default version.
+See <a class="reference external" href="https://devcenter.heroku.com/articles/python-support#supported-runtimes">Heroku supported runtimes</a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">heroku_team</span></code> <em>unicode</em></dt><dd><p>The name of the Heroku team to which all applications will be assigned.
+This is useful for centralized billing. Note, however, that it will prevent
+you from using free-tier dynos.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">worker_multiplier</span></code> <em>float</em></dt><dd><p>Multiplier used to determine the number of gunicorn web worker processes
+started per Heroku CPU count. Reduce this if you see Heroku warnings
+about memory limits for your experiment. Default is <cite>1.5</cite></p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="choosing-configuration-values">
+<h2>Choosing configuration values<a class="headerlink" href="#choosing-configuration-values" title="Permalink to this headline">¶</a></h2>
+<p>When running real experiments it is important to pick configuration variables that
+result in a deployment that performs appropriately.</p>
+<p>The number of Heroku dynos that are required and their specifications can make a
+very large difference to how the application behaves.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">num_dynos_web</span></code></dt><dd><p>This configuration variable determines how many dynos are run to deal with
+web traffic. They will be transparently load-balanced, so the more web dynos are
+started the more simultaneous HTTP requests the stack can handle.
+If an experiment defines the <code class="docutils literal notranslate"><span class="pre">channel</span></code> variable to subscribe to websocket events
+then all of these callbacks happen on the dyno that handles the initial <code class="docutils literal notranslate"><span class="pre">/launch</span></code>
+POST, so experiments that use this functionality heavily receive significantly
+less benefit from increasing <code class="docutils literal notranslate"><span class="pre">num_dynos_web</span></code>.
+The optimum value differs between experiments, but a good rule of thumb is 1 web
+dyno for every 10-20 simultaneous human users.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">num_dynos_worker</span></code></dt><dd><p>Workers are dynos that pull tasks from a queue and execute them in the background.
+They are optimized for many short tasks, but they are also used to run bots which
+are very long-lived. Each worker can run up to 20 concurrent tasks, however they
+are co-operatively multitasked so a poorly behaving task can cause all others
+sharing its host to block.
+When running with bots, you should always pick a value of <code class="docutils literal notranslate"><span class="pre">num_dynos_worker`</span> <span class="pre">that</span>
+<span class="pre">is</span> <span class="pre">at</span> <span class="pre">least</span> <span class="pre">``0.05*number_of_bots</span></code>, otherwise it is guaranteed to fail. In practice,
+there may well be experiment-specific tasks that also need to execute, and bots are
+more performant on underloaded dynos, so a better heuristic is <code class="docutils literal notranslate"><span class="pre">0.25*number_of_bots</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">dyno_type</span></code></dt><dd><p>This determines how powerful the heroku dynos started by Dallinger are. It is applied
+as the default for both web and worker dyno types. The minimum recommended is
+<code class="docutils literal notranslate"><span class="pre">standard-1x</span></code>, which should be sufficient for experiments that do not rely on
+real-time coordination, such as <a class="reference internal" href="demos/bartlett1932/index.html"><span class="doc">Bartlett (1932), stories</span></a>. Experiments that
+require significant power to process websocket events should consider the higher
+levels, <code class="docutils literal notranslate"><span class="pre">standard-2x</span></code>, <code class="docutils literal notranslate"><span class="pre">performance-m</span></code> and <code class="docutils literal notranslate"><span class="pre">performance-l</span></code>. In all but the
+most intensive experiments, either <code class="docutils literal notranslate"><span class="pre">dyno_type</span></code> or <code class="docutils literal notranslate"><span class="pre">num_dynos_web</span></code> should be
+increased, not both. See <code class="docutils literal notranslate"><span class="pre">dyno_type_web</span></code> and <code class="docutils literal notranslate"><span class="pre">dyno_type_worker</span></code> below
+for information about more specific settings.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">dyno_type_web</span></code></dt><dd><p>This determines how powerful the heroku web dynos are. It applies only to web dynos
+and will override the default set in <code class="docutils literal notranslate"><span class="pre">dyno_type</span></code>. See <code class="docutils literal notranslate"><span class="pre">dyno_type</span></code> above for details
+on specific values.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">dyno_type_worker</span></code></dt><dd><p>This determines how powerful the heroku worker dynos are. It applies only to worker
+dynos and will override the default set in <code class="docutils literal notranslate"><span class="pre">dyno_type</span></code>.. See <code class="docutils literal notranslate"><span class="pre">dyno_type</span></code> above for
+details on specific values.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">redis_size</span></code></dt><dd><p>A larger value for this increases the number of connections available on the redis dyno.
+This should be increased for experiments that make substantial use of websockets. Values
+are <code class="docutils literal notranslate"><span class="pre">premium-0</span></code> to <code class="docutils literal notranslate"><span class="pre">premium-14</span></code>. It is very unlikely that values higher than <code class="docutils literal notranslate"><span class="pre">premium-5</span></code>
+are useful.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">duration</span></code></dt><dd><p>The duration parameter determines the number of hours that an MTurk worker has to complete
+the experiment. Choosing numbers that are too short can cause people to refuse to work on
+a HIT. A deadline that is too long may give people pause for thought as it may make
+the task seem underpaid. Set this to be significantly above the total time from start
+to finish that you’d expect a user to take in the worst case.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">base_payment</span></code></dt><dd><p>The amount of US dollars to pay for completion of the experiment. The higher this is,
+the easier it will be to attract workers.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="email_setup.html" class="btn btn-neutral float-right" title="Email Notification Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="command_line_utility.html" class="btn btn-neutral float-left" title="Command-Line Utility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1734 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Creating an Experiment &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Networks" href="networks.html" />
+    <link rel="prev" title="Developer Installation" href="developing_dallinger_setup_guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating an Experiment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-experiment-package">The Experiment Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton">myexperiments.pushbutton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments">myexperiments.pushbutton/myexperiments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton">myexperiments.pushbutton/myexperiments/pushbutton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-tests">myexperiments.pushbutton/tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-docs">myexperiments.pushbutton/docs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-licenses">myexperiments.pushbutton/licenses</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#detailed-description-for-support-files">Detailed Description for Support Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-setup-py">myexperiments.pushbutton/setup.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-constraints-txt">myexperiments.pushbutton/constraints.txt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-requirements-txt">myexperiments.pushbutton/requirements.txt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-dev-requirements-txt">myexperiments.pushbutton/dev-requirements.txt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-readme-md">myexperiments.pushbutton/README.md</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-files-in-myexperiments-pushbutton">Other files in myexperiments.pushbutton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-test-test-pushbutton-py">myexperiments.pushbutton/test/test_pushbutton.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-docs-makefile">myexperiments.pushbutton/docs/Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-docs-source-index-rst">myexperiments.pushbutton/docs/source/index.rst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-docs-source-spelling-wordlist-txt">myexperiments.pushbutton/docs/source/spelling_wordlist.txt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-files-and-directories-in-myexperiments-pushbutton-docs-source">Other files and directories in myexperiments.pushbutton/docs/source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#experiment-code-in-detail">Experiment Code in Detail</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-init-py">myexperiments.pushbutton/myexperiments/pushbutton/__init__.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-config-txt">myexperiments.pushbutton/myexperiments/pushbutton/config.txt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-experiment-py">myexperiments.pushbutton/myexperiments/pushbutton/experiment.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-bots-py">myexperiments.pushbutton/myexperiments/pushbutton/bots.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-layout-html">myexperiments.pushbutton/myexperiments/pushbutton/templates/layout.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-ad-html">myexperiments.pushbutton/myexperiments/pushbutton/templates/ad.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-consent-html">myexperiments.pushbutton/myexperiments/pushbutton/templates/consent.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-instructions-html">myexperiments.pushbutton/myexperiments/pushbutton/templates/instructions.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-exp-html">myexperiments.pushbutton/myexperiments/pushbutton/templates/exp.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-questionnaire-html">myexperiments.pushbutton/myexperiments/pushbutton/templates/questionnaire.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myexperiments-pushbutton-myexperiments-pushbutton-static-scripts-experiment-js">myexperiments.pushbutton/myexperiments/pushbutton/static/scripts/experiment.js</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#extending-the-template">Extending the Template</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-bartlett-1932-experiment">The Bartlett 1932 Experiment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#starting-the-cookiecutter-template">Starting the Cookiecutter template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-the-network">Setting Up the Network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recruitment">Recruitment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sources-and-models">Sources and Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-experiment-code">The Experiment Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-experiment-templates">The experiment templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-participant-bot">Creating a Participant Bot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#developing-your-own-experiment">Developing Your Own Experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Creating an Experiment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/creating_an_experiment.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-an-experiment">
+<h1>Creating an Experiment<a class="headerlink" href="#creating-an-experiment" title="Permalink to this headline">¶</a></h1>
+<p>The easiest way to create an experiment is to use the Dallinger
+Cookiecutter template.
+<a class="reference external" href="https://cookiecutter.readthedocs.io/en/latest/">Cookiecutter</a> is a
+tool that creates projects from project templates. There is a
+Dallinger template available for this tool.</p>
+<p>The first step is to get Cookiecutter itself installed. Like
+Dallinger, Cookiecutter uses Python, so it can be installed in the same
+way that Dallinger was installed. If you haven’t installed Dallinger yet,
+please consult the
+<a class="reference internal" href="installing_dallinger_for_users.html"><span class="doc">installation instructions</span></a> first.</p>
+<p>In most cases, you can install Cookiecutter using Python’s <cite>pip</cite>
+installer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">cookiecutter</span>
+</pre></div>
+</div>
+<p>After that, you can use the <cite>cookiecutter</cite> command to create a new
+experiment in your current directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cookiecutter</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Dallinger</span><span class="o">/</span><span class="n">cookiecutter</span><span class="o">-</span><span class="n">dallinger</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Cookiecutter works by asking some questions about the project you are
+going to create, and uses that information to set up a directory
+structure that contains your project. A Dallinger experiment is a
+Python package, so you’ll need to answer a few questions about this
+before Cookiecutter creates your experiment’s directory.</p>
+<p>The questions are below. Be sure to follow indications about allowed
+characters, or your experiment may not run:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code>: This can be used as a general “container” or “brand” name
+for your experiments. It should be all lower case and not contain any spaces
+or special characters other than <cite>_</cite>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">experiment_name</span></code>: The experiment will be stored in this sub-directory.
+This should be all lower case and not contain any spaces or special
+characters other than <cite>_</cite>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">repo_name</span></code>: The GitHub repository name where experiment package will
+eventually live. This should not contain any spaces or special characters
+other than <cite>-</cite> and <cite>_</cite>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">package_name</span></code>: The python package name for your experiment. This is
+usually the name of your namespace and your experiment name separated by a
+dot. This should be all lower case and not contain any spaces or special
+characters other than <cite>_</cite>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">experiment_class</span></code>: The python class name for your custom experiment
+class. This should not contain any spaces or special characters. This is
+where the main code of your experiment will live.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">experiment_description</span></code>: A short description of your experiment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">author</span></code>: The package author’s full name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">author_email</span></code>: The contact email for the experiment author.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">author_github</span></code>: The GitHub account name where the package will eventually
+live.</p></li>
+</ul>
+<p>If you do not intend to publish your experiment and do not plan to store
+it in a github repository, you can just hit &lt;enter&gt; when you get to
+those questions. The defaults should be fine. Just make sure to have an
+original answer for the <cite>experiment_name</cite> question, and you should be
+good to go.</p>
+<p>A sample Cookiecutter session is shown below. Note that the questions
+begin right after Cookiecutter downloads the project repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cookiecutter https://github.com/Dallinger/cookiecutter-dallinger.git
+Cloning into &#39;cookiecutter-dallinger&#39;...
+remote: Counting objects: 150, done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 150 (delta 8), reused 17 (delta 6), pack-reused 126
+Receiving objects: 100% (150/150), 133.18 KiB | 297.00 KiB/s, done.
+Resolving deltas: 100% (54/54), done.
+namespace [dlgr_contrib]: myexperiments
+experiment_name [testexperiment]: pushbutton
+repo_name [myexperiments.pushbutton]:
+package_name [myexperiments.pushbutton]:
+experiment_class [TestExperiment]: PushButton
+experiment_description [A simple Dallinger experiment.]: An experiment where the user has to press a button
+author [Jordan Suchow]: John Smith
+author_github [suchow]: jsmith
+author_email [suchow@berkeley.edu]: jsmith@smith.net
+</pre></div>
+</div>
+<p>Once you are finished with those questions, Cookiecutter will create a
+directory structure containing a basic experiment which you can then
+modify to create your own. In the case of the example above, that
+directory will be named <code class="docutils literal notranslate"><span class="pre">myexperiments.pushbutton</span></code>.</p>
+<p>When you clone the cookiecutter template from a GitHub repository, as we did
+here, cookiecutter saves the downloaded template inside your home directory,
+in the <code class="docutils literal notranslate"><span class="pre">.cookiecutter</span></code> sub-directory. The next time you run it, cookiecutter
+can use the stored template, or you can update it to the latest version. The
+default behavior is to ask you what you want to do. If you see a question
+like the following, just press &lt;enter&gt; to get the latest version:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>You&#39;ve downloaded /home/jsmith/.cookiecutters/cookiecutter-dallinger
+before. Is it okay to delete and re-download it? [yes]:
+</pre></div>
+</div>
+<p>If you answer <cite>no</cite>, cookiecutter will use the saved version. This can be
+useful if you are working off-line and need to start a project.</p>
+<p>The template creates a runnable experiment, so you could change into
+the newly created directory right away and install your package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd myexperiments.pushbutton
+$ pip install -e .
+</pre></div>
+</div>
+<p>This command will allow you to run the experiment using Dallinger. You
+just need to change to the directory named for your experiment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd myexperiments/pushbutton
+$ dallinger debug
+</pre></div>
+</div>
+<p>This is enough to run the experiment, but to actually begin developing
+your experiment, you’ll need to install the development requirements,
+like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install -r dev-requirements.txt
+</pre></div>
+</div>
+<p>Make sure you run this command from the initial directory created by
+Cookiecutter. In this case the directory is <code class="docutils literal notranslate"><span class="pre">myexperiments.pushbutton</span></code>.</p>
+<div class="section" id="the-experiment-package">
+<h2>The Experiment Package<a class="headerlink" href="#the-experiment-package" title="Permalink to this headline">¶</a></h2>
+<p>There are several files and directories that are created with the
+<code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> command. Let’s start with a general overview before
+going into each file in detail.</p>
+<p>The directory structure of the package is the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">myexperiments</span><span class="o">.</span><span class="n">pushbutton</span>
+  <span class="o">-</span> <span class="n">myexperiments</span>
+    <span class="o">-</span> <span class="n">pushbutton</span>
+      <span class="o">-</span> <span class="n">static</span>
+        <span class="o">-</span> <span class="n">css</span>
+        <span class="o">-</span> <span class="n">images</span>
+        <span class="o">-</span> <span class="n">scripts</span>
+      <span class="o">-</span> <span class="n">templates</span>
+  <span class="o">-</span> <span class="n">tests</span>
+  <span class="o">-</span> <span class="n">docs</span>
+    <span class="o">-</span> <span class="n">source</span>
+      <span class="o">-</span> <span class="n">_static</span>
+      <span class="o">-</span> <span class="n">_templates</span>
+  <span class="o">-</span> <span class="n">licenses</span>
+</pre></div>
+</div>
+<div class="section" id="myexperiments-pushbutton">
+<h3>myexperiments.pushbutton<a class="headerlink" href="#myexperiments-pushbutton" title="Permalink to this headline">¶</a></h3>
+<p>The main package directory contains files required to define the
+experiment as a Python package. Other than adding requirements and
+keeping the README up to date, you probably won’t need to touch these
+files a lot after initial setup.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments">
+<h3>myexperiments.pushbutton/myexperiments<a class="headerlink" href="#myexperiments-pushbutton-myexperiments" title="Permalink to this headline">¶</a></h3>
+<p>This is what is know in Python as a <code class="docutils literal notranslate"><span class="pre">namespace</span></code> directory. Its only
+purpose is marking itself as a container of several packages under a
+common name. The idea is that using a namespace, you can have many
+related but independent packages under one name, but you don’t need to
+have all of them inside a single project.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton" title="Permalink to this headline">¶</a></h3>
+<p>Contains the code and resources (images, styles, scripts) for your
+experiment. This is where your main work will be performed.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-tests">
+<h3>myexperiments.pushbutton/tests<a class="headerlink" href="#myexperiments-pushbutton-tests" title="Permalink to this headline">¶</a></h3>
+<p>This is where the automated tests for your experiment go.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-docs">
+<h3>myexperiments.pushbutton/docs<a class="headerlink" href="#myexperiments-pushbutton-docs" title="Permalink to this headline">¶</a></h3>
+<p>The files stored here are the source files for your experiment’s
+documentation. Dallinger uses <a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a>
+for documenting the project, and it’s recommended that you use the
+same system for documenting your experiment.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-licenses">
+<h3>myexperiments.pushbutton/licenses<a class="headerlink" href="#myexperiments-pushbutton-licenses" title="Permalink to this headline">¶</a></h3>
+<p>This directory contains the experiment’s license for distribution.
+Dallinger uses the <a class="reference external" href="https://opensource.org/licenses/MIT">MIT</a>
+license, and it’s encouraged, but not required, that you use the same.</p>
+</div>
+</div>
+<div class="section" id="detailed-description-for-support-files">
+<h2>Detailed Description for Support Files<a class="headerlink" href="#detailed-description-for-support-files" title="Permalink to this headline">¶</a></h2>
+<p>Now that you are familiar with the main project structure, let’s go
+over the details for the most important files in the package. Once
+you know what each file is for, you will be ready to begin developing
+your experiment. In this section we’ll deal with the support files,
+which include tests, documentation and Python packaging files.</p>
+<div class="section" id="myexperiments-pushbutton-setup-py">
+<h3>myexperiments.pushbutton/setup.py<a class="headerlink" href="#myexperiments-pushbutton-setup-py" title="Permalink to this headline">¶</a></h3>
+<p>This is a Python file that contains the package information, which is
+used by Python to setup the package, but also to publish it to the
+<a class="reference external" href="https://pypi.python.org">Python Package Repository (PYPI)</a>. Most of
+the questions you answered when creating the package with Cookiecutter
+are used here. As you develop your experiment, you might need to update
+the <cite>version</cite> variable defined here, which starts as “0.1.0”. You may also
+wish to edit the <cite>keywords</cite> and <cite>classifiers</cite>, to help with your package’s
+classification. Other than that, the file can be left untouched.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-constraints-txt">
+<h3>myexperiments.pushbutton/constraints.txt<a class="headerlink" href="#myexperiments-pushbutton-constraints-txt" title="Permalink to this headline">¶</a></h3>
+<p>This text file contains the minimal version requirements for some of the
+Python dependencies used by the experiment. Out of the box, this includes
+Dallinger and development support packages. If you add any dependencies to
+your experiment, it would be a good idea to enter the package version here,
+to avoid any surprises down the line.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-requirements-txt">
+<h3>myexperiments.pushbutton/requirements.txt<a class="headerlink" href="#myexperiments-pushbutton-requirements-txt" title="Permalink to this headline">¶</a></h3>
+<p>The Python packages required by your experiment should be listed here. Do
+not include versions, just the package name. Versions are handled in
+<code class="docutils literal notranslate"><span class="pre">constraints.txt</span></code>, discussed above. The file looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">c</span> <span class="n">constraints</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">dallinger</span>
+<span class="n">requests</span>
+</pre></div>
+</div>
+<p>The first line is what tells the installer which versions to use, and then
+the dependencies go below, one on each line by itself. The experiment
+template includes just two dependencies, <cite>dallinger</cite> and <cite>requests</cite>.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-dev-requirements-txt">
+<h3>myexperiments.pushbutton/dev-requirements.txt<a class="headerlink" href="#myexperiments-pushbutton-dev-requirements-txt" title="Permalink to this headline">¶</a></h3>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> above, but contains the development
+dependencies. You should only change this if you add a development
+specific tool to your package. The format is the same as for the other
+requirements.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-readme-md">
+<h3>myexperiments.pushbutton/README.md<a class="headerlink" href="#myexperiments-pushbutton-readme-md" title="Permalink to this headline">¶</a></h3>
+<p>This is where the name and purpose of your experiment are explained,
+along with minimal installation instructions. More detailed documentation
+should go in the <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory.</p>
+</div>
+<div class="section" id="other-files-in-myexperiments-pushbutton">
+<h3>Other files in myexperiments.pushbutton<a class="headerlink" href="#other-files-in-myexperiments-pushbutton" title="Permalink to this headline">¶</a></h3>
+<p>There are a few more files in the <code class="docutils literal notranslate"><span class="pre">myexperiments.pushbutton</span></code> directory.
+Here is a quick description of each:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>. Used by <cite>git</cite> to keep track of which files to ignore
+when looking for changes in your project. Files ignored by <cite>git</cite> will
+also be ignored both when deploying your experiment, and when testing it
+in debug mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.travis.yml</span></code>. Travis is a continuous integration service, which can
+run your experiment’s tests each time you push some changes. This is
+the configuration file where this is set up.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CHANGELOG.md</span></code>. This is where you should keep track of changes to your
+experiment. It is appended to <cite>README.md</cite> to form your experiment’s
+basic description.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CONTRIBUTING.md</span></code>. Guidelines for collaborating with your project.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MANIFEST.in</span></code>. Used by the installer to determine which files and
+directories to include in uploads of your package.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code>. Used by the installer to define metadata and settings for
+some development extensions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tox.ini</span></code>. Sets up the testing environment.</p></li>
+</ul>
+</div>
+<div class="section" id="myexperiments-pushbutton-test-test-pushbutton-py">
+<h3>myexperiments.pushbutton/test/test_pushbutton.py<a class="headerlink" href="#myexperiments-pushbutton-test-test-pushbutton-py" title="Permalink to this headline">¶</a></h3>
+<p>This is a sample test suite for your experiment. It’s intended only as a
+placeholder, and does not actually test anything as it is. See the
+documentation for <a class="reference external" href="https://docs.pytest.org/en/latest/">pytest</a> for
+information about setting up tests.</p>
+<p>To run the tests as they are, and once you start adding your own, use
+the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> command. Make sure you install dev-requirements.txt
+before running the tests, then enter this command from the directory that
+was created when you initially ran the cookiecutter command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pytest
+===================== test session starts ===============================
+platform linux2 -- Python 2.7.15rc1, pytest-3.7.1, py-1.5.4, pluggy-0.7.1
+rootdir: /home/jsmith/myexperiments.pushbutton, inifile:
+collected 1 item
+
+test/test_pushbutton.py .                                          [100%]
+
+======================= 1 passed in 0.08 seconds ========================
+</pre></div>
+</div>
+</div>
+<div class="section" id="myexperiments-pushbutton-docs-makefile">
+<h3>myexperiments.pushbutton/docs/Makefile<a class="headerlink" href="#myexperiments-pushbutton-docs-makefile" title="Permalink to this headline">¶</a></h3>
+<p>The Sphinx documentation system uses this file to execute documentation
+building commands. Most of the time you will be building HTML
+documentation, for which you would use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make html
+</pre></div>
+</div>
+<p>Make sure that you are in the <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory and that the
+development requirements have been installed before running this.</p>
+<p>The development requirements include an Sphinx plugin for checking
+the spelling of your documentation. This can be very useful:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make spelling
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory also includes <code class="docutils literal notranslate"><span class="pre">makefile.bat</span></code>, which does the same
+tasks on Microsoft Windows systems.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-docs-source-index-rst">
+<h3>myexperiments.pushbutton/docs/source/index.rst<a class="headerlink" href="#myexperiments-pushbutton-docs-source-index-rst" title="Permalink to this headline">¶</a></h3>
+<p>This is where your main documentation will be written. Be sure to
+read the <a class="reference external" href="http://www.sphinx-doc.org/">Sphinx documentation</a> first,
+in particular the <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">reStructuredText Primer</a>.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-docs-source-spelling-wordlist-txt">
+<h3>myexperiments.pushbutton/docs/source/spelling_wordlist.txt<a class="headerlink" href="#myexperiments-pushbutton-docs-source-spelling-wordlist-txt" title="Permalink to this headline">¶</a></h3>
+<p>This file contains a list of words that you want the spell checker
+to recognize as valid. There might be some terms related to your
+experiment which are not common words but should not trigger a
+spelling error. Add them here.</p>
+</div>
+<div class="section" id="other-files-and-directories-in-myexperiments-pushbutton-docs-source">
+<h3>Other files and directories in myexperiments.pushbutton/docs/source<a class="headerlink" href="#other-files-and-directories-in-myexperiments-pushbutton-docs-source" title="Permalink to this headline">¶</a></h3>
+<p>There are a few more files in the documentation directory. Here’s a
+brief explanation of each:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">acknowledgments.rst</span></code>. A place for thanking any institutions or
+individuals that may have helped with the experiment. Can be used
+as an example of how to add new pages to your docs and link them
+to the table of contents (see the link in <cite>index.rst</cite>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conf.py</span></code>. Python configuration for Sphinx. You don’t need to
+touch this unless you start experimenting with plugins and
+documentation themes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_static</span></code>. Static resources for the theme.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_templates</span></code>. Layout templates for the theme.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="experiment-code-in-detail">
+<h2>Experiment Code in Detail<a class="headerlink" href="#experiment-code-in-detail" title="Permalink to this headline">¶</a></h2>
+<p>As we reviewed in the previous section, there are lots of files which
+make your experiment distributable as a Python package. Of course, the
+most important part of the experiment template is the actual experiment
+code, which is where most of your work will take place. In this section,
+we describe each and every file in the experiment directory.</p>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-init-py">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/__init__.py<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-init-py" title="Permalink to this headline">¶</a></h3>
+<p>This is an empty file that marks your experiment’s directory as a
+Python module. Though some developers add module initialization code
+here, it’s OK if you keep it empty.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-config-txt">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/config.txt<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-config-txt" title="Permalink to this headline">¶</a></h3>
+<p>The configuration file is used to pass parameters to the experiment to
+control its behavior. It’s divided into four sections, which we’ll
+briefly discuss next.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Experiment</span><span class="p">]</span>
+<span class="n">mode</span> <span class="o">=</span> <span class="n">sandbox</span>
+<span class="n">auto_recruit</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">custom_variable</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">num_participants</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>The first is the <cite>Experiment</cite> section. Here we define the experiment
+specific parameters. Most of these parameters are described in the
+<a class="reference internal" href="configuration.html"><span class="doc">configuration section</span></a>.</p>
+<p>The parameter <cite>mode</cite> sets the experiment mode, which can be one of debug
+(local testing), sandbox (MTurk sandbox), and live (MTurk). <cite>auto_recruit</cite>
+turns automatic participant recruitment on or off. <cite>num_participants</cite>
+sets the number of participants that will be recruited.</p>
+<p>Of particular interest in this section is the <cite>custom_variable</cite>
+parameter. This is part of an example of how to add custom variables to
+an experiment. Here we set the value to <cite>True</cite>. See the experiment code
+below to understand how to define the variable.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">MTurk</span><span class="p">]</span>
+<span class="n">title</span> <span class="o">=</span> <span class="n">pushbutton</span>
+<span class="n">description</span> <span class="o">=</span> <span class="n">An</span> <span class="n">experiment</span> <span class="n">where</span> <span class="n">the</span> <span class="n">user</span> <span class="n">has</span> <span class="n">to</span> <span class="n">press</span> <span class="n">a</span> <span class="n">button</span>
+<span class="n">keywords</span> <span class="o">=</span> <span class="n">Psychology</span>
+<span class="n">base_payment</span> <span class="o">=</span> <span class="mf">1.00</span>
+<span class="n">lifetime</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">contact_email_on_error</span> <span class="o">=</span> <span class="n">jsmith</span><span class="nd">@smith</span><span class="o">.</span><span class="n">net</span>
+<span class="n">browser_exclude_rule</span> <span class="o">=</span> <span class="n">MSIE</span><span class="p">,</span> <span class="n">mobile</span><span class="p">,</span> <span class="n">tablet</span>
+</pre></div>
+</div>
+<p>The next section is for the <cite>MTurk</cite> configuration parameters. Again,
+those are all discussed in the configuration section. Note that many
+of the parameter values above came directly from the Cookiecutter
+template questions.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Database</span><span class="p">]</span>
+<span class="n">database_url</span> <span class="o">=</span> <span class="n">postgresql</span><span class="p">:</span><span class="o">//</span><span class="n">postgres</span><span class="nd">@localhost</span><span class="o">/</span><span class="n">dallinger</span>
+<span class="n">database_size</span> <span class="o">=</span> <span class="n">standard</span><span class="o">-</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>The <cite>Database</cite> section contains just the database URL and size
+parameters. These should only be changed if you have your database in
+a non standard location.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Server</span><span class="p">]</span>
+<span class="n">dyno_type</span> <span class="o">=</span> <span class="n">free</span>
+<span class="n">num_dynos_web</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">num_dynos_worker</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">host</span> <span class="o">=</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span>
+<span class="n">clock_on</span> <span class="o">=</span> <span class="n">false</span>
+<span class="n">logfile</span> <span class="o">=</span> <span class="o">-</span>
+</pre></div>
+</div>
+<p>Finally, the <cite>Server</cite> section contains Heroku related parameters.
+Depending on the number of participants and size of the experiment,
+you might need to set the <cite>dyno_type</cite> and <cite>num_dynos_web</cite> parameters
+to something else, but be aware that most dyno types require a paid
+account. For more information about dyno types, please take a look at
+the <a class="reference external" href="https://devcenter.heroku.com/articles/dyno-types">heroku guide</a>.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-experiment-py">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/experiment.py<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-experiment-py" title="Permalink to this headline">¶</a></h3>
+<p>At last, we get to the experiment code. This is where most of your
+effort will take place. The <cite>pushbutton</cite> experiment is simple and the
+code is short, but it’s important that you understand everything that
+happens here.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dallinger.config</span> <span class="kn">import</span> <span class="n">get_config</span>
+<span class="kn">from</span> <span class="nn">dallinger.experiments</span> <span class="kn">import</span> <span class="n">Experiment</span>
+<span class="kn">from</span> <span class="nn">dallinger.networks</span> <span class="kn">import</span> <span class="n">Empty</span>
+<span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">bots</span> <span class="kn">import</span> <span class="n">Bot</span>
+        <span class="n">Bot</span> <span class="o">=</span> <span class="n">Bot</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
+<p>The first section of the code consists of some import statements to
+get the Dallinger framework parts ready.</p>
+<p>After the Dallinger imports we try to import a bot from within the
+experiment directory. If none are defined, we simply skip this step.
+See the next section for more about bots.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">extra_parameters</span><span class="p">():</span>
+
+        <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;custom_variable&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+                <span class="s1">&#39;num_participants&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">types</span><span class="p">:</span>
+                <span class="n">config</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">types</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Next, we get the experiment configuration, which includes parsing
+the <code class="docutils literal notranslate"><span class="pre">config.txt</span></code> file shown above. The <cite>get_config()</cite> call also
+looks for an <cite>extra_parameters</cite> function, which is used to
+register the <cite>custom_variable</cite> and <cite>num_participants</cite> parameters
+discussed in the configuration section above.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PushButton</span><span class="p">(</span><span class="n">Experiment</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Define the structure of the experiment.&quot;&quot;&quot;</span>
+        <span class="n">num_participants</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+                <span class="sd">&quot;&quot;&quot;Call the same parent constructor, then call setup() if we have a session.</span>
+<span class="sd">                &quot;&quot;&quot;</span>
+                <span class="nb">super</span><span class="p">(</span><span class="n">PushButton</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">session</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+
+        <span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="nb">super</span><span class="p">(</span><span class="n">PushButton</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">configure</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">experiment_repeats</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">custom_variable</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;custom_variable&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">num_participants</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;num_participants&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">create_network</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="sd">&quot;&quot;&quot;Return a new network.&quot;&quot;&quot;</span>
+                <span class="k">return</span> <span class="n">Empty</span><span class="p">(</span><span class="n">max_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_participants</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, we have the <cite>PushButton</cite> class, which contains the main
+experiment code. It inherits its behavior from Dallinger’s
+<cite>Experiment</cite> class, which we imported before. Since this is a
+very simple experiment, we don’t have a lot of custom code here,
+other than setting up initial values for our custom parameters in
+the <cite>configure</cite> method.</p>
+<p>It’s best to limit yourself to one experiment subclass, but if this
+isn’t possible, you can set the EXPERIMENT_CLASS_NAME environment
+variable to choose which is being used.</p>
+<p>If you had a class defined somewhere else representing some objects
+in your experiment, the place to initialize an instance would be the
+<cite>__init__</cite> method, which is called by Python on experiment
+initialization. The best place to do that would be the line after the
+<cite>self.setup()</cite> call, right after we are sure that we have a session.</p>
+<p>Your experiment can do whatever you want, and use any dependencies
+that you need. The Python code is used mainly for backend tasks,
+while most interactivity depends on Javascript and HTML pages, which
+are discussed below.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-bots-py">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/bots.py<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-bots-py" title="Permalink to this headline">¶</a></h3>
+<p>One of Dallinger’s features is the ability to have automated
+experiment participants, or <cite>bots</cite>. These allow the experimenter to
+perform simulated runs of an experiment using hundreds or even
+thousands of participants easily. To support bots, an experiment
+needs to have a <code class="docutils literal notranslate"><span class="pre">bots.py</span></code> file that defines at least one bot. Our
+sample experiment has one, which if you recall was imported at the
+top of the experiment code.</p>
+<p>There are two kinds of bots. The first, or regular bot, uses a
+webdriver to simulate all the browser interactions that a real
+human would have with the experiment. The other bot type is the
+high performance bot, which skips the browser simulation and
+interacts directly with the server.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="kn">import</span> <span class="n">TimeoutException</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+
+<span class="kn">from</span> <span class="nn">dallinger.bots</span> <span class="kn">import</span> <span class="n">BotBase</span><span class="p">,</span> <span class="n">HighPerformanceBotBase</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The bot code first imports the bot base classes, along with some
+webdriver code for the regular bot, and the <cite>requests</cite> library, for
+the high performance bot.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Bot</span><span class="p">(</span><span class="n">BotBase</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Bot tasks for experiment participation&quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">participate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="sd">&quot;&quot;&quot;Click the button.&quot;&quot;&quot;</span>
+                <span class="k">try</span><span class="p">:</span>
+                        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Entering participate method&quot;</span><span class="p">)</span>
+                        <span class="n">submit</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
+                                <span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s1">&#39;submit-response&#39;</span><span class="p">)))</span>
+                        <span class="n">submit</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="kc">True</span>
+                <span class="k">except</span> <span class="n">TimeoutException</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>The <cite>Bot</cite> class inherits from <cite>BotBase</cite>. A bot needs to have a
+<cite>participate</cite> method, which simulates a subject’s participation.
+For this experiment, we simply wait until a clickable button with
+the id <cite>submit-response</cite> is loaded, and then we click it. That’s
+it. Other experiments will of course require more complex
+interactions, but this is the gist of it.</p>
+<p>To write a bot you need to know fairly well what your experiment
+does, plus a good command of the Selenium webdriver API, which
+thankfully has
+<a class="reference external" href="http://selenium-python.readthedocs.io/api.html">extensive documentation</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HighPerformanceBot</span><span class="p">(</span><span class="n">HighPerformanceBotBase</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Bot for experiment participation with direct server interaction&quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="nf">participate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="sd">&quot;&quot;&quot;Click the button.&quot;&quot;&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Bot player participating.&#39;</span><span class="p">)</span>
+                <span class="n">node_id</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+                        <span class="c1"># create node</span>
+                        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{host}</span><span class="s2">/node/</span><span class="si">{self.participant_id}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                                <span class="n">host</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">=</span><span class="bp">self</span>
+                        <span class="p">)</span>
+                        <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">500</span> <span class="ow">or</span> <span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">stochastic_sleep</span><span class="p">()</span>
+                                <span class="k">continue</span>
+
+                        <span class="n">node_id</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+
+                <span class="k">while</span> <span class="n">node_id</span><span class="p">:</span>
+                        <span class="c1"># add info</span>
+                        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{host}</span><span class="s2">/info/</span><span class="si">{node_id}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                                <span class="n">host</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span>
+                                <span class="n">node_id</span><span class="o">=</span><span class="n">node_id</span>
+                        <span class="p">)</span>
+                        <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;contents&quot;</span><span class="p">:</span> <span class="s2">&quot;Submitted&quot;</span><span class="p">,</span>
+                                                                                          <span class="s2">&quot;info_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Info&quot;</span><span class="p">})</span>
+                        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">500</span> <span class="ow">or</span> <span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">stochastic_sleep</span><span class="p">()</span>
+                                <span class="k">continue</span>
+
+                        <span class="k">return</span>
+</pre></div>
+</div>
+<p>The high performance bot works very differently. It uses the <cite>requests</cite>
+library to directly post URLs to the server, passing expected values as
+request parameters. This works much faster than simulating a browser,
+thus allowing for more bots to participate in an experiment using
+fewer resources.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-templates-layout-html">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/templates/layout.html<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-layout-html" title="Permalink to this headline">¶</a></h3>
+<p>This template defines the layout to be used by the all the experiment
+pages.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">&quot;base/layout.html&quot;</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">title</span> <span class="o">-%</span><span class="p">}</span>
+        <span class="n">Psychology</span> <span class="n">Experiment</span>
+<span class="p">{</span><span class="o">%-</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">libs</span> <span class="o">%</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/static/scripts/store+json2.min.js&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+        <span class="p">{{</span> <span class="nb">super</span><span class="p">()</span> <span class="p">}}</span>
+        <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/static/scripts/experiment.js&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>As far as layout goes, this template doesn’t do much else than setting
+the title, but the important part to notice here is that we include the
+experiment’s Javascript files. Here is where you can add any Javascript
+libraries that you need to use for your experiment.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-templates-ad-html">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/templates/ad.html<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-ad-html" title="Permalink to this headline">¶</a></h3>
+<p>The ad template is where the experiment is presented to a potential user.
+In this experiment, we simply use the default ad template.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-templates-consent-html">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/templates/consent.html<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-consent-html" title="Permalink to this headline">¶</a></h3>
+<p>The consent template is where the user accepts (or not) to participate in
+the experiment.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{% extends &quot;base/consent.html&quot; %}
+
+
+{% block consent_button %}
+    &lt;!-- custom consent button/action --&gt;
+    &lt;button type=&quot;button&quot; id=&quot;consent&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;I agree&lt;/button&gt;
+{% endblock %}
+</pre></div>
+</div>
+<p>In our experiment, we extend the original consent template, and use the
+<cite>consent_button</cite> block to add a custom button for expressing consent.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-templates-instructions-html">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/templates/instructions.html<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-instructions-html" title="Permalink to this headline">¶</a></h3>
+<p>Next come the instructions for the experiment. For our instructions
+template, notice how we don’t extend an “instructions” template, but
+rather the more generic <cite>layout</cite> template, because instructions are
+much more particular to the experiment objectives and interaction
+mechanisms.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">&quot;layout.html&quot;</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">body</span> <span class="o">%</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;main_div&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">hr</span><span class="o">&gt;</span>
+
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">In</span> <span class="n">this</span> <span class="n">experiment</span><span class="p">,</span> <span class="n">you</span> <span class="n">will</span> <span class="n">click</span> <span class="n">a</span> <span class="n">button</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+        <span class="o">&lt;</span><span class="n">hr</span><span class="o">&gt;</span>
+
+        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;row&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;col-xs-10&quot;</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;col-xs-2&quot;</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">button</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;btn btn-success btn-lg&quot;</span>
+                        <span class="n">onClick</span><span class="o">=</span><span class="s2">&quot;dallinger.allowExit(); dallinger.goToPage(&#39;exp&#39;);&quot;</span><span class="o">&gt;</span>
+                    <span class="n">Begin</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The instructions are the last stop before beginning the actual
+experiment, so we have to direct the user to the experiment page.
+This is done by using the <cite>dallinger.goToPage</cite> method in the
+button’s <cite>onClick</cite> handler. Notice the call to <cite>dallinger.allowExit</cite>
+right before the page change. This is needed because Dallinger is
+designed to prevent users from accidentally leaving the experiment
+by closing the browser window before it’s finished. The <cite>allowExit</cite>
+call means that in this case it’s fine to leave the page, since we
+are going to the experiment page.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">scripts</span> <span class="o">%</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+                <span class="n">dallinger</span><span class="o">.</span><span class="n">createParticipant</span><span class="p">();</span>
+        <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>A Dallinger experiment requires a participant to be created
+before beginning. Sometimes this is done conditionally or at a
+specific event in the experiment flow. Since this experiment just
+requires pushing the button, we create the participant on page load
+by calling the <cite>dallinger.createParticipant</cite> method.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-templates-exp-html">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/templates/exp.html<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-exp-html" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">exp.html</span></code> template is where the main experiment action happens. In this
+case, there’s not a lot of action, though.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">&quot;layout.html&quot;</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">body</span> <span class="o">%</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;main_div&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;stimulus&quot;</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Click</span> <span class="n">the</span> <span class="n">button</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;submit-response&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;btn btn-primary&quot;</span><span class="o">&gt;</span><span class="n">Submit</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">scripts</span> <span class="o">%</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+                <span class="n">create_agent</span><span class="p">();</span>
+        <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>We fill the <cite>body</cite> block with a simple <cite>&lt;div&gt;</cite> that includes a heading
+and the button to press. Notice how the <cite>submit-response</cite> id corresponds
+to the one that the bot code, discussed above, uses to find the button in the
+page.</p>
+<p>The template doesn’t include any mechanism for sending the form to the
+experiment server. This is done separately by the experiment’s Javascript
+code, described below.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-templates-questionnaire-html">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/templates/questionnaire.html<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-templates-questionnaire-html" title="Permalink to this headline">¶</a></h3>
+<p>Dallinger experiments conclude with the user filling in a questionnaire
+about the completed experiment. It’s possible to add custom questions to
+this questionnaire, which our <code class="docutils literal notranslate"><span class="pre">questionnaire.html</span></code> template does:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{% extends &quot;base/questionnaire.html&quot; %}
+
+{% block questions %}
+&lt;!-- additional custom questions --&gt;
+&lt;div class=&quot;row question&quot;&gt;
+    &lt;div class=&quot;col-md-8&quot;&gt;
+        On a scale of 1-10 (where 10 is the most engaged), please rate the button:
+    &lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;select id=&quot;button-quality&quot; name=&quot;button-quality&quot;&gt;
+            &lt;option value=&quot;10&quot;&gt;10 - Very good button&lt;/option&gt;
+            &lt;option value=&quot;9&quot;&gt;9&lt;/option&gt;
+            &lt;option value=&quot;8&quot;&gt;8&lt;/option&gt;
+            &lt;option value=&quot;7&quot;&gt;7&lt;/option&gt;
+            &lt;option value=&quot;6&quot;&gt;6&lt;/option&gt;
+            &lt;option value=&quot;5&quot; SELECTED&gt;5 - Moderately good button&lt;/option&gt;
+            &lt;option value=&quot;4&quot;&gt;4&lt;/option&gt;
+            &lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;
+            &lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;
+            &lt;option value=&quot;1&quot;&gt;1 - Terrible button&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+{% endblock %}
+</pre></div>
+</div>
+<p>In this case we add a simple select question, but you can use any
+Javascript form tools to add more complex question UI elements.</p>
+</div>
+<div class="section" id="myexperiments-pushbutton-myexperiments-pushbutton-static-scripts-experiment-js">
+<h3>myexperiments.pushbutton/myexperiments/pushbutton/static/scripts/experiment.js<a class="headerlink" href="#myexperiments-pushbutton-myexperiments-pushbutton-static-scripts-experiment-js" title="Permalink to this headline">¶</a></h3>
+<p>The final piece in the puzzle is the <code class="docutils literal notranslate"><span class="pre">experiment.js</span></code> file, which contains
+the Javascript code for the experiment. Like the Python code, this is
+a simple example, but it can be as complex as you need, and use any
+Javascript libraries that you wish to include in your experiment.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">my_node_id</span><span class="p">;</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+      <span class="c1">// do not allow user to close or reload</span>
+      <span class="nx">dallinger</span><span class="p">.</span><span class="nx">preventExit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+      <span class="c1">// Print the consent form.</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#print-consent&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">print</span><span class="p">();</span>
+      <span class="p">});</span>
+
+      <span class="c1">// Consent to the experiment.</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#consent&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">dallinger</span><span class="p">.</span><span class="nx">allowExit</span><span class="p">();</span>
+            <span class="nx">dallinger</span><span class="p">.</span><span class="nx">goToPage</span><span class="p">(</span><span class="s1">&#39;instructions&#39;</span><span class="p">);</span>
+      <span class="p">});</span>
+
+      <span class="c1">// Consent to the experiment.</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#no-consent&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">dallinger</span><span class="p">.</span><span class="nx">allowExit</span><span class="p">();</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+      <span class="p">});</span>
+</pre></div>
+</div>
+<p>The first few methods deal with the consent form. Basically, if the user
+consents, we go to the instructions page, and if not, the window is closed
+and the experiment ends. As you can see, there’s also a button to print
+the consent page.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#submit-response&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#submit-response&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#submit-response&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Sending...&#39;</span><span class="p">);</span>
+        <span class="nx">dallinger</span><span class="p">.</span><span class="nx">createInfo</span><span class="p">(</span><span class="nx">my_node_id</span><span class="p">,</span> <span class="p">{</span><span class="nx">contents</span><span class="o">:</span> <span class="s2">&quot;Submitted&quot;</span><span class="p">,</span> <span class="nx">info_type</span><span class="o">:</span> <span class="s2">&quot;Info&quot;</span><span class="p">})</span>
+        <span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resp</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">dallinger</span><span class="p">.</span><span class="nx">allowExit</span><span class="p">();</span>
+          <span class="nx">dallinger</span><span class="p">.</span><span class="nx">goToPage</span><span class="p">(</span><span class="s1">&#39;questionnaire&#39;</span><span class="p">);</span>
+        <span class="p">})</span>
+        <span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">rejection</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">dallinger</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">rejection</span><span class="p">);</span>
+        <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="c1">// Create the agent.</span>
+<span class="kd">var</span> <span class="nx">create_agent</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Setup participant and get node id</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#submit-response&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">);</span>
+  <span class="nx">dallinger</span><span class="p">.</span><span class="nx">createAgent</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">my_node_id</span> <span class="o">=</span> <span class="nx">resp</span><span class="p">.</span><span class="nx">node</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#submit-response&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">rejection</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">dallinger</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">rejection</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>For the experiment page, when the <cite>submit-response</cite> button is clicked,
+we create an <cite>Info</cite> to record the submission and send the user to the
+questionnaire page, which completes the experiment. If there was some
+sort of error, we display an error page.</p>
+<p>The <cite>create_agent</cite> function is called when the experiment page loads,
+to make sure the button is not enabled until Dallinger is fully setup
+for the experiment.</p>
+</div>
+</div>
+<div class="section" id="extending-the-template">
+<h2>Extending the Template<a class="headerlink" href="#extending-the-template" title="Permalink to this headline">¶</a></h2>
+<p>Understanding the experiment files is one thing, but how do we go from
+template to new experiment? In this section, we’ll extend the cookiecutter
+template to create a full experiment. This way, the most common points of
+extension and user requirements will be discussed, thus making it easier to
+think about creating original experiments.</p>
+<div class="section" id="the-bartlett-1932-experiment">
+<h3>The Bartlett 1932 Experiment<a class="headerlink" href="#the-bartlett-1932-experiment" title="Permalink to this headline">¶</a></h3>
+<p>Sir Frederic Charles Bartlett was a British psychologist and the first
+professor of experimental psychology at the University of Cambridge. His
+most important work was <cite>Remembering</cite> (1932) which consisted of experimental
+studies on remembering, imaging, and perceiving.</p>
+<p>For our work in this section, we will take one of Bartlett’s experiments and
+turn it into a Dallinger experiment. Our experiment will be simple:
+participants will be given a text, and then they will have to recreate that
+text word for word as best as they can.</p>
+</div>
+<div class="section" id="starting-the-cookiecutter-template">
+<h3>Starting the Cookiecutter template<a class="headerlink" href="#starting-the-cookiecutter-template" title="Permalink to this headline">¶</a></h3>
+<p>First, we need to create our experiment template, using cookiecutter. If you
+recall, the initial section of this tutorial showed how to do this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cookiecutter</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Dallinger</span><span class="o">/</span><span class="n">cookiecutter</span><span class="o">-</span><span class="n">dallinger</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Make sure to answer “bartlett1932” to the <cite>experiment_name</cite> question. You can
+use the default values for the rest.</p>
+</div>
+<div class="section" id="setting-up-the-network">
+<h3>Setting Up the Network<a class="headerlink" href="#setting-up-the-network" title="Permalink to this headline">¶</a></h3>
+<p>The first thing to decide is how participants will interact with the
+experiment and with each other. Some experiments might just need participants
+to individually interact with the experiment, while others may require groups
+of people communicating with each other as well.</p>
+<p>Dallinger organizes all experiment participants in <cite>networks</cite>. A network can
+include various kinds of nodes. Most nodes are associated with participants,
+but there are other kinds of nodes, like sources, which are used to transmit
+information. Nodes are connected to other nodes in different ways, depending
+on the type of network that is defined for the experiment.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Sources</span></code> are an important kind of node, because many times the information
+(stimulus) required for conducting the experiment will come from one. A
+source can only transmit information, never receive it. For this experiment,
+we will use a source to send the text that the user must read and recreate.</p>
+<p>Dallinger supports various kinds of networks out of the box, and you can
+create your own too. The most common networks are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Chain</span></code>. A network where each new node is connected to the most recently
+added node. The top node of the chain can be a source.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FullyConnected</span></code>. A network in which each node is connected to every other
+node. This includes sources.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Empty</span></code>. A network where every node is isolated from the rest. It can
+include a source, in which case it will be connected to the nodes.</p></li>
+</ul>
+<p>For more information about networks in Dallinger, see the
+<a class="reference internal" href="networks.html"><span class="doc">network documentation</span></a>.</p>
+<p>For this experiment, we will use a chain network. The top node will be a
+source, so that we can use different texts on each run, and send them to
+each newly connected participant. In fact, most of the Python code for the
+experiment will deal with network management. Let’s get started. All the
+code in this section goes into the <code class="docutils literal notranslate"><span class="pre">experiment.py</span></code> file generated by the
+cookiecutter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dallinger.experiment</span> <span class="kn">import</span> <span class="n">Experiment</span>
+<span class="kn">from</span> <span class="nn">dallinger.networks</span> <span class="kn">import</span> <span class="n">Chain</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">models</span>
+
+
+<span class="k">class</span> <span class="nc">Bartlett1932</span><span class="p">(</span><span class="n">Experiment</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;An experiment from Bartlett&#39;s Remembering.&quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+                <span class="nb">super</span><span class="p">(</span><span class="n">Bartlett1932</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">models</span> <span class="o">=</span> <span class="n">models</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">experiment_repeats</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">initial_recruitment_size</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">session</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>First, we import the <cite>Experiment</cite> class, which we will extend for our
+Bartlett experiment. Next, we import <cite>Chain</cite>, which is the class for our
+chosen network. After that, we import our models, which will be discussed in
+the next section.</p>
+<p>Following this, we define the experiment class <cite>Bartlett1932</cite>, subclassing
+Dallinger’s Experiment class. The <cite>__init__</cite> method calls the Experiment
+initialization first, then does common setup work. For other experiments,
+you might need to change the number of <cite>experiment_repeats</cite> (how many times
+the experiment is run) and the <cite>initial_recruitment_size</cite> (how many
+participants are going to be recruited initially). In this case, we set both
+to 1.</p>
+<p>Note that as part of the initialization, we take the models we imported above
+and assign them to the created instance.</p>
+<p>The last line calls <cite>self.setup</cite>, which is defined as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">networks</span><span class="p">():</span>
+                <span class="nb">super</span><span class="p">(</span><span class="n">Bartlett1932</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">net</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">networks</span><span class="p">():</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">WarOfTheGhostsSource</span><span class="p">(</span><span class="n">network</span><span class="o">=</span><span class="n">net</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <cite>self.networks()</cite> call at the top, will get all the networks defined for
+this experiment. When it is first run, this will return an empty list, in
+which case we will call the Experiment setup. After this call, the network
+will be defined.</p>
+<p>Once we have a network, we add our source to it as the first node. This will
+be discussed in more detail in the next section. Just take note that the
+source constructor takes the current network as a parameter.</p>
+<p>The network setup code will call the <cite>create_network</cite> method in our
+experiment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_network</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Chain</span><span class="p">(</span><span class="n">max_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The only thing this method does is create a chain network, with a maximum
+size of 5.</p>
+<p>Our experiment will also need to transmit the source information when a new
+participant joins. That is achieved using the <cite>add_node_to_network</cite> method.
+You can add this method to any experiment where you need to do something to
+newly added nodes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_node_to_network</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">network</span><span class="p">):</span>
+        <span class="n">network</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+        <span class="n">parents</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">neighbors</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s2">&quot;from&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parents</span><span class="p">):</span>
+                <span class="n">parent</span> <span class="o">=</span> <span class="n">parents</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">parent</span><span class="o">.</span><span class="n">transmit</span><span class="p">()</span>
+        <span class="n">node</span><span class="o">.</span><span class="n">receive</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The method will get as parameters the new node and the network to which it is
+being added. The first thing to do is not forgetting to add the node to the
+network. Once that is safely behind, we get the node’s parents using the
+<cite>neighbors</cite> method. The parents are any nodes that the current node is
+connecting from, so we use the <cite>direction=”from”</cite> parameter in the call.</p>
+<p>If there are any parents (and in this case, there will be). We get the first
+one, and call its <cite>transmit</cite> method. Finally, the node’s <cite>receive</cite> method is
+called, to receive the transmission.</p>
+</div>
+<div class="section" id="recruitment">
+<h3>Recruitment<a class="headerlink" href="#recruitment" title="Permalink to this headline">¶</a></h3>
+<p>Closely connected to the experiment network structure, recruitment is the
+method by which we get experiment participants. For this, Dallinger uses a
+<cite>Recruiter</cite> subclass. Among other things, a recruiter is responsible for
+opening recruitment, closing recruitment, and recruiting new participants
+for the experiment.</p>
+<p>As you might already know, Dallinger works closely with Amazon’s Mechanical
+Turk, which for the purposes of our experiments, you can think of as a
+crowdsourcing marketplace for experiment participants. The default
+Dallinger recruiter knows how to make experiments available for MTurk users,
+and how to recruit those users into an experiment.</p>
+<p>An experiment’s <cite>recruit</cite> method communicates with the recruiter to get the
+participants into its network:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">recruit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">networks</span><span class="p">(</span><span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">recruiter</span><span class="o">.</span><span class="n">recruit</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">recruiter</span><span class="o">.</span><span class="n">close_recruitment</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In our case, we only need to get participants one by one. We first check if
+the experiment networks are already full, in which case we skip the
+recruitment call (<cite>full=False</cite> will only return non-full networks). If there
+is space, we call the <cite>recruit</cite> method of the recruiter. Otherwise, we call
+<cite>close_recruiment</cite>, to end recruitment for this run.</p>
+<p>It is important to note that recruitment will only start automatically if the
+experiment is configured to do so, bu setting <cite>auto_recruit</cite> to true in the
+<code class="docutils literal notranslate"><span class="pre">config.txt</span></code> file. The template that we created already has this variable set
+up like this.</p>
+</div>
+<div class="section" id="sources-and-models">
+<h3>Sources and Models<a class="headerlink" href="#sources-and-models" title="Permalink to this headline">¶</a></h3>
+<p>Earlier, we mentioned that we needed a source of information that could
+send new participants the text to be read and recalled for our experiment.
+In fact, we assumed that this already existed, and proceeded to add the
+<cite>from . import models</cite> line in our code in the previous section.</p>
+<p>To make this work, we need to create a <code class="docutils literal notranslate"><span class="pre">models.py</span></code> file inside our
+experiment, and add this code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dallinger.nodes</span> <span class="kn">import</span> <span class="n">Source</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+
+<span class="k">class</span> <span class="nc">WarOfTheGhostsSource</span><span class="p">(</span><span class="n">Source</span><span class="p">):</span>
+
+        <span class="n">__mapper_args__</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;polymorphic_identity&quot;</span><span class="p">:</span> <span class="s2">&quot;war_of_the_ghosts_source&quot;</span>
+        <span class="p">}</span>
+
+        <span class="k">def</span> <span class="nf">_contents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="n">stories</span> <span class="o">=</span> <span class="p">[</span>
+                        <span class="s2">&quot;ghosts.md&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;cricket.md&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;moochi.md&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;outwit.md&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;raid.md&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;species.md&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;tennis.md&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;vagabond.md&quot;</span>
+                <span class="p">]</span>
+                <span class="n">story</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">stories</span><span class="p">)</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;static/stimuli/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">story</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Recall that Dallinger uses a database to store experiment data. Most of
+Dallinger’s main objects, including <cite>Source</cite>, are defined as
+<a class="reference external" href="https://www.sqlalchemy.org/">SQLAlchemy</a> models. To define a source,
+the only requirement is that it provide a <cite>_contents</cite> method, which
+should return the source information.</p>
+<p>For our experiment, we will add a <code class="docutils literal notranslate"><span class="pre">static/stimuli</span></code> directory where we’ll
+store our story text files. In the code above, you can see that we
+explicitly name eight stories. If you are following along and typing the
+code as we go, you can get those files from <a class="reference external" href="https://github.com/Dallinger/Dallinger/tree/master/demos/dlgr/demos/bartlett1932/static/stimuli">the dallinger repository</a>. You can also add any text files that you have,
+and simply change the <cite>stories</cite> list above to use their names.</p>
+<p>Our <cite>_contents</cite> method just selects one of these files randomly and
+returns its full content (<cite>f.read()</cite> does that).</p>
+<p>When a node’s <cite>transmit</cite> method is called, dallinger looks for its <cite>_what</cite>
+method and calls it to get the information to be transmitted. In the case
+of a source, this in turn calls the source’s <cite>create_information</cite> method,
+which finally calls the <cite>_contents</cite> method and returns the result. The
+chain of calls is like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">transmit</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">_what</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">create_information</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">_contents</span><span class="p">()</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>This might seem like a roundabout way to get the information, but it allows
+us to override any of the steps and return different information types or
+other modifications. Much of Dallinger is designed in this way, making it
+easy to create compatible, but perhaps completely different versions of its
+main constructs.</p>
+</div>
+<div class="section" id="the-experiment-code">
+<h3>The Experiment Code<a class="headerlink" href="#the-experiment-code" title="Permalink to this headline">¶</a></h3>
+<p>Now that we are done setting up the experiment’s infrastructure, we can
+write the code that will drive the actual experiment. Dallinger is very
+flexible, and you can design really complicated experiments for it. Some
+will require pretty heavy backend code, and probably a handful of
+dependencies. For this kind of advanced experiments, a lot of the code
+could be in Python.</p>
+<p>Dallinger also includes a Redis-based chat backend, which can be used to
+relay messages from experiment participants to the application and each
+other. All you have to do to enable this is to define a <cite>channel</cite> class
+variable with a string prefix for your experiment, and then you can use the
+experiment’s <cite>send</cite> method to handle messages. Using this backend, you
+can easily create chat-enabled experiments, and even graphical UIs that
+can communicate user actions using channel messages.</p>
+<p>For this tutorial, however, we are keeping it simple, and thus will not
+require any other Python code for it. We already have a source for the texts
+defined, the network is set up, and recruitment is enabled, so all we need
+to get the Bartlett experiment going is a simple Javascript UI.</p>
+<p>The code that we will walk through will be saved in our <code class="docutils literal notranslate"><span class="pre">experiment.js</span></code> file:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">my_node_id</span>
+
+<span class="c1">// Consent to the experiment.</span>
+<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="nx">dallinger</span><span class="p">.</span><span class="nx">preventExit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">experiment.js</span></code> file will be executed on page load (see below for the
+template walk through), so we use the JQuery <cite>$(document).ready</cite> hook to
+run our code.</p>
+<p>The very first thing we do is setting <cite>dallinger.preventExit</cite> to True, which
+will prevent experiment participants from closing the window or reloading the
+page. This is to avoid the experiment being interrupted and the leaving the
+participant in an inconsistent state.</p>
+<p>Next, we define a few functions that will be called from the various
+experiment templates. This are functions that are more or less required for
+all experiments:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#print-consent&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">print</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#consent&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">store</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;recruiter&quot;</span><span class="p">,</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">getUrlParameter</span><span class="p">(</span><span class="s2">&quot;recruiter&quot;</span><span class="p">));</span>
+  <span class="nx">store</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;hit_id&quot;</span><span class="p">,</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">getUrlParameter</span><span class="p">(</span><span class="s2">&quot;hit_id&quot;</span><span class="p">));</span>
+  <span class="nx">store</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;worker_id&quot;</span><span class="p">,</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">getUrlParameter</span><span class="p">(</span><span class="s2">&quot;worker_id&quot;</span><span class="p">));</span>
+  <span class="nx">store</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;assignment_id&quot;</span><span class="p">,</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">getUrlParameter</span><span class="p">(</span><span class="s2">&quot;assignment_id&quot;</span><span class="p">));</span>
+  <span class="nx">store</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">,</span> <span class="nx">dallinger</span><span class="p">.</span><span class="nx">getUrlParameter</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">));</span>
+
+  <span class="nx">dallinger</span><span class="p">.</span><span class="nx">allowExit</span><span class="p">();</span>
+  <span class="nx">dallinger</span><span class="p">.</span><span class="nx">goToPage</span><span class="p">(</span><span class="s1">&#39;instructions&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#no-consent&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">dallinger</span><span class="p">.</span><span class="nx">allowExit</span><span class="p">();</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#go-to-experiment&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">dallinger</span><span class="p">.</span><span class="nx">allowExit</span><span class="p">();</span>
+  <span class="nx">dallinger</span><span class="p">.</span><span class="nx">goToPage</span><span class="p">(</span><span class="s1">&#39;experiment&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>Mostly, these functions are related to the user expressing consent to
+participate in the experiment, and getting to the real experiment page.</p>
+<p>The consent page will have a <cite>print-consent</cite> button, which will simply call
+the browser’s print function for printing the page.</p>
+<p>Next, if the user clicks <cite>consent</cite>, and thus agrees to participate in the
+experiment, we store the experiment and participant information from the
+URL, so that we can retrieve it later. The <cite>store.set</cite> calls use a local
+storage library to keep the values handy.</p>
+<p>Once we have saved the data, we enable exiting the window, and direct the
+user to the instructions page.</p>
+<p>If the user clicked on the <cite>no-consent</cite> button instead, it means that they
+did not consent to participate in the experiment. In that case, we enable
+exiting, and simply close the window. We are done.</p>
+<p>If the user got as far as the instructions page. They will see a button that
+will sent them to the experiment when clicked. This is the <cite>go-to-experiment</cite>
+button, which again enables page exiting and sets the location to the
+experiment page.</p>
+<p>We now come to our experiment specific code. The plan for our UI is like
+this: we will have a page displaying the text, and a text area widget to
+write the text that the user can recall after reading it. We will have
+both in a single page, but only show one at a time. When the page loads, the
+user will see the text, followed by a <cite>finish-reading</cite> button:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#finish-reading&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#stimulus&quot;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#response-form&quot;</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#submit-response&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">);</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#submit-response&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Submit&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>When the user finishes reading, and clicks on the button, we hide the text
+and show the response form. This form will have a <cite>submit-response</cite> button,
+which we enable. Finally, the text of the button is changed to read “Submit”.</p>
+<p>This, and all the Javascript code in this section, uses the JQuery Javascript
+library, so check the <a class="reference external" href="https://api.jquery.com">JQuery documentation</a> if
+you need more information.</p>
+<p>Now for the <cite>submit-response</cite> button code:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#submit-response&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#submit-response&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#submit-response&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Sending...&#39;</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#reproduction&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">();</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#reproduction&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+
+    <span class="nx">dallinger</span><span class="p">.</span><span class="nx">createInfo</span><span class="p">(</span><span class="nx">my_node_id</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">contents</span><span class="o">:</span> <span class="nx">response</span><span class="p">,</span>
+      <span class="nx">info_type</span><span class="o">:</span> <span class="s1">&#39;Info&#39;</span>
+    <span class="p">}).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resp</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">create_agent</span><span class="p">();</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>When the user is done typing the text and clicks on the <cite>submit-response</cite>
+button, we disable the button and set the text to “Sending…”. Next, we
+get the typed text from the <cite>reproduction</cite> text area, and wipe out the text.</p>
+<p>The <cite>dallinger.createInfo</cite> function calls the Dallinger Python backend, which
+creates a Dallinger Info object associated with the current participant. This
+info will store the recalled text. If the info creation succeeds, the
+<cite>create_agent</cite> function will be called:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">create_agent</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#finish-reading&#39;</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+  <span class="nx">dallinger</span><span class="p">.</span><span class="nx">createAgent</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#finish-reading&#39;</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="nx">my_node_id</span> <span class="o">=</span> <span class="nx">resp</span><span class="p">.</span><span class="nx">node</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+    <span class="nx">get_info</span><span class="p">();</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">rejection</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">rejection</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mf">403</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">dallinger</span><span class="p">.</span><span class="nx">allowExit</span><span class="p">();</span>
+      <span class="nx">dallinger</span><span class="p">.</span><span class="nx">goToPage</span><span class="p">(</span><span class="s1">&#39;questionnaire&#39;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">dallinger</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">rejection</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The <cite>create_agent</cite> function is called twice in this experiment. The first
+time when the experiment page loads, and the second time when the
+<cite>submit-response</cite> button is clicked.</p>
+<p>Both times, it first disables the <cite>finish-reading</cite> button before calling the
+<cite>dallinger.createAgent</cite> function. This function calls the Python backend,
+to create an experiment node for the current participant.</p>
+<p>The first time, this call will succeed, since there is no node defined for
+this participant. In that case, we enable the <cite>finish-reading</cite> button and
+save the returned node’s id in the <cite>my_node_id</cite> global variable defined at
+the start of our Javascript code. Finally, we call the <cite>get_info</cite> function
+defined below.</p>
+<p>The second time that <cite>create_agent</cite> is called, is when the text is
+submitted by the user. When that happens, the underlying <cite>createAgent</cite> call
+will fail, and return a rejection status of “403”. The code above checks
+for that status, and if it finds it, that’s the signal for us to finish
+the experiment and send the user to the Dallinger questionnaire page. If
+the rejection status is not “403”, that means something unexpected
+happened, and we need to raise a Dallinger error, effectively ending the
+experiment.</p>
+<p>Now let’s discuss the <cite>get_info</cite> function mentioned above, which is
+called when the experiment first calls the <cite>create_agent</cite> function:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">get_info</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">dallinger</span><span class="p">.</span><span class="nx">getReceivedInfos</span><span class="p">(</span><span class="nx">my_node_id</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">story</span> <span class="o">=</span> <span class="nx">resp</span><span class="p">.</span><span class="nx">infos</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">contents</span><span class="p">;</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#story&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">story</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#stimulus&quot;</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#response-form&quot;</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#finish-reading&quot;</span><span class="p">).</span><span class="nx">show</span><span class="p">();</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">rejection</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rejection</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">rejection</span><span class="p">.</span><span class="nx">html</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Remember that in the Python code above, in the <cite>add_node_to_network</cite>
+method, we looked for the participant’s parent, and then called its
+<cite>transmit</cite> method, followed by the node’s own <cite>receive</cite> method. This
+transmits the parent node’s info to the new node. The Javascript <cite>get_info</cite>
+function tries to get that info by calling <cite>dallinger.getReceivedInfos</cite> with
+the node id that we saved after successfully calling <cite>dallinger.createAgent</cite>.</p>
+<p>For the first participant, this info will contain the text generated by the
+source we defined above. That is, the full text of one of the stimulus
+stories, chosen at random. The second participant will get the text as
+recalled by the first participant, and so on. The last participant will
+likely have a much different text to work with than the first.</p>
+<p>Once <cite>get_info</cite> gets the text, it puts it in the <cite>story</cite> textarea, and
+shows it to the user, by displaying the <cite>stimulus</cite> div. Then it makes sure
+the <cite>response-form</cite> is not visible, and shows the <cite>finish-reading</cite> button.</p>
+<p>If anything fails, we log the rejection message to the console, and show
+the error to the user.</p>
+</div>
+<div class="section" id="the-experiment-templates">
+<h3>The experiment templates<a class="headerlink" href="#the-experiment-templates" title="Permalink to this headline">¶</a></h3>
+<p>The experiment uses regular dallinger templates for the ad page and
+consent form. It does define its own layout, as an example of how to
+include dependencies. Here’s the full <code class="docutils literal notranslate"><span class="pre">layout.html</span></code> template:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">&quot;base/layout.html&quot;</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">title</span> <span class="o">-%</span><span class="p">}</span>
+        <span class="n">Bartlett</span> <span class="mi">1932</span> <span class="n">Experiment</span>
+<span class="p">{</span><span class="o">%-</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">libs</span> <span class="o">%</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/static/scripts/store+json2.min.js&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+        <span class="p">{{</span> <span class="nb">super</span><span class="p">()</span> <span class="p">}}</span>
+        <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/static/scripts/experiment.js&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The only important part if the layout template is the <cite>libs</cite> block. Here you
+can add any Javascript dependencies that your experiment needs. Just place
+them in the experiment’s <code class="docutils literal notranslate"><span class="pre">static</span></code> directory, and they will be available for
+linking from this page.</p>
+<p>Note how we load everything else before the <code class="docutils literal notranslate"><span class="pre">experiment.js</span></code> file that
+contains our experiment code (The <cite>super</cite> call brings up any dependencies
+defined in the base layout).</p>
+<p>Next comes the <code class="docutils literal notranslate"><span class="pre">instructions.html</span></code> template:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">&quot;layout.html&quot;</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">body</span> <span class="o">%</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;main_div&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Instructions</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+
+                <span class="o">&lt;</span><span class="n">hr</span><span class="o">&gt;</span>
+
+                <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">In</span> <span class="n">this</span> <span class="n">experiment</span><span class="p">,</span> <span class="n">you</span> <span class="n">will</span> <span class="n">read</span> <span class="n">a</span> <span class="n">passage</span> <span class="n">of</span> <span class="n">text</span><span class="o">.</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Your</span> <span class="n">job</span> <span class="ow">is</span> <span class="n">to</span> <span class="n">remember</span> <span class="n">the</span> <span class="n">passage</span> <span class="k">as</span> <span class="n">well</span> <span class="k">as</span> <span class="n">you</span> <span class="n">can</span><span class="p">,</span> <span class="n">because</span> <span class="n">you</span> <span class="n">will</span> <span class="n">be</span> <span class="n">asked</span> <span class="n">some</span> <span class="n">questions</span> <span class="n">about</span> <span class="n">it</span> <span class="n">afterwards</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+
+                <span class="o">&lt;</span><span class="n">hr</span><span class="o">&gt;</span>
+
+                <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;row&quot;</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;col-xs-10&quot;</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;col-xs-2&quot;</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;go-to-experiment&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;btn btn-success btn-lg&quot;</span><span class="o">&gt;</span>
+                                        <span class="n">Begin</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+                                <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">scripts</span> <span class="o">%</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+                <span class="n">dallinger</span><span class="o">.</span><span class="n">createParticipant</span><span class="p">();</span>
+        <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Here is where you will put specific instructions for your experiment. Since
+we get here right after consenting to participate in the experiment, it’s
+also a good place to create the experiment participant node. This is done by
+calling the <cite>dallinger.createParticipant</cite> function upon page load.</p>
+<p>Notice also that after the instructions we add the <cite>go-to-experiment</cite>
+button that will send the user to the experiment page, where the main UI for
+our experiment is defined:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">&quot;layout.html&quot;</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">body</span> <span class="o">%</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;main_div&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;stimulus&quot;</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Read</span> <span class="n">the</span> <span class="n">following</span> <span class="n">text</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;story&quot;</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">loading</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;finish-reading&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;btn btn-primary&quot;</span><span class="o">&gt;</span><span class="n">I</span><span class="s1">&#39;m done reading.&lt;/button&gt;</span>
+                <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+                <span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;response-form&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;display:none;&quot;</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Now</span> <span class="n">reproduce</span> <span class="n">the</span> <span class="n">passage</span><span class="p">,</span> <span class="n">verbatim</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">Note</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;</span> <span class="n">Your</span> <span class="n">task</span> <span class="ow">is</span> <span class="n">to</span> <span class="n">recreate</span> <span class="n">the</span> <span class="n">text</span><span class="p">,</span> <span class="n">word</span> <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">to</span> <span class="n">the</span> <span class="n">best</span> <span class="n">of</span> <span class="n">your</span> <span class="n">ability</span><span class="o">.&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">textarea</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;reproduction&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;form-control&quot;</span> <span class="n">rows</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="o">&gt;&lt;/</span><span class="n">textarea</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;submit-response&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;btn btn-primary&quot;</span><span class="o">&gt;</span><span class="n">Submit</span> <span class="n">response</span><span class="o">.&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">scripts</span> <span class="o">%</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+                <span class="n">create_agent</span><span class="p">();</span>
+        <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">exp.html</span></code> template is the one that connects with the experiment code we
+described above. There is <cite>stimulus</cite> div where the story text will be
+displayed, inside the <cite>story</cite> blockquote tag. There is also the
+<cite>finish-reading</cite> button. which will be disabled until we get the story text
+from the source.</p>
+<p>After that, we have the <cite>response-form</cite> div, which contains the
+<cite>reproduction</cite> textarea where the user will type the text. Note that the
+div’s <cite>display</cite> attribute is set to <cite>none</cite>, so the form will not be
+visible at page load time. Finally, the <cite>submit-response</cite> button will take
+care of initiating the submission process.</p>
+<p>At the bottom of the template, inside a script tag, is the <cite>create_agent</cite> call
+that will get the source info and enable the stimulus area.</p>
+<p>Dallinger’s experiment server uses <cite>Flask</cite>, which in turn uses the <cite>Jinja2</cite>
+templating engine. Consult <a class="reference external" href="http://jinja.pocoo.org/docs/2.10/templates/">the Flask documentation</a> for more information about
+how the templates work.</p>
+</div>
+<div class="section" id="creating-a-participant-bot">
+<h3>Creating a Participant Bot<a class="headerlink" href="#creating-a-participant-bot" title="Permalink to this headline">¶</a></h3>
+<p>We now have a complete experiment, but there’s one more interesting thing
+that we will cover in this tutorial. Dallinger allows the possibility of
+using <cite>bot</cite> participants. That is, automated participants that know how to
+do an experiment’s tasks. It is even possible to mix human and bot
+participants.</p>
+<p>For this experiment, we will add a bot that can navigate through the
+experiment and submit the response at the end. Bots have perfect memories,
+but we could spend a lot of effort trying to make them act as forgetful
+humans. We will not do so, since it is out of the scope of this tutorial.</p>
+<p>A basic bot gets the same exact pages that a human would, and needs to
+use a <cite>webdriver</cite> to go from page to page. Dallinger bots use the
+<cite>selenium</cite> webdrivers, which need a few imports to begin (add this to
+<cite>experiment.py</cite>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="kn">import</span> <span class="n">TimeoutException</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="kn">import</span> <span class="n">WebDriverWait</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="kn">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
+
+<span class="kn">from</span> <span class="nn">dallinger.bots</span> <span class="kn">import</span> <span class="n">BotBase</span>
+</pre></div>
+</div>
+<p>After the selenium imports, we import <cite>BotBase</cite> from dallinger, which our
+bot will subclass. The only required method for a bot is the <cite>participate</cite>
+method, which is called by the bot framework when the bot is recruited.</p>
+<p>Here is the bot code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Bot</span><span class="p">(</span><span class="n">BotBase</span><span class="p">):</span>
+
+        <span class="k">def</span> <span class="nf">participate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+                <span class="k">try</span><span class="p">:</span>
+                        <span class="n">ready</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
+                                <span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s1">&#39;finish-reading&#39;</span><span class="p">)))</span>
+                        <span class="n">stimulus</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;stimulus&#39;</span><span class="p">)</span>
+                        <span class="n">story</span> <span class="o">=</span> <span class="n">stimulus</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s1">&#39;story&#39;</span><span class="p">)</span>
+                        <span class="n">story_text</span> <span class="o">=</span> <span class="n">story</span><span class="o">.</span><span class="n">text</span>
+                        <span class="n">ready</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+                        <span class="n">submit</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
+                                <span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s1">&#39;submit-response&#39;</span><span class="p">)))</span>
+                        <span class="n">textarea</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
+                                <span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="s1">&#39;reproduction&#39;</span><span class="p">)))</span>
+                        <span class="n">textarea</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+                        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform_text</span><span class="p">(</span><span class="n">story_text</span><span class="p">)</span>
+                        <span class="n">textarea</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+                        <span class="n">submit</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+                        <span class="k">return</span> <span class="kc">True</span>
+                <span class="k">except</span> <span class="n">TimeoutException</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">def</span> <span class="nf">transform_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+                <span class="k">return</span> <span class="s2">&quot;Some transformation...and </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">text</span>
+</pre></div>
+</div>
+<p>The participate method needs to return <cite>True</cite> if the participation was
+successful, and <cite>False</cite> otherwise. Since the webdriver could fail at
+getting the correct page in time, we wrap the whole participation
+sequence in a <cite>try</cite> clause. Combined with the <cite>WebDiverWait</cite> method of
+the webdriver, this will raise a <cite>TimeoutException</cite> if anything fails and
+the bot can’t proceed after the specified timeout. In this example, we use
+10 seconds for the timeout.</p>
+<p>The rest is simple: the bot waits until it can see the <cite>finish-reading</cite>
+button and assigns it to the <cite>ready</cite> variable. It then finds the <cite>stimulus</cite>
+div and the <cite>story</cite> inside of that, and extracts the story text. Once it
+gets the text, the bot “clicks” the ready button.</p>
+<p>The bot next waits for the <cite>submit-response</cite> div to be active, and the
+<cite>reproduction</cite> textarea activated. Just to do something with it for this
+example, the bot calls the <cite>transform_text</cite> method, which just adds a few
+words to the story text. It then sends the text to the textarea element,
+using its <cite>send_keys</cite> method. After that, the task is complete, and the
+form is submitted (<cite>submit.click</cite>). Finally, the bot returns <cite>True</cite> to
+signal success.</p>
+</div>
+</div>
+<div class="section" id="developing-your-own-experiment">
+<h2>Developing Your Own Experiment<a class="headerlink" href="#developing-your-own-experiment" title="Permalink to this headline">¶</a></h2>
+<p>Now that you are more familiar with the full experiment contents, and have
+seen how to go from template to finished experiment, you are in position to
+begin extending the code to create your first experiment. Dallinger has an
+extensive API, so you will probably need to refer to the documentation
+constantly as you go along. Here are some resources within the documentation
+that should prove to be very useful while you develop your experiment further:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="web_api.html"><span class="doc">The Web API</span></a></p></li>
+<li><p><a class="reference internal" href="javascript_api.html"><span class="doc">The Javascript API</span></a></p></li>
+<li><p><a class="reference internal" href="classes.html"><span class="doc">The Database API</span></a></p></li>
+<li><p><a class="reference internal" href="the_experiment_class.html"><span class="doc">The Experiment Class</span></a></p></li>
+<li><p><a class="reference internal" href="writing_bots.html"><span class="doc">Writing Bots</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="networks.html" class="btn btn-neutral float-right" title="Networks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="developing_dallinger_setup_guide.html" class="btn btn-neutral float-left" title="Developer Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

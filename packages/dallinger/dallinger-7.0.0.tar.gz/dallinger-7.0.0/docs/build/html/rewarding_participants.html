@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Rewarding participants &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Waiting rooms" href="waiting_rooms.html" />
+    <link rel="prev" title="Javascript API" href="javascript_api.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rewarding participants</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#base-payment">Base payment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bonus-payment">Bonus payment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#time-based-bonuses">Time based bonuses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-based-bonuses">Performance based bonuses</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#javascript-only-experiments">Javascript-only experiments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Rewarding participants</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/rewarding_participants.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rewarding-participants">
+<h1>Rewarding participants<a class="headerlink" href="#rewarding-participants" title="Permalink to this headline">¶</a></h1>
+<p>It is common for experiments to remunerate participants in two ways, a base payment for participation and a bonus for their particular performance. Payments are managed through the recruiter being used, so it is important to consider any differences if changing the recruiter to ensure that there isn’t an inadvertent change to the mechanics of the experiment.</p>
+<div class="section" id="base-payment">
+<h2>Base payment<a class="headerlink" href="#base-payment" title="Permalink to this headline">¶</a></h2>
+<p>The base payment is controlled by the <code class="docutils literal notranslate"><span class="pre">base_payment</span></code> configuration variable, which is a number of US dollars. This can be set as any configuration value and is accessed directly by the recruiter rather than being mediated through the experiment.</p>
+<p>For example, to deploy an experiment using a specific payout of 4.99 USD the following command line invocation can be used:</p>
+<blockquote>
+<div><p>base_payment=4.99 dallinger deploy</p>
+</div></blockquote>
+</div>
+<div class="section" id="bonus-payment">
+<h2>Bonus payment<a class="headerlink" href="#bonus-payment" title="Permalink to this headline">¶</a></h2>
+<p>The bonus payment is more complex, as it is set by the experiment class in response to an individual participant completing the experiment. In order to keep the overall payment amounts flexible it is strongly recommended to parameterize this calculation.</p>
+<p>There are many strategies for awarding bonuses, some examples of which are documented below. In each case, <code class="docutils literal notranslate"><span class="pre">bonus(self,</span> <span class="pre">participant)</span></code> is a reference to <a class="reference internal" href="the_experiment_class.html#dallinger.experiment.Experiment.bonus" title="dallinger.experiment.Experiment.bonus"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bonus()</span></code></a> in your experiment class.</p>
+<div class="section" id="time-based-bonuses">
+<h3>Time based bonuses<a class="headerlink" href="#time-based-bonuses" title="Permalink to this headline">¶</a></h3>
+<p>This pays the user a bonus based on the amount of time they spent on the experiment. While this helps to pay users fairly for their time it also incentivises slow performance of the task. Without a maximum being set or adequate attention checks it may be possible for participants to receive a large bonus by ignoring the experiment for some time.</p>
+<p>This method is a good fit if there is a lot of variation between how long it takes people to complete a task while putting in the same effort, for example if there is a reliance on waiting rooms.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bonus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Give the participant a bonus for waiting.&quot;&quot;&quot;</span>
+    <span class="n">elapsed_time</span> <span class="o">=</span> <span class="n">participant</span><span class="o">.</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">participant</span><span class="o">.</span><span class="n">creation_time</span>
+    <span class="c1"># keep to two decimal points to represent cents</span>
+    <span class="n">payout</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">elapsed_time</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span> <span class="o">/</span> <span class="mf">3600.0</span><span class="p">)</span> <span class="o">*</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;payment_per_hour&#39;</span><span class="p">,</span> <span class="mf">5.00</span><span class="p">),</span>
+        <span class="mi">2</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">payout</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_bonus_amount&#39;</span><span class="p">,</span> <span class="mf">10000.00</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This expects two configuration parameters, <code class="docutils literal notranslate"><span class="pre">payment_per_hour</span></code> and <code class="docutils literal notranslate"><span class="pre">max_bonus_amount</span></code> in addition to the <code class="docutils literal notranslate"><span class="pre">base_payment</span></code> value.</p>
+<p>The bonus is then calculated as the number of hours between the participant being created and them finishing the experiment, at <code class="docutils literal notranslate"><span class="pre">payment_per_hour</span></code> dollars per hour, with a maximum of <code class="docutils literal notranslate"><span class="pre">max_bonus_amount</span></code>.</p>
+</div>
+<div class="section" id="performance-based-bonuses">
+<h3>Performance based bonuses<a class="headerlink" href="#performance-based-bonuses" title="Permalink to this headline">¶</a></h3>
+<p>This pays the user based on how well they perform in the experiment. It is very important that this calculation be performed by the Experiment class rather than the front-end Javascript, as otherwise unscrupulous users could specify arbitrary rewards.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">bonus</span></code> function should be kept as simple as possible, delegating to other functions for readability.</p>
+<p>For example, the <a class="reference internal" href="demos/bartlett1932/index.html"><span class="doc">Bartlett (1932), stories</span></a> demo involves showing participants a piece of text and asking them to reproduce it from memory. A simple reward function could be as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_submitted_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The text a given participant submitted&quot;&quot;&quot;</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">participant</span><span class="o">.</span><span class="n">nodes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">infos</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">contents</span>
+
+<span class="k">def</span> <span class="nf">get_read_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The text that a given participant was shown to memorize&quot;&quot;&quot;</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">participant</span><span class="o">.</span><span class="n">nodes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">incoming</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">all_incoming_vectors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">parent_node</span> <span class="o">=</span> <span class="n">incoming</span><span class="o">.</span><span class="n">origin</span>
+    <span class="k">return</span> <span class="n">parent_node</span><span class="o">.</span><span class="n">infos</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">contents</span>
+
+<span class="k">def</span> <span class="nf">text_similarity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a measure of the similarity between two texts&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">Levenshtein</span> <span class="kn">import</span> <span class="n">ratio</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">difflib</span> <span class="kn">import</span> <span class="n">SequenceMatcher</span>
+        <span class="n">ratio</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">SequenceMatcher</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">ratio</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">ratio</span><span class="p">(</span><span class="n">one</span><span class="p">,</span> <span class="n">two</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">bonus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant</span><span class="p">):</span>
+    <span class="n">performance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_similarity</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_submitted_text</span><span class="p">(</span><span class="n">participant</span><span class="p">),</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_read_text</span><span class="p">(</span><span class="n">participant</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">payout</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;bonus_amount&#39;</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span> <span class="o">*</span> <span class="n">performance</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">payout</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_bonus_amount&#39;</span><span class="p">,</span> <span class="mf">10000.00</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The majority of the work in determining how a user has performed is handled by helper functions, to avoid confusing the logic of the bonus function, which is kept easy to read.</p>
+<p>There is a secondary advantage, in that the performance helper functions can be used by other parts of the code. The main place these can be useful is the <code class="docutils literal notranslate"><span class="pre">attention_check</span></code> function, which is used to determine if a user was actively participating in the experiment or not.</p>
+<p>In this example, it is possible that users will ‘cheat’ by copy/pasting the text they were supposed to remember, and therefore get the full reward. Alternatively, they may simply submit without trying, making
+the rest of the run useless. Although we wouldn’t want to award the user a bonus for either of these, it’s more appropriate for this to fail the <code class="docutils literal notranslate"><span class="pre">attention_check</span></code>, as the participant will be automatically replaced.</p>
+<p>That may look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">attention_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant</span><span class="p">):</span>
+    <span class="n">performance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_similarity</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_submitted_text</span><span class="p">(</span><span class="n">participant</span><span class="p">),</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_read_text</span><span class="p">(</span><span class="n">participant</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;min_expected_performance&#39;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+        <span class="o">&lt;=</span> <span class="n">performance</span> <span class="o">&lt;=</span>
+        <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_expected_performance&#39;</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="javascript-only-experiments">
+<h4>Javascript-only experiments<a class="headerlink" href="#javascript-only-experiments" title="Permalink to this headline">¶</a></h4>
+<p>Sometimes experimenters may wish to convert an existing Javascript and HTML experiment to run within the Dallinger framework. Such games rely on logic entirely running in the user’s browser, rather than instructions from the Dallinger Experiment class. However, code running in the user’s browser cannot be trusted to determine how much the user should be paid, as it is open to manipulation through debugging tools.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It might seem unlikely that users would bother to cheat, but it is quite easy for technically proficient users to do so if they choose, and the temptation of changing their payout may be too much to resist.</p>
+</div>
+<p>In order to integrate with Dallinger, the experiment must use the dallinger2.js function <code class="docutils literal notranslate"><span class="pre">createInfo</span></code> function to send its current state to the server. This is what allows analysis of the user’s performance later, so it’s important to send as much information as possible.</p>
+<p>The included <a class="reference internal" href="demos/twentyfortyeight/index.html"><span class="doc">2048</span></a> demo is an example of this type of experiment. It shows a popular javascript game with no interaction with the server or other players. Tiles in the grid have numbers associated with them, which can be combined to gain higher numbered tiles. If the experimenter wanted to give a bonus based on the highest tile the user reached there is a strong incentive for the player to try and cheat and therefore receive a much larger payout than expected.</p>
+<p>In this case, the data is sent to the server as:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nx">moved</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">addRandomTile</span><span class="p">();</span>
+
+    <span class="nx">dallinger</span><span class="p">.</span><span class="nx">createInfo</span><span class="p">(</span><span class="nx">my_node_id</span><span class="p">,</span> <span class="p">{</span>
+        <span class="nx">contents</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">game</span><span class="p">.</span><span class="nx">serialize</span><span class="p">()),</span>
+        <span class="nx">info_type</span><span class="o">:</span> <span class="s2">&quot;State&quot;</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The experiment can then look at the latest state that was sent in order to find the highest card a user found.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">performance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant</span><span class="p">):</span>
+    <span class="n">latest_info</span> <span class="o">=</span> <span class="n">participant</span><span class="o">.</span><span class="n">infos</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">grid_state</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">latest_info</span><span class="o">.</span><span class="n">contents</span><span class="p">)</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">cell</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">grid_state</span><span class="p">[</span><span class="s1">&#39;grid&#39;</span><span class="p">][</span><span class="s1">&#39;cells&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">row</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="mf">2048.0</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">values</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">bonus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant</span><span class="p">):</span>
+    <span class="n">performance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">performance</span><span class="p">(</span><span class="n">participant</span><span class="p">)</span>
+    <span class="n">payout</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;bonus_amount&#39;</span><span class="p">,</span> <span class="mf">0.00</span><span class="p">)</span> <span class="o">*</span> <span class="n">performance</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">payout</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_bonus_amount&#39;</span><span class="p">,</span> <span class="mf">10000.00</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>However, the states the experiment is looking at are still supplied by the user’s browser, so although cheating would be more complex than simply changing a score it is still possible for them to cause a fraudulent state to be sent.</p>
+<p>For this reason, we need to implement the game’s logic in Python so that the <code class="docutils literal notranslate"><span class="pre">attention_check</span></code> can check that the user’s play history is consistent. Again, this has the advantage that a user who cheats is removed from the experiment rather than simply receiving a diminished reward.</p>
+<p>This may look something like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_possible_transition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Check if it is possible to get from the old state to the new state in one step&quot;&quot;&quot;</span>
+    <span class="o">...</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">attention_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Find all pairs of grid states and check they are all legitimate successors&quot;&quot;&quot;</span>
+    <span class="n">states</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">info</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">participant</span><span class="o">.</span><span class="n">infos</span><span class="p">()):</span>
+        <span class="n">states</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">contents</span><span class="p">))</span>
+    <span class="n">pairs</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">states</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">is_possible_transition</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">is_possible_transition</span></code> would be a rather complex function implementing the game’s rules.</p>
+<p><strong>Note</strong>: In all these cases, it is strongly recommended to set a maximum bonus and return the minimum value between the bonus calculated and the maximum bonus, ensuring that no bugs or unexpected cheating cause a larger bonus to be awarded than expected.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="waiting_rooms.html" class="btn btn-neutral float-right" title="Waiting rooms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="javascript_api.html" class="btn btn-neutral float-left" title="Javascript API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

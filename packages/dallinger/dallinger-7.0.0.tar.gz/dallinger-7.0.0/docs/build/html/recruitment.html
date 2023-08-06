@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Recruitment &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Private repositories" href="private_repo.html" />
+    <link rel="prev" title="Extra Configuration" href="extra_configuration.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo_index.html">Dallinger Demos</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Recruitment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#recruitment-planning">Recruitment Planning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-parameters">Configuration Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#waiting-rooms">Waiting Rooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recruitment-handling-in-experiment-code">Recruitment Handling in Experiment Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#over-recruitment">Over-recruitment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Recruitment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/recruitment.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="recruitment">
+<h1>Recruitment<a class="headerlink" href="#recruitment" title="Permalink to this headline">¶</a></h1>
+<p>A <code class="docutils literal notranslate"><span class="pre">recruiter</span></code> is a program that takes charge of recruiting participants for
+an experiment. Dallinger’s main recruiter for deployed experiments uses
+<a class="reference external" href="https://www.mturk.com">Amazon Mechanical Turk</a>, a “crowdsourcing
+marketplace” for automating the process of signing up experiment
+participants, obtaining their consent, arranging them in groups to perform
+the experiment, communicating with them, and paying them for their
+participation.</p>
+<p>A concept directly related to MTurk recruitment is <code class="docutils literal notranslate"><span class="pre">qualifications</span></code>. A
+qualification is a participant attribute, like location or approval rate,
+that you can use to decide if a particular participant should be included or
+excluded from an experiment. As we will see below, Dallinger uses
+qualifications to configure an experiment for participant recruitment.</p>
+<div class="section" id="recruitment-planning">
+<h2>Recruitment Planning<a class="headerlink" href="#recruitment-planning" title="Permalink to this headline">¶</a></h2>
+<p>An experimenter needs to consider recruitment from the initial stages of
+planning an experiment. How many participants are needed? Do they need to
+interact with each other? Is the interaction synchronous or asynchronous?
+What happens when we over-recruit participants? Dallinger allows a good
+deal of flexibility to tweak participant recruitment, but it needs to be
+well planned in advance.</p>
+<p>The experimenter also has to take into account the time and effort
+required of participants to participate in research. If signing up the
+correct number of participants requires some of them to wait for a long
+time, for instance, they might not stay around to finish, or may do so one
+time, then opt out of any further experiments by the same experimenter.</p>
+</div>
+<div class="section" id="configuration-parameters">
+<h2>Configuration Parameters<a class="headerlink" href="#configuration-parameters" title="Permalink to this headline">¶</a></h2>
+<p>For a specific experiment, the experimenter will want a given number of
+participants that can be trusted as much as possible to follow the
+instructions and complete the experiment. Dallinger’s MTurk recruiter
+supports various configuration parameters to let the experimenter achieve
+this.</p>
+<p>One of the key configuration parameters related to recruitment is the
+<code class="docutils literal notranslate"><span class="pre">auto_recruit</span></code> parameter. Recruitment will not start automatically
+unless this is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. There are many other recruitment parameters,
+though.</p>
+<p>For example, the following configuration is defined by <a class="reference external" href="https://github.com/Dallinger/Griduniverse">GridUniverse</a>, a
+parameterized space of games for the study of human social behavior:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">HIT</span> <span class="n">Configuration</span><span class="p">]</span>
+<span class="n">title</span> <span class="o">=</span> <span class="n">Griduniverse</span>
+<span class="n">description</span> <span class="o">=</span> <span class="n">Play</span> <span class="n">a</span> <span class="n">game</span>
+<span class="n">keywords</span> <span class="o">=</span> <span class="n">Psychology</span><span class="p">,</span> <span class="n">game</span><span class="p">,</span> <span class="n">play</span>
+<span class="n">base_payment</span> <span class="o">=</span> <span class="mf">1.00</span>
+<span class="n">lifetime</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="n">duration</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">us_only</span> <span class="o">=</span> <span class="n">true</span>
+<span class="n">approve_requirement</span> <span class="o">=</span> <span class="mi">95</span>
+<span class="n">group_name</span> <span class="o">=</span> <span class="n">Griduniverse</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code>, and <code class="docutils literal notranslate"><span class="pre">keywords</span></code> are important, because this
+is what a potential participant will see when deciding whether to
+participate in an experiment or not.</p>
+<p><code class="docutils literal notranslate"><span class="pre">base_payment</span></code> is how much a participant will be paid for their
+participation. This depends more on the experimenter’s organization and
+policies than on the experiment itself, although an exceptionally hard to
+complete experiment might benefit from a higher payment figure.</p>
+<p><code class="docutils literal notranslate"><span class="pre">lifetime</span></code> is how many hours to keep the experiment “open” for MTurk users.
+An experiment with many participants that are recruited sequentially or
+are not required to interact with each other, might benefit from a larger
+window.</p>
+<p>Once a participant is looking at your experiment sign on page, the
+<code class="docutils literal notranslate"><span class="pre">duration</span></code> parameter controls how long it will wait for participation
+confirmation before timing out. This prevents undecided or forgetful users
+from causing recruitment problems.</p>
+<p>Dallinger is being developed in the US, and for the time being most users
+are located there. Many experiments can be run without taking into account
+the participant’s nationality, but in some cases, experimenters may need to
+restrict participation to US-only participants, The <code class="docutils literal notranslate"><span class="pre">us_only</span></code> parameter
+allows this.</p>
+<p>A remote experiment obviously would benefit from having very trustworthy
+participants, so that experimenters can be reasonably sure that the
+experiment will be completed and the instructions are followed to the best
+of the participant’s ability. MTurk keeps track of how many experiments a
+participant has been in, and what percentage of those are approved by the
+experimenter. The <code class="docutils literal notranslate"><span class="pre">approve_requirement</span></code> parameter takes a number from 1 to
+100, representing the percentage of approved experiments that a participant
+must have to be able to participate in the experiment.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">group_name</span></code> parameter is used to assign a named qualification to
+participants that complete an experiment. You can use this later to find out
+if a possible participant has already completed the experiment under the
+same group name. Note that it’s not enough to set this parameter to have the
+qualification saved. It’s necessary to also set the <code class="docutils literal notranslate"><span class="pre">assign_qualifications</span></code>
+parameter to <code class="docutils literal notranslate"><span class="pre">true</span></code> as well.</p>
+<p>Finally, the <code class="docutils literal notranslate"><span class="pre">qualification_blacklist</span></code> parameter can be used to filter out
+potential participants and prevent them from even viewing the experiment
+sign-on page. It takes a comma-separated list of qualification names to
+avoid. In order to prevent participant from repeating an experiment or group,
+you can set this parameter to an experiment ID or group name, and set
+<code class="docutils literal notranslate"><span class="pre">assign_qualifications</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</div>
+<div class="section" id="waiting-rooms">
+<h2>Waiting Rooms<a class="headerlink" href="#waiting-rooms" title="Permalink to this headline">¶</a></h2>
+<p>One other thing that affects recruitment is the use of a <a class="reference internal" href="waiting_rooms.html"><span class="doc">waiting room</span></a>. Waiting rooms are used when an experiment requires
+participants to be synchronized. Participants are kept in the “room” until
+enough of them have signed up and are ready to start. Experimenters can set
+the <code class="docutils literal notranslate"><span class="pre">quorum</span></code> in the experiment code.</p>
+</div>
+<div class="section" id="recruitment-handling-in-experiment-code">
+<h2>Recruitment Handling in Experiment Code<a class="headerlink" href="#recruitment-handling-in-experiment-code" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the previously mentioned configuration parameters, Dallinger
+experiment creators can use their experiment code to further affect
+recruitment. There are a number of basic recruitment attributes that can be
+set on experiment initialization, and recruitment can be further affected by
+calling specific methods during experiment runtime.</p>
+<p>There are specific points in an experiment code where recruitment is usually
+affected. To show how you can set up recruitment for your experiment, we
+will use GridUniverse code as a guide. The methods discussed here are part
+of the experiment base class, so it is not required to implement them in
+your experiment, but most experiments need at least the <code class="docutils literal notranslate"><span class="pre">configure</span></code> and
+<code class="docutils literal notranslate"><span class="pre">create_network</span></code> methods.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">configure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">(</span><span class="n">Griduniverse</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">configure</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">num_participants</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_participants&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">quorum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_participants</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">initial_recruitment_size</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;num_recruits&#39;</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">num_participants</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">configure</span></code> method is called during experiment initialization, and is
+where experiment specific configuration takes place. Many times,
+configuration parameters from the experiment <cite>config.txt</cite> file are used
+here.</p>
+<p>GridUniverse defines <code class="docutils literal notranslate"><span class="pre">max_participants</span></code> and <code class="docutils literal notranslate"><span class="pre">num_recruits</span></code> parameters.
+They are used in this method to set <code class="docutils literal notranslate"><span class="pre">experiment.num_participants</span></code>,
+<code class="docutils literal notranslate"><span class="pre">experiment.quorum</span></code> and <code class="docutils literal notranslate"><span class="pre">experiment.initial_recruitment_size</span></code>. The first
+of these is only used in GridUniverse code, so we can ignore it.</p>
+<p>In its <code class="docutils literal notranslate"><span class="pre">configure</span></code> method, GridUniverse sets <code class="docutils literal notranslate"><span class="pre">experiment_quorum</span></code> to be
+the same as the configured number of participants. This means that the
+participants will be held in the waiting room until all participants have
+been recruited. Other experiment designs might not need all of the
+participants to be ready at the same time, but only a fraction of them. This
+attribute only applies to experiments that use a waiting room. The default
+value for <code class="docutils literal notranslate"><span class="pre">experiment.quorum</span></code> is zero (no waiting room).</p>
+<p><code class="docutils literal notranslate"><span class="pre">experiment.initial_recruitment_size</span></code> is the number of participants
+required at the beginning of the experiment. This is used during the
+experiment’s launch phase to start the recruitment process.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_network</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a new network by reading the configuration file.&quot;&quot;&quot;</span>
+    <span class="n">class_</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span>
+        <span class="n">dallinger</span><span class="o">.</span><span class="n">networks</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">network_factory</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">class_</span><span class="p">(</span><span class="n">max_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_participants</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">create_network</span></code> method is where the experiment <a class="reference internal" href="networks.html"><span class="doc">network</span></a> is created, usually setting the initial number of users to
+the number defined in <code class="docutils literal notranslate"><span class="pre">experiment.initial_recruitment_size</span></code>. Most
+experiments will have a specific network defined in their code, and call
+that network explicitly. In the case of GridUniverse, the experiment allows
+the use of any network defined by Dallinger, which is passed in as a
+configuration parameter. Regardless of the selected network class, it’s
+called with <code class="docutils literal notranslate"><span class="pre">max_size</span></code> set to the number of participants configured, plus
+one.</p>
+<p>A simpler experiment might use something like this instead:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_network</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Chain</span><span class="p">(</span><span class="n">max_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">initial_recruitment_size</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="over-recruitment">
+<h2>Over-recruitment<a class="headerlink" href="#over-recruitment" title="Permalink to this headline">¶</a></h2>
+<p>It’s common for recruited participants to join and leave an experiment
+before it starts. This is difficult in experiments where multiple
+participants are needed in order to start the experiment. To prevent this
+from disrupting an experiment, experimenters can over-recruit participants
+to ensure that they have the correct amount of participants at the start of
+the experiment. The participants who are over-recruited, but not needed for
+the experiment, still receive a base payout and are sent to the end of the
+experiment.</p>
+<p>Over-recruitment occurs when an experiment has a <code class="docutils literal notranslate"><span class="pre">quorum</span></code> other than zero
+and the number of participants in the waiting room is larger than the
+quorum. As mentioned above, because users in the waiting room have already
+been recruited, Dallinger has to treat them as having completed the
+experiment, and they have to be paid.</p>
+<p>There are a couple of strategies that can be used to limit over-recruitment.
+It is best for an experiment to close recruitment as soon as possible after
+the intended quorum is full. GridUinverse overrides the experiment’s
+<code class="docutils literal notranslate"><span class="pre">create_node</span></code> method to do this.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">participant</span><span class="p">,</span> <span class="n">network</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dallinger</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span>
+            <span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="n">participant</span>
+        <span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">networks</span><span class="p">(</span><span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+            <span class="c1"># If there are no spaces left in our networks we can close</span>
+            <span class="c1"># recruitment, to alleviate problems of over-recruitment</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recruiter</span><span class="p">()</span><span class="o">.</span><span class="n">close_recruitment</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This method is called when a participant is added, so GridUniverse uses it
+to try to detect as soon as possible if the experiment networks are full
+(all participants are in). It does this by getting all networks that are
+not full. If there are none, it calls its recruiter’s <code class="docutils literal notranslate"><span class="pre">close_recruitment</span></code>
+method.</p>
+<p>GridUniverse also overrides the experiment’s <code class="docutils literal notranslate"><span class="pre">recruit</span></code> method to
+unconditionally close recruitment if it is called. This method is called
+whenever a participant successfully completes an experiment. Since
+GridUniverse uses a quorum and never requires adding new participants after
+experiment start, it’s safe to just go ahead and close recruitment here.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">recruit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">recruiter</span><span class="p">()</span><span class="o">.</span><span class="n">close_recruitment</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="private_repo.html" class="btn btn-neutral float-right" title="Private repositories" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="extra_configuration.html" class="btn btn-neutral float-left" title="Extra Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

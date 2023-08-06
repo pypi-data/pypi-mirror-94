@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Transmitting functions &mdash; Dallinger 7.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Bartlett (1932), drawings" href="../iterated_drawing/index.html" />
+    <link rel="prev" title="Concentration" href="../concentration/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Dallinger
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                7.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installing_dallinger_for_users.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aws_etc_keys.html">Setting Up AWS, Mechanical Turk, and Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../demoing_dallinger.html">Demoing Dallinger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../command_line_utility.html">Command-Line Utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../email_setup.html">Email Notification Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python_module.html">Running Experiments Programmatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../monitoring_a_live_experiment.html">Monitoring a Live Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../experiment_data.html">Experiment Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../postico_and_postgres.html">Viewing the PostgreSQL Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../running_bots.html">Running bots as participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../registration_on_OSF.html">Registration on the OSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Beginner Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/thomasmorgan/dallinger-for-novices">Dallinger for Programming Novices</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Dallinger Demos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../demo_index.html">Dallinger Demos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bartlett1932/index.html">Bartlett (1932), stories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chatroom/index.html">Networked chatroom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concentration/index.html">Concentration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Transmitting functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iterated_drawing/index.html">Bartlett (1932), drawings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mcmcp/index.html">Markov Chain Monte Carlo with People</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rogers/index.html">Rogers’ Paradox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sheep_market/index.html">The Sheep Market</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../snake/index.html">Snake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../twentyfortyeight/index.html">2048</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vox_populi/index.html">Vox Populi (Wisdom of the crowd)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Experiment Author Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../developing_dallinger_setup_guide.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../creating_an_experiment.html">Creating an Experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../networks.html">Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docker_setup.html">Dallinger with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../the_experiment_class.html">The Experiment Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../classes.html">Database API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../web_api.html">Web API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../communicating_with_the_server.html">Communicating With the Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript_api.html">Javascript API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rewarding_participants.html">Rewarding participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../waiting_rooms.html">Waiting rooms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing_bots.html">Writing bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extra_configuration.html">Extra Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../recruitment.html">Recruitment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../private_repo.html">Private repositories</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core Contribution Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../running_the_tests.html">Running the tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building_documentation.html">Contributing to Dallinger Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing_to_dallinger.html">Releasing a new version of Dallinger</a></li>
+</ul>
+<p class="caption"><span class="caption-text">General Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgments.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dallinger_the_scientist.html">Dallinger’s incubator</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Dallinger</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../demo_index.html">Dallinger Demos</a> &raquo;</li>
+        
+      <li>Transmitting functions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/Dallinger/Dallinger/blob/master/docs/source/demos/function_learning/index.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="transmitting-functions">
+<h1>Transmitting functions<a class="headerlink" href="#transmitting-functions" title="Permalink to this headline">¶</a></h1>
+<p>Culturally transmitted knowledge changes as it is transmitted from
+person to person. Some of the most striking instances of this process
+come from cases of language acquisition. For example, in Nicaragua, a
+community of deaf children transformed a fragmentary pidgin into a
+language with rich grammatical structure by learning from each other
+(Kegl and Iwata, 1989; Senghas and Coppola, 2001). Languages, legends,
+and social norms are all shaped by the processes of cultural
+transmission (Cavalli-Sforza, 1981; Boyd and Richerson, 1988; Kirby,
+1999, 2001; Briscoe, 2002).</p>
+<p>Laboratory studies of cultural transmission often use the method of
+“iterated learning”, which has roots in <a class="reference external" href="../bartlett1932/index.html">Bartlett’s
+experiments</a>. In the iterated learning
+paradigm, information is passed along a chain of individuals, from one
+to the next, much like in the children’s game Telephone. Iterated
+learning paradigms for the transmission of language and other forms of
+knowledge have been developed, too (Kalish et al., 2007; Griffiths and
+Kalish, 2007; Griffiths et al., 2008a). For example, in one study,
+participants learned the relationship between two continuous variables
+(“function learning”) and were tested on what they had discovered
+(Kalish et al., 2007). Responses on the test were then used to train the
+next participant in the chain. Kalish et al. (2007) found that, over
+time, knowledge transmitted through the chain reverts to the prior
+beliefs of the individual learners.</p>
+<p>Kalish, M. L., Griffiths, T. L., &amp; Lewandowsky, S. (2007). Iterated
+learning: Intergenerational knowledge transmission reveals inductive
+biases. Psychonomic Bulletin and Review, 14, 288-294.</p>
+<p><a class="reference external" href="../../_static/function_learning.zip">Download the demo</a>.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../iterated_drawing/index.html" class="btn btn-neutral float-right" title="Bartlett (1932), drawings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../concentration/index.html" class="btn btn-neutral float-left" title="Concentration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
