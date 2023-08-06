@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: mc4ep-valhalla
+Version: 0.1.1
+Summary: Valhalla skin server implementation
+Home-page: https://git.mc4ep.org/mc4ep/valhalla
+Author: Andriy Kushnir (Orhideous)
+Author-email: me@orhideous.name
+License: MIT
+Keywords: Minecraft,Valhalla,SkinServer
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: Flask (>=1.1)
+Requires-Dist: Flask-UUID (==0.2)
+Requires-Dist: flask-httpauth (==4.2.0)
+Requires-Dist: nidhoggr-core (>=0.11)
+Requires-Dist: pydantic (>=1.7)
+Requires-Dist: flask-redis (==0.4.0)
+Requires-Dist: Pillow (==8.1.0)
+
+# Valhalla
+
+Valhalla skin server implementation
+
+This package provides only API and intended for developers only.
+
+
+# History
+
+
