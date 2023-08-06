@@ -1,0 +1,14 @@
+invenio-i18n>=1.0.0
+invenio-admin>=1.0.1
+
+[all]
+Sphinx>=3
+pytest-invenio>=1.4.0
+Sphinx>=3
+pytest-invenio>=1.4.0
+
+[docs]
+Sphinx>=3
+
+[tests]
+pytest-invenio>=1.4.0

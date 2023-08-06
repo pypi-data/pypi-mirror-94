@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: invenio-banners
+Version: 1.0.0a0
+Summary: Create and show banners with useful messages to users.
+Home-page: https://github.com/inveniosoftware/invenio-banners
+Author: CERN
+Author-email: info@inveniosoftware.org
+License: MIT
+Description: ..
+            Copyright (C) 2020 CERN.
+        
+            Invenio-Banners is free software; you can redistribute it and/or modify
+            it under the terms of the MIT License; see LICENSE file for more details.
+        
+        =================
+         Invenio-Banners
+        =================
+        
+        .. image:: https://img.shields.io/travis/inveniosoftware/invenio-banners.svg
+                :target: https://travis-ci.org/inveniosoftware/invenio-banners
+        
+        .. image:: https://img.shields.io/coveralls/inveniosoftware/invenio-banners.svg
+                :target: https://coveralls.io/r/inveniosoftware/invenio-banners
+        
+        .. image:: https://img.shields.io/github/tag/inveniosoftware/invenio-banners.svg
+                :target: https://github.com/inveniosoftware/invenio-banners/releases
+        
+        .. image:: https://img.shields.io/pypi/dm/invenio-banners.svg
+                :target: https://pypi.python.org/pypi/invenio-banners
+        
+        .. image:: https://img.shields.io/github/license/inveniosoftware/invenio-banners.svg
+                :target: https://github.com/inveniosoftware/invenio-banners/blob/master/LICENSE
+        
+        Create and show banners with useful messages to users.
+        
+        Further documentation is available on
+        https://invenio-banners.readthedocs.io/
+        
+        
+        ..
+            Copyright (C) 2020 CERN.
+        
+            Invenio-Banners is free software; you can redistribute it and/or modify
+            it under the terms of the MIT License; see LICENSE file for more details.
+        
+        Changes
+        =======
+        
+Keywords: invenio
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 1 - Planning
+Provides-Extra: docs
+Provides-Extra: tests
+Provides-Extra: all
