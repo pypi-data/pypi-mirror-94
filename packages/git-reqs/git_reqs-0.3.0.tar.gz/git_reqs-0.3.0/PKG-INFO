@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: git_reqs
+Version: 0.3.0
+Summary: Simple requirement management system for developers based yaml, networkx and git
+Home-page: https://github.com/niradynamics/git-reqs
+Author: Jonas Josefsson
+Author-email: Jonas.josefsson@niradynamics.se
+License: UNKNOWN
+Download-URL: https://github.com/niradynamics/git-reqs/archive/0.1.tar.gz
+Description: UNKNOWN
+Keywords: Requirements,gitreqs
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3.6
