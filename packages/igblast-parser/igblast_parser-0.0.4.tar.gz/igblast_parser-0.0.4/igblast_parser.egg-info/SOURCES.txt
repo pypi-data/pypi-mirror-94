@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/igblast-parser
+compiled/module1.c
+igblast_parser/__init__.py
+igblast_parser.egg-info/PKG-INFO
+igblast_parser.egg-info/SOURCES.txt
+igblast_parser.egg-info/dependency_links.txt
+igblast_parser.egg-info/requires.txt
+igblast_parser.egg-info/top_level.txt
