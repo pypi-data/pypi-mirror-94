@@ -1,0 +1,12 @@
+morphio/__init__.py,sha256=C6DIPyDIbGQsOYhlh_n6rlPfHgoA0y4_S_UgSw1EJ4k,716
+morphio/_morphio.cpython-37m-darwin.so,sha256=IqX9heee4DKPorOEiwIhGNFOVXSRRYAD5c3Gl2P-vcI,1322616
+morphio/.dylibs/libsz.2.dylib,sha256=CjjMFftbbW5Zod4uSWHVgkDHo-63NMntUTJxqPhiECw,52448
+morphio/.dylibs/libhdf5.200.dylib,sha256=FoKrerCX-V73QcaX0_CBd65theBUD_OhC4E8JQxoVFI,3354568
+morphio/mut/__init__.py,sha256=BibCcRNblBNOF6L0FwIn8BWMr5p5j7GUIrISy1Gpplw,143
+morphio/vasculature/__init__.py,sha256=8MkRVXSmsENGcFVEu9bnJKtjT9gY3Zz-SIhoh4RQkac,56
+MorphIO-2.7.0.dist-info/RECORD,,
+MorphIO-2.7.0.dist-info/WHEEL,sha256=I5mlg0ErMAEUt46AuNDBeJRH1wdvXo7D9dcPVCo2Pa4,111
+MorphIO-2.7.0.dist-info/COPYING.LESSER,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+MorphIO-2.7.0.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+MorphIO-2.7.0.dist-info/top_level.txt,sha256=BzAG9hbvHB8LPMdmFQVdeNk0G6UfL-Nm7XuVcLmd0c8,8
+MorphIO-2.7.0.dist-info/METADATA,sha256=vhXEVU9B6NZN-80E8nIDbBow6zcQkNNN-m7S0V6aD-0,19614
