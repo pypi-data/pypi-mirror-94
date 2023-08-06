@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: terality
+Version: 0.8.1
+Summary: The Data Processing Engine for Data Scientists
+Home-page: https://terality.com/
+License: Proprietary
+Author: Terality Engineering Team
+Author-email: dev.null@terality.com
+Requires-Python: >=3.7.1,<4.0.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: aioboto3 (>=8.2.0,<9.0.0)
+Requires-Dist: dill (>=0.3.2,<0.4.0)
+Requires-Dist: numpy (>=1.18,<2.0)
+Requires-Dist: pandas (>=1.2.0,<2.0.0)
+Requires-Dist: pyarrow (>=2.0.0,<3.0.0)
+Requires-Dist: pydantic (>=1.7.3,<2.0.0)
+Requires-Dist: requests (>=2.24.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Terality
+
+Terality is a data processing engine for data scientists. 
+
+**Note:** You will need a Terality account to use this package. Contact us on [terality.com](https://www.terality.com/) to get started!
+
+## Setup
+
+Configure your credentials once and for all by calling the `configure` function:
+
+```python
+import terality
+terality.configure('<YOUR_USER_ID>', '<YOUR_USER_SECRET>')
+```
+
+By default, the configuration is written inside a `.terality` directory under the current user's home. You can customize that location through the `TERALITY_HOME` environment variable.
+
