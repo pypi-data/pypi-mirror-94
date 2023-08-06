@@ -1,0 +1,10 @@
+pixivapi/__init__.py,sha256=zTOMVGty2wW91Lcvoh8Ya7OhQm9XOe1wkakUVs1M5Ac,407
+pixivapi/client.py,sha256=nx7kxoJ35e1kZcM0srAdj0gM3lZAoMr52QBNpJRfsGQ,33347
+pixivapi/common.py,sha256=hHYsWLIr3w57pjoxB1g_UCPZMaWHlM1ZOh1W6puLJ_U,880
+pixivapi/enums.py,sha256=7JK3IDD2jHtJMb2O4qRURpeORODdp-y_RzEvVuRc8vQ,1739
+pixivapi/errors.py,sha256=o0OGZJ3z6oKZm5-OZx6hX8vOnYjjjgJKyNsoercPSHw,177
+pixivapi/models.py,sha256=yGWUCxJIj48DR702Md40sbuxCHQnUW14luarKXl2rSo,14497
+pixiv_api-0.3.7.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pixiv_api-0.3.7.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+pixiv_api-0.3.7.dist-info/METADATA,sha256=80qh004NOS55uT3udJFLuZ9qD8K_JoCGedV6Iv5sMWk,3755
+pixiv_api-0.3.7.dist-info/RECORD,,
