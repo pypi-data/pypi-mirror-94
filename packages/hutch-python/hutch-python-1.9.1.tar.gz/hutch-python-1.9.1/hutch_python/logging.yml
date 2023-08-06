@@ -1,0 +1,32 @@
+version: 1
+disable_existing_loggers: false
+
+# Define two formatters, one for the console and one for the the log files.
+formatters:
+  custom:
+    (): 'coloredlogs.ColoredFormatter'
+    fmt: '%(levelname)-8s %(message)s'
+  file:
+    format: '%(asctime)s - PID %(process)d %(filename)18s: %(lineno)-3s %(funcName)-18s %(levelname)-8s %(message)s'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: custom
+    stream: ext://sys.stdout
+
+  debug:
+    class: logging.handlers.RotatingFileHandler
+    level: 5
+    formatter: file
+    maxBytes: 20971520 # 20MB
+    backupCount: 10
+    mode: a
+    delay: 0
+
+root:
+  level: 5
+  handlers: [console, debug]
+  propogate: no

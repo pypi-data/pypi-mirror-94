@@ -1,0 +1,7 @@
+include versioneer.py
+include hutch_python/_version.py
+include hutch_python/templates/*
+include hutch_python/logging.yml
+include hutch_python/cookiecutter/*
+include hutch_python/cookiecutter/*/*
+include hutch_python/cookiecutter/*/*/*
