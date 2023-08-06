@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+evpy.egg-info/PKG-INFO
+evpy.egg-info/SOURCES.txt
+evpy.egg-info/dependency_links.txt
+evpy.egg-info/entry_points.txt
+evpy.egg-info/requires.txt
+evpy.egg-info/top_level.txt
+evpy_/GUI3.py
+evpy_/conf.py
+evpy_/evpy.py
+evpy_/interpolation.py
