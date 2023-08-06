@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Fixing DistKV network problems &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Extending DistKV" href="extend.html" />
+    <link rel="prev" title="Verifying and Translating Entries" href="translator.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fixing DistKV network problems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#missing-data">Missing data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Fixing DistKV network problems</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/debugging.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fixing-distkv-network-problems">
+<h1>Fixing DistKV network problems<a class="headerlink" href="#fixing-distkv-network-problems" title="Permalink to this headline">¶</a></h1>
+<p>As the DistKV network is fully asynchronous, there’s no way to avoid
+getting into trouble – there’s no arbitration of inconsistent data.</p>
+<p>This document explains how to get back out, if necessary.</p>
+<div class="section" id="missing-data">
+<h2>Missing data<a class="headerlink" href="#missing-data" title="Permalink to this headline">¶</a></h2>
+<p>See the <cite>Server protocol &lt;server_protocol&gt;</cite> for details on how DistKV
+works. From that document it’s obvious that when a node increments its
+<code class="docutils literal notranslate"><span class="pre">tick</span></code> but the associated data gets lost (e.g. if the node or its Serf
+agent crashes), you have a problem.</p>
+<p>Worse: a server will not start if the “missing” list is non-empty. The
+problem is that stale data causes difficult-to-resolve inconsistencies
+when written to. TODO: allow the server to be in maintainer-only mode when
+that happens.</p>
+<p>First, run <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">internal</span> <span class="pre">state</span> <span class="pre">-ndmrk</span></code>. Your output will look
+somewhat like this:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">deleted</span><span class="p">:</span>  <span class="c1"># Ticks known to be deleted</span>
+  <span class="n">test1</span><span class="p">:</span>
+  <span class="o">-</span> <span class="mi">12</span>
+<span class="n">known</span><span class="p">:</span>  <span class="c1"># Ticks known to be superseded</span>
+  <span class="n">test1</span><span class="p">:</span>
+  <span class="o">-</span> <span class="mi">1</span>
+  <span class="o">-</span> <span class="o">-</span> <span class="mi">3</span>
+    <span class="o">-</span> <span class="mi">10</span>
+  <span class="n">test2</span><span class="p">:</span>
+  <span class="o">-</span> <span class="mi">1</span>
+<span class="n">missing</span><span class="p">:</span>  <span class="c1"># Ticks we need to worry about</span>
+  <span class="n">test1</span><span class="p">:</span>
+  <span class="o">-</span> <span class="mi">2</span>
+<span class="n">node</span><span class="p">:</span> <span class="n">test1</span>  <span class="c1"># the server we just asked</span>
+<span class="n">nodes</span><span class="p">:</span>  <span class="c1"># all known nodes and their ticks</span>
+  <span class="n">test1</span><span class="p">:</span> <span class="mi">12</span>
+  <span class="n">test2</span><span class="p">:</span> <span class="mi">1</span>
+<span class="n">remote_missing</span><span class="p">:</span> <span class="p">{}</span>  <span class="c1"># used in recovery</span>
+<span class="n">tock</span><span class="p">:</span> <span class="mi">82</span>  <span class="c1"># DistKV&#39;s global event counter</span>
+</pre></div>
+</div>
+<p>This is not healthy: The <code class="docutils literal notranslate"><span class="pre">missing</span></code> element contains data. You can
+manually mark the offending data as stale:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span>one $ distkv client internal mark test1 2
+known:
+   test1:
+   - - 1
+     - 11
+   test2:
+   - 1
+ node: test1
+ tock: 92  # If this is not higher than before, clean your glasses ;-)
+ one $
+</pre></div>
+</div>
+<p>This shows that the offending <code class="docutils literal notranslate"><span class="pre">tick</span></code> has been successfully added to the
+<code class="docutils literal notranslate"><span class="pre">known</span></code> list. Calling <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">internal</span> <span class="pre">state</span> <span class="pre">-m</span></code> verifies that
+the list is now empty.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">--broadcast</span></code> flag to send this message to all DistKV servers,
+not just the one you’re a client of.</p>
+<p>This action will allow the bad record to re-surface when the node that has
+the record reconnects, assuming that there is one. You can use the <code class="docutils literal notranslate"><span class="pre">mark</span></code>
+command’s <code class="docutils literal notranslate"><span class="pre">--deleted</span></code> flag to ensure that it will be discarded instead.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="extend.html" class="btn btn-neutral float-right" title="Extending DistKV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="translator.html" class="btn btn-neutral float-left" title="Verifying and Translating Entries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

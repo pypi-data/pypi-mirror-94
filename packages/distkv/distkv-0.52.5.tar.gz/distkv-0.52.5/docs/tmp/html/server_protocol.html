@@ -1,0 +1,649 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>DistKV’s server protocol &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DistKV and authentication" href="auth.html" />
+    <link rel="prev" title="DistKV’s client protocol" href="client_protocol.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DistKV’s server protocol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-types">Data types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#node">Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entry">Entry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chain">Chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tick">tick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tock">tock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coordination">Coordination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#putting-it-all-together">Putting it all together</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deletion-of-entries">Deletion of entries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#common-items">Common items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bidirectional">Bidirectional</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#path">path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#value">value</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#replies">Replies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">tick</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prev">prev</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">tock</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#message-types">Message types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#update">update</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">value</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#info">info</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#known">known</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ticks">ticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#missing">missing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reason">reason</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ping">ping</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#timing-and-concurrency">Timing and concurrency</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#server-to-server">Server to Server</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ping-sequence">Ping sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#startup">Startup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#event-recovery">Event recovery</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#message-graphs">Message graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#msgpack-encoding">MsgPack encoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#big-unsigned-integer">2: big unsigned integer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">3: Path</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#yaml-encoding">YAML encoding</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>DistKV’s server protocol</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/server_protocol.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="distkv-s-server-protocol">
+<h1>DistKV’s server protocol<a class="headerlink" href="#distkv-s-server-protocol" title="Permalink to this headline">¶</a></h1>
+<p>DistKV instances broadcast messages via <cite>Serf &lt;http://serf.io&gt;</cite>.
+The payload is encoded with <cite>msgpack
+&lt;https://github.com/msgpack/msgpack/blob/master/spec.md&gt;</cite> (Serf does not
+pass arbitrary payload objects) and sent as <code class="docutils literal notranslate"><span class="pre">user</span></code> events with a
+configurable name that defaults to name of <code class="docutils literal notranslate"><span class="pre">distkv.XXX</span></code> (“XXX” being the
+action’s type).</p>
+<p>All strings are required to be UTF-8 encoded.</p>
+<div class="section" id="data-types">
+<h2>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="node">
+<h3>Node<a class="headerlink" href="#node" title="Permalink to this headline">¶</a></h3>
+<p>A node represents a server that has injected at least one data item into
+the DiskKV network. Each node has an associated “tick”, which is the
+sequence number of the last change that this node injected into the
+network. An empty node starts with a counter of zero; the network’s first
+node starts with 1.</p>
+</div>
+<div class="section" id="entry">
+<h3>Entry<a class="headerlink" href="#entry" title="Permalink to this headline">¶</a></h3>
+<p>An entry is some data stored in DistKV. The entry has a name, or (more
+correctly) a path, i.e. a sequence of names leading from the server’s root
+to the entry. An entry can store one chunk of data, or it can be empty.</p>
+<p>Path members may be UTF-8 strings, byte strings, or numbers. The empty
+UTF-8 and byte strings are considered equivalent, any other values are not.
+If you want to use the DistKV command line to access data, you should limit
+yourself to UTF-8 strings.</p>
+<p>For ensuring consistency, each entry also has an associated chain, which
+documents which node(s) last changed that entry.</p>
+</div>
+<div class="section" id="chain">
+<h3>Chain<a class="headerlink" href="#chain" title="Permalink to this headline">¶</a></h3>
+<p>A chain, in DistKV, is a bounded list of ordered <code class="docutils literal notranslate"><span class="pre">(node,</span> <span class="pre">tick)</span></code> pairs.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code> is the node that effected a change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tick</span></code> is a node-specific counter which increments by one when any
+entry on that node is changed.</p></li>
+</ul>
+<p>A chain entry might not have a <code class="docutils literal notranslate"><span class="pre">tick</span></code> element. In that case the node has
+not been initialized yet. Such entries are only valid in <code class="docutils literal notranslate"><span class="pre">ping</span></code> chains.</p>
+<p>Chains are governed by three rules:</p>
+<ul>
+<li><p>The most recent change is at the front of the chain.</p></li>
+<li><p>Any node may only appear on the chain once, with the <code class="docutils literal notranslate"><span class="pre">tick</span></code> of the
+latest change by that node. If a node changes an entry again, the old
+entry is removed before the new entry is prepended.</p>
+<p>This rule does not apply to <code class="docutils literal notranslate"><span class="pre">ping</span></code> chains.</p>
+</li>
+<li><p>Their length is bounded. If a new entry causes the chain to grow too
+long, the oldest entry is removed.</p></li>
+</ul>
+<p>Chains are typically represented by <code class="docutils literal notranslate"><span class="pre">(node,tick,prev)</span></code> maps, where
+<code class="docutils literal notranslate"><span class="pre">prev</span></code> is either <code class="docutils literal notranslate"><span class="pre">None</span></code> (the chain ends here), nonexistent (the chain
+was truncated here), or another chain triple (the last previous change on a
+different node).</p>
+<p>Ticks increment sequentially so that every node can verify that it
+knows all of every other node’s changes.</p>
+<p>The chain concept is based on <cite>vector clocks &lt;https://queue.acm.org/detail.cfm?id=2917756&gt;</cite>.
+Nodes are sorted so that causality may be established more easily (no need
+to compare the whole vectors) and vector length may be bounded without
+sacrificing reliability.</p>
+<p>The default chain length should be two larger than the maximum of</p>
+<ul class="simple">
+<li><p>the number of partitions a DistKV system might break up into,</p></li>
+<li><p>the number of hosts within one partition that might change any single entry.
+Ideally, this number should be two: one for the host that does it as a
+matter of fact, e.g. a measurement system, and one for any manual intercession.</p></li>
+</ul>
+</div>
+<div class="section" id="tick">
+<h3>tick<a class="headerlink" href="#tick" title="Permalink to this headline">¶</a></h3>
+<p>Each node has an associated tick, which is a contiguous counter of changes
+by that node. Each value between one and a node’s <code class="docutils literal notranslate"><span class="pre">tick</span></code> must be
+present either in exactly one entry’s chain or in that node’s <code class="docutils literal notranslate"><span class="pre">known</span></code>
+range.</p>
+<p>Tick values are 63-bit unsigned integers. As this space requires 20 mio
+years to wrap around, assuming ten messages per millisecond (which is way
+above the capacity of a typical Serf network), the DistKV protocol does not
+specify what shall happen if this value overflows.</p>
+</div>
+<div class="section" id="tock">
+<h3>tock<a class="headerlink" href="#tock" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">tock</span></code> counter is a system-wide number that’s incremented whenever
+something interesting happens on a node (most important: some entry is
+changed). All messages carry the current <code class="docutils literal notranslate"><span class="pre">tock</span></code> value; entries store the
+<code class="docutils literal notranslate"><span class="pre">tock</span></code> from their last change. Whenever a DistKV server receives a
+message with a <code class="docutils literal notranslate"><span class="pre">tock</span></code> higher than its own, the local <code class="docutils literal notranslate"><span class="pre">tock</span></code> is set to
+the incoming message’s <code class="docutils literal notranslate"><span class="pre">tock</span></code> value.</p>
+<p>The main purpose of this value is to establish rough temporal consistency
+(in the absence of network splits). Secondarily, when a split is healed,
+their <code class="docutils literal notranslate"><span class="pre">tock</span></code> value resolves the resulting Actor conflict. (The tie
+breaker is the name of the current group leaders.)</p>
+</div>
+<div class="section" id="coordination">
+<h3>Coordination<a class="headerlink" href="#coordination" title="Permalink to this headline">¶</a></h3>
+<p>Nodes coordinate so that any housekeeping messages are transmitted by
+exactly one node instead of flooding the network. This is facilitated by
+the <code class="docutils literal notranslate"><span class="pre">asyncactor</span></code> module.</p>
+<p>When a network split is healed, the Actor protocol notices. It then
+triggers <code class="docutils literal notranslate"><span class="pre">info</span></code> messages that retrieve any missed changes.</p>
+</div>
+<div class="section" id="putting-it-all-together">
+<h3>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h3>
+<p>Each node has a tick counter that increments when you change anything; it’s
+also broadcast periodically. Thus, each node notices when there’s missing
+data and will send a message seeking the missing items.</p>
+<p>Each node is associated with a <code class="docutils literal notranslate"><span class="pre">known</span></code> range, which says “yes I have once
+seen this message, but it’s been superseded since then, so that’s OK”.</p>
+<p>The entries’ <code class="docutils literal notranslate"><span class="pre">chain</span></code> data ensures that stale data cannot overwrite more
+recent messages.</p>
+</div>
+<div class="section" id="deletion-of-entries">
+<h3>Deletion of entries<a class="headerlink" href="#deletion-of-entries" title="Permalink to this headline">¶</a></h3>
+<p>The entries’ change chains determine that no entry gets lost, but that
+mechanism depends on the entries themselves to exist. In a DistKV system
+that’s highly dynamic, this is undesireable and would cause a lot of stale
+entries to accumulate. Removing these entries must be coordinated: if a
+removal is lost for any reason, the system cannot recover without manual
+intervention.</p>
+<p>Therefore, each node also carries a <code class="docutils literal notranslate"><span class="pre">deleted</span></code> list which marks entries
+that have been cleared. Deleted entries will only be cleared if all nodes
+that are on the internal “deleter” list are online.</p>
+</div>
+</div>
+<div class="section" id="common-items">
+<h2>Common items<a class="headerlink" href="#common-items" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bidirectional">
+<h3>Bidirectional<a class="headerlink" href="#bidirectional" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="path">
+<h4>path<a class="headerlink" href="#path" title="Permalink to this headline">¶</a></h4>
+<p>The path to the entry you’re accessing. This is a list. The contents of
+that list may be anything hashable, i.e. strings, integers,
+<code class="docutils literal notranslate"><span class="pre">True</span></code>/<code class="docutils literal notranslate"><span class="pre">False</span></code>/<code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</div>
+<div class="section" id="value">
+<h4>value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h4>
+<p>A node’s value. This can be anything that <code class="docutils literal notranslate"><span class="pre">msgpack</span></code> can work with: you do
+not need to encode your values to binary strings, and in fact you should
+not because some of DistKV’s features (like type checking) would no longer
+work, or be much more awkward to use.</p>
+</div>
+</div>
+<div class="section" id="replies">
+<h3>Replies<a class="headerlink" href="#replies" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>node<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>The node which is responsible for this message. For <code class="docutils literal notranslate"><span class="pre">update</span></code> events this
+is the node which originated the change; for all other events, it’s the
+sending node.</p>
+</div>
+<div class="section" id="id2">
+<h4>tick<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>This node’s current tick. The tick is incremented every time a value is changed by that node.</p>
+</div>
+<div class="section" id="prev">
+<h4>prev<a class="headerlink" href="#prev" title="Permalink to this headline">¶</a></h4>
+<p>A dict with <code class="docutils literal notranslate"><span class="pre">node,tick,prev</span></code> entries, which describes the node which
+originated the change that is is based on.</p>
+<p>If this value is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the entry has been created at that time. If it
+is missing, further chain members have been elided.</p>
+<p>In the client protocol, the <code class="docutils literal notranslate"><span class="pre">node</span></code>, <code class="docutils literal notranslate"><span class="pre">tick</span></code> and <code class="docutils literal notranslate"><span class="pre">prev</span></code> members are
+stored in a <code class="docutils literal notranslate"><span class="pre">chain</span></code> element; otherwise the semantics are the same.</p>
+<p>A chain will not contain any node more than once. When a value is changed
+again, that node’s <code class="docutils literal notranslate"><span class="pre">tick</span></code> is incremented, its entry is added or moved
+to the head of the chain.</p>
+</div>
+<div class="section" id="id3">
+<h4>tock<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>This is a global message counter. Each server has one; it is incremented
+every time its node counter is incremented or a Serf message is sent.
+A server must not send a message with a smaller (or equal) <code class="docutils literal notranslate"><span class="pre">tock</span></code> value
+than any it has received, or previously sent. Since Serf does ot guarantee
+order of delivery, receiving a message with a smaller <code class="docutils literal notranslate"><span class="pre">tock</span></code> than the
+preceding one is not an error.</p>
+</div>
+</div>
+</div>
+<div class="section" id="message-types">
+<h2>Message types<a class="headerlink" href="#message-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="update">
+<h3>update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h3>
+<p>This message updates an entry.</p>
+<p>Each server remembers the change chain’s per-node <code class="docutils literal notranslate"><span class="pre">tick</span></code> values so that
+it can verify that all messages from other servers have been received.</p>
+<div class="section" id="id4">
+<h4>path<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>The list of path elements leading to the entry to be updated.</p>
+</div>
+<div class="section" id="id5">
+<h4>value<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>The value to set. <code class="docutils literal notranslate"><span class="pre">Null</span></code> means the same as deleting the entry.</p>
+</div>
+</div>
+<div class="section" id="info">
+<h3>info<a class="headerlink" href="#info" title="Permalink to this headline">¶</a></h3>
+<p>This message contains generic information. It is sent whenever required.</p>
+<div class="section" id="known">
+<h4>known<a class="headerlink" href="#known" title="Permalink to this headline">¶</a></h4>
+<p>This element contains a map of (node ⇒ ranges of tick values) which the
+sending server has seen. This includes existing events as well as events
+that no longer exist; this happens when a node re-updates an entry.</p>
+<p>This message’s change chain refers to the <code class="docutils literal notranslate"><span class="pre">ping</span></code> it replies to.</p>
+</div>
+<div class="section" id="ticks">
+<h4>ticks<a class="headerlink" href="#ticks" title="Permalink to this headline">¶</a></h4>
+<p>This element contains a map of (node ⇒ last_tick_seen), sent to verify that</p>
+</div>
+<div class="section" id="missing">
+<h4>missing<a class="headerlink" href="#missing" title="Permalink to this headline">¶</a></h4>
+<p>A map of (node ⇒ ranges of tick values) which the sending node has not
+seen. Any node that sees this request will re-send change messages in that
+range.</p>
+</div>
+<div class="section" id="reason">
+<h4>reason<a class="headerlink" href="#reason" title="Permalink to this headline">¶</a></h4>
+<p>This element is sent in the first step of split reconciliation recovery. If
+the first <code class="docutils literal notranslate"><span class="pre">ping</span></code> after being reconnected “wins”, then the winning side
+needs to be told that there’s a problem.</p>
+<p>This element contains the losing side’s ping chain, which the nodes in the
+winning side’s ping chain use to initiate their recovery procedure.</p>
+</div>
+</div>
+<div class="section" id="ping">
+<h3>ping<a class="headerlink" href="#ping" title="Permalink to this headline">¶</a></h3>
+<p>A periodic “I am alive” message. This message’s change chain shows which
+node was pinged previously.</p>
+</div>
+</div>
+<div class="section" id="timing-and-concurrency">
+<h2>Timing and concurrency<a class="headerlink" href="#timing-and-concurrency" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="server-to-server">
+<h3>Server to Server<a class="headerlink" href="#server-to-server" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ping-sequence">
+<h4>Ping sequence<a class="headerlink" href="#ping-sequence" title="Permalink to this headline">¶</a></h4>
+<p>Every <code class="docutils literal notranslate"><span class="pre">clock</span></code> seconds each node starts thinking about sending a <code class="docutils literal notranslate"><span class="pre">ping</span></code>
+sometime during the next <code class="docutils literal notranslate"><span class="pre">clock</span></code> seconds. The node that’s last in the
+chain (assuming that the chain has maximum length) does this quite early,
+while the node that transmitted the previous <code class="docutils literal notranslate"><span class="pre">ping</span></code> does this at the end
+of the interval. Nodes not in the current chain do this immediately, with
+some low probability (one to 10 times the number of known nodes) so that
+the chain varies. If no <code class="docutils literal notranslate"><span class="pre">ping</span></code> has arrived after another <code class="docutils literal notranslate"><span class="pre">clock/2</span></code>
+seconds, each node sends a ping sometime during the next <code class="docutils literal notranslate"><span class="pre">clock/2</span></code>
+seconds. Thus, at least one <code class="docutils literal notranslate"><span class="pre">ping</span></code> must be seen every <code class="docutils literal notranslate"><span class="pre">3*clock</span></code>
+seconds.</p>
+<p>Ping messages can collide. If so, the message with the higher <code class="docutils literal notranslate"><span class="pre">tock</span></code>
+value wins. If they match, the node with the higher <code class="docutils literal notranslate"><span class="pre">tick</span></code> value wins. If
+they match too, the node with the alphabetically-lower name wins. The
+winning message becomes the basis for the next cycle.</p>
+<p>This protocol assumes that the <code class="docutils literal notranslate"><span class="pre">prev</span></code> chains of any colliding ticks are
+identical. If they are not, there was at least one network split that is
+now healed. When this is detected, the nodes mentioned in the messages’
+chains send <code class="docutils literal notranslate"><span class="pre">info</span></code> messages containing <code class="docutils literal notranslate"><span class="pre">ticks</span></code> for all nodes they know.
+The non-topmost nodes will delay this message by <code class="docutils literal notranslate"><span class="pre">clock/ping.length</span></code>
+(times their position in the chain) seconds and not send their message if
+they see a previous node’s message first. Resolution of which chain is the
+“real” one shall proceed as above.</p>
+<p><code class="docutils literal notranslate"><span class="pre">clock</span></code> is configurable (<code class="docutils literal notranslate"><span class="pre">ping.clock</span></code>); the default is <code class="docutils literal notranslate"><span class="pre">5</span></code>. It must be at
+least twice the time Serf requires to delivers a message to all nodes.</p>
+<p>The length of the ping chain is likewise configurable (<code class="docutils literal notranslate"><span class="pre">ping.length</span></code>).
+It should be larger than the number of possible network partitions; the
+default is 4.</p>
+<p>TODO: Currently, this protocol does not tolerate overloaded Serf networks
+well, if at all.</p>
+</div>
+<div class="section" id="startup">
+<h4>Startup<a class="headerlink" href="#startup" title="Permalink to this headline">¶</a></h4>
+<p>When starting up, a new node sends a <code class="docutils literal notranslate"><span class="pre">ping</span></code> query with an empty <code class="docutils literal notranslate"><span class="pre">prev</span></code>
+chain, every <code class="docutils literal notranslate"><span class="pre">3*clock</span></code> seconds. The initial <code class="docutils literal notranslate"><span class="pre">tick</span></code> value shall be zero;
+the first message shall be delayed by a random interval between <code class="docutils literal notranslate"><span class="pre">clock/2</span></code>
+and <code class="docutils literal notranslate"><span class="pre">clock</span></code> seconds.</p>
+<p>Reception of an initial <code class="docutils literal notranslate"><span class="pre">ping</span></code> does trigger an <code class="docutils literal notranslate"><span class="pre">info</span></code> message, but does not
+affect the regular <code class="docutils literal notranslate"><span class="pre">ping</span></code> interval, on nodes that already participate in
+the protocol. A new node, however, may assume that the <code class="docutils literal notranslate"><span class="pre">ping</span></code> message it
+sees is authoritative (unless the “new”  <code class="docutils literal notranslate"><span class="pre">ping</span></code> is followed by one with a
+non-empty chain). In case of multiple nodes joining a new network, the last
+<code class="docutils literal notranslate"><span class="pre">ping</span></code> seen shall be the next entry in the chain.</p>
+<p>The new node is required to contact a node in the (non-empty) ping chain it
+attaches to, in order to download its current set of entries, before
+answering client queries. If a new node does already know a (possibly
+outdated) set of messages and there is no authoritative chain, it shall
+broadcast them in a series of <code class="docutils literal notranslate"><span class="pre">update</span></code> messages.</p>
+<p>The first node that initiates a new network shall send an <code class="docutils literal notranslate"><span class="pre">update</span></code> event
+for the root node (with any value). A chain is not authoritative if it only
+contains nodes with zero <code class="docutils literal notranslate"><span class="pre">tick</span></code> values. Nodes with zero ticks shall not
+send a <code class="docutils literal notranslate"><span class="pre">ping</span></code> when the first half of the chain does not contain a
+non-zero-tick node (unless the second half doesn’t contain any such nodes
+either).</p>
+<p>The practical effect of this is that when a network is restarted,
+fast-starting empty nodes will quickly agree on a <code class="docutils literal notranslate"><span class="pre">ping</span></code> sequence. A node
+with recovered data, which presumably takes longer to start up since it has
+to load the data first, will then take over as soon as it is operational;
+it will not be booted from the chain by nodes that don’t yet have recovered
+the data store.</p>
+</div>
+<div class="section" id="event-recovery">
+<h4>Event recovery<a class="headerlink" href="#event-recovery" title="Permalink to this headline">¶</a></h4>
+<p>After a network split is healed, there can be any number of update events
+that the “other side” doesn’t know about. These need to be redistributed.</p>
+<p>Step zero: a <code class="docutils literal notranslate"><span class="pre">ping</span></code> message with an incompatible chain arrives.</p>
+<p>First step: Send an <code class="docutils literal notranslate"><span class="pre">info</span></code> message with a <code class="docutils literal notranslate"><span class="pre">ticks</span></code> element, so that any
+node that has been restarted knows which tick value they are supposed to
+continue with.</p>
+<p>Second step (after half a tick): Send a message with <code class="docutils literal notranslate"><span class="pre">missing</span></code> elements
+that describe which events you do not yet know about.</p>
+<p>Third step: Nodes retransmit missing events, followed by a <code class="docutils literal notranslate"><span class="pre">known</span></code>
+message that lists ticks which no longer appear on an event’s chain.</p>
+<p>After completing this sequence, every node should have a node list which
+marks no event as missing. For error recovery, a node may randomly
+(at most one such request every <code class="docutils literal notranslate"><span class="pre">10*clock</span></code> interval) retransmit its
+local <code class="docutils literal notranslate"><span class="pre">missing</span></code> list, assuming there is one.</p>
+<p>This protocol assumes that new nodes connect to an existing non-split
+network. If new nodes first form their own little club before being
+reconnected to the “real” network (or a branch of it), this would force a
+long list of events to be retransmitted. Therefore, nodes with zero ticks
+must initially be passive. They shall open a client connection to any
+on-chain node and download its state. If a node has received a non-zero
+tick for itself in a <code class="docutils literal notranslate"><span class="pre">known</span></code> message, it may participate only after it
+has received a complete download, and must not allow client connections
+before its list of missing events is empty.</p>
+<p>All of these steps are to be performed by the first nodes in the pre-joined
+chains. If these messages are not seen after <code class="docutils literal notranslate"><span class="pre">clock/2</span></code> seconds (counting
+from reception of the <code class="docutils literal notranslate"><span class="pre">ping</span></code>, <code class="docutils literal notranslate"><span class="pre">ticks</span></code> or <code class="docutils literal notranslate"><span class="pre">missing</span></code> element that
+occured in the previous step), the second node in the chain is required to
+send them; the third node will take over after an additional <code class="docutils literal notranslate"><span class="pre">clock/4</span></code>
+interval, and so on. Of course, only messages originating from hosts on the
+correct chain shall suppress a node’s transmission.</p>
+</div>
+</div>
+</div>
+<div class="section" id="message-graphs">
+<h2>Message graphs<a class="headerlink" href="#message-graphs" title="Permalink to this headline">¶</a></h2>
+<p>Yes, I need to visualize (and test) all of this.</p>
+<p>TODO.</p>
+</div>
+<div class="section" id="msgpack-encoding">
+<h2>MsgPack encoding<a class="headerlink" href="#msgpack-encoding" title="Permalink to this headline">¶</a></h2>
+<p>DistKV encodes its messages with MsgPack. It’s fast, compact,
+self-delimiting, and easily translated from/to human-readable YAML.</p>
+<p>DistKV uses the following MsgPack extensions:</p>
+<div class="section" id="big-unsigned-integer">
+<h3>2: big unsigned integer<a class="headerlink" href="#big-unsigned-integer" title="Permalink to this headline">¶</a></h3>
+<p>MsgPack is limited to 64bit integers. We exceed that: IPv6 network
+addresses are longer. Thus, longer unsigned integers are stored in this
+extension. Storage is big-endian and required to be minimal, i.e. the first
+byte must not be zero. The length must be &gt;8 obviously.</p>
+</div>
+<div class="section" id="id6">
+<h3>3: Path<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Distinguishing Path from <code class="docutils literal notranslate"><span class="pre">list</span></code> / <code class="docutils literal notranslate"><span class="pre">tuple</span></code> makes sense, if only to clean
+up YAML output. Thus, paths are stored separately. The extension’s content
+is the sequence of encoded path elements.</p>
+</div>
+</div>
+<div class="section" id="yaml-encoding">
+<h2>YAML encoding<a class="headerlink" href="#yaml-encoding" title="Permalink to this headline">¶</a></h2>
+<p>DistKV uses clean, “safe” YAML with no frills, resulting in a simple
+human-readable data format.</p>
+<p>DistKV’s YAML supports two extensions: <code class="docutils literal notranslate"><span class="pre">!P</span></code> and <code class="docutils literal notranslate"><span class="pre">!bin</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">!P</span></code> marks a <cite>Path</cite>, which makes the resulting YAML more compact and
+readable.</p>
+<p><code class="docutils literal notranslate"><span class="pre">!bin</span></code> encodes binary data as ASCII, i.e. a simple YAML string. YAML’s
+default is <code class="docutils literal notranslate"><span class="pre">base64</span></code> which cannot be easily edited.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="auth.html" class="btn btn-neutral float-right" title="DistKV and authentication" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="client_protocol.html" class="btn btn-neutral float-left" title="DistKV’s client protocol" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

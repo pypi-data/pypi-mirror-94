@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Plugins and related software &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Open issues" href="TODO.html" />
+    <link rel="prev" title="Extending DistKV" href="extend.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plugins and related software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#home-assistant">Home Assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#knx">KNX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wire">1wire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inventory-management">Inventory Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#akumuli">Akumuli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#binary-i-o">Binary I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wago-i-o-controllers">Wago I/O controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Plugins and related software</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/related.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plugins-and-related-software">
+<h1>Plugins and related software<a class="headerlink" href="#plugins-and-related-software" title="Permalink to this headline">¶</a></h1>
+<p>Additions to this list will be appreciated!</p>
+<div class="section" id="home-assistant">
+<h2>Home Assistant<a class="headerlink" href="#home-assistant" title="Permalink to this headline">¶</a></h2>
+<p><a href="#id1"><span class="problematic" id="id2">`Home Assistant`__</span></a> is a front-end for home automation. (Actually it’s more
+than that, but <code class="docutils literal notranslate"><span class="pre">distkv</span></code> uses it as a front-end and prefers to do the
+automation part itself.)</p>
+<p><a class="reference external" href="https://github.com/M-o-a-T/disthass">distkv-hass</a> documents how to
+connect Home Assistant to the <code class="docutils literal notranslate"><span class="pre">distkv</span></code> system and helps with creating the
+data structures that teach Home Assistant about distkv-controlled sensors
+and actors.</p>
+</div>
+<div class="section" id="knx">
+<h2>KNX<a class="headerlink" href="#knx" title="Permalink to this headline">¶</a></h2>
+<p>KNX is a serial bus for building control.</p>
+<p><a class="reference external" href="https://github.com/knxd/knxd/">knxd</a> is a server commonly used to talk to KNX interfaces.</p>
+<p><a class="reference external" href="https://github.com/XKNX/xknx">xknx</a> is a Python package you can use to talk to <code class="docutils literal notranslate"><span class="pre">knxd</span></code>.</p>
+<p><a class="reference external" href="https://github.com/M-o-a-T/distknx">distkv-knx</a> connects values stored
+in distkv to devices on the KNX bus.</p>
+</div>
+<div class="section" id="wire">
+<h2>1wire<a class="headerlink" href="#wire" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/1-Wire">1wire</a> is a two- or three-wire
+bus (one signal wire, somewhat-optional 5V power, ground) that is
+frequently used to connect inexpensive sensors and actors to a computer.</p>
+<p><a class="reference external" href="https://www.owfs.org/">OWFS</a> is the server commonly used on Linux
+systems to talk to 1wire.</p>
+<p><a class="reference external" href="https://github.com/M-o-a-T/asyncowfs">asyncowfs</a> is a Python package
+that provides a high-level object-oriented async interface to OWFS.</p>
+<p><a class="reference external" href="https://github.com/M-o-a-T/distknx">distkv-owfs</a> uses <code class="docutils literal notranslate"><span class="pre">asyncowfs</span></code> to
+connect values stored in <code class="docutils literal notranslate"><span class="pre">distkv</span></code> to attributes if 1wire devices.</p>
+</div>
+<div class="section" id="inventory-management">
+<h2>Inventory Management<a class="headerlink" href="#inventory-management" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/M-o-a-T/distinv">distkv-inv</a> is a command-line
+extension that simplifies storage of hosts, networks and
+cables in <code class="docutils literal notranslate"><span class="pre">distkv</span></code>. It contains templating code so you can auto-create
+the configuration for your router (if it’s text instead of some binary
+format).</p>
+</div>
+<div class="section" id="akumuli">
+<h2>Akumuli<a class="headerlink" href="#akumuli" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://akumuli.org/">Akumuli</a> is a time series database.</p>
+<p><a class="reference external" href="https://github.com/M-o-a-T/asyncakumuli">asyncakumuli</a> is a Python package
+that provides an async interface to Akumuli.</p>
+<p><a class="reference external" href="https://github.com/M-o-a-T/distakumuli">distkv-akumuli</a> implements a
+background task that monitors values stored in <code class="docutils literal notranslate"><span class="pre">distkv</span></code> and mirrors them
+into Akumuli, thus saving their history.</p>
+</div>
+<div class="section" id="binary-i-o">
+<h2>Binary I/O<a class="headerlink" href="#binary-i-o" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/M-o-a-T/asyncgpio">asyncgpio</a> is a Python package
+that provides structured access to your computer’s I/O ports.</p>
+<p><a class="reference external" href="https://github.com/M-o-a-T/distgpio">distkv-gpio</a> contains code that
+mirrors a binary value stored in <code class="docutils literal notranslate"><span class="pre">distkv</span></code> to a GPIO pin and vice versa.</p>
+</div>
+<div class="section" id="wago-i-o-controllers">
+<h2>Wago I/O controllers<a class="headerlink" href="#wago-i-o-controllers" title="Permalink to this headline">¶</a></h2>
+<p>The German company <a class="reference external" href="https://www.wago.com">WAGO Kontakttechnik</a> makes the
+<code class="docutils literal notranslate"><span class="pre">750-*</span></code> line of extensible rugged controllers with various modules.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="TODO.html" class="btn btn-neutral float-right" title="Open issues" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="extend.html" class="btn btn-neutral float-left" title="Extending DistKV" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
