@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: tablify
+Version: 0.0.1
+Summary: This package is used to convert python data structure to html table.
+Home-page: https://github.com/ikshitiz/tablify
+Author: Kshitij
+Author-email: kshtjkmr35@gmail.com
+License: UNKNOWN
+Description: 
+        # tablify
+        ######  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
+        > Convert data structure into html table
+        
+        tablify is package used to convert python data  structures to html or clean tabular design. Thanks for checking it out.
+        
+        
+        ### Requirements
+        - Python 3.x
+        
+        ### Example 
+        
+            import sys
+            from tablify.parser.parse import pyobj
+            
+            dict_example = {'Total_Matches': ['200', '127', '102'],\
+                'Player Name': ['M.S Dhoni', 'Virendra Sehwag', 'Shikhar Dhawan'],\
+                'Sixes': ['280.', '210', '126']}
+            
+            pyobj = pyobj()
+            htmltext = pyobj.dictToHTMLTable(dict_example)
+            print(htmltext)
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

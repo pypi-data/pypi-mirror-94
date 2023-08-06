@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+tablify/__init__.py
+tablify/parse.py
+tablify.egg-info/PKG-INFO
+tablify.egg-info/SOURCES.txt
+tablify.egg-info/dependency_links.txt
+tablify.egg-info/top_level.txt
+tablify/core/__init__.py
+tablify/core/html.py
+tests/__init__.py
+tests/context.py
+tests/test_advanced.py
+tests/test_basic.py
