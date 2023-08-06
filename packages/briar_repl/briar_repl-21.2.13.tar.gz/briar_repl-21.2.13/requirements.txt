@@ -1,0 +1,4 @@
+colorful>=0.5.4
+prompt-toolkit>=3.0.14
+httpx>=0.16.1
+websockets>=8.1.0

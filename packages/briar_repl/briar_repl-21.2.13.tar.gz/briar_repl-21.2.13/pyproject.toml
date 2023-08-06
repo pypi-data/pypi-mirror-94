@@ -1,0 +1,18 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "briar_repl"
+author = "fphemeral"
+author-email = "fphemeral@i2pmail.org"
+description-file = "README.md"
+home-page = "https://code.briarproject.org/fphemeral/briar_repl"
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+requires=[
+    "colorful>=0.5.4",
+    "prompt-toolkit>=3.0.14",
+    "httpx>=0.16.1",
+    "websockets>=8.1.0",
+]
+requires-python=">=3.7"
