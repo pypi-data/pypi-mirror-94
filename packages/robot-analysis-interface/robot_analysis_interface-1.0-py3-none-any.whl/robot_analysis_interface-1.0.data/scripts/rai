@@ -1,0 +1,9 @@
+#!python
+
+import sys
+
+from RAI.launcher import launcher
+
+if __name__ == "__main__":
+    launcher(sys.argv[1:])
+    sys.exit(0)

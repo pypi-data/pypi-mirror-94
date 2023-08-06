@@ -1,0 +1,181 @@
+Metadata-Version: 2.1
+Name: robot-analysis-interface
+Version: 1.0
+Summary: Robot Analysis Infrastructure
+Home-page: https://gitlab.tuebingen.mpg.de/SoW/amd-robot-plotting-framework
+Author: Jean-Claude Passy, Maximilien Naveau
+Author-email: jean-claude.passy@tuebingen.mpg.de, maximilien.naveau@tuebingen.mpg.de
+License: BSD-3-Clause
+Project-URL: Documentation, https://machines-in-motion.github.io/code_documentation/amd-robot-plotting-framework/docs/sphinx/html/index.html
+Platform: Linux
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: opencv-python (==4.3.0.36)
+Requires-Dist: packaging
+Requires-Dist: PyQt5
+Requires-Dist: pyqtgraph (==0.11.0)
+Requires-Dist: qimage2ndarray
+
+[![Build Status](
+    https://raw.githubusercontent.com/MPI-IS-BambooAgent/sw_badges/master/badges/plans/amd-robot-plotting-framework-cont.build/build.svg?sanitize=true)](
+        https://atlas.is.localnet/bamboo/browse/MGC-RAI/latest)
+
+Robot Analysis Interface
+========================
+
+The **R**obot **A**nalysis **I**nterface (`RAI`) is a package to analyze
+synchronously sensors data and video captures of the scene from robotic experiments.
+
+It is written in `Python` and uses `Qt` and `OpenCV` bindings under the hood.
+It is supported on `Linux` operating systems.
+
+Dependencies
+------------
+
+`RAI` has the following dependencies:
+
+* [OpenCV](https://opencv.org/)
+* [PyQt](https://riverbankcomputing.com/software/pyqt/intro)
+* [pyqtgraph](http://www.pyqtgraph.org/)
+* [numpy](https://numpy.org/)
+
+The `setup.py` will take care of installing these packages.
+
+However, you can also install them manually by running:
+
+```
+$ pip install -r requirements
+```
+which will also install the dependencies for building the [documentation](#Documentation).
+
+
+Installation
+------------
+
+`RAI` releases can be instaled from [PyPI](https://pypi.org/) by doing
+```
+$ pip install robot_analysis_interface
+```
+
+If you prefer to install from source, clone this repository,
+go to the root directory and type in
+```
+$ pip install .
+```
+
+or directly on the compressed file:
+
+```
+$ pip install robot_analysis_interface-xx.tar.gz
+```
+
+---
+**NOTE**
+
+It is recommended to install everything in a dedicated virtual environment.
+
+---
+
+Getting started
+---------------
+
+### Quick way to open a data file/folder:
+
+To open a data file or folder, you can use the script provided in this repository. Several type of data can be parsed:
+
+- The [SL](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.142.4178&rep=rep1&type=pdf) `d-file` format:
+```bash
+$ rai --data=d00021 --session=my_session.json
+```
+- A file dumped from the `DataCollector` class available from the RAI API:
+```bash
+$ rai --data=data_collector_file.npy --session=my_session.json
+$ rai --data=data_collector_file.npz --session=my_session.json
+```
+- A data folder dumped by the [dynamic-graph](https://github.com/stack-of-tasks/dynamic-graph) framework.
+```bash
+$ rai --data=2019-08-12_02-03-19/ --session=my_session.json
+```
+- The default behavior looks for the newest data file/folder that are dumped
+  by the dynamic-graph or SL is the current folder.
+```bash
+$ rai
+```
+
+Note from these commands:
+- the (optional) data file or folder defined with the `--data` argument,
+- the (optional) JSON file one can use to define to restore a RAI session with the `--session` argument,
+- without the `--data` argument the launcher looks into the current folder for
+  a folder with the highest date name (e.g. `2019-08-12_02-03-19`), if none
+  are found, it looks for the d-file with the highest index.
+- without  `--session` argument the launcher open a clean session.
+
+### Using the RAI python interface
+
+To use the RAI, import the package in your *Python* session:
+
+```
+>>> import RAI
+```
+
+RAI comes with demos, which can be run using the following commands:
+```
+>>> RAI.demos.demo()
+```
+
+Documentation
+-------------
+
+The full documentation can be found [here](https://machines-in-motion.github.io/code_documentation/robot-analysis-interface).
+
+It can also be built from source the following way:
+```
+$ pip install sphinx sphinx_bootstrap_theme
+$ cd doc
+$ make html
+```
+and open the file `build/html/index.html` in your web browser.
+
+Unit test
+---------
+
+The RAI has been tested using the Python unit testing framework.
+The tests can be run using the following command in the root directory:
+
+    python -m unittest discover
+
+It is also possible to run the tests using nose:
+
+    pip install nose
+    nosetests -v tests
+
+If you wish to run headless tests, use [xvfb](https://www.x.org/archive/X11R7.6/doc/man/man1/Xvfb.1.xhtml).
+
+
+Authors
+-------
+
+Jean-Claude Passy <jean-claude.passy@tuebingen.mpg.de>
+
+Maximilien Naveau <maximilien.naveau@tuebingen.mpg.de>
+
+License
+-------
+
+BSD 3-Clause (see LICENSE.md)
+
+Copyright
+---------
+
+© 2017, Max Planck Society / Software Workshop - Max Planck Institute for Intelligent Systems
+
+
