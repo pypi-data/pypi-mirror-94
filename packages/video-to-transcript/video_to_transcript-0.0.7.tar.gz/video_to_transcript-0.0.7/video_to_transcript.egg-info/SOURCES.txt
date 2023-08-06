@@ -1,0 +1,8 @@
+setup.py
+video_to_transcript/__init__.py
+video_to_transcript/package.py
+video_to_transcript.egg-info/PKG-INFO
+video_to_transcript.egg-info/SOURCES.txt
+video_to_transcript.egg-info/dependency_links.txt
+video_to_transcript.egg-info/requires.txt
+video_to_transcript.egg-info/top_level.txt
