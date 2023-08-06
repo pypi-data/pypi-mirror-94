@@ -1,0 +1,14 @@
+swagger_unittest/__init__.py,sha256=uqjp-lNlERaS4tCEoUIGWPEDX64lbK5Xs0tRBeDy6q0,72
+swagger_unittest/swagger_parser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+swagger_unittest/swagger_parser/swagger_parser.py,sha256=RfqS_KASJJxT_kW7IB59h9-ffQTthPoXpSr1I4xO-pw,40461
+swagger_unittest/swagger_tester/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+swagger_unittest/swagger_tester/swagger_tester.py,sha256=osxc7-eZVEqYmo-FrCnVFh8XivtOXGfwu_23IxKN_QI,14129
+tests/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+tests/swagger_parser/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+tests/swagger_parser/conftest.py,sha256=T-qOvYQbQ5RuE8ACyPd1cDuwVvz55p0TRRgibtH1Bso,3644
+tests/swagger_parser/test_swagger_parser.py,sha256=djWaMzsXWP-mA6aWO58oRxfY2oZr_Dkqj7tw2jG2Yd8,17476
+tests/swagger_parser/test_swagger_tester.py,sha256=jSNLXBAQdmhWYl2jwXYPmDDNV9AISYNyTOWDMM6Lth4,1095
+swagger_unittest-0.3.4.dist-info/METADATA,sha256=3laa0EEMCi8EVVtrA8NYyIllQ7V46tOlqCLulJrtzlE,1187
+swagger_unittest-0.3.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+swagger_unittest-0.3.4.dist-info/top_level.txt,sha256=_qEuyM-u-DjSLAm9NVViDi5-PQk19RASnbvW5jcjqKI,23
+swagger_unittest-0.3.4.dist-info/RECORD,,
