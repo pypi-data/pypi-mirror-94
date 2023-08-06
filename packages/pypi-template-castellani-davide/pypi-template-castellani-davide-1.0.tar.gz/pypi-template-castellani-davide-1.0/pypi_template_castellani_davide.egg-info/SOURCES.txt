@@ -1,0 +1,8 @@
+setup.py
+pypi_template_castellani_davide.egg-info/PKG-INFO
+pypi_template_castellani_davide.egg-info/SOURCES.txt
+pypi_template_castellani_davide.egg-info/dependency_links.txt
+pypi_template_castellani_davide.egg-info/top_level.txt
+pypi_template_castellani_davide.egg-info/zip-safe
+template/__init__.py
+template/test_template.py
