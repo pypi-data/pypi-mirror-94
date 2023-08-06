@@ -1,0 +1,3 @@
+[opentelemetry_propagator]
+b3 = opentelemetry.propagators.b3:B3Format
+
