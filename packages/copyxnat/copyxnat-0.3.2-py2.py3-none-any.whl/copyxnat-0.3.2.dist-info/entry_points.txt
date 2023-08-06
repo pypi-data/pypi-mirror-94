@@ -1,0 +1,3 @@
+[console_scripts]
+copyxnat = copyxnat.__main__:main
+
