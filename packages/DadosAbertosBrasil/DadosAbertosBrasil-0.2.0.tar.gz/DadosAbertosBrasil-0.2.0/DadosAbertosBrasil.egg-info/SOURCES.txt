@@ -1,0 +1,29 @@
+.gitignore
+LICENSE.txt
+MANIFEST
+README.md
+desktop.ini
+setup.cfg
+setup.py
+DadosAbertosBrasil/__init__.py
+DadosAbertosBrasil/_utils.py
+DadosAbertosBrasil/camara.py
+DadosAbertosBrasil/favoritos.py
+DadosAbertosBrasil/ibge.py
+DadosAbertosBrasil/ipea.py
+DadosAbertosBrasil/senado.py
+DadosAbertosBrasil.egg-info/PKG-INFO
+DadosAbertosBrasil.egg-info/SOURCES.txt
+DadosAbertosBrasil.egg-info/dependency_links.txt
+DadosAbertosBrasil.egg-info/requires.txt
+DadosAbertosBrasil.egg-info/top_level.txt
+Exemplos/Acesso a energia elétrica.ipynb
+Exemplos/Correlação de Indicadores Macroeconômicos.ipynb
+Exemplos/Gráfico de Densidade Populacional.ipynb
+Exemplos/Nomes de Apóstolos mais Comuns.ipynb
+Exemplos/Produtos mais Impactados pelo Dólar.ipynb
+Exemplos/Proporção de Deputados por Sexo.ipynb
+Exemplos/Rendimento Domiciliar por Municípios.ipynb
+assets/logo.png
+data/Coordenadas.xlsx
+data/Eleitorado.csv
