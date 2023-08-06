@@ -1,0 +1,9 @@
+README.md
+setup.py
+cnmv_data/__init__.py
+cnmv_data/cnmv.py
+cnmv_data.egg-info/PKG-INFO
+cnmv_data.egg-info/SOURCES.txt
+cnmv_data.egg-info/dependency_links.txt
+cnmv_data.egg-info/requires.txt
+cnmv_data.egg-info/top_level.txt
