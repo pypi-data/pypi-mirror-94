@@ -1,0 +1,318 @@
+Metadata-Version: 2.1
+Name: pg_binny
+Version: 0.0.3
+Summary: Bins your dataframe columns into the Top ≤N categories, and "Other".
+Home-page: https://gitlab.ausdev.local/peregrine/pg_binny/tree/main/
+Author: Charles Twardy
+Author-email: Charles.Twardy@jacobs.com
+License: Apache Software License 2.0
+Description: # pg_binny
+        > Discretize a whole dataframe into ≤N bins, using Top N categories.
+        
+        
+        ```python
+        %nbdev_hide
+        ```
+        
+        The `discretize` function handles discrete & continuous columns:
+        * Continuous columns are cut into _N_ bins using supplied cutting function (defaults to `qcut` for quantile cuts.
+        * Categorical columns: take the Top _N_-1, with the rest tossed into "Other"
+          
+        **TODO:** Describe and show the plot helpers too.
+        
+        ## Install
+        
+        `conda install pg_binny`
+        
+        -or-
+        
+        `pip install pg_binny` 
+        
+        -or (locally)-
+        
+        `pip install -e .`  (That's "pip install -e **dot**")
+        
+        
+        ## How to use
+        
+        Make a sample dataframe.
+        
+        ```python
+        import pandas as pd
+        import pg_binny as binny
+        
+        
+        dataset = 'car_crashes'
+        try:
+            import seaborn as sns
+            df = sns.load_dataset(dataset)
+        except ModuleNotFoundError:
+            df = pd.read_csv(f'https://raw.githubusercontent.com/mwaskom/seaborn-data/master/{dataset}.csv')
+        df.sample(5)
+        ```
+        
+        
+        
+        
+        <div>
+        <style scoped>
+            .dataframe tbody tr th:only-of-type {
+                vertical-align: middle;
+            }
+        
+            .dataframe tbody tr th {
+                vertical-align: top;
+            }
+        
+            .dataframe thead th {
+                text-align: right;
+            }
+        </style>
+        <table border="1" class="dataframe">
+          <thead>
+            <tr style="text-align: right;">
+              <th></th>
+              <th>total</th>
+              <th>speeding</th>
+              <th>alcohol</th>
+              <th>not_distracted</th>
+              <th>no_previous</th>
+              <th>ins_premium</th>
+              <th>ins_losses</th>
+              <th>abbrev</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>19</th>
+              <td>15.1</td>
+              <td>5.738</td>
+              <td>4.530</td>
+              <td>13.137</td>
+              <td>12.684</td>
+              <td>661.88</td>
+              <td>96.57</td>
+              <td>ME</td>
+            </tr>
+            <tr>
+              <th>15</th>
+              <td>15.7</td>
+              <td>2.669</td>
+              <td>3.925</td>
+              <td>15.229</td>
+              <td>13.659</td>
+              <td>649.06</td>
+              <td>114.47</td>
+              <td>IA</td>
+            </tr>
+            <tr>
+              <th>35</th>
+              <td>14.1</td>
+              <td>3.948</td>
+              <td>4.794</td>
+              <td>13.959</td>
+              <td>11.562</td>
+              <td>697.73</td>
+              <td>133.52</td>
+              <td>OH</td>
+            </tr>
+            <tr>
+              <th>50</th>
+              <td>17.4</td>
+              <td>7.308</td>
+              <td>5.568</td>
+              <td>14.094</td>
+              <td>15.660</td>
+              <td>791.14</td>
+              <td>122.04</td>
+              <td>WY</td>
+            </tr>
+            <tr>
+              <th>43</th>
+              <td>19.4</td>
+              <td>7.760</td>
+              <td>7.372</td>
+              <td>17.654</td>
+              <td>16.878</td>
+              <td>1004.75</td>
+              <td>156.83</td>
+              <td>TX</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        
+        
+        
+        Discretize with default bins
+        
+        ```python
+        dfd = binny.discretize(df)
+        dfd.sample(5)
+        ```
+        
+        
+            ---------------------------------------------------------------------------
+        
+            AttributeError                            Traceback (most recent call last)
+        
+            <ipython-input-2-41b3e27056d4> in <module>
+            ----> 1 dfd = binny.discretize(df)
+                  2 dfd.sample(5)
+                  3 
+        
+        
+            AttributeError: module 'pg_binny' has no attribute 'discretize'
+        
+        
+        ```python
+        dfd['speeding'].dtype
+        ```
+        
+        
+        
+        
+            CategoricalDtype(categories=[(1.7910000000000001, 2.413], (2.413, 3.496], (3.496, 3.948], (3.948, 4.095], (4.095, 4.608], (4.608, 5.032], (5.032, 6.014], (6.014, 6.923], (6.923, 7.76], (7.76, 9.45]],
+            , ordered=True)
+        
+        
+        
+        ```python
+        dfd['total'].dtype
+        ```
+        
+        
+        
+        
+            CategoricalDtype(categories=[(5.899, 11.1], (11.1, 12.3], (12.3, 13.6], (13.6, 14.5], (14.5, 15.6], (15.6, 17.4], (17.4, 18.1], (18.1, 19.4], (19.4, 21.4], (21.4, 23.9]],
+            , ordered=True)
+        
+        
+        
+        You can set the #bins and the cutting function (defaults to quantile cut, but you may prefer plain-old `cut`, or something else.
+        
+        ```python
+        ?binny.discretize
+        ```
+        
+        
+            [0;31mSignature:[0m
+            [0mbinny[0m[0;34m.[0m[0mdiscretize[0m[0;34m([0m[0;34m[0m
+            [0;34m[0m    [0mdf[0m[0;34m,[0m[0;34m[0m
+            [0;34m[0m    [0mnbins[0m[0;34m=[0m[0;36m10[0m[0;34m,[0m[0;34m[0m
+            [0;34m[0m    [0mcut[0m[0;34m=[0m[0;34m<[0m[0mfunction[0m [0mqcut[0m [0mat[0m [0;36m0x7fae29d843b0[0m[0;34m>[0m[0;34m,[0m[0;34m[0m
+            [0;34m[0m    [0mverbose[0m[0;34m=[0m[0;36m2[0m[0;34m,[0m[0;34m[0m
+            [0;34m[0m    [0mdrop_useless[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m[0;34m[0m
+            [0;34m[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+            [0;31mDocstring:[0m
+            Discretize columns in {df} to have at most {nbins} categories.
+              * Categorical columns: take the Top n-1 plus "Other"
+              * Continuous columns: cut into {nbins} using {cut}.
+            
+            Returns a new discretized dataframe with the same column names.
+            Promotes discrete columns to categories.
+            
+            Parameters
+            -----------
+            df: Dataframe to discretize
+            nbins: Max number of bins to use. May return fewer.
+            cut: Cutting method. Default `pd.qcut`. Consider pd.cut, or write your own.
+            verbose: 0: silent, 1: colnames, 2: (Default) top N for each column
+            drop_useless: Removes columns that have < 2 unique values.
+            
+            Replaces numerical NA values with 'NA'.
+            [0;31mFile:[0m      /Volumes/Peregrine/binny/pg_binny/core.py
+            [0;31mType:[0m      function
+        
+        
+        
+        ## Other functions
+        
+        ```python
+        [x for x in dir(binny) if x[:2] not in ['__', 'pa', 'pd', 'rc']]
+        ```
+        
+        
+        
+        
+            ['autolabel',
+             'clean_category',
+             'discretize',
+             'drop_singletons',
+             'is_numeric',
+             'isnum']
+        
+        
+        
+        ```python
+        ?binny.autolabel
+        ```
+        
+        
+            [0;31mSignature:[0m [0mbinny[0m[0;34m.[0m[0mautolabel[0m[0;34m([0m[0max[0m[0;34m,[0m [0mborder[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+            [0;31mDocstring:[0m
+            Label bars in a barplot {ax} with their height.
+            Thanks to matplotlib, composition.ai, and jsoma/chart.py.
+            
+            TODO: how to label with their legend labels?
+            [0;31mFile:[0m      /Volumes/Peregrine/binny/pg_binny/core.py
+            [0;31mType:[0m      function
+        
+        
+        
+        ```python
+        ?binny.clean_category
+        ```
+        
+        
+            [0;31mSignature:[0m [0mbinny[0m[0;34m.[0m[0mclean_category[0m[0;34m([0m[0mdf[0m[0;34m,[0m [0mcol[0m[0;34m:[0m [0mstr[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+            [0;31mDocstring:[0m
+            Remove unused categories from df.col, inplace.
+            If not a category, do nothing.
+            [0;31mFile:[0m      /Volumes/Peregrine/binny/pg_binny/core.py
+            [0;31mType:[0m      function
+        
+        
+        
+        ```python
+        ?binny.is_numeric
+        ```
+        
+        
+            [0;31mSignature:[0m [0mbinny[0m[0;34m.[0m[0mis_numeric[0m[0;34m([0m[0mcol[0m[0;34m:[0m [0mstr[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+            [0;31mDocstring:[0m
+            Returns True iff already numeric, or can be coerced.
+            Usage: df.apply(is_numeric)
+            Usage: is_numeric(df['colname'])
+            
+            Returns Boolean series.
+            
+            From:
+            https://stackoverflow.com/questions/54426845/how-to-check-if-a-pandas-dataframe-contains-only-numeric-column-wise
+            [0;31mFile:[0m      /Volumes/Peregrine/binny/pg_binny/core.py
+            [0;31mType:[0m      function
+        
+        
+        
+        # History
+        
+        `pg_binny` is an example extracting some frequently copy/pasted routines into a general purpose `nbdev` project. 
+        
+        Originally called `binny` because it bins things, that was already taken on PyPi (for... a project that bins things).  The prefix `pg` is short for the project we were working on. 
+        
+        The routines and text are completely general.  
+        
+        
+        
+        
+Keywords: discretize,bin,Python,datascience,preprocess
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
