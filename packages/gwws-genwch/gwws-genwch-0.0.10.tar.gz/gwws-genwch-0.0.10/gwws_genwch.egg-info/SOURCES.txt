@@ -1,0 +1,10 @@
+README.md
+setup.py
+gwws/__init__.py
+gwws/gimy_scrape.py
+gwws/scrape.py
+gwws_genwch.egg-info/PKG-INFO
+gwws_genwch.egg-info/SOURCES.txt
+gwws_genwch.egg-info/dependency_links.txt
+gwws_genwch.egg-info/requires.txt
+gwws_genwch.egg-info/top_level.txt
