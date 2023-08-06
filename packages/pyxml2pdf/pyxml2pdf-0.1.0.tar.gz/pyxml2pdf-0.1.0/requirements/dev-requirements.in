@@ -1,0 +1,9 @@
+-c requirements.txt
+
+mypy
+pylint
+pytest
+pytest-cov
+mock
+hypothesis
+black

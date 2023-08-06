@@ -1,0 +1,8 @@
+[run]
+omit =
+    setup.py
+    # omit anything in a virtual environment
+    .tox/*
+    py??/*
+    # omit test suite
+    test/*

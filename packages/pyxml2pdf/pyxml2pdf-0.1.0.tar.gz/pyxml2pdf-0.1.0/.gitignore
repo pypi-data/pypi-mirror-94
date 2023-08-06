@@ -1,0 +1,15 @@
+# Byte-compiled files
+__pycache__/
+
+# pytest
+.pytest_cache/
+
+# Artifacts
+*.pdf
+*.xml
+
+# the download test result
+test_download
+
+# the hypothesis temps
+.hypothesis
