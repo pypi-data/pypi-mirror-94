@@ -1,0 +1,3 @@
+[gino.extensions]
+quart=gino_quart
+
