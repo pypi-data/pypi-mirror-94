@@ -1,0 +1,175 @@
+Metadata-Version: 2.1
+Name: mtrl
+Version: 0.9rc1
+Summary: MTRL: Multi Task RL Algorithms
+Home-page: https://github.com/facbookresearch/mtrl
+Author: Shagun Sodhani, Amy Zhang
+Author-email: sshagunsodhani@gmail.com, amyzhang@fb.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: imageio-ffmpeg (==0.4.3)
+Requires-Dist: hydra-core (==1.0.5)
+Requires-Dist: hydra-submitit-launcher (==1.0.1)
+Requires-Dist: imageio (==2.9.0)
+Requires-Dist: mllogger (==0.7)
+Requires-Dist: numpy (==1.19.5)
+Requires-Dist: opencv-python (==4.5.1.48)
+Requires-Dist: pillow (<7)
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: torch (==1.7.1+cu110)
+Requires-Dist: torchvision (==0.8.2+cu110)
+Provides-Extra: dev
+Requires-Dist: imageio-ffmpeg (==0.4.3) ; extra == 'dev'
+Requires-Dist: hydra-core (==1.0.5) ; extra == 'dev'
+Requires-Dist: hydra-submitit-launcher (==1.0.1) ; extra == 'dev'
+Requires-Dist: imageio (==2.9.0) ; extra == 'dev'
+Requires-Dist: mllogger (==0.7) ; extra == 'dev'
+Requires-Dist: numpy (==1.19.5) ; extra == 'dev'
+Requires-Dist: opencv-python (==4.5.1.48) ; extra == 'dev'
+Requires-Dist: pillow (<7) ; extra == 'dev'
+Requires-Dist: termcolor (==1.1.0) ; extra == 'dev'
+Requires-Dist: torch (==1.7.1+cu110) ; extra == 'dev'
+Requires-Dist: torchvision (==0.8.2+cu110) ; extra == 'dev'
+Requires-Dist: black (==20.8b1) ; extra == 'dev'
+Requires-Dist: flake8-bugbear (==20.11.1) ; extra == 'dev'
+Requires-Dist: flake8-comprehensions (==3.3.1) ; extra == 'dev'
+Requires-Dist: flake8-docstrings (==1.5.0) ; extra == 'dev'
+Requires-Dist: flake8 (==3.8.4) ; extra == 'dev'
+Requires-Dist: hiplot (==0.1.22) ; extra == 'dev'
+Requires-Dist: isort (==5.7.0) ; extra == 'dev'
+Requires-Dist: jupyter (==1.0.0) ; extra == 'dev'
+Requires-Dist: jupyterlab (==3.0.3) ; extra == 'dev'
+Requires-Dist: jupyter-nbextensions-configurator (==0.4.1) ; extra == 'dev'
+Requires-Dist: matplotlib (==3.3.3) ; extra == 'dev'
+Requires-Dist: mypy (==0.790) ; extra == 'dev'
+Requires-Dist: notifiers (==1.2.1) ; extra == 'dev'
+Requires-Dist: nox (==2020.12.31) ; extra == 'dev'
+Requires-Dist: pandas (==1.2.0) ; extra == 'dev'
+Requires-Dist: pre-commit (==2.9.3) ; extra == 'dev'
+Requires-Dist: psutil (==5.8.0) ; extra == 'dev'
+Requires-Dist: pytest (==6.2.1) ; extra == 'dev'
+Requires-Dist: pytest-xdist (==2.2.0) ; extra == 'dev'
+Requires-Dist: pymongo (==3.11.2) ; extra == 'dev'
+Requires-Dist: ray (==1.0.1.post1) ; extra == 'dev'
+Requires-Dist: scikit-image (==0.18.1) ; extra == 'dev'
+Requires-Dist: scikit-video (==1.1.11) ; extra == 'dev'
+Requires-Dist: setuptools (==51.1.1) ; extra == 'dev'
+Requires-Dist: sphinx (==3.4.3) ; extra == 'dev'
+Requires-Dist: sphinx-autodoc-annotation (==1.0-1) ; extra == 'dev'
+Requires-Dist: sphinx-copybutton (==0.3.1) ; extra == 'dev'
+Requires-Dist: sphinxcontrib-bibtex (==2.1.3) ; extra == 'dev'
+Requires-Dist: sphinxcontrib-napoleon (==0.7) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (==0.5.1) ; extra == 'dev'
+Requires-Dist: tensorboard (==2.4.0) ; extra == 'dev'
+Requires-Dist: towncrier (==19.2.0) ; extra == 'dev'
+Requires-Dist: typing-extensions (==3.7.4.3) ; extra == 'dev'
+Requires-Dist: yamllint (==1.25.0) ; extra == 'dev'
+
+[![CircleCI](https://circleci.com/gh/facebookresearch/mtrl.svg?style=svg&circle-token=8cc8eb1b9666a65e27a21c39b5d5398744365894)](https://circleci.com/gh/facebookresearch/mtrl)
+![PyPI - License](https://img.shields.io/pypi/l/mtrl)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mtrl)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Zulip Chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg)](https://mtenv.zulipchat.com)
+
+# MTRL
+Multi Task RL Algorithms
+
+## Contents
+
+1. [Introduction](#Introduction)
+
+2. [Setup](#Setup)
+
+3. [Usage](#Usage)
+
+4. [Documentation](#Documentation)
+
+5. [Contributing to MTRL](#Contributing-to-MTRL)
+
+6. [Community](#Community)
+
+7. [Acknowledgements](#Acknowledgements)
+
+## Introduction
+
+MTRL is a library of multi-task reinforcement learning algorithms. It has two main components:
+
+* [Building blocks](https://github.com/facebookresearch/mtrl/tree/main/mtrl/agent/components) and [agents](https://github.com/facebookresearch/mtrl/tree/main/mtrl/agent) that implement the multi-task RL algorithms.
+
+* [Experiment setups](https://github.com/facebookresearch/mtrl/tree/main/mtrl/experiment) that enable training/evaluation on different setups. 
+
+Together, these two components enable use of MTRL across different environments and setups.
+
+### List of publications & submissions using MTRL (please create a pull request to add the missing entries):
+
+* [Learning Robust State Abstractions for Hidden-Parameter Block MDPs](https://arxiv.org/abs/2007.07206)
+
+### License
+
+* MTRL uses [MIT License](https://github.com/facebookresearch/mtrl/blob/main/LICENSE).
+
+* [Terms of Use](https://opensource.facebook.com/legal/terms)
+
+* [Privacy Policy](https://opensource.facebook.com/legal/privacy)
+
+### Citing MTRL
+
+If you use MTRL in your research, please use the following BibTeX entry:
+```
+@Misc{Sodhani2021MTRL,
+  author =       {Shagun Sodhani and Amy Zhang},
+  title =        {MTRL - Multi Task RL Algorithms},
+  howpublished = {Github},
+  year =         {2021},
+  url =          {https://github.com/facebookresearch/mtrl}
+}
+```
+
+## Setup
+
+* Clone the repository: `git clone git@github.com:facebookresearch/mtrl.git`.
+
+* Install dependencies: `pip install -r requirements/dev.txt`
+
+## Usage
+
+* MTRL supports 8 different multi-task RL algorithms as described [here]().
+
+* MTRL supports multi-task environments using [MTEnv](https://github.com/facebookresearch/mtenv). These environments include [MetaWorld](https://meta-world.github.io/) and multi-task variants of [DMControl Suite](https://github.com/deepmind/dm_control)
+
+* Refer the [tutorial]() to get started with MTRL.
+
+## Documentation
+
+[https://mtrl.readthedocs.io](https://mtrl.readthedocs.io)
+
+## Contributing to MTRL
+
+There are several ways to contribute to MTRL.
+
+1. Use MTRL in your research.
+
+2. Contribute a new algorithm. We currently support [8 multi-task RL algorithms]() and are looking forward to adding more environments.
+
+3. Check out the [good-first-issues](https://github.com/facebookresearch/mtenv/pulls?q=is%3Apr+is%3Aopen+label%3A%22good+first+issue%22) on GitHub and contribute to fixing those issues.
+
+4. Check out additional details [here](https://github.com/facebookresearch/mtrl/blob/main/.github/CONTRIBUTING.md).
+
+## Community
+
+Ask questions in the chat or github issues:
+* [Chat](https://mtenv.zulipchat.com)
+* [Issues](https://https://github.com/facebookresearch/mtrl/issues)
+
+## Acknowledgements
+
+* Project file pre-commit, mypy config, towncrier config, circleci etc are based on same files from [Hydra](https://github.com/facebookresearch/hydra).
+
