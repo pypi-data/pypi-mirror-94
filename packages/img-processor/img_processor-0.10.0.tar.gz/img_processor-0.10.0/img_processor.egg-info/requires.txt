@@ -1,0 +1,7 @@
+numpy
+Click>=7.0
+pytesseract
+pdf2image
+PyPDF2
+libtiff
+opencv-python
