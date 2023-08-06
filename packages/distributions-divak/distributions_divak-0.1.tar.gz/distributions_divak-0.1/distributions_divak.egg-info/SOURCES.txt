@@ -1,0 +1,10 @@
+setup.py
+distributions_divak/Binomialdistribution.py
+distributions_divak/Gaussiandistribution.py
+distributions_divak/Generaldistribution.py
+distributions_divak/__init__.py
+distributions_divak.egg-info/PKG-INFO
+distributions_divak.egg-info/SOURCES.txt
+distributions_divak.egg-info/dependency_links.txt
+distributions_divak.egg-info/not-zip-safe
+distributions_divak.egg-info/top_level.txt
