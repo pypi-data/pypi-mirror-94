@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: akita-har
+Version: 0.0.1
+Summary: Utilities for working with HTTP Archive (HAR) files
+Home-page: https://github.com/akitasoftware/akita-python-har
+Author: Cole Schlesinger
+Author-email: cole@akitasoftware.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic
+
+# Akita HTTP Archive (HAR) Utility
+
+This package provides Pydantic models for HTTP Archive (HAR) files, along with
+a thread-safe file-writer for creating and concurrently writing HAR entries.
+
+## See it in Action
+
+Take a look at the [Akita Django
+Integration](https://github.com/akitasoftware/akita-django), which extends the
+`django.test.Client` to produce a HAR file containing requests and responses
+from Django integration tests.
+
+
