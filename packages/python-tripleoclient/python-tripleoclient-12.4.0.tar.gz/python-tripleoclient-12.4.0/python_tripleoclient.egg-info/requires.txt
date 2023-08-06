@@ -1,0 +1,23 @@
+Babel!=2.4.0,>=2.3.4
+cryptography>=2.1
+osc-lib>=1.8.0
+passlib>=1.7.0
+pbr!=2.1.0,>=2.0.0
+psutil>=3.2.2
+python-heatclient>=1.10.0
+python-ironic-inspector-client>=1.5.0
+python-ironicclient>=2.3.0
+python-mistralclient!=3.2.0,>=3.1.0
+python-openstackclient>=3.12.0
+simplejson>=3.5.1
+six>=1.10.0
+tenacity>=5.0.1
+tripleo-common>=11.4.0
+validations-libs>=1.0.0
+websocket-client>=0.44.0
+
+[:(python_version<'3.3')]
+ipaddress>=1.0.17
+
+[:(python_version=='2.7' or python_version=='2.6')]
+futures>=3.0.0
