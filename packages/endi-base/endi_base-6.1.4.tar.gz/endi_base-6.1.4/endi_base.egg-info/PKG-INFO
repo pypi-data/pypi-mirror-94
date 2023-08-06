@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: endi-base
+Version: 6.1.4
+Summary: endi_base
+Home-page: https://framagit.org/endi/endi_base
+Author: Coopérer Pour Entreprendre
+Author-email: contact@endi.coop
+License: GPLv3
+Description: enDI base software
+        =======================
+        
+        Since version 6 only Python 3 is supported
+        
+        Provide :
+        
+        * common models
+        * common tools
+        
+        This package provides base tools to allow splitting the software enDI in several pieces.
+        It provides :
+        
+        * SQLAlchemy configuration (scoped session, base model class)
+        * Custom SQLAlchemy column types
+        * String formatting utilities
+        * Date formatting utilities
+        * Constants
+        * ...
+        
+        It should not be installed directly but should be installed as a dependency
+        
+Keywords: web wsgi bfg pylons pyramid endi
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Framework :: Pyramid
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Provides-Extra: testing
