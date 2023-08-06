@@ -1,0 +1,3 @@
+[console_scripts]
+onsen = onsen.__main__:main
+
