@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: track-tools
+Version: 0.1.0
+Summary: Collection of scripts and wrappers around trackpy.
+Home-page: https://gitlab.gwdg.de/ikuhlem/track-tools
+Author: ['Ilyas Kuhlemann']
+Author-email: ikuhlem@gwdg.de
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: matplotlib
+Requires-Dist: trackpy
+Requires-Dist: pims
+Requires-Dist: pillow
+Requires-Dist: numba
+Requires-Dist: pandas
+Requires-Dist: scikit-image
+Requires-Dist: read-roi
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+
+UNKNOWN
+
+

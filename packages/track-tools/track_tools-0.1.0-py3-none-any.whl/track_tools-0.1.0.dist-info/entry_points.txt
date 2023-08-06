@@ -1,0 +1,7 @@
+[console_scripts]
+track-tools-drift-correction = track_tools.cli.drift_correction:main
+track-tools-extract-trajectories = track_tools.cli.extract_trajectories:main
+
+[gui_scripts]
+
+
