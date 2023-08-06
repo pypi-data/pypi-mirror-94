@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: spell-checker
+Version: 1.2.5
+Summary: Python 3+ spell checker, supports English, German, Italian, Spanish, and French!
+Home-page: https://github.com/Harvard90873/data_structures
+Author: Harvard90873
+Author-email: harvard90873@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: python-algorithms-3x
+Requires-Dist: termcolor
+Requires-Dist: data-structures3x
+Requires-Dist: and-or-not
+
+# Python text spell checker for python -v 3+!
+
+The **spell checker** is a python package that can check your spelling. It supports ***5*** languages!
+
+It contains the supports languages:
+
+- English
+- German
+- Spanish
+- French
+- Italian
+
+
+# Installation
+If not already [install pip](https://pip.pypa.io/en/stable/installing/)
+
+Install the package with `pip` or `pip3`:
+
+```bash
+pip install spell-checker
+```
+
+# Usage
+### Example:
+```Python
+from speller3x.checker import Checker
+text = "The... ! quick browmn fox jumps-over the lazi doug"
+checker = Checker(text, "english")
+checker.check()
+```
+Output:
+```bash
+Total words: 9
+Number of misspelled words: 2
+Number of words in dictionary: 194433
+Misspelled words: ['browmn', 'lazi']
+Lookup time(s): 0.0005731582641601562
+```
+
