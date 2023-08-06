@@ -1,0 +1,10 @@
+sqlalchemy
+geoalchemy2
+pandas
+numpy
+psycopg2-binary
+tabulate
+nltk
+shapely
+pyproj
+requests
