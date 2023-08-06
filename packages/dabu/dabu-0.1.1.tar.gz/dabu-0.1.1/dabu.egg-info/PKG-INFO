@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: dabu
+Version: 0.1.1
+Summary: Dabu facilita la obtencion de datos bursatiles de la Bolsa Mexiana de Valores
+Home-page: UNKNOWN
+Author: Carlos Crespo Elizondo
+Author-email: carlos@oncedos.com
+License: BSD 3
+Description: UNKNOWN
+Keywords: bmv
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.9
