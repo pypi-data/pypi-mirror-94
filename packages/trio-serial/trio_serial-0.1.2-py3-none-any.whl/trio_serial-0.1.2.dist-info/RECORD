@@ -1,0 +1,12 @@
+trio_serial/__init__.py,sha256=L8HeYNJrZs5Lo17AvWwArTs2bfy9pPuyFZACrA3USKI,998
+trio_serial/abstract.py,sha256=fLwadhtfZQb3s6w5o3JD58Lg6qCYumiDH74uKC3HNXA,7624
+trio_serial/bsd.py,sha256=yNFt8EDdPk2ZI-pY-yfmo1WkGsX9x8VrBAVizyOgNRQ,651
+trio_serial/cygwin.py,sha256=q47_bx85smUhyH1dv8AtkrkAJQKCYZQLG84Jsp41H4U,761
+trio_serial/darwin.py,sha256=puWZv8pti4fNZZI5treIzSfQDruMItI0SkhYG0BIfi4,1005
+trio_serial/linux.py,sha256=ZUnFisLLklBguZ4q265svy9Gqzg87fF_wF_Oj6Lh_Qo,2173
+trio_serial/posix.py,sha256=Y4rQPHdCu02oyiplQpvnt5shwPZKuBxEWfvTfZMVkIw,10258
+trio_serial/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trio_serial-0.1.2.dist-info/LICENSE,sha256=Vv_YCJ4z60Gpti1wdqRHE8AI6fbWouRd5KmkK8nksEU,1862
+trio_serial-0.1.2.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+trio_serial-0.1.2.dist-info/METADATA,sha256=6LEgm65Qm5VPJ4ScYlE4ngk_YKvaNJHdthxTE2ZVnR4,1172
+trio_serial-0.1.2.dist-info/RECORD,,
