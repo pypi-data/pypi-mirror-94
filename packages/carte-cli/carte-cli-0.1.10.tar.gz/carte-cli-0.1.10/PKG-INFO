@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: carte-cli
+Version: 0.1.10
+Summary: Carte – extract metadata from data storage into files
+Home-page: https://github.com/carte-data/carte
+Maintainer: Balint Haller
+Maintainer-email: balint@hey.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
