@@ -1,0 +1,7 @@
+simplejson
+flask
+flask-restx
+flask-socketio>=5.0
+flask-cors
+flask-login
+flask-session
