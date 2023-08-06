@@ -1,0 +1,3 @@
+[console_scripts]
+gquant-flow = gquant.flow:main
+
