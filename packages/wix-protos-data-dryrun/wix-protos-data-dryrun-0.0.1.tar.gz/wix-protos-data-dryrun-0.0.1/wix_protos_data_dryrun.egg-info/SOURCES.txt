@@ -1,0 +1,7 @@
+pyproject.toml
+setup.cfg
+setup.py
+wix_protos_data_dryrun.egg-info/PKG-INFO
+wix_protos_data_dryrun.egg-info/SOURCES.txt
+wix_protos_data_dryrun.egg-info/dependency_links.txt
+wix_protos_data_dryrun.egg-info/top_level.txt
