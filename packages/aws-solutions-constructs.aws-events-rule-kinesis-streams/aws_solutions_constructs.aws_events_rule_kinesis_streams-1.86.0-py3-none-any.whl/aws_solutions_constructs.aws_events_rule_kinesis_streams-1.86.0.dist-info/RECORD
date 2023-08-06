@@ -1,0 +1,8 @@
+aws_solutions_constructs/aws_events_rule_kinesis_streams/__init__.py,sha256=taBsPi0zeYhcH4rS54FHRRI6MdyB8msM05l8J5Qkeek,11280
+aws_solutions_constructs/aws_events_rule_kinesis_streams/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_solutions_constructs/aws_events_rule_kinesis_streams/_jsii/__init__.py,sha256=wdCVaMkpOF8whv1Htu0DPdSP_u8fJ-x5gXJFnJkcWSo,612
+aws_solutions_constructs/aws_events_rule_kinesis_streams/_jsii/aws-events-rule-kinesisstreams@1.86.0.jsii.tgz,sha256=-fvcfe_vu9P9E2PKEv0RKOBvxqU29lkF-g298MnYdXc,137030
+aws_solutions_constructs.aws_events_rule_kinesis_streams-1.86.0.dist-info/METADATA,sha256=bXaR7NcoY0HET4MvmBbJ58Cem6nuXf1397n_37f-tec,5615
+aws_solutions_constructs.aws_events_rule_kinesis_streams-1.86.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aws_solutions_constructs.aws_events_rule_kinesis_streams-1.86.0.dist-info/top_level.txt,sha256=hi3us_KW7V1ocfOqVsNq1o3w552jCEgu_KsCckqYWsg,25
+aws_solutions_constructs.aws_events_rule_kinesis_streams-1.86.0.dist-info/RECORD,,
