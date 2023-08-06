@@ -1,0 +1,1 @@
+/media_platform_project_service_lib
