@@ -1,0 +1,3 @@
+[console_scripts]
+flaskbp = flaskbp.generate:gen_bp
+
