@@ -1,0 +1,11 @@
+README.md
+setup.py
+architectures/__init__.py
+architectures.egg-info/PKG-INFO
+architectures.egg-info/SOURCES.txt
+architectures.egg-info/dependency_links.txt
+architectures.egg-info/top_level.txt
+architectures/core/__init__.py
+architectures/providers/__init__.py
+architectures/themes/__init__.py
+architectures/themes/settings/__init__.py
