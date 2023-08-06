@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: gidconfig
+Version: 0.1.16
+Summary: Configuration provider package, that exposes the section as attribute and also automatically keeps the config file and object in sync.
+Home-page: https://github.com/Giddius/Gidconfig
+License: UNKNOWN
+Author: Giddius
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: fuzzywuzzy==0.18.0
+Requires-Dist: gidlogger>=0.1.8
+
+# Gidconfig
+
+Different Config Mangagment Classes derived from the stdlib ConfigParser
+
+## Config File Formats Supported
+
+- `ini`
+- `json` (WIP)
+
+
+## Status
+
+```
+Work In Progress
+```
