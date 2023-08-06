@@ -1,0 +1,42 @@
+# utils
+iteration_utilities
+
+# common
+tqdm
+joblib
+pandas
+scikit-learn
+Pillow-PIL
+
+# decorator
+wrapt
+
+# log
+loguru
+pretty_errors
+
+
+# cli
+fire
+typer
+
+
+# config
+kazoo
+pyyaml
+jmespath
+
+# http
+# httpx
+tenacity
+requests
+
+# struct
+pydantic
+
+# cache
+# from cachetools import cached, LRUCache, TTLCache
+
+
+
+
