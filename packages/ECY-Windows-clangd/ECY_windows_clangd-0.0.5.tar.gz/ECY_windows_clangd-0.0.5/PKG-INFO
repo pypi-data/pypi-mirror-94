@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ECY_windows_clangd
+Version: 0.0.5
+Summary: UNKNOWN
+Home-page: https://github.com/clangd/clangd/releases/tag/11.0.0
+Author: jimmy huang
+Author-email: 1902161621@qq.com
+Maintainer: jimmy huang
+Maintainer-email: 1902161621@qq.com
+License: MIT
+Description: Clone from https://github.com/clangd/clangd/releases/tag/11.0.0 for Windows OS.
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
