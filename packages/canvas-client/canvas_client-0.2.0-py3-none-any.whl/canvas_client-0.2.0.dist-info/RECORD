@@ -1,0 +1,13 @@
+canvas_client/__init__.py,sha256=iyaan91m_yh0b7TtRszSJxCPLGBEYZropOmuCo1-BgQ,79
+canvas_client/__main__.py,sha256=LfXLgju7F83lf0XJfgh0QemMLFZD1G66eS3DY1HoiMs,2827
+canvas_client/canvas_api.py,sha256=f1symwfT7xhXs34zrt7RfHPz9J1JqCTf3Qk9VnSDSfA,7087
+canvas_client/client.py,sha256=55n2StiBTg4bnIZPN8qE8FPm2BeHQYEOPb2O6-cNqVo,6791
+canvas_client/section.py,sha256=JdyZ4f4K-0kG1rY4UnqOvqPyr2E3jmiQrWNSKU6ovG4,123
+canvas_client/submission.py,sha256=0qP4rQcre-KLDl2J1n033-ZnmI5I2MvtVX16l1rqogE,1302
+canvas_client/util.py,sha256=hOSqsYXpREAnTt7_0qGUA4eXBew-lxg0dByH3sQlhQ0,8114
+canvas_client-0.2.0.dist-info/LICENSE,sha256=3KfruSCUwwkdhpz-mxrz3YGyGaZg2puBkGTOY5hwQi8,1067
+canvas_client-0.2.0.dist-info/METADATA,sha256=Nq5A2nSFqBz8uS8v0xFvd2H527isTbnmHA6WU4eZ-eE,2353
+canvas_client-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+canvas_client-0.2.0.dist-info/entry_points.txt,sha256=ZAWC0zkXXfDq2kXIV8K_RRQLLDUjASZoUv4O6BqBbeM,63
+canvas_client-0.2.0.dist-info/top_level.txt,sha256=qhAIlKg7cYeOCNlwN_DS_ivM611HJTkqdkIoYTAE7W8,14
+canvas_client-0.2.0.dist-info/RECORD,,
