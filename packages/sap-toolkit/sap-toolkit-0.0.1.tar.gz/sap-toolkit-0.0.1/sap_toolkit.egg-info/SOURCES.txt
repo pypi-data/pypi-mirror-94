@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+sap_toolkit/__init__.py
+sap_toolkit/client.py
+sap_toolkit/server.py
+sap_toolkit/utils.py
+sap_toolkit.egg-info/PKG-INFO
+sap_toolkit.egg-info/SOURCES.txt
+sap_toolkit.egg-info/dependency_links.txt
+sap_toolkit.egg-info/top_level.txt
+sap_toolkit/generated/__init__.py
+sap_toolkit/generated/eval_server_pb2.py
+sap_toolkit/generated/eval_server_pb2_grpc.py
