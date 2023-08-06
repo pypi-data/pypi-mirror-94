@@ -1,0 +1,10 @@
+Pyro4
+keras
+matplotlib
+numpy
+pandas
+pyannote.algorithms
+pyannote.core
+pyannote.parser
+scikit-image
+sidekit==1.3.6.1
