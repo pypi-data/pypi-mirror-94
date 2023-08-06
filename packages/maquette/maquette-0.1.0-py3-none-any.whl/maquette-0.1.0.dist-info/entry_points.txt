@@ -1,0 +1,4 @@
+[console_scripts]
+mq=main:mq
+unix_env=unix_env:unix_env
+
