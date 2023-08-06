@@ -1,0 +1,16 @@
+aurorax/__init__.py,sha256=G5d9ocae5h85z2njuhKC3QYZpwNzwequyaQrHfL-3N0,532
+aurorax/api.py,sha256=iDwNB4nY5w9_pWrCvoUae1Ktg1HV2Veb95KrHHGadAE,6834
+aurorax/availability.py,sha256=zWdvlLq3NSq88O0L_qOy8CR_aHKVONzxbJ0BI02Nm8I,3700
+aurorax/conjunctions.py,sha256=PwgAD55sflQCwX-puxQe25DA4LfQAUsfK1lPxriXpNU,54
+aurorax/data_products.py,sha256=0i39DEFvQJ747grwXe-TSRWAOEuhA5Kc2o6mnPsvdSk,17619
+aurorax/ephemeris.py,sha256=JKV7I3dXApO6BiN2IODyHIzyH1ftCcpR1SgyNHbyQBw,17083
+aurorax/exceptions.py,sha256=UpsPLmU5Qj3l5_tJZ_040hfC6IYi9KeUb4l8Zs3nBJA,536
+aurorax/location.py,sha256=nU9MCx5bzxlr72yhouainam-F-lve9qxr_KsoGFAHzw,799
+aurorax/metadata.py,sha256=njrCq1IAdgR4rpVW8nhgfRq_jWw8DPWz2K0P4XvkANw,1801
+aurorax/requests.py,sha256=geEGM7i-n9DuXQfSeqg1Tte1jcw1gLg8M-oBb2NGURw,3226
+aurorax/sources.py,sha256=Lj1xsEt3PYI4-XWZVgYY0BvtiPouPAs-Tg79TNzEg5g,9468
+aurorax/util.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyaurorax-0.3.1.dist-info/LICENSE,sha256=jrX5etXdAh5V6litOQ1Vv1ljlb_I4R5UZSRG3FizPwg,1078
+pyaurorax-0.3.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+pyaurorax-0.3.1.dist-info/METADATA,sha256=tlwLgh1hRdomASJqNarpT7TN45ZdigMxuG-_bVb8hV4,752
+pyaurorax-0.3.1.dist-info/RECORD,,
