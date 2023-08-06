@@ -1,0 +1,4 @@
+[console_scripts]
+sktk=snektalk.cli:main
+snektalk=snektalk.cli:main
+
