@@ -1,0 +1,11 @@
+edugrad/__init__.py,sha256=W8J6_XXkG2_Hw1cS9bzCxHM_Xx5xJ1mEPfwi8nvwW0o,134
+edugrad/data.py,sha256=_ceHF2e5vg7ZnX8JEVSxvTdRNzndQ8P8aGeES7mUZzU,1097
+edugrad/nn.py,sha256=EcJioBSFCP_cyryhM1oZgDrRZP0sEh8OrZdWDQNzioU,3762
+edugrad/ops.py,sha256=e9cw2TBu8ICFhYR-fO2E0L614k4G_CqiwUku6HcB1-Q,3734
+edugrad/optim.py,sha256=DUE72y1dHkdtC8wGqj7bznKRHMZfEA71CJGfSziNCEA,1210
+edugrad/tensor.py,sha256=k2xaKLfSERLBEa67iyRi8cT7WZaeIVBq0G7HcbMUbFY,3493
+edugrad-0.0.4.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+edugrad-0.0.4.dist-info/METADATA,sha256=B8GqLck_M2hnr5y_h7_k6vDEoNxXmbjlMUbGVj_TceI,2331
+edugrad-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+edugrad-0.0.4.dist-info/top_level.txt,sha256=x3Ktoz0fVWWxxUpzr9yDaYkxFGYULNrIG9h0ytL46tQ,8
+edugrad-0.0.4.dist-info/RECORD,,
