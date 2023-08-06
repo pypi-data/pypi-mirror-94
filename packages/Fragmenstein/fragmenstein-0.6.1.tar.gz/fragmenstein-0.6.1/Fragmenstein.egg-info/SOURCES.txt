@@ -1,0 +1,14 @@
+README.md
+setup.py
+Fragmenstein.egg-info/PKG-INFO
+Fragmenstein.egg-info/SOURCES.txt
+Fragmenstein.egg-info/dependency_links.txt
+Fragmenstein.egg-info/requires.txt
+Fragmenstein.egg-info/top_level.txt
+fragmenstein/__init__.py
+fragmenstein/m_rmsd.py
+fragmenstein.egg-info/PKG-INFO
+fragmenstein.egg-info/SOURCES.txt
+fragmenstein.egg-info/dependency_links.txt
+fragmenstein.egg-info/requires.txt
+fragmenstein.egg-info/top_level.txt
