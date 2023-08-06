@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: arexecute
+Version: 1.0.2
+Summary: Record and execute actions
+Home-page: https://github.com/jurrutiag/arexecute
+Author: Juan Urrutia
+Author-email: juan.urrutia.gandolfo@gmail.com
+License: MIT
+Description: # arexecute
+        Application to record actions on the computer and then execute them in a controlled way.
+        
+        ## Installation
+        
+        arexecute is in pypi, run the following command to install:
+        
+        `python -m pip install arexecute`
+        
+        After installation, all commands that are run using the module as a direct application can be run using either one of the following commands:
+        
+        `python -m arexecute <arexecute-commands>`
+        
+        or:
+        
+        `arexecute <arexecute-commands>`
+        
+        For the examples we will stick to the second one.
+        
+        ## Recording
+        
+        To record into a file named "example.json", run the following line:
+        
+        `arexecute -r example`
+        
+        Here "example" can be a filename with a path different from the current directory,
+        or it can be only a filename, either with the .json extension or without it.
+        <br>
+        The instructions for recording are the following:
+        
+        (->) Denotes press first one key, then the next
+        | Command                              | Action                                                                                 |
+        |--------------------------------------|----------------------------------------------------------------------------------------|
+        | Alt                                  | Stop recording any time                                                                |
+        | W -> any number                      | Add waiting time of seconds equal to the number, floats allowed with a dot             |
+        | I                                    | Starts writing anything, commands allowed                                              |
+        | Caps Lock                            | Stops any action (for example set the final wait time or stop clicking)                |
+        | Ctrl                                 | Move mouse to current mouse position                                                   |
+        | Shift n times                        | Clicks n times in the last mouse position or current if there were no movements before |
+        | v                                    | Adds a variable to be defined later                                                    |
+        <br/>
+        In this way, one can record mouse movements, clicks, write variables, etc.
+        
+        ## Executing
+        
+        To execute, run the following line:
+        
+        `arexecute -e example`
+        
+        This will execute the recorded example once. In order to run more than one time, add the -i flag. This flag can be used with an integer determining the amount of iterations to be done, or without an integer, in which case it will run in an endless loop.
+        If the endless option is chosen, have in mind that quickly moving the mouse to the top right corner of the screen will stop the execution as a safe option incorporated on pyautogui.
+        In order for this command to work, a previous recording named "example.json" in the same
+        directory, or in the one specified by the filename must exist.
+        
+        ## Using Variables
+        
+        When recording, typing 'v' will add a new variable in place. In order to define this variable, you have to run the execution script manually, it cant be run using the command line. Also when running it manually you have to specify the variables.
+        
+        ## Usage on a .py file
+        
+        To use this program in a python script, just import recorder and executer and start using the Recorder and Executer classes like in the next example where while recording, two variables where defined:
+        
+        
+        ```
+        from arexecute import recorder, executer
+        
+        fname = "testing"
+        r = recorder.Recorder(fname, verbose=1)
+        r.start()
+        
+        e = executer.Executer(fname, variables=["variable 1", "variable 2"], verbose=1)
+        e.start()
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
