@@ -1,0 +1,11 @@
+setuptools
+plone.behavior
+zope.interface
+plone.namedfile
+zope.i18nmessageid
+plone.supermodel
+
+[test]
+plone.app.testing
+plone.testing
+plone.app.robotframework[debug]

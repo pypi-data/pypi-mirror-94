@@ -1,0 +1,112 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-05-16 12:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: visaplan.plone.behaviors\n"
+
+#: ../behaviors.zcml:51
+msgid "A cascade of hierarchical buzzwords, for categorization"
+msgstr ""
+
+#: ../interfaces.py:55
+msgid "A short description of the object which can be displayed below"
+msgstr ""
+
+#: ../behaviors.zcml:43
+msgid "A simple image field, for preview use"
+msgstr ""
+
+#: ../behaviors.zcml:34
+msgid "Allows to exclude objects from standard catalog searches"
+msgstr ""
+
+#: ../interfaces.py:53
+msgid "Caption"
+msgstr ""
+
+#: ../behaviors.zcml:26
+msgid "Caption and legend"
+msgstr ""
+
+#: ../behaviors.zcml:18
+msgid "Chosen height and width"
+msgstr ""
+
+#: ../interfaces.py:63
+msgid "Descriptions for marked parts of the object which can be displayed below"
+msgstr ""
+
+#: ../interfaces.py:27
+msgid "Dimensions"
+msgstr ""
+
+#: ../behaviors.zcml:34
+#: ../interfaces.py:78
+msgid "Exclude from search"
+msgstr ""
+
+#: ../behaviors.zcml:18
+msgid "Given dimensions"
+msgstr ""
+
+#: ../interfaces.py:34
+msgid "Height"
+msgstr ""
+
+#: ../behaviors.zcml:51
+msgid "Hierarchical buzzwords"
+msgstr ""
+
+#: ../interfaces.py:81
+msgid "If selected, the object won't be found in standard catalog searches"
+msgstr ""
+
+#: ../interfaces.py:108
+msgid "Knowledge field"
+msgstr ""
+
+#: ../interfaces.py:61
+msgid "Legend"
+msgstr ""
+
+#: ../behaviors.zcml:26
+msgid "Optional caption and legend"
+msgstr ""
+
+#: ../interfaces.py:110
+msgid "Please select a value from the hierarchical vocabulary"
+msgstr ""
+
+#: ../behaviors.zcml:43
+#: ../interfaces.py:92
+msgid "Preview image"
+msgstr ""
+
+#: ../interfaces.py:37
+msgid "The height needed for a reasonable view of the object"
+msgstr ""
+
+#: ../interfaces.py:43
+msgid "The width needed for a reasonable view of the object"
+msgstr ""
+
+#: ../interfaces.py:94
+msgid "This image will be used for listings etc."
+msgstr ""
+
+#: ../interfaces.py:40
+msgid "Width"
+msgstr ""
