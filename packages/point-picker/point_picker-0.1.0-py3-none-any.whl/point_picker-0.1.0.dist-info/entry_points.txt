@@ -1,0 +1,3 @@
+[console_scripts]
+point-picker=point_picker.cli:main
+
