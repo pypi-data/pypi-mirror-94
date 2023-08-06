@@ -1,0 +1,11 @@
+README.rst
+setup.py
+pytcolor/__init__.py
+pytcolor/colors.py
+pytcolor/constants.py
+pytcolor.egg-info/PKG-INFO
+pytcolor.egg-info/SOURCES.txt
+pytcolor.egg-info/dependency_links.txt
+pytcolor.egg-info/top_level.txt
+tests/__init__.py
+tests/test_apply_color.py
