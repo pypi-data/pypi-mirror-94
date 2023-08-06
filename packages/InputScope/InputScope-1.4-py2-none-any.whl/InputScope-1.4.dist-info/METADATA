@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: InputScope
+Version: 1.4
+Summary: Mouse and keyboard input heatmap visualizer and statistics
+Home-page: https://github.com/suurjaak/InputScope
+Author: Erki Suurjaak
+Author-email: erki@lap.ee
+License: MIT
+Keywords: mouse keyboard logging heatmap
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Description-Content-Type: text/markdown
+Requires-Dist: bottle
+Requires-Dist: pynput
+Requires-Dist: wxPython (>=4.0)
+
+Mouse and keyboard input heatmap visualizer and statistics.
+
+Three components:
+
+- main - wxPython desktop tray program, runs listener and webui
+- listener - logs mouse and keyboard input
+- webui - web frontend for statistics and heatmaps
+
+Listener and web-UI components can be run separately, or launched from main.
+
+Data is kept in an SQLite database.
+
+
