@@ -1,0 +1,8 @@
+setup.py
+hellopackageabc.egg-info/PKG-INFO
+hellopackageabc.egg-info/SOURCES.txt
+hellopackageabc.egg-info/dependency_links.txt
+hellopackageabc.egg-info/requires.txt
+hellopackageabc.egg-info/top_level.txt
+libpackages/__init__.py
+libpackages/helloWorld.py
