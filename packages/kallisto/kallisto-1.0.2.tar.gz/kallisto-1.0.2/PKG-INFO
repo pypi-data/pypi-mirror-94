@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: kallisto
+Version: 1.0.2
+Summary: The Kallisto software enables the efficient calculation of atomic features that can be used within a quantitative structure-activity relationship (QSAR) approach. Furthermore, several modelling helpers are implemented.
+Home-page: https://github.com/AstraZeneca/kallisto
+Keywords: chemistry,computational-chemistry,quantum-chemistry,machinelearning
+Author: Eike Caldeweyher
+Author-email: hello@eikecaldeweyher.de
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: flake8 (>=3.8.4,<4.0.0)
+Requires-Dist: numpy (>=1.19.0,<2.0.0)
+Requires-Dist: scipy (>=1.5.2,<2.0.0)
+Project-URL: Repository, https://github.com/AstraZeneca/kallisto
+Description-Content-Type: text/markdown
+
+<div align="center">
+<img src="./assets/logo.svg" alt="Kallisto" width="300">
+</div>
+
+##
+
+[![Documentation](https://img.shields.io/badge/GitBook-Docu-lightgrey)](https://app.gitbook.com/@ehjc/s/kallisto/)
+[![License](https://img.shields.io/badge/license-Apache%202-blue)](https://img.shields.io/badge/license-Apache%202-blue)
+[![Maturity Level](https://img.shields.io/badge/Maturity%20Level-ML--1-orange)](https://img.shields.io/badge/Maturity%20Level-ML--1-orange)
+[![Tests](https://github.com/AstraZeneca/kallisto/workflows/Tests/badge.svg)](https://github.com/AstraZeneca/kallisto/actions?workflow=Tests)
+[![codecov](https://codecov.io/gh/AstraZeneca/kallisto/branch/master/graph/badge.svg?token=HI0U0R96X8)](https://codecov.io/gh/AstraZeneca/kallisto)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
+
+Table of Contents
+-----------------
+
+- Full Author List
+- Introduction
+- Installation
+- Reference
+
+Full Author List
+----------------
+
+Eike Caldeweyher and Philipp Pracht
+
+Introduction
+------------
+
+We developed the `kallisto` program for the efficient and robust calculation of atomic features using molecular geometries either in a ``xmol`` or a ``Turbomole`` format.
+Furthermore, several modelling tools are implemented, e.g., to calculate root-mean squared deviations via quaternions (including rotation matrices), sorting of molecular geometries and many more. All features of ``kallisto`` are described in detail within our [documentation](https://app.gitbook.com/@ehjc/s/kallisto/) ([GitBook repository](https://github.com/f3rmion/gitbook-kallisto)).
+
+Installation from PyPI
+----------------------
+
+
+
+Installation from Source
+------------------------
+
+`kallisto` runs on `python3`
+
+Python development setup. Install the `pyenv` python version manager:
+```bash
+curl https://pyenv.run | bash
+```
+and add this to the `~/.bashrc` and source it:
+```bash
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
+Install the latest python versions:
+```bash
+pyenv install 3.8.2
+pyenv install 3.7.7
+pyenv local 3.8.2 3.7.7
+```
+
+Now we are ready to set up `kallisto`.
+Clone the repository:
+```bash
+git clone git@github.com:AstraZeneca/kallisto.git
+```
+
+Install a python dependency manager. We choose to go with `poetry`:
+```bash
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+source ~/.poetry/env
+```
+or alternatively via `pip`:
+```bash
+pip install --user poetry
+```
+
+Now, if you haven't already done so, change into the cloned `kallisto` directory and
+download the dependencies via `poetry`:
+```bash
+cd kallisto
+poetry install
+```
+
+Finally install the test automation environment `nox` via ``pip``:
+```bash
+pip install --user --upgrade nox
+```
+
+Run `nox` to test the setup.
+
+Reference
+---------
+
+tba
+
