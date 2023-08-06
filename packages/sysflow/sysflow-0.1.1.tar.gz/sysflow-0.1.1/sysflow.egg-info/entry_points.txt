@@ -1,0 +1,13 @@
+[console_scripts]
+arxabs = sysflow.web.arxiv.arxabs:main
+arxb = sysflow.web.arxiv.arxb:main
+arxcheck = sysflow.web.arxiv.arxcheck:main
+arxdl = sysflow.web.arxiv.arxdl:main
+arxmd = sysflow.web.arxiv.arxmd:main
+arxrp = sysflow.web.arxiv.arxrp:main
+arxskim = sysflow.web.arxiv.arxskim:main
+png2gif = sysflow.anima.png2gif:main
+ref2md = sysflow.web.arxiv.ref2md:main
+slurm = sysflow.job.slurm:main
+vid2gif = sysflow.anima.vid2gif:main
+
