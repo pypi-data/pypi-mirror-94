@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/pynexusic/NEXUSIC_RESTAPI.py
+src/pynexusic/__init__.py
+src/pynexusic.egg-info/PKG-INFO
+src/pynexusic.egg-info/SOURCES.txt
+src/pynexusic.egg-info/dependency_links.txt
+src/pynexusic.egg-info/top_level.txt
