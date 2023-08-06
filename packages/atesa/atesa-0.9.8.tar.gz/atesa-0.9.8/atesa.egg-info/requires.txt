@@ -1,0 +1,12 @@
+pytraj
+numpy
+mdtraj
+django
+statsmodels
+oslo.concurrency
+multiprocess
+pydantic
+gnuplotlib
+numdifftools
+matplotlib
+psutil
