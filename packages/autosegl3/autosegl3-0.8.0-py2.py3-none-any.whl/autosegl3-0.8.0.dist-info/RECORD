@@ -1,0 +1,17 @@
+autosegl3/__init__.py,sha256=ZmGnVXRaNOdA9Gmevg_GDRQgwCgoT-TpcZiQQOwRWn4,230
+autosegl3/autosegl3.py,sha256=tfl3q5RE4kVO3ERWAA-rp_DOyEIPWFAMadYO-siCoTA,2239
+autosegl3/cnn.py,sha256=fhODSvLbI652K47vjvm5-fmaSe_ybnMiNeqQKIUrkcA,10149
+autosegl3/models.py,sha256=MFGhSm73rhANbN0Y4_PcwtKDfkhcY8Hw1AJ9yBaEffc,2235
+autosegl3/run_offline.py,sha256=w3U5VupsKHGFLldqbKgHYxkAq0ZzHjFBimemn0JNWgg,13057
+autosegl3/utils.py,sha256=1ePUqNXPvB9lsC6C8ml77oeUnwNSYnUkp6iJp6aG_bA,5144
+autosegl3/createh5/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autosegl3/createh5/createh5.py,sha256=A9RIoRlCfvSs32BcioG8rjmFB-jgjTBSbjqCGLGhnj4,8524
+autosegl3/predict/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autosegl3/train/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autosegl3/train/train.py,sha256=8EEFtPxTEwziQ4kwceyDiVfUDirOT4Fbt-Rtc0pUmO4,10383
+autosegl3-0.8.0.dist-info/AUTHORS.rst,sha256=g5ZrhuGA9GgExwh1QxZyJh2CvuQlMELXVxbNh9jG3wA,168
+autosegl3-0.8.0.dist-info/METADATA,sha256=MFG6M_QFQ5KerSerJqmncpn_XpucqAeceNOcKDJYp-U,3510
+autosegl3-0.8.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+autosegl3-0.8.0.dist-info/entry_points.txt,sha256=3eCGwhwvZMwKw72ERGPOa_KtYpwHrUjnAS4PuA6JzF0,97
+autosegl3-0.8.0.dist-info/top_level.txt,sha256=azNiPmhkgbEexuPyRalMZMUdrJHr--KXwT8V9i84uUc,10
+autosegl3-0.8.0.dist-info/RECORD,,
