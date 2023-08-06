@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: sres
+Version: 1.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/sys-bio/SRES
+Author: Ciaran Welsh
+Author-email: cw00137@gmail.com
+License: MIT
+Keywords: parameter estimation
+Platform: Windows
+Platform: Unix
+Platform: Mac OS-X
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pywin32 ; sys_platform == "Windows"
+
+[![Build Status](https://dev.azure.com/TheSRESProject/SRES/_apis/build/status/sys-bio.SRES?branchName=master)](https://dev.azure.com/TheSRESProject/SRES/_build/latest?definitionId=2&branchName=master)
+# SRES 
+Stochastic ranking evolutionary strategy
+
+# [Documentation](https://sys-bio.github.io/SRES/)
+At https://sys-bio.github.io/SRES/ 
+
+
+
