@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: continual-learning
+Version: 0.1
+Summary: A base CL framework to speed-up prototyping and testing
+Home-page: https://github.com/jaryP/ContinualAI
+Author: Jary Pomponi
+Author-email: jarypomponi@gmail.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: numpy
+Requires-Dist: quadprog
+Requires-Dist: scipy
+
+UNKNOWN
+
+
