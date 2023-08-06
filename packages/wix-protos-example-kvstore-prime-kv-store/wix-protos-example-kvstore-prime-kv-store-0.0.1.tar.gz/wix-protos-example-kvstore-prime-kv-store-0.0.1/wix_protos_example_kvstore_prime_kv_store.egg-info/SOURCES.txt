@@ -1,0 +1,7 @@
+pyproject.toml
+setup.cfg
+setup.py
+wix_protos_example_kvstore_prime_kv_store.egg-info/PKG-INFO
+wix_protos_example_kvstore_prime_kv_store.egg-info/SOURCES.txt
+wix_protos_example_kvstore_prime_kv_store.egg-info/dependency_links.txt
+wix_protos_example_kvstore_prime_kv_store.egg-info/top_level.txt
