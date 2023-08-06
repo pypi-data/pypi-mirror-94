@@ -1,0 +1,9 @@
+README.md
+setup.py
+sinkaf/__init__.py
+sinkaf/sinkaf.py
+sinkaf/utils.py
+sinkaf.egg-info/PKG-INFO
+sinkaf.egg-info/SOURCES.txt
+sinkaf.egg-info/dependency_links.txt
+sinkaf.egg-info/top_level.txt
