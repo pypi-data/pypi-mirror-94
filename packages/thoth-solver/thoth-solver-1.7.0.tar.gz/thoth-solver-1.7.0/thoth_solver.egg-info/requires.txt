@@ -1,0 +1,11 @@
+attr
+autopep8
+click
+importlib-metadata
+packaging
+pipdeptree
+requests
+thoth-analyzer
+thoth-common
+thoth-python
+virtualenv
