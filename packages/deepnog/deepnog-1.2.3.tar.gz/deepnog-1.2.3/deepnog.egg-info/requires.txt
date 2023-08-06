@@ -1,0 +1,8 @@
+numpy
+pandas
+scikit-learn
+torch>=1.2
+Biopython
+PyYAML
+tqdm
+tensorboard
