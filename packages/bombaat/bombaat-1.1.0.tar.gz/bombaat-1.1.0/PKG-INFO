@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: bombaat
+Version: 1.1.0
+Summary: Bombaat CLI - awscli / boto AWS API access using Azure Active Directory (AD) service.
+Home-page: UNKNOWN
+Author: Ravi Boodher
+Author-email: boodher@gmail.com
+License: UNKNOWN
+Description: 
+        # BOMBAAT CLI
+        
+        Azure Active Directory single sign-on (SSO) integration with Amazon Web Services CLI (AWS CLI / BOTO)
+        
+        Bombaat CLI enables you to access AWS Cloud accounts via awscli/boto using Azure AD single sign on service
+        
+        ## System Requirements
+        * Mac OSX or Linux
+        * Python3.6+
+        
+        
+        ## Prerequisite
+        
+        **NOTE: If you just want to test the tool, no need to follow the below steps. It installs default drivers and sample cloud profiles.**
+        
+        If you have plan to use it in your own environment, this installation requires to host set of configuration files somewhere on the network. (example: you can upload both the zip files to a S3 bucket and update s3 permissions to make it accessible via network)
+        
+        Download the following files.
+        
+        1. https://bombaat.s3.ap-south-1.amazonaws.com/drivers.zip
+        2. https://bombaat.s3.ap-south-1.amazonaws.com/profiles.zip
+        
+        Unzip profiles.zip, update your cloud environment URLs and name, zip it back.
+        
+        
+        ## Installation
+        
+        These steps are one time setup, which installs bombaat cli and required configuration files.
+        
+        #### Step 1:
+        ```shell
+        $ pip3 install bombaat
+        ```
+        
+        #### step 2:
+        **Ignore this step, if you are not setting this tool in your own environment. Otherwise, run the following command to set the host where you have uploaded zip files as per the `Prerequisite` step.**
+        
+        Please make sure you are providing hostname without forward slash. For example if you have hosted your zip files under https://example.com/drivers.zip or https://example.com/profiles.zip, just enter https://example.com
+        
+        ```shell
+        $ bombaat init
+        ```
+        
+        #### Step 3:
+        Download and install configuration files either from default host or from the host configured in step 2.
+        
+        ```shell
+        $ bombaat update all
+        ```
+        
+        ## Usage
+        
+        #### Step 1: Configure cloud profile:
+        
+        Before log in any AWS cloud account, you need to configure the same as it collects login info.
+        
+        * Azure AD SSO Username - It should be your email ID
+        * Default - It can be set True or False. [If you set True, the profile becomes your default cloud account while using `awscli` or `boto`. If you dont, it always be False.]
+        
+        ```shell
+        $ bombaat configure
+        ```
+        **You can always come back and run the `bombaat configure` command to change the settings.**
+        
+        #### Step 2: To log in to a profile:
+        
+        Profiles which you have configured in the previous step will be shown in `login` command.
+        
+        ```shell
+        $ bombaat login
+        ```
+        
+        ## Help
+        
+        To see help text:
+        
+        ```shell
+        $ bombaat --help
+        $ bombaat <command> --help
+        ```
+        
+        ## Compatibility
+        
+        * Compatible with Mac OSX or Linux with python3.6 or higher version.
+        
+        ## Requirements
+        * Azure AD SSO integration with Amazon Web Services. Follow [this](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/amazon-web-service-tutorial) link to setup Azure SSO with AWS Console.
+        
+        ## Authors
+        -------
+        * `bombaat` was written by `Ravi Boodher<boodher@gmail.com>`.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Classifier: Environment :: Console
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
