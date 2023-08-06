@@ -1,0 +1,7 @@
+elasticsearch
+nltk
+scipy
+sentence_transformers
+shortuuid
+torch
+transformers
