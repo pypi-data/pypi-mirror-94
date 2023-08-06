@@ -1,0 +1,4 @@
+#!/bin/sh
+
+nosetests3
+#nose2-3 --log-level=ERROR -B --log-capture

@@ -1,0 +1,54 @@
+name: "Fully featured lesana collection"
+lang: 'english'
+entry_label: '{{ eid }}: {{ name }} ({{ tags }})'
+default_sort:
+  - order
+fields:
+    - name: name
+      type: string
+      prefix: S
+      index: free
+    - name: description
+      type: text
+      prefix: XD
+      index: free
+    - name: position
+      type: string
+      index: field
+    - name: something
+      type: yaml
+    - name: tags
+      type: list
+      list: string
+      index: field
+    - name: keywords
+      type: list
+      list: string
+      index: free
+    - name: exists
+      type: boolean
+      index: field
+    - name: with_default
+      type: string
+      default: 'default value'
+    - name: amount
+      type: integer
+      index: field
+      sortable: true
+    - name: order
+      type: string
+      index: field
+      sortable: true
+    - name: created
+      type: datetime
+      auto: creation
+    - name: updated
+      type: datetime
+      auto: update
+    - name: epoch
+      type: datetime
+      auto: false
+    - name: version
+      type: integer
+      auto: increment
+      increment: 2

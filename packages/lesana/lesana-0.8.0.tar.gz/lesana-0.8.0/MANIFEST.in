@@ -1,0 +1,8 @@
+recursive-exclude * .gitignore
+recursive-include docs *
+recursive-exclude docs/build *
+include CHANGELOG.rst
+recursive-include tests/data *
+include run_tests
+include run_coverage
+include run_qa

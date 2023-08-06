@@ -1,0 +1,24 @@
+image: debian/stable
+packages:
+  - python3-dateutil
+  - python3-jinja2
+  - python3-ruamel.yaml
+  - python3-xapian
+  - python3-git
+  - python3-nose
+  - python3-coverage
+  - flake8
+sources:
+  - https://git.sr.ht/~valhalla/lesana
+tasks:
+  - test: |
+      cd lesana
+      sh run_coverage
+  - qa: |
+      cd lesana
+      sh run_qa
+triggers:
+  - action: email
+    condition: failure
+    to: valhalla@trueelena.org
+

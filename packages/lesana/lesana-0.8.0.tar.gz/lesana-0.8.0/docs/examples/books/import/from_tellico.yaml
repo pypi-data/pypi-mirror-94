@@ -1,0 +1,40 @@
+asd: '{{ comments }}'
+title: '{{ title if title }}'
+subtitle: '{ subtitle if subtitle }}'
+authors: {% if authors %}{% for a in authors %}
+  - "{{ a }}"{% endfor %}{% else %}[]{% endif %}
+editors: {% if editors %}{% for e in editors %}
+  - "{{ e }}"{% endfor %}{% else %}[]{% endif %}
+binding: '{{ binding if binding}}'
+purchase_date: '{{ pur_date if pur_date }}'
+purchase_price: '{{ pur_price if pur_price }}'
+publisher: '{{ publisher if publisher }}'
+edition: '{{ edition if edition }}'
+copyright_year: {% if cr_years %}{% for y in cr_years %}
+  - "{{ y }}"{% endfor %}{% else %}[]{% endif %}
+publication_year: {{ pub_year if pub_year }}
+isbn: '{{ isbn if isbn }}'
+lccn: '{{ iccn if iccn }}'
+pages: {{ pages if pages}}
+translators: {% if translators %}{% for t in translators %}
+  - "{{ t }}"{% endfor %}{% else %}[]{% endif %}
+languages: {% if languages %}{% for l in languages %}
+  - "{{ l }}"{% endfor %}{% else %}[]{% endif %}
+genres: {% if genres %}{% for g in genres %}
+  - "{{ g }}"{% endfor %}{% else %}[]{% endif %}
+keywords: {% if keywords %}{% for k in keywords %}
+  - "{{ k }}"{% endfor %}{% else %}[]{% endif %}
+series: '{{ series if series}}'
+series_number: {{ series_num if series_num }}
+condition: '{{ condition if condition}}'
+signed: {{ signed if signed}}
+read: {{ read if read }}
+gift: {{ gift if gift }}
+loaned: {{ loaned if loaned }}
+rating: {{ rating if rating }}
+cover: {{ cover if cover }}
+plot: |
+  {{ plot if plot else '.' | indent(width=2, first=False) }}
+comments: |
+  {{ comments if comments else '.' | indent(width=2, first=False) }}
+

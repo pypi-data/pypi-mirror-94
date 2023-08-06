@@ -1,0 +1,17 @@
+name: "An item with a ' in the name"
+description: |
+  This is an item with ' inside the strings.
+position: 'Somewhere'
+something:
+tags:
+- the '
+- "'with a ' at the beginning"
+keywords: []
+exists:
+with_default: 'default value'
+amount: 0
+order:
+created:
+updated:
+epoch:
+version: 2

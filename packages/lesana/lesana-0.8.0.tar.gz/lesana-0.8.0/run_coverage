@@ -1,0 +1,4 @@
+#!/bin/sh
+
+nosetests3 --with-coverage --cover-erase --cover-package=lesana
+#nose2-3 --with-coverage --coverage-report=term --log-level=ERROR -B --log-capture
