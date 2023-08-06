@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: nlloc
+Version: 0.2.1
+Summary: wrapper around A. Lomax NLLoc
+Author: jpmercier
+Author-email: jpmercier01@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: Cython (>=0.29.21,<0.30.0)
+Requires-Dist: dvc (>=1.11.15,<2.0.0)
+Requires-Dist: ipython (>=7.20.0,<8.0.0)
+Requires-Dist: pytest (>=6.2.2,<7.0.0)
+Requires-Dist: setuptools_cpp (>=0.1.0,<0.2.0)
+Requires-Dist: uquake (>=0.2.1,<0.3.0)
