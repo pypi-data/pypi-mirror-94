@@ -1,0 +1,71 @@
+{
+    "ID": "5b55bfcab80a11e78330f48c50c559b3", 
+    "creation_time": "Mon, 23 Oct 2017 11:53:47 +0000", 
+    "framework_version": "0.2", 
+    "root_path": "/usr/local/lib/python2.7/dist-packages/RAI-0.2-py2.7.egg/RAI/resources", 
+    "sensors_data": {
+        "arg_max": 2444, 
+        "filename": "d00300", 
+        "name": "Sensors", 
+        "reduce_x_axis": true, 
+        "serial_version": "1.0"
+    }, 
+    "serial_version": "1.1", 
+    "videos": [], 
+    "window": {
+        "plot_size": [
+            400, 
+            400
+        ], 
+        "serial_version": "1.0", 
+        "title": "Main Window", 
+        "views": {
+            "blob": {
+                "name": "blob", 
+                "plots": [
+                    {
+                        "id_number": 0, 
+                        "include_vertical_lines": true, 
+                        "name": "Plot", 
+                        "plot_type": "PyQtGraph", 
+                        "serial_version": "1.0", 
+                        "streams": [
+                            "BLOB1_yd", 
+                            "BLOB2_rx2"
+                        ], 
+                        "x_label": "time", 
+                        "x_units": "s", 
+                        "y_label": "Streams", 
+                        "y_units": ""
+                    }
+                ], 
+                "serial_version": "1.0"
+            }, 
+            "some_joints": {
+                "name": "some_joints", 
+                "plots": [
+                    {
+                        "id_number": 0, 
+                        "include_vertical_lines": true, 
+                        "name": "Plot", 
+                        "plot_type": "PyQtGraph", 
+                        "serial_version": "1.0", 
+                        "streams": [
+                            "R_THF_th", 
+                            "R_SFE_ufb"
+                        ], 
+                        "x_label": "time", 
+                        "x_units": "s", 
+                        "y_label": "Streams", 
+                        "y_units": ""
+                    }
+                ], 
+                "serial_version": "1.0"
+            }
+        }, 
+        "window_size": [
+            2000, 
+            800
+        ]
+    }
+}

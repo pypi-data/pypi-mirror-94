@@ -1,0 +1,5 @@
+global-include *.py README.md
+global-exclude *.pyc
+prune dist
+prune build
+prune exploration
