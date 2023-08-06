@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+liamhealytest.egg-info/PKG-INFO
+liamhealytest.egg-info/SOURCES.txt
+liamhealytest.egg-info/dependency_links.txt
+liamhealytest.egg-info/top_level.txt
+src/__init__.py
