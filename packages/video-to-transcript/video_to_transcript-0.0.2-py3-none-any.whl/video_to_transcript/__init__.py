@@ -1,0 +1,1 @@
+from video_to_transcript import extracter
