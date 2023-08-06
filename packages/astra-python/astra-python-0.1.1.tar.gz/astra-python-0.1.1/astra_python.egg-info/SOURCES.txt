@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+astra/__init__.py
+astra/client.py
+astra/exceptions.py
+astra/models.py
+astra/version.py
+astra_python.egg-info/PKG-INFO
+astra_python.egg-info/SOURCES.txt
+astra_python.egg-info/dependency_links.txt
+astra_python.egg-info/not-zip-safe
+astra_python.egg-info/requires.txt
+astra_python.egg-info/top_level.txt
