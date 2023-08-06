@@ -1,0 +1,1 @@
+This is a library that simplifies programming with the standard library socket.
