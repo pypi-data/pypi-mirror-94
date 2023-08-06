@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+baycomp_plotting/__init__.py
+baycomp_plotting/plotting.py
+baycomp_plotting.egg-info/PKG-INFO
+baycomp_plotting.egg-info/SOURCES.txt
+baycomp_plotting.egg-info/dependency_links.txt
+baycomp_plotting.egg-info/requires.txt
+baycomp_plotting.egg-info/top_level.txt
