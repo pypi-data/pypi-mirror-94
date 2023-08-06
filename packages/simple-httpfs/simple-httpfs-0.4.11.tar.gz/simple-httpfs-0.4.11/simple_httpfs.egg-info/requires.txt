@@ -1,0 +1,6 @@
+boto3
+diskcache
+fusepy
+requests
+slugid
+tenacity
