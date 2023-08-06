@@ -1,0 +1,43 @@
+.control-panel-taskpane-container {
+    overflow-y: hidden;
+    height: 100%;
+
+    border: 1px solid #9e9e9e;
+    box-sizing: border-box;
+
+    color: #343434;
+    background: white;
+}
+
+.control-panel-taskpane-tab-container {
+    /* 
+        We put the tabs at the bottom of the taskpane container,
+        which they are the child of. This way, they are always visible
+    */
+    position: absolute;
+    bottom: 30px;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: inherit;
+}
+
+.control-panel-taskpane-tab {
+    width: 100%;
+    border: 1px #343434 solid;
+    background: white;
+    text-align: center;
+    padding: 4px;
+}
+
+/* When selected, white. when not selected, this color. */
+.control-panel-taskpane-tab.selected {
+    background: #FFFFFF;
+    border-bottom: 3px solid #0081DE;
+}
+
+/* When selected, white. when not selected, this color. */
+.control-panel-taskpane-tab.unselected {
+    background: #FFFFFF;
+}
