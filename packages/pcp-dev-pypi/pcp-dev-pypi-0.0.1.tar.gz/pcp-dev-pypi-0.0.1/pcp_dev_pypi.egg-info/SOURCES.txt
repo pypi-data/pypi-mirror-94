@@ -1,0 +1,8 @@
+README.txt
+pyproject.toml
+setup.cfg
+pcp-dev-pypi/__init__.py
+pcp_dev_pypi.egg-info/PKG-INFO
+pcp_dev_pypi.egg-info/SOURCES.txt
+pcp_dev_pypi.egg-info/dependency_links.txt
+pcp_dev_pypi.egg-info/top_level.txt
