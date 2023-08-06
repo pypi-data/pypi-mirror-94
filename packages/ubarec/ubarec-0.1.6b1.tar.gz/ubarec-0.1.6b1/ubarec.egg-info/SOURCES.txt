@@ -1,0 +1,17 @@
+README.md
+setup.py
+ubarec/__init__.py
+ubarec/__main__.py
+ubarec/backup.py
+ubarec/config.py
+ubarec/drivers.py
+ubarec/handlers.py
+ubarec/main.py
+ubarec/restore.py
+ubarec.egg-info/PKG-INFO
+ubarec.egg-info/SOURCES.txt
+ubarec.egg-info/dependency_links.txt
+ubarec.egg-info/entry_points.txt
+ubarec.egg-info/not-zip-safe
+ubarec.egg-info/requires.txt
+ubarec.egg-info/top_level.txt
