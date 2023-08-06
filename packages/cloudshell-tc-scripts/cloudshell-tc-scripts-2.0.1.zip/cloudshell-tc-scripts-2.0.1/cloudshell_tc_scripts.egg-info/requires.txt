@@ -1,0 +1,5 @@
+pygithub~=1.54
+click~=7.1
+cloudshell-pip-download~=0.4
+requests~=2.25
+pydantic~=1.7
