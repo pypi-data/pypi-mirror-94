@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: trio-serial
+Version: 0.1.2
+Summary: Serial package for trio
+Home-page: https://github.com/joernheissler/trio-serial
+Author: Jörn Heissler
+Author-email: nosuchaddress@joern-heissler.de
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: docs
+Requires-Dist: Sphinx (>=3.4,<4.0); extra == "docs"
+Requires-Dist: sphinx-rtd-theme (>=0.5,<1.0); extra == "docs"
+Requires-Dist: sphinxcontrib-trio (>=1.1,<2.0); extra == "docs"
+Requires-Dist: trio (>=0.17,<1.0)
+Project-URL: Documentation, https://trio-serial.1e8.de/
+Project-URL: Repository, https://github.com/joernheissler/trio-serial
+Description-Content-Type: text/x-rst
+
+Serial package for trio
+=======================
+This project is an adaption of the `pyserial <https://github.com/pyserial/pyserial/>`__ project
+for `trio <https://github.com/python-trio/trio>`__.
+
+Installation
+------------
+.. code-block:: console
+
+    $ pip install trio-serial
+
+Documentation
+-------------
+https://trio-serial.1e8.de/
+
