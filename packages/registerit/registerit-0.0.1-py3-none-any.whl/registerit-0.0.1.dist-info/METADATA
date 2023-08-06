@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: registerit
+Version: 0.0.1
+Summary: Register package names on PyPI
+Home-page: https://github.com/alexioannides/registerit
+Author: Alex Ioannides
+Author-email: alex@bodyworkml.com
+License: MIT
+Project-URL: Source, https://github.com/alexioannides/registerit
+Project-URL: Documentation, https://github.com/alexioannides/registerit
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7.*
+Description-Content-Type: text/markdown
+Requires-Dist: twine (==3.3.0)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: wheel (>=0.36.2)
+Provides-Extra: dev
+Requires-Dist: flake8 (==3.8.4) ; extra == 'dev'
+Requires-Dist: mypy (==0.800) ; extra == 'dev'
+Requires-Dist: pytest (==6.2.2) ; extra == 'dev'
+Requires-Dist: pytest-cov (==2.11.1) ; extra == 'dev'
+Requires-Dist: tox (==3.21.4) ; extra == 'dev'
+
+# registerit - register package names on PyPI
+
+Have an idea for a Python package?
+Thought of a great name?
+Register it on PyPI, before someone else does!
+
+## Install
+
+```shell
+$ pip install registerit
+```
+
+## Run
+
+```shell
+$ registerit MY_COOL_PKG --username PYPI_USERNAME --password PYPI_PASSWORD
+```
+
+
