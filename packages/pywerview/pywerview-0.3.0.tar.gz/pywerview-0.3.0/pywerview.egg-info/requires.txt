@@ -1,0 +1,6 @@
+bs4
+impacket>=0.9.22
+ldap3>=2.8.1
+pyasn1
+pycrypto
+pyopenssl
