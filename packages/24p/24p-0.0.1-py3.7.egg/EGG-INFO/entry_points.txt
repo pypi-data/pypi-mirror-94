@@ -1,0 +1,3 @@
+[console_scripts]
+24p = 24p.24p:main
+
