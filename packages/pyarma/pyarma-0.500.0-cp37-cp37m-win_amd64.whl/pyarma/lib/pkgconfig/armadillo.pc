@@ -1,0 +1,9 @@
+libdir=C:/Users/appveyor/AppData/Local/Temp/1/pip-req-build-tnkatdxq/_skbuild/win-amd64-3.7/cmake-install/src/pyarma/lib
+includedir=C:/Users/appveyor/AppData/Local/Temp/1/pip-req-build-tnkatdxq/_skbuild/win-amd64-3.7/cmake-install/src/pyarma/include
+
+Name: armadillo
+Description: Fast C++ matrix library with syntax similar to MATLAB and Octave
+URL: http://arma.sourceforge.net
+Version: 10.2.1
+Cflags: -I${includedir}
+Libs: -L${libdir} -larmadillo
