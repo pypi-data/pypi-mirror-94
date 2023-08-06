@@ -1,0 +1,16 @@
+dh_utils/UNI_BETA_LOWER.json,sha256=xPvrHPwWZKMnpC3MUy5R6yFL1XKPb04jOCG7HYrtJJk,2785
+dh_utils/UNI_BETA_UPPER.json,sha256=zmDSgulzna8IEzytr6aQpNF2u9TgRVNu4xWg06Y05gE,2049
+dh_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dh_utils/tei.py,sha256=bys-Lw2tbNKGXwX2aZYTTiurYdMC3ya_y9x4lPC_ODs,3620
+dh_utils/unicode.py,sha256=R2JvLrxLEuqmVIqT9B8R37JJSemG2OBXb8Of1G2-7uA,1649
+dh_utils/tei/__init__.py,sha256=QSau1tYEpxYyG4Bkhrj8m2ziEcSIiuoCa3ftHGKJpAA,50
+dh_utils/tei/ca_template.xml,sha256=pGdonV33MBRbEkjTN2FfZg1eB_xxuOvV_M6OpBKxvB8,468
+dh_utils/tei/crit_app.py,sha256=apH_pJhQLz-eq26SQG5Df-n94aS5er0nq0dr13gm-FQ,3745
+dh_utils/tei/markdown.py,sha256=DzZLh8GglvbTli54K68OFDDylGZFansAjMWpIRDBY4M,4150
+dh_utils/tei/refsdecl_generator.py,sha256=5qq8KmqUl5ne5iRo0zhcOvIRG5XZL9IBwKDEGZqc1uU,5781
+dh_utils/tei/tag_script.py,sha256=I8vGe79SWt9cJ_61tL_0cHdLNzOUQm0ELTvZY_k5VH4,3807
+dh_utils-0.1.19.dist-info/LICENSE,sha256=IIx1gN6AJtk7EuXZNUleMG6XezCha8uQrivlrWVcRT4,1073
+dh_utils-0.1.19.dist-info/METADATA,sha256=CZmsT-q68AFl7NT73-xTQ3UjyJxs4X0XZaHS_wtm3cs,6543
+dh_utils-0.1.19.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dh_utils-0.1.19.dist-info/top_level.txt,sha256=OFzV_Sg6oKm9F0Dy8EWGFwdW12DXJ8B221PEKhs2luU,9
+dh_utils-0.1.19.dist-info/RECORD,,
