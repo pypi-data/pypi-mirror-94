@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pyscores2
+Version: 0.0.4
+Summary: Python API to ship strip theory code Scores2
+Home-page: https://github.com/martinlarsalbert/pyscores2
+Author: Martin Alexandersson
+Author-email: maralex@chalmers.se
+Maintainer: Martin Alexandersson
+Maintainer-email: maa@sspa.se
+License: GNU GPLv3
+Download-URL: https://github.com/martinlarsalbert/pyscores2
+Keywords: rolldecayestimators
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-gallery ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: numpydoc ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+
+![](https://vignette.wikia.nocookie.net/horrormovies/images/8/8a/Psycho.jpg/revision/latest/top-crop/width/360/height/450?cb=20150415212637)
+# pyscores2
+Python API to ship strip theory code Scores2
+[This notebook](https://github.com/martinlarsalbert/pyscores2/blob/master/docs/notebooks/01_run_scores2.ipynb) shows how this works. 
+
+
