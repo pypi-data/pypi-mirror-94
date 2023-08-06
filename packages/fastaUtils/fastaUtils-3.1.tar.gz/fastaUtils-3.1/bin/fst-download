@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+
+import argparse
+import logging
+from fastaUtils.remote import uniprot,metaclust,uniprot_metadata
+
+def uniprot_handle(args):
+  uniprot(args.outfolder)
+
+def metaclust_handle(args):
+  metaclust(args.outfolder)
+
+def uniprot_matadata_handle(args):
+  ids=[]
+  with open(args.infile,'r') as infile:
+    for line in infile:
+      ids.append(line.strip())
+  uniprot_metadata(ids,args.outfile)
+
+if __name__=="__main__":
+  parser = argparse.ArgumentParser(prog='fst-download',description='Download files from uniprot and metaclust',formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+  subparser=parser.add_subparsers()
+  parser_uniprot=subparser.add_parser('uniprot',help='Download current version of uniprot database')
+  parser_uniprot.add_argument('--outfolder', type=str, default=None,help='Folder where to download uniprot database. Dy default: $UNIPROTFOLDER')
+  parser_uniprot.set_defaults(func=uniprot_handle)
+  
+  parser_uniprot=subparser.add_parser('uniprot-metadata',help='Download uniprot metadata from uid list')
+  parser_uniprot.add_argument('infile', type=str, help='Input file with uids to look for')
+  parser_uniprot.add_argument('outfile', type=str, help='Output file with metadata in tabular format')
+  parser_uniprot.add_argument('--chunk-size', type=int, default=200, help='Number of ids per request')
+  parser_uniprot.set_defaults(func=uniprot_matadata_handle)
+  
+  parser_metaclust=subparser.add_parser('metaclust',help='Download current version of metaclust database')
+  parser_metaclust.add_argument('--outfolder', type=str, default=None,help='Folder where to download metaclust database. Dy default: $METACLUSTFOLDER')
+  parser_metaclust.set_defaults(func=metaclust_handle)
+  args=parser.parse_args()
+
+  logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', level=logging.ERROR)
+  args.func(args)

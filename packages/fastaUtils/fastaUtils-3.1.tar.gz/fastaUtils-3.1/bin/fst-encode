@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+import argparse
+import numpy as np
+from fastaUtils.fasta import parse_fasta
+from fastaUtils.encoding import encodeCategorical,encodeInt
+from fastaUtils.profiles import parse_profile,profile_data
+import numpy as np
+
+if __name__=="__main__":
+  parser = argparse.ArgumentParser(prog='lbsnn-encode',formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+  parser.add_argument('infile',type=str,help='Tabular input file to be encoded')
+  parser.add_argument('profile',type=str,help='Profile to be used during encoding')
+  parser.add_argument('outfile',type=str,help='Output file (.npy)')
+  parser.add_argument('-t','--type',type=str, default='categorical',choices=['categorical','int'],help='Encoding type')
+  args=parser.parse_args()
+  
+  profile=parse_profile(args.profile)
+  profiledata=profile_data(profile)
+  sequences=parse_fasta(args.infile)
+  encoded=[]
+  if args.type=='categorical':
+    for seq in sequences:
+      encoded.append(encodeCategorical(list(seq.seq),profiledata))
+  if args.type=='int':
+    for seq in sequences:
+      encoded.append(encodeInt(list(seq.seq),profiledata))
+  np.save(args.outfile,np.array(encoded))

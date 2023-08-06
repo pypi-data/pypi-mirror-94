@@ -1,0 +1,210 @@
+# fastaUtils #
+## A set of scripts to ease the process of manipulating fasta files and building Multiple Sequence Alignments ##
+Most functionalities have now been tested
+
+
+
+## Installation
+`pip install fastaUtils`
+
+Alternatively, clone the repository and simply add the following lines to your ~/.bashrc file
+
+`export PATH=$PATH:'<path_to_fastaUtils>/bin'`
+
+`export PYTHONPATH=$PYTHONPATH:'<path_to_fastaUtils>'`
+
+
+### Additional requirements
+
++ **fst-download** can be used to download the current version of uniprot (sprot+trembl) and metaclust databases.
+Even if folder where to save the databases can be passed to the program as an optional field, it is recommended to 
+define the following environment variables: `UNIPROTFOLDER` and `METACLUSTFOLDER`, e.g. by adding
+`export UNIPROTFOLDER='path fo folder'` and `export METACLUSTFOLDER='path fo folder'` to your /.bashrc file.
+
++ **fst-grep** requires the **regex** python package for matches with substitutions (imperfect matches) 
+
+## Usage
+
+Most commands try to copy the functionality of their equivalent unix function. In all cases run the command 
+with -h to list a detailed help page
+
+For all commands that requires an input fasta file, please note that is this input is not provided the program will try to read from stdin.
+In this way multiple commands can be concatenated to perform complex operations on fasta files.
+
+### **fst-awk** : run a command on every sequence of the input fasta file. 
+The language in which the command must be provided is different from the one employed by awk. Here are the main features:
+
++ BEGIN and END blocks become \BEGIN and \END in fst-awk
+
++ curly backets {...} always indentify a code block. Code blocks can be nested together
+
++ `\BEGIN{statement1} if statement2 {do something} \END{statement3}` therefore is composed of a BEGIN code block, 
+a main block that is executed only if statement2 is True and an END block. All blocks are optionals: by default 
+the BEGIN and END blocks are empty, statement2 is True and the main block simply print the sequence in fasta format
+
++ all statements should be valid python code, with few exceptions: dictionaries cannot be used (as they would be interpreted as code blocks),
+curly brackets cannot appear in strings (as they would be interpreted as code blocks), instead of indenting code blocks curly brackets must be used,
+do not use colons before a code block, use semicolons to separate lines.
+
++ new variables are used: db,uid,name,beg,end,descr,pe,sv,gn,ox (for each field in the fasta header), NR (current sequence index), seq (header and sequence), seq.seq (sequence) and seq.header (fasta header). 
+If information is not provided in the fasta header, pe,sv and ox will default to -1, and all other variables to -
+
+Examples:
+
+`fst-awk '{print(len(seq.seq))}' fastafile` will print the length of each sequence
+
+`fst-awk 'len(seq.seq)>100 {print(seq)}' fastafile` will print a fasta file containing all sequences longer than 100 amino acids
+
+`fst-awk 'seq.seq.count("-")<10 {print(seq)}' fastafile` will print a fasta file containing all sequences with no more than 10 gaps
+
+### **fst-grep**: search for substrings in a fasta file and return matching sequences. 
+Similarly to grep it accept the following options:
+
++ -c : return the number of matching sequences
+
++ -o : return a fasta file with all the matching parts of all sequences. Multiple matches for protein are possible. The fasta header is modified 
+in order to add the information about the position of the match in the original sequence
+
++ -v : invert the match, aka return non matching sequences only. Non compatible with -o
+
+**fst-grep** also accept -s <int> option, specifying how many mismatching characters are acceptable. By default this number is zero.
+
+Some rules/shortcut are available.
+
++ '_' matches all aminoacids, but not gaps
+
++ '.' matches gaps only
+
++ '+' and '-' match positive and negative amino acids
+
++ '@' matches hydrophobic amino acids
+
++ '#' matches polar amino acids
+
+Example:
+
+`fst-grep 'HPD' fastafile` return all sequences from fastafile with an HPD motif
+
+`fst-grep '-@@@@-' -c` count the number of sequences with at least one negative-hydrofobic*4-negative motif
+
+`fst-grep 'HPD' -o fastafile -s 1` return all HPD motifs in fastafile, but also motifs in which at most one substitution is present (e.g. NPD)
+
+`fst-grep 'HPD' -v fastafile` return all sequences from fastafile without an HPD motif
+
+`fst-grep 'HPD|NPD' fastafile` return all sequences from fastafile with an HPD or NPD motif
+
+### **fst-paste**: append multiple sequences from different fasta files
+The number of sequeces in the final fasta file is equal to the minimum number of sequences in the input files
+
+Example:
+
+`fst-paste fasta1 fasta2 ...`
+
+### **fst-cut**: remove columns from a fasta file
+
+Similarly to cut, you can remove selected columns by passing -c beg-end col1 .. colN. Also accept -c beg- : in this case all columns from beg to the very last 
+in the sequence are removed. The counting starts at 1, so `fst-cut -c 1 fastafile` will remove the first residue. If a range of column is used, the extrema are both removed.
+To remove all columns except for selected ones, use the -r flag.
+
+**fst-cut** accept a rule to dynamically decide which column to remove. The rule is written in python and passed with -R flag. A profile/logo is required in order to have access to aminoacid frequencies.
+
+Example:
+
+`fst-cut -c 1-3 5 fastafile` print a fasta file in which columns 1,2,3 and 5 have been omitted
+
+`fst-cut -c 1-3 5 -r fastafile` print a fasta file with only columns 1,2,3 and 5
+
+`fst-cut -R 'freq["-"]>0.5' -p profile fastafile` print a fasta file where all columns with a frequency of gaps greater than 0.5 have been removed
+
+
+### **fst-sort**: reorder sequences
+Reorder sequences (possibly in reverse order) according to a field in fasta header.
+Optionally the sequences can be shuffled (random order) or be ordered according to a predefined order (provided through an input file)
+
+Example:
+
+`fst-sort -k uid fastafile` reorder sequences in alphabetical order of uid
+
+`fst-sort -k uid -F orderfile fastafile` reorder sequences to match orderfile. Orderfile must contain a list of uids (one per line). The output fasta will not contain sequences with an uid not in orderfile
+
+`fst-sort -R fastafile` shuffle input fasta file
+
+`fst-sort -k uid -r fastafile` reorder sequences in reverse alphabetical order of uid
+
+### **fst-shuf**: shuffle columns independently
+
+Example:
+
+`fst-shuf -c 1 3 5 fastafile` will return a fasta file in which columns 1,3 and 5 have been shuffled independently from the others
+
+`fst-shuf -r 1:3 fastafile` will return a fasta file in which column 1,2 and 3 have been shuffled coherently with each others but independently from the rest of the sequence
+
+### **fst-random**: generate random sequences that match a given profile
+Generated sequences can be completely random or build by modifying real ones.
+
+Example:
+
+`fst-random profile 100` generate 100 random sequences with the single site frequencies defined in profile
+
+`fst-random profile 100 -t fastafile -d 0.9` generate 100 sequences by randomly mutate a fraction equal to 0.1 (1.-0.9) of amino acids. Mutations are such that 
+the single site frequencies are the same as in profile. The mutated residues are randomly chosen for each sequence. The real sequences are chosen randomly among those provided in fastafile, 
+possibly more than once 
+
+### **fst-profile**: generate the profile/logo of a multiple sequence alignment
+A profile is simply a list of all possible symbols that appear for each column together with its frequency
+
+Example:
+
+`fst-profile fastafile` will print the profile to screen
+
+### **fst-encode**:
+Encode a Multiple Sequence Alignment in binary vectors by concatenating the one-hot encoding of each amino acid.
+
+Example:
+
+`fst-encode fastafile profile encoding.npy`
+
+### **fst-fromstockholm**: convert from stockholm format to fasta format
+
+Example:
+
+`fst-fromstockholm stockholmfile` will print the corresponding fasta file to screen
+
+### **fst-download**: download sequences and metadata from uniprot and/or metaclust
+This program defines three commands:
+
++ `fst-download uniprot` will download and extract uniprot_trembl and uniprot_sprot to $UNIPROTFOLDER/date/ and create a symlink to it in $UNIPROTFOLDER/current_release. Currently the download is from https://ftp.expasy.org
+
++ `fst-download metaclust` will download and extract the latest metaclust release in $METACLUSTFOLDER/date/ and create a symlink to it in $METACLUSTFOLDER/current_release.
+
++ `fst-download uniprot-metadata` will take as input a file with a list of uids, and will download all metadata for the corresponding sequences from the current uniprot release.
+
+
+### **fst-split**:
+Split an input fasta file in multiple fasta files containing no more than a specified number of entries.
+
+Example:
+
+`fst-split fastafile records -l 100`
+
+will create new fasta files named `records_*.fasta` each containing no more than 100 entries from `fastafile`.
+
+### **fst-distance**:
+Return the pairwise hamming distance (or sequence identity) between sequences in a MSA or between sequences in two MSAs. Optionally the distances/identities can be averaged.
+
+Example:
+
+`fst-distance fastafile1 --aggregate -to fastafile2 --seqid`
+
+
+### **fst-logo**:
+Generates a logo from a profile thanks to [logomaker](https://pypi.org/project/logomaker/), a package for generating publication quality sequence logos.
+There are options to control aesthetics.
+
+Example:
+
+`fst-logo profile output.png`
+
+generates something like this:
+
+![logo](https://gitlab.com/LBS-EPFL/code/fastautils/-/tree/v3.0/img/logo.png "Example logo")
