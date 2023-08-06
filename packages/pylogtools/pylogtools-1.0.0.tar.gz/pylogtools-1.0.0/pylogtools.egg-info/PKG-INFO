@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pylogtools
+Version: 1.0.0
+Summary: Useful logging tools
+Home-page: https://pypi.org/project/pylogtools/
+Author: kkoyias
+Author-email: sdi1500071@di.uoa.gr
+License: MIT
+Download-URL: https://pypi.org/project/pylogtools/
+Description: # Pylogtools
+        
+        Simple tools to improve messages on the console output.
+        No installation requirements.
+        
+        
+        # HISTORY
+        
+        ## v1.0.0
+        
+        Initial release
+        
+Keywords: Message,Logging,Console
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
