@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+crabber/__init__.py
+crabber/exceptions.py
+crabber/models.py
+python_crabber.egg-info/PKG-INFO
+python_crabber.egg-info/SOURCES.txt
+python_crabber.egg-info/dependency_links.txt
+python_crabber.egg-info/requires.txt
+python_crabber.egg-info/top_level.txt
