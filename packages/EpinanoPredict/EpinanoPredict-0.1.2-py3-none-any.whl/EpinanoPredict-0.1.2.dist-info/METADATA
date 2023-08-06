@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: EpinanoPredict
+Version: 0.1.2
+Summary: Predict m6A RNA modifications and train models using SVM
+Home-page: https://github.com/enovoa/EpiNano
+Author: Huanle Liu && Eva Novoa
+Author-email: huanle.liu@crg.eu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Requires-Dist: biopython (==1.76)
+Requires-Dist: dask (==2.5.2)
+Requires-Dist: future (==0.17.1)
+Requires-Dist: h5py (==2.10.0)
+Requires-Dist: numpy (==1.17.2)
+Requires-Dist: pandas (==0.24.2)
+Requires-Dist: pysam (==0.15.3)
+Requires-Dist: pytest (==4.4.1)
+Requires-Dist: scikit-learn (==0.20.2)
+
+Epinano: Detection of RNA modifications from Oxford Nanopore direct RNA sequencing reads
+
+Please visit https://github.com/enovoa/EpiNano for more details. 
+
+
+
