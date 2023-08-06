@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: allenact
+Version: 0.2.0
+Summary: AllenAct framework
+Home-page: https://github.com/allenai/allenact
+Author: Allen Institute for Artificial Intelligence
+Author-email: lucaw@allenai.org
+License: MIT
+Description: AllenAct is a modular and flexible learning framework designed with a focus on the unique requirements of Embodied-AI research.
+Keywords: reinforcement learning,embodied-AI,AI,RL,SLAM
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: dev
