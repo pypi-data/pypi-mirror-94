@@ -1,0 +1,11 @@
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+buycoins_client/__init__.py
+buycoins_client.egg-info/PKG-INFO
+buycoins_client.egg-info/SOURCES.txt
+buycoins_client.egg-info/dependency_links.txt
+buycoins_client.egg-info/requires.txt
+buycoins_client.egg-info/top_level.txt
+buycoins_client.egg-info/zip-safe
