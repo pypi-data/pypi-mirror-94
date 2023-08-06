@@ -1,0 +1,11 @@
+LICENSE.rst
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+django_static_delivery.egg-info/PKG-INFO
+django_static_delivery.egg-info/SOURCES.txt
+django_static_delivery.egg-info/dependency_links.txt
+django_static_delivery.egg-info/top_level.txt
+static_delivery/__init__.py
+static_delivery/middleware.py
