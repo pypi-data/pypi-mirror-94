@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: tghtml
+Version: 0.2.0
+Summary: Parser to telegram html
+Home-page: https://github.com/jDan735/tghtml
+Author: Daniel Zakharov
+Author-email: daniel734@bk.ru
+License: MIT
+Description: # 📄 tghtml
+        Parser to telegram html
+        
+        ## 🚀 Start
+        To start install package from pypi:
+        ```sh
+        pip install tghtml
+        ```
+        
+        or install from sources:
+        ```sh
+        python setup.py install
+        ```
+        
+        ## 🔩 Usage
+        ```python
+        from tghtml import tghtml
+        
+        tghtml("<p>Ban</p>")  # output "ban\n"
+        ```
+        
+        ## 🔨 Dependencies
+        ### 🍲 [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
+        Beautiful Soup is a library that makes it easy to scrape information from web pages. It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.
+        
+        ### 🌳 [lxml](https://pypi.org/project/lxml/)
+        lxml is a Pythonic, mature binding for the libxml2 and libxslt libraries. It provides safe and convenient access to these libraries using the ElementTree API.
+        
+Keywords: html parser telegram python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3
+Description-Content-Type: text/markdown
