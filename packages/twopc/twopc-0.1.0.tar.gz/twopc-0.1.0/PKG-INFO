@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: twopc
+Version: 0.1.0
+Summary: A tool for making posterior predicitive checks with 3ML
+Home-page: https://github.com/grburgess/twopc
+Author: J. Michael Burgess
+Author-email: jmichaelburgess@gmail.com
+License: GPL-2+
+Project-URL: Bug Tracker, https://github.com/grburgess/twopc/issues
+Project-URL: Source Code, https://github.com/grburgess/twopc
+Description: ![CI](https://github.com/grburgess/twopc/workflows/CI/badge.svg)
+        [![Documentation Status](https://readthedocs.org/projects/twopc/badge/?version=latest)](https://twopc.readthedocs.io/en/latest/?badge=latest)
+        # twopc (PPC) (2 * P +C)
+        ![alt text](https://raw.githubusercontent.com/grburgess/twopc/master/docs/media/logo.png)
+        
+        
+        A simple tool to create posterior predictive checks (PPCs) with 3ML. 
+        Nothing fancy, but sciencs isn't fancy, it's a lot of trying to make your ideas fall apart, this code will hel you when doing spectral fits tox-ray data.
+        
+        Read the docs at [twopc.readthedocs.io](https://twopc.readthedocs.io/en/latest/index.html)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown

@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+twopc/__init__.py
+twopc/_version.py
+twopc/ppc.py
+twopc.egg-info/PKG-INFO
+twopc.egg-info/SOURCES.txt
+twopc.egg-info/dependency_links.txt
+twopc.egg-info/requires.txt
+twopc.egg-info/top_level.txt
