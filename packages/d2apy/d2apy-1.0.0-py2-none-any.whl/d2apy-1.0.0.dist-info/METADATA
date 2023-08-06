@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: d2apy
+Version: 1.0.0
+Summary: Dhis2 API wrapper
+Home-page: https://github.com/EyeSeeTea/d2apy.git
+Author: EyeSeeTea
+Author-email: info@eyeseetea.com
+License: GPLv3+
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: jsonobject
+Requires-Dist: requests
+
+# d2-apy
+python version of d2-api
+# Generate build
+python setup.py sdist bdist_wheel
+# Push package
+sudo twine upload dist/* --verbose -u user -p pass
+
+
