@@ -1,0 +1,11 @@
+README.md
+setup.py
+omnilearn/__init__.py
+omnilearn/_info.py
+omnilearn.egg-info/PKG-INFO
+omnilearn.egg-info/SOURCES.txt
+omnilearn.egg-info/dependency_links.txt
+omnilearn.egg-info/not-zip-safe
+omnilearn.egg-info/requires.txt
+omnilearn.egg-info/top_level.txt
+test/testing.py
