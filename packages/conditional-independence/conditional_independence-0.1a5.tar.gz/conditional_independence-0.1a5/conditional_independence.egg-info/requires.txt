@@ -1,0 +1,9 @@
+scipy
+dataclasses
+numpy
+numexpr
+scikit_learn
+typing
+pygam
+tqdm
+ipdb
