@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+milvus_kernel/__init__.py
+milvus_kernel/__main__.py
+milvus_kernel/install.py
+milvus_kernel/kernel.py
+milvus_kernel.egg-info/PKG-INFO
+milvus_kernel.egg-info/SOURCES.txt
+milvus_kernel.egg-info/dependency_links.txt
+milvus_kernel.egg-info/not-zip-safe
+milvus_kernel.egg-info/requires.txt
+milvus_kernel.egg-info/top_level.txt
