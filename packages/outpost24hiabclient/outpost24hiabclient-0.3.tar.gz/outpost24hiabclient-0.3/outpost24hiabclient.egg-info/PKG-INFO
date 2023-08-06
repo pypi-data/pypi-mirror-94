@@ -1,0 +1,50 @@
+Metadata-Version: 1.1
+Name: outpost24hiabclient
+Version: 0.3
+Summary: Client for interacting with Outpost24 HIAB
+Home-page: https://github.com/schubergphilis/outpost24hiabclient
+Author: Theodoor Scholte
+Author-email: tscholte@schubergphilis.com
+License: MIT
+Description: ===================
+        outpost24hiabclient
+        ===================
+        
+        A python library for interfacing with Outpost24 HIAB api
+        
+        
+        * Documentation: https://outpost24hiabclient.readthedocs.org/en/latest
+        
+        
+        Project Features
+        ================
+        
+        * Manages users, usergroups, targets, targetgroups
+        
+        
+        Todo
+        ====
+        
+        * This code is MVP. It requires a lot of optimizations and extensions.
+        * Things to do are, try to make the retrieving faster and implement smart caching for entities.
+        
+        
+        
+        
+        History
+        -------
+        
+        0.1.0 (03-02-2021)
+        ------------------
+        
+        * First release
+        
+        
+        
+Keywords: outpost24 HIAB API XML python
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
