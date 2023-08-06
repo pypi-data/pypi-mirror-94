@@ -1,0 +1,3 @@
+[console_scripts]
+cvestream = cvestream.main:main
+
