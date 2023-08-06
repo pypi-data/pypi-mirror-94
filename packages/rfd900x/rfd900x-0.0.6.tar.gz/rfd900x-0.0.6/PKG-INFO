@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: rfd900x
+Version: 0.0.6
+Summary: Python module for configuring RFD900x series radios
+Home-page: https://github.com/PowerBroker2/rfd900x
+Author: Power_Broker
+Author-email: gitstuff2@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/PowerBroker2/rfd900x/archive/0.0.6.tar.gz
+Description: # rfd900x
+        Python module for configuring and controlling RFD-900x series radios
+        
+Keywords: RFD,RFD-900,RFD-900x,RFD-900+,RFD 900,RFD 900x,RFD 900+
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
