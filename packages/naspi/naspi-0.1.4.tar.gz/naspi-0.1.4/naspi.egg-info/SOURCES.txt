@@ -1,0 +1,11 @@
+README.md
+setup.py
+naspi/__init__.py
+naspi/naspi.py
+naspi.egg-info/PKG-INFO
+naspi.egg-info/SOURCES.txt
+naspi.egg-info/dependency_links.txt
+naspi.egg-info/entry_points.txt
+naspi.egg-info/not-zip-safe
+naspi.egg-info/requires.txt
+naspi.egg-info/top_level.txt
