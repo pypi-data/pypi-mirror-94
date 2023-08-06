@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+otio_mlt_adapter/__init__.py
+otio_mlt_adapter/plugin_manifest.json
+otio_mlt_adapter.egg-info/PKG-INFO
+otio_mlt_adapter.egg-info/SOURCES.txt
+otio_mlt_adapter.egg-info/dependency_links.txt
+otio_mlt_adapter.egg-info/entry_points.txt
+otio_mlt_adapter.egg-info/requires.txt
+otio_mlt_adapter.egg-info/top_level.txt
+otio_mlt_adapter/adapters/__init__.py
+otio_mlt_adapter/adapters/mlt_xml.py
+tests/test_mlt_adapter.py
