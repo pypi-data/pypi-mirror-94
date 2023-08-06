@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: geometrydash
+Version: 1.0.0
+Summary: A Python wrapper for Geometry Dash API.
+Home-page: https://github.com/janu8ry/geomertydash
+Author: janu8ry
+Author-email: janu8ry0108@gmail.com
+License: GPL-3.0
+Project-URL: Homepage, https://janu8ry.github.io
+Project-URL: Source, https://github.com/janu8ry/geometrydash
+Project-URL: Tracker, https://github.com/janu8ry/geometrydash/issues
+Description: # GeometryDash.py
+        
+        A simple API wrapper for Geometry Dash 2.1 written in Python.
+        
+        ## Key Features
+        
+        - Modern Pythonic API using `async` and `await` syntax
+        - High coverage of the supported Geometry Dash API
+        
+        ## Installing
+        
+        **Python 3.6 or higher is required**
+        
+        ```shell
+        pip install geometrydash
+        ```
+        
+        ## Examples
+        
+        ### Level Example
+        ```python
+        import geometrydash as gd
+        
+        level = await gd.search_level("zodiac")
+        level.featured  # True
+        level.coins  # 0
+        ```
+        
+        ### Profile Example
+        ```python
+        import geometrydash as gd
+        
+        user = await gd.search_user("robtop")
+        user.name  # 'RobTop'
+        user.moderator  # 'elder'
+        ```
+        
+        ## Licence
+        
+        GNU General Public Licence v3.0
+        
+        ## Links
+        
+        - [Geometry Dash API]('https://gdbrowser.com/api')
+        
+Keywords: GeometryDash,GD,GMD,Geometry Dash,game,api wrapper
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

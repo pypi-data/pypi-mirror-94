@@ -1,0 +1,12 @@
+README.md
+setup.py
+geometrydash/__init__.py
+geometrydash/errors.py
+geometrydash/geometrydash.py
+geometrydash/objects.py
+geometrydash/utils.py
+geometrydash.egg-info/PKG-INFO
+geometrydash.egg-info/SOURCES.txt
+geometrydash.egg-info/dependency_links.txt
+geometrydash.egg-info/requires.txt
+geometrydash.egg-info/top_level.txt
