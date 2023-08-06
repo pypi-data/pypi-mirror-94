@@ -1,0 +1,8 @@
+simplejson
+requests
+pandas
+mwoauth
+backoff
+
+[dev]
+pytest
