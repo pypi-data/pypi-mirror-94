@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: odoo13-addons-oca-ddmrp
+Version: 13.0.20210208.0
+Summary: Meta package for oca-ddmrp Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo13-addon-ddmrp
+Requires-Dist: odoo13-addon-ddmrp-adjustment
+Requires-Dist: odoo13-addon-ddmrp-chatter
+Requires-Dist: odoo13-addon-ddmrp-coverage-days
+Requires-Dist: odoo13-addon-ddmrp-cron-actions-as-job
+Requires-Dist: odoo13-addon-ddmrp-history
+Requires-Dist: odoo13-addon-ddmrp-packaging
+Requires-Dist: odoo13-addon-ddmrp-sale
+Requires-Dist: odoo13-addon-stock-buffer-capacity-limit
+Requires-Dist: odoo13-addon-stock-buffer-route
+
+UNKNOWN
+
+
