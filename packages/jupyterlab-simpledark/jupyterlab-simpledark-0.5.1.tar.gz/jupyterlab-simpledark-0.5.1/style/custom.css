@@ -1,0 +1,49 @@
+.lm-TabBar-content .p-TabBar-content {
+    padding-top   : 1em;
+    padding-bottom: 1em;
+}
+
+.lm-Widget .p-Widget .lm-DockPanel .p-DockPanel .lm-SplitPanel-child .p-SplitPanel-child {
+    transition: all 0.5s;
+}
+
+.jp-mod-selected .jp-Collapser-child {
+    background: #F28C18;
+}
+
+.jp-DirListing-content {
+    color: #aaaaaa !important;
+}
+
+.jp-DirListing-item.jp-mod-selected {
+    background: #12121d !important;
+}
+
+.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
+    background: #F28C18;
+}
+
+.jp-InputArea-editor {
+    border-radius: 5px;
+    padding-left : 0.3rem;
+}
+
+.jp-OutputArea-output {
+    margin-bottom: 1.2rem;
+}
+
+div.CodeMirror-linenumber.CodeMirror-gutter-elt {
+    background-color: #0c0e0f;
+}
+
+div.CodeMirror-gutter.CodeMirror-linenumbers {
+    background-color: #0c0e0f;
+}
+
+div.lm-Widget.p-Widget.jp-RenderedHTMLCommon.jp-RenderedHTML.jp-mod-trusted.jp-OutputArea-output,
+div.lm-Widget.p-Widget.jp-RenderedImage.jp-mod-trusted.jp-OutputArea-output,
+div.lm-Widget.p-Widget.jp-RenderedText.jp-mod-trusted.jp-OutputArea-output {
+    padding-left  : 3.0em;
+    padding-top   : 0.25em;
+    padding-bottom: 1.5em;
+}
