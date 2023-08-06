@@ -1,0 +1,7 @@
+annexremote>=1.4.0
+datalad>=0.13.0
+osfclient>=0.0.5
+
+[devel]
+coverage
+nose

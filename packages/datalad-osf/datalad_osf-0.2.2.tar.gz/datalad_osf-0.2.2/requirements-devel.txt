@@ -1,0 +1,7 @@
+# requirements for a development environment
+nose
+nose-exclude
+mock
+coverage
+sphinx
+sphinx_rtd_theme
