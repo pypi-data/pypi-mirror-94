@@ -1,0 +1,3 @@
+[console_scripts]
+pyqmlapp = pyqmlapp.main:run
+

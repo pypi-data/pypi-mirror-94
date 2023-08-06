@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pyqmlapp/PluginLoader.py
+src/pyqmlapp/__init__.py
+src/pyqmlapp/main.py
+src/pyqmlapp.egg-info/PKG-INFO
+src/pyqmlapp.egg-info/SOURCES.txt
+src/pyqmlapp.egg-info/dependency_links.txt
+src/pyqmlapp.egg-info/entry_points.txt
+src/pyqmlapp.egg-info/requires.txt
+src/pyqmlapp.egg-info/top_level.txt
