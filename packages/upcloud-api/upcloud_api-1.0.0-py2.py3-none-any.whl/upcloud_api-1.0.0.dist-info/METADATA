@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: upcloud-api
+Version: 1.0.0
+Summary: UpCloud API Client
+Home-page: https://github.com/UpCloudLtd/upcloud-python-api
+Maintainer: UpCloud
+Maintainer-email: hello@upcloud.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: six
+
+README.md
+
+
