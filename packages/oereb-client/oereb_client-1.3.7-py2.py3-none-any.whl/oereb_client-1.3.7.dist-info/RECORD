@@ -1,0 +1,14 @@
+oereb_client/__init__.py,sha256=trM430asGZWiRTmJ68pKj35y737tWjmIkZKgCfdVyGQ,1678
+oereb_client/routes.py,sha256=iMkRH8zXh1JzCK0gTFsDDrj8xXxbCqt7_m6GhzieLXQ,1565
+oereb_client/templates/index.html,sha256=JSYU_dTFDqyS68XLzWBebuyxa-5gXeFw-F1KlGxN4c4,10285
+oereb_client/templates/wfs_filter.xml,sha256=WPM1vF3dwc8WZNWO4boMFaiJuMc-RoOAOsPygkpQq-E,1061
+oereb_client/views/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+oereb_client/views/deps.py,sha256=90iAT9Y79ysGbXGBj8UBWh_tEw23kIWMocCiP4jiTeA,2031
+oereb_client/views/index.py,sha256=0-aBNjYtpHcOUifk8NJ1LgIWmhgh7vZYNSb_EruK52o,5095
+oereb_client/views/wfs_query.py,sha256=jX476gKSunIdifPCVG9dQfR-ERfeNoCnohYODoTun2I,1163
+oereb_client-1.3.7.dist-info/LICENSE,sha256=T6dR2P3-n0BlZnap7nYaPsQOxOBRNXg945rsaJP7SQs,1353
+oereb_client-1.3.7.dist-info/METADATA,sha256=zTmMVbHj7Fncxa6ht4ttHa49a9nicXELt1SB6jDY0Vw,5979
+oereb_client-1.3.7.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+oereb_client-1.3.7.dist-info/entry_points.txt,sha256=SNlPv47lymPoiLNH9U7-cOqGkUJobAXsL36n7R8LVcE,46
+oereb_client-1.3.7.dist-info/top_level.txt,sha256=EdUdfO-NKHC1RA9vz9sPJynoobW1803JIiKGF1L8zZU,13
+oereb_client-1.3.7.dist-info/RECORD,,
