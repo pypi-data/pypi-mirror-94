@@ -1,0 +1,10 @@
+setup.py
+src/CellManager.py
+src/Client.js
+src/CommManager.py
+src/DataManager.py
+src/JupyterNotebook.py
+src/JupyterNotebookReflection.egg-info/PKG-INFO
+src/JupyterNotebookReflection.egg-info/SOURCES.txt
+src/JupyterNotebookReflection.egg-info/dependency_links.txt
+src/JupyterNotebookReflection.egg-info/top_level.txt
