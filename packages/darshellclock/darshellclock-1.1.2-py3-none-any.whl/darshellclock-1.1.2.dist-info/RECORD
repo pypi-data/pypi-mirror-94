@@ -1,0 +1,14 @@
+darshellclock/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+darshellclock/__main__.py,sha256=Ox-65vrBvx7uEeb28U1KPXMBQmD9xkKQi_zEL-5YHw0,70
+darshellclock/cfg.py,sha256=vJ93LNzw_Qaxk1LGNNwpZWzWuqS1eknGk8gizbvZbVE,2848
+darshellclock/clock.py,sha256=yjb7qUN99gfqvkPn46vuW9v-v6h1uJjMMWrcGNVoAXg,7869
+darshellclock/globals.py,sha256=Mgn4xoLnwNZxU68HuHBRD__bN865vn5Q1Qny0qXeEV4,2757
+darshellclock/help.py,sha256=RUt5OsqthWdO5kAgsTg1WyHP7R_I9ehd7OSfAa2vfAU,3906
+darshellclock/main.py,sha256=bvJyMJjAXd5bE8ttAwNAminXbCdBIVc9ZIgvGK1aiJs,2306
+darshellclock/utils.py,sha256=_kLHrT7mdyVi3b1zpWmNE_76-Dp3k-P_a9Q4pQw94vE,1474
+darshellclock-1.1.2.dist-info/LICENSE,sha256=01UFMymiTs21JD4qgLphNPOYxLA-LCOjEhaBrpZpsj0,1071
+darshellclock-1.1.2.dist-info/METADATA,sha256=N-Y5Tvp0QoxQDF5muKfXuS0cD4h5Y-9d9LX5ki3HYoo,3728
+darshellclock-1.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+darshellclock-1.1.2.dist-info/entry_points.txt,sha256=UYsnwEqYu4WcNSrlSV4Uy5tlzvI15EE9M9ZJbkLMA2k,63
+darshellclock-1.1.2.dist-info/top_level.txt,sha256=CPkNK4F7iQM4q5Ybb9mBtR5PgTv5DHmtrC-HeoGVjFA,14
+darshellclock-1.1.2.dist-info/RECORD,,
