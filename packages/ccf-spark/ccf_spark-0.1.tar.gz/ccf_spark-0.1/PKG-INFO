@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ccf_spark
+Version: 0.1
+Summary: A little CCF implementation in a Spark context with networkx
+Home-page: https://www.python.org/sigs/distutils-sig/
+Author: ['Théo Chennebault', 'Louis Ledoux']
+Author-email: theo.chennebault@le-cab-politique.fr
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
