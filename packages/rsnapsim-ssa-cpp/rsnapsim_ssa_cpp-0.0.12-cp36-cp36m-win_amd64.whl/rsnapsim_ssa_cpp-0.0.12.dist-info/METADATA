@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: rsnapsim-ssa-cpp
+Version: 0.0.12
+Summary: mRNA translation Stochastic Simulation Algorithms (SSA) for the rSNAPsim module.
+Home-page: https://github.com/MunskyGroup/rSNAPsim
+Author: William Raymond
+Author-email: wsraymon@rams.colostate.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: Cython (>=0.26.0)
+
+mRNA Translation SSA for rSNAPsim
+-----------------
+This contains the c++ cython package of the mRNA translation model described in Aguilera 2019
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6816579/
+
+-----------------
+
+
