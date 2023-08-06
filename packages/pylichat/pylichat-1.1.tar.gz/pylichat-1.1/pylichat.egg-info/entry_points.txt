@@ -1,0 +1,3 @@
+[console_scripts]
+pylichat = pylichat.__main__:main
+

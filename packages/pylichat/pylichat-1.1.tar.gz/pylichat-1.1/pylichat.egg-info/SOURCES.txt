@@ -1,0 +1,13 @@
+setup.py
+pylichat/__init__.py
+pylichat/__main__.py
+pylichat/client.py
+pylichat/symbol.py
+pylichat/toolkit.py
+pylichat/update.py
+pylichat/wire.py
+pylichat.egg-info/PKG-INFO
+pylichat.egg-info/SOURCES.txt
+pylichat.egg-info/dependency_links.txt
+pylichat.egg-info/entry_points.txt
+pylichat.egg-info/top_level.txt
