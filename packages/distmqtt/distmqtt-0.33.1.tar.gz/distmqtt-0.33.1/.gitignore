@@ -1,0 +1,13 @@
+*.egg-info
+*.pyc
+/*.cfg
+.idea/distmqtt.iml
+.tox/
+/.coverage
+__pycache__
+/build/
+/dist/
+/tests/plugins/test.db
+/obj
+/.pybuild/
+/.eggs/
