@@ -1,0 +1,4 @@
+[console_scripts]
+requirements-compare = pcdsutils.requirements:_compare_requirements
+requirements-from-conda = pcdsutils.requirements:_requirements_from_conda
+
