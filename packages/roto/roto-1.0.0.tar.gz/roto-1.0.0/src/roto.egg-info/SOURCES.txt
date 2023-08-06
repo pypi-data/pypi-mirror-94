@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/roto/__init__.py
+src/roto.egg-info/PKG-INFO
+src/roto.egg-info/SOURCES.txt
+src/roto.egg-info/dependency_links.txt
+src/roto.egg-info/requires.txt
+src/roto.egg-info/top_level.txt
+test/test.py
