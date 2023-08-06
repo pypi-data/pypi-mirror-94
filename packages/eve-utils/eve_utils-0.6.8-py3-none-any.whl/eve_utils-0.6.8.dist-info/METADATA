@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: eve-utils
+Version: 0.6.8
+Summary: Templates and scripts to rapidly spin up an Eve-based API.
+Home-page: http://www.pointw.com
+Author: Michael Ottoson
+Author-email: michael@pointw.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Utilities
+Requires-Dist: libcst
+Requires-Dist: inflect
+
+eve-utils
+=========
+Templates and scripts to rapidly spin up an Eve-based API.
+
+
