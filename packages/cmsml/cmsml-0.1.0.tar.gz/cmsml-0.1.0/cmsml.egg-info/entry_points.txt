@@ -1,0 +1,3 @@
+[console_scripts]
+cmsml_open_tf_graph = cmsml.scripts.open_tf_graph:main
+
