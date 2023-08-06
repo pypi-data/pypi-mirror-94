@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: hopprclient
+Version: 0.1.6
+Summary: Application to upload datasets to the HOPPR servers
+Home-page: https://www.hoppr.ai/
+Author: Jack Cosgrove
+Author-email: jack@hoppr.ai
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# hopprclient
+[HOPPR](https://www.hoppr.ai) is a platform for sharing and training on medical imaging datasets.
+
+> The hopprclient is used to upload a file folder containing a dataset to the HOPPR servers.
+
+HOPPR aggregates medical imaging datasets and allows users to train on these datasets in a secure cloud environment. The hopprclient is a free tool that is used to recursively scan a file folder containing a dataset, and upload all files to the HOPPR servers. Any file is supported for upload provided it is not too large. After creating an account on the HOPPR platform, a local dataset can be uploaded using that account. Access to the dataset will remain under the control of that account. The hopprclient keeps track of what it has uploaded and if file contents have changed, so that repeated runs on the same folder will only upload new files.
+
+Future versions of the hopprclient will support the anonymization of DICOM file tag data as well as burned-in DICOM image data. The masking of any text identified in non-DICOM images will also be supported.  
+
+## Installation
+
+Cross-platform:
+
+```sh
+pip install hopprclient
+```
+
+## Usage example
+
+To start using the hopprclient, open a shell. Then run the application, specifying a folder to scan and upload.
+
+```sh
+hopprclient -f [path to folder]
+```
+
+The following command arguments may be used.
+
+| Short Command | Long Command        | Value                           |
+| :-----------: | :------------------ | :------------------------------ |
+| -h            | --help              |                                 |
+| -f            | --folder            | Folder path to scan for files   |
+| -a            | --configure-auth    |                                 |
+| -d            | --configure-dataset |                                 |
+| -F            | --force-upload      |                                 |
+| -s            | --batch-size        | Size of upload batch            |
+| -w            | --batch-wait        | Seconds to wait between batches |
+
+## Release History
+
+* 0.1.6
+    * Removed unused dependencies.
+* 0.1.5
+    * Resolved startup script issues.
+* 0.1.3
+    * The first release capable of uploading a dataset to the HOPPR servers.
+
+## Meta
+
+Jack Cosgrove – jack@hoppr.ai
+
+Distributed under the MIT license. See ``LICENSE`` for more information.
+
+[https://github.com/hopprai/hoppr-client](https://github.com/hopprai/hoppr-client)
+

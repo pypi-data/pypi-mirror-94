@@ -1,0 +1,17 @@
+hopprclient/__init__.py,sha256=hKRQVlJYTnOY5crhfSfYks5yjfAXUgl1elxLSlemlJs,15
+hopprclient/__main__.py,sha256=nIZ3qiZd_r43cBGQwxL3AqrRafCSsilmG29OC6aWZmE,4284
+hopprclient/hoppr_client.py,sha256=m3Z2YFrLt-JT8TedAIIl0YDYatCRepVw_3kAlD4KFPc,9552
+hopprclient/dicom/__init__.py,sha256=hKRQVlJYTnOY5crhfSfYks5yjfAXUgl1elxLSlemlJs,15
+hopprclient/dicom/__main__.py,sha256=tdFJTV_q_XPDFFYabgbvjRq9WAkaXVhU4Vdt8Obk74Q,1466
+hopprclient/dicom/dicom_tag_deid.py,sha256=VWULaokkoG07UHQVqZQK9HB_K0oDWMZCom0mZhfocrA,1077
+hopprclient/dicom/sop_class_spider.py,sha256=g0cQDscZtw8S4lv3RCsib788ISt4D9tLj1kdczmuqlM,1198
+hopprclient/dicom/sop_module_spider.py,sha256=VMHVPTnGJUcOUdsHgpP969KSvBlddXITbDlObiv8hYQ,1991
+hopprclient/service_clients/__init__.py,sha256=FbyMt9mvxsbHCVbDjnUc1orBr7efzHTVk2L8TCOsR04,55
+hopprclient/service_clients/files_service_client.py,sha256=Pc4NKdVEovNYX3zhcXhXcefmoC-Qlp2rC-_bHHYuMJs,3428
+hopprclient/service_clients/http_service_client.py,sha256=C40JpwDAwCp3PfFJ3w9_I9D-BembiAKWUdY3C4T5eR4,1055
+hopprclient-0.1.6.dist-info/LICENSE,sha256=kAe_mKkXbD-N-45_H4Qmhgd0ErK60yjyBKpEVokLiwI,1090
+hopprclient-0.1.6.dist-info/METADATA,sha256=eDEzGrSMIl_S4gEyIHOBVu7WOqFm0fEgQgnRTpsXUTk,2790
+hopprclient-0.1.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hopprclient-0.1.6.dist-info/entry_points.txt,sha256=eAQnVP8lmo9Rd0K0sPg66H7pb74a1slK7_SAC4uo28k,59
+hopprclient-0.1.6.dist-info/top_level.txt,sha256=O5Uzh-ew34EE4UX4r1qi9IgqzqYFZ07-3LlOzZxkzaI,12
+hopprclient-0.1.6.dist-info/RECORD,,
