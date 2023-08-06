@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: benchling-api-client
+Version: 0.12.0a0
+Summary: A client library for accessing Benchling API
+Author: Benchling Customer Engineering
+Author-email: ce-team@benchling.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: attrs (>=20.1.0,<21.0.0)
+Requires-Dist: httpx (>=0.15.0,<0.16.0)
+Requires-Dist: python-dateutil (>=2.8.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Benchling API Client
+
+A Python 3.6+ API Client for the [Benchling](https://www.benchling.com/) platform automatically generated from OpenAPI specs.
+
+*Important!* It is recommended to use the [Benchling SDK](https://pypi.org/project/benchling-sdk/) 
+instead of the API Client directly.
