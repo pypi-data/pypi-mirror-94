@@ -1,0 +1,11 @@
+numpy
+panda3d
+pillow
+screeninfo
+pyperclip
+
+[extras]
+psd-tools3
+imageio
+psutil
+hurry.filesize
