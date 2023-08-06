@@ -1,0 +1,12 @@
+adcircpy==1.0.16
+nemspy>=0.6.2
+numpy
+requests
+
+[development]
+oitnb
+
+[testing]
+flake8
+pytest
+pytest-cov
