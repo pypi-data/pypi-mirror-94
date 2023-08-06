@@ -1,0 +1,2 @@
+include LICENSE.txt requirements.txt pinecone/__version__
+recursive-exclude tests *
