@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: yahtzee-envs
+Version: 0.1.0
+Summary: A growing collection (currently just 1) of environments for         training RL agents and experiementing with various RL methods and        algorithms.
+Home-page: https://github.com/tomarbeiter/yahtzee-envs
+Author: Tom Arbeiter
+Author-email: UNKNOWN
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
