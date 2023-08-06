@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: galaxie-eveloop
+Version: 0.1.4
+Summary: Galaxie EveLoop is a low tech EventLoop, it contain minimalistic Bus and Loop
+Home-page: https://gitlab.com/Tuuux/galaxie-eveloop
+Author: Tuxa
+Author-email: clans@rtnp.org
+License:  GPLv3+
+Download-URL: https://pypi.org/project/galaxie-eveloop
+Project-URL: Read the Docs, https://galaxie-eveloop.readthedocs.io
+Project-URL: GitLab, https://gitlab.com/Tuuux/galaxie-eveloop
+Description: .. image:: https://readthedocs.org/projects/galaxie-eveloop/badge/?version=latest
+           :target: https://galaxie-eveloop.readthedocs.io/en/latest/?badge=latest
+           :alt: Documentation Status
+        .. image:: https://gitlab.com/Tuuux/galaxie-eveloop/badges/master/pipeline.svg
+           :target: https://gitlab.com/Tuuux/galaxie-eveloop/commits/master
+           :alt: Pipeline status
+        .. image:: https://gitlab.com/Tuuux/galaxie-eveloop/badges/master/coverage.svg
+           :target: https://gitlab.com/Tuuux/galaxie-eveloop/-/commits/master
+           :alt: Coverage Status
+        
+        =============================
+        Galaxie EveLoop documentation
+        =============================
+        .. figure::  https://galaxie-curses.readthedocs.io/_images/logo_galaxie.png
+           :align:   center
+        
+        Description
+        -----------
+        Galaxie Event Loop is a low tech main loop couple with a event bus.
+        
+        After many years as kernel of Galaxie Curses project, it have been as decision to extract the main loop and the event bus.
+        Especially that because it work and be very small.
+        
+        
+        Links
+        -----
+         * GitLab: https://gitlab.com/Tuuux/galaxie-eveloop/
+         * Read the Doc: https://galaxie-eveloop.readthedocs.io/
+         * PyPI: https://pypi.org/project/galaxie-eveloop/
+         * PuPI Test: https://test.pypi.org/project/galaxie-eveloop/
+        
+        Installation via pip
+        --------------------
+        Pypi
+        
+        .. code:: bash
+        
+          pip install galaxie-eveloop
+        
+        Pypi Test
+        
+        .. code:: bash
+        
+          pip install -i https://test.pypi.org/simple/ galaxie-eveloop
+        
+        
+Keywords: Galaxie Bus Mainloop
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/x-rst; charset=UTF-8
