@@ -1,0 +1,14 @@
+xbasin/__init__.py,sha256=4GZKi13lDTD25YBkGakhZyEQZWTER_OWQMNPoH_UM2c,22
+xbasin/_interpolation.py,sha256=CtgtKZ1HoeEkh3WLxw1Qz1BOXxTZgfsHEoa4HiLdwXk,3268
+xbasin/_remapping.py,sha256=ASqCwnmP5LyEXaV6Qr63DhmEEs0Zf4vgzn-X2h2eOmU,13034
+xbasin/_stratification.py,sha256=QuSKJKu3HNUq0ZKXLZSJ-eZyvVSm9R2aacUifK3RheI,446
+xbasin/_stream_functions.py,sha256=W-lwkaDskW1dJWJ1vZf1o05yzOnMCShhoeF4xnd_3w0,5058
+xbasin/eos.py,sha256=itYqZJg5pcOo36EP6xSDg1Qt0hO9niQLrKFilv1NHhA,4704
+xbasin/stratification.py,sha256=ymaX6EdKS1y8bWo7A4sSEuXZvvT8fakEO5L4zHj8sv8,442
+xbasin/stream_functions.py,sha256=fLs7tGOfVDixYYn92UwjKNWOEm4FELu4gn6qNWHocic,5054
+xbasin/surface_flux.py,sha256=xx64vWFracS_-6T7GFvg4R5ICps5posKDZRBl_ILMCw,3559
+xbasin-0.0.3.dist-info/LICENSE,sha256=5Ju-OgO-rRAdg7AWq8QlrIxyGnWI_A9fpTFJtex-B58,1071
+xbasin-0.0.3.dist-info/METADATA,sha256=RR_khZBxq5BKPdNPrIeASMWW_gvuv8y2bVhcRwlcaO0,880
+xbasin-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+xbasin-0.0.3.dist-info/top_level.txt,sha256=umZR43BlTjBleYrBfdxZCXt40PRwEBNVrXYOMWv9GOM,7
+xbasin-0.0.3.dist-info/RECORD,,
