@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: datateer-upload-agent
+Version: 0.0.17
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: boto3
+Requires-Dist: click
+Requires-Dist: pyyaml
+Requires-Dist: wheel
+
+UNKNOWN
+
+
