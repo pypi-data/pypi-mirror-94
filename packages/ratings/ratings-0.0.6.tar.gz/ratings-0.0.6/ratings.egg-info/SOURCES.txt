@@ -1,0 +1,10 @@
+README.md
+setup.py
+ratings/__init__.py
+ratings/elo.py
+ratings.egg-info/PKG-INFO
+ratings.egg-info/SOURCES.txt
+ratings.egg-info/dependency_links.txt
+ratings.egg-info/entry_points.txt
+ratings.egg-info/requires.txt
+ratings.egg-info/top_level.txt
