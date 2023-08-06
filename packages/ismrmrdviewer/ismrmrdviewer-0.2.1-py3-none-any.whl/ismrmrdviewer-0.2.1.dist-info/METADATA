@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ismrmrdviewer
+Version: 0.2.1
+Summary: Simple tool for viewing ISMRMRD data.
+Home-page: UNKNOWN
+Author: Kristoffer Langeland Knudsen
+Author-email: kristofferlknudsen@gradientsoftware.net
+License: LICENSE.txt
+Platform: UNKNOWN
+Requires-Dist: cycler
+Requires-Dist: h5py
+Requires-Dist: ismrmrd
+Requires-Dist: kiwisolver
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pyparsing
+Requires-Dist: PySide2
+Requires-Dist: python-dateutil
+Requires-Dist: shiboken2
+Requires-Dist: six
+
+UNKNOWN
+
+

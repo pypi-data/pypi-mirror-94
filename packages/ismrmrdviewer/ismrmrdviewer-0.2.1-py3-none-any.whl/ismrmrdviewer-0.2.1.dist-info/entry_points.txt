@@ -1,0 +1,3 @@
+[gui_scripts]
+ismrmrdviewer = ismrmrdviewer.__main__:main
+
