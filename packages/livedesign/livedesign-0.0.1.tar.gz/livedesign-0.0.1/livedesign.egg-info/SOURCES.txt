@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+livedesign/__init__.py
+livedesign.egg-info/PKG-INFO
+livedesign.egg-info/SOURCES.txt
+livedesign.egg-info/dependency_links.txt
+livedesign.egg-info/top_level.txt
