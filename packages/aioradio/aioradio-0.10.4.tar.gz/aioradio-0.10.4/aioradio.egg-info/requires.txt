@@ -1,0 +1,14 @@
+aiobotocore
+aioboto3
+aiojobs
+aioredis
+boto3
+ddtrace
+fakeredis
+httpx
+mandrill
+orjson
+psycopg2-binary
+pysmb
+python-json-logger
+xlrd
