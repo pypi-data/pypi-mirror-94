@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: tghtml
+Version: 0.2.0a1
+Summary: Parser to telegram html
+Home-page: https://github.com/jDan735/tghtml
+Author: Daniel Zakharov
+Author-email: daniel734@bk.ru
+License: MIT
+Description: # tghtml
+        Parser to telegram html
+        
+Keywords: html parser telegram python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3
+Description-Content-Type: text/markdown
