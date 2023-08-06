@@ -1,0 +1,10 @@
+localstack_s3_pyspark/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+localstack_s3_pyspark/__main__.py,sha256=CZoJ5m6fbQp9NTN38zamLFhpPvpTqmCv1IABDPEhDKY,993
+localstack_s3_pyspark/boto3.py,sha256=hFrQpxuPDpO_K8h7m85ClYz_aqA1Ulak4dL762O0s8Y,622
+localstack_s3_pyspark/configure_defaults.py,sha256=fEBULLiX5zKH27t9nD3YvGiB40Aaj5hcL3l-RmwCopM,8399
+localstack_s3_pyspark/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+localstack_s3_pyspark-0.0.0.dist-info/METADATA,sha256=KzLKxZSnxImhiOxgvVln281UTD2Pyx_TDVQsfvkycd4,1520
+localstack_s3_pyspark-0.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+localstack_s3_pyspark-0.0.0.dist-info/entry_points.txt,sha256=qHWrFLVGwq_ANyTvNDB-Pc2eDR_oL8xAyTLKgAsusfE,79
+localstack_s3_pyspark-0.0.0.dist-info/top_level.txt,sha256=5mkK9K3dUKJtHLpfWc6jePlHLs_GwB4LI7m-yY09Z-I,22
+localstack_s3_pyspark-0.0.0.dist-info/RECORD,,

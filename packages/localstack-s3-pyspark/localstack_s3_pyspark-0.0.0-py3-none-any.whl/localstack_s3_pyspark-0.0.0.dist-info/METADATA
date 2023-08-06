@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: localstack-s3-pyspark
+Version: 0.0.0
+Summary: A CLI to configure pyspark for use with s3 on localstack
+Home-page: UNKNOWN
+Author: David Belais
+Author-email: david@belais.me
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: ~=3.6
+Requires-Dist: localstack-client (~=1.12)
+Requires-Dist: lxml (~=4.6)
+Requires-Dist: pyspark
+Requires-Dist: dataclasses
+Provides-Extra: all
+Requires-Dist: boto3 ; extra == 'all'
+Requires-Dist: black (~=19.10b0) ; extra == 'all'
+Requires-Dist: readme-md-docstrings (~=0.1) ; extra == 'all'
+Requires-Dist: setuptools-setup-versions (~=1.6) ; extra == 'all'
+Requires-Dist: daves-dev-tools (~=0.3) ; extra == 'all'
+Requires-Dist: pytest (~=5.4) ; extra == 'all'
+Requires-Dist: tox (~=3.21) ; extra == 'all'
+Requires-Dist: flake8 (~=3.8) ; extra == 'all'
+Requires-Dist: mypy (~=0.800) ; extra == 'all'
+Requires-Dist: pip (>=21) ; extra == 'all'
+Provides-Extra: boto3
+Requires-Dist: boto3 ; extra == 'boto3'
+Provides-Extra: dev
+Requires-Dist: black (~=19.10b0) ; extra == 'dev'
+Requires-Dist: readme-md-docstrings (~=0.1) ; extra == 'dev'
+Requires-Dist: setuptools-setup-versions (~=1.6) ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: boto3 ; extra == 'test'
+Requires-Dist: daves-dev-tools (~=0.3) ; extra == 'test'
+Requires-Dist: pytest (~=5.4) ; extra == 'test'
+Requires-Dist: tox (~=3.21) ; extra == 'test'
+Requires-Dist: flake8 (~=3.8) ; extra == 'test'
+Requires-Dist: mypy (~=0.800) ; extra == 'test'
+Requires-Dist: pip (>=21) ; extra == 'test'
+
+UNKNOWN
+
+
