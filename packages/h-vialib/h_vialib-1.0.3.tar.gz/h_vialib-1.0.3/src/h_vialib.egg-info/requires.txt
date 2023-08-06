@@ -1,0 +1,7 @@
+pyjwt
+
+[tests]
+pytest
+coverage
+h-matchers
+pyjwt
