@@ -1,0 +1,10 @@
+whitesource_backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+whitesource_backend/app.py,sha256=FSTJ-V3KpaSZvzLcAmrmxF3DCpmnBqsWP2einz0ywhk,1189
+whitesource_backend/component.py,sha256=WRfyr1Qdd77P8ezFDSTD849JRy3rrbIro5vDnaB45Jw,7137
+whitesource_backend/model.py,sha256=hkjymrAaQQf6ct6ruYGRxL_p_HevF2HTRaFjr9NKhak,113
+whitesource_backend/paths.py,sha256=IOa7Lga2rZMLxsVFEcUPVgecYhu-Y7cB6RvwSFKLgDI,253
+whitesource_backend/util.py,sha256=4puQDOqsFA7ooN542j3m2Utq6-iB40zhcXhk_QvjQEc,5100
+whitesource_api_extension-0.24.0.dist-info/METADATA,sha256=q35YmmGdRX7OHnG-2gIOenpwC6RRaLJy5FAV4N_YWIw,207
+whitesource_api_extension-0.24.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+whitesource_api_extension-0.24.0.dist-info/top_level.txt,sha256=QuFYOI6X6I5ysROdTkk_OB0gfwLBST6RZiFIr6KyfYc,20
+whitesource_api_extension-0.24.0.dist-info/RECORD,,
