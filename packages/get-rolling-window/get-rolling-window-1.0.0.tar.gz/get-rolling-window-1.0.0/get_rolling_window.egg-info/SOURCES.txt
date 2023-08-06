@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+get_rolling_window/__init__.py
+get_rolling_window.egg-info/PKG-INFO
+get_rolling_window.egg-info/SOURCES.txt
+get_rolling_window.egg-info/dependency_links.txt
+get_rolling_window.egg-info/requires.txt
+get_rolling_window.egg-info/top_level.txt
+test/test_get_rolling_window.py
