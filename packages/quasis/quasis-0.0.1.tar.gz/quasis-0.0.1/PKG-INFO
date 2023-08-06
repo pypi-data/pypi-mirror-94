@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: quasis
+Version: 0.0.1
+Summary: Helper functions for divisibility  & plotting
+Home-page: https://github.com/Mikadore/quasi-lib
+Author: Mikadore
+Author-email: mikadore@seznam.cz
+License: UNKNOWN
+Description: # Quasis utlity package
+        This package mostly exists to make my own life easier working with AWS lambda, it exports a few useful functions regarding numbers/primality/divisibility
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

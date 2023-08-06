@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+quasis/__init__.py
+quasis/divisorfn.py
+quasis/plot.py
+quasis/prime.py
+quasis.egg-info/PKG-INFO
+quasis.egg-info/SOURCES.txt
+quasis.egg-info/dependency_links.txt
+quasis.egg-info/top_level.txt
