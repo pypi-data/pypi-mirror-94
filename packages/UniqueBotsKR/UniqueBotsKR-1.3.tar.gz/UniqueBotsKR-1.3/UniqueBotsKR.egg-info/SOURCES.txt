@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+UniqueBotsKR/__init__.py
+UniqueBotsKR/client.py
+UniqueBotsKR/errors.py
+UniqueBotsKR/http.py
+UniqueBotsKR/model.py
+UniqueBotsKR.egg-info/PKG-INFO
+UniqueBotsKR.egg-info/SOURCES.txt
+UniqueBotsKR.egg-info/dependency_links.txt
+UniqueBotsKR.egg-info/requires.txt
+UniqueBotsKR.egg-info/top_level.txt
