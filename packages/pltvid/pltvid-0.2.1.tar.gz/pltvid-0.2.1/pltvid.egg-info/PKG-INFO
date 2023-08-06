@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: pltvid
+Version: 0.2.1
+Summary: A simple library to capture multiple matplotlib plots as a movie.
+Home-page: https://github.com/parrt/pltvid
+Author: Terence Parr
+Author-email: parrt@cs.usfca.edu
+License: MIT
+Description: UNKNOWN
+Keywords: matplotlib plot movie animation visualization
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
