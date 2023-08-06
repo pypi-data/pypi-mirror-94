@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: schema-enforcer
+Version: 1.0.0
+Summary: 
+Author: Network to Code, LLC
+Author-email: info@networktocode.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: ansible (>=2.8.0,<3.0.0)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: jinja2 (>=2.11.2,<3.0.0)
+Requires-Dist: jsonref (>=0.2,<0.3)
+Requires-Dist: jsonschema (>=3.2.0,<4.0.0)
+Requires-Dist: pydantic (>=1.6.1,<2.0.0)
+Requires-Dist: rich (>=9.5.1,<10.0.0)
+Requires-Dist: ruamel.yaml (>=0.16.10,<0.17.0)
+Requires-Dist: termcolor (>=1.1.0,<2.0.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
