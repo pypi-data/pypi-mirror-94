@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/dockit
+dockit/__init__.py
+dockit/dockit.py
+dockit/test.py
+dockit.egg-info/PKG-INFO
+dockit.egg-info/SOURCES.txt
+dockit.egg-info/dependency_links.txt
+dockit.egg-info/top_level.txt
