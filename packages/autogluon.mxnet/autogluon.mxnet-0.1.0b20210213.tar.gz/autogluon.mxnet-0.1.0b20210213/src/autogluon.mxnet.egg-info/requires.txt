@@ -1,0 +1,8 @@
+Pillow<=8.1
+numpy==1.19.5
+matplotlib
+pandas<2.0,>=1.0.0
+scikit-learn<0.24,>=0.22.0
+autogluon.core==0.1.0b20210213
+pytest
+openml
