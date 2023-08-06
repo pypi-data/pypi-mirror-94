@@ -1,0 +1,11 @@
+README.md
+setup.py
+fastutil/__init__.py
+fastutil.egg-info/PKG-INFO
+fastutil.egg-info/SOURCES.txt
+fastutil.egg-info/dependency_links.txt
+fastutil.egg-info/entry_points.txt
+fastutil.egg-info/requires.txt
+fastutil.egg-info/top_level.txt
+test/__init__.py
+test/test_main.py
