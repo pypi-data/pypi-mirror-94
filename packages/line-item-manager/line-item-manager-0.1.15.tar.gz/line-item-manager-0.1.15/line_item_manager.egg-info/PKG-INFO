@@ -1,0 +1,215 @@
+Metadata-Version: 2.1
+Name: line-item-manager
+Version: 0.1.15
+Summary: Create and manage line items.
+Home-page: https://github.com/prebid/line-item-manager
+Author: the prebid contributors
+Author-email: info@prebid.org
+License: Apache Software License 2.0
+Description: =================
+        line-item-manager
+        =================
+        
+        
+        .. image:: https://img.shields.io/pypi/v/line_item_manager.svg
+                :target: https://pypi.python.org/pypi/line_item_manager
+        
+        
+        
+        
+        Create and manage line items.
+        
+        
+        * Free software: Apache Software License 2.0
+        * Documentation: https://line-item-manager.readthedocs.io.
+        
+        
+        Example Workflow
+        ----------------
+        
+        1. Save and edit a copy of the package config
+        ::
+        
+           $ line_item_manager show config > my_config.yml
+        
+        2. List bidder codes and names for reference
+        ::
+        
+           $ line_item_manager show bidders
+        
+        3. Do a dry run to see if everything looks right
+        ::
+        
+           $ line_item_manager create my_config.yml \
+           --dry-run \
+           --private-key-file my_gam_creds.json \
+           --network-code 12345678 \
+           --network-name Publisher_GAM_Name \
+           --bidder-code rubicon \
+           --bidder-code ix
+        
+        4. Do a test run creating a limited number of line items for visual inspection
+        ::
+        
+           $ line_item_manager create my_config.yml \
+           --test-run \
+           --private-key-file my_gam_creds.json \
+           --network-code 12345678 \
+           --network-name Publisher_GAM_Name \
+           --bidder-code rubicon \
+           --bidder-code ix
+        
+        5. Create line items
+        ::
+        
+           $ line_item_manager create my_config.yml \
+           --private-key-file my_gam_creds.json \
+           --network-code 12345678 \
+           --network-name Publisher_GAM_Name \
+           --bidder-code rubicon \
+           --bidder-code ix
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Local Development
+        -----------------
+        
+        Installing and running line_item_manager locally using docker
+        ::
+        
+           $ git clone git://github.com/prebid/line-item-manager
+           $ cd line-item-manager
+           $ command='line_item_manager' extra_args='--help' make docker-run
+        
+        Configuration
+        -------------
+        
+        See this default config_ that you can edit for your own purposes.
+        
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _`config`: https://github.com/prebid/line-item-manager/blob/master/line_item_manager/conf.d/line_item_manager.yml
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.15 (2021-02-09)
+        -------------------
+        
+        * BUG FIX: Error during line item creative associaiton (#25)
+        * BIG FIX: Bidder Targeting Key status is 'INACTIVE' (#23)
+        * Added directory of helpful bin scripts (examples/bin) (#22)
+        * Added bin script (examples/bin/archive_order.py) for archiving orders (#21)
+        
+        0.1.14 (2021-01-25)
+        -------------------
+        
+        * CLI Help: noted that tests are not auto-archived
+        
+        0.1.13 (2021-01-22)
+        -------------------
+        
+        * First release to production PyPI
+        * Github action for publishing
+        
+        0.1.12 (2021-01-12)
+        -------------------
+        
+        * Support for Python 3.9
+        * Prebid and PrebidBidder classes added
+        * Type hints added
+        * Docstrings added
+        * Removed unused travis and tox support
+        
+        0.1.11 (2020-12-17)
+        -------------------
+        
+        * CLI option to display package version (#4)
+        * Schema invalidation of unrecognized config properties (#5)
+        * Support all bidder keys in config override map (#9)
+        
+        0.1.10 (2020-12-15)
+        -------------------
+        
+        * FEATURE: prebid recommended size override for banner creatives (#1)
+        
+        0.1.9 (2020-12-11)
+        ------------------
+        
+        * BUG FIX: multi-line template assignments not parsed correctly (#2)
+        
+        0.1.8 (2020-12-7)
+        ------------------
+        
+        * Support for including a custom line item priority.
+        
+        0.1.7 (2020-12-4)
+        ------------------
+        
+        * Testing: Additional coverage.
+        * Conditional schema definitions.
+        
+        0.1.6 (2020-12-3)
+        ------------------
+        
+        * Added 'Run of network' default inventory targeting
+        * Added predefined Prebid granularity types
+        * Dockerfile python change to slim from alpine
+        
+        0.1.5 (2020-12-1)
+        ------------------
+        
+        * Fixed missing History.
+        
+        0.1.4 (2020-12-1)
+        ------------------
+        
+        * Code cleanup. Deletion of unused code.
+        * Testing: Additional coverage.
+        
+        0.1.3 (2020-11-30)
+        ------------------
+        
+        * Testing: Additional coverage.
+        
+        0.1.2 (2020-11-29)
+        ------------------
+        
+        * Bug Fix: microAmount not properly assigned in line item
+        * Testing: Mock Ad Client and initial tests  
+        
+        0.1.1 (2020-11-24)
+        ------------------
+        
+        * Auto-archive Orders on failure or interruption.
+        
+        0.1.0 (2020-11-23)
+        ------------------
+        
+        * First release on Test PyPI.
+        
+Keywords: line-item-manager
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Provides-Extra: release
+Provides-Extra: test
