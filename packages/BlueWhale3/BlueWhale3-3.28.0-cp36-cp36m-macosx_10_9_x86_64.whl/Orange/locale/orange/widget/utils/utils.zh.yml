@@ -1,0 +1,294 @@
+common:
+  data: "数据"
+  selected: "已选择"
+
+owplotgui:
+  box:
+    zoom_select: "缩放/选择"
+    theme: "主题"
+  checkbox:
+    jitter_numeric: "抖动数值"
+    show_all_data: "鼠标悬停时显示所有数据"
+    show_color_region: "显示颜色区域"
+    show_regression_line: "显示回归线"
+    label_content: "显示回归线"
+    show_fill_symbol: "显示填充符号"
+    show_gridline: "显示网格线"
+    use_animation: "使用动画"
+    use_antialiasing: "使用antialiasing"
+  placeholder:
+    same_color: "(相同颜色)"
+    same_shape: "(相同形状)"
+    same_size: "(相同大小)"
+    no_labels: "(无标签)"
+  label:
+    symbol_size: "符号大小："
+    opacity: "不透明度："
+    shape: "形状："
+    size: "大小："
+    label: "标签："
+    jittering: "抖动"
+
+owplotgui_obs:
+  window_title_hidden_axes: "隐藏轴"
+  tip:
+    add_class_label: "添加新类标签"
+    remove_class_label: "删除所选类标签"
+  label:
+    jittering: "抖动："
+    symbol_size:  "符号大小："
+    opacity: "不透明度："
+    shape: "颜色："
+    size: "大小："
+    label: "标签："
+  checkbox:
+    jitter_numeric: "抖动数值"
+    show_all_data: "鼠标悬停时显示所有数据"
+    class_density: "显示类密度"
+    show_regression_line: "显示回归线"
+    label_select_point: "仅标记选定点"
+    show_fill_symbol: "显示填充符号"
+    show_gridline: "显示网格线"
+    use_animation: "使用动画"
+  btn:
+    add: "添加"
+    delete: "删除"
+  box:
+    display_axes: "显示的轴"
+    point: "点数"
+    plot_property: "绘图属性"
+    visual_effect: "视觉效果"
+    theme: "主题"
+  placeholder:
+    same_color: "（相同颜色）"
+    same_shape: "(相同形状)"
+    same_size: "（相同大小）"
+    no_labels: "（无标签）"
+
+owsavebase:
+  file_dialog_save_file: "保存文件"
+  save_file_dialog: "保存文件"
+  checkbox_autosave_receive_new_data: "收到新数据时自动保存"
+  msg:
+    input_empty: "输入为空；未保存任何内容。"
+    ignore_file_name: "未设置文件名。"
+    overwrite_file: "覆盖文件？"
+    overwrite_file_content:  "文件{}已存在。\n要覆盖它吗？"
+  text:
+    save_as: "另存为{}"
+  btn:
+    something_save_as: "另存为{}"
+    save: "保存"
+    save_as: "另存为…"
+
+colorgradientselection:
+  slider:
+    low: "低梯度阈值"
+    low_tip: "应用低阈值将减小下端的梯度"
+    high: "高梯度阈值"
+    high_tip: "应用高阈值将减小高端的梯度"
+  row:
+    low: "低:"
+    high: "高:"
+  label:
+    centered_at: "集中在"
+
+colorpalette:
+  window_title:
+    color_palette: "调色板"
+    color_palette_list: "调色板列表"
+    palette_edit: "调色板编辑器"
+  btn:
+    edit_palette: "编辑调色板"
+    edit_palette_tip: "编辑调色板的顺序和颜色"
+    load_palette: "加载调色板"
+    load_palette_tip: "加载预定义的调色板"
+  checkbox:
+    pass_through_black: "穿过黑色"
+    pass-through_color: "使用穿透颜色"
+  box:
+    save_profile: "保存的配置文件"
+    pass-through_color: "穿透颜色"
+    info: "信息"
+    default_palette: "默认调色板"
+    default_palette_tip: "默认调色板"
+  msg:
+    update_color_palette: "色彩模块陈旧；色彩模块"
+    question_title: "问题"
+    question_content: "颜色方案已更改。要保存吗？"
+    save_palette_as: "将当前调色板另存为…"
+    save_changes_tip: "命名当前颜色设置。\n点击“取消”将取消更改并关闭对话框。"
+    name_color_settings: "命名颜色设置"
+    rename_setting: "“默认”设置不能更改。输入其他名称："
+    change_color: "<p align='center'>您可以使用右边的按钮或拖放项目<br/>来重新排列列表中的颜色<br/>要更改特定颜色，请双击列表中的项目。</p>"
+    move_select_color_up: "将所选颜色上移"
+    move_select_color_down: "将所选颜色下移"
+
+concurrent:
+  msg:
+    submit_task_run_task: "使用`submit_task`运行`Task`s"
+    submit_task_deprecate: "`submit_task`将被弃用"
+    task_deprecate: "`Task`已被弃用"
+
+colorpalettes:
+  msg_parameter_replace: "有限分散：'force_hsv'已弃用；用'force_glasbey'来替代"
+  palettes:
+    blue_green_yellow: "蓝-绿-黄"
+    blue_magenta_yellow: "蓝-绛红-黄"
+    dim_gray: "暗灰"
+    inferno: "火焰金"
+    viridis: "松石绿"
+    coolwarm: "蓝-红"
+    green_red: "绿-红"
+    diverging_protanopic: "发散型-红色盲友好型"
+    diverging_tritanopic: "发散型-蓝色盲友好型"
+    linear_protanopic: "线型-红色盲友好型"
+    linear_tritanopic: "线型-蓝色盲友好型"
+    isoluminant: "糖果色"
+    rainbow: "彩红色"
+  category:
+    linear: "线型"
+    diverging: "发散型"
+    color_blind_friendly: "色盲友好型"
+    other: "其他"
+
+encodings:
+  btn_select_all: "全选"
+  text_select_visible: "选择文本编码菜单中可见的编码"
+
+graphicsview:
+  btn:
+    zoom_in: "放大"
+    zoom_out: "缩小"
+    actual_size: "实际尺寸"
+    zoom_to_fit: "缩放到合适的尺寸"
+  gbox:
+    aspect_mode: "外观模式"
+    ignore: "忽略"
+    keep: "保持"
+    keep_by_expand: "保持扩大"
+
+domaineditor:
+  place:
+    feature: "特征变量"
+    target: "目标变量"
+    meta: "元变量"
+    skip: "跳过"
+  typename:
+    categorical: "类目型"
+    numeric: "数值型"
+    text: "文本型"
+    datetime: "时间日期型"
+  label:
+    name: "名称"
+    type: "类型"
+    role: "角色"
+    values: "值"
+
+itemmodels:
+  msg_sorted_modify_error: "排序时无法修改PyTableModel"
+  text:
+    variable_label: "<br/>变量标签：<br/>"
+    categorical_value: "<b>%s</b><br/>按%i值分类："
+    time: "<b>%s</b><br/>时间"
+    numeric: "<b>%s</b><br/>数值"
+    text: "<b>%s</b><br/>文本"
+
+listfilter:
+  tooltip_filter_available_variable: "筛选可用变量的列表。"
+  placeholder_filter: "过滤器"
+
+owbasesql:
+  btn_connect: "连接"
+  box:
+    server: "服务器"
+    server_tip: "服务器"
+  report:
+    no_db_connect: "没有数据库连接。"
+    database: "数据集"
+    data: "数据"
+  placeholder:
+    server: "服务器"
+    database: "数据集[/Schema]"
+    database_tip: "数据库或可选的数据库/架构"
+    username: "用户名"
+    username_tip: "用户名"
+    password: "密码"
+    password_tip: "密码"
+
+owlearnerwidget:
+  msg:
+    fit_fail: "安装失败。\n{}"
+    unsupported_sparse_data: "不支持稀疏数据。"
+    out_of_memory: "内存不足"
+    change_apply: "点击“应用”提交更改。"
+  error:
+    no_target_variable: "数据没有目标变量。\n 可以使用“特征选择”小部件设置目标变量。”"
+    dataset_empty: "数据集为空。"
+    no_single_target_value: "数据包含一个目标值。"
+    data_no_learn_feature: "数据没有可学习的特征。"
+  report:
+    name: "名称"
+    model_parameter: "模型参数"
+    data: "数据"
+  box:
+    classification: "分类"
+    regression: "回归"
+  row:
+    name: "名称"
+    name_tip: "该名称将在其他组件中标识此模型"
+
+progressbar:
+  msg_argument_error:  "'processEvents'参数已弃用。\n它不执行任何操作，之后将会被删除（忽略它将会引发TypeError）."
+
+state_summary:
+  categorical: "分类型"
+  numeric: "数值型"
+  time: "时间日期型"
+  string: "字符串型"
+  format: "{} 个{}"
+  detail:
+    all: "{} 个实例， {} 个变量\n特征变量：{} {}\n目标变量：{}\n元变量：{}"
+    no_miss_value: "（无缺失值）"
+    no_data: "没有{}的数据。"
+    miss_value_percentage: "（%.1f%s缺失值）"
+
+stickygraphicsview:
+  btn:
+    zoom_in: "放大"
+    zoom_out: "缩小"
+
+textimport:
+  window_title:
+    customize_encodings_list: "自定义编码列表"
+  btn:
+    skip: "跳过"
+    header: "页眉"
+  tip:
+    select_encoding_format: "选择文件文本编码"
+    select_cell_delimiter: "选择单元格分隔符字符。"
+    thousands_group_separator: "千组分隔符"
+    csv_parse_error: "CSV分析错误："
+  row:
+    encoding: "编码"
+    cell_delimiter: "单元格分隔符"
+    quote_character: "引用字符"
+    group: "分组："
+    decimal: "十进制的："
+    number_separators: "数字分隔符："
+    column_type: "列类型"
+  gbox:
+    tab: "标签"
+    comma: "逗号"
+    semicolon: "分号"
+    space: "空格"
+    other: "其他"
+    customize_encodings_list: "自定义编码列表…"
+    no_separator: "无分隔符"
+    auto: "自动"
+    automatic_determine_type: "类型将根据列内容自动确定。"
+    numeric: "数值型"
+    categorical: "分类型"
+    datetime: "时间日期型"
+    ignore: "忽略"
+    column_not_load: "没有加载列"

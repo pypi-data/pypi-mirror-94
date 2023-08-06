@@ -1,0 +1,212 @@
+package_label: "评估"
+package_desc: "评估分类/回归性能。"
+
+common:
+  evaluation_result: "估计结果"
+  calibrated_model: "校准模型"
+  predictor: "预测"
+  prediction: "预测"
+  test_data: "测试数据"
+  selected_data: "所选数据"
+  data: "数据"
+
+owcalibrationplot:
+  name: "校准曲线"
+  desc: "基于分类器评价的校准曲线。"
+  row_target: "目标："
+  checkbox_show_rug: "显示数据分布"
+  checkbox_fold_curves: "单折曲线"
+  box_metric: "度量指标"
+  box_info: "信息"
+  row_model_calibration: "输出模型校准"
+  label:
+    predict_probability: "预测概率"
+    threshold_probability_as_positive: "分类为正的阈值概率"
+    threshold: "<table><tr><th align='right'>阈值：p=</th><td colspan='4'>%.2f<br/></td></tr>"
+    threshold_text: "<table><tr><th align='right'>阈值：</th><td colspan='4'>p = %.2f<br/></td><tr/></tr>"
+    sens: "sens"
+    spec: "spec"
+    prec: "prec"
+    recall: "召回"
+    ppv: "PPV"
+    tpv: "TPV"
+    tpr: "TPR"
+    fpr: "FPR"
+  gbox:
+    calibration_curve: "校准曲线"
+    class_accuracy: "分类精度"
+    f1: "F1"
+    sensitivity_specificity: "敏感性和特异性"
+    sensitivity_info: "<p><b>敏感性</b> (falling)是检测到正向实例的比例(TP&nbsp;/&nbsp;P).</p><p><b>特异性</b> (rising)是检测到负向实例的比例(TN&nbsp;/&nbsp;N).</p>"
+    precision_recall: "查准率和查全率"
+    precision_recall_info: "<p><b>精确度</b> (rising)是检测到相关实例的比例，TP&nbsp;/&nbsp;(TP&nbsp;+&nbsp;FP).</p><p><b>召回</b> (falling)是检测到相关实例的比例，TP&nbsp;/&nbsp;P.</p>"
+    predictive_pos_neg: "正负预测值"
+    predictive_pos_neg_info: "<p><b>正预测值</b> (rising)是正确正值的比例, TP&nbsp;/&nbsp;(TP&nbsp;+&nbsp;FP).</p><p><b>负预测值</b>是正确负值的比例，TN&nbsp;/&nbsp;(TN&nbsp;+&nbsp;FN).</p>"
+    true_false_rate: "真假率"
+    true_false_rate_info: "<p><b>真假率</b>是检测到和忽略的正向实例的比例</p>"
+    calibration_plot: "校准曲线"
+    class_calibration_plot: "基于分类器评价的校准曲线。"
+  msg:
+    calibration_plot_require_discrete_target: "校准曲线需要一个离散目标"
+    nothing_display: "输入结果为空。没有要显示的内容。"
+    remove_unkown_class: "删除具有未知类的测试数据实例"
+    data_belong_target_class: "所有数据实例都属于目标类"
+    nodata_belong_target_class: "所有数据实例都不属于目标类"
+    not_shown_data_belong_test_fold: "未显示所有数据属于（非）目标测试集"
+    model_cannot_compute: "跳过模型无法计算概率的实例"
+    invalid_data_for_model: "没有模型的有效数据 {}"
+    cannot_output: "无法输出模式： {}"
+    train_produces_different_model: "每个训练数据样本产生不同的模型"
+    result_not_contain_model: "测试结果不包含存储的模型——尝试对单独的数据或训练数据进行测试"
+    select_single_model: "选择单个模型——组件只能输出一个"
+    cannot_calibrate: "无法校准非二进制类"
+  report:
+    output_model_calibration: "输出模型校准"
+
+owconfusionmatrix:
+  name: "混淆矩阵"
+  desc: "显示根据分类器评估结果构造的混淆矩阵。"
+  box_output: '输出'
+  label:
+    show: "显示："
+    predicted: '预测'
+    actual: '实际'
+    trbl: 'trbl'
+    actual_predicted: "实际：{}\n预测：{}"
+    show_confusion_matrix: '{}的混淆矩阵 (显示{})'
+  btn:
+    predictions: '预测结果'
+    probability: '概率'
+    select_correct: "选择正确分类"
+    select_misclassified: "选择错误分类"
+    clear_selection: '重置'
+  gbox:
+    number_instance: "实例数"
+    proportion_predicted: '预测比例'
+    proportion_actual: "实际比例"
+  msg:
+    user_advice: "点击单元格或标题将输出相应的数据实例"
+    no_regression: "混淆矩阵不能显示回归结果。"
+    invalid_values: "评估结果输入包含无效值"
+    empty_input: "输入结果为空。没有要显示的内容。"
+
+owliftcurve:
+  name: "升降曲线"
+  desc: "构造并显示分类评价的升降曲线。"
+  box_curve: "曲线"
+  box_model: "模型"
+  box_set: "设置"
+  checkbox_show_convex: "显示升降曲线"
+  checkbox_convex_hull: "显示凸包"
+  checkbox_cumulative_gain: "累计收益"
+  label_p_rate: "P率"
+  label_tp_rate: "TP率"
+  label_lift: "提升"
+  label_target: "目标: "
+  msg_warn_undefined: "有些曲线未定义；请检查模型和数据"
+  msg_error_undefined: "没有定义的曲线；检查模型和数据"
+  report_target_class: "目标类"
+
+owpredictions:
+  name: "预测"
+  desc: "显示输入数据集的模型预测。"
+  msg_empty_dataset: "空数据集"
+  msg_model_predict_different_target: "一些模型预测不同的目标（查看更多…）\n{}"
+  msg_predictor_failed: "部分预测值失败（查看更多…）\n{}"
+  msg_score_failed: "部分记分失败（查看更多…）\n{}"
+  box_show_probability: "显示概率"
+  btn_restore_original: "恢复原始顺序"
+  tooltip_original_row: "按原始顺序显示行"
+  detail:
+    data: "数据:<br>"
+    no_data: "没有输入数据."
+    model: "模型: {number} 模型{s}"
+    fail: " ({} 失败)"
+    no_model: "模型:<br>没有输入模型."
+  report:
+    show_probability: "<br>显示概率："
+    data_prediction: "数据&预测"
+
+owrocanalysis:
+  name: "ROC分析"
+  desc: "根据分类器的评价，显示接受者操作特征曲线。"
+  row_fp_cost: "假正损失："
+  row_fn_cost: "假反损失："
+  row_prior_probability: "先验概率:"
+  label_fp_rate: "假正率(1-特异度)"
+  label_tp_rate: "真正率(灵敏度)"
+  label_target: "目标类别"
+  msg:
+    some_roc_curves_undefined: "部分ROC曲线未定义"
+    all_roc_curves_undefined: "所有ROC曲线未定义"
+    thresholds: "阈值：\n"
+  box:
+    plot: "绘制(曲线)"
+    classifier: "分类器"
+    curves: "曲线"
+    analysis: "分析"
+  gbox:
+    merge_prediction: "显示合并的ROC曲线"
+    mean_tp_rate: "平均真正率"
+    threshold_tp_fp: "阈值的平均真正率和假正率"
+    show_individual_curve: "显示单个曲线"
+  checkbox:
+    show_roc_curve: "显示凸ROC曲线"
+    show_roc_convex_hull: "显示ROC曲线凸包"
+    default_threshold: "默认阈值（0.5）点"
+    show_performance_line: "显示性能行"
+  report:
+    cost: "损失"
+    fp_fn: "假正例 = {}, 假反例 = {}"
+    target_probability: "目标概率"
+
+owtestandscore:
+  name: "模型评估"
+  desc: "交叉验证精度估计。"
+  tooltip_click_table: "点击表标题以选择显示的列"
+  tooltip_click_header: "点击页眉"
+  placeholder_average_class: "(类别均值)"
+  row_number_of_fold: "集的数量："
+  checkbox_stratified: "分层"
+  row_repeat_train: "重复训练/测试："
+  row_train_set_size: "训练集大小："
+  checkbox_negligible_difference: "差异可忽略不计："
+  tooltip_table_show_probability: "<small>表显示了该行中模型的得分高于列中模型的得分的可能性。较小的数字表明差异可以忽略不计。</small>"
+  msg:
+    test_data_empty: "测试数据集为空。"
+    class_required_test: "测试数据输入需要目标变量。"
+    too_many_folds: "集数超过数据集大小"
+    class_inconsistent: "测试和训练数据集具有不同的目标变量。"
+    memory_error: "内存不足。"
+    test_data_incompatible: "测试数据与训练数据可能不兼容。"
+    remove_unknown_target_value: "具有未知目标值的实例已从{}数据中删除。"
+    miss_test_data_input: "缺少单独的测试数据输入。"
+    some_score_not_computed: "有些分数无法计算。"
+    use_test_data: "测试数据存在但未使用。选择“测试数据测试”以使用它。"
+    train_data_sampled: "测试数据已采样"
+    test_data_sampled: "测试数据已采样"
+    test_match_train_data: "测试数据已转换为与训练数据相匹配。"
+    failed_with: "{name}失败，出现错误：\n {exc.__class__.__name__}: {exc!s}"
+  btn:
+    cross_validation: "交叉验证"
+    feature_cross_validation: "按特征交叉验证"
+    random_sampling: "随机抽样"
+    leave_one_out: "留一法"
+    train_data_test: "训练数据试验"
+    test_data_test: "测试数据测试"
+  box:
+    sampling: "抽样"
+    model_comparison: "模型比较"
+    evaluation_result: "评估结果"
+    model_comparison_name: "{}模型比较"
+  status:
+    wait: "等待"
+    done: "完成"
+    cancel: "取消"
+
+utils:
+  header:
+    method: "方法"
+    model: "模型"
+    train_time: "训练时间"
+    test_time: "测试时间"

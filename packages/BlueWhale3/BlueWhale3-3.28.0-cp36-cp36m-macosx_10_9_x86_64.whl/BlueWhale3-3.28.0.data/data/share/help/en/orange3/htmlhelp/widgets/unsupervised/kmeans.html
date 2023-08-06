@@ -1,0 +1,106 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>k-Means</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="next" title="Louvain Clustering" href="louvainclustering.html" />
+    <link rel="prev" title="Hierarchical Clustering" href="hierarchicalclustering.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="k-means">
+<h1>k-Means</h1>
+<p>Groups items using the k-Means clustering algorithm.</p>
+<p><strong>Inputs</strong></p>
+<ul class="simple">
+<li>Data: input dataset</li>
+</ul>
+<p><strong>Outputs</strong></p>
+<ul class="simple">
+<li>Data: dataset with cluster index as a class attribute</li>
+</ul>
+<p>The widget applies the <a class="reference external" href="https://en.wikipedia.org/wiki/K-means_clustering" target="_blank">k-Means clustering</a> algorithm to the data and outputs a new dataset in which the cluster index is used as a class attribute. The original class attribute, if it exists, is moved to meta attributes. Scores of clustering results for various k are also shown in the widget.</p>
+<p><img alt="../../_images/kMeans-stamped.png" src="../../_images/kMeans-stamped.png" /></p>
+<ol class="simple">
+<li>Select the number of clusters.<ul>
+<li><strong>Fixed</strong>: algorithm clusters data in a specified number of clusters.</li>
+<li><strong>Optimized</strong>: widget shows clustering scores for the selected cluster range:<ul>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Silhouette_(clustering)" target="_blank">Silhouette</a> (contrasts average distance to elements in the same cluster with the average distance to elements in other clusters)</li>
+<li><strong>Inter-cluster distance</strong> (measures distances between clusters,normally between centroids)</li>
+<li><strong>Distance to</strong> <a class="reference external" href="https://en.wikipedia.org/wiki/Centroid" target="_blank">centroids</a> (measures distances to the arithmetic means of clusters)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Select the initialization method (the way the algorithm begins clustering):<ul>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/K-means%2B%2B" target="_blank">k-Means++</a> (first center is selected randomly, subsequent are chosen from the remaining points with probability proportioned to squared distance from the closest center)</li>
+<li><strong>Random initialization</strong> (clusters are assigned randomly at first and then updated with further iterations)
+<strong>Re-runs</strong> (how many times the algorithm is run from random initial positions; the result with the lowest within-cluster sum of squares will be used) and <strong>maximal iterations</strong> (the maximum number of iterations within each algorithm run) can be set manually.</li>
+</ul>
+</li>
+<li>The widget outputs a new dataset with appended cluster information. Select how to append cluster information (as class, feature or meta attribute) and name the column.</li>
+<li>If <em>Apply Automatically</em> is ticked, the widget will commit changes automatically. Alternatively, click <em>Apply</em>.</li>
+<li>Produce a report.</li>
+<li>Check scores of clustering results for various k.</li>
+</ol>
+<div class="section" id="examples">
+<h2>Examples</h2>
+<p>We are going to explore the widget with the following schema.</p>
+<p><img alt="../../_images/K-MeansClustering-Schema.png" src="../../_images/K-MeansClustering-Schema.png" /></p>
+<p>First, we load the <em>Iris</em> dataset, divide it into three clusters and show it in the <a class="reference internal" href="../data/datatable.html"><span class="doc">Data Table</span></a>, where we can observe which instance went into which cluster. The interesting parts are the <a class="reference internal" href="../visualize/scatterplot.html"><span class="doc">Scatter Plot</span></a> and <a class="reference internal" href="../data/selectrows.html"><span class="doc">Select Rows</span></a>.</p>
+<p>Since <strong>k-Means</strong> added the cluster index as a class attribute, the scatter plot will color the points according to the clusters they are in.</p>
+<p><img alt="../../_images/kMeans-Scatterplot.png" src="../../_images/kMeans-Scatterplot.png" /></p>
+<p>What we are really interested in is how well the clusters induced by the (unsupervised) clustering algorithm match the actual classes in the data. We thus take <a class="reference internal" href="../data/selectrows.html"><span class="doc">Select Rows</span></a> widget, in which we can select individual classes and have the corresponding points marked in the scatter plot. The match is perfect for <em>setosa</em>, and pretty good for the other two classes.</p>
+<p><img alt="../../_images/K-MeansClustering-Example.png" src="../../_images/K-MeansClustering-Example.png" /></p>
+<p>You may have noticed that we left the <strong>Remove unused values/attributes</strong> and <strong>Remove unused classes</strong> in <a class="reference internal" href="../data/selectrows.html"><span class="doc">Select Rows</span></a> unchecked. This is important: if the widget modifies the attributes, it outputs a list of modified instances and the scatter plot cannot compare them to the original data.</p>
+<p>Perhaps a simpler way to test the match between clusters and the original classes is to use the <a class="reference internal" href="../visualize/distributions.html"><span class="doc">Distributions</span></a> widget.</p>
+<p><img alt="../../_images/K-MeansClustering-Schema2.png" src="../../_images/K-MeansClustering-Schema2.png" /></p>
+<p>The only (minor) problem here is that this widget only visualizes normal (and not meta) attributes. We solve this by using <a class="reference internal" href="../data/selectcolumns.html"><span class="doc">Select Columns</span></a>: we reinstate the original class <em>Iris</em> as the class and put the cluster index among the attributes.</p>
+<p>The match is perfect for <em>setosa</em>: all instances of setosa are in the third cluster (blue). 48 <em>versicolors</em> are in the second cluster (red), while two ended up in the first. For <em>virginicae</em>, 36 are in the first cluster and 14 in the second.</p>
+<p><img alt="../../_images/K-MeansClustering-Example2.png" src="../../_images/K-MeansClustering-Example2.png" /></p>
+</div>
+</div>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Orange Data Mining.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/widgets/unsupervised/kmeans.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

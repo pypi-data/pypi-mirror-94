@@ -1,0 +1,97 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DBSCAN</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="next" title="MDS" href="mds.html" />
+    <link rel="prev" title="Louvain Clustering" href="louvainclustering.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dbscan">
+<h1>DBSCAN</h1>
+<p>Groups items using the DBSCAN clustering algorithm.</p>
+<p><strong>Inputs</strong></p>
+<ul class="simple">
+<li>Data: input dataset</li>
+</ul>
+<p><strong>Outputs</strong></p>
+<ul class="simple">
+<li>Data: dataset with cluster index as a class attribute</li>
+</ul>
+<p>The widget applies the
+<a class="reference external" href="https://en.wikipedia.org/wiki/DBSCAN" target="_blank">DBSCAN clustering</a> algorithm to
+the data and outputs a new dataset with cluster indices as a meta
+attribute. The widget also shows the sorted graph with distances to
+k-th nearest neighbors. With k values set to <strong>Core point neighbors</strong>
+as suggested in the
+<a class="reference external" href="https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf" target="_blank">methods article</a>.
+This gives the user the idea of an
+ideal selection for <strong>Neighborhood distance</strong> setting. As suggested by
+authors this parameter should be set to the first value in the first
+“valley” in the graph.</p>
+<p><img alt="../../_images/dbscan-stamped.png" src="../../_images/dbscan-stamped.png" /></p>
+<ol class="simple">
+<li>Set <em>minimal number of core neighbors</em> for a cluster and *maximal
+neighborhood distance.</li>
+<li>Set the distance metric that is used in grouping the items.</li>
+<li>If <em>Apply Automatically</em> is ticked, the widget will commit changes
+automatically. Alternatively, click <em>Apply</em>.</li>
+<li>The graph shows the distance to the k-th nearest neighbor. <em>k</em> is
+set by the <strong>Core point neighbor</strong> option. With moving the black slider
+left and right you can select the right <strong>Neighbourhood distance</strong>.</li>
+</ol>
+<div class="section" id="example">
+<h2>Example</h2>
+<p>In the following example, we connected the File widget with selected
+Iris dataset to the DBSCAN widget. In the DBSCAN widget, we set
+<strong>Core points neighbors</strong> parameter to 5. And select the
+<strong>Neighbourhood distance</strong> to the value in the first “valley” in the
+graph. We show clusters in the Scatter Plot widget.</p>
+<p><img alt="../../_images/dbscan-example.png" src="../../_images/dbscan-example.png" /></p>
+</div>
+</div>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Orange Data Mining.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/widgets/unsupervised/DBSCAN.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

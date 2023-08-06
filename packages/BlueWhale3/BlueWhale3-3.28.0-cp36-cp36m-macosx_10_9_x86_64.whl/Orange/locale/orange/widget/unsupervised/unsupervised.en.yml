@@ -1,0 +1,309 @@
+package_label: "Unsupervised"
+package_desc: "Unsupervised learning."
+
+common:
+  data: "Data"
+  coordinates: "Coordinates"
+  select_data: "Selected Data"
+  network: "Network"
+  transformed_data: "Transformed Data"
+  centroids: "Centroids"
+
+owcorrespondence:
+  name: "Correspondence Analysis"
+  desc: "Correspondence analysis for categorical multivariate data."
+  msg_empty_data: "Empty dataset"
+  msg_no_disc_vars: "No categorical data"
+  box_axes: "Axes"
+  box_y: "Axis Y"
+  box_x: "Axis X"
+  row_axis: "Axis 1:  {: .2f}\nAxis 2:  {: .2f}"
+  label_inertia: "Contribution to Inertia"
+
+owdbscan:
+  name: "DBSCAN"
+  desc: "Density-based spatial clustering."
+  msg_unique_data: "Not enough unique data instances. At least two are required."
+  box_distance_metric: "Distance Metric"
+  row_core: "Core point neighbors"
+  row_neighborhood: "Neighborhood distance"
+  x_axis_label: "Data items sorted by score"
+  y_axis_label: "Distance to the k-th nearest neighbour"
+
+owdistancefile:
+  name: "Distance File"
+  desc: "Read distances from a file."
+  btn_browse: "Browse documentation datasets"
+  dialog_open_file: "Open Distance File"
+  tip:
+    file: "File"
+    file_con: "Cannot find the directory with documentation datasets"
+    loading: "Loading '{}' from the current directory."
+    nodata: "No data loaded."
+    nodata_error: "Invalid file format"
+    nodata_dueto: "Data was not loaded due to an error."
+
+owdistancemap:
+  name: "Distance Map"
+  desc: "Visualize a distance matrix."
+  err_empty_matrix: "Empty distance matrix."
+  msg_cluster_order: "Cluster ordering was disabled due to the input matrix being to big"
+  msg_cluster: "Clustering was disabled due to the input matrix being to big"
+  box:
+    element_sort: "Element Sorting"
+    annotation: "Annotations"
+    colors: "Colors"
+  gbox:
+    attribute_name: "Attribute names"
+    name: "Name"
+    sorting: "Sorting"
+    order_leave: "Clustering with ordered leaves"
+
+owdistancematrix:
+  name: "Distance Matrix"
+  desc: "View distance matrix."
+  gbox_label: "Labels: "
+  gbox_enumerate: "Enumerate"
+  gbox_attribute_name: "Attribute names"
+  annotations:
+    name: "Name"
+
+owdistances:
+  name: "Distances"
+  desc: "Compute a matrix of pairwise distances."
+  box_distances_between: "Distances between"
+  box_distance_metric: "Distance Metric"
+  tooltip_influence_domain: "All dimensions are (implicitly) scaled to a common scale to normalize the influence across the domain."
+  set_status_calculating: "Calculating..."
+  msg:
+    no_numeric: "No numeric features"
+    no_binary: "No binary features"
+    dense_data: "{} requires dense data."
+    problem: "Problem in calculation: \n{}"
+    upto: "Mahalanobis handles up to 1000 {}."
+    ignoring_categorical: "Ignoring categorical features"
+    ignoring_non-binary: "Ignoring non-binary features"
+    miss_value: "Missing values were imputed"
+  row:
+    distances_between: "Distances Between"
+    normalized: "Normalized"
+
+owdistancetransformation:
+  name: "Distance Transformation"
+  desc: "Transform distances according to selected criteria."
+  box_normalization: "Normalization"
+  box_inversion: "Inversion"
+  row:
+    no_normalization: "No normalization"
+    to_interval: "To interval "
+    sigmoid_function: "Sigmoid function: 1/(1+exp(-X))"
+    no_inversion: "No inversion"
+
+owhierarchicalclustering:
+  name: "Hierarchical Clustering"
+  desc: "Display a dendrogram of a hierarchical clustering constructed from the input distance matrix."
+  msg_distance_infinite: "Some distances are infinite"
+  row:
+    max_depth: "Max depth:"
+    manual: "Manual"
+    height_ratio: "Height ratio:"
+    top_N: "Top N:"
+  gbox:
+    single: "Single"
+    average: "Average"
+    weighted: "Weighted"
+    complete: "Complete"
+    ward: "Ward"
+  box:
+    linkage: "Linkage"
+    annotation: "Annotations"
+    pruning: "Pruning"
+    selection: "Selection"
+    zoom: "Zoom"
+  report:
+    manual: "manual"
+    linkage: "Linkage"
+    annotation: "Annotation"
+    prunning: "Prunning"
+    selection: "Selection"
+
+owkmeans:
+  name: "k-Means"
+  desc: "k-Means clustering algorithm with silhouette-based quality estimation."
+  label_rerun: "Re-runs: "
+  label_maximum_iterations: "Maximum iterations: "
+  msg:
+    clustering_failed: "Clustering failed\nError: {}"
+    unique_data_little: "Too few ({}) unique data instances for {} clusters"
+    missing_features: "Data is missing features."
+    ignore_silhouette_scores: "Silhouette scores are not computed for >{} samples"
+  gbox:
+    initialize_KMeans: "Initialize with KMeans++"
+    random_initialization: "Random initialization"
+    random: "random"
+  checkbox:
+    quantity_clusters: "Number of Clusters"
+    normalize_columns: "Normalize columns"
+  btn:
+    fixed: "Fixed:"
+    from: "From"
+    to: "to"
+  box:
+    initialization: "Initialization"
+    silhouette_scores: "Silhouette Scores"
+    preprocessing: "Preprocessing"
+
+owlouvainclustering:
+  name: "Louvain Clustering"
+  desc: "Detects communities in a network of nearest neighbors."
+  msg_send_new_data: "Press commit to recompute clusters and send new data"
+  msg_no_features: "No features in data"
+  box_preprocessing: "Preprocessing"
+  box_graph_parameters: "Graph parameters"
+  checkbox_normalize_data: "Normalize data"
+  checkbox_apply: "Apply PCA preprocessing"
+  row_PCA_components: "PCA Components: "
+  row_resolution: "Resolution"
+  row_resolution_tip: "The resolution parameter affects the number of clusters to find. Smaller values tend to produce more clusters and larger values retrieve less clusters."
+  gbox:
+    distance_metric: "Distance metric"
+    k_neighbors: "k neighbors"
+  label_text:
+    running: "Running..."
+    found_clusters: "%d clusters found."
+    clusters_not_run: "Clustering not yet run."
+  set_status:
+    compute_PCA: "Computing PCA..."
+    building_graph: "Building graph..."
+    detecting_communities: "Detecting communities..."
+
+owmanifoldlearning:
+  name: "Manifold Learning"
+  desc: "Nonlinear dimensionality reduction."
+  btn_random: "Random"
+  row:
+    metric: "Metric:"
+    perplexity: "Perplexity:"
+    early_exaggeration: "Early exaggeration:"
+    learning_rate: "Learning rate:"
+    max_iterations: "Max iterations:"
+    initialization: "Initialization:"
+    components: "Components:"
+    max_iter: "Max iterations:"
+    init_type: "Initialization"
+    neighbors: "Neighbors:"
+    standard: "Standard"
+    modified: "Modified"
+    hessian_eigenmap: "Hessian eigenmap"
+    local: "Local"
+    method: "Method:"
+    nearest_neighbors: "Nearest neighbors"
+    rbf: "RBF kernel"
+    affinity: "Affinity:"
+  msg:
+    neighbors: "For chosen method and components, neighbors must be greater than {}"
+    not_supported: "Sparse data is not supported."
+    insufficient_memory: "Out of memory"
+    embedding_error: "Disconnected graph, embedding may not work"
+
+owmds:
+  set_status_running: "Running..."
+  name: "MDS"
+  desc: "Two-dimensional data projection by multidimensional scaling constructed from a distance matrix."
+  row_show_pairs: "Show similar pairs:"
+  row_refresh: "Refresh: "
+  gbox:
+    iteration: "Every iteration"
+    five_steps: "Every 5 steps"
+    ten_steps: "Every 10 steps"
+    twenty-five_steps: "Every 25 steps"
+    fifty_steps: "Every 50 steps"
+  msg:
+    input_data_line: "Input data needs at least 2 rows"
+    input_matrix_format: "Input matrix must be at least 2x2"
+    no_attributes: "Data has no attributes"
+    dimensions_error: "Data and distances dimensions do not match."
+    insufficient_memory: "Out of memory"
+    optimization_error: "Error during optimization\n{}"
+  btn:
+    start: "Start"
+    jitter: "Jitter"
+    stop: "Stop"
+
+owpca:
+  name: "PCA"
+  desc: "Principal component analysis with a scree-diagram."
+  checkbox_normalize_variables: "Normalize variables"
+  msg:
+    component_trivial: "All components of the PCA are trivial (explain 0 variance). Input data is constant (or near constant)."
+    one_feature: "At least 1 feature is required"
+    one_data_instance: "At least 1 data instance is required"
+    data_sampled: "Data has been sampled"
+  box:
+    components_selection: "Components Selection"
+    options: "Options"
+  row:
+    components: "Components:"
+    explained_variance: "Explained variance:"
+    show_first: "Show only first"
+    principal_components: "Principal Components"
+    proportion_of_variance: "Proportion of variance"
+
+owsavedistances:
+  name: "Save Distance Matrix"
+  desc: "Save distance matrix to an output file."
+  file: "Distance File (*.dst)"
+  msg_not_saved: "Data associated with {} was not saved."
+  msg_data_not_saved: "Associated data was not saved."
+
+owsom:
+  name: "Self-Organizing Map"
+  desc: "Computation of self-organizing map."
+  box_som: "SOM"
+  box_color: "Color"
+  tooltip_instances: "{} instances"
+  btn_restart: "Restart"
+  btn_stop: "Stop"
+  btn_start: "Start"
+  checkbox_pie_charts: "Show pie charts"
+  checkbox_size_instances: "Size by number of instances"
+  msg:
+    ignore_discrete_variables: "SOM ignores discrete variables."
+    undefined_value: "Some data instances have undefined value of '{}'."
+    not_shown: "{} data instance{} with undefined value(s) {} not shown."
+    contains_numeric_column: "Data contains a single numeric column."
+    no_numeric_columns: "Data contains no numeric columns."
+    rows_contain_undefined_value: "All rows contain at least one undefined value."
+  gbox:
+    hexagonal_grid: "Hexagonal grid"
+    square_grid: "Square grid"
+    set_dimensions: "Set dimensions automatically"
+    initialize_PCA: "Initialize with PCA"
+    random_initialization: "Random initialization"
+    replicable_random: "Replicable random"
+    same_color: "(Same color)"
+
+owtsne:
+  name: "t-SNE"
+  desc: "Two-dimensional data projection with t-SNE."
+  checkbox_normalize_data: "Normalize data"
+  tooltip_not_support: "Data normalization is not supported on sparse matrices."
+  state:
+    computing_PCA: "Computing PCA..."
+    preparing_initialization: "Preparing initialization..."
+    find_nearest_neighbors: "Finding nearest neighbors..."
+    running_optimization: "Running optimization..."
+  msg:
+    modify_settings: "The parameter settings have been changed. Press \"Start\" to rerun with the new settings."
+    input_data_rows: "Input data needs at least 2 rows"
+    input_data_attributes: "Input data needs at least 2 attributes"
+    input_data_constant: "Input data is constant"
+    no_projection_error: "No projection due to no valid data"
+  row:
+    perplexity: "Perplexity:"
+    global_structure: "Preserve global structure"
+    exaggeration: "Exaggeration:"
+    components: "PCA components:"
+  btn:
+    start: "Start"
+    stop: "Stop"

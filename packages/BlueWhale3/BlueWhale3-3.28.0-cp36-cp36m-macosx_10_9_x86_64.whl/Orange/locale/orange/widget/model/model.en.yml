@@ -1,0 +1,298 @@
+package_label: "Model"
+package_desc: "Prediction."
+
+common:
+  coefficient: "Coefficients"
+  base_learner: "Base Learner"
+  learners: "Learners"
+  aggregate: "Aggregate"
+  support_vector: "Support Vectors"
+
+owadaboost:
+  name: "AdaBoost"
+  desc: "An ensemble meta-algorithm that combines weak learners and adapts to the 'hardness' of each training sample. "
+  msg_base_learner_unsupported_weight: "The base learner does not support weights."
+  checkbox_random_generator: "Fixed seed for random generator: "
+  box_boosting_method: "Boosting method"
+  label:
+    base_estimator_invalid: "Base estimator: INVALID"
+    base_estimator: "Base estimator: %s"
+  gbox:
+    samme: "SAMME"
+    samme_r: "SAMME.R"
+    square: "Square"
+    exponential: "Exponential"
+  row:
+    base_estimator: "Base estimator:  "
+    num_estimator: "Number of estimators: "
+    algorithm: "Algorithm (classification)"
+    loss: "Loss (regression)"
+    learn_rate: "Learning rate: "
+    class_algorithm: "Classification algorithm: "
+    regress_loss_function: "Regression loss function: "
+
+owcalibratedlearner:
+  name: "Calibrated Learner"
+  desc: "Wraps another learner with probability calibration and decision threshold optimization"
+  box_probability_calibration: "Probability calibration"
+  box_decision_threshold_optimization: "Decision threshold optimization"
+  btn:
+    no_calibration: "No calibration"
+    optimize_class_accuracy: "Optimize classification accuracy"
+    optimize_f1_score: "Optimize F1 score"
+    no_threshold_optimization: "No threshold optimization"
+  report:
+    calibrate_probability: "Calibrate probabilities"
+    threshold_optimization: "Threshold optimization"
+
+owconstant:
+  name: "Constant"
+  desc: "Predict the most frequent class or mean value from the training set."
+
+owknn:
+  name: "kNN"
+  desc: "Predict according to the nearest training instances."
+  row_num_of_neighbor: "Number of neighbors:"
+  row_metric: "Metric:"
+  row_weight: "Weight:"
+  gbox:
+    euclidean: "Euclidean"
+    manhattan: "Manhattan"
+    chebyshev: "Chebyshev"
+    mahalanobis: "Mahalanobis"
+    uniform: "Uniform"
+    distance: "Distance"
+  report:
+    num_of_neighbor: "Number of neighbours"
+    weight: "Weight"
+
+owlinearregression:
+  name: "Linear Regression"
+  desc: "A linear regression algorithm with optional L1 (LASSO), L2 (ridge) or L1L2 (elastic net) regularization."
+  row_regularization_strength: "Regularization strength: "
+  row_elastic_net_mix: "Elastic net mixing: "
+  row_fit_intercept: "Fit intercept (unchecking it fixes it to zero)"
+  label_alpha: "Alpha:  {}"
+  btn:
+    no_regular: "No regularization"
+    ridge_regression_l2: "Ridge regression (L2)"
+    lasso_regression_l1: "Lasso regression (L1)"
+    elastic_net_regression: "Elastic net regression"
+  report:
+    no_regularization: "No Regularization"
+    ridge_regression_l2: "Ridge Regression (L2) with α={}"
+    lasso_regression_l1: "Lasso Regression (L1) with α={}"
+    elastic_net_regression: "Elastic Net Regression with α={} and L1:L2 ratio of {}:{}"
+
+owloadmodel:
+  name: "Load Model"
+  desc: "Load a model from an input file."
+  msg_reading_error: "An error occured while reading '{}'"
+  box_file: "File"
+  tooltip_open_distance_file: "Open Distance File"
+
+owlogisticregression:
+  name: "Logistic Regression"
+  desc: "The logistic regression classification algorithm with LASSO (L1) or ridge (L2) regularization."
+  gbox_lasso_l1: "Lasso (L1)"
+  gbox_ridge_l2: "Ridge (L2)"
+  row_regularization_type: "Regularization type:  "
+  row_strength: "Strength: "
+  msg_class_weights_used: "Weighting by class may decrease performance."
+  label:
+    weak: "Weak"
+    strong: "Strong"
+    class_weight: "Balance class distribution"
+    class_weight_tip: "Weigh classes inversely proportional to their frequencies."
+
+ownaivebayes:
+  name: "Naive Bayes"
+  desc: "A fast and simple probabilistic classifier based on Bayes' theorem with the assumption of feature independence."
+
+owneuralnetwork:
+  name: "Neural Network"
+  desc: "A multi-layer perceptron (MLP) algorithm with backpropagation."
+  tooltip_define_neuron: "A list of integers defining neurons. Length of list defines the number of layers. E.g. 4, 2, 2, 3."
+  placeholder:
+    eg: "e.g. 10,"
+  row:
+    hidden_neuron: "Neurons in hidden layers: "
+    activation: "Activation: "
+    solver: "Solver: "
+    iteration_num: "Maximal number of iterations: "
+    regularization: "Regularization, α={}: "
+  report:
+    hidden_layers: "Hidden layers"
+    activation: "Activation"
+    solver: "Solver"
+    alpha: "Alpha"
+    max_iterations: "Max iterations"
+
+owrandomforest:
+  name: "Random Forest"
+  desc: "Predict using an ensemble of decision trees."
+  msg_attr_insufficient: "Insufficient number of attributes ({})"
+  box_basic_property: "Basic Properties"
+  row_num_of_tree: "Number of trees:  "
+  box_growth_control: "Growth Control"
+  checkbox:
+    class_weight: "Balance class distribution"
+    class_weight_tip: "Weigh classes inversely proportional to their frequencies."
+    split_considered_attr_num: "Number of attributes considered at each split:  "
+    limit_tree_depth: "Limit depth of individual trees: "
+    not_split_subset_smaller: "Do not split subsets smaller than: "
+  report:
+    number_trees: "Number of trees"
+    maximal_number: "Maximal number of considered features"
+    maximal_tree_depth: "Maximal tree depth"
+    unlimited: "unlimited"
+    stop_split_node: "Stop splitting nodes with maximum instances"
+    ok: "Yes"
+    cancel: "No"
+    class_weights: "Class weights"
+
+owrules:
+  name: "CN2 Rule Induction"
+  desc: "Induce rules from data using CN2 algorithm."
+  placeholder_name: "CN2 rule inducer"
+  gbox_entropy: "Entropy"
+  gbox_laplace_accuracy: "Laplace accuracy"
+  gbox_wracc: "WRAcc"
+  checkbox_statistical_significance: "Statistical significance\n(default α):"
+  checkbox_relative_significance: "Relative significance\n(parent α):"
+  box:
+    rule_order: "Rule ordering"
+    cover_algorithm: "Covering algorithm"
+    rule_search: "Rule search"
+    rule_filter: "Rule filtering"
+  btn:
+    order: "Ordered"
+    unordered: "Unordered"
+    exclusive: "Exclusive"
+    weighted: "Weighted"
+  row:
+    evaluation_measure: "Evaluation measure: "
+    beam_width: "Beam width:"
+    min_rule_coverage: "Minimum rule coverage:"
+    max_rule_length: "Maximum rule length:"
+  report:
+    rule_ordering: "Rule ordering"
+    cover_algorithm: "Covering algorithm"
+    gamma: "Gamma"
+    evaluation_measure: "Evaluation measure"
+    beam_width: "Beam width"
+    minimum_rule_coverage: "Minimum rule coverage"
+    maximum_rule_length: "Maximum rule length"
+    default_alpha: "Default alpha"
+    parent_alpha: "Parent alpha"
+
+owsavemodel:
+  name: "Save Model"
+  desc: "Save a trained model to an output file."
+
+owsgd:
+  name: "Stochastic Gradient Descent"
+  desc: "Minimize an objective function using a stochastic approximation of gradient descent."
+  box_optimization: "Optimization"
+  box_loss_func: "Loss functions"
+  checkbox_tolerance: "Tolerance (stopping criterion):  "
+  checkbox_after_iteration_shuffle_data: "Shuffle data after each iteration"
+  checkbox_shuffling_fix_seed: "Fixed seed for random shuffling: "
+  placeholder_name: "SGD"
+  gbox:
+    square_loss: "Squared Loss"
+    huber: "Huber"
+    insensitive: "ε insensitive"
+    square_insensitive: "Squared ε insensitive"
+    hinge: "Hinge"
+    logistic_regression: "Logistic regression"
+    modified_huber: "Modified Huber"
+    squared_hinge: "Squared Hinge"
+    perceptron: "Perceptron"
+    lasso_l1: "Lasso (L1)"
+    ridge_l2: "Ridge (L2)"
+    elastic_net: "Elastic Net"
+    constant: "Constant"
+    optimal: "Optimal"
+    inverse_scaling: "Inverse scaling"
+  row:
+    strength: "Strength (α): "
+    learn_rate: "Learning rate: "
+    initial_learn_rate: "Initial learning rate (η<sub>0</sub>): "
+    inverse_scaling_exponent: "Inverse scaling exponent (t): "
+    iteration_num: "Number of iterations: "
+    classification: "Classification: "
+    regression: "Regression: "
+  report:
+    classification_loss_function: "Classification loss function"
+    epsilon_classification: "Epsilon (ε) for classification"
+    regression_loss_function: "Regression loss function"
+    epsilon_regression: "Epsilon (ε) for regression"
+    regularization_strength: "Regularization strength (α)"
+    elastic_net_mix_parameter: "Elastic Net mixing parameter (L1 ratio)"
+    initial_learning_rate: "Initial learning rate (η<sub>0</sub>)"
+    inverse_scaling_exponent: "Inverse scaling exponent (t)"
+    shuffle_data_after_iteration: "Shuffle data after each iteration"
+    shuffle_random_seed: "Random seed for shuffling"
+    learn_rate: "Learning rate"
+
+owstack:
+  name: "Stacking"
+  desc: "Stack multiple models."
+  placeholder_name: "Stack"
+  report:
+    base_learners: "Base learners"
+    aggregator: "Aggregator"
+    default: "default"
+
+owsvm:
+  name: "SVM"
+  desc: "Support Vector Machines map inputs to higher-dimensional feature spaces."
+  msg_input_data_sparse_to_scale: "Input data is sparse, default preprocessing is to scale it."
+  box_svm_type: "SVM Type"
+  box_kernel: "Kernel"
+  box_optimization_parameter: "Optimization Parameters"
+  checkbox_iteration_limit: "Iteration limit: "
+  btn:
+    polynomial: "Polynomial"
+    rbf: "RBF"
+    sigmoid: "Sigmoid"
+    svm: "SVM"
+    v_svm: "ν-SVM"
+  row:
+    cost: "Cost (C):"
+    regression_loss_epsilon: "Regression loss epsilon (ε):"
+    regression_cost: "Regression cost (C):"
+    complexity_bound: "Complexity bound (ν):"
+    kernel: "Kernel: %(kernel_eq)s"
+    numerical_tolerance: "Numerical tolerance: "
+    auto: "auto"
+  report:
+    svm_type: "SVM type"
+    numerical_tolerance: "Numerical tolerance"
+    iteration_limt: "Iteration limt"
+    unlimited: "unlimited"
+    kernel: "Kernel"
+    polynomial: "Polynomial, ({g:.4} x⋅y + {c:.4})<sup>{d}</sup>"
+    rbf: "RBF, exp(-{:.4}|x-y|²)"
+    sigmoid: "Sigmoid, tanh({g:.4} x⋅y + {c:.4})"
+
+owtree:
+  name: "Tree"
+  desc: "A tree algorithm with forward pruning."
+  checkbox:
+    leave_min_num: "Min. number of instances in leaves: "
+    not_split_smaller_subset: "Do not split subsets smaller than: "
+    limit_max_tree_depth: "Limit the maximal tree depth to: "
+    majority_reaches_stop: "Stop when majority reaches [%]: "
+    induce_binary_tree: "Induce binary tree"
+  report:
+    prune: "Pruning"
+    split: "Splitting"
+    binary_trees: "Binary trees"
+    number_instance_leaves: "at least {number} instance{s} in leaves"
+    number_instance_internal_nodes: "at least {number} instance{s} in internal nodes"
+    classification_stop_split: "Stop splitting when majority reaches %d%s (classification only)"
+    maximum_depth: "maximum depth {}"
+    cancel: "No"
+    ok: "Yes"

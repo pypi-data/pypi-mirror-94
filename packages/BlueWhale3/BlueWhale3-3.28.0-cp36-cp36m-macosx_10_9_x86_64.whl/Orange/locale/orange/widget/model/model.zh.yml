@@ -1,0 +1,298 @@
+package_label: "模型"
+package_desc: "预测"
+
+common:
+  coefficient: "系数"
+  base_learner: "基础学习器"
+  learners: "学习器"
+  aggregate: "聚合"
+  support_vector: "支持向量"
+
+owadaboost:
+  name: "AdaBoost"
+  desc: "一种集成元算法，结合基础学习器并适应每个训练样本的“难度”。"
+  msg_base_learner_unsupported_weight: "基础学习器不支持重量。"
+  checkbox_random_generator: "随机生成器的固定种子："
+  box_boosting_method: "增压法"
+  label:
+    base_estimator_invalid: "基础估计量：INVALID"
+    base_estimator: "基础估计量：%s"
+  gbox:
+    samme: "SAMME"
+    samme_r: "SAMME.R"
+    square: "平方"
+    exponential: "指数"
+  row:
+    base_estimator: "基础估计量："
+    num_estimator: "估计数："
+    algorithm: "算法（分类）"
+    loss: "损失 (回归)"
+    learn_rate: "学习率："
+    class_algorithm: "分类算法："
+    regress_loss_function: "回归损失函数："
+
+owcalibratedlearner:
+  name: "校准学习器"
+  desc: "用概率校准和决策阈值优化来包装另一个学习器"
+  box_probability_calibration: "概率校准"
+  box_decision_threshold_optimization: "决策阈值优化"
+  btn:
+    no_calibration: "无校准"
+    optimize_class_accuracy: "优化分类精度"
+    optimize_f1_score: "优化F1分数"
+    no_threshold_optimization: "无阈值优化"
+  report:
+    calibrate_probability: "校准概率"
+    threshold_optimization: "阈值优化"
+
+owconstant:
+  name: "常数"
+  desc: "从训练集中预测最频繁的类或平均值。"
+
+owknn:
+  name: "kNN"
+  desc: "根据最近的训练实例进行预测。"
+  row_num_of_neighbor: "近邻数量："
+  row_metric: "度量标准："
+  row_weight: "权重："
+  gbox:
+    euclidean: "欧几里得距离"
+    manhattan: "曼哈顿距离"
+    chebyshev: "切比雪夫距离"
+    mahalanobis: "马氏距离"
+    uniform: "均匀"
+    distance: "距离"
+  report:
+    num_of_neighbor: "邻居数量"
+    weight: "权重"
+
+owlinearregression:
+  name: "线性回归"
+  desc: "一种线性回归算法，可选L1（LASSO），L2（岭回归）或L1L2（弹性网络）正则化。"
+  row_regularization_strength: "正则化强度："
+  row_elastic_net_mix: "弹性网络混合："
+  row_fit_intercept: "拟合截距（取消选中将其固定为零）"
+  label_alpha: "α:  {}"
+  btn:
+    no_regular: "不正则化"
+    ridge_regression_l2: "岭回归（L2）"
+    lasso_regression_l1: "Lasso回归（L1）"
+    elastic_net_regression: "弹性网络回归"
+  report:
+    no_regularization: "不正则化"
+    ridge_regression_l2: "α={}的岭回归（L2）"
+    lasso_regression_l1: "α={}的Lasso回归（L1）"
+    elastic_net_regression: "α={}和L1:L2比值为{}:{}的弹性网络回归"
+
+owloadmodel:
+  name: "加载模型"
+  desc: "从输入文件中加载模型。"
+  msg_reading_error: "读取时出错'{}'"
+  box_file: "文件"
+  tooltip_open_distance_file: "打开距离文件"
+
+owlogisticregression:
+  name: "逻辑回归"
+  desc: "用LASSO回归（L1）或岭回归（L2）正则化的逻辑回归分类算法。"
+  gbox_lasso_l1: "LASSO回归（L1）"
+  gbox_ridge_l2: "岭回归（L2）"
+  row_regularization_type: "正规化类型："
+  row_strength: "强度："
+  msg_class_weights_used: "按类别加权可能会影响效果。"
+  label:
+    weak: "弱"
+    strong: "强"
+    class_weight: "平衡类别分布"
+    class_weight_tip: "按频率反比的方式给类别加权."
+
+ownaivebayes:
+  name: "朴素贝叶斯"
+  desc: "一种基于贝叶斯定理的特征独立的快速简单的概率分类器。"
+
+owneuralnetwork:
+  name: "神经网络"
+  desc: "一种基于反向传播的多层感知器（MLP）算法。"
+  tooltip_define_neuron: "定义神经元的整数列表。列表长度定义层数。例如，4，2，2，3。"
+  placeholder:
+    eg: "例如： 10,"
+  row:
+    hidden_neuron: "隐藏层中的神经元："
+    activation: "激活："
+    solver: "解算器："
+    iteration_num: "最大迭代次数："
+    regularization: "正则化，α={}: "
+  report:
+    hidden_layers: "隐藏层"
+    activation: "激活"
+    solver: "解算器"
+    alpha: "Alpha"
+    max_iterations: "最大迭代次数"
+
+owrandomforest:
+  name: "随机森林"
+  desc: "使用决策树集合进行预测。"
+  msg_attr_insufficient: "属性数不足({})"
+  box_basic_property: "基本特性"
+  row_num_of_tree: "树的数量:  "
+  box_growth_control: "生长控制"
+  checkbox:
+    class_weight: "平衡级分布"
+    class_weight_tip: "按频率反比的方式给类别加权。"
+    split_considered_attr_num: "每次拆分时考虑的属性数："
+    limit_tree_depth: "单树的极限深度："
+    not_split_subset_smaller: "不要拆分小于："
+  report:
+    number_trees: "树的数量"
+    maximal_number: "考虑的最大特征数"
+    maximal_tree_depth: "最大树深"
+    unlimited: "无限"
+    stop_split_node: "停止拆分具有最大实例的节点"
+    ok: "是"
+    cancel: "否"
+    class_weights: "类权重"
+
+owrules:
+  name: "CN2规则归纳"
+  desc: "用CN2算法从数据中归纳规则。"
+  placeholder_name: "CN2规则诱导器"
+  gbox_entropy: "熵"
+  gbox_laplace_accuracy: "拉普拉斯精度"
+  gbox_wracc: "WRAcc"
+  checkbox_statistical_significance: "统计显著性\n(默认α):"
+  checkbox_relative_significance: "相对重要性\n(parent α):"
+  box:
+    rule_order: "规则排序"
+    cover_algorithm: "覆盖算法"
+    rule_search: "规则搜索"
+    rule_filter: "规则筛选"
+  btn:
+    order: "有序"
+    unordered: "无序"
+    exclusive: "独有"
+    weighted: "加权的"
+  row:
+    evaluation_measure: "评价方法："
+    beam_width: "波束宽度："
+    min_rule_coverage: "最小规则覆盖率："
+    max_rule_length: "最大规则长度："
+  report:
+    rule_ordering: "规则排序"
+    cover_algorithm: "覆盖算法"
+    gamma: "Gamma"
+    evaluation_measure: "评价方法"
+    beam_width: "波束宽度"
+    minimum_rule_coverage: "最小规则覆盖率"
+    maximum_rule_length: "最大规则长度"
+    default_alpha: "默认alpha"
+    parent_alpha: "Parent alpha"
+
+owsavemodel:
+  name: "模型保存"
+  desc: "将经过训练的模型保存到输出文件。"
+
+owsgd:
+  name: "随机梯度下降法"
+  desc: "使用梯度下降的随机逼近最小化目标函数。"
+  box_optimization: "优化"
+  box_loss_func: "损失函数"
+  checkbox_tolerance: "公差（终止条件）："
+  checkbox_after_iteration_shuffle_data: "在每次迭代后洗牌数据"
+  checkbox_shuffling_fix_seed: "固定种子随机洗牌："
+  placeholder_name: "SGD"
+  gbox:
+    square_loss: "平方损失"
+    huber: "Huber"
+    insensitive: "ε不敏感"
+    square_insensitive: "平方ε不敏感"
+    hinge: "Hinge"
+    logistic_regression: "逻辑回归"
+    modified_huber: "调整后的Huber"
+    squared_hinge: "平方Hinge"
+    perceptron: "感知器"
+    lasso_l1: "Lasso回归（L1）"
+    ridge_l2: "岭回归（L2）"
+    elastic_net: "弹性网"
+    constant: "常数"
+    optimal: "最优"
+    inverse_scaling: "反比例"
+  row:
+    strength: "正则化强度 (α): "
+    learn_rate: "学习率："
+    initial_learn_rate: "初始学习率（η<sub>0</sub>）："
+    inverse_scaling_exponent: "反标度指数（t）："
+    iteration_num: "迭代次数："
+    classification: "分类: "
+    regression: "回归: "
+  report:
+    classification_loss_function: "分类损失函数"
+    epsilon_classification: "Epsilon（ε）用于分类"
+    regression_loss_function: "回归损失函数"
+    epsilon_regression: "Epsilon（ε）用于回归"
+    regularization_strength: "正则化强度（α）"
+    elastic_net_mix_parameter: "弹性净混合参数（L1比率）"
+    initial_learning_rate: "初始学习率（η<sub>0</sub>）"
+    inverse_scaling_exponent: "反标度指数（t）"
+    shuffle_data_after_iteration: "在每次迭代后洗牌数据"
+    shuffle_random_seed: "随机种子洗牌"
+    learn_rate: "学习率"
+
+owstack:
+  name: "叠加"
+  desc: "叠加多个模型。"
+  placeholder_name: "叠加"
+  report:
+    base_learners: "基础学习器"
+    aggregator: "聚合器"
+    default: "默认"
+
+owsvm:
+  name: "SVM"
+  desc: "支持向量机将输入映射到高维特征空间。"
+  msg_input_data_sparse_to_scale: "输入数据是稀疏的，默认的预处理是缩放它。"
+  box_svm_type: "SVM类型"
+  box_kernel: "内核"
+  box_optimization_parameter: "优化参数"
+  checkbox_iteration_limit: "迭代限制："
+  btn:
+    polynomial: "多项式"
+    rbf: "RBF"
+    sigmoid: "Sigmoid"
+    svm: "SVM"
+    v_svm: "ν-SVM"
+  row:
+    cost: "成本（C）："
+    regression_loss_epsilon: "回归损失epsilon（ε）："
+    regression_cost: "回归成本（C）："
+    complexity_bound: "复杂性边界（ν）："
+    kernel: "内核：%(kernel_eq)s"
+    numerical_tolerance: "数值公差："
+    auto: "自动"
+  report:
+    svm_type: "SVM类型"
+    numerical_tolerance: "数值公差"
+    iteration_limt: "迭代极限"
+    unlimited: "无限"
+    kernel: "内核"
+    polynomial: "多项式，({g:.4} x⋅y + {c:.4})<sup>{d}</sup>"
+    rbf: "RBF, exp(-{:.4}|x-y|²)"
+    sigmoid: "Sigmoid, tanh({g:.4} x⋅y + {c:.4})"
+
+owtree:
+  name: "树"
+  desc: "具有正向修剪的树算法。"
+  checkbox:
+    leave_min_num: "叶中的最小实例数："
+    not_split_smaller_subset: "小于以下值的子集不要拆分："
+    limit_max_tree_depth: "将最大树深度限制为："
+    majority_reaches_stop: "当多数达到[%]时停止："
+    induce_binary_tree: "诱导二叉树"
+  report:
+    prune: "修剪"
+    split: "分裂"
+    binary_trees: "二叉树"
+    number_instance_leaves: "叶中至少有{number}个实例{s}"
+    number_instance_internal_nodes: "内部节点中至少有{number}个实例{s}"
+    classification_stop_split: "当多数达到%d%s时停止拆分（仅分类）"
+    maximum_depth: "最大深度{}"
+    cancel: "否"
+    ok: "是"

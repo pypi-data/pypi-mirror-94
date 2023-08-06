@@ -1,0 +1,98 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hierarchical Clustering</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="next" title="k-Means" href="kmeans.html" />
+    <link rel="prev" title="Save Distance Matrix" href="savedistancematrix.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="hierarchical-clustering">
+<h1>Hierarchical Clustering</h1>
+<p>Groups items using a hierarchical clustering algorithm.</p>
+<p><strong>Inputs</strong></p>
+<ul class="simple">
+<li>Distances: distance matrix</li>
+</ul>
+<p><strong>Outputs</strong></p>
+<ul class="simple">
+<li>Selected Data: instances selected from the plot</li>
+<li>Data: data with an additional column showing whether an instance is selected</li>
+</ul>
+<p>The widget computes <a class="reference external" href="https://en.wikipedia.org/wiki/Hierarchical_clustering" target="_blank">hierarchical clustering</a> of arbitrary types of objects from a matrix of distances and shows a corresponding <a class="reference external" href="https://en.wikipedia.org/wiki/Dendrogram" target="_blank">dendrogram</a>.</p>
+<p><img alt="../../_images/HierarchicalClustering-stamped.png" src="../../_images/HierarchicalClustering-stamped.png" /></p>
+<ol class="simple">
+<li>The widget supports four ways of measuring distances between clusters:<ul>
+<li><strong>Single linkage</strong> computes the distance between the closest elements of the two clusters</li>
+<li><strong>Average linkage</strong> computes the average distance between elements of the two clusters</li>
+<li><strong>Weighted linkage</strong> uses the <a class="reference external" href="http://research.amnh.org/%7Esiddall/methods/day1.html" target="_blank">WPGMA</a> method</li>
+<li><strong>Complete linkage</strong> computes the distance between the clusters’ most distant elements</li>
+</ul>
+</li>
+<li>Labels of nodes in the dendrogram can be chosen in the <strong>Annotation</strong> box.</li>
+<li>Huge dendrograms can be pruned in the <em>Pruning</em> box by selecting the maximum depth of the dendrogram. This only affects the display, not the actual clustering.</li>
+<li>The widget offers three different selection methods:<ul>
+<li><strong>Manual</strong> (Clicking inside the dendrogram will select a cluster. Multiple clusters can be selected by holding Ctrl/Cmd. Each selected cluster is shown in a different color and is treated as a separate cluster in the output.)</li>
+<li><strong>Height ratio</strong> (Clicking on the bottom or top ruler of the dendrogram places a cutoff line in the graph. Items to the right of the line are selected.)</li>
+<li><strong>Top N</strong> (Selects the number of top nodes.)</li>
+</ul>
+</li>
+<li>Use <em>Zoom</em> and scroll to zoom in or out.</li>
+<li>If the items being clustered are instances, they can be added a cluster index (<em>Append cluster IDs</em>). The ID can appear as an ordinary <strong>Attribute</strong>, <strong>Class attribute</strong> or a <strong>Meta attribute</strong>. In the second case, if the data already has a class attribute, the original class is placed among meta attributes.</li>
+<li>The data can be automatically output on any change (<em>Auto send is on</em>) or, if the box isn’t ticked, by pushing <em>Send Data</em>.</li>
+<li>Clicking this button produces an image that can be saved.</li>
+<li>Produce a report.</li>
+</ol>
+<div class="section" id="examples">
+<h2>Examples</h2>
+<p>The workflow below shows the output of <strong>Hierarchical Clustering</strong> for the <em>Iris</em> dataset in <a class="reference internal" href="../data/datatable.html"><span class="doc">Data Table</span></a> widget. We see that if we choose <em>Append cluster IDs</em> in hierarchical clustering, we can see an additional column in the <strong>Data Table</strong> named <em>Cluster</em>. This is a way to check how hierarchical clustering clustered individual instances.</p>
+<p><img alt="../../_images/HierarchicalClustering-Example.png" src="../../_images/HierarchicalClustering-Example.png" /></p>
+<p>In the second example, we loaded the <em>Iris</em> dataset again, but this time we added the <a class="reference internal" href="../visualize/scatterplot.html"><span class="doc">Scatter Plot</span></a>, showing all the instances from the <a class="reference internal" href="../data/file.html"><span class="doc">File</span></a> widget, while at the same time receiving the selected instances signal from <strong>Hierarchical Clustering</strong>. This way we can observe the position of the selected cluster(s) in the projection.</p>
+<p><img alt="../../_images/HierarchicalClustering-Example2.png" src="../../_images/HierarchicalClustering-Example2.png" /></p>
+</div>
+</div>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Orange Data Mining.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/widgets/unsupervised/hierarchicalclustering.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

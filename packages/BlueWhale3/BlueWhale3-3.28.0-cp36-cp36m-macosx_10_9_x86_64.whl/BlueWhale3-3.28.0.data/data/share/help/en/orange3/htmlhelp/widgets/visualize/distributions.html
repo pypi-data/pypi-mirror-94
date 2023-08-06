@@ -1,0 +1,78 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distributions</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="next" title="Heat Map" href="heatmap.html" />
+    <link rel="prev" title="Box Plot" href="boxplot.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="distributions">
+<h1>Distributions</h1>
+<p>Displays value distributions for a single attribute.</p>
+<p><strong>Inputs</strong></p>
+<ul class="simple">
+<li>Data: input dataset</li>
+</ul>
+<p>The <strong>Distributions</strong> widget displays the <a class="reference external" href="https://en.wikipedia.org/wiki/Frequency_distribution" target="_blank">value distribution</a> of discrete or continuous attributes. If the data contains a class variable, distributions may be conditioned on the class.</p>
+<p>For discrete attributes, the graph displayed by the widget shows how many times (e.g., in how many instances) each attribute value appears in the data. If the data contains a class variable, class distributions for each of the attribute values will be displayed as well (like in the snapshot below). In order to create this graph, we used the <em>Zoo</em> dataset.</p>
+<p><img alt="../../_images/Distributions-Disc-stamped.png" src="../../_images/Distributions-Disc-stamped.png" /></p>
+<ol class="simple">
+<li>A list of variables for distributions display</li>
+<li>If <em>Bin continuous variables</em> is ticked, the widget will discretize continuous variables by assigning them to intervals. The number of intervals is set by precision scale. Alternatively, you can set smoothness for the distribution curves of continuous variables.</li>
+<li>The widget may be requested to display value distributions only for instances of certain class (<em>Group by</em>). <em>Show relative frequencies</em> will scale the data by percentage of the dataset.</li>
+<li>Show probabilities.</li>
+<li><em>Save image</em> saves the graph to your computer in a .svg or .png format.</li>
+<li>Produce a report.</li>
+</ol>
+<p>For continuous attributes, the attribute values are displayed as a function graph. Class probabilities for continuous attributes are obtained with Gaussian kernel density estimation, while the appearance of the curve is set with the <em>Precision</em> bar (smooth or precise).</p>
+<p>For the purpose of this example, we used the <em>Iris</em> dataset.</p>
+<p><img alt="../../_images/Distributions-Cont.png" src="../../_images/Distributions-Cont.png" /></p>
+<p>In class-less domains, the bars are displayed in gray. Here we set <em>Bin continuous variables into 10 bins</em>, which distributes variables into 10 intervals and displays averages of these intervals as histograms (see 2. above). We used the <em>Housing</em> dataset.</p>
+<p><img alt="../../_images/Distributions-NoClass.png" src="../../_images/Distributions-NoClass.png" /></p>
+</div>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Orange Data Mining.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/widgets/visualize/distributions.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

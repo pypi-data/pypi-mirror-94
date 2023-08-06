@@ -1,0 +1,309 @@
+package_label: "无监督"
+package_desc: "无监督学习."
+
+common:
+  data: "数据"
+  coordinates: "坐标"
+  select_data: "选中的数据"
+  network: "网络"
+  transformed_data: "转换后的数据"
+  centroids: "质心"
+
+owcorrespondence:
+  name: "相关分析"
+  desc: "多变量分类数据的对应分析。"
+  msg_empty_data: "空数据集"
+  msg_no_disc_vars: "无分类数据"
+  box_axes: "坐标轴"
+  box_y: "Y轴"
+  box_x: "X轴"
+  row_axis: "轴心1：{: .2f}\n轴心2：{: .2f}"
+  label_inertia: "对惯性的贡献"
+
+owdbscan:
+  name: "DBSCAN"
+  desc: "基于密度的空间聚类。"
+  msg_unique_data: "没有足够的独特数据实例。至少需要两个。"
+  box_distance_metric: "距离度量标准"
+  row_core: "核心点邻居"
+  row_neighborhood: "邻域距离"
+  x_axis_label: "按分数排序的数据项"
+  y_axis_label: "到第k个最近邻居的距离"
+
+owdistancefile:
+  name: "远程文件"
+  desc: "从文件读取距离。"
+  btn_browse: "浏览文档数据集"
+  dialog_open_file: "打开距离文件"
+  tip:
+    file: "文件"
+    file_con: "找不到包含文档数据集的目录"
+    loading: "正在从当前目录加载'{}'。"
+    nodata: "未加载数据。"
+    nodata_error: "无效的文件格式"
+    nodata_dueto: "由于出错，数据未加载。"
+
+owdistancemap:
+  name: "距离图"
+  desc: "可视化距离矩阵。"
+  err_empty_matrix: "空距离矩阵。"
+  msg_cluster_order: "由于输入矩阵太大，群集排序被禁用"
+  msg_cluster: "由于输入矩阵太大，群集被禁用"
+  box:
+    element_sort: "元素排序"
+    annotation: "注释"
+    colors: "颜色"
+  gbox:
+    attribute_name: "属性名称"
+    name: "名称"
+    sorting: "分类"
+    order_leave: "有序叶聚类"
+
+owdistancematrix:
+  name: "距离矩阵"
+  desc: "查看距离矩阵。"
+  gbox_label: "标签："
+  gbox_enumerate: "列举"
+  gbox_attribute_name: "属性名称"
+  annotations:
+    name: "名称"
+
+owdistances:
+  name: "距离"
+  desc: "计算成对距离矩阵。"
+  box_distances_between: "之间距离"
+  box_distance_metric: "距离度量标准"
+  tooltip_influence_domain: "所有维度（隐式地）缩放到一个共同的尺度，以规范化跨域的影响。"
+  set_status_calculating: "计算中…"
+  msg:
+    no_numeric: "没有数字特征"
+    no_binary: "没有二进制特征"
+    dense_data: "{}需要密集的数据。"
+    problem: "计算中的问题：\n{}"
+    upto: "Mahalanobis处理达到1000个{}."
+    ignoring_categorical: "忽略范畴特征"
+    ignoring_non-binary: "忽略非二进制特征"
+    miss_value: "缺失值已被插补"
+  row:
+    distances_between: "之间距离"
+    normalized: "标准化"
+
+owdistancetransformation:
+  name: "距离变换"
+  desc: "根据选定的标准变换距离。"
+  box_normalization: "标准化"
+  box_inversion: "倒置"
+  row:
+    no_normalization: "无标准化"
+    to_interval: "间隔时间"
+    sigmoid_function: "Sigmoid特征：1/(1+exp(-X))"
+    no_inversion: "无倒置"
+
+owhierarchicalclustering:
+  name: "层次聚类"
+  desc: "显示从输入距离矩阵构造的层次聚类的树状图。"
+  msg_distance_infinite: "有些距离是无限的"
+  row:
+    max_depth: "最大深度："
+    manual: "手动"
+    height_ratio: "高度比："
+    top_N: "前N名："
+  gbox:
+    single: "单一"
+    average: "平均"
+    weighted: "加权"
+    complete: "完成"
+    ward: "选区"
+  box:
+    linkage: "联动方式"
+    annotation: "注释方式"
+    pruning: "修剪编辑"
+    selection: "选项"
+    zoom: "缩放"
+  report:
+    manual: "手动"
+    linkage: "联动方式"
+    annotation: "注释方式"
+    prunning: "修剪编辑"
+    selection: "选项"
+
+owkmeans:
+  name: "K均值"
+  desc: "基于轮廓质量估计的k-Means聚类算法。"
+  label_rerun: "重新运行："
+  label_maximum_iterations: "最大迭代次数："
+  msg:
+    clustering_failed: "聚类失败\n错误：{}"
+    unique_data_little: "{}集群的（{}）唯一数据实例太少"
+    missing_features: "数据缺少特征。"
+    ignore_silhouette_scores: "不计算>{}个样本的轮廓系数"
+  gbox:
+    initialize_KMeans: "使用k-Means初始化++"
+    random_initialization: "随机初始化"
+    random: "随机"
+  checkbox:
+    quantity_clusters: "设置簇的数量"
+    normalize_columns: "标准化列"
+  btn:
+    fixed: "固定："
+    from: "从"
+    to: "到"
+  box:
+    initialization: "初始化"
+    silhouette_scores: "轮廓得分"
+    preprocessing: "预处理"
+
+owlouvainclustering:
+  name: "Louvain簇"
+  desc: "检测最近邻居网络中的集群。"
+  msg_send_new_data: "按commit重新计算集群并发送新数据"
+  msg_no_features: "数据中没有特征"
+  box_preprocessing: "预处理"
+  box_graph_parameters: "图形参数"
+  checkbox_normalize_data: "标准化数据"
+  checkbox_apply: "应用主成分分析技术进行数据预处理"
+  row_PCA_components: "主成分分析组件："
+  row_resolution: "分辨率"
+  row_resolution_tip: "resolution参数影响要查找的簇的数量。较小的值倾向于生成更多的簇，而较大的值会检索较少的簇。"
+  gbox:
+    distance_metric: "距离度量标准"
+    k_neighbors: "k邻居"
+  label_text:
+    running: "运行…"
+    found_clusters: "找到%d簇。"
+    clusters_not_run: "簇尚未运行。"
+  set_status:
+    compute_PCA: "正在计算主成分…"
+    building_graph: "绘制图像…"
+    detecting_communities: "检测簇…"
+
+owmanifoldlearning:
+  name: "流形学习"
+  desc: "非线性降维。"
+  btn_random: "随机"
+  row:
+    metric: "度量标准："
+    perplexity: "困惑："
+    early_exaggeration: "早期夸张："
+    learning_rate: "学习率："
+    max_iterations: "最大迭代次数："
+    initialization: "初始化："
+    components: "成分："
+    max_iter: "最大迭代次数："
+    init_type: "初始化"
+    neighbors: "邻居："
+    standard: "标准"
+    modified: "修改"
+    hessian_eigenmap: "显示历史记录项"
+    local: "本地"
+    method: "方法："
+    nearest_neighbors: "最近邻居"
+    rbf: "径向基函数核"
+    affinity: "亲和性："
+  msg:
+    neighbors: "对于所选的方法和组件，邻域必须大于{}"
+    not_supported: "不支持稀疏数据。"
+    insufficient_memory: "内存不足"
+    embedding_error: "断开图形，嵌入可能不起作用"
+
+owmds:
+  set_status_running: "运行…"
+  name: "MDS"
+  desc: "从距离矩阵构造多维尺度的二维数据投影。"
+  row_show_pairs: "显示相似对："
+  row_refresh: "刷新："
+  gbox:
+    iteration: "每次迭代"
+    five_steps: "每5步"
+    ten_steps: "每10步"
+    twenty-five_steps: "每25步"
+    fifty_steps: "每50步"
+  msg:
+    input_data_line: "输入数据至少需要2行"
+    input_matrix_format: "输入矩阵必须至少为2x2矩阵"
+    no_attributes: "数据没有属性"
+    dimensions_error: "数据和距离维度不匹配。"
+    insufficient_memory: "内存不足"
+    optimization_error: "优化过程中出错\n{}"
+  btn:
+    start: "开始"
+    jitter: "抖动"
+    stop: "停止"
+
+owpca:
+  name: "主成分分析"
+  desc: "主成分分析法。"
+  checkbox_normalize_variables: "标准化变量"
+  msg:
+    component_trivial: "主成分分析的所有成分都是不重要的（解释0方差）。输入数据是常量（或接近常量）。"
+    one_feature: "至少需要一个特征"
+    one_data_instance: "至少需要一个数据实例"
+    data_sampled: "数据已取样"
+  box:
+    components_selection: "成分选择"
+    options: "选项"
+  row:
+    components: "成分："
+    explained_variance: "解释差异："
+    show_first: "只显示第一个"
+    principal_components: "主成分分析"
+    proportion_of_variance: "方差比例"
+
+owsavedistances:
+  name: "保存距离矩阵"
+  desc: "将距离矩阵保存到输出文件。"
+  file: "距离文件(*.dst)"
+  msg_not_saved: "未保存与{}关联的数据。"
+  msg_data_not_saved: "关联数据未保存。"
+
+owsom:
+  name: "自组织映射"
+  desc: "自组织映射的计算。"
+  box_som: "SOM"
+  box_color: "颜色"
+  tooltip_instances: "{}实例"
+  btn_restart: "重新启动"
+  btn_stop: "停止"
+  btn_start: "开始"
+  checkbox_pie_charts: "显示饼图"
+  checkbox_size_instances: "实例数量太少"
+  msg:
+    ignore_discrete_variables: "SOM忽略离散变量。"
+    undefined_value: "某些数据实例具有未定义的值'{}'."
+    not_shown: "有未定义的值{}的{}数据实例{}不显示。"
+    contains_numeric_column: "数据包含一个数字列。"
+    no_numeric_columns: "数据不包含数字列。"
+    rows_contain_undefined_value: "所有行至少包含一个未定义的值。"
+  gbox:
+    hexagonal_grid: "六边形网格"
+    square_grid: "方格"
+    set_dimensions: "自动设置尺寸"
+    initialize_PCA: "使用主成分分析初始化"
+    random_initialization: "随机初始化"
+    replicable_random: "可复制的随机"
+    same_color: "(相同颜色)"
+
+owtsne:
+  name: "t-SNE"
+  desc: "用t-SNE进行二维数据投影。"
+  checkbox_normalize_data: "标准化数据"
+  tooltip_not_support: "稀疏矩阵不支持数据标准化。"
+  state:
+    computing_PCA: "正在计算主成分…"
+    preparing_initialization: "正在准备初始化…"
+    find_nearest_neighbors: "寻找最近的邻居…"
+    running_optimization: "运行优化…"
+  msg:
+    modify_settings: "参数设置已更改。点击\"Start\"重新运行新设置。"
+    input_data_rows: "输入数据至少需要2行"
+    input_data_attributes: "输入数据至少需要2个属性"
+    input_data_constant: "输入数据为常量"
+    no_projection_error: "由于没有有效数据，因此没有投影"
+  row:
+    perplexity: "复杂度："
+    global_structure: "保留全局结构"
+    exaggeration: "夸张："
+    components: "主成分分析组件："
+  btn:
+    start: "开始"
+    stop: "停止"

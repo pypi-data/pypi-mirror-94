@@ -1,0 +1,479 @@
+package_label: "Visualize"
+package_desc:  "Widgets for data visualization."
+
+common:
+  data: "Data"
+  coordinates: "Coordinates"
+  selected_data: "Selected Data"
+  network: "Network"
+  transformed_data: "Transformed Data"
+  histogram_data: "Histogram Data"
+  tree: "Tree"
+  random_forest: "Random Forest"
+    
+components:
+  anchor: "Anchor"
+
+customizableplot:
+  font_size: "Font size"
+  italic: "Italic"
+  width: "Width"
+  opacity: "Opacity"
+  style: "Style"
+  antialias: "Antialias"
+  fonts: "Fonts"
+  annotations: "Annotations"
+  figure: "Figure"
+  font_family: "Font family"
+  axis_title: "Axis title"
+  axis_ticks: "Axis ticks"
+  legend: "Legend"
+  label: "Label"
+  x-axis_title: "x-axis title"
+  y-axis_title: "y-axis title"
+  title: "Title"
+
+owbarplot:
+  name: "Bar Plot"
+  desc: "Visualizes comparisons among discrete categories."
+  msg:
+    no_cont_features: "Plotting requires a numeric feature."
+    too_many_instances: "Data has too many instances. Only first {} are shown."
+  row:
+    enumeration: "Enumeration"
+    same_color: "(Same color)"
+  label:
+    annotations: "Annotations:"
+    color: "Color:"
+    values: "Values:"
+    group_by: "Group by:"
+
+owboxplot:
+  name: "Box Plot"
+  desc: "Visualize the distribution of feature values in a box plot."
+  box_variable: "Variable"
+  box_subgroups: "Subgroups"
+  box_display: "Display"
+  tooltip_sort_subgroups: "Order by 𝜒² or ANOVA over the subgroups"
+  tooltip_sort_variable_values: "Order by 𝜒² or ANOVA over the variable values"
+  msg_no_vars: "Data contains no categorical or numeric variables"
+  row:
+    fix: "Fixed"
+    relative_root: "Relative to root"
+    relative_parent: "Relative to parent"
+    unlimited: "Unlimited"
+  checkbox:
+    sort_subgroups: "Order by relevance to subgroups"
+    sort_variable: "Order by relevance to variable"
+    annotate: "Annotate"
+    stretch_bars: "Stretch bars"
+    box_labels: "Show box labels"
+    sort_subgroup_frequencies: "Sort by subgroup frequencies"
+  btn:
+    no_comparison: "No comparison"
+    compare_medians: "Compare medians"
+    compare_means: "Compare means"
+    
+owdistributions:
+  name: "Distributions"
+  desc: "Display value distributions of a data feature in a graph."
+  box_variable: "Variable"
+  row_bin_width: "Bin width"
+  msg:
+    undefined_values: "Variable '{}' does not have any defined values"
+    undefined_data_instances: "No data instances with '{}' and '{}' defined"
+    missing_values: "Data instances with missing values are ignored"
+  gbox:
+    beta: "Beta"
+    gamma: "Gamma"
+    rayleigh: "Rayleigh"
+    pareto: "Pareto"
+    exponential: "Exponential"
+    kernel_density: "Kernel density"
+  label:
+    fitted_probability: "Fitted probability"
+    compute_bayesian_probabilities: "Chosen distribution is used to compute Bayesian probabilities"
+    fitted_distribution: "Fitted distribution"
+    smoothing: "Smoothing"
+    split_by: "Split by"
+    get_probability: "Probability of '{}' at given '{}'"
+    frequency: "Frequency"
+  checkbox:
+    hide_bars: "Hide bars"
+    stack_columns: "Stack columns"
+    probabilities: "Show probabilities"
+    cumulative_distribution: "Show cumulative distribution"
+    sort_by_freq: "Sort categories by frequency"
+
+owfreeviz:
+  name: "FreeViz"
+  desc: "Displays FreeViz projection"
+  set_status_calculating: "Calculating..."
+  gbox_circular: "Circular"
+  gbox_random: "Random"
+  row_hide_radius: "Hide radius:"
+  gbox_initialization: "Initialization:"
+  msg:
+    no_target_variable: "Data has no target variable"
+    binary: "Target variable is not at least binary"
+    number_compare: "Number of features exceeds the number of instances."
+    data_large: "Data is too large."
+    data_columns_constant: "All data columns are constant."
+    feature_required: "At least two features are required"
+    value_number: "Categorical features with more than two values are not shown."
+  btn:
+    start: "Start"
+    stop: "Stop"
+
+owheatmap:
+  name: "Heat Map"
+  desc: "Plot a data matrix heatmap."
+  tooltip_split_by_categorical_column: "Split the heatmap vertically by a categorical column"
+  lnk_menu:
+    increase_font: "Increase Font"
+    decrease_font: "Decrease Font"
+    aspect_ratio: "Keep aspect ratio"
+  msg:
+    data_sampled: "Data has been sampled"
+    ignore_categorical_feature: "{} categorical feature{} ignored"
+    memory_tip: "Showing this data may require a lot of memory"
+    no_numeric_features: "No numeric features"
+    column_clustering_feature: "Not enough features for column clustering"
+    clustering_instance: "Not enough instances for clustering"
+    k-means_merging_instance: "Not enough instances for k-means merging"
+    out_of_memory: "Not enough memory to show this data"
+    remove_empty_clusters: "Empty clusters were removed"
+    user_advice: "For data with a meaningful mid-point, choose one of diverging palettes."
+  gbox:
+    no_clustering: "No clustering"
+    hierarchical_clustering: "Apply hierarchical clustering"
+    clustering_opt: "Clustering (opt. ordering)"
+    optimal_leaf_ordering: "Apply hierarchical clustering with optimal leaf ordering."
+    top: "Top"
+    bottom: "Bottom"
+    top_bottom: "Top and Bottom"
+  box:
+    color: "Color"
+    merge: "Merge"
+    split_by: "Split By"
+    annotation_legends: "Annotation && Legends"
+    row_annotations: "Row Annotations"
+    column_labels_position: "Column Labels Position"
+  row:
+    clusters: "Clusters:"
+    rows: "Rows:"
+    columns: "Columns:"
+    color: "Color"
+    label_position: "Label position"
+    keep_aspect: "Keep aspect ratio"
+  checkbox:
+    merge_k-means: "Merge by k-means"
+    stripes_averages: "Stripes with averages"
+    resize: "Resize"
+  report:
+    columns: "Columns:"
+    no_sorting": "No sorting"
+    rows: "Rows:"
+    split: "Split:"
+    row_annotation: "Row annotation"
+
+owlinearprojection:
+  name: "Linear Projection"
+  desc: "A multi-axis projection of data onto a two-dimensional plane."
+  row_hide_radius: "Hide radius:"
+  label_number_variables: "Number of variables: "
+  btn:
+    start: "Start"
+    circular_placement: "Circular Placement"
+    linear_discriminant_analysis: "Linear Discriminant Analysis"
+    principal_component_analysis: "Principal Component Analysis"
+    suggest_features: "Suggest Features"
+  msg:
+    plot_requirement: "Plotting requires numeric features"
+    no_data: "There is no data."
+    select_color_variable: "Color variable has to be selected"
+    select_continuous_color_variable : "Suggest Features does not work for Linear Discriminant Analysis Projection when continuous color variable is selected."
+    continuous_variables_lack: "Not enough available continuous variables"
+    data_instances_lack: "Not enough valid data instances"
+
+owlineplot:
+  name: "Line Plot"
+  desc: "Visualization of data profiles (e.g., time series)."
+  box:
+    display: "Display"
+    group_by: "Group by"
+  msg:
+    need_continuous_feature: "Need at least one continuous feature."
+    valid_data_error: "No plot due to no valid data."
+    no_display_option: "No display option is selected."
+    instances_value_error: "Instances with unknown values are not shown."
+    show_first: "Data has too many features. Only first {} are shown."
+  checkbox:
+    lines: "Lines"
+    lines_tip: "Plot lines"
+    range: "Range"
+    range_tip: "Plot range between 10th and 90th percentile"
+    mean: "Mean"
+    mean_tip: "Plot mean curve"
+    error_bars: "Error bars"
+    error_bars_tip: "Show standard deviation"
+
+owmosaic:
+  name: "Mosaic Display"
+  desc: "Display data in a mosaic plot."
+  checkbox_compare_total: "Compare with total"
+  captiontitle_mosaic_ranking : "Mosaic Ranking"
+  label_limit_attribute: "Limit the number of attributes to: "
+  btn_informative_mosaics: "Find Informative Mosaics"
+  btn_start: "Start"
+  placeholder_pearson_residuals: "(Pearson residuals)"
+  msg:
+    incompatible: "Data subset is incompatible with Data"
+    no_valid_data: "No valid data"
+    use_sql_error: "Selection of numeric features on SQL is not supported"
+    no_var_to_rank: "No variables to rank."
+  box:
+    interior_coloring: "Interior Coloring"
+
+ownomogram:
+  name: "Nomogram"
+  desc: " Nomograms for Visualization of Naive Bayesian and Logistic Regression Classifiers."
+  tooltip_total_probability: "Total: {} <br/>Probability: {:.0%}"
+  tooltip_point: "Points: {}"
+  label_rank_by: "Rank by:"
+  label_numeric_feature: "Numeric features: "
+  msg_accept_nomogram: "Nomogram accepts only Naive Bayes and Logistic Regression classifiers."
+  box:
+    scale: "Scale"
+    display_feature: "Display features"
+  btn:
+    all: "All"
+    best_ranked: "Best ranked:"
+  checkbox:
+    normalize_probability: "Normalize probabilities"
+    normalize_probability_tip: "For multiclass data 1 vs. all probabilities do not sum to 1 and therefore could be normalized."
+  item:
+    total: "Total"
+    points: "Points"
+    probability: "Probabilities (%)"
+  gbox:
+    no_sorting: "No sorting"
+    name: "Name"
+    absolute_importance: "Absolute importance"
+    positive_influence: "Positive influence"
+    negative_influence: "Negative influence"
+    point_scale: "Point scale"
+    log_odds_ratio: "Log odds ratios"
+    1D_projection: "1D projection"
+    2D_curve: "2D curve"
+
+owpythagorastree:
+  name: "Pythagorean Tree"
+  desc: "Pythagorean Tree visualization for tree like-structures."
+  btn_redraw: "Redraw"
+  info_node: "Nodes: {}"
+  info_depth: "Depth: {}"
+  info_input_no_tree: "No tree on input"
+  gbox:
+    square_root: "Square root"
+    logarithmic: "Logarithmic"
+  checkbox:
+    enable_tooltip: "Enable tooltips"
+  box:
+    tree_info: "Tree Info"
+    display_setting: "Display Settings"
+    plot_property: "Plot Properties"
+  label:
+    depth: "Depth"
+    log_scale_factor: "Log scale factor"
+    node_color: "Node color"
+
+owpythagoreanforest:
+  name: "Pythagorean Forest"
+  desc: "Pythagorean forest for visualising random forests."
+  info_input_no_forest: "No forest on input."
+  gbox:
+    square_root: "Square root"
+    logarithmic: "Logarithmic"
+  box:
+    forest: "Forest"
+    display: "Display"
+  row:
+    depth: "Depth"
+    zoom: "Zoom"
+  label:
+    node_color: "Node color"
+
+owradviz:
+  name: "Radviz"
+  desc: "Display Radviz projection"
+  tip_evaluated_permutation: " Evaluated {} permutations"
+  row_maximum_variable: "Maximum number of variables: "
+  caption_title: "Score Plots"
+  caption_title_evaluated: " Evaluated {} permutations"
+  msg:
+    no_projection: "No projection for selected features"
+    show_error: "Categorical variables with more than two values are not shown."
+    number_error: "Maximum number of selected variables reached."
+  btn:
+    start: "Start"
+    continue: "Continue"
+    suggest_feature: "Suggest features"
+
+owruleviewer:
+  name: "CN2 Rule Viewer"
+  desc: "Review rules induced from data."
+  checkbox_compact_view: "Compact view"
+  btn_original_order: "Restore original order"
+  label:
+    condition: "IF conditions"
+    class: "THEN class"
+    probability: "Probabilities [%]"
+    quality: "Quality"
+    length: "Length"
+  report:
+    data_domain: "Data domain"
+    rule_induction_algorithm: "Rule induction algorithm"
+    induced_rule: "Induced rules"
+
+owscatterplot:
+  name: "Scatter Plot"
+  desc: "Interactive scatter plot visualization with intelligent data visualization enhancements."
+  tip_content: "Color variable is not selected"
+  btn_informative_projection: "Find Informative Projections"
+  checkbox:
+    variable_independent: "Treat variables as independent"
+    variable_independent_tip: "If checked, fit line to group (minimize distance from points);\n otherwise fit y as a function of x (minimize vertical distances)"
+  label:
+    axis_x: "Axis x:"
+    axis_y: "Axis y:"
+  msg:
+    plot_display_error: "Plot cannot be displayed because '{}' or '{}' is missing for all data points"
+    no_continuous_variable: "Data has no continuous variables"
+    sql_table_showing: "Large SQL table; showing a sample."
+    point_display_tip: "Points with missing '{}' or '{}' are not displayed"
+    input_empty: "No data on input"
+    data_sparse: "Data is sparse"
+    rank_error: "Not enough features for ranking"
+    select_color_variable: "Color variable is not selected"
+    no_value_color_variable: "Color variable has no values"
+    data_subset_error: "Data subset does not support large Sql tables"
+
+owsieve:
+  name: "Sieve Diagram"
+  desc: "Visualize the observed and expected frequencies for a combination of values."
+  captiontitle_sieve_rank: "Sieve Rank"
+  msg_input_signal_error: "Features from the input signal are not present in the data"
+  btn_score_combinations: "Score Combinations"
+
+owsilhouetteplot:
+  name: "Silhouette Plot"
+  desc: "Visually assess cluster quality and the degree of cluster membership."
+  checkbox_group_by_cluster: "Group by cluster"
+  box:
+    distance: "Distance"
+    cluster_label: "Cluster Label"
+    bar: "Bars"
+  label:
+    bar_width: "Bar width:"
+    annotation: "Annotations:"
+    increase_width: "(increase the width to show)"
+  msg:
+    input_label_error: "Input does not have any suitable labels"
+    non-empty_cluster_number: "Need at least two non-empty clusters"
+    all_cluster_singleton: "All clusters are singletons"
+    cannot_compute_distance: "Distances could not be computed: '{}'"
+    miss_cluster_assignment: "{} instance{s} omitted (missing cluster assignment)"
+    undefined_distance: "{} instance{s} omitted (undefined distances)"
+    ignore_categorical_feature: "Ignoring categorical features"
+  value_error:
+    score_label_dimension: "scores and labels must be 1 dimensional"
+    score_label_equal_shape: "scores and labels must have the same shape"
+    rowname_size_equal_score: "rownames must have the same size as scores"
+    label_range: "All indices in `labels` must be in `range(len(values))`"
+    Input_matrix: "Input matrix does not have associated data"
+
+owtreeviewer:
+  name: "Tree Viewer"
+  label_target_class: "Target class: "
+  info:
+    no_tree: "No tree."
+    target_class: "Target class: "
+    color_by: "Color by: "
+    node_leave: "{} nodes, {} leaves"
+  report:
+    tree_size: "Tree size"
+    edge_width: "Edge widths"
+    fixed: "Fixed"
+    relative_to_root: "Relative to root"
+    relative_to_parent: "Relative to parent"
+    color_by: "Color by"
+
+owvenndiagram:
+  name: "Venn Diagram"
+  desc: "A graphical visualization of the overlap of data instances from a collection of input datasets."
+  box_element: "Elements"
+  placeholder_instance_identity: "Instance identity"
+  checkbox_output_duplicate: "Output duplicates"
+  msg:
+    instance_error: "Data sets do not contain the same instances."
+    venn_diagram_accept_most_dataset: "Venn diagram accepts at most five datasets."
+    variable_rename: "Some variables have been renamed to avoid duplicates.\n{}"
+  btn:
+    column_feature: "Columns (features)"
+    row_match: "Rows (instances), matched by"
+  info:
+    no_suitable_identifiers: "Dataset {} has no suitable identifiers."
+    none_suitable_identifiers: "Datasets {} and {} have no suitable identifiers."
+
+utils_tree:
+  merge_discrete_rule: "Merged two discrete rules `%s` and `%s`"
+  continuous_rule_merger: "Continuous rules can currently only be merged with other continuous rules"
+  init:
+    nothing_rank: "There is nothing to rank."
+    placeholder_filter: "Filter ..."
+    btn:
+      start: "Start"
+      finish: "Finished"
+      pause: "Pause"
+    status:
+      get_combination: "Getting combinations..."
+      get_score: "Getting scores..."
+  widget:
+    undefined_point_show_smaller_size: "Points with undefined '{}' are shown in smaller size"
+    undefined_point_show_crossed_circle: "Points with undefined '{}' are shown as crossed circles"
+    msg:
+      show_too_many_labels: "Too many labels to show (zoom in or label only selected)"
+      no_subset_data: "No subset data instances appear in input data"
+      instance_error: "Subset data contains some instances that do not appear in input data"
+      unsupported_sparse_data: "Sparse data is not supported"
+      data_error: "No projection due to no valid data"
+      require_data_instance: "At least two data instances are required"
+      projecting_data_error: "An error occurred while projecting data.\n{}"
+      transparent_subset: "Increase opacity if subset is difficult to see"
+
+owscatterplotgraph:
+  tip:
+    add_group: "Shift: Add group"
+    append_group: "{}: Append to group"
+    remove: "Alt: Remove"
+
+owtreeviewer2d:
+  box:
+    tree: "Tree"
+    display: "Display"
+  row:
+    zoom: "Zoom: "
+    width: "Width: "
+    depth: "Depth: "
+    edge_width: "Edge width: "
+    unlimited: "Unlimited"
+    fix: "Fixed"
+    relative_root: "Relative to root"
+    relative_parent: "Relative to parent"
+    levels: "{} levels"
+  label_no_tree: "No tree."
+
+pythagorastreeviewer:
+  sample: "{}/{} samples ({:2.3f}%)"
+  split_by: "Split by "

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme description="Orange 中的大多数可视化都是交互式的，比如散点图。 双击其图标打散点图小部件，然后单击并拖动选择几个数据实例（图中的点）。 选定的数据将自动传送到数据表。 双击其小部件以检查选择了哪些数据。 更改选择并观察数据表中的更改。 如果两个小部件都处于打开状态，则效果最佳。" title="交互式可视化" version="2.0">
+	<nodes>
+		<node id="0" name="文件" position="(149.0, 261.0)" project_name="Orange3" qualified_name="Orange.widgets.data.owfile.OWFile" title="文件" version="" />
+		<node id="1" name="散点图" position="(321.0, 262.0)" project_name="Orange3" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" title="散点图" version="" />
+		<node id="2" name="数据表格" position="(472.0, 262.0)" project_name="Orange3" qualified_name="Orange.widgets.data.owtable.OWDataTable" title="数据表格" version="" />
+	</nodes>
+	<links>
+		<link enabled="true" id="0" sink_channel="Data" sink_node_id="1" source_channel="Data" source_node_id="0" />
+		<link enabled="true" id="1" sink_channel="Data" sink_node_id="2" source_channel="Selected Data" source_node_id="1" />
+	</links>
+	<annotations>
+		<text font-family="Helvetica" font-size="12" id="0" rect="(80.29411764705884, 69.17647058823525, 150.0, 233.0)" type="text/plain">此“文件”组件设置了读取 Iris 数据集。双击图标可以更改输入数据文件，并观察此工作流如何应用于其他数据集，例如 housing 或 auto-mpg。</text>
+		<text font-family="Helvetica" font-size="12" id="1" rect="(254.76470588235304, 115.58823529411762, 150.0, 165.0)" type="text/plain">双击打开“散点图”观察数据。然后通过选中散点图中的点来选择数据子集。</text>
+		<text font-family="Helvetica" font-size="12" id="2" rect="(449.8235294117645, 127.17647058823533, 157.05882352941182, 97.0)" type="text/plain">“数据表格”组件展示了在散点图中选择的数据子集。</text>
+		<arrow end="(152.70588235294122, 236.58823529411762)" fill="#C1272D" id="3" start="(151.70588235294122, 179.58823529411762)" />
+		<arrow end="(321.94117647058823, 231.0)" fill="#C1272D" id="4" start="(322.94117647058823, 175.0)" />
+		<arrow end="(468.9411764705882, 233.99999999999994)" fill="#C1272D" id="5" start="(516.9411764705882, 172.99999999999994)" />
+		<text font-family="Helvetica" font-size="12" id="6" rect="(197.94117647058823, 361.0, 301.0, 114.0)" type="text/plain">可以尝试将其他连接到散点图的输出，例如“箱线图”组件（位于“可视化”模块）。箱线图将展示散点图中选择的数据子集的分布情况。</text>
+		<arrow end="(353.9411764705883, 282.0)" fill="#39B54A" id="7" start="(386.9411764705883, 355.0)" />
+	</annotations>
+	<thumbnail />
+	<node_properties>
+		<properties format="pickle" node_id="0">gASV5wQAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIwuRTovd29ya3NwYWNlcy9vcmFuZ2UzL09yYW5nZS9kYXRhc2V0cy9pcmlzLnRhYpSMBnBy
+ZWZpeJSMD3NhbXBsZS1kYXRhc2V0c5SMB3JlbHBhdGiUjAhpcmlzLnRhYpSMBXRpdGxllIwAlIwF
+c2hlZXSUaBCMC2ZpbGVfZm9ybWF0lE51YmgGKYGUfZQoaAmMMUU6L3dvcmtzcGFjZXMvb3Jhbmdl
+My9PcmFuZ2UvZGF0YXNldHMvdGl0YW5pYy50YWKUaAtoDGgNjAt0aXRhbmljLnRhYpRoD2gQaBFo
+EGgSTnViaAYpgZR9lChoCYwxRTovd29ya3NwYWNlcy9vcmFuZ2UzL09yYW5nZS9kYXRhc2V0cy9o
+b3VzaW5nLnRhYpRoC2gMaA2MC2hvdXNpbmcudGFilGgPaBBoEWgQaBJOdWJoBimBlH2UKGgJjDdF
+Oi93b3Jrc3BhY2VzL29yYW5nZTMvT3JhbmdlL2RhdGFzZXRzL2hlYXJ0X2Rpc2Vhc2UudGFilGgL
+aAxoDYwRaGVhcnRfZGlzZWFzZS50YWKUaA9oEGgRaBBoEk51YmWMC3JlY2VudF91cmxzlF2UjBNz
+YXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAIRAAAApQAABGoAAALxAAACEgAAAMsAAARp
+AAAC8AAAAAAAAAAAB4AAAAISAAAAywAABGkAAALwlIwLc2hlZXRfbmFtZXOUfZSMBnNvdXJjZZRL
+AIwDdXJslGgQjA1kb21haW5fZWRpdG9ylH2UjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0
+aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVz
+lH2UKIwJdmFyaWFibGVzlF2UaCd9lGgzXZQoXZQojAxzZXBhbCBsZW5ndGiUjBRPcmFuZ2UuZGF0
+YS52YXJpYWJsZZSMEkNvbnRpbnVvdXNWYXJpYWJsZZSTlEsAaBCIZV2UKIwLc2VwYWwgd2lkdGiU
+aDtLAGgQiGVdlCiMDHBldGFsIGxlbmd0aJRoO0sAaBCIZV2UKIwLcGV0YWwgd2lkdGiUaDtLAGgQ
+iGVdlCiMBGlyaXOUaDmMEERpc2NyZXRlVmFyaWFibGWUk5RLAYwsSXJpcy1zZXRvc2EsIElyaXMt
+dmVyc2ljb2xvciwgSXJpcy12aXJnaW5pY2GUiWVlc2gpSwF1jAphdHRyaWJ1dGVzlCiMDHNlcGFs
+IGxlbmd0aJRLAoaUjAtzZXBhbCB3aWR0aJRLAoaUjAxwZXRhbCBsZW5ndGiUSwKGlIwLcGV0YWwg
+d2lkdGiUSwKGlHSUjAVtZXRhc5QpjApjbGFzc192YXJzlIwEaXJpc5RdlCiMC0lyaXMtc2V0b3Nh
+lIwPSXJpcy12ZXJzaWNvbG9ylIwOSXJpcy12aXJnaW5pY2GUZYaUhZSMEm1vZGlmaWVkX3Zhcmlh
+Ymxlc5RdlHViYXUu
+</properties>
+		<properties format="pickle" node_id="1">gASV8QUAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAK9AAABIQAABygAAAPk
+AAACvQAAASEAAAcoAAAD5AAAAAAAAAAAB4AAAAK9AAABIQAABygAAAPklIwJc2VsZWN0aW9ulF2U
+KEsAjBVudW1weS5jb3JlLm11bHRpYXJyYXmUjAZzY2FsYXKUk5SMBW51bXB5lIwFZHR5cGWUk5SM
+AnUxlImIh5RSlChLA4wBfJROTk5K/////0r/////SwB0lGJDAQGUhpRSlIaUSwFoCmgQaBOGlFKU
+hpRLAmgKaBBoE4aUUpSGlEsDaApoEGgThpRSlIaUSwRoCmgQaBOGlFKUhpRLBmgKaBBoE4aUUpSG
+lEsHaApoEGgThpRSlIaUSwhoCmgQaBOGlFKUhpRLCWgKaBBoE4aUUpSGlEsKaApoEGgThpRSlIaU
+SwtoCmgQaBOGlFKUhpRLDGgKaBBoE4aUUpSGlEsNaApoEGgThpRSlIaUSxFoCmgQaBOGlFKUhpRL
+EmgKaBBoE4aUUpSGlEsTaApoEGgThpRSlIaUSxRoCmgQaBOGlFKUhpRLFWgKaBBoE4aUUpSGlEsW
+aApoEGgThpRSlIaUSxdoCmgQaBOGlFKUhpRLGGgKaBBoE4aUUpSGlEsZaApoEGgThpRSlIaUSxpo
+CmgQaBOGlFKUhpRLG2gKaBBoE4aUUpSGlEscaApoEGgThpRSlIaUSx1oCmgQaBOGlFKUhpRLHmgK
+aBBoE4aUUpSGlEsfaApoEGgThpRSlIaUSyJoCmgQaBOGlFKUhpRLI2gKaBBoE4aUUpSGlEskaApo
+EGgThpRSlIaUSyVoCmgQaBOGlFKUhpRLJmgKaBBoE4aUUpSGlEsnaApoEGgThpRSlIaUSyhoCmgQ
+aBOGlFKUhpRLKmgKaBBoE4aUUpSGlEsraApoEGgThpRSlIaUSyxoCmgQaBOGlFKUhpRLLWgKaBBo
+E4aUUpSGlEsuaApoEGgThpRSlIaUSy9oCmgQaBOGlFKUhpRLMGgKaBBoE4aUUpSGlEsxaApoEGgT
+hpRSlIaUSzdoCmgQaBOGlFKUhpRLQGgKaBBoE4aUUpSGlEtCaApoEGgThpRSlIaUS1RoCmgQaBOG
+lFKUhpRLWGgKaBBoE4aUUpSGlEtfaApoEGgThpRSlIaUS2BoCmgQaBOGlFKUhpRLY2gKaBBoE4aU
+UpSGlEtyaApoEGgThpRSlIaUS3loCmgQaBOGlFKUhpRljBF0b29sdGlwX3Nob3dzX2FsbJSIjA92
+aXN1YWxfc2V0dGluZ3OUfZSMBWdyYXBolH2UKIwLYWxwaGFfdmFsdWWUS4CMDWNsYXNzX2RlbnNp
+dHmUiYwLaml0dGVyX3NpemWUSwqME2xhYmVsX29ubHlfc2VsZWN0ZWSUiYwWb3J0aG9ub3JtYWxf
+cmVncmVzc2lvbpSJjAtwb2ludF93aWR0aJRLCowJc2hvd19ncmlklImMC3Nob3dfbGVnZW5klIiM
+DXNob3dfcmVnX2xpbmWUiXWMC19fdmVyc2lvbl9flEsEjBBjb250ZXh0X3NldHRpbmdzlF2UjBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRy
+X2NvbG9ylIwEaXJpc5RLZYaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v//
+/4aUjAlhdHRyX3NpemWUTkr+////hpSMBmF0dHJfeJSMDHNlcGFsIGxlbmd0aJRLZoaUjAZhdHRy
+X3mUjAtzZXBhbCB3aWR0aJRLZoaUaLZ9lGjBSwR1jAphdHRyaWJ1dGVzlH2UKGjVSwJo2EsCjAxw
+ZXRhbCBsZW5ndGiUSwKMC3BldGFsIHdpZHRolEsCaMxLAXWMBW1ldGFzlH2UdWJhdS4=
+</properties>
+		<properties format="literal" node_id="2">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02/\x00\x00\x00\xe3\x00\x00\x05P\x00\x00\x02\xfd\x00\x00\x020\x00\x00\x01\t\x00\x00\x05O\x00\x00\x02\xfc\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x020\x00\x00\x01\t\x00\x00\x05O\x00\x00\x02\xfc', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>

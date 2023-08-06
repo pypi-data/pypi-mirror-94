@@ -1,0 +1,479 @@
+package_label: "可视化"
+package_desc:  "用于数据可视化的小部件."
+
+common:
+  data: "数据"
+  coordinates: "坐标"
+  selected_data: "所选数据"
+  network: "网络"
+  transformed_data: "转换后的数据"
+  histogram_data: "直方图数据"
+  tree: "树"
+  random_forest: "随机森林"
+
+components:
+  anchor: "Anchor"
+
+customizableplot:
+  font_size: "字体大小"
+  italic: "斜体"
+  width: "宽度"
+  opacity: "不透明度"
+  style: "样式"
+  antialias: "平滑"
+  fonts: "字体"
+  annotations: "注释"
+  figure: "图片"
+  font_family: "字体系列"
+  axis_title: "轴标题"
+  axis_ticks: "轴刻度"
+  legend: "图例"
+  label: "标签"
+  x-axis_title: "x轴标题"
+  y-axis_title: "y轴标题"
+  title: "标题"
+
+owbarplot:
+  name: "条形图"
+  desc: "可视化离与离散类别之间的比较."
+  msg:
+    no_cont_features: "数字特征才能打印。"
+    too_many_instances: "数据实例太多。只显示第一个{}."
+  row:
+    enumeration: "枚举"
+    same_color: "（相同颜色）"
+  label:
+    annotations: "注释:"
+    color: "颜色:"
+    values: "值:"
+    group_by: "分组:"
+
+owboxplot:
+  name: "箱线图"
+  desc: "在箱线图中可视化要素值的分布。"
+  box_variable: "变量"
+  box_subgroups: "子组"
+  box_display: "显示"
+  tooltip_sort_subgroups: "按𝜒²或方差分析法对分组进行排序"
+  tooltip_sort_variable_values: "按𝜒²或方差分析对变量值进行排序"
+  msg_no_vars: "数据不包含分类变量或数值变量"
+  row:
+    fix: "固定"
+    relative_root: "相对于根对象"
+    relative_parent: "相对于父对象"
+    unlimited: "无限"
+  checkbox:
+    sort_subgroups: "按与子组的相关性排序"
+    sort_variable: "按变量相关性排序"
+    annotate: "注释"
+    stretch_bars: "拉伸条形"
+    box_labels: "显示方框标签"
+    sort_subgroup_frequencies: "按子组频率排序"
+  btn:
+    no_comparison: "没有对比"
+    compare_medians: "比较中位数"
+    compare_means: "比较平均值"
+    
+owdistributions:
+  name: "分布"
+  desc: "在图形中显示数据特征的值分布。"
+  box_variable: "变量"
+  row_bin_width: "间隔宽度"
+  msg:
+    undefined_values: "变量'{}'没有定义的值"
+    undefined_data_instances: "没有定义了'{}'和'{}'的数据实例"
+    missing_values: "忽略缺失值的数据实例"
+  gbox:
+    beta: "β"
+    gamma: "γ"
+    rayleigh: "Rayleigh"
+    pareto: "帕累托"
+    exponential: "指数"
+    kernel_density: "核密度"
+  label:
+    fitted_probability: "拟合概率"
+    compute_bayesian_probabilities: "选择分布用于计算贝叶斯概率"
+    fitted_distribution: "拟合分布"
+    smoothing: "平滑度"
+    split_by: "拆分依据"
+    get_probability: "给定'{}'时'{}'的概率"
+    frequency: "频率"
+  checkbox:
+    hide_bars: "隐藏条形图"
+    stack_columns: "堆叠列"
+    probabilities: "显示概率"
+    cumulative_distribution: "显示累积分布"
+    sort_by_freq: "按频率对类别排序"
+
+owfreeviz:
+  name: "FreeViz"
+  desc: "显示FreeViz投影"
+  set_status_calculating: "正在计算…"
+  gbox_circular: "圆形"
+  gbox_random: "随机"
+  row_hide_radius: "隐藏半径："
+  gbox_initialization: "初始化："
+  msg:
+    no_target_variable: "数据没有目标变量"
+    binary: "目标变量至少不是二进制的"
+    number_compare: "特征数超过实例数。"
+    data_large: "特征数超过实例数。"
+    data_columns_constant: "所有数据列都是常量。"
+    feature_required: "至少需要两个特征"
+    value_number: "不显示具有两个以上值的分类特征。"
+  btn:
+    start: "开始"
+    stop: "停止"
+
+owheatmap:
+  name: "热图"
+  desc: "绘制数据矩阵热图。"
+  tooltip_split_by_categorical_column: "按分类列垂直拆分热图"
+  lnk_menu:
+    increase_font: "放大字体"
+    decrease_font: "缩小字体"
+    aspect_ratio: "保持长宽比"
+  msg:
+    data_sampled: "数据已采样"
+    ignore_categorical_feature: "{}分类特征{}已忽略"
+    memory_tip: "显示这些数据可能需要大量内存"
+    no_numeric_features: "没有数值型特征"
+    column_clustering_feature: "没有足够的特征用于列聚类"
+    clustering_instance: "没有足够的实例用于聚类"
+    k-means_merging_instance: "没有足够的实例用于k-means合并"
+    out_of_memory: "内存不足，无法显示此数据"
+    remove_empty_clusters: "已删除空的簇"
+    user_advice: "对于具有有意义的中点的数据，请选择一个发散调色板."
+  gbox:
+    no_clustering: "不聚类"
+    hierarchical_clustering: "应用层次聚类"
+    clustering_opt: "聚类（基于最优叶序）"
+    optimal_leaf_ordering: "应用基于最优叶序的层次聚类法。"
+    top: "顶部"
+    bottom: "底部"
+    top_bottom: "顶部和底部"
+  box:
+    color: "颜色"
+    merge: "合并"
+    split_by: "拆分依据"
+    annotation_legends: "批注和图例"
+    row_annotations: "行批注"
+    column_labels_position: "列标签位置"
+  row:
+    clusters: "簇："
+    rows: "行："
+    columns: "列："
+    color: "颜色"
+    label_position: "标签位置"
+    keep_aspect: "保持纵横比"
+  checkbox:
+    merge_k-means: "k-means合并"
+    stripes_averages: "带平均值的条形"
+    resize: "调整大小"
+  report:
+    columns: "列："
+    no_sorting": "不排序"
+    rows: "行："
+    split: "拆分："
+    row_annotation: "行批注"
+
+owlinearprojection:
+  name: "线性投影"
+  desc: "数据在二维平面上的多轴投影。"
+  row_hide_radius: "隐藏半径："
+  label_number_variables: "变量数："
+  btn:
+    start: "开始"
+    circular_placement: "圆弧形布局"
+    linear_discriminant_analysis: "线性判别分析"
+    principal_component_analysis: "主成分分析"
+    suggest_features: "建议的特征"
+  msg:
+    plot_requirement: "绘制图像需要数字特征"
+    no_data: "没有数据。"
+    select_color_variable: "必须选择颜色变量"
+    select_continuous_color_variable : "当选择连续颜色变量时，建议特征不适用于线性判别分析投影。"
+    continuous_variables_lack: "可用连续型变量不足"
+    data_instances_lack: "有效数据实例不足"
+
+owlineplot:
+  name: "折线图"
+  desc: "数据配置文件的可视化（例如时间序列）。"
+  box:
+    display: "显示"
+    group_by: "分组依据"
+  msg:
+    need_continuous_feature: "至少需要一个连续型特征。"
+    valid_data_error: "没有有效数据，无法绘制图像。"
+    no_display_option: "未选择显示选项。"
+    instances_value_error: "不显示有未知值的实例。"
+    show_first: "数据的特征太多。只显示第一个{}。"
+  checkbox:
+    lines: "线"
+    lines_tip: "绘制线"
+    range: "范围"
+    range_tip: "绘制范围在10%到90%之间"
+    mean: "平均值"
+    mean_tip: "绘制均值曲线"
+    error_bars: "误差线"
+    error_bars_tip: "显示标准差"
+
+owmosaic:
+  name: "马赛克图"
+  desc: "在马赛克图中显示数据。"
+  checkbox_compare_total: "和总数相比"
+  captiontitle_mosaic_ranking : "马赛克排名"
+  label_limit_attribute: "将属性数限制为："
+  btn_informative_mosaics: "寻找信息丰富的马赛克图"
+  btn_start: "开始"
+  placeholder_pearson_residuals: "皮尔逊残差"
+  msg:
+    incompatible: "数据子集与数据不兼容"
+    no_valid_data: "没有有效数据"
+    use_sql_error: "不支持用SQL查找数值型特征"
+    no_var_to_rank: "没有要排序的变量。"
+  box:
+    interior_coloring: "内部着色"
+
+ownomogram:
+  name: "列线图"
+  desc: "列线图可视化朴素贝叶斯和逻辑回归分类器。"
+  tooltip_total_probability: "总计：{} <br/>概率：{:.0%}"
+  tooltip_point: "积分：{}"
+  label_rank_by: "排序依据："
+  label_numeric_feature: "数值型特征："
+  msg_accept_nomogram: "列线图只接受朴素贝叶斯和逻辑回归分类器。"
+  box:
+    scale: "比例尺"
+    display_feature: "显示特征"
+  btn:
+    all: "全部"
+    best_ranked: "最优排名："
+  checkbox:
+    normalize_probability: "标准化概率"
+    normalize_probability_tip: "对于多类数据1 vs.所有概率不等于1，因此可以进行标准化。"
+  item:
+    total: "总计"
+    points: "积分"
+    probability: "概率（%）"
+  gbox:
+    no_sorting: "不排序"
+    name: "名称"
+    absolute_importance: "绝对重要性"
+    positive_influence: "积极影响"
+    negative_influence: "消极影响"
+    point_scale: "点刻度"
+    log_odds_ratio: "对数优势比"
+    1D_projection: "一维投影"
+    2D_curve: "二维曲线"
+
+owpythagorastree:
+  name: "毕达哥拉斯树"
+  desc: "树状结构的毕达哥拉斯树可视化。"
+  btn_redraw: "重新绘制图像"
+  info_node: "节点：{}"
+  info_depth: "深度：{}"
+  info_input_no_tree: "输入上没有树"
+  gbox:
+    square_root: "平方根"
+    logarithmic: "对数"
+  checkbox:
+    enable_tooltip: "启用工具提示"
+  box:
+    tree_info: "树信息"
+    display_setting: "显示设置"
+    plot_property: "图像属性"
+  label:
+    depth: "深度"
+    log_scale_factor: "对数标度因子"
+    node_color: "节点颜色"
+
+owpythagoreanforest:
+  name: "毕达哥拉斯森林"
+  desc: "毕达哥拉斯森林，用于可视化随机森林。"
+  info_input_no_forest: "输入中没有森林。"
+  gbox:
+    square_root: "平方根"
+    logarithmic: "对数"
+  box:
+    forest: "森林"
+    display: "显示"
+  row:
+    depth: "深度"
+    zoom: "缩放"
+  label:
+    node_color: "节点颜色"
+
+owradviz:
+  name: "拉维兹"
+  desc: "显示拉维兹投影"
+  tip_evaluated_permutation: "估计{}排列"
+  row_maximum_variable: "最大变量数："
+  caption_title: "计分图"
+  caption_title_evaluated: " 求值{}置换"
+  msg:
+    no_projection: "所选特征无投影"
+    show_error: "不显示具有两个以上值的分类变量。"
+    number_error: "已达到所选变量的最大数目。"
+  btn:
+    start: "开始"
+    continue: "继续"
+    suggest_feature: "建议的特征"
+
+owruleviewer:
+  name: "CN2规则查看器"
+  desc: "查看从数据中归纳出的规则。"
+  checkbox_compact_view: "紧凑视图"
+  btn_original_order: "恢复原始顺序"
+  label:
+    condition: "判断条件"
+    class: "真值归属类别"
+    probability: "概率[%]"
+    quality: "质量"
+    length: "长度"
+  report:
+    data_domain: "数据域"
+    rule_induction_algorithm: "规则归纳算法"
+    induced_rule: "诱导规则"
+
+owscatterplot:
+  name: "散点图"
+  desc: "交互式散点图可视化与智能数据可视化增强。"
+  tip_content: "未选择颜色变量"
+  btn_informative_projection: "探测信息量丰富的两个交互变量"
+  checkbox:
+    variable_independent: "将变量视为独立变量"
+    variable_independent_tip: "如果选中，则将直线拟合到组（最小化与点的距离）；\n否则将y拟合为x的函数（最小化垂直距离）"
+  label:
+    axis_x: "x轴："
+    axis_y: "y轴："
+  msg:
+    plot_display_error: "图像无法显示，因为'{}'或'{}'缺少所有数据点"
+    no_continuous_variable: "数据没有连续型变量"
+    sql_table_showing: "大型SQL表；显示示例。"
+    point_display_tip: "不显示缺少'{}'或'{}'的点"
+    input_empty: "输入端没有数据"
+    data_sparse: "数据稀疏"
+    rank_error: "没有足够的特征进行排名"
+    select_color_variable: "未选择颜色变量"
+    no_value_color_variable: "颜色变量没有值"
+    data_subset_error: "数据子集不支持大型Sql表"
+
+owsieve:
+  name: "滤网图"
+  desc: "将观察到的频率和预期频率可视化为一组值。"
+  captiontitle_sieve_rank: "筛分等级"
+  msg_input_signal_error: "数据中不存在输入信号的特征"
+  btn_score_combinations: "分数组合"
+
+owsilhouetteplot:
+  name: "剪影图"
+  desc: "直观地评估聚类质量和聚类对象的程度。"
+  checkbox_group_by_cluster: "按簇分组"
+  box:
+    distance: "距离"
+    cluster_label: "簇标签"
+    bar: "显示条"
+  label:
+    bar_width: "条宽："
+    annotation: "注释："
+    increase_width: "(增加条形宽度)"
+  msg:
+    input_label_error: "输入没有合适的标签"
+    non-empty_cluster_number: "至少需要两个非空的簇"
+    all_cluster_singleton: "所有的簇都是单粒子"
+    cannot_compute_distance: "无法计算距离：'{}'"
+    miss_cluster_assignment: "{}实例已忽略（缺少簇分配）"
+    undefined_distance: "{}实例已忽略（未定义的距离）"
+    ignore_categorical_feature: "忽略分类特征"
+  value_error:
+    score_label_dimension: "分数和标签必须是一维的"
+    score_label_equal_shape: "分数和标签的形状必须相同"
+    rowname_size_equal_score: "行名称的大小必须与分数相同"
+    label_range: "`labels`中的所有索引必须在`range（len（values））范围内"
+    Input_matrix: "输入矩阵没有关联的数据"
+
+owtreeviewer:
+  name: "树图查看器"
+  label_target_class: "目标类："
+  info:
+    no_tree: "没有树。"
+    target_class: "目标类："
+    color_by: "上色依据："
+    node_leave: "{}节点，{}叶"
+  report:
+    tree_size: "树大小"
+    edge_width: "边缘宽度"
+    fixed: "固定"
+    relative_to_root: "相对于根"
+    relative_to_parent: "相对于父对象"
+    color_by: "上色依据："
+
+owvenndiagram:
+  name: "韦恩图"
+  desc: "输入数据集集合中数据实例重叠的图形可视化。"
+  box_element: "元素"
+  placeholder_instance_identity: "实例标识"
+  checkbox_output_duplicate: "输出重复项"
+  msg:
+    instance_error: "数据集不包含相同的实例。"
+    venn_diagram_accept_most_dataset: "韦恩图最多接受五个数据集。"
+    variable_rename: "一些变量已重命名以避免重复。\n{}"
+  btn:
+    column_feature: "列（特征）"
+    row_match: "行（实例），匹配按："
+  info:
+    no_suitable_identifiers: "数据集{}没有合适的标识符。"
+    none_suitable_identifiers: "数据集{}和{}没有合适的标识符。"
+
+utils_tree:
+  merge_discrete_rule: "合并两条离散规则`%s`和`%s`"
+  continuous_rule_merger: "连续规则当前只能与其他连续规则合并"
+  init:
+    nothing_rank: "没有可排名的。"
+    placeholder_filter: "过滤器…"
+    btn:
+      start: "开始"
+      finish: "已完成"
+      pause: "暂停"
+    status:
+      get_combination: "正在获取组合…"
+      get_score: "正在获取分数…"
+  widget:
+    undefined_point_show_smaller_size: "未定义的点'{}'以较小的尺寸显示"
+    undefined_point_show_crossed_circle: "未定义的点'{}'显示为交叉圆圈"
+    msg:
+      show_too_many_labels: "显示的标签太多（放大或仅选定标签）"
+      no_subset_data: "输入数据中不显示子集数据实例"
+      instance_error: "子集数据包含一些未出现在输入数据中的实例"
+      unsupported_sparse_data: "不支持稀疏数据"
+      data_error: "没有有效数据，无法投影"
+      require_data_instance: "至少需要两个数据实例"
+      projecting_data_error: "投影数据时出错。\n{}"
+      transparent_subset: "如果子集很难看到, 可以增加透明度"
+
+owscatterplotgraph:
+  tip:
+    add_group: "Shift: 添加组"
+    append_group: "{}: 附加到组"
+    remove: "Alt: 移除"
+
+owtreeviewer2d:
+  box:
+    tree: "树"
+    display: "显示"
+  row:
+    zoom: "缩放："
+    width: "宽度："
+    depth: "深度："
+    edge_width: "边缘宽度："
+    unlimited: "无限制"
+    fix: "固定"
+    relative_root: "相对于根对象"
+    relative_parent: "相对于父对象"
+    levels: "{}层 "
+  label_no_tree: "没有树。"
+
+pythagorastreeviewer:
+  sample: "{}/{}样本({:2.3f}%)"
+  split_by: "拆分依据"

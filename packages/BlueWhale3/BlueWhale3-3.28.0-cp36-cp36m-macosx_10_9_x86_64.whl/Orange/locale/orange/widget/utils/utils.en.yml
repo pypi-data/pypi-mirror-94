@@ -1,0 +1,295 @@
+common:
+  data: "Data"
+  selected: "Selected"
+
+owplotgui:
+  box:
+    zoom_select: "Zoom/Select"
+    theme: "Theme"
+  checkbox:
+    jitter_numeric: "Jitter numeric values"
+    show_all_data: "Show all data on mouse hover"
+    show_color_region: "Show color regions"
+    show_regression_line: "Show regression line"
+    label_content: "Label only selection and subset"
+    show_fill_symbol: "Show filled symbols"
+    show_gridline: "Show gridlines"
+    use_animation: "Use animations"
+    use_antialiasing: "Use antialiasing"
+  placeholder:
+    same_color: "(Same color)"
+    same_shape: "(Same shape)"
+    same_size: "(Same size)"
+    no_labels: "(No labels)"
+  label:
+    symbol_size: "Symbol size:   "
+    opacity: "Opacity: "
+    shape: "Shape: "
+    size: "Size: "
+    label: "Label: "
+    jittering: "Jittering"
+
+owplotgui_obs:
+  window_title_hidden_axes: "Hidden Axes"
+  tip:
+    add_class_label: "Add new class label"
+    remove_class_label: "Remove selected class label"
+  label:
+    jittering: "Jittering: "
+    symbol_size:  "Symbol size:   "
+    opacity: "Opacity: "
+    shape: "Shape: "
+    size: "Size: "
+    label: "Label: "
+  checkbox:
+    jitter_numeric: "Jitter numeric values"
+    show_all_data: "Show all data on mouse hover"
+    class_density: "Show class density"
+    show_regression_line: "Show regression line"
+    label_select_point: "Label only selected points"
+    show_fill_symbol: "Show filled symbols"
+    show_gridline: "Show gridlines"
+    use_animation: "Use animations"
+  btn:
+    add: "Add"
+    delete: "Delete"
+  box:
+    display_axes: "Displayed Axes"
+    point: "Points"
+    plot_property: "Plot Properties"
+    visual_effect: "Visual effects"
+    theme: "Theme"
+  placeholder:
+    same_color: "(Same color)"
+    same_shape: "(Same shape)"
+    same_size: "(Same size)"
+    no_labels: "(No labels)"
+
+owsavebase:
+  file_dialog_save_file: "Save File"
+  save_file_dialog: "Save File"
+  checkbox_autosave_receive_new_data: "Autosave when receiving new data"
+  msg:
+    input_empty: "Empty input; nothing was saved."
+    ignore_file_name: "File name is not set."
+    overwrite_file: "Overwrite file?"
+    overwrite_file_content:  "File {} already exists.\nOverwrite?"
+  text:
+    save_as: "Save as {}"
+  btn:
+    something_save_as: "Save as {}"
+    save: "Save"
+    save_as: "Save as ..."
+
+colorgradientselection:
+  slider:
+    low: "Low gradient threshold"
+    low_tip: "Applying a low threshold will squeeze the gradient from the lower end"
+    high: "High gradient threshold"
+    high_tip: "Applying a high threshold will squeeze the gradient from the higher end"
+  row:
+    low: "Low:"
+    high: "High:"
+  label:
+    centered_at: "Centered at"
+
+colorpalette:
+  window_title:
+    color_palette: "Color Palette"
+    color_palette_list: "Color Palette List"
+    palette_edit: "Palette Editor"
+  btn:
+    edit_palette: "Edit palette"
+    edit_palette_tip: "Edit the order and colors of the palette"
+    load_palette: "Load palette"
+    load_palette_tip: "Load a predefined color palette"
+  checkbox:
+    pass_through_black: "Pass through black"
+    pass-through_color: "Use pass-through colors"
+  box:
+    save_profile: "Saved Profiles"
+    pass-through_color: "Pass-through colors"
+    info: "Information"
+    default_palette: "Default Palette"
+    default_palette_tip: "Default color palette"
+  msg:
+    update_color_palette: "Module colorpalette is obsolete; use colorpalettes"
+    question_title: "Question"
+    question_content: "The color schema has changed. Save?"
+    save_palette_as: "Save current palette as..."
+    save_changes_tip: "Name the current color settings.\n Pressing 'Cancel' will cancel your changes and close the dialog."
+    name_color_settings: "Name Your Color Settings"
+    rename_setting: "The 'Default' settings cannot be changed.Enter a different name:"
+    change_color: "<p align='center'>You can reorder colors in the list using the<br/>buttons on the right or by dragging and dropping the items.<br/>To change a specific color double click the item in the list.</p>"
+    move_select_color_up: "Move selected colors up"
+    move_select_color_down: "Move selected colors down"
+
+concurrent:
+  msg:
+    submit_task_run_task: "Use `submit_task` to run `Task`s"
+    submit_task_deprecate: "`submit_task` will be deprecated"
+    task_deprecate: "`Task` has been deprecated"
+
+colorpalettes:
+  msg_parameter_replace: "LimitedDiscretePalette: argument 'force_hsv' is deprecated; use 'force_glasbey' instead"
+  palettes:
+    blue_green_yellow: "Blue-Green-Yellow"
+    blue_magenta_yellow: "Blue-Magenta-Yellow"
+    dim_gray: "Dim gray"
+    inferno: "Inferno"
+    viridis: "Viridis"
+    coolwarm: "Coolwarm"
+    green_red: "Green-Red"
+    diverging_protanopic: "Diverging protanopic"
+    diverging_tritanopic: "Diverging tritanopic"
+    linear_protanopic: "Linear protanopic"
+    linear_tritanopic: "Linear tritanopic"
+    isoluminant: "Isoluminant"
+    rainbow: "Rainbow"
+  category:
+    linear: "Linear"
+    diverging: "Diverging"
+    color_blind_friendly: "Color-blind friendly"
+    other: "Other"
+
+encodings:
+  btn_select_all: "Select all"
+  text_select_visible: "Select encodings visible in text encoding menus"
+
+graphicsview:
+  btn:
+    zoom_in: "Zoom in"
+    zoom_out: "Zoom out"
+    actual_size: "Actual Size"
+    zoom_to_fit: "Zoom to fit"
+  gbox:
+    aspect_mode: "Aspect mode"
+    ignore: "Ignore"
+    keep: "Keep"
+    keep_by_expand: "Keep by expanding"
+    
+domaineditor:
+  place:
+    feature: "feature"
+    target: "target"
+    meta: "meta"
+    skip: "skip"
+  typename:
+    categorical: "categorical"
+    numeric: "numeric"
+    text: "text"
+    datetime: "datetime"
+  label:
+    name: "Name"
+    type: "Type"
+    role: "Role"
+    values: "Values"
+    
+itemmodels:
+  msg_sorted_modify_error: "Can't modify PyTableModel when it's sorted"
+  text:
+    variable_label: "<br/>Variable Labels:<br/>"
+    categorical_value: "<b>%s</b><br/>Categorical with %i values: "
+    time: "<b>%s</b><br/>Time"
+    numeric: "<b>%s</b><br/>Numeric"
+    text: "<b>%s</b><br/>Text"
+
+listfilter:
+  tooltip_filter_available_variable: "Filter the list of available variables."
+  placeholder_filter: "Filter"
+
+owbasesql:
+  btn_connect: "Connect"
+  box:
+    server: "Server"
+    server_tip: "Server"
+  report:
+    no_db_connect: "No database connection."
+    database: "Database"
+    data: "Data"
+  placeholder:
+    server: "Server"
+    database: "Database[/Schema]"
+    database_tip: "Database or optionally Database/Schema"
+    username: "Username"
+    username_tip: "Username"
+    password: "Password"
+    password_tip: "Password"
+
+owlearnerwidget:
+  msg:
+    fit_fail: "Fitting failed.\n{}"
+    unsupported_sparse_data: "Sparse data is not supported."
+    out_of_memory: "Out of memory."
+    change_apply: "Press Apply to submit changes."
+  error:
+    no_target_variable: "Data has no target variable.\n You can set a target variable with the Select Columns widget."
+    dataset_empty: "Dataset is empty."
+    no_single_target_value: "Data contains a single target value."
+    data_no_learn_feature: "Data has no features to learn from."
+  report:
+    name: "Name"
+    model_parameter: "Model parameters"
+    data: "Data"
+  box:
+    classification: "Classification"
+    regression: "Regression"
+  row:
+    name: "Name"
+    name_tip: "The name will identify this model in other widgets"
+
+progressbar:
+  msg_argument_error:  "'processEvents' argument is deprecated.\nIt does nothing and will be removed in the future (passing it will raise a TypeError)."
+
+state_summary:
+  categorical: "categorical"
+  numeric: "numeric"
+  time: "time"
+  string: "string"
+  format: "{} {}"
+  detail:
+    all: "{} instance(s), {} variable(s)\nFeatures: {} {}\nTarget: {}\nMetas: {}"
+    no_miss_value: "(No missing values)"
+    no_data: "No data on {}."
+    miss_value_percentage: "(%.1f%s missing values)"
+
+stickygraphicsview:
+  btn:
+    zoom_in: "Zoom in"
+    zoom_out: "Zoom out"
+
+textimport:
+  window_title:
+    customize_encodings_list: "Customize Encodings List"
+  btn:
+    skip: "Skip"
+    header: "Header"
+  tip:
+    select_encoding_format: "Select file text encoding"
+    select_cell_delimiter: "Select cell delimiter character."
+    thousands_group_separator: "Thousands group separator"
+    csv_parse_error: "CSV parsing error: "
+  row:
+    encoding: "Encoding"
+    cell_delimiter: "Cell delimiter"
+    quote_character: "Quote character"
+    group: "Grouping:"
+    decimal: "Decimal:"
+    number_separators: "Number separators:"
+    column_type: "Column type"
+  gbox:
+    tab: "Tab"
+    comma: "Comma"
+    semicolon: "Semicolon"
+    space: "Space"
+    other: "Other"
+    customize_encodings_list: "Customize Encodings List..."
+    no_separator: "No separator"
+    auto: "Auto"
+    automatic_determine_type: "The type will be determined automatically based on column contents."
+    numeric: "Numeric"
+    categorical: "Categorical"
+    datetime: "Datetime"
+    ignore: "Ignore"
+    column_not_load: "The column will not be loaded"
+    

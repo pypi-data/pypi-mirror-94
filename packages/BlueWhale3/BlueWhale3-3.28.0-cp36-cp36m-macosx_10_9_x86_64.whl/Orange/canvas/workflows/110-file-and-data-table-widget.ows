@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme description="Orange 中的基本数据挖掘单元称为小部件。 有用于读取数据，预处理，可视化，聚类，分类等小部件。 小部件通过链接通道进行通信。 因此，数据挖掘工作流是小部件和链接通道的集合。&#10;&#10;在此工作流中，有一个用于读取数据的文件小部件。 文件小部件将此数据传递给显示数据电子表格的数据表小部件。 请注意文件小部件的输出如何连接到“数据表”小部件的输入。 在 Orange 中，小部件的输出位于右侧，输入位于小部件的左侧。" title="文件和数据表" version="2.0">
+	<nodes>
+		<node id="0" name="文件" position="(89.0, 157.0)" project_name="Orange3" qualified_name="Orange.widgets.data.owfile.OWFile" title="文件" version="" />
+		<node id="1" name="数据表格" position="(290.0, 157.0)" project_name="Orange3" qualified_name="Orange.widgets.data.owtable.OWDataTable" title="数据表格" version="" />
+	</nodes>
+	<links>
+		<link enabled="true" id="0" sink_channel="Data" sink_node_id="1" source_channel="Data" source_node_id="0" />
+	</links>
+	<annotations>
+		<text font-family="Helvetica" font-size="14" id="0" rect="(29.0, 20.0, 160.0, 80.0)" type="text/plain">“文件”组件。 双击打开，然后选择数据集文件。</text>
+		<text font-family="Helvetica" font-size="14" id="1" rect="(53.0, 232.0, 118.0, 63.0)" type="text/plain">“文件”组件的输出。</text>
+		<text font-family="Helvetica" font-size="14" id="2" rect="(226.0, 223.0, 131.0, 63.0)" type="text/plain">“数据表格”组件的输入。</text>
+		<text font-family="Helvetica" font-size="14" id="3" rect="(129.0, 300.0, 150.0, 76.0)" type="text/plain">信息连接。它将数据集从“文件”组件传送到“数据表格”。</text>
+		<text font-family="Helvetica" font-size="14" id="4" rect="(260.0, 15.0, 150.0, 97.0)" type="text/plain">“数据表格”组件。 双击该打开可在电子表格中查看数据。</text>
+		<text font-family="Helvetica" font-size="14" id="5" rect="(420.0, 62.0, 150.0, 114.0)" type="text/plain">“数据表格”组件的输出，可以将选中的数据（行）发送到任意组件。</text>
+		<text font-family="Helvetica" font-size="14" id="6" rect="(494.0, 163.0, 216.0, 146.0)" type="text/plain">此输出未使用，因此显示为虚线。可以通过单击左侧工具栏中的组件图标来添加另一个“数据表格(1)”，将“数据表格”的输出连接到“数据表格(1)”的输入，并检查数据表格中的选中的数据是否成功发送到下一个组件。 </text>
+		<arrow end="(88.00000000000004, 122.00000000000001)" fill="#C1272D" id="7" start="(89.00000000000004, 76.00000000000001)" />
+		<arrow end="(285.0, 129.0)" fill="#C1272D" id="8" start="(279.0, 86.00000000000001)" />
+		<arrow end="(117.0, 180.0)" fill="#C1272D" id="9" start="(140.0, 229.0)" />
+		<arrow end="(256.0, 171.0)" fill="#C1272D" id="10" start="(242.0, 221.0)" />
+		<arrow end="(194.99999999999997, 159.0)" fill="#C1272D" id="11" start="(195.99999999999997, 297.0)" />
+		<arrow end="(328.0, 166.99999999999997)" fill="#39B54A" id="12" start="(488.0, 197.99999999999997)" />
+		<arrow end="(327.0, 141.00000000000003)" fill="#C1272D" id="13" start="(414.0, 105.00000000000001)" />
+	</annotations>
+	<thumbnail />
+	<node_properties>
+		<properties format="pickle" node_id="0">gASVuQMAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZSMHm9y
+YW5nZXdpZGdldC51dGlscy5maWxlZGlhbG9nc5SMClJlY2VudFBhdGiUk5QpgZR9lCiMB2Fic3Bh
+dGiUjC5FOi93b3Jrc3BhY2VzL29yYW5nZTMvT3JhbmdlL2RhdGFzZXRzL2lyaXMudGFilIwGcHJl
+Zml4lIwPc2FtcGxlLWRhdGFzZXRzlIwHcmVscGF0aJSMCGlyaXMudGFilIwFdGl0bGWUjACUjAVz
+aGVldJRoEIwLZmlsZV9mb3JtYXSUTnViYYwLcmVjZW50X3VybHOUXZSME3NhdmVkV2lkZ2V0R2Vv
+bWV0cnmUQy4B2dDLAAEAAAAAAhMAAAE8AAADqgAAAjUAAAITAAABUgAAA6oAAAI1AAAAAAAAlIwL
+c2hlZXRfbmFtZXOUfZSMBnNvdXJjZZRLAIwDdXJslGgQjA1kb21haW5fZWRpdG9ylH2UjAtfX3Zl
+cnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwH
+Q29udGV4dJSTlCmBlH2UKIwEdGltZZRHQdanFgy6W1+MBnZhbHVlc5R9lCiMCXZhcmlhYmxlc5Rd
+lGgbfZRoKF2UKF2UKIwMc2VwYWwgbGVuZ3RolIwUT3JhbmdlLmRhdGEudmFyaWFibGWUjBJDb250
+aW51b3VzVmFyaWFibGWUk5RLAGgQiGVdlCiMC3NlcGFsIHdpZHRolGgwSwBoEIhlXZQojAxwZXRh
+bCBsZW5ndGiUaDBLAGgQiGVdlCiMC3BldGFsIHdpZHRolGgwSwBoEIhlXZQojARpcmlzlGgujBBE
+aXNjcmV0ZVZhcmlhYmxllJOUSwGMLElyaXMtc2V0b3NhLCBJcmlzLXZlcnNpY29sb3IsIElyaXMt
+dmlyZ2luaWNhlIllZXNoHUsBdYwKYXR0cmlidXRlc5QojAxzZXBhbCBsZW5ndGiUSwKGlIwLc2Vw
+YWwgd2lkdGiUSwKGlIwMcGV0YWwgbGVuZ3RolEsChpSMC3BldGFsIHdpZHRolEsChpR0lIwFbWV0
+YXOUKYwKY2xhc3NfdmFyc5SMBGlyaXOUXZQojAtJcmlzLXNldG9zYZSMD0lyaXMtdmVyc2ljb2xv
+cpSMDklyaXMtdmlyZ2luaWNhlGWGlIWUjBJtb2RpZmllZF92YXJpYWJsZXOUXZR1YmF1Lg==
+</properties>
+		<properties format="literal" node_id="1">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': None, 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>

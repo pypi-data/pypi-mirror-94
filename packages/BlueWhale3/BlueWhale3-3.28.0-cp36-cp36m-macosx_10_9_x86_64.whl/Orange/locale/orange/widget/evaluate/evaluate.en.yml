@@ -1,0 +1,212 @@
+package_label: "Evaluate"
+package_desc: "Evaluate classification/regression performance."
+
+common:
+  evaluation_result: "Evaluation Results"
+  calibrated_model: "Calibrated Model"
+  predictor: "Predictors"
+  prediction: "Predictions"
+  test_data: "Test Data"
+  selected_data: "Selected Data"
+  data: "Data"
+
+owcalibrationplot:
+  name: "Calibration Plot"
+  desc: "Calibration plot based on evaluation of classifiers."
+  row_target: "Target: "
+  checkbox_show_rug: "Show rug"
+  checkbox_fold_curves: "Curves for individual folds"
+  box_metric: "Metrics"
+  box_info: "Info"
+  row_model_calibration: "Output model calibration"
+  label:
+    predict_probability: "Predicted probability"
+    threshold_probability_as_positive: "Threshold probability to classify as positive"
+    threshold: "<table><tr><th align='right'>Threshold: p=</th><td colspan='4'>%.2f<br/></td></tr>"
+    threshold_text: "<table><tr><th align='right'>Threshold:</th><td colspan='4'>p = %.2f<br/></td><tr/></tr>"
+    sens: "sens"
+    spec: "spec"
+    prec: "prec"
+    recall: "recall"
+    ppv: "PPV"
+    tpv: "TPV"
+    tpr: "TPR"
+    fpr: "FPR"
+  gbox:
+    calibration_curve: "Calibration curve"
+    class_accuracy: "Classification accuracy222"
+    f1: "F1"
+    sensitivity_specificity: "Sensitivity and specificity"
+    sensitivity_info: "<p><b>Sensitivity</b> (falling) is the proportion of correctly detected positive instances (TP&nbsp;/&nbsp;P).</p><p><b>Specificity</b> (rising) is the proportion of detected negative instances (TN&nbsp;/&nbsp;N).</p>"
+    precision_recall: "Precision and recall"
+    precision_recall_info: "<p><b>Precision</b> (rising) is the fraction of retrieved instances that are relevant, TP&nbsp;/&nbsp;(TP&nbsp;+&nbsp;FP).</p><p><b>Recall</b> (falling) is the proportion of discovered relevant instances, TP&nbsp;/&nbsp;P.</p>"
+    predictive_pos_neg: "Pos and neg predictive value"
+    predictive_pos_neg_info: "<p><b>Positive predictive value</b> (rising) is the proportion of correct positives, TP&nbsp;/&nbsp;(TP&nbsp;+&nbsp;FP).</p><p><b>Negative predictive value</b> is the proportion of correct negatives, TN&nbsp;/&nbsp;(TN&nbsp;+&nbsp;FN).</p>"
+    true_false_rate: "True and false positive rate"
+    true_false_rate_info: "<p><b>True and false positive rate</b> are proportions of detected and omitted positive instances</p>"
+    calibration_plot: "Calibration Plot"
+    class_calibration_plot: "Calibration plot based on evaluation of classifiers."
+  msg:
+    calibration_plot_require_discrete_target: "Calibration plot requires a discrete target"
+    nothing_display: "Empty result on input. Nothing to display."
+    remove_unkown_class: "Remove test data instances with unknown classes"
+    data_belong_target_class: "All data instances belong to target class"
+    nodata_belong_target_class: "No data instances belong to target class"
+    not_shown_data_belong_test_fold: "Test folds where all data belongs to (non)-target are not shown"
+    model_cannot_compute: "Instance for which the model couldn't compute probabilities are skipped"
+    invalid_data_for_model: "No valid data for model(s) {}"
+    cannot_output: "Can't output a mode:  {}"
+    train_produces_different_model: "each training data sample produces a different model"
+    result_not_contain_model: "test results do not contain stored models - try testing on separate data or on training data"
+    select_single_model: "select a single model - the widget can output only one"
+    cannot_calibrate: "cannot calibrate non-binary classes"
+  report:
+    output_model_calibration: "Output model calibration"
+
+owconfusionmatrix:
+  name: "Confusion Matrix"
+  desc: "Display a confusion matrix constructed from the results of classifier evaluations."
+  box_output: 'Output'
+  label:
+    show: "Show: "
+    predicted: 'Predicted'
+    actual: 'Actual'
+    trbl: 'trbl'
+    actual_predicted: "actual: {}\n predicted: {}"
+    show_confusion_matrix: 'Confusion matrix for {} (showing {})'
+  btn:
+    predictions: 'Predictions'
+    probability: 'Probabilities'
+    select_correct: "Select Correct"
+    select_misclassified: "Select Misclassified"
+    clear_selection: 'Clear Selection'
+  gbox:
+    number_instance: "Number of instances"
+    proportion_predicted: 'Proportion of predicted'
+    proportion_actual: "Proportion of actual"
+  msg:
+    user_advice: "Clicking on cells or in headers outputs the corresponding data instances"
+    no_regression: "Confusion Matrix cannot show regression results."
+    invalid_values: "Evaluation Results input contains invalid values"
+    empty_input: "Empty result on input. Nothing to display."
+
+owliftcurve:
+  name: "Lift Curve"
+  desc: "Construct and display a lift curve from the evaluation of classifiers."
+  box_curve: "Curve"
+  box_model: "Models"
+  box_set: "Settings"
+  checkbox_show_convex: "Show lift convex hull"
+  checkbox_convex_hull:
+  checkbox_cumulative_gain: "Cumulative Gains"
+  label_p_rate: "P Rate"
+  label_tp_rate: "TP Rate"
+  label_lift: "Lift"
+  label_target: "Target: "
+  msg_warn_undefined: "Some curves are undefined; check models and data"
+  msg_error_undefined: "No defined curves; check models and data"
+  report_target_class: "Target class"
+
+owpredictions:
+  name: "Predictions"
+  desc: "Display predictions of models for an input dataset."
+  msg_empty_dataset: "Empty dataset"
+  msg_model_predict_different_target: "Some model(s) predict a different target (see more ...)\n{}"
+  msg_predictor_failed: "Some predictor(s) failed (see more ...)\n{}"
+  msg_score_failed: "Some scorer(s) failed (see more ...)\n{}"
+  box_show_probability : "Show probabilities  for"
+  btn_restore_original: "Restore Original Order"
+  tooltip_original_row: "Show rows in the original order"
+  detail:
+    data: "Data:<br>"
+    no_data: "No data on input."
+    model: "Model: {number} model{s}"
+    fail: " ({} failed)"
+    no_model: "Model:<br>No model on input."
+  report:
+    show_probability: "<br>Showing probabilities for: "
+    data_prediction: "Data & Predictions"
+
+owrocanalysis:
+  name: "ROC Analysis"
+  desc: "Display the Receiver Operating Characteristics curve based on the evaluation of classifiers."
+  row_fp_cost: "FP Cost: "
+  row_fn_cost: "FN Cost: "
+  row_prior_probability: "Prior probability:"
+  label_fp_rate: "FP Rate (1-Specificity)"
+  label_tp_rate: "TP Rate (Sensitivity)"
+  label_target: "Target"
+  msg:
+    some_roc_curves_undefined: "Some ROC curves are undefined"
+    all_roc_curves_undefined: "All ROC curves are undefined"
+    thresholds: "Thresholds:\n"
+  box:
+    plot: "Plot"
+    classifier: "Classifiers"
+    curves: "Curves"
+    analysis: "Analysis"
+  gbox:
+    merge_prediction: "Merge Predictions from Folds"
+    mean_tp_rate: "Mean TP Rate"
+    threshold_tp_fp: "Mean TP and FP at Threshold"
+    show_individual_curve: "Show Individual Curves"
+  checkbox:
+    show_roc_curve: "Show convex ROC curves"
+    show_roc_convex_hull: "Show ROC convex hull"
+    default_threshold: "Default threshold (0.5) point"
+    show_performance_line: "Show performance line"
+  report:
+    cost: "Costs"
+    fp_fn: "FP = {}, FN = {}"
+    target_probability: "Target probability"
+
+owtestandscore:
+  name: "Test and Score"
+  desc: "Cross-validation accuracy estimation."
+  tooltip_click_table: "Click on the table header to select shown columns"
+  tooltip_click_header: "click_header"
+  placeholder_average_class: "(Average over classes)"
+  row_number_of_fold: "Number of folds:  "
+  checkbox_stratified: "Stratified"
+  row_repeat_train: "Repeat train/test:  "
+  row_train_set_size: "Training set size:  "
+  checkbox_negligible_difference: "Negligible difference:  "
+  tooltip_table_show_probability: "<small>Table shows probabilities that the score for the model in the row is higher than that of the model in the column. Small numbers show the probability that the difference is negligible.</small>"
+  msg:
+    test_data_empty: "Test dataset is empty."
+    class_required_test: "Test data input requires a target variable."
+    too_many_folds: "Number of folds exceeds the data size"
+    class_inconsistent: "Test and train datasets have different target variables."
+    memory_error: "Not enough memory."
+    test_data_incompatible: "Test data may be incompatible with train data."
+    remove_unknown_target_value: "Instances with unknown target values were removed from{}data."
+    miss_test_data_input: "Missing separate test data input."
+    some_score_not_computed: "Some scores could not be computed."
+    use_test_data: "Test data is present but unused. Select 'Test on test data' to use it."
+    train_data_sampled: "Train data has been sampled"
+    test_data_sampled: "Test data has been sampled"
+    test_match_train_data: "Test data has been transformed to match the train data."
+    failed_with: "{name} failed with error:\n {exc.__class__.__name__}: {exc!s}"
+  btn:
+    cross_validation: "Cross validation"
+    feature_cross_validation: "Cross validation by feature"
+    random_sampling: "Random sampling"
+    leave_one_out: "Leave one out"
+    train_data_test: "Test on train data"
+    test_data_test: "Test on test data"
+  box:
+    sampling: "Sampling"
+    model_comparison: "Model Comparison"
+    evaluation_result: "Evaluation Results"
+    model_comparison_name: "Model Comparison by {}"
+  status:
+    wait: "Waiting"
+    done: "Done"
+    cancel: "Cancelled"
+
+utils:
+  header:
+    method: "Method"
+    model: "Model"
+    train_time: "Train time [s]"
+    test_time: "Test time [s]"

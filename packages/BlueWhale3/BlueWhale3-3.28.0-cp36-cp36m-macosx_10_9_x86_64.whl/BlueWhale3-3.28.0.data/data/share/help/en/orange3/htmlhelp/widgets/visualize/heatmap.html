@@ -1,0 +1,101 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heat Map</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="next" title="Scatter Plot" href="scatterplot.html" />
+    <link rel="prev" title="Distributions" href="distributions.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="heat-map">
+<h1>Heat Map</h1>
+<p>Plots a heat map for a pair of attributes.</p>
+<p><strong>Inputs</strong></p>
+<ul class="simple">
+<li>Data: input dataset</li>
+</ul>
+<p><strong>Outputs</strong></p>
+<ul class="simple">
+<li>Selected Data: instances selected from the plot</li>
+</ul>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Heat_map" target="_blank">Heat map</a> is a graphical method for visualizing attribute values by class in a two-way matrix. It only works on datasets containing continuous variables. The values are represented by color: the higher a certain value is, the darker the represented color. By combining class and attributes on x and y axes, we see where the attribute values are the strongest and where the weakest, thus enabling us to find typical features (discrete) or value range (continuous) for each class.</p>
+<p><img alt="../../_images/HeatMap-stamped.png" src="../../_images/HeatMap-stamped.png" /></p>
+<ol class="simple">
+<li>The color scheme legend. <strong>Low</strong> and <strong>High</strong> are thresholds for the color palette (low for attributes with low values and high for attributes with high values). Selecting one of diverging palettes, which have two extreme colors and a neutral (black or white) color at the midpoint, enables an option to set a meaningful mid-point value (default is 0).</li>
+<li>Merge data.</li>
+<li>Sort columns and rows:<ul>
+<li><strong>No Sorting</strong> (lists attributes as found in the dataset)</li>
+<li><strong>Clustering</strong> (clusters data by similarity)</li>
+<li><strong>Clustering with ordered leaves</strong> (maximizes the sum of similarities of adjacent elements)</li>
+</ul>
+</li>
+<li>Set what is displayed in the plot in <strong>Annotation &amp; Legend</strong>.<ul>
+<li>If <em>Show legend</em> is ticked, a color chart will be displayed above the map.</li>
+<li>If <em>Stripes with averages</em> is ticked, a new line with attribute averages will be displayed on the left.</li>
+<li><strong>Row Annotations</strong> adds annotations to each instance on the right.</li>
+<li><strong>Column Label Positions</strong> places column labels in a selected place (None, Top, Bottom, Top and Bottom).</li>
+</ul>
+</li>
+<li>If <em>Keep aspect ratio</em> is ticked, each value will be displayed with a square (proportionate to the map).</li>
+<li>If <em>Send Automatically</em> is ticked, changes are communicated automatically. Alternatively, click <em>Send</em>.</li>
+<li><em>Save image</em> saves the image to your computer in a .svg or .png format.</li>
+<li>Produce a report.</li>
+</ol>
+<div class="section" id="example">
+<h2>Example</h2>
+<p>The <strong>Heat Map</strong> below displays attribute values for the <em>Housing</em> dataset. The aforementioned dataset concerns the housing values in the suburbs of Boston.</p>
+<p>The first thing we see in the map are the ‘B’ and ‘Tax’ attributes, which are the only two colored in dark orange. The ‘B’ attribute provides information on the proportion of blacks by town and the ‘Tax’ attribute informs us about the full-value property-tax rate per $10,000. In order to get a clearer heat map, we then use the <a class="reference internal" href="../data/selectcolumns.html"><span class="doc">Select Columns</span></a> widget and remove the two attributes from the dataset. Then we again feed the data to the <strong>Heat map</strong>. The new projection offers additional information.</p>
+<p>By removing ‘B’ and ‘Tax’, we can see other deciding factors, namely ‘Age’ and ‘ZN’. The ‘Age’ attribute provides information on the proportion of owner-occupied units built prior to 1940 and the ‘ZN’ attribute informs us about the proportion of non-retail business acres per town.</p>
+<p><img alt="../../_images/HeatMap-Example1.png" src="../../_images/HeatMap-Example1.png" /></p>
+<p>The <strong>Heat Map</strong> widget is a nice tool for discovering relevant features in the data.  By removing some of the more pronounced features, we came across new information, which was hiding in the background.</p>
+</div>
+<div class="section" id="references">
+<h2>References</h2>
+<p><a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Housing" target="_blank">Housing Dataset</a></p>
+</div>
+</div>
+
+
+          </div>
+          
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Orange Data Mining.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/widgets/visualize/heatmap.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
