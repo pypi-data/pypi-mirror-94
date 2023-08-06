@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+Makefile
+README.md
+setup.cfg
+setup.py
+examples/t64-dump.py
+examples/t64-extract.py
+t64/__init__.py
+t64/dir_entry.py
+t64/t64_image_reader.py
+t64.egg-info/PKG-INFO
+t64.egg-info/SOURCES.txt
+t64.egg-info/dependency_links.txt
+t64.egg-info/top_level.txt
+test/test_dir_entry.py
+test/test_t64_image_reader.py
