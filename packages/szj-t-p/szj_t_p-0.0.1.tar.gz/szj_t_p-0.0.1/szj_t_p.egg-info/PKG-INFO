@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: szj-t-p
+Version: 0.0.1
+Summary: test程序
+Home-page: https://github.com/xxx/xxx
+Author: sunzhijun
+Author-email: sunzhijun13@sina.com
+License: UNKNOWN
+Description: # Example Package
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
