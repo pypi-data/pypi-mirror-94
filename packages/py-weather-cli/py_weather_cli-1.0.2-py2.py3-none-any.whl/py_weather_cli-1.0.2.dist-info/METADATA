@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: py-weather-cli
+Version: 1.0.2
+Summary: python version implementation of `wego` which is a weather forecast client for the terminal.
+Home-page: https://github.com/faris-shi/py_weather_cli
+Author: Faris Shi
+Author-email: faris.shi84@gmail.com
+License: MIT
+Keywords: wego-python weather english cli forecast ascii-art
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Topic :: Utilities
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: click
+
+# py_weather_cli
+
+py_weather_cli is a Python version implementation of [wego](https://github.com/schachmat/wego) which is a weather client for the terminal.
+
+This project is just only for study purpose, please do not use it for business.
+
+![screen.png](screen.png)
+
+## Dependencies
+
+- requests
+- click
+
+## Installation
+
+```
+pip3 install py_weather_cli
+
+weather_cli -c toronto
+```
+
+
+## Configration
+
+Once you run `py_weather_cli` after installing, you will get error about [OpenWeatherMap](https://openweathermap.org/) account and api key. However the config `.weather-cli` has been generated in `HOME` dirctinary. (it might be hidden due to started '.').
+
+- city_name
+
+    the default city
+- api_key
+
+    OpenWeatherMap api_key
+- lang
+
+    client language
+- num_days  
+
+    the number of days of forecast
+- unit  
+
+    measure unit, you can specify any of (metric|imperial|si')
+
