@@ -1,0 +1,3 @@
+[console_scripts]
+osint = osint.__main__:main
+

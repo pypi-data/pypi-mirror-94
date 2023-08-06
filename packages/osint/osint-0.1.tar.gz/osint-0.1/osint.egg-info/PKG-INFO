@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: osint
+Version: 0.1
+Summary: Collection of Open Source Intelligence (OSINT) tools
+Home-page: https://github.com/qeeqbox/osint
+Author: QeeqBox
+Author-email: gigaqeeq@gmail.com
+License: AGPL-3.0
+Description: Collection of Open Source Intelligence (OSINT) tools (Comming soon..)
+Platform: UNKNOWN
+Requires-Python: >=3

@@ -1,0 +1,9 @@
+README.rst
+setup.py
+osint/__main__.py
+osint.egg-info/PKG-INFO
+osint.egg-info/SOURCES.txt
+osint.egg-info/dependency_links.txt
+osint.egg-info/entry_points.txt
+osint.egg-info/requires.txt
+osint.egg-info/top_level.txt
