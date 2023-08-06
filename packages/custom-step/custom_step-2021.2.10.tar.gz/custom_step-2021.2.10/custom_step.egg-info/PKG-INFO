@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: custom-step
+Version: 2021.2.10
+Summary: A SEAMM plug-in for custom Python scripts in a flowchart.
+Home-page: https://github.com/molssi-seamm/custom_step
+Author: Paul Saxe
+Author-email: psaxe@molssi.org
+License: BSD-3-Clause
+Description: ===========
+        Custom Step
+        ===========
+        
+        .. image:: https://img.shields.io/github/issues-pr-raw/molssi-seamm/custom_step
+           :target: https://github.com/molssi-seamm/custom_step/pulls
+           :alt: GitHub pull requests
+        
+        .. image:: https://github.com/molssi-seamm/custom_step/workflows/CI/badge.svg
+           :target: https://github.com/molssi-seamm/custom_step/actions
+           :alt: Build Status
+        
+        .. image:: https://codecov.io/gh/molssi-seamm/custom_step/branch/master/graph/badge.svg
+           :target: https://codecov.io/gh/molssi-seamm/custom_step
+           :alt: Code Coverage
+        
+        .. image:: https://img.shields.io/lgtm/grade/python/g/molssi-seamm/custom_step.svg?logo=lgtm&logoWidth=18
+           :target: https://lgtm.com/projects/g/molssi-seamm/custom_step/context:python
+           :alt: Code Quality
+        
+        .. image:: https://github.com/molssi-seamm/custom_step/workflows/Documentation/badge.svg
+           :target: https://molssi-seamm.github.io/custom_step/index.html
+           :alt: Documentation Status
+        
+        .. image:: https://pyup.io/repos/github/molssi-seamm/custom_step/shield.svg
+           :target: https://pyup.io/repos/github/molssi-seamm/custom_step/
+           :alt: Updates for Dependencies
+        
+        .. image:: https://img.shields.io/pypi/v/custom_step.svg
+           :target: https://pypi.python.org/pypi/custom_step
+           :alt: PyPi VERSION
+        
+        Description
+        -----------
+        
+        A SEAMM plug-in for custom Python scripts in a flowchart.
+        
+        This plug-in provides custom python scripting in flowcharts. The
+        scripts have access to the variables in the flowchart, and can set
+        them as well as get their values. The scripts can access all of the
+        functionality in the SEAMM framework as well as other installed Python
+        packages.
+        
+        * Free software: BSD license
+        * Documentation: https://molssi-seamm.github.io/custom_step/index.html
+        
+        Features
+        --------
+        
+        * Read and write access to flowchart variables.
+        * Access to the molecular system along with all of its methods.
+        * Access to the tables in the flowchart.
+        * Standard Python, including all installed packages.
+        
+        Credits
+        ---------
+        
+        This package was created with Cookiecutter_ and the `molssi-seamm/cookiecutter-seamm-plugin`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`molssi-seamm/cookiecutter-seamm-plugin`: https://github.com/molssi-seamm/cookiecutter-seamm-plugin
+        
+        Developed by the Molecular Sciences Software Institute (MolSSI_),
+        which receives funding from the `National Science Foundation`_ under
+        award ACI-1547580
+        
+        .. _MolSSI: https://www.molssi.org
+        .. _`National Science Foundation`: https://www.nsf.gov
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (13 February 2019)
+        ------------------------
+        
+        * First release on PyPI.
+        
+        0.7.0 (17 December 2019)
+        ------------------------
+        
+        * Fixed a bug updating the display when hitting the Cancel button.
+        
+        0.9 (15 April 2020)
+        -------------------
+        
+        * Internal changes only:
+          - Cleaned up the continuous integration scripts.
+          - Cleaned up code and setup.
+        
+        2020.12.4 (4 December 2020)
+        ---------------------------
+        
+        * Echoing the first lines of the script to Job.out to help understand
+          and document the run.
+        
+        2021.2.10 (10 Feb 2021)
+        -----------------------
+        
+        * Updated the README file to give a better description.
+        * Updated the short description in setup.py to work with the new
+          installer.
+        * Added keywords to better searchability.
+        
+Keywords: SEAMM,plug-in,flowchart,custom,python
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
+Platform: Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/x-rst
