@@ -1,0 +1,3 @@
+[console_scripts]
+mlib = mlib:main
+
