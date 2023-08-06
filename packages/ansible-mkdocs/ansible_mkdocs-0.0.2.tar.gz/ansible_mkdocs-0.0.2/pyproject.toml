@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "ansible_mkdocs"
+version = "0.0.2"
+description = "Auto-generate ansible role documentation"
+
+license = "MIT"
+
+authors = [
+    'Theo "Bob" Massard <tbobm@protonmail.com>'
+]
+
+readme = 'README.md'  # Markdown files are supported
+
+repository = "https://github.com/tbobm/ansible-mkdocs"
+homepage = "https://github.com/tbobm/ansible-mkdocs"
+
+keywords = ['ansible', 'documentation']
+
+[tool.poetry.dependencies]
+python = "^3.7"  # Compatible python versions must be declared here
+PyYAML = "^5.4.1"
+click = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+ansible-mkdocs = 'ansible_mkdocs.main:make_docs'

@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: ansible-mkdocs
+Version: 0.0.2
+Summary: Auto-generate ansible role documentation
+Home-page: https://github.com/tbobm/ansible-mkdocs
+License: MIT
+Keywords: ansible,documentation
+Author: Theo "Bob" Massard
+Author-email: tbobm@protonmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Project-URL: Repository, https://github.com/tbobm/ansible-mkdocs
+Description-Content-Type: text/markdown
+
+# ansible-document
+
+Automatically document ansible roles.
+
+## Concept
+
+Generate documentation automatically by looking up a role's content.
+
+## Usage
+
+```console
+$ ansible-mkdocs path/to/role
+# ex:
+$ ansible-mkdocs examples/install_gitlab
+name | value | location
+------|------|------
+gitlab_package_script_url | https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | vars/main.yml
+gitlab_interface | {{ ansible_default_ipv4['interface'] }} | defaults/main.yml
+gitlab_addr | {{ hostvars[inventory_hostname]['ansible_' + gitlab_interface]['ipv4']['address']  }} | defaults/main.yml
+gitlab_install | yes | defaults/main.yml
+```
+
+## How does it work?
+
+- Generate a list with modules and their values
+    - Example: copy will be used, register the mode, required, ...
+- Lookup every directory (files, tasks, vars, ...) and fetch information
+    - For every directory, generate the associated template
+- Aggregate every generated templates
+- Add metadata
+    - Has tests
+    - Has molecule
+    - Meta from meta/
+- Output markdown
+
