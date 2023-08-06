@@ -1,0 +1,894 @@
+#!python
+# Description {{{1
+"""Networth
+
+Show a summary of the networth of the specified person.
+
+Usage:
+    networth [options] [<profile>...]
+
+Options:
+    -a, --all               show all accounts, even those with zero balance
+    -c, --clear-cache       clear the prices cache
+    -d, --details           show details of account values
+    -i, --insecure          do not check certificate of prices website
+    -p, --prices            show coin and security prices
+    -P, --proxy             connect to the internet through a proxy
+    -s, --sort              sort accounts by value rather than by name
+    -u, --updated           show the account update date rather than breakdown
+    -w, --write-data        suppress text output and write data summary to file
+
+{available_profiles}
+Settings can be found in: {settings_dir}.
+
+Typically there is one file for generic settings named 'config' and then one 
+file for each profile whose name is the same as the profile name with a '.prof' 
+suffix.  Each of the files may contain any setting, but those values in 'config' 
+override those built in to the program, and those in the individual profiles 
+override those in 'config'.
+
+You can also specify an argument of the form AAA=NN where AAA is the name of 
+a security and NN is the number of shares. This amount is added to the account 
+'command line'.
+
+The prices and log files can be found in {cache_dir}.
+"""
+
+# Imports {{{1
+from appdirs import user_config_dir, user_cache_dir, user_data_dir
+from avendesora import PasswordGenerator, PasswordError
+import nestedtext as nt
+import voluptuous
+from docopt import docopt
+from inform import (
+    add_culprit, conjoin, cull, display, done, error, fatal, full_stop,
+    get_culprit, is_collection, is_mapping, is_str, join, narrate, os_error,
+    render, render_bar, terminate, warn, Color, Error, Inform,
+)
+from shlib import mkdir, to_path
+from math import log
+from operator import itemgetter
+import arrow
+import requests
+from pathlib import Path
+from quantiphy import Quantity, InvalidNumber, UnitConversion
+from quantiphy_eval import evaluate, initialize, rm_commas
+
+__version__ = "1.0.0"
+__released__ = "2021-02-13"
+
+# Settings {{{1
+# These can be overridden in ~/.config/networth/config
+prog_name = 'networth'
+config_filename = 'config'
+default_profile = None
+aliases = {}
+avendesora_fieldname = 'estimated_value'
+value_updated_subfieldname = 'updated'
+
+# define proxies {{{2
+proxies = dict(
+    # assumes socks5 proxy available on on port 9998.
+    # use this at TI because they block access to cryptocompare.
+    http='socks5://localhost:9998',
+    https='socks5://localhost:9998',
+)
+proxies = dict()
+
+# Globals {{{1
+voluptuous_error_msg_mapings = {
+    'extra keys not allowed': 'unknown key',
+}
+now = arrow.now()
+kind_to_units = dict(
+    cryptocurrency = 'tokens',
+    securities = 'shares',
+    metals = 'oz',
+)
+
+# bar settings {{{2
+screen_width = 79
+asset_color = 'green'
+debt_color = 'red'
+    # currently we only colorize the bar because ...
+    # - it is the only way of telling whether value is positive or negative
+    # - trying to colorize the value really messes with the column widths and is 
+    #     not attractive
+
+# date settings {{{2
+date_formats = [
+    'MMMM YYYY',
+    'MMM YYYY',
+    'YYYY-M-D',
+    'YYMMDD',
+]
+max_account_value_age = 120  # days
+
+
+# Utility functions and classes {{{1
+# interpret date string {{{2
+def convert_to_date(date):
+    for fmt in date_formats:
+        try:
+            return arrow.get(date, fmt)
+        except:
+            pass
+    fmts = ', '.join("'" + fmt + "'" for fmt in date_formats)
+    raise Error(
+        'misformatted date:', date,
+        codicil = f"Choose from one of the following formats: {fmts}.",
+        culprit = get_culprit()
+    )
+
+# interpret time interval {{{2
+def convert_to_seconds(interval):
+    with Quantity.prefs(ignore_sf=True):
+        return Quantity(interval, scale='s')
+    raise Error(f'misformatted interval {interval}.', culprit = get_culprit())
+
+# interpret color {{{2
+def convert_to_color(color):
+    if color in Color.COLORS:
+        return color
+    raise Error(
+        'unknown color:', color,
+        codicil = f"Choose from one of the following: {Color.COLORS}.",
+        culprit = get_culprit()
+    )
+
+# interpret path value {{{2
+def convert_to_path(v):
+    # convert to path, if relative it is relative to cwd, resolve leading ~.
+    if is_str(v):
+        return to_path(settings_dir, v)
+    raise voluptuous.Invalid(
+        'expected string that can be interpreted as path'
+    )
+
+# interpret list value {{{2
+# allows list values to be specified with a single string,
+# which it split to form the list.
+def convert_to_list(v):
+    if is_str(v):
+        return v.split()
+    if is_collection(v):
+        return v
+    raise voluptuous.Invalid(
+        'expected list or string that can be split into a list'
+    )
+
+# interpret text value {{{2
+def convert_to_str(v):
+    if is_str(v):
+        return v
+    raise voluptuous.Invalid('expected text')
+
+# interpret integer value {{{2
+def convert_to_int(v):
+    try:
+        if is_str(v):
+            return int(v)
+    except:
+        pass
+    raise voluptuous.Invalid('expected integer')
+
+# interpret dict value {{{2
+def convert_to_dict(d):
+    new = {}
+    for k, v in d.items():
+        if not is_str(k) or not is_str(v):
+            raise voluptuous.Invalid('expected dictionary of strings')
+        new[k.replace(' ', '_')] = v
+    return new
+
+def convert_keys_to_identifiers(d):
+    # allows keys to be specified as individual words, which are joined with
+    # underscores to form the identifier
+    if not is_mapping(d):
+        return d
+    return {'_'.join(k.split()):convert_keys_to_identifiers(v) for k, v in d.items()}
+
+
+# get the age of an account value {{{2
+def get_age(date):
+    if not date:
+        return None
+    then = convert_to_date(date)
+    age = now - then
+    return age.days
+
+
+# colorize text {{{2
+def colorize(value, text = None):
+    if text is None:
+        text = str(value)
+    return debt_color(text) if value < 0 else asset_color(text)
+
+# colored bar {{{2
+def colored_bar(value, width):
+    return colorize(value, render_bar(abs(value), width))
+
+# resolve_value {{{2
+# Evaluate & convert (expression, coin, security, mortgage) to final value.
+def resolve_value(key, value):
+    try:
+        value = evaluate(rm_commas(value))
+    except Exception:
+        try:
+            value = ' '.join(value.split())
+        except AttributeError:
+            pass
+
+    if key in tokens:
+        if key in prices:
+            raw_totals[key] = raw_totals.get(key, Quantity(0, key)).add(value)
+            value = Quantity(
+                float(value)*prices[key],
+                prices[key]
+            )
+            key = tokens[key]
+        else:
+            value = Quantity(value, kind_to_units.get(tokens[key], 'each'))
+    else:
+        try:
+            value = mortgage_balance(value)
+        except Error as e:
+            if e.unrecognized:
+                try:
+                    value = Quantity(value, '$')
+                except InvalidNumber as e:
+                    raise Error(str(e), culprit=get_culprit(key))
+            else:
+                e.reraise(culprit=get_culprit(key))
+    return key, value
+
+# mortgage_balance {{{2
+def mortgage_balance(description):
+    try:
+        params = dict(pair.split('=') for pair in description.split())
+        principal = Quantity(params['principal'])
+                                 # the principal
+        start = convert_to_date(params['date'])
+                                 # date for which principal was specified
+        payment = Quantity(params['payment'])
+                                 # the monthly payment
+        interest = Quantity(params['rate'])
+                                 # the interest rate in percent
+        interest = interest/100 if interest.units == '%' else interest
+        if 'share' in params:    # share of the loan that is mine (optional)
+            share = Quantity(params['share'], '%')
+            share = share/100 if share.units == '%' else share
+            principal *= share
+            payment *= share
+
+        # useful values
+        rate = interest/12       # the rate of growth per month
+        unit_growth = 1 + rate   # the normalized growth per month
+        months = (now.year - start.year) * 12 + now.month - start.month
+                                 # periods since the date of the principal
+        growth = unit_growth**months
+
+        # current balance
+        balance = principal*growth + payment*(growth - 1)/rate
+        return Quantity(balance, units='$')
+    except (AttributeError, KeyError, ValueError) as e:
+        raise Error('invalid mortgage description', unrecognized=True)
+
+# QuantiPhy Eval functions {{{2
+# median {{{3
+def median(*args):
+   args = sorted(args)
+   l = len(args)
+   m = l//2
+   if l % 2:
+       return args[m]
+   return (args[m] + args[m-1])/2
+
+# average {{{3
+def average(*args):
+   return sum(args)/len(args)
+
+# my_functions {{{3
+my_functions = dict(
+    median = median,
+    average = average,
+)
+initialize(functions=my_functions)
+
+# Dollars class {{{2
+class Dollars(Quantity):
+    units = '$'
+    form = 'fixed'
+    prec = 2
+    strip_zeros = False
+    show_commas = True
+
+
+# Data Service classes {{{1
+# DataService class {{{2
+class DataService:
+    def __init__(self, tokens, api_key=None, api_key_account=None, ttl=600):
+        self.tokens = tokens
+        if api_key:
+            self.api_key = api_key
+        elif api_key_account:
+            self.api_key = str(pw.get_value(api_key_account))
+        else:
+            self.api_key = None
+        self.ttl = ttl
+
+    def get_prices(self):
+        if not self.tokens:
+            return {}
+
+        cache_valid = False
+        prices_cache = cache_dir / self.NAME
+        if prices_cache and prices_cache.exists():
+            age = now.timestamp - prices_cache.stat().st_mtime
+            cache_valid = age < self.ttl
+        if use_caches and cache_valid:
+            narrate(f'{self.NAME} prices are current:', prices_cache)
+            contents = prices_cache.read_text()
+            return Quantity.extract(contents)
+        else:
+            # download latest asset prices from metals-api.com
+            narrate(f'updating {self.NAME} prices')
+            url, params = self.get_url()
+            try:
+                r = requests.get(url, params=params, proxies=proxies)
+                if r.status_code != requests.codes.ok:
+                    r.raise_for_status()
+            except KeyboardInterrupt:
+                done()
+            except Exception as e:
+                # must catch all exceptions as requests.get() can generate 
+                # a variety based on how it fails, and if the exception is not 
+                # caught the thread dies.
+                raise Error(f'cannot access {self.NAME} prices.', codicil=e)
+
+            # extract prices
+            try:
+                data = r.json()
+            except:
+                raise Error(f'{self.NAME} price download was garbled.')
+            prices = self.extract_prices(data)
+
+            if prices_cache:
+                contents = '\n'.join(
+                    '{} = {}'.format(k,v.fixed(prec='full'))
+                    for k,v in prices.items()
+                )
+                narrate(f'updating {self.NAME} prices:', prices_cache)
+                prices_cache.write_text(contents)
+            return prices
+
+    @classmethod
+    def services(cls):
+        for sub in cls.__subclasses__():
+            yield sub
+
+    @classmethod
+    def get_service(cls, name):
+        for sub in cls.__subclasses__():
+            if name == sub.NAME:
+                return sub
+
+
+# CryptoCompare class {{{2
+class CryptoCompare(DataService):
+    NAME = 'cryptocompare'
+
+    def get_url(self):
+        params = cull(dict(
+            fsyms = ','.join(self.tokens.keys()),   # from symbols
+            tsyms = 'USD',                          # to symbols
+            api_key = self.api_key,
+        ))
+        base_url = 'https://min-api.cryptocompare.com'
+        path = 'data/pricemulti'
+        url = '/'.join([base_url, path])
+        return url, params
+
+    def extract_prices(self, data):
+        return {k: Dollars(v['USD']) for k, v in data.items()}
+
+
+# IexCloud class {{{2
+class IexCloud(DataService):
+    NAME = 'iexcloud'
+
+    def get_url(self):
+        base_url = 'https://cloud.iexapis.com'
+        path = 'stable/stock/market/batch'
+        url = '/'.join([base_url, path])
+        if not self.api_key:
+            raise Error(f'{self.NAME} API access key not available.')
+        symbols = ','.join(self.tokens.keys())
+        params = dict(
+            #types = 'price',  # apparently price is no longer available for free tier
+            types = 'quote',
+            symbols = symbols,
+            token = self.api_key,
+        )
+        return url, params
+
+    def extract_prices(self, data):
+        try:
+            return {
+                s: Dollars(data[s]['quote']['latestPrice'])
+                for s in self.tokens.keys()
+            }
+        except KeyError as e:
+            error('not available.', culprit=(self.NAME, e))
+
+
+# MetalsAPI class {{{2
+class MetalsAPI(DataService):
+    NAME = 'metals_api'
+
+    def get_url(self):
+        base_url = 'https://metals-api.com'
+        path = 'api/latest'
+        url = '/'.join([base_url, path])
+        if not self.api_key:
+            raise Error('Metals-API.com API access key not available.')
+        params = dict(
+            access_key = self.api_key,
+            base = 'USD',
+            symbols = ','.join(self.tokens.keys())
+        )
+        return url, params
+
+    def extract_prices(self, data):
+        if not data['success']:
+            raise Error(
+                'metals-api price download failed.',
+                codicil = data['error']['info']
+            )
+        assert data['base'] == 'USD'
+        assert data['unit'] == 'per ounce'
+        assert data['rates']['USD'] == 1
+        return {
+            k: Dollars(1/float(v))
+            for k, v in data['rates'].items()
+            if k != 'USD'
+        }
+
+
+# TwelveData class {{{2
+class TwelveData(DataService):
+    NAME = 'twelve_data'
+
+    def get_url(self):
+        url = 'https://api.twelvedata.com/time_series'
+        params = dict(
+            symbol = ','.join(self.tokens.keys()),
+            outputsize = 1,
+            interval = '1min',
+            apikey = self.api_key
+        )
+        return url, params
+
+    def extract_prices(self, data):
+        # form of data changes based on whether you ask for one or many tokens
+        if len(self.tokens) == 1:
+            name = ''.join(self.tokens.keys())
+            return {name: Dollars(data['values'][0]['close'])}
+        else:
+            return {
+                name: Dollars(info['values'][0]['close'])
+                for name, info in data.items()
+            }
+
+
+# Initialization {{{1
+try:
+    settings_dir = Path(user_config_dir(prog_name))
+    cache_dir = Path(user_cache_dir(prog_name))
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    Quantity.set_prefs(prec='full', strip_radix=True)
+    inform = Inform(logfile=cache_dir / 'log')
+    display.log = False   # do not log normal output
+    estimated_value_overrides_file = None
+    UnitConversion('s', 'sec second seconds')
+    UnitConversion('s', 'm min minute minutes', 60)
+    UnitConversion('s', 'h hr hour hours', 60*60)
+    UnitConversion('s', 'd day days', 24*60*60)
+    UnitConversion('s', 'w week weeks', 7*24*60*60)
+    UnitConversion('s', 'M month months', 30*24*60*60)
+    UnitConversion('s', 'y year years', 365*24*60*60)
+
+    # define Voluptuous schema for config files {{{2
+    schema = dict(
+        aliases = {convert_to_str: convert_to_str},
+        asset_color = convert_to_color,
+        avendesora_fieldname = convert_to_str,
+        date_formats = convert_to_list,
+        debt_color = convert_to_color,
+        default_profile = convert_to_str,
+        max_account_value_age = convert_to_int,
+        screen_width = convert_to_int,
+        value_updated_subfieldname = convert_to_str,
+        estimated_value_overrides_file = convert_to_path,
+    )
+    schema.update({
+        service.NAME: dict(
+            api_key = convert_to_str,
+            api_key_account = convert_to_str,
+            ttl = convert_to_seconds,
+            tokens = convert_to_dict,
+        )
+        for service in DataService.services()
+    })
+    schema = voluptuous.Schema(schema)
+
+    # Read generic settings {{{1
+    config_filepath = Path(settings_dir, config_filename)
+    if config_filepath.exists():
+        narrate('reading:', config_filepath)
+        settings = nt.load(config_filepath, top=dict)
+        settings = convert_keys_to_identifiers(settings)
+        try:
+            settings = schema(settings)
+        except voluptuous.Invalid as e:
+            msg = voluptuous_error_msg_mapings.get(e.msg, e.msg)
+            paths = '.'.join(e.path)
+            msg = f'{paths}: {msg}'
+            raise Error(full_stop(msg), culprit=config_filepath)
+        locals().update(settings)
+        primary_settings = settings
+    else:
+        narrate('not found:', config_filepath)
+        primary_settings = {}
+    tokens = {}
+    for service in DataService.services():
+        if service.NAME in settings and 'tokens' in settings[service.NAME]:
+            tokens.update(settings[service.NAME]['tokens'])
+
+    # Read command line and process options {{{1
+    available = set(p.stem for p in settings_dir.glob('*.prof'))
+    available.add(default_profile)
+    if len(available) > 1:
+        choose_from = f'Choose from {conjoin(sorted(available))}.'
+        default = f'The default is {default_profile}.'
+        available_profiles = f'{choose_from} {default}\n'
+    else:
+        available_profiles = ''
+
+    cmdline = docopt(__doc__.format(
+        **locals()
+    ))
+    show_updated = cmdline['--updated']
+    if cmdline['--sort']:
+        sort_mode = dict(key=itemgetter(1), reverse=True)  # sort by value
+    else:
+        sort_mode = dict(key=itemgetter(0), reverse=False)  # sort by name
+    args = cmdline['<profile>']
+    extras = {}
+    profile = None
+    use_alt_fieldname = False
+    for arg in args:
+        name, _, num = arg.partition('=')
+        if num:
+            extras[name] = num
+        else:
+            if profile:
+                error('too many profile names, ignored.', culprit=arg)
+            else:
+                use_alt_fieldname = name.endswith('#')
+                profile = name.rstrip('#')
+    if not profile:
+        profile = default_profile
+    if not profile:
+        fatal(
+            'must give a profile as default profile was not specified.', 
+            choose_from, template=('{} {}', '{}'), culprit=profile
+        )
+    if profile not in available:
+        fatal(
+            'unknown profile.', choose_from, template=('{} {}', '{}'),
+            culprit = profile
+        )
+    insecure = cmdline['--insecure']
+    if insecure:
+        requests.packages.urllib3.disable_warnings()
+    use_proxy = cmdline['--proxy']
+    if not use_proxy:
+        proxies = None
+    show_prices = cmdline['--prices']
+    use_caches = not cmdline['--clear-cache']
+    show_details = cmdline['--details']
+    write_data = cmdline['--write-data']
+    inform.quiet = write_data
+
+    # Read profile settings {{{1
+    config_filepath = Path(user_config_dir(prog_name), profile + '.prof')
+    if config_filepath.exists():
+        narrate('reading:', config_filepath)
+        settings = nt.load(config_filepath, top=dict)
+        settings = convert_keys_to_identifiers(settings)
+        try:
+            settings = schema(settings)
+        except voluptuous.Invalid as e:
+            msg = voluptuous_error_msg_mapings.get(e.msg, e.msg)
+            paths = '.'.join(e.path)
+            msg = f'{paths}: {msg}'
+            raise Error(full_stop(msg), culprit=config_filepath)
+        locals().update(settings)
+        profile_settings = settings
+    else:
+        narrate('not found:', config_filepath)
+        profile_settings = {}
+
+    # Process the settings
+    date_formats = [fmt.replace('_', ' ') for fmt in date_formats]
+    asset_color = Color(asset_color, enable=Color.isTTY())
+    debt_color = Color(debt_color, enable=Color.isTTY())
+
+    # Read estimated value overrides {{{1
+    if estimated_value_overrides_file:
+        estimated_value_overrides = nt.load(estimated_value_overrides_file, top=dict)
+    else:
+        estimated_value_overrides = {}
+
+    # initialize avendesora
+    narrate('running avendesora')
+    pw = PasswordGenerator()
+
+    # Get prices from data services {{{1
+    prices = {}
+    for service in DataService.services():
+        service_settings = primary_settings.get(service.NAME)
+        if service_settings:
+            try:
+                prices.update(service(**service_settings).get_prices())
+            except Error as e:
+                e.terminate(self.service.NAME)
+        if service.NAME in profile_settings:
+            warn('must be specified in shared config file.', culprit=service.NAME)
+
+    # Build account summaries {{{1
+    totals_by_type = {}
+    totals_by_account = {}
+    raw_totals = {}
+    accounts = []
+    total_assets = Quantity(0, '$')
+    total_debt = Quantity(0, '$')
+    grand_total = Quantity(0, '$')
+    width = 0
+
+    # accounts in Avendesora {{{2
+    for account in pw.all_accounts():
+
+        # get data {{{3
+        data = None
+        if use_alt_fieldname:
+            data = account.get_composite('_' + avendesora_fieldname)
+        if not data:
+            data = estimated_value_overrides.get(account.get_name())
+        if not data:
+            data = account.get_composite(avendesora_fieldname)
+        if not data:
+            continue
+        if type(data) != dict:
+            error(
+                'expected a dictionary.',
+                culprit=(account_name, avendesora_fieldname)
+            )
+            continue
+
+        # get account name {{{3
+        account_name = account.get_name()
+        account_name = aliases.get(account_name, account_name)
+        account_name = account_name.replace('_', ' ')
+        width = max(width, len(account_name))
+
+        with add_culprit((account_name, avendesora_fieldname)):
+
+            # sum the data {{{3
+            updated = None
+            contents = {}
+            total = Quantity(0, '$')
+            odd_units = False
+            details = {}
+            keys_differ = False
+            for key, value in data.items():
+                    if key == value_updated_subfieldname:
+                        updated = value
+                        continue
+
+                    orig_key = key
+                    key, value = resolve_value(key, value)
+                    if value.units == '$':
+                        total = total.add(value)
+                    else:
+                        odd_units = True
+                    contents[key] = value.add(contents.get(key, 0))
+                    if value > 0:
+                        details[orig_key] = value
+                    if key != orig_key:
+                        keys_differ = True
+                    width = max(width, len(key))
+            if not keys_differ:
+                details = None
+
+            # add to totals
+            for k, v in contents.items():
+                k = k.replace('_', ' ')
+                totals_by_type[k] = v.add(totals_by_type.get(k, 0))
+
+            # generate the account summary {{{3
+            age = get_age(updated)
+            if age and age < 0:
+                warn('updated date in the future.', culprit=account_name)
+            if show_updated and updated:
+                desc = updated
+            else:
+                desc = ', '.join('{}={:.2}'.format(k, v) for k, v in contents.items() if v)
+                if len(contents) == 1 and not odd_units:
+                    desc = list(contents.keys())[0]
+                if not desc:
+                    desc = 'cash'
+                elif not contents:
+                    desc = 'cash'
+                if age and age > max_account_value_age:
+                    desc += f' ({age//30} months old)'
+            summary = join(
+                total, desc.replace('_', ' '),
+                #template=('{:7q} {}', '{:7q}'), remove=(None,'') ksk
+                template=('{:10,.0p} {}', '{:10,.0p}'), remove=(None,'')
+            )
+            if total or cmdline['--all']:
+                accounts.append((account_name, total, summary, details))
+
+            # sum assets and debts {{{3
+            if total > 0:
+                total_assets = total_assets.add(total)
+            else:
+                total_debt = total_debt.add(-total)
+            grand_total = grand_total.add(total)
+
+    # command-line account {{{2
+    account_name = 'command line'
+    width = max(width, len(account_name))
+
+    with add_culprit(account_name):
+        contents = {}
+        total = Quantity(0, '$')
+        details = {}
+        keys_differ = False
+
+        for orig_key, value in extras.items():
+            # sum the data {{{3
+            odd_units = False
+            key, value = resolve_value(orig_key, value)
+            if value.units == '$':
+                total = total.add(value)
+            else:
+                odd_units = True
+            if value > 0:
+                details[orig_key] = value
+            if key != orig_key:
+                keys_differ = True
+            contents[key] = value.add(contents.get(key, 0))
+            width = max(width, len(key))
+        if not keys_differ:
+            details = None
+
+        # add to totals
+        for k, v in contents.items():
+            k = k.replace('_', ' ')
+            totals_by_type[k] = v.add(totals_by_type.get(k, 0))
+
+        # generate the account summary {{{3
+        desc = ', '.join('{}={}'.format(k, v) for k, v in contents.items() if v)
+        if len(contents) == 1 and not odd_units:
+            desc = key
+        summary = join(
+            total, desc.replace('_', ' '),
+            #template=('{:7q} {}', '{:7q}'), remove=(None,'') ksk
+            template=('{:10,.0p} {}', '{:10,.0p}'), remove=(None,'')
+        )
+        if total:
+            accounts.append((account_name, total, summary, details))
+
+        # sum assets and debts {{{3
+        if total > 0:
+            total_assets = total_assets.add(total)
+        else:
+            total_debt = total_debt.add(-total)
+        grand_total = grand_total.add(total)
+
+    # Show current prices if requested {{{1
+    if show_prices:
+        fmt = dict(
+            template = (
+                '   {2:>15.3p}: {1:#,.2p}/{0}',
+                '   {0:>15}: {1:#,.2p}/{0}'
+            ),
+            remove = None,
+        )
+        if coin_prices:
+            display('Cryptocurrency Coin Prices:')
+            for k, v in coin_prices.items():
+                if k != 'USD':
+                    display(k, v, raw_totals.get(k), **fmt)
+            display()
+        if security_prices:
+            display('Security Prices:')
+            for k, v in security_prices.items():
+                display(k, v, raw_totals.get(k), **fmt)
+            display()
+        if metal_prices:
+            display('Precious Metal Prices:')
+            for k, v in metal_prices.items():
+                display(k, v, raw_totals.get(k), **fmt)
+            display()
+
+    # Summarize by account {{{1
+    display('Assets By Account:')
+    for name, total, summary, details in sorted(accounts, **sort_mode):
+        display(f'{name:>{width+2}s}: {summary}')
+        totals_by_account[name] = total
+        if show_details and details:
+            for key in details:
+                value = details[key]
+                display(f'{"":>{width+2}s}  {value:10,.0p} {key}')
+
+    # Summarize by investment type {{{1
+    display('\nAssets By Type:')
+    largest_share = max(abs(v) for v in totals_by_type.values() if v.units == '$')
+    barwidth = screen_width - width - 19
+    for asset_type in sorted(totals_by_type, key=lambda k: totals_by_type[k], reverse=True):
+        value = totals_by_type[asset_type]
+        if value.units != '$':
+            continue
+        share = value/grand_total
+        bar = colored_bar(value/largest_share, barwidth)
+        #asset_type = asset_type.replace('_', ' ')
+        #display(f'{asset_type:>{width+2}s}: {value:>7s} {share:>5.1%} {bar}')
+        display(f'{asset_type:>{width+2}s}: {value:10,.0p} {share:>5.1%} {bar}')
+    display(
+        f'\n{"TOTAL":>{width+2}s}:',
+        f'{grand_total:>7.2q} (assets = {total_assets:.2q}, debt = {total_debt:.2q})'
+    )
+
+    # Summarize non-monetary types {{{1
+    show_title = True
+    for asset_type in sorted(totals_by_type, key=lambda k: totals_by_type[k], reverse=True):
+        value = totals_by_type[asset_type]
+        if value.units == '$':
+            continue
+        asset_type = asset_type.replace('_', ' ')
+        if show_title:
+            display('\nNon Monetary Assets:')
+            show_title = False
+        display(f'{asset_type:>{width+2}s}: {value:,.0p}')
+
+    # Write data to file {{{1
+    if write_data:
+        totals_by_gross = {
+            'assets': total_assets,
+            'debt': total_debt,
+            'net': grand_total,
+        }
+        data_dir = Path(user_data_dir(prog_name))
+        mkdir(data_dir)
+        data_path = to_path(data_dir, profile).with_suffix('.nt')
+        with Quantity.prefs(form = 'fixed', prec='full'):
+            data = nt.load(data_path, top=dict) if data_path.exists() else {}
+            data[now.isoformat()] = {
+                'by account': totals_by_account,
+                'by type': totals_by_type,
+                'by gross': totals_by_gross,
+            }
+            nt.dump(data, data_path)
+
+# Handle exceptions {{{1
+except OSError as e:
+    error(os_error(e))
+except KeyboardInterrupt:
+    terminate('Killed by user.')
+except (PasswordError, nt.NestedTextError, Error) as e:
+    e.terminate()
+done()
