@@ -1,0 +1,10 @@
+revjwt/__init__.py,sha256=-TP6Lp9-5pSHKbAfLCFxFC6nmpe45oDS0Qdunc60gs4,157
+revjwt/algorithms.py,sha256=eefRfFCqRJJmVDzigJSjQ67dXgq4WEr5cFeaIMezif0,833
+revjwt/google_jwt.py,sha256=t0CU27Ck31oALMMm0zNce7JFKLel-HmrwzhzzJaJkzs,342
+revjwt/jws.py,sha256=52hGd29X4TKKMM6ud7Do08kVgra0jEl6x24T5XeNxig,2208
+revjwt/jwt.py,sha256=P9B-5swRBUJidygrF_Xv7L11ZNaxoQmBmPPzZDky2R4,3734
+revjwt/signer.py,sha256=6dWlV8nUD6mwEWhkSReCXbDJJOXiNcAIFwiT9R9lYWo,2878
+revjwt-0.0.5.dist-info/LICENSE,sha256=3Z1JKIJ-6X0L_nCosevNDuTfSsBQiyaDS6z04obZtn4,1077
+revjwt-0.0.5.dist-info/WHEEL,sha256=NLqmsx-ZFZ6gDavYgh2oH0ZSN-KRmpcdEXIZDnYy9Pg,99
+revjwt-0.0.5.dist-info/METADATA,sha256=XKI3qAzxrYe6oXsBjp5XAZ3vGhxhjcqHCLTv5mXeVGw,367
+revjwt-0.0.5.dist-info/RECORD,,
