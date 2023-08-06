@@ -1,0 +1,9 @@
+test_database/__init__.py,sha256=k2HBHSSKr-LW2vEH0p4PKJ1JCoXll4VxLBJejKHl6Zw,29
+test_database/connector.py,sha256=8SHi9Kv1xz-zjLOsP8mTaZHjkt_vSeKSHCwDW0ahVYc,1198
+test_suite/__init__.py,sha256=sO5Pxyy59xupcu_KhjozKWyTa4yDQZ75KsTgWz4nMrE,39
+test_suite/mysql_tests.py,sha256=4vLae53JWj1vMIx_TLhwpFDtl4Tqg5HourZLuELN0EE,1745
+lins_test_database_mocker-1.0.0.dist-info/LICENSE,sha256=-Nv0PD6kYOQQP7W1eAhBKMQdijslKWEin0Q2UJ9Es1c,1075
+lins_test_database_mocker-1.0.0.dist-info/METADATA,sha256=2ZPn421d2cQS2qVxEKiDNcHloawDiUqxhY4deJHcia4,904
+lins_test_database_mocker-1.0.0.dist-info/WHEEL,sha256=gm79cMopkncyn0iSnI0vQNiDJ8t9on0H4_iz-CrpXMk,92
+lins_test_database_mocker-1.0.0.dist-info/top_level.txt,sha256=pHzcmqAndzeJlCzRYMKZbB3-hrFycxY6polmDWQ8W4E,25
+lins_test_database_mocker-1.0.0.dist-info/RECORD,,
