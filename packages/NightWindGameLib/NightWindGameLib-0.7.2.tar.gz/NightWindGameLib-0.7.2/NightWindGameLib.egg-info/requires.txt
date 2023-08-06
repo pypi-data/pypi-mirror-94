@@ -1,0 +1,4 @@
+arcade>=2.5.1
+pymunk<=5.7.0
+pygame>=2.0.0
+PySide2>=5.15.2
