@@ -1,0 +1,17 @@
+muffin>=0.50
+databases>=0.4.1
+
+[mysql]
+aiomysql
+
+[postgres]
+asyncpg
+
+[sqlite]
+aiosqlite
+
+[tests]
+aiosqlite
+pytest
+pytest-asyncio
+pytest-mypy
