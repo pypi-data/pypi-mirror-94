@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        clipbit=clipbit.__main__:main
+    
