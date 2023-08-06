@@ -1,0 +1,10 @@
+dashborg/__init__.py,sha256=POkPwZnPF7zRQ7AxHsZXg2L2klT49Xg7aOWV_viPI-k,24
+dashborg/dashborg.py,sha256=iW3_v6P6v2S4pxehup8ak13311YV7RtHIsmAwmY5h2s,25120
+dashborg/dborgproto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dashborg/dborgproto/dborgproto_pb2.py,sha256=UGikHj4qafLezwhjckvs0efvLvRKO0mABdw3nmIJauw,45330
+dashborg/dborgproto/dborgproto_pb2_grpc.py,sha256=13jwyYrU9ceRX7_Ak14oYXNPX0gLqP7RrCEp3wTxgrs,7263
+dashborg_python_sdk-0.0.1.dev3.dist-info/LICENSE,sha256=i5QkJC-EsgKAVjouaPyawce0tAIXDEnfowew6Lcw-eg,1062
+dashborg_python_sdk-0.0.1.dev3.dist-info/METADATA,sha256=mkWribRe6ro7kcfBac6HD--P_pPgkCGO8iTBwl5nA3Q,4745
+dashborg_python_sdk-0.0.1.dev3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dashborg_python_sdk-0.0.1.dev3.dist-info/top_level.txt,sha256=3nxyuG3Y88wWRQFhs8A2-QtUuU51kQTrzhz9IwjNR_U,9
+dashborg_python_sdk-0.0.1.dev3.dist-info/RECORD,,
