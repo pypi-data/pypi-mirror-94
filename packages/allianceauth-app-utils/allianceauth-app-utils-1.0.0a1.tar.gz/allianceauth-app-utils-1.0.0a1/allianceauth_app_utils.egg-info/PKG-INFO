@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: allianceauth-app-utils
+Version: 1.0.0a1
+Summary: Commonly used utility functions and classes for rapid development of Alliance Auth apps.
+Home-page: https://gitlab.com/ErikKalkoken/allianceauth-app-utils
+Author: Erik Kalkoken
+Author-email: kalkoken87@gmail.com
+License: MIT
+Description: # allianceauth-app-utils
+        
+        ![release](https://img.shields.io/pypi/v/allianceauth-app-utils?label=release) ![python](https://img.shields.io/pypi/pyversions/allianceauth-app-utils) ![django](https://img.shields.io/pypi/djversions/allianceauth-app-utils?label=django) ![pipeline](https://gitlab.com/ErikKalkoken/allianceauth-app-utils/badges/master/pipeline.svg) ![coverage](https://gitlab.com/ErikKalkoken/allianceauth-app-utils/badges/master/coverage.svg) ![license](https://img.shields.io/badge/license-MIT-green) ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+        
+        Commonly used utility functions and classes for rapid development of Alliance Auth apps.
+        
+        ## Description
+        
+        This package contains a variety of commonly used utility functions and classes that help speed up development of Alliance Auth apps and reduce code duplication across apps.
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
