@@ -1,0 +1,3 @@
+[console_scripts]
+gesang-admin = gesang.bin.entry:execute_from_argv
+
