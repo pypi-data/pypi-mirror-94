@@ -1,0 +1,9 @@
+README.md
+setup.py
+django_network_conditions/__init__.py
+django_network_conditions/middleware.py
+django_network_conditions/models.py
+django_network_conditions.egg-info/PKG-INFO
+django_network_conditions.egg-info/SOURCES.txt
+django_network_conditions.egg-info/dependency_links.txt
+django_network_conditions.egg-info/top_level.txt
