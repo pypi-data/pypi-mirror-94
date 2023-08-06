@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: XamPy
+Version: 0.0.18
+Summary: A small example package
+Home-page: UNKNOWN
+Author: Max Paul
+Author-email: maxkpaul21@gmail.com
+License: UNKNOWN
+Description: # XamPy
+        Data Science Package
+        
+        
+        
+        
+        
+        
+        '''
+        python3 setup.py sdist bdist_wheel
+        python3 -m twine upload dist/*
+        '''
+        
+        
+        
+        '''
+        things to add 
+        
+        null handling
+        value search in cols
+        correlation charts
+        saving DF as a csv
+        
+        
+        '''
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
