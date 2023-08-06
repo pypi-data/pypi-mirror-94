@@ -1,0 +1,14 @@
+histoprep/__init__.py,sha256=8WLIBym_NYlu3SlCPsrvWWEklYSjiQsUYpdVHr4q6IU,87
+histoprep/_cutter.py,sha256=dCNiLIp_RHxvKVvFxgyb97V46lmthIJtoD7OYp3ZX-g,15775
+histoprep/_dearrayer.py,sha256=UcUlKcJXUlJRRJkiiG4eNBg00-U-vigvUkEa3xxHU6U,22630
+histoprep/_functional.py,sha256=A-xLaUlBUBog2qDuolf-KQcYRsw4tCD3oboq-SWpnY8,10307
+histoprep/_helpers.py,sha256=VPsRUNNlkdfIC_UCfK0YBJF1cl7vJTDhtSprJh5X58Q,1368
+histoprep/preprocess/__init__.py,sha256=Q_CYa78x36GLXMXjVrgZoohtCPbGVXwrIJbthIsi0TQ,46
+histoprep/preprocess/_utils.py,sha256=N1o9-5Kz3n5nVmsNuv_GMEf4Gzp1k3jl67UVe7utTLM,12802
+histoprep/preprocess/functional/__init__.py,sha256=Xi4XPTyc2HTbmZQIkWHCJRzQSt45HRWjekrRUTa9XyU,21
+histoprep/preprocess/functional/_utils.py,sha256=cyy7IKoNF1FOeBskEW3EdAZEgX6bkbeSshas9GRxAGo,19437
+histoprep-0.0.1.1.dist-info/LICENSE,sha256=Q-DVpv24MtiRrjyFj3wlnN4t_4zplKQUk5rO-VPhZ7A,1064
+histoprep-0.0.1.1.dist-info/METADATA,sha256=5fTM1aK0-cZAFN4FmI9_LBAIFpeTk22PU45AUyxePa4,2347
+histoprep-0.0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+histoprep-0.0.1.1.dist-info/top_level.txt,sha256=3C4GS7VvoH2PJ81QcVu3FWIMK8jGJJkmexsHhbdnOqg,10
+histoprep-0.0.1.1.dist-info/RECORD,,
