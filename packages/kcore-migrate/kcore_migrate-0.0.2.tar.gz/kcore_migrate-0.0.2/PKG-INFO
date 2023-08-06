@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kcore_migrate
+Version: 0.0.2
+Summary: migration management system for python
+Home-page: UNKNOWN
+Author: Arun Tigeraniya
+Author-email: tigeraniya@gmail.com
+License: UNKNOWN
+Description: # migrate
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
