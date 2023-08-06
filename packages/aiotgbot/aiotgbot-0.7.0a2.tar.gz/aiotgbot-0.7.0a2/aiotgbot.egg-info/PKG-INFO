@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: aiotgbot
+Version: 0.7.0a2
+Summary: Asynchronous library for Telegram bot API
+Home-page: https://github.com/gleb-chipiga/aiotgbot
+Author: Gleb Chipiga
+License: MIT
+Description: About
+        =====
+        Asynchronous library for Telegram bot API.
+        
+        Installation
+        ============
+        aiotgbot requires Python 3.8 or greater and is available on PyPI. Use pip to install it:
+        
+        .. code-block:: bash
+        
+            pip install aiotgbot
+        
+        Using aiotgbot
+        ==================
+        
+        .. code-block:: python
+        
+            from typing import AsyncIterator
+        
+            from aiotgbot import (Bot, BotUpdate, HandlerTable, PollBot,
+                                  PrivateChatFilter, Runner)
+            from aiotgbot.storage_memory import MemoryStorage
+        
+            handlers = HandlerTable()
+        
+        
+            @handlers.message(filters=[PrivateChatFilter()])
+            async def reply_private_message(bot: Bot, update: BotUpdate) -> None:
+                assert update.message is not None
+                name = (f'{update.message.chat.first_name} '
+                        f'{update.message.chat.last_name}')
+                await bot.send_message(update.message.chat.id, f'Hello, {name}!')
+        
+        
+            async def run_context(runner: Runner) -> AsyncIterator[None]:
+                storage = MemoryStorage()
+                await storage.connect()
+                handlers.freeze()
+                bot = PollBot(runner['token'], handlers, storage)
+                await bot.start()
+        
+                yield
+        
+                await bot.stop()
+                await storage.close()
+        
+        
+            def main() -> None:
+                runner = Runner(run_context)
+                runner['token'] = 'some:token'
+                runner.run()
+        
+        
+            if __name__ == '__main__':
+                main()
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Internet
+Classifier: Topic :: Communications :: Chat
+Classifier: Framework :: AsyncIO
+Requires-Python: >=3.8,<3.10
+Description-Content-Type: text/x-rst
+Provides-Extra: sqlite
