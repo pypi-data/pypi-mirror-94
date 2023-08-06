@@ -1,0 +1,15 @@
+README.md
+setup.py
+raffiot/__init__.py
+raffiot/io.py
+raffiot/resource.py
+raffiot/result.py
+raffiot.egg-info/PKG-INFO
+raffiot.egg-info/SOURCES.txt
+raffiot.egg-info/dependency_links.txt
+raffiot.egg-info/requires.txt
+raffiot.egg-info/top_level.txt
+raffiot/untyped/__init__.py
+raffiot/untyped/io.py
+raffiot/untyped/resource.py
+raffiot/untyped/result.py
