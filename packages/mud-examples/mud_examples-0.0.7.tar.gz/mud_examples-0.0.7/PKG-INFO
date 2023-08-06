@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mud_examples
+Version: 0.0.7
+Summary: Maximal Updated Density Examples
+Home-page: https://github.com/mathematicalmichael/mud-examples.git
+Author: Mathematical Michael
+Author-email: consistentbayes@gmail.com
+License: mit
+Project-URL: Documentation, https://pyscaffold.org/
+Description: # Examples for _Existence, Uniqueness, and Convergence of Parameter Estimates with Maximal Updated Densities_
+        
+        Authors: Troy Butler & Michael Pilosov
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Provides-Extra: pub
+Provides-Extra: test
