@@ -1,0 +1,15 @@
+README.rst
+setup.cfg
+setup.py
+shetar/__init__.py
+shetar/_version.py
+shetar/bases.py
+shetar/coordinates.py
+shetar/expansions.py
+shetar/rotations.py
+shetar/translations.py
+shetar.egg-info/PKG-INFO
+shetar.egg-info/SOURCES.txt
+shetar.egg-info/dependency_links.txt
+shetar.egg-info/requires.txt
+shetar.egg-info/top_level.txt
