@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: spidriver
+Version: 1.0.0
+Summary: SPIDriver is a desktop SPI interface
+Home-page: https://spidriver.com
+Author: James Bowman
+Author-email: jamesb@excamera.com
+License: GPL
+Project-URL: Documentation, https://spidriver.readthedocs.io/en/latest/
+Description: SPIDriver is a tool for controlling any SPI device from your PC's USB port. It connects as a standard USB serial device, so there are no drivers to install.
+Platform: UNKNOWN
