@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: gmx-MMPBSA
+Version: 1.3.0
+Summary: gmx_MMPBSA is a new tool aid to perform end-state free energycalculations with GROMACS files.
+Home-page: https://github.com/Valdes-Tresanco-MS/gmx_MMPBSA
+Author: Mario S. Valdes-Trasanco and Mario E. Valdes-Tresanco 
+Author-email: mariosergiovaldes145@gmail.com
+Maintainer: Mario S. Valdes-Trasanco
+Maintainer-email: mariosergiovaldes145@gmail.com
+License: GPLv3
+Description: [![pypi](https://img.shields.io/pypi/v/gmx-MMPBSA)](https://pypi.org/project/gmx-MMPBSA/)
+        [![support](https://img.shields.io/badge/support-JetBrains-brightgreen)](https://www.jetbrains.com/?from=gmx_MMPBSA)
+        [![python](https://img.shields.io/badge/python-v3.x-blue)]()
+        
+        Welcome to gmx_MMPBSA!
+        
+        
+        Please see the documentation [here](https://valdes-tresanco-ms.github.io/gmx_MMPBSA/)
+Keywords: gmx_MMPBSA,MMPBSA,MMGBSA,GROMACS,AmberTools
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
