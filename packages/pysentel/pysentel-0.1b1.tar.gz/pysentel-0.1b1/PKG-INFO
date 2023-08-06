@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: pysentel
+Version: 0.1b1
+Summary: A python script for fetching 1-wire sensor-data and ingesting into InfluxDB.
+Home-page: https://github.com/danniranderis/pysentel
+Author: Danni Randeris
+Author-email: danni@danniranderis.dk
+Maintainer: Danni Randeris
+Maintainer-email: danni@danniranderis.dk
+License: MIT
+Download-URL: https://github.com/danniranderis/pysentel
+Description: # pysentel
+        > A python script for fetching 1-wire sensor-data and ingesting in InfluxDB.
+        
+        
+        Python script fetching sensor-data from e.g. DS18B20-sensors via the 1-wire protocol and ingest these datapoints into a specified InfluxDB-bucket.
+        
+        
+        ## Installation
+        _Work-in-progress._
+        
+        
+        ## Usage example
+        _Work-in-progress._
+        
+        
+        ## Development setup
+        _Work-in-progress._
+        
+        
+        ## Release History
+        - no releases yet.
+        
+        ## Meta
+        
+        Danni Randeris - danni@danniranderis.dk
+        
+        Distributed under the MIT license. See ``LICENSE`` for more information.
+        
+        [https://github.com/danniranderis](https://github.com/danniranderis)
+        
+        
+        ## Contributing
+        
+        1. Fork it (<https://github.com/yourname/yourproject/fork>)
+        2. Create your feature branch (`git checkout -b feature/fooBar`)
+        3. Commit your changes (`git commit -am 'Add some fooBar'`)
+        4. Push to the branch (`git push origin feature/fooBar`)
+        5. Create a new Pull Request
+Keywords: 1-wire,ds18b20,influxdb
+Platform: Linux
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
