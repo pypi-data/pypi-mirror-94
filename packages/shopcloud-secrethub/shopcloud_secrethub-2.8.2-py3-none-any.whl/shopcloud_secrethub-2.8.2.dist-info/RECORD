@@ -1,0 +1,11 @@
+shopcloud_secrethub/__init__.py,sha256=bqb7MIBsfFzo_kdBWJSCrYZxzgmzpy2GZJnrdPE71cI,18
+shopcloud_secrethub/__main__.py,sha256=BcKDay-t_kttZMd8ImPw2LLuVPANujsgCAxenU_5V9k,1517
+shopcloud_secrethub/app.py,sha256=Vxa3RTrHRcDKvkuUrpj46xIHR-wyvzIZaGp1ZTTZ8n0,3395
+shopcloud_secrethub/cli.py,sha256=KnxvyUZhxIoSbMqePI_sqOEuRxNZr9I43CQlO6Vvz0E,2577
+shopcloud_secrethub/test_cli.py,sha256=wSSuz91AX0sRdJD6rbszjgFqEn9gEdnAPiJT_jQpsS8,73
+shopcloud_secrethub-2.8.2.data/scripts/secrethub,sha256=J2jenYoswQCH2VhNLaFTPOxpukxv2m6SJLqoWUwbfbw,124
+shopcloud_secrethub-2.8.2.dist-info/LICENSE.txt,sha256=nxHgQa263Pl5ruFfvEG9MhpoTqv1S0B0o5k2E1rDoBI,1072
+shopcloud_secrethub-2.8.2.dist-info/METADATA,sha256=AfZJLrGlEXNSOBRJvErPQGVNgoz9EE0VejbyFrUzLno,1439
+shopcloud_secrethub-2.8.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+shopcloud_secrethub-2.8.2.dist-info/top_level.txt,sha256=ASTwEi9Dse8-BxS1AKEFgL5eJ3cehaz3FFzJqMrutcA,20
+shopcloud_secrethub-2.8.2.dist-info/RECORD,,
