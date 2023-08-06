@@ -1,0 +1,14 @@
+.DS_Store
+pycecream/.DS_Store
+pycecream_test/.DS_Store
+.idea
+.idea/
+.idea/workspace
+*venv*
+*scratch_*
+*simulation_files*
+*output_2020*
+*.pickle
+*simulation_dir*
+.idea
+*.pdf
