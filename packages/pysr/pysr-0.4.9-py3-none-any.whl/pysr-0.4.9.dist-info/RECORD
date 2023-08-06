@@ -1,0 +1,10 @@
+Project.toml,sha256=sUPWPft_P_I9EVr2DjnYyUNZMcpBiaHmf4PDi6zXEi4,126
+datasets/FeynmanEquations.csv,sha256=mI3K10l8D88qshOXBaox-iB3q7Io5LrU8A4ZR4eMxM4,9433
+pysr/__init__.py,sha256=caY7WL3nUSZLnlOpGTOiigU03sVdMpu3vhOeI3aDokI,125
+pysr/feynman_problems.py,sha256=VJt62YD9Udwm4PxqzIzAFOMEpXFWfvi9tjAt9lYovNU,5835
+pysr/sr.py,sha256=KDfn3dDv0r9FAhD7FG_3JYGBEcJUo9nIycdNYgYkD6I,29527
+pysr-0.4.9.dist-info/LICENSE,sha256=VkI5c6YZGF9Jj4u8ItxwJubUCtICpJu4ch7AnDVfJ6A,11343
+pysr-0.4.9.dist-info/METADATA,sha256=0vNa0KALNiq5xCVi6pXmq3YdrHPPp74godTtG-CVGRk,4154
+pysr-0.4.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pysr-0.4.9.dist-info/top_level.txt,sha256=CPwbZpeiyqySY1MooFO7qo98l-ABLkA-TrXued1z8Ew,5
+pysr-0.4.9.dist-info/RECORD,,
