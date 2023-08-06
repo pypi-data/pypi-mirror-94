@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: GooseSLURM
+Version: 0.3.1
+Summary: Support functions for SLURM
+Home-page: https://github.com/tdegeus/GooseSLURM
+Author: Tom de Geus
+Author-email: tom@geus.me
+License: MIT
+Keywords: SLURM
+Platform: UNKNOWN
+Requires-Dist: docopt (>=0.6.2)
+Requires-Dist: click (>=4.0)
+
+Support functions for SLURM
+
+
