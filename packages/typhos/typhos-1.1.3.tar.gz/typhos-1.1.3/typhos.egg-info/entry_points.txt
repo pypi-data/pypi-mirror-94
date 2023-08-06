@@ -1,0 +1,3 @@
+[console_scripts]
+typhos = typhos.cli:main
+
