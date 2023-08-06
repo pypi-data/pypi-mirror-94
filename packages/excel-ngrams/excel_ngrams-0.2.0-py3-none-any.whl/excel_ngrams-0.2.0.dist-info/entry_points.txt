@@ -1,0 +1,3 @@
+[console_scripts]
+excel-ngrams=excel_ngrams.console:main
+
