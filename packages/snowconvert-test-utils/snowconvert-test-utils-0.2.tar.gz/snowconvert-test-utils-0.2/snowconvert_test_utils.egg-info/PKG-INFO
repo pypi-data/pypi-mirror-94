@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: snowconvert-test-utils
+Version: 0.2
+Summary: Adds some helper functions to make testing python modules easier
+Home-page: https://github.com/orellabac/snowconvert-test-utils
+Author: Mauricio Rojas
+Author-email: mauricio.rojas@mobilize.net
+License: MIT
+Description: # Helpers for Testing Snowflake Python Scripts
+        
+        Python can help to create amazing python scripts.
+        
+        Overtime you can come up with a very large collection of scripts.
+        
+        This library provides some simple helper functions to make testing those scripts even easier.
+        
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
