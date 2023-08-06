@@ -1,0 +1,9 @@
+socketcan/__init__.py,sha256=b4sVZbCSfXripramQk6o8Y7iEVXk5DWfHVKzvLVy9AA,117
+socketcan/socketcan.py,sha256=sQHTprNDwbsnipT0x7KdXnhSYsnbK5_b8gbM6gHvvW0,10222
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_socketcan.py,sha256=s-RLVdP_igEdjtnLSAkxl5bt1rhsrpIa5qaWdG1rcyc,13665
+socketcan-0.1.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+socketcan-0.1.0.dist-info/METADATA,sha256=upjqG4Ymsa3Lvcbr7_pV2s1dtITqetV2Avy7fd8Y01s,5915
+socketcan-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+socketcan-0.1.0.dist-info/top_level.txt,sha256=Jf5rl2DNVi_g1OmWywdN_KvnWXGlnWOzadk2Y5r9wDs,16
+socketcan-0.1.0.dist-info/RECORD,,
