@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/maagnar/__init__.py
+src/maagnar/entry_point.py
+src/maagnar/lib.py
+src/maagnar.egg-info/PKG-INFO
+src/maagnar.egg-info/SOURCES.txt
+src/maagnar.egg-info/dependency_links.txt
+src/maagnar.egg-info/entry_points.txt
+src/maagnar.egg-info/requires.txt
+src/maagnar.egg-info/top_level.txt
