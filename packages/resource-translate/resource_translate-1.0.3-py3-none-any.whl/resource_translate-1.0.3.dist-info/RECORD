@@ -1,0 +1,11 @@
+resource_translate/__init__.py,sha256=uCaDTbPZpd7dEf_yvEXhpZjxX17qaXhuSICRqpaoFLA,3853
+resource_translate/utils.py,sha256=lB_ExK__2oi7wcxFa-uhtHElApkxntQxupse_H4dwq4,269
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/mocks.py,sha256=5xvSnmzk5h91A3-fuvVgY4LfuCprdH9aU8LlnbfH0wk,1328
+tests/resources.py,sha256=YtnZ072O29EswPAeFZppt5Ul8WDMzeFfR6CV0_5RHIQ,1468
+tests/test_src.py,sha256=OJgU0L10L6gymJFjz7ux74e3Prke7HqeFpuWyW_m7O4,1335
+resource_translate-1.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+resource_translate-1.0.3.dist-info/METADATA,sha256=g5V8Zdnoci0aua8osOJvcu0CadmOYsWaneOVVwjBDU4,707
+resource_translate-1.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+resource_translate-1.0.3.dist-info/top_level.txt,sha256=wYWaLAVXct4Eti1F8hvoV275M6QhT50z4vtmDbxX8eo,25
+resource_translate-1.0.3.dist-info/RECORD,,

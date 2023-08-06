@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: resource-translate
+Version: 1.0.3
+Summary: Utilities to translate resources between platforms.
+Home-page: https://github.com/austinbravodev/resource_translate
+Author: Austin Bravo
+Author-email: austinbravo@hey.com
+License: Apache 2.0
+Keywords: API,integration,resources,translation
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Resource Translate
+Utilities to translate resources between platforms.
+
+---
+
+For more information, see [GitHub](https://github.com/austinbravodev/resource_translate).
+
