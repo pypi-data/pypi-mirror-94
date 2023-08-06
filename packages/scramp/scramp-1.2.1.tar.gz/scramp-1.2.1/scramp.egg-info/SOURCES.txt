@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.adoc
+setup.cfg
+setup.py
+versioneer.py
+scramp/__init__.py
+scramp/_version.py
+scramp/core.py
+scramp/utils.py
+scramp.egg-info/PKG-INFO
+scramp.egg-info/SOURCES.txt
+scramp.egg-info/dependency_links.txt
+scramp.egg-info/requires.txt
+scramp.egg-info/top_level.txt
+test/test_scramp.py
