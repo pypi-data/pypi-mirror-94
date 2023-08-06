@@ -1,0 +1,4 @@
+[console_scripts]
+decofre-infer = decofre.infer:main_entry_point
+decofre-train = decofre.main:main_entry_point
+
