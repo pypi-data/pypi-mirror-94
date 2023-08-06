@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: webscrapingjordi
+Version: 1.0.0
+Summary: Download images and paragraphs from a webpage
+Home-page: https://github.com/jordicam/web-scraping
+Author: Jordi Camacho
+Author-email: jordicamacho88@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

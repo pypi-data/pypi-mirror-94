@@ -1,0 +1,14 @@
+README.md
+setup.py
+tests/__init__.py
+tests/test_general.py
+tests/utilities.py
+webscraping/__init__.py
+webscraping/main.py
+webscraping/utilities/__init__.py
+webscraping/utilities/utility.py
+webscrapingjordi.egg-info/PKG-INFO
+webscrapingjordi.egg-info/SOURCES.txt
+webscrapingjordi.egg-info/dependency_links.txt
+webscrapingjordi.egg-info/requires.txt
+webscrapingjordi.egg-info/top_level.txt
