@@ -1,0 +1,9 @@
+metagenompy/__init__.py,sha256=5s9lNCgFfb7Ogath6GZK7JwZGSY7-luLuis11QvkDJE,319
+metagenompy/data.py,sha256=QZWJ0eM6SrR1E9q63keB8rZDNOQlsPLKvvmJui6PSX4,239
+metagenompy/example_data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metagenompy/example_data/blast_result.csv.gz,sha256=KJYzGcDr8fkAbDm5F3O_92ZRJZT7COUTK5RFt798tRQ,4923
+metagenompy/taxonomy.py,sha256=tn1svpfdHi_y1p7v915Jhz7YbzXtbVGfZciboH96Nro,6155
+metagenompy/visualization.py,sha256=ZX4LdRdk2L80V-OnnotEflXepEoCV1Blbp7sFEhb_MQ,6007
+metagenompy-0.4.4.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+metagenompy-0.4.4.dist-info/METADATA,sha256=xwRdAicG8mK67jpqr88HitrmiLpoHHlh3AKy5_Kq7Zg,4941
+metagenompy-0.4.4.dist-info/RECORD,,
