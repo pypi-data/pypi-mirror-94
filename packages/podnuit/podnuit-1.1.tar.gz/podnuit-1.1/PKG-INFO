@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: podnuit
+Version: 1.1
+Summary: Loup-garou pas de nuit
+Home-page: https://github.com/gregorpatof/podnuit
+Author: Olivier Mailhot
+License: UNKNOWN
+Description: # podnuit
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
