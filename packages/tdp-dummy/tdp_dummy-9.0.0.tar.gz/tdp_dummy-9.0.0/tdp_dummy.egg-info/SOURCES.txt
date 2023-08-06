@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+tdp_dummy/__init__.py
+tdp_dummy/config.json
+tdp_dummy/sql.py
+tdp_dummy.egg-info/PKG-INFO
+tdp_dummy.egg-info/SOURCES.txt
+tdp_dummy.egg-info/dependency_links.txt
+tdp_dummy.egg-info/entry_points.txt
+tdp_dummy.egg-info/not-zip-safe
+tdp_dummy.egg-info/requires.txt
+tdp_dummy.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+[phovea.config]
+tdp_dummy = tdp_dummy:phovea_config
+
+[phovea.registry]
+tdp_dummy = tdp_dummy:phovea
+
