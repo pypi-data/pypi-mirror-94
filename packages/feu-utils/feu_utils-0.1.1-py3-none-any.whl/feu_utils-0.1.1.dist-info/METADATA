@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: feu-utils
+Version: 0.1.1
+Summary: A set of common utilities used by Inmarsat FieldEdge Ultralite
+License: Apache 2.0
+Author: G.Bruce-Payne
+Author-email: geoff.bruce-payne@inmarsat.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: paho-mqtt (>=1.5.1,<2.0.0)
