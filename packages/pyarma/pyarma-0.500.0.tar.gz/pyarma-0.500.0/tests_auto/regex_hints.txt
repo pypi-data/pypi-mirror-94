@@ -1,0 +1,59 @@
+REQUIRE\( (.+)\((.+)\) == Approx\((.+)\) \)
+
+assert math.isclose($1[$2], $3) == True
+
+TEST_CASE\("(.+)"\)
+
+def test_$1():
+
+fill::
+pa.fill.
+
+mat (.)
+$1 = pa.mat
+
+REQUIRE\([\s]*(.+) == Approx\(.+\).epsilon\((.+)\)[\s]*\)
+
+assert math.isclose($1, $2, abs_tol=$3) == True
+
+REQUIRE\([\s]*(.+) == Approx\((.+)\)[\s]*\)
+
+assert math.isclose($1, $2) == True
+
+# indexing
+([A-Z])\(([0-9]),([0-9])\)
+$1[$2,$3]
+
+# Spans
+span\(([0-9]+),([0-9]+)\)
+
+$1:$2
+
+# Head/tail rows/columns
+.(head|tail)_(rows|cols)\(([0-9]+)\)
+
+[pa.$1_$2, $3]
+
+# Columns
+.col\(([0-9]+)\)
+[:, $1]
+
+# Rows
+.row\(([0-9]+)\)
+[$1, :]
+
+# Main diagonals
+.diag\(\)
+[diag]
+
+# Submat (imperfect)
+.submat\((.+), (.+), (.+), (.+)\)
+[$1:$3, $2:$4]
+
+# many rows
+.rows\((.+), (.+)\).
+[$1:$2, :].
+
+# many cols
+.cols\((.+), (.+)\).
+[:, $1:$2].

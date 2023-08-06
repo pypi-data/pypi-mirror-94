@@ -1,0 +1,15 @@
+include *
+graft doc
+graft include
+graft ext
+graft src
+graft tests_auto
+graft tests_doc
+graft CMake
+exclude .travis.yml
+exclude appveyor.yml
+exclude .gitignore
+exclude build.sh
+exclude .git
+exclude doc/paper.bib
+exclude doc/paper.md

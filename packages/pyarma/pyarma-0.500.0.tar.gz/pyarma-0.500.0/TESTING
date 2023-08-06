@@ -1,0 +1,8 @@
+Testing of PyArmadillo's functionality can be done by running the examples in the documentation (doc/docs.html)
+or by running any of the Python scripts in /tests_doc.
+
+Each script in /tests_doc runs each example listed in the documentation using various matrix types.
+
+There is also an example program (example.py) that can serve as a 'smoke test'.
+
+There are some test scripts written in /tests_auto that work using pytest. The scripts test a subset of PyArmadillo functionality.
