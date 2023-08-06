@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+CRRD/__init__.py
+CRRD/decoder.py
+CRRD/defs.py
+CRRD/package.py
+CRRD/trainno.py
+CRRD/utils.py
+CRRD.egg-info/PKG-INFO
+CRRD.egg-info/SOURCES.txt
+CRRD.egg-info/dependency_links.txt
+CRRD.egg-info/top_level.txt
