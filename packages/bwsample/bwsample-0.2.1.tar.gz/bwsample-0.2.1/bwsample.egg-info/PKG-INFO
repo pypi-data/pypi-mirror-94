@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: bwsample
+Version: 0.2.1
+Summary: Sampling algorithm for best-worst scaling sets.
+Home-page: http://github.com/ulf1/bwsample
+Author: Ulf Hamster
+Author-email: 554c46@gmail.com
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
