@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+bin/halfling
+halfling/__init__.py
+halfling/compile.py
+halfling/config.py
+halfling/exceptions.py
+halfling/main.py
+halfling/tasks.py
+halfling.egg-info/PKG-INFO
+halfling.egg-info/SOURCES.txt
+halfling.egg-info/dependency_links.txt
+halfling.egg-info/requires.txt
+halfling.egg-info/top_level.txt
+test/test_build.py
