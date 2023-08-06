@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: smat
+Version: 0.1.0
+Summary: Description of the package
+Home-page: https://github.com/nwithan8/SMAT-API
+Author: Nate Harris
+Author-email: n8gr8gbln@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Download-URL: https://github.com/nwithan8/SMAT-API/archive/0.1.0.tar.gz
+Keywords: SMAT,analysis,social media,tool,online,API
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic
+Requires-Dist: requests
+
+# SMAT
+A Python API wrapper for the [Social Media Analysis Toolkit](https://www.smat-app.com/timeline)
+
+# Installation:
+- Clone this repo with ``git clone https://github.com/nwithan8/SMAT-API.git``
+- Import into your project with ``from smat import API``
+
+# Usage:
+This library currently supports the three main methods of [SMAT's API](https://api.smat-app.com/docs#):
+
+- ``get_content``: Get a list of posts from a specific outlet
+- ``get_activity``: Aggregate based on a particular field on a specific outlet
+- ``get_time_series``: Get a time series for a specific outlet
+
+- ``term`` is a required parameter for each field. All other parameters are optional or have preset defaults.
+- Default outlet is ``reddit``
+
+Docs and PyPi package coming soon. PRs welcome.
+
+
