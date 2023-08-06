@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+cannon/__init__.py
+cannon/main.py
+cannon.egg-info/PKG-INFO
+cannon.egg-info/SOURCES.txt
+cannon.egg-info/dependency_links.txt
+cannon.egg-info/not-zip-safe
+cannon.egg-info/requires.txt
+cannon.egg-info/top_level.txt
