@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: piston-cli
+Version: 1.1
+Summary: A cli tool with an terminal editor to compile over 35 languages instantly using the piston api.
+Home-page: https://github.com/Shivansh-007/piston-cli
+Author: Shivansh-007
+License: MIT
+Description: # piston-cli
+Keywords: piston compiler cli compile run
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
