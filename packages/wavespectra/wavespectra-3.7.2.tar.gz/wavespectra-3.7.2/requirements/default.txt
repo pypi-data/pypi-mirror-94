@@ -1,0 +1,15 @@
+click
+cmocean
+dask
+gcsfs
+fsspec
+matplotlib
+numpy
+pandas
+python-dateutil
+pyyaml
+sortedcontainers
+scipy
+toolz
+xarray
+zarr
