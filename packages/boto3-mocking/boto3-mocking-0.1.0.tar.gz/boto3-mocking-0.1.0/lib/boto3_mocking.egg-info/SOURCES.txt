@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+lib/boto3_mocking/__init__.py
+lib/boto3_mocking/version.py
+lib/boto3_mocking.egg-info/PKG-INFO
+lib/boto3_mocking.egg-info/SOURCES.txt
+lib/boto3_mocking.egg-info/dependency_links.txt
+lib/boto3_mocking.egg-info/requires.txt
+lib/boto3_mocking.egg-info/top_level.txt
