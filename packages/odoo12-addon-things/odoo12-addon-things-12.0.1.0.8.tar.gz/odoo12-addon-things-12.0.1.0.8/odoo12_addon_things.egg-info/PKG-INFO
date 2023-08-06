@@ -1,0 +1,61 @@
+Metadata-Version: 1.2
+Name: odoo12-addon-things
+Version: 12.0.1.0.8
+Summary: Manage your Gateways and connect to your net of sensors and devices
+Home-page: http://www.thingsintouch.com
+Author: thingsintouch.com
+License: AGPL-3
+Description: ===================================================
+        Gate - Connect your Sensors and Actuators with Odoo
+        ===================================================
+        
+        This module GATE
+        
+        **Table of contents**
+        
+        .. contents::
+           :local:
+        
+        Configuration
+        =============
+        
+        T GATE GAte
+        
+        Usage
+        =====
+        
+        #. number 1 item
+        #. number 2 
+        
+        Bug Tracker
+        ===========
+        
+        Bugs are tracked on `GitHub Issues <https://github.com/thingsintouch/attendance/issues>`_.
+        In case of trouble, please check there if your issue has already been reported.
+        If you spotted it first, help us smashing it by providing a detailed and welcomed feedback.
+        Do not contact contributors directly about support or help with technical issues.
+        
+        Credits
+        =======
+        
+        Authors
+        ~~~~~~~
+        
+        * thingsintouch.com
+        
+        Contributors
+        ~~~~~~~~~~~~
+        
+        * Luis Burrel <luis.burrel@thingsintouch.com>
+        
+        Maintainers
+        ~~~~~~~~~~~
+        
+        This module is maintained by thingsintouch.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: >=3.5
