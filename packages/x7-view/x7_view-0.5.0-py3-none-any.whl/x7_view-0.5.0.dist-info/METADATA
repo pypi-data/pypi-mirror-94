@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: x7-view
+Version: 0.5.0
+Summary: X7 Extensible editor for X7 Elems
+Home-page: https://github.com/gribbg/x7-view
+Author: Glenn Gribble
+Author-email: dev@gribbelus.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: x7-geom
+Requires-Dist: x7-lib
+Requires-Dist: screeninfo
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: flake8 ; extra == 'tests'
+Requires-Dist: mypy ; extra == 'tests'
+
+X7 View
+=======
+
+An extensible viewer/editor for X7 geom Elems.
+
+
