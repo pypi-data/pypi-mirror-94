@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: Radium-Tech
+Version: 0.0.0
+Summary: Intuitive backtesting for quantitative trading strategies.
+Home-page: https://github.com/CallumRai/Radium-Tech
+Author: Callum Rai, Ivan Erlic
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: statsmodels
+Requires-Dist: datetime
+Requires-Dist: requests
+
+# Radium
+
+TBC
+
+
