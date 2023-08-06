@@ -1,0 +1,13 @@
+COPYING
+CloseableQueue.py
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+CloseableQueue_py3.egg-info/PKG-INFO
+CloseableQueue_py3.egg-info/SOURCES.txt
+CloseableQueue_py3.egg-info/dependency_links.txt
+CloseableQueue_py3.egg-info/top_level.txt
+test/__init__.py
+test/test_queue.py
+test/test_support.py
