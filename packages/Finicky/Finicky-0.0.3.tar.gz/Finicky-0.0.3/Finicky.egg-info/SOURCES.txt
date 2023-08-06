@@ -1,0 +1,9 @@
+setup.py
+Finicky.egg-info/PKG-INFO
+Finicky.egg-info/SOURCES.txt
+Finicky.egg-info/dependency_links.txt
+Finicky.egg-info/entry_points.txt
+Finicky.egg-info/top_level.txt
+finicky/__init__.py
+finicky/schema.py
+finicky/validators.py
