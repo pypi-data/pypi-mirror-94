@@ -1,0 +1,3 @@
+[console_scripts]
+pleasant-cli = pypleasant.cli:main
+
