@@ -1,0 +1,3 @@
+[console_scripts]
+cc_models_cli = rcsb.ccmodels.search.ChemCompModelExec:main
+
