@@ -1,0 +1,12 @@
+arboreto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+arboreto/algo.py,sha256=rSpHvqIkNBXEyEEalWZV2nLFyhfp5zR3LFAGpCrG9gM,9518
+arboreto/core.py,sha256=ftPMXXyFJlcg3qUzKGfD0A_zwkzCxOjzexgO9j7J910,20280
+arboreto/utils.py,sha256=Ub77EAs8bew3CWyOKDsNYH9TeMbZuzGfwj9F-vjNoSM,325
+tests/__init__.py,sha256=u8rAsNRgfaTMjXjgLWeDdnmgQ5iTQphQYO1Fe4UprWU,106
+tests/test_algo.py,sha256=erORxLQFfBi7qkwkcd2yNtH5FLGbbMwmNGRScL0u69k,3301
+tests/test_core.py,sha256=J4BBdZjA1jbrKDNx9v6RQ9W3J0sd1p55-zULeF6syHU,9668
+arboreto-0.1.6.dist-info/LICENSE.txt,sha256=F2dxX5SNa1qSyvEIl-HZOnGn2k-uBrDPjXnh341NeGQ,1514
+arboreto-0.1.6.dist-info/METADATA,sha256=1Mqh-s6X5EJDkFYXQqt0TU3vFLrynRRk_gsRWks73ZY,5387
+arboreto-0.1.6.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+arboreto-0.1.6.dist-info/top_level.txt,sha256=DT5t-syvZdS9Ow4jLJ00NcRqYGJrTbtm6y_NCJQDBwo,15
+arboreto-0.1.6.dist-info/RECORD,,
