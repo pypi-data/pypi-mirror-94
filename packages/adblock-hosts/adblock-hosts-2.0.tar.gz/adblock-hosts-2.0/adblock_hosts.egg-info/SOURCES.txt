@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+adblock.conf
+setup.py
+adblock/__init__.py
+adblock_hosts.egg-info/PKG-INFO
+adblock_hosts.egg-info/SOURCES.txt
+adblock_hosts.egg-info/dependency_links.txt
+adblock_hosts.egg-info/entry_points.txt
+adblock_hosts.egg-info/requires.txt
+adblock_hosts.egg-info/top_level.txt
