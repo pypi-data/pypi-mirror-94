@@ -1,0 +1,10 @@
+MANIFEST.in
+pyproject.toml
+setup.py
+ECY_windows_clangd/__init__.py
+ECY_windows_clangd.egg-info/PKG-INFO
+ECY_windows_clangd.egg-info/SOURCES.txt
+ECY_windows_clangd.egg-info/dependency_links.txt
+ECY_windows_clangd.egg-info/top_level.txt
+ECY_windows_clangd/files/mad.md
+ECY_windows_clangd/files/sdf.exe
