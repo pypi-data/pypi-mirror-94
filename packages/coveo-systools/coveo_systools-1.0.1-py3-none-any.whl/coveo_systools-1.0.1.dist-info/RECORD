@@ -1,0 +1,9 @@
+coveo_systools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coveo_systools/filesystem.py,sha256=AZoFBbgI3flTA0cjsYemnJkrD6vzi3ycunHCDWEU0oI,5809
+coveo_systools/platforms.py,sha256=M5JjtRJd9MVuHE8jy6jHIokvXIsmDt0wnJ8x7LWOgy8,257
+coveo_systools/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coveo_systools/streams.py,sha256=NKGl9DavMSy-Qz9lHjfE6tR4TUQ2v316_s8Uad7Awq4,825
+coveo_systools/subprocess.py,sha256=lvus9RWWGh6joYhdq028csdoEsqCK-KlgQLtE0u678c,8991
+coveo_systools-1.0.1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+coveo_systools-1.0.1.dist-info/METADATA,sha256=xeKXkSgaU2tUMjOfxBzLwo6gZwuaw9rFZ1RTrzJv9r0,2843
+coveo_systools-1.0.1.dist-info/RECORD,,
