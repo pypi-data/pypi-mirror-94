@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: n26
+Version: 3.2.6
+Summary: API and command line tools to interact with the https://n26.com/ API
+Home-page: https://github.com/femueller/python-n26
+Author: Felix Mueller
+Author-email: felix@s4ku.com
+License: UNKNOWN
+Download-URL: https://github.com/femueller/python-n26/tarball/3.2.6
+Platform: UNKNOWN
+Requires-Dist: certifi
+Requires-Dist: chardet
+Requires-Dist: click
+Requires-Dist: container-app-conf
+Requires-Dist: idna
+Requires-Dist: importlib-metadata
+Requires-Dist: inflect
+Requires-Dist: more-itertools
+Requires-Dist: pycryptodome
+Requires-Dist: py-range-parse
+Requires-Dist: python-dateutil
+Requires-Dist: pytimeparse
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: ruamel.yaml
+Requires-Dist: ruamel.yaml.clib
+Requires-Dist: six
+Requires-Dist: tabulate
+Requires-Dist: tenacity
+Requires-Dist: toml
+Requires-Dist: urllib3
+Requires-Dist: zipp
+
+API and command line tools to interact with the https://n26.com/ API
+
+
