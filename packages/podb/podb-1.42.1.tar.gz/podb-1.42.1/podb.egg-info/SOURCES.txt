@@ -1,0 +1,10 @@
+README.md
+README.rst
+setup.py
+podb/DB.py
+podb/__init__.py
+podb.egg-info/PKG-INFO
+podb.egg-info/SOURCES.txt
+podb.egg-info/dependency_links.txt
+podb.egg-info/requires.txt
+podb.egg-info/top_level.txt
