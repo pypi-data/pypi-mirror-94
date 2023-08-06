@@ -1,0 +1,268 @@
+# CLI for alteia
+
+# `alteia`
+
+**Usage**:
+
+```console
+$ alteia [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--install-completion`: Install completion for the current shell.
+* `--show-completion`: Show completion for the current shell, to copy it or customize the installation.
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `analytics`: Interact with Analytics
+* `configure`: Configure your credentials to connect to the...
+* `credentials`: Interact your Docker registry credentials
+* `products`: Interact with Products
+
+## `alteia configure`
+
+Configure your credentials to connect to the platform
+
+**Usage**:
+
+```console
+$ alteia configure [OPTIONS]
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `alteia analytics`
+
+Interact with Analytics
+
+**Usage**:
+
+```console
+$ alteia analytics [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `create`: Create a new analytic
+* `delete`: Delete an analytic
+* `list`: List the analytics
+* `share`: Share an analytic
+* `unshare`: Unshare an analytic
+
+### `alteia analytics create`
+
+Create a new analytic
+
+**Usage**:
+
+```console
+$ alteia analytics create [OPTIONS]
+```
+
+**Options**:
+
+* `--description PATH`: Path of the Analytic description (YAML file)  [required]
+* `--company TEXT`: Company identifier
+* `--help`: Show this message and exit.
+
+### `alteia analytics delete`
+
+Delete an analytic
+
+**Usage**:
+
+```console
+$ alteia analytics delete [OPTIONS] ANALYTIC_NAME
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+### `alteia analytics list`
+
+List the analytics
+
+**Usage**:
+
+```console
+$ alteia analytics list [OPTIONS]
+```
+
+**Options**:
+
+* `--limit INTEGER`: Max number of analytics returned
+* `--help`: Show this message and exit.
+
+### `alteia analytics share`
+
+Share an analytic
+
+**Usage**:
+
+```console
+$ alteia analytics share [OPTIONS] ANALYTIC_NAME
+```
+
+**Options**:
+
+* `--company TEXT`: Company identifier
+* `--help`: Show this message and exit.
+
+### `alteia analytics unshare`
+
+Unshare an analytic
+
+**Usage**:
+
+```console
+$ alteia analytics unshare [OPTIONS] ANALYTIC_NAME
+```
+
+**Options**:
+
+* `--company TEXT`: Company identifier
+* `--help`: Show this message and exit.
+
+## `alteia credentials`
+
+Interact your Docker registry credentials
+
+**Usage**:
+
+```console
+$ alteia credentials [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `create`: Create a new credential entry
+* `delete`: Delete a credential entry by its name
+* `list`: List the existing credentials
+
+### `alteia credentials create`
+
+Create a new credential entry
+
+**Usage**:
+
+```console
+$ alteia credentials create [OPTIONS]
+```
+
+**Options**:
+
+* `--filepath PATH`: Path of the Credential JSON file  [required]
+* `--help`: Show this message and exit.
+
+### `alteia credentials delete`
+
+Delete a credential entry by its name
+
+**Usage**:
+
+```console
+$ alteia credentials delete [OPTIONS] NAME
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+### `alteia credentials list`
+
+List the existing credentials
+
+**Usage**:
+
+```console
+$ alteia credentials list [OPTIONS]
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `alteia products`
+
+Interact with Products
+
+**Usage**:
+
+```console
+$ alteia products [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `cancel`: Cancel a running product
+* `list`: List the products
+* `logs`: Retrieve the logs of a product
+
+### `alteia products cancel`
+
+Cancel a running product
+
+**Usage**:
+
+```console
+$ alteia products cancel [OPTIONS] PRODUCT_ID
+```
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+### `alteia products list`
+
+List the products
+
+**Usage**:
+
+```console
+$ alteia products list [OPTIONS]
+```
+
+**Options**:
+
+* `-n, --limit INTEGER`: Max number of analytics returned  [default: 10]
+* `--analytic TEXT`: Analytic name
+* `--company TEXT`: Company identifier
+* `--status [pending|processing|available|rejected|failed]`: Product status
+* `--all`: If set, display also the products from internal analytics (otherwise only products from external analytics are displayed).
+* `--help`: Show this message and exit.
+
+### `alteia products logs`
+
+Retrieve the logs of a product
+
+**Usage**:
+
+```console
+$ alteia products logs [OPTIONS] PRODUCT_ID
+```
+
+**Options**:
+
+* `-f, --follow`: Follow logs
+* `--help`: Show this message and exit.
+
+---
+
+*Generated with `typer alteia_cli/main.py utils docs --name alteia`*
