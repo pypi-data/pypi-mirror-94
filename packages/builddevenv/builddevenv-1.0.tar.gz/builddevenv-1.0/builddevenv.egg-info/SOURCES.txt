@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+builddevenv/Builder.py
+builddevenv/__init__.py
+builddevenv/__main__.py
+builddevenv.egg-info/PKG-INFO
+builddevenv.egg-info/SOURCES.txt
+builddevenv.egg-info/dependency_links.txt
+builddevenv.egg-info/entry_points.txt
+builddevenv.egg-info/requires.txt
+builddevenv.egg-info/top_level.txt
+test/__init__.py
+test/test_builddevenv.py
