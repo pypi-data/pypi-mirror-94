@@ -1,0 +1,32 @@
+Metadata-Version: 1.2
+Name: matviz
+Version: 0.0.4
+Summary: matviz: matrix data visualization
+Home-page: https://github.com/JLansey/matviz
+Author: Jonathan Lansey
+Author-email: jonathan@lansey.net
+Maintainer: Jonathan Lansey
+Maintainer-email: jonathan@lansey.net
+License: BSD (3-clause)
+Download-URL: https://github.com/JLansey/matviz
+Description: MatViz is a library for making nice looking and useful graphics in Python. It is built on top of `matplotlib <https://matplotlib.org/>`_ and closely integrated with `numpy <https://numpy.org/>`_ and `pandas <https://pandas.pydata.org/>`_ data structures.
+        It also pulls from and is inspired by `seaborn <https://https://seaborn.pydata.org/>`_
+        Here is some of the functionality that matviz offers:
+        - A histogram function that compares multiple distributions with default settings to maximize utility
+        - A 2D histogram function with fun tricks like smoothing and plotting timeseries data
+        - Specialized support for using complex numbers in place of x and y (z = x + 1j * y)
+        - Taking any figure and making it look nicer than the matplotlib defaults
+        - Streamgraph implementation with lots of additional features, based on stackedplot
+        - Lots of plotting functions to import by default and make the coding environment similar to Matlab.
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
