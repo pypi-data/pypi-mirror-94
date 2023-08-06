@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: windmapper
+Version: 1.2.3
+Summary: Windfield library generation
+Home-page: https://github.com/Chrismarsh/Windmapper
+Author: Chris Marsh
+Author-email: chris.marsh@usask.ca
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: pygdal (==3.2.1.*)
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: elevation
+Requires-Dist: pyproj
+Requires-Dist: tqdm
+
+
+Generates windfields
+
+
