@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: flake8-codes
+Version: 0.1.1
+Summary: CLI tool to introspect flake8 plugins and their codes.
+Home-page: https://github.com/orsinium-labs/flake8-codes
+Author: Gram
+Author-email: gram@orsinium.dev
