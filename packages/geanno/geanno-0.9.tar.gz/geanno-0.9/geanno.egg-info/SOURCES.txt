@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+geanno/Annotator.py
+geanno/__init__.py
+geanno.egg-info/PKG-INFO
+geanno.egg-info/SOURCES.txt
+geanno.egg-info/dependency_links.txt
+geanno.egg-info/top_level.txt
