@@ -1,0 +1,10 @@
+epub2txt/__init__.py,sha256=nq0AxM-WnTrb0r1U0WmEl2KG2WjGMsIVNUiafHa7dqQ,95
+epub2txt/__main__.py,sha256=kojahnS-1z-qhTnGiv8WlP29SuGhyFOLRkN77BULDxw,4437
+epub2txt/browse_filename.py,sha256=at7-wbeOIckNz9oyCJMtqqcMu3u7Bg6jpG_Aik0pKpk,797
+epub2txt/epub2txt.py,sha256=YnPqr4XJRNh5r-QGBYF5lrwh3AZMUDUjCcDf7vjvH3Y,3956
+epub2txt/gen_filename.py,sha256=aiAy4S3oha4D_mN7JIHThAVmHoyc4WrzMCZmoWnVLp4,1357
+epub2txt-0.1.1.dist-info/entry_points.txt,sha256=6GBYioYToWQjalGGAOQrC0GNYpEuhS8IUptaqTz1mMQ,51
+epub2txt-0.1.1.dist-info/LICENSE,sha256=vR2z3eUszyli3pNE5DdS2gRzEwCRuQTwhfjfPkGTXpk,1091
+epub2txt-0.1.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+epub2txt-0.1.1.dist-info/METADATA,sha256=IfiFHi4h91L-Q6BhKVydJk5QkDJpVD72SKUnO3ZTuX4,2246
+epub2txt-0.1.1.dist-info/RECORD,,
