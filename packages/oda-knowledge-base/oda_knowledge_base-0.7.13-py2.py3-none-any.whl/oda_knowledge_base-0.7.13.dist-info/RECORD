@@ -1,0 +1,15 @@
+odakb/__init__.py,sha256=Nb7bMk3xgxCOHvrfjSHRrkI9nFtcVX7THcMQvDO3ojQ,58
+odakb/cwl.py,sha256=-uIr2MjX3L6YQwSF5i2dDTDidGZBpFtWfOXmpu-Oc6M,4977
+odakb/datalake.py,sha256=xz_YnKDv9PIuwCSBBYK3eTqsiD7LJSrYFuh9Y4x6esk,7648
+odakb/evaluator.py,sha256=W7v7gBSdhrAxdfNeTPoO46Est-rCynihBtSXbN6F62o,17051
+odakb/sparql.py,sha256=bvZvg-UPG09cPTEpGldfyrVifJFdJPr4NKMutQiNHY4,18071
+odakb/conf/defaults.yaml,sha256=NrWhS74LfFW0P1EdqOLLqCSFrAFywczGmyzGJ-C8gq8,669
+odakb/conf/graphs.d/rdfservice-loaders.ttl,sha256=Nj6ul3Yg4yG1Ol2Ifkbi6UKLvRPzVtDmxB1mE0YtLCA,193
+odakb/conf/graphs.d/spiacsonline.ttl,sha256=XyTaYduIaB5wkOeKKFaCWxSWu-rmr8B-8_pYM3y7Ars,432
+tlog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oda_knowledge_base-0.7.13.dist-info/COPYING,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oda_knowledge_base-0.7.13.dist-info/METADATA,sha256=AliOBFL_BDG24WUiwkyYA8LwsPMk4hW_HgudyStCf_E,1330
+oda_knowledge_base-0.7.13.dist-info/WHEEL,sha256=ADKeyaGyKF5DwBNE0sRE5pvW-bSkFMJfBuhzZ3rceP4,110
+oda_knowledge_base-0.7.13.dist-info/entry_points.txt,sha256=Sm6fgtjSGwiBd7oawUR1i8tKK8MlyZXO4RyuBGylLWE,117
+oda_knowledge_base-0.7.13.dist-info/top_level.txt,sha256=3_6J6WOhaAozUIGmJSjyni1O2D3DQMy4iDt-fdqgpPs,6
+oda_knowledge_base-0.7.13.dist-info/RECORD,,
