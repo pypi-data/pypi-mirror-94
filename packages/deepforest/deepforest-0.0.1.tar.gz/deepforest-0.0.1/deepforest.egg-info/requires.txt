@@ -1,0 +1,14 @@
+torch
+torchvision
+matplotlib
+Pillow
+pandas
+pyyaml>5.1.0
+progressbar2
+six
+scipy
+slidingwindow
+scikit-image
+tqdm
+xmltodict
+numpy
