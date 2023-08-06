@@ -1,0 +1,4 @@
+graft language_data/data
+include README.md
+include LICENSE.txt
+prune language_data/data/cldr-localenames-*
