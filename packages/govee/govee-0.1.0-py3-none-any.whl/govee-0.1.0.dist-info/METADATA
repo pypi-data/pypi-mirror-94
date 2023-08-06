@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: govee
+Version: 0.1.0
+Summary: 
+Author: Kevin Schmittle
+Author-email: kevin@schmittle.net
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: bleak (>=0.10.0,<0.11.0)
