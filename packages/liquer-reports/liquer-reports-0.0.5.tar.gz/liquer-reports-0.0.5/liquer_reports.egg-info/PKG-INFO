@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: liquer-reports
+Version: 0.0.5
+Summary: LiQuer-enabler library for creating reports and interactive dashboards
+Home-page: https://github.com/orest-d/liquer-reports
+Author: Orest Dubay
+Author-email: orest3.dubay@gmail.com
+License: UNKNOWN
+Description: # liquer-reports
+        LiQuer-enabler library for creating reports and interactive dashboards
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
