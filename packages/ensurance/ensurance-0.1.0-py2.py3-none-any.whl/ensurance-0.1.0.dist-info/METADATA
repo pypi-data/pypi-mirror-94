@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ensurance
+Version: 0.1.0
+Summary: Input Array Ensurance Functions
+Home-page: UNKNOWN
+Author: Andrew Quinn <andrew.quinn@psych.ox.ac.uk>
+Author-email: andrew.quinn@psych.ox.ac.uk
+License: UNKNOWN
+Keywords: Ensurance Array
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >3.4
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: numpydoc
+Requires-Dist: pytest
+Requires-Dist: sphinx-rtd-theme
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+A python package for ensuring numerical inputs to a function match user requirements.
+
+WORK IN PROGRESS!
+
+
