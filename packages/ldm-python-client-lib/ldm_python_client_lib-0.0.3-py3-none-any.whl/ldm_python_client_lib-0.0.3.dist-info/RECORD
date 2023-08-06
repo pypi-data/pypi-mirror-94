@@ -1,0 +1,16 @@
+logger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logger/captioning.py,sha256=erFB2Ya9VqXvU-dYEcSp-JrV4JOQECgm_0oKOd4MbbU,1163
+logger/classification.py,sha256=0sUXnbihigwupUichxSfs2-H0UlKFSmtRtMVB5ay4d4,1922
+logger/example.py,sha256=LtsMlMbYCIEFbyAWUO6C3u4YZeRI1l6JrXX2ZIeizgM,1156
+logger/logging_functions.py,sha256=syve0HSg3tsaJjhOxHqLH-5hQs5NS9PqJeMqcWSJVSo,11032
+logger/video.py,sha256=erFB2Ya9VqXvU-dYEcSp-JrV4JOQECgm_0oKOd4MbbU,1163
+logger_example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logger_example/captioning.py,sha256=erFB2Ya9VqXvU-dYEcSp-JrV4JOQECgm_0oKOd4MbbU,1163
+logger_example/classification.py,sha256=uITiG_spB3I9Pf5HaHJOh4elf3ABEXLafipBJXgStOw,1193
+logger_example/example.py,sha256=erFB2Ya9VqXvU-dYEcSp-JrV4JOQECgm_0oKOd4MbbU,1163
+logger_example/video.py,sha256=erFB2Ya9VqXvU-dYEcSp-JrV4JOQECgm_0oKOd4MbbU,1163
+ldm_python_client_lib-0.0.3.dist-info/LICENSE.txt,sha256=EIQk7YqhslqP5qjC2wy1Is7hmn4pp5Tl_uhUpSgbnPw,1060
+ldm_python_client_lib-0.0.3.dist-info/METADATA,sha256=G9wV9wwxFwu-UUMWz4QQSY0-GGvUdN8YuidFXEPamBI,2515
+ldm_python_client_lib-0.0.3.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+ldm_python_client_lib-0.0.3.dist-info/top_level.txt,sha256=0m0-PNhhFLTxrgsGvZ7XRTvuiLV2z1h0if-rE9BQROA,22
+ldm_python_client_lib-0.0.3.dist-info/RECORD,,
