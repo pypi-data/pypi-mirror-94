@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: MachineLearningSimplified
+Version: 0.0.1
+Summary: Machine Learning Simplified
+Home-page: UNKNOWN
+Author: Taptaplit10
+Author-email: <no-reply@taptaplit.com>
+License: UNKNOWN
+Description: A package that simplifies machine learning for you!
+Keywords: machine-learning,ml,linear-regression,K-nearest-neighbors
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
