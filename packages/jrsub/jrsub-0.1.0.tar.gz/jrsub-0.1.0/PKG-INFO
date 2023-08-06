@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: jrsub
+Version: 0.1.0
+Summary: Python package for Warodai and Yarxi dictionaries
+Home-page: https://github.com/kateabr/jrsub
+License: MIT
+Author: Ekaterina Biryukova
+Author-email: kateabr@yandex.ru
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: jtran (>=0.2.13,<0.3.0)
+Requires-Dist: tqdm (>=4.56.2,<5.0.0)
+Project-URL: Repository, https://github.com/kateabr/jrsub
+Description-Content-Type: text/markdown
+
+# JRSub
+[![Build Status](https://travis-ci.com/kateabr/jrsub.svg?branch=master)](https://travis-ci.com/kateabr/jrsub)
