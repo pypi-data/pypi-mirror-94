@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+bin/qtfaststart2
+qtfaststart2/__init__.py
+qtfaststart2/__main__.py
+qtfaststart2/command.py
+qtfaststart2/exceptions.py
+qtfaststart2/processor.py
+qtfaststart2.egg-info/PKG-INFO
+qtfaststart2.egg-info/SOURCES.txt
+qtfaststart2.egg-info/dependency_links.txt
+qtfaststart2.egg-info/top_level.txt
