@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: VCalculator
+Version: 0.0.1
+Summary: The python  file is a basic calculator which gives the values of addition, subtraction, multiplication and dvision of two numbers.
+Home-page: UNKNOWN
+Author: Vishal Thakur
+Author-email: vishalsanjivthakur@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

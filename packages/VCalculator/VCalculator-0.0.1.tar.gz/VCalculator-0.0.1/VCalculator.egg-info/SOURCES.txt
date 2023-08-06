@@ -1,0 +1,10 @@
+CHANGELOG.txt
+License.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+VCalculator.egg-info/PKG-INFO
+VCalculator.egg-info/SOURCES.txt
+VCalculator.egg-info/dependency_links.txt
+VCalculator.egg-info/top_level.txt
