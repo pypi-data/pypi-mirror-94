@@ -1,0 +1,3 @@
+[kiwi.tasks]
+image_obs = kiwi_obs_plugin.tasks.image_obs
+

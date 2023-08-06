@@ -1,0 +1,3 @@
+docopt
+kiwi>=9.23.15
+requests
