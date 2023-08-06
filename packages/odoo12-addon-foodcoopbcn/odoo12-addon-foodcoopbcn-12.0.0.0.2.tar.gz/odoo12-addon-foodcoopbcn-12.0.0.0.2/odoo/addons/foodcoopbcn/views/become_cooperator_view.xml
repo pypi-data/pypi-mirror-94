@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <template id="become_cooperator_foodcoopbcn" inherit_id="easy_my_coop_es.become_cooperator_es" name="Become cooperator">
+      <!-- Remove Already an account? button -->
+      <xpath expr="//*[@id='wrap']/div[2]/div/div/form/div[2]" position="replace"/>
+      <!-- Set IBAN field as not required -->
+      <xpath expr="//input[@name='iban']" position="attributes">
+        <attribute name="required"></attribute>
+      </xpath>
+      <!-- Remove IBAN div -->
+      <xpath expr="//*[@id='wrap']/div[2]/div/div/form/div[10]" position="attributes">
+        <attribute name="hidden">1</attribute>
+      </xpath>
+    </template>
+  </data>
+</odoo>

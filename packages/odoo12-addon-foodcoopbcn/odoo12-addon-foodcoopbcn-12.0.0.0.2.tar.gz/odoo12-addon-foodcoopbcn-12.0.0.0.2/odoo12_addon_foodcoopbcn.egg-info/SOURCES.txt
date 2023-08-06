@@ -1,0 +1,13 @@
+setup.py
+odoo/addons/foodcoopbcn/__init__.py
+odoo/addons/foodcoopbcn/__manifest__.py
+odoo/addons/foodcoopbcn/data/ir_default.xml
+odoo/addons/foodcoopbcn/models/__init__.py
+odoo/addons/foodcoopbcn/models/subscription_request.py
+odoo/addons/foodcoopbcn/views/become_cooperator_view.xml
+odoo12_addon_foodcoopbcn.egg-info/PKG-INFO
+odoo12_addon_foodcoopbcn.egg-info/SOURCES.txt
+odoo12_addon_foodcoopbcn.egg-info/dependency_links.txt
+odoo12_addon_foodcoopbcn.egg-info/not-zip-safe
+odoo12_addon_foodcoopbcn.egg-info/requires.txt
+odoo12_addon_foodcoopbcn.egg-info/top_level.txt
