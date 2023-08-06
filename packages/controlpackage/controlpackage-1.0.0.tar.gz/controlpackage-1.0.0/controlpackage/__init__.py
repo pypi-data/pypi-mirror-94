@@ -1,0 +1,1 @@
+from controlpackage import version
