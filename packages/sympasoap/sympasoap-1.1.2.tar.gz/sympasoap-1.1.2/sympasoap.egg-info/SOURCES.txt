@@ -1,0 +1,12 @@
+README.rst
+setup.py
+sympasoap/__init__.py
+sympasoap/client.py
+sympasoap/constants.py
+sympasoap/lists.py
+sympasoap.egg-info/PKG-INFO
+sympasoap.egg-info/SOURCES.txt
+sympasoap.egg-info/dependency_links.txt
+sympasoap.egg-info/not-zip-safe
+sympasoap.egg-info/requires.txt
+sympasoap.egg-info/top_level.txt
