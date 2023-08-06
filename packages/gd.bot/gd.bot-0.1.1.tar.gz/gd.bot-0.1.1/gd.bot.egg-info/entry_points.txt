@@ -1,0 +1,3 @@
+[console_scripts]
+gd.bot = gd.bot.__main__:main
+
