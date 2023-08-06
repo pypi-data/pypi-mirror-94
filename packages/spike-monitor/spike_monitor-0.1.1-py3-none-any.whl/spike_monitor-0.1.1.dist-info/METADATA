@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: spike-monitor
+Version: 0.1.1
+Summary: This package contains the necessary tools to monitor models
+Home-page: https://github.com/SpikeLab-CL/spk-logger
+License: MIT
+Author: NicolasITC
+Author-email: n.treimun14@gmail.com
+Requires-Python: >=3.7,<3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: google-cloud-logging (>=2.2.0,<3.0.0)
+Requires-Dist: pendulum (>=2.1.2,<3.0.0)
+Requires-Dist: pickle4 (>=0.0.1,<0.0.2)
+Requires-Dist: pydantic (>=1.7.3,<2.0.0)
+Project-URL: Repository, https://github.com/SpikeLab-CL/spk-logger
