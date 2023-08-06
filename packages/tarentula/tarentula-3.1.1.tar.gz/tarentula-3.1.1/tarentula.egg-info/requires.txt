@@ -1,0 +1,5 @@
+click==7.1.2
+coloredlogs==14.0
+matplotlib==3.3.2
+requests==2.25.1
+tqdm==4.51.0
