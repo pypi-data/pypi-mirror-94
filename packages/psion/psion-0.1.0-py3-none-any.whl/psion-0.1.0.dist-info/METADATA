@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: psion
+Version: 0.1.0
+Summary: Asynchronous WebAuth library for python.
+Home-page: https://github.com/revensky/psion
+License: MIT
+Keywords: JOSE,OAuth 2.1,OpenID Connect
+Author: Eduardo Ribeiro Rezende
+Author-email: eduardorbr7@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Typing :: Typed
+Requires-Dist: cryptography (>=3.3.1,<4.0.0)
+Project-URL: Repository, https://github.com/revensky/psion.git
+Description-Content-Type: text/markdown
+
+# Project Psion
+
+This library provides an implementation for asynchronous authentication and authorization of web applications.
+It provides support for OAuth 2.1 and OpenID Connect, as well as JOSE.
+
+For more details, please visit the documentation.
+
+Any doubts and suggestions can be sent to my [email](mailto:eduardorbr7@gmail.com).
+Just prepend the title with #Psion#, and I will try my best to answer.
+
+## JSON Object Signature and Encryption (JOSE)
+
+It implements the following RFCs.
+
+1. [x] RFC 7515 - Json Web Signature (JWS)
+2. [ ] RFC 7516 - Json Web Encryption (JWE)
+3. [x] RFC 7517 - Json Web Key and Keyset (JWK)
+4. [x] RFC 7518 - Json Web Algorithms (JWA)
+5. [x] RFC 7519 - Json Web Token (JWT)
+
+For more details on each feature, please visit the respective documentation.
+
+## OAuth 2.1
+
+It implements the following RFCs and Specs.
+
+1. [x] Draft - The OAuth 2.1 Authorization Framework
+2. [x] RFC 7009 - OAuth 2.0 Token Revocation
+
+# License
+
+This project is licensed under the MIT License.
+
