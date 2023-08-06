@@ -1,0 +1,7 @@
+[console_scripts]
+hypnotoad_geqdsk = hypnotoad.scripts.hypnotoad_geqdsk:main
+hypnotoad_torpex = hypnotoad.scripts.hypnotoad_torpex:main
+
+[gui_scripts]
+hypnotoad-gui = hypnotoad.gui:main
+
