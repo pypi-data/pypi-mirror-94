@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: bread-tools
+Version: 0.0.3
+Summary: Basic processing tools in common algorithms.
+Home-page: https://github.com/Joe-Laue/bread-tools
+Author: Joe
+Author-email: joe.laue@outlook.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
