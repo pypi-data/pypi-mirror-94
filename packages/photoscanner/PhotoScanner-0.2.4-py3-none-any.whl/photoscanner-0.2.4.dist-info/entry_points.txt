@@ -1,0 +1,3 @@
+[console_scripts]
+photoscanner=photoscanner.main:run
+
