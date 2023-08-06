@@ -1,0 +1,17 @@
+# Example of file: ./deploy/config.yaml
+
+deploy:
+  # Shared files and folders (between releases)
+  shared: [.env]
+
+  # All available servers (SSH configuration)
+  servers:
+    prod:
+      hostname: '192.168.1.5'
+      port: 22
+      user: 'fabrizio'
+      deploy_path: '/home/fabrizio/pydeployer'
+      stage: 'production'
+      branch: 'main'
+      repository: 'git@github.com:best-practice-src/py-deployer.git'
+      max_releases: 3
