@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+from fire import Fire
+# from borgssh import unit1
+from borgssh.version import __version__
+
+from borgssh.borgssh import listborg,create_and_prune_defaults,check,create
+
+
+if __name__=="__main__":
+    print("D... borgssh script; version:",__version__)
+#    Fire()
+    Fire( {"list": listborg,
+           "create_and_prune_defaults":create_and_prune_defaults,
+           "check":check,
+           "create":create,
+    } )

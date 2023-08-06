@@ -1,0 +1,13 @@
+README.md
+setup.py
+bin/sshborg
+borgssh/__init__.py
+borgssh/borgconf.py
+borgssh/borgssh.py
+borgssh/prj_utils.py
+borgssh/unit1.py
+borgssh/version.py
+borgssh.egg-info/PKG-INFO
+borgssh.egg-info/SOURCES.txt
+borgssh.egg-info/dependency_links.txt
+borgssh.egg-info/top_level.txt
