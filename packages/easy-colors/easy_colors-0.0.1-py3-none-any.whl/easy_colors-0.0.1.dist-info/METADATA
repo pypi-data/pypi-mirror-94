@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: easy-colors
+Version: 0.0.1
+Summary: Colored text in the console
+Home-page: https://github.com/farhadzaidi/easy_colors
+Author: Farhad Zaidi
+Author-email: zaidi.farhad03@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Easy Colors
+
+This package allows you to print colored text in the console using ANSI escape codes.
+
+# Installation
+
+Install on Linux/MacOS:
+`python3 -m pip install easy_colors`
+
+Install on Windows:
+`python -m pip install easy_colors`
+
+# Usage
+```python
+from easy_colors import Colors
+
+print(f'{Colors.INFO}This is an example{Colors.END}')
+
+print(f'{Colors.DANGER}This is another example{Colors.END}')
+
+```
+
+Note: Make sure to end all colored strings with `Colors.END`
+
