@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: covidstat
+Version: 0.0.1
+Summary: A simplified estimate of the Effective Reproduction Number Rt using its relation with the doubling time
+Home-page: https://baltig.infn.it/covidstat/rt-covidstat
+Author: Gianluca Bonifazi
+Author-email: gianluca.bonifazi@bo.infn.it
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Rt Covidstat
+
+
+
