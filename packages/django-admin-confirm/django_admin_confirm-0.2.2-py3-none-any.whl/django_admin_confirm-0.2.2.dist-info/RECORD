@@ -1,0 +1,13 @@
+admin_confirm/__init__.py,sha256=d14IsKYhiGYg1JFH3PclT57xb1PCIUbNRZasH7ZXApc,37
+admin_confirm/admin.py,sha256=NZkI27qXPbq0bK1EObmRT4mIAzPcOzVH_curEI0oEYM,8680
+admin_confirm/utils.py,sha256=JHhd5lLBwyrB7ho--qdT0y9r731qIbXrMOVlaxcElzY,92
+admin_confirm/static/admin/css/confirmation.css,sha256=bnfLsfpuP8OxXpeqGPx0qTSnjtpo66ZkrAsdkuWWp80,431
+admin_confirm/templates/admin/action_confirmation.html,sha256=jI1FL-zHZHamOpVaWyL630bQ-YPmYj-MOmfurb7zlG8,2180
+admin_confirm/templates/admin/change_confirmation.html,sha256=_y5CfYfi28Hx-x0udAYozH2z7zagFtQSfXJ_sMj2VDI,2423
+admin_confirm/templates/admin/change_data.html,sha256=3lBy_4pdyN4ETLlXsj6gXblft4oAuFquDv1yMNAwxz4,431
+admin_confirm/templates/admin/submit_line.html,sha256=QjuosRfKFjbqMc-EIw9OAt3b8fQMvMFp4i9_PADTujc,306
+django_admin_confirm-0.2.2.dist-info/LICENSE,sha256=aNtJ5fr2KgwjfCXEMLBdOY37MAp5XhPDe_IsreKTCfw,586
+django_admin_confirm-0.2.2.dist-info/METADATA,sha256=Kx4GHv19fuB7CGghh2k4oHfdR4PKODr_RGHVhx7qUps,6103
+django_admin_confirm-0.2.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_admin_confirm-0.2.2.dist-info/top_level.txt,sha256=K-ThyzvJKBiWnFO3zhlfLP6gzwGP_nicoXbAEsCeaOo,14
+django_admin_confirm-0.2.2.dist-info/RECORD,,
