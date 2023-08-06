@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        evernote-to-sqlite=evernote_to_sqlite.cli:cli
+    
