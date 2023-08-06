@@ -1,0 +1,5 @@
+qaseio>=2.0.0
+
+[testing]
+pytest
+pytest-cov
