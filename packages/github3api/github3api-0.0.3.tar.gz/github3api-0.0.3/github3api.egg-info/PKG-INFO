@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: github3api
+Version: 0.0.3
+Summary: An advanced REST client for the GitHub API
+Home-page: https://github.com/soda480/github3api
+Author: Emilio Reyes
+Author-email: emilio.reyes@intel.com
+License: Apache License, Version 2.0
+Description: 
+        An advanced REST client for the GitHub API. The client also includes special optional directives for GET requests that can return all pages from an endpoint or return a generator that can be iterated over. By default all requests will be retried if ratelimit request limit is reached.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration

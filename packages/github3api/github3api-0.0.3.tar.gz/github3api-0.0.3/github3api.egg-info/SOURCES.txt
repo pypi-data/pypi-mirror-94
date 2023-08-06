@@ -1,0 +1,10 @@
+setup.py
+github3api/__init__.py
+github3api/githubapi.py
+github3api.egg-info/PKG-INFO
+github3api.egg-info/SOURCES.txt
+github3api.egg-info/dependency_links.txt
+github3api.egg-info/namespace_packages.txt
+github3api.egg-info/requires.txt
+github3api.egg-info/top_level.txt
+github3api.egg-info/zip-safe
