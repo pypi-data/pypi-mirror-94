@@ -1,0 +1,54 @@
+image: debian:testing
+
+cache:
+  paths:
+    - build
+    - '*.egg-info'
+
+before_script:
+  - apt update
+  - apt install -y --no-install-recommends
+    ca-certificates python3-all git
+    python3-sh
+    python3-docutils
+    python3-debian
+    python3-setuptools
+
+build:
+  stage: build
+  script:
+  - ./setup.py build
+  - ./setup.py sdist bdist
+  artifacts:
+    paths:
+      - dist/*
+
+verify-tag:
+  stage: test
+  needs: []
+  only:
+  - tags
+  script:
+  - grep -F "version = $CI_COMMIT_TAG" setup.cfg
+
+typing:
+  stage: test
+  needs: []
+  script:
+  - apt install -y mypy
+  - mypy pristine_lfs
+
+test:
+  stage: test
+  needs: []
+  script:
+  - apt install -y python3-pytest python3-pytest-runner git-lfs
+  - ./setup.py pytest
+
+codestyle:
+  stage: test
+  needs: []
+  allow_failure: true
+  script:
+  - apt install -y flake8
+  - flake8 --verbose
