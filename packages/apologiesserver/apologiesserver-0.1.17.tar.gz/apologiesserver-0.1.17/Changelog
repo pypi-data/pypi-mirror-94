@@ -1,0 +1,24 @@
+Version 0.1.17     07 Feb 2021
+
+	* Publish coverage data to coveralls.io in GitHub workflow.
+	* Fix incorrect dependency on safety (should have been dev dependency).
+
+Version 0.1.16     07 Feb 2021
+
+	* Upgrade to cattrs 1.2.0 and handle related behavior changes.
+	* Update build process to include security scans using Safety.
+	* Make other structural improvements to the build process.
+
+Version 0.1.15     17 Jan 2021
+
+	* Update build system to use poetry.core.
+	* Fix the GitHub test suite by adding Python version into cache id.
+	* Move to newer versions of various build dependencies (black, isort, etc.).
+	* Standardize on UNIX line endings in Git working copy and PyPI package.
+	* Make improvements to Read the Docs integration, including a PR merge gate.
+	* Clean up badges shown in documentation, so they are links to something sane.
+	* Make improvements to the MyPy and Pylint configuration.
+	* Move to a new two-step release process based on cedar-backup3.
+	* Create a changelog for the first time, along with new release process.
+	* Upgrade to latest apologies library (v0.1.29) to stay up-to-date.
+
