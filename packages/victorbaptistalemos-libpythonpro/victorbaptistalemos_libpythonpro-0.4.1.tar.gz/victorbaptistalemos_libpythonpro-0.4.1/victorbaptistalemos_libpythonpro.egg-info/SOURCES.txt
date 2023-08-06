@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+victorbaptistalemos_libpythonpro/__init__.py
+victorbaptistalemos_libpythonpro/github_api.py
+victorbaptistalemos_libpythonpro.egg-info/PKG-INFO
+victorbaptistalemos_libpythonpro.egg-info/SOURCES.txt
+victorbaptistalemos_libpythonpro.egg-info/dependency_links.txt
+victorbaptistalemos_libpythonpro.egg-info/not-zip-safe
+victorbaptistalemos_libpythonpro.egg-info/requires.txt
+victorbaptistalemos_libpythonpro.egg-info/top_level.txt
+victorbaptistalemos_libpythonpro/spam/__init__.py
+victorbaptistalemos_libpythonpro/spam/db.py
+victorbaptistalemos_libpythonpro/spam/email_sender.py
+victorbaptistalemos_libpythonpro/spam/main.py
+victorbaptistalemos_libpythonpro/spam/user.py
