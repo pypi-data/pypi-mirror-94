@@ -1,0 +1,17 @@
+askdata/NLG.py,sha256=JsnQAHSqYqvaJRTUmB_IQXu4m0VgbzrVCeUDikqLtK4,1442
+askdata/__init__.py,sha256=1YYaPqygWI1-VbWoXmFMly5ZqO6s3VvpFQbwsSzxMEM,127
+askdata/askdata_client.py,sha256=iG_WTA_03-ybW-8CNJIoW98G8stOHVt6qpsyt2VnX3g,24508
+askdata/catalog.py,sha256=qfo6juy8Fg3j_MKal1kJpN80y7ii6gwDNvm5Jos2ssc,6041
+askdata/channel.py,sha256=r295olxrGhDx8H8ogMBFKEqrDjcE54-bCZaFyzKx3T8,6588
+askdata/dataset.py,sha256=jP3eG_EmIaX17CxU9JFTaODtgdK4IlidA1QD8g1IWi8,57598
+askdata/human2sql.py,sha256=f7Bldskpmhmn95jAN0lmKavVmg2n1GSEE5C13vKC1o8,1084
+askdata/insight.py,sha256=-3RmqcQvaVl8h766SG0A1IslQmAlBVnWB9P-fb8sVoE,6666
+askdata/insight_definition.py,sha256=EqBur8qMLDWkc_XXuly89cDoa07Nrj88yipYzqs0TSY,28736
+askdata/security.py,sha256=XkK3EVfMRKg5DmL1Xr5dJe3Hd6rx9h8hz1mRYzCXPDo,2428
+askdata/smartquery.py,sha256=yE8J9n89ZyKjEthGWH1orU2bdsDpt7Mrv6NKJOtrUZ8,8004
+askdata/askdata_config/base_url.yaml,sha256=Erv6__IAbF8k1LJ1V-P-BC0kZPhB9ev7G8HNRbL_K6k,1506
+askdata-0.4.3994.dist-info/LICENSE,sha256=qF0cKg_qqFOFF9mMJbhnk1-JnY_6YncTcWd_653-5MI,11308
+askdata-0.4.3994.dist-info/METADATA,sha256=zcRdDJaWasjnwFMAZCFaJjTj1ME2Dy9wZjsQF_uTBoE,2375
+askdata-0.4.3994.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+askdata-0.4.3994.dist-info/top_level.txt,sha256=l1-1Ts-ET_Cdir1NQTSnm-fcc7UZLzHEg3fYSPaPsjM,8
+askdata-0.4.3994.dist-info/RECORD,,
