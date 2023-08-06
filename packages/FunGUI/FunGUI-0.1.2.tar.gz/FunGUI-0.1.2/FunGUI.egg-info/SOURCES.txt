@@ -1,0 +1,15 @@
+README.md
+setup.py
+FunGUI/FunGUI.py
+FunGUI/FunGUI.pyw
+FunGUI/__init__.py
+FunGUI/stock_analysis.py
+FunGUI/stock_analysis_for_GUI.py
+FunGUI/test_print.py
+FunGUI/test_sin_plot.py
+FunGUI/title.png
+FunGUI.egg-info/PKG-INFO
+FunGUI.egg-info/SOURCES.txt
+FunGUI.egg-info/dependency_links.txt
+FunGUI.egg-info/requires.txt
+FunGUI.egg-info/top_level.txt
