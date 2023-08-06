@@ -1,0 +1,10 @@
+d3m==2020.11.3
+d3m-automl-rpc==1.0.0
+pandas==1.0.3
+numpy==1.18.2
+scikit-learn>=0.22
+lime==0.2.0.1
+pipelineprofiler==0.1.16
+datamart_profiler==0.8.1
+data-profile-viewer==0.2.5
+visual-text-explorer==0.1.9
