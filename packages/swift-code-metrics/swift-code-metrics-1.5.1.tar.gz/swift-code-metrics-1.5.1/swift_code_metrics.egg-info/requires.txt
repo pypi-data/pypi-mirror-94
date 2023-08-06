@@ -1,0 +1,5 @@
+matplotlib>=2
+adjustText<1
+pygraphviz==1.5
+pyfunctional==1.2
+dataclasses
