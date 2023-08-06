@@ -1,0 +1,11 @@
+.gitignore
+MANIFEST.in
+README.md
+setup.py
+eldar/__init__.py
+eldar.egg-info/PKG-INFO
+eldar.egg-info/SOURCES.txt
+eldar.egg-info/dependency_links.txt
+eldar.egg-info/top_level.txt
+tests/list_test.py
+tests/pandas_test.py
