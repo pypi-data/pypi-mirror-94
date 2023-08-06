@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: python-pesa
+Version: 0.2
+Summary: Python package for Vodacom Mpesa API Integration
+Home-page: https://github.com/Kalebu/pypesa
+Author: Jordan Kalebu
+Author-email: isaackeinstein@gmail.com
+License: MIT
+Download-URL: https://github.com/Kalebu/pypesa/archive/0.2.tar.gz
+Description: UNKNOWN
+Keywords: pypesa,python-pesa,mpesa python,vodacom python,pypesa package,pypesa python package,vodacom python package,pypesa github,python pypesa
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
