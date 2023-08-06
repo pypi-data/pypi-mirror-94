@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: omc-rmq
+Version: 0.1.5
+Summary: command
+Home-page: https://github.com/linewx/omc
+Author: Lu Ganlin
+Author-email: linewx1981@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: dynaconf[all] (==2.2.3)
+Requires-Dist: pyfiglet (==0.8.post1)
+Requires-Dist: Click (==7.0)
+Requires-Dist: psutil
+Requires-Dist: kubernetes (==11.0.0)
+Requires-Dist: ruamel.yaml (==0.16.12)
+Requires-Dist: prettytable (==0.7.2)
+
+UNKNOWN
+
+
