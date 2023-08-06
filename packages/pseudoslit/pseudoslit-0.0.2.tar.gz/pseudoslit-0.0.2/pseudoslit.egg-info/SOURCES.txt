@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pseudoslit/__init__.py
+pseudoslit/calc.py
+pseudoslit.egg-info/PKG-INFO
+pseudoslit.egg-info/SOURCES.txt
+pseudoslit.egg-info/dependency_links.txt
+pseudoslit.egg-info/not-zip-safe
+pseudoslit.egg-info/top_level.txt
