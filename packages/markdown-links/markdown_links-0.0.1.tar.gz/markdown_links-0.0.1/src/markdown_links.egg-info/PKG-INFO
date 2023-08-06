@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: markdown-links
+Version: 0.0.1
+Summary: Special handling for Markdown links to Markdown documents
+Home-page: https://github.com/binokkio/markdown_links
+Author: Binokkio
+Author-email: binokkio@b.nana.technology
+License: LGPLv3+
+Description: # Markdown Links
+        
+        Special handling for Markdown links to Markdown documents.
+        
+Keywords: markdown,links
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

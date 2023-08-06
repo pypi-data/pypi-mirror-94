@@ -1,0 +1,64 @@
+/* this section sets up the excerpt pulse animation */
+
+.markdown_links_excerpt_control:not(:checked) + .markdown_links_excerpt {  /* hide the excerpt when the control is not checked */
+    position: absolute; width: 0; height: 0; overflow: hidden;  /* can't use display none for hiding, would break background transition */
+    background: yellow;  /* this is the color of the excerpt pulse */
+}
+
+.markdown_links_excerpt {
+    transition: background-color 1s ease-out;  /* this is the transition of the excerpt pulse */
+    background: transparent;
+}
+
+
+/* this section sets up the excerpt control, only relevant for markdown links ending on '>' */
+
+.markdown_links_excerpt_control {
+    appearance: none; margin: 0; font-size: 1em; line-height: 1em;  /* reset browser-assigned styles for the control */
+    font-family: sans-serif;  /* this should be set to match the rest of the document */
+    cursor: pointer;
+}
+
+.markdown_links_excerpt_control::before {  /* a single space should precede the excerpt control */
+    content: " ";
+    white-space: pre;
+}
+
+.markdown_links_excerpt_control:not(:checked)::after {  /* what to show when the excerpt is hidden */
+    content: "Show excerpt.";
+    text-decoration: underline;
+}
+
+.markdown_links_excerpt_control:checked::after {  /* what to show when the excerpt is shown */
+    content: "Hide excerpt.";
+    text-decoration: underline;
+}
+
+
+/* this section sets up the excerpt control label, only relevant for markdown links ending on '<' */
+
+.markdown_links_excerpt_control.hidden {  /* the excerpt control is hidden for these links but still controls the excerpt visibility */
+    display: none;
+}
+
+
+/* this section handles the specific case where the markdown link is the first item in an unordered list item */
+
+ul > li > .markdown_links_excerpt_control_label:first-child {
+    cursor: pointer;
+    position: relative;  /* creates a new stacking context, allows positioning of the ::before relative to the labels position */
+}
+
+ul > li > .markdown_links_excerpt_control_label:first-child::before {
+    content: "⋮";
+    font-weight: bold;
+    position: absolute;
+    left: -1.5em;  /* tweak this to match the overall ul styling, mind the firefox override below */
+    padding-left: .5em;
+}
+
+@-moz-document url-prefix() {  /* firefox override rules */
+    ul > li > .markdown_links_excerpt_control_label:first-child::before {
+        top: 1px; left: -1.3em;  /* default ul styling differs a bit between firefox and chromium */
+    }
+}
