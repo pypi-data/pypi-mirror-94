@@ -1,0 +1,15 @@
+buycoins/__init__.py,sha256=51nGe_FUEfvyXMZAWqxzS5-KVREaxcNRffck0zJiQu8,90
+buycoins/constants.py,sha256=L8CyZIAatR_QSHQl8EhAGT0PgFs6b6GoOygSu1v8_Nk,8093
+buycoins/executor.py,sha256=xmttCbKiKh9G17y2bc2KVRYNo__DSuBXWpz4zVIKsTk,1007
+buycoins/mutations.py,sha256=EkLnUplgrJDl2Wej-yE1CNK8RV-qXy4jWVqv7J_GKzU,12170
+buycoins/queries.py,sha256=fTbNQQ-LAwsfRT9UyKXpIfFRJ_7rtXQLi9rAT4wJqYU,6658
+buycoins/utils.py,sha256=pI1IgLByJSxusKd9xBbE_IYsI43lhKBwhkg3wNo_2fU,781
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/responses.py,sha256=hCdZzT_2HDgeUS-SPhfc9tUdBWpPU6tllyVEEAl9mdo,17458
+tests/test_mutations.py,sha256=8RBiG0FahXVy5_tpxdHaTuGVYEvYsL4deTlNSfjyIIA,12239
+tests/test_queries.py,sha256=CANS4HI-5TX21whyZ6nB7_t-ziP7NTBqdGyIVs4JQ74,10247
+python_buycoins-1.0.dist-info/LICENSE,sha256=XzU_NRlRVQj2ZsOQ3rzqoEF1MXw-A1BUTTG6UvNxE9A,1072
+python_buycoins-1.0.dist-info/METADATA,sha256=k4aW3bdS6FUNb9ue_uQLkTCmzSliOM0LxBSsEUam5hg,6031
+python_buycoins-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_buycoins-1.0.dist-info/top_level.txt,sha256=WTryWuRjoFUnYi6NDeobFuQ41cIam7IM4LOW-G9aTds,15
+python_buycoins-1.0.dist-info/RECORD,,
