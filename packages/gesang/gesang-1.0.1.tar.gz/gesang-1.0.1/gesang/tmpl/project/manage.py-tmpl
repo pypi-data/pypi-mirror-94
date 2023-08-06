@@ -1,0 +1,6 @@
+import os
+from gesang.bin.entry import execute_from_argv
+
+if __name__ == '__main__':
+    os.environ["gesang_SETTINGS_MODULE"] = "core.settings"
+    execute_from_argv()
