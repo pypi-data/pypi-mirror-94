@@ -1,0 +1,12 @@
+include README.md
+include LICENSE
+include MANIFEST.in
+include CONTRIBUTING.md
+include HISTORY.md
+graft vagrant_debian/templates
+graft po
+
+# Remove files created in the build
+exclude po/.intltool-merge-cache
+global-exclude *.pyc
+global-exclude *.pyo

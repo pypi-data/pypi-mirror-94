@@ -1,0 +1,3 @@
+[console_scripts]
+vagrant_debian = vagrant_debian.vagrant_debian:main
+
