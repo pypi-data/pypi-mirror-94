@@ -1,0 +1,45 @@
+# Directory for locally stored data. The {home_dir} placeholder is replaced by
+# the home directory.
+data_dir: "${home_dir}${ps}slow_start_rewatch"
+
+# The file where the local Config items are stored:
+local_config_file: "${home_dir}${ps}slow_start_rewatch${ps}config_local.yml"
+
+# The YAML file with the data about the schedule:
+schedule_file: "${home_dir}${ps}slow_start_rewatch${ps}schedule.yml"
+
+
+# Reddit OAuth2 settings:
+reddit:
+  user_agent: Slow Start Rewatch Client v${version}
+  client_id: DGWt4p3WhWiQWg
+  client_secret: # Left empty by default
+  # Access permissions required by the program:
+  oauth_scope:
+    - identity
+    - read
+    - submit
+    - edit
+    - wikiedit
+    - wikiread
+    - flair
+
+# Local HTTP server used for the OAuth2 callback:
+http_server:
+  hostname: "127.0.0.1"
+  port: 65000
+
+# Reddit Cutifier configuration:
+reddit_cutifier:
+  post_update_delay: 2000 # milliseconds
+
+# Timer configuration:
+timer:
+  refresh_interval: 200 # milliseconds
+
+# Image MIME types that are supported for a post thumbnail:
+post_image_mime_types:
+  png: image/png
+  jpg: image/jpeg
+  jpeg: image/jpeg
+  gif: image/gif
