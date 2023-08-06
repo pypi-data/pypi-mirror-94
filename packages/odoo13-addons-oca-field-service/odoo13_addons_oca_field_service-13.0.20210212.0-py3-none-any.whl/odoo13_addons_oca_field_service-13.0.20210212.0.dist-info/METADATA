@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: odoo13-addons-oca-field-service
+Version: 13.0.20210212.0
+Summary: Meta package for oca-field-service Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo13-addon-base-territory
+Requires-Dist: odoo13-addon-fieldservice
+Requires-Dist: odoo13-addon-fieldservice-account
+Requires-Dist: odoo13-addon-fieldservice-activity
+Requires-Dist: odoo13-addon-fieldservice-crm
+Requires-Dist: odoo13-addon-fieldservice-fleet
+Requires-Dist: odoo13-addon-fieldservice-geoengine
+Requires-Dist: odoo13-addon-fieldservice-partner-fax
+Requires-Dist: odoo13-addon-fieldservice-recurring
+Requires-Dist: odoo13-addon-fieldservice-skill
+Requires-Dist: odoo13-addon-fieldservice-stage-server-action
+Requires-Dist: odoo13-addon-fieldservice-stage-validation
+Requires-Dist: odoo13-addon-fieldservice-vehicle
+
+UNKNOWN
+
+
