@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data_collector/data_collector.egg-info/PKG-INFO
+data_collector/data_collector.egg-info/SOURCES.txt
+data_collector/data_collector.egg-info/dependency_links.txt
+data_collector/data_collector.egg-info/requires.txt
+data_collector/data_collector.egg-info/top_level.txt

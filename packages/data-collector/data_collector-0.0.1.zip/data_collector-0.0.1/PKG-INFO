@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: data_collector
+Version: 0.0.1
+Summary: package to load data to DW
+Home-page: https://github.com/aarelaponin/data_collector.git
+Author: Aare Laponin
+Author-email: aarelaponin@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.9, <4
