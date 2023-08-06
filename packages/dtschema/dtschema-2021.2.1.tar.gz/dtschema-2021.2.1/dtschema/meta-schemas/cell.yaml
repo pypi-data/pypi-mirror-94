@@ -1,0 +1,69 @@
+# SPDX-License-Identifier: BSD-2-Clause
+# Copyright 2018 Linaro Ltd.
+# Copyright 2018 Arm Ltd.
+%YAML 1.2
+---
+$id: "http://devicetree.org/meta-schemas/cell.yaml#"
+$schema: "http://json-schema.org/draft-07/schema#"
+
+array:
+  anyOf:
+    - properties:
+        maxItems:
+          const: 1
+      required: [maxItems]
+      propertyNames:
+        enum: [maxItems, description, deprecated]
+    - properties:
+        minItems:
+          minimum: 1
+        maxItems:
+          minimum: 2
+        oneOf:
+          type: array
+          items:
+            $ref: '#/array'
+        anyOf:
+          type: array
+          items:
+            $ref: '#/array'
+        items:
+          oneOf:
+            - type: object
+              allOf:
+                - $ref: '#/array'
+            - type: array
+              items:
+                $ref: '#/single'
+            - type: array
+              maxItems: 1 # for more than 1, outer 'items' should be a schema
+              items:
+                allOf:
+                  - $ref: '#/array'
+                required:
+                  - items
+        additionalItems:
+          type: boolean
+          const: true
+        description: true
+        deprecated: true
+
+      additionalProperties: false
+
+    - $ref: '#/single'
+
+single:
+  properties:
+    description: true
+    const:
+      type: integer
+    enum:
+      items:
+        type: integer
+    minimum: {}
+    maximum: {}
+    default:
+      type: integer
+
+  propertyNames:
+    enum: [ description, deprecated, const, enum, minimum, maximum, multipleOf, default, $ref ]
