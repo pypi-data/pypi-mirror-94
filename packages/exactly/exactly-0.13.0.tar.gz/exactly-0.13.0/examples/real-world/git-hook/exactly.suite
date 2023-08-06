@@ -1,0 +1,18 @@
+[cases]
+
+
+git-hook-is-runnable.case
+
+issue-number-should-not-be-added-when-commit-has-issue-number.case
+
+issue-number-should-be-added-to-commit-message.case
+
+issue-number-must-appear-at-start-of-commit-message.case
+
+commit-should-fail-when-conflicting-issue-numbers.case
+
+
+[setup]
+
+
+def program GET_LOG_MESSAGE_OF_LAST_COMMIT = % git log -1 --format=%s

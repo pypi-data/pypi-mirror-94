@@ -1,0 +1,12 @@
+[setup]
+
+dir  a-dir
+file a-file
+
+[act]
+
+$ ls
+
+[assert]
+
+stdout num-lines == 2

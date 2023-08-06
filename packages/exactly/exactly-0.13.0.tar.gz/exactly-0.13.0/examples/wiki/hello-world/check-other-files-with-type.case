@@ -1,0 +1,12 @@
+[act]
+
+hello-world -o output.txt
+
+[assert]
+
+exists output.txt : type file
+
+contents output.txt :
+         every line : contents matches 'Hello'
+
+stderr is-empty

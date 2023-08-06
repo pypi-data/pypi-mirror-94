@@ -1,0 +1,19 @@
+[setup]
+
+file input/a.txt = 'GOOD contents'
+file input/b.txt = -contents-of -rel-home predefined-bad-contents-file.txt
+
+dir output/good
+dir output/bad
+
+[act]
+
+classify-files-by-moving-to-appropriate-dir GOOD input/ output/
+
+[assert]
+
+dir-contents input       : is-empty
+
+dir-contents output/good : matches -full { a.txt : type file }
+
+dir-contents output/bad  : matches -full { b.txt : type file }

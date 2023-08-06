@@ -1,0 +1,18 @@
+[act]
+
+hello-world
+
+[before-assert]
+
+file transformed-output.txt = -contents-of
+                              -rel-result stdout
+                              -transformed-by ( char-case -to-upper | replace '^HELLO, ' '' )
+
+
+[assert]
+
+contents transformed-output.txt :
+         every line : contents matches ^WORLD!$
+
+contents transformed-output.txt :
+         num-lines == 1

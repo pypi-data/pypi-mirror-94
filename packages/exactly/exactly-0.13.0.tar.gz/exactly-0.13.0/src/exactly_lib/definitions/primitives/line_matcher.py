@@ -1,0 +1,2 @@
+LINE_NUMBER_MATCHER_NAME = 'line-num'
+CONTENTS_MATCHER_NAME = 'contents'

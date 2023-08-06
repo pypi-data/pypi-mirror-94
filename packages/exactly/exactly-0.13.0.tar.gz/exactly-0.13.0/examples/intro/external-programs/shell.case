@@ -1,0 +1,40 @@
+#
+# The "$" instruction executes a command using the OS's shell.
+#
+# Which OS shell is used depends on the OS.  So tests that uses "$"
+# only works on platforms that has a shall that supports the features
+# and commands that are used in the test.
+#
+
+
+[setup]
+
+env EXACTLY_HOME_DIR = @[EXACTLY_HOME]@
+
+file empty-file.txt
+
+$ cp ${EXACTLY_HOME_DIR}/shell.case .
+
+
+[act]
+
+
+$ ls *.txt
+
+
+[assert]
+
+
+stdout equals <<-
+empty-file.txt
+-
+
+#
+# Assertion passes if exit code from the shell is 0.
+#
+
+$ [ -f empty-file.txt ]
+
+$ [ 0 = `wc -l < empty-file.txt` ]
+
+$ [ -f shell.case ]

@@ -1,0 +1,15 @@
+-*- org -*-
+
+<2018-04-17 tis>
+
+* Two variants of "replace"
+** Whole string (new) : REG-EX "spans" new-lines
+replace REG-EX SUBSTITUTION
+** Line based - performs the replacement on every line
+replace -lines    [-matching LINE-MATCHER] REG-EX SUBSTITUTION
+replace -per-line [-matching LINE-MATCHER] REG-EX SUBSTITUTION
+replace-per-line  [-matching LINE-MATCHER] REG-EX SUBSTITUTION
+* Add primitive: run PROGRAM
+run PROGRAM
+run COMMAND-LINE
+* selection of part that matches multi-line regex: select REG-EX

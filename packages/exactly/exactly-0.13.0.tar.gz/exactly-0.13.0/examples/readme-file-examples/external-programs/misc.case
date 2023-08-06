@@ -1,0 +1,67 @@
+[setup]
+
+run my-setup-helper-program first "second arg"
+
+run my-setup-helper-program arg
+    -stdin 'the stdin of the program'
+
+run -ignore-exit-code my-setup-helper-program
+
+
+def list DB_ARGS = -uu -pp -hlocalhost -Dd
+
+run % mysql @[DB_ARGS]@ --batch --execute "create table my_table(id int)"
+
+run % mysql @[DB_ARGS]@ --batch --execute :> create table my_table(id int)
+
+def list MYSQL_BATCH = @[DB_ARGS]@ --batch --execute
+
+file interesting-records.txt =
+     -stdout-from
+       % mysql @[MYSQL_BATCH]@ :> select * from a_table where name = "interesting"
+
+
+% touch file
+
+$ ls *.txt
+
+file root-files.txt =
+     -stdout-from % ls /
+       -transformed-by
+         run my-string-transformer-program
+
+file interesting-pgm-output.txt =
+     -stdout-from
+       -python @[EXACTLY_HOME]@/my-text-generating-program.py
+       -transformed-by
+         strip -trailing-new-lines
+
+[act]
+
+$ echo ${PATH} > output.txt
+
+[assert]
+
+run my-assert-helper-program
+
+% stat root-files.txt
+
+$ test -f root-files.txt
+
+stdout -from $ echo 'Interesting output'
+       equals "Interesting output@[NEW_LINE]@"
+
+exit-code -from my-assert-helper-program
+          == 0
+
+exists output.txt : (
+       type file
+       &&
+       run -python @[EXACTLY_HOME]@/my-file-matcher.py arg1
+       &&
+       contents run -python @[EXACTLY_HOME]@/my-string-matcher.py arg1 "arg 2"
+       )
+
+[cleanup]
+
+% mysql @[MYSQL_BATCH]@ :> drop table my_table

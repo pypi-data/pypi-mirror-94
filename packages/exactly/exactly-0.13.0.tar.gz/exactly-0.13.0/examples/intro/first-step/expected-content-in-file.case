@@ -1,0 +1,12 @@
+[act]
+
+hello-world
+
+[assert]
+
+exit-code == 0
+
+#
+# Expected output can be located in a file.
+#
+stdout equals -contents-of hello-world-output.txt

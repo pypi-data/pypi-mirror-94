@@ -1,0 +1,15 @@
+hello-world -o output.txt
+
+[before-assert]
+
+def string-transformer MY_TRANSFORMER  = char-case -to-upper | replace '^HELLO, ' ''
+
+def line-matcher       MY_LINE_MATCHER = contents matches ^WORLD!$
+
+[assert]
+
+contents output.txt :
+         -transformed-by MY_TRANSFORMER
+         every line : MY_LINE_MATCHER
+
+stderr is-empty

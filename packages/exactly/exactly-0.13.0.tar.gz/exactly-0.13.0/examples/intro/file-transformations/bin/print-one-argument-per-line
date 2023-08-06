@@ -1,0 +1,6 @@
+#!/Library/Frameworks/Python.framework/Versions/3.6/bin/python3
+
+import sys
+
+for argument in sys.argv[1:]:
+    print(argument)

@@ -1,0 +1,7 @@
+[conf]
+
+act-home = /etc
+
+[assert]
+
+exists -rel-act-home passwd : type file
