@@ -1,0 +1,75 @@
+Clinamen
+********
+
+Purpose
+=======
+**Clinamen**: Covariance-matrix-adaptation evolution strategy for Localized
+Impurities with unsupervised Machine learning Exploration of Non-elementary
+structures.
+
+
+**Clinamen** is a software package developed in order to assist in the discovery of low-energy defective configurations
+in first-principles atomistic calculations.
+
+The approach is based on a modified version of the covariance-matrix-adaptation evolution-strategy (CMA-ES), a state-of-the-art
+evolutionary algorithm for continuous-parameter multimodal optimization.
+In addition, the approach employs an unsupervised machine learning model for identifying additional local minima explored
+during the run of the evolutionary algorithm. A supervised Gaussian-process regressor trained on-the-fly during the evolutionary
+process can also be used in order to reduce the number of first-principles calculations.
+
+**Clinamen** is written mostly in Python and employs Cython and C extension modules for an increased computational speed.
+
+Installation
+============
+
+The code is available on the PyPi index.
+The easiest way to install **Clinamen** is through `pip`:
+
+::
+    
+    pip install clinamen
+
+We suggest to create a virtual environment in which the **Clinamen** code can be installed.
+
+The requirements for a successful installation are:
+
+ - `Python` version 3.8 or newer;
+ - `NumPy <https://www.numpy.org>`_ version  1.18 or newer;
+ - `SciPy <https://www.scipy.org>`_ version 1.5 or newer;
+ - `Pandas <https://pandas.pydata.org/>`_ version 1.0 or newer;
+ - `scikit-learn <https://scikit-learn.org/>`_ version 0.23 or newer;
+ - `mpi4py <https://mpi4py.readthedocs.io/>`_ version 3.0 or newer;
+ - `h5py <https://www.h5py.org/>`_ version 2.10 or newer;
+ - `Atomic Simulation Environment <https://wiki.fysik.dtu.dk/ase>`_ version 3.19 or newer;
+ - `PyTorch <https://pytorch.org/>`_ version 1.7 or newer;
+ - `GPyTorch <https://gpytorch.ai/>`_ version 1.3 or newer;
+ - `DScribe <https://singroup.github.io/dscribe/latest/>`_ version 0.4 or newer. 
+
+It might be that some packages cannot be installed directly with the **Clinamen** package using `pip`
+(for example `PyTorch` installation could fail in this way). For this reason these packages have to
+be installed manually before installing **Clinamen** with `pip`. 
+
+
+Authors
+-------
+ - Marco Arrigoni - marco.arrigoni@outlook.de, marco.arrigoni@tuwien.ac.at
+
+
+Contacts
+--------
+  - Marco Arrigoni - marco.arrigoni@tuwien.ac.at
+  - Georg K. H. Madsen - georg.madsen@tuwien.ac.at
+
+
+The meaning of the word `clinamen`
+----------------------------------
+`Clinamen` is the name that the Roman philosopher and poet Titus Lucretius Carus gave to the
+random deviations in the rectilinear motion of atoms, which, according to the Epicurean atomistic theory,
+are responsible for their collisions and aggregation into objects.
+
+In the `De Rerum Natura`, Lucretius also presents a theory of natural selection based on the random
+generation, by the Earth, of creatures of any sort, among which only the most fit ones are able to survive and reproduce.
+
+The importance of the random generation of individuals and of fitness-based selection in the doctrine of Lucretius, together
+with the fact that `clinamen` can be used as an acronym describing the main ingredients of the method 
+implemented in this package, are the main reasons for the choice of this name.
