@@ -1,0 +1,12 @@
+MANIFEST.in
+requirements.txt
+setup.py
+chrome_drivers/__init__.py
+data/__init__.py
+papers_search/__init__.py
+papers_search/command_line_search.py
+papers_search/search_papers_v2.py
+papers_search.egg-info/PKG-INFO
+papers_search.egg-info/SOURCES.txt
+papers_search.egg-info/dependency_links.txt
+papers_search.egg-info/top_level.txt
