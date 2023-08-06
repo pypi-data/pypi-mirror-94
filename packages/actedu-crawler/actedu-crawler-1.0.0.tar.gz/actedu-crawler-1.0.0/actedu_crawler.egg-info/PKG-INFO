@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: actedu-crawler
+Version: 1.0.0
+Summary: Crawl ACT Education websites' searchable documents for archival purposes.
+Home-page: https://github.com/king-millez/actedu-crawler
+Author: king-millez
+Author-email: millez.dev@gmail.com
+License: UNKNOWN
+Description: # actedu-crawler
+        
+        Crawl ACT Education websites' searchable documents for **archival** purposes.
+        
+        ## Setup
+        
+        Install dependencies:
+        
+        ```sh
+        pip3 install -r requirements.txt
+        ```
+        
+        Install [aria2c](http://aria2.github.io/)
+        
+        ## Usage
+        
+        ```sh
+        python3 -m actedu_crawler -o 'output directory' -u 'URL/domain'
+        ```
+        
+        ## Notes
+        
+        - This won't work on most private school sites which usually use custom WordPress sites rather than the ACT Government's default SquizMatrix setup.
+        
+        - This will work on some ACT Government sites outside of the Education Directorate, but since most of them are currently being upgraded there isn't much point in writing a crawler for them, *yet*.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
