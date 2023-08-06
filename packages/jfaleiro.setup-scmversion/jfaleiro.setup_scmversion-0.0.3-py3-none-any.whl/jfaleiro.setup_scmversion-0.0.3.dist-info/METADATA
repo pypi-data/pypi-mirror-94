@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: jfaleiro.setup-scmversion
+Version: 0.0.3
+Summary: Builds a pythonic version number based on scm tags and branches
+Home-page: https://gitlab.com/jfaleiro/setup_scmversion
+Author: Jorge M. Faleiro Jr.
+Author-email: j@falei.ro
+License: Affero GPL, see LICENSE for details
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+
+# setup_scmversion
+
+Builds a semantic version number based on information available on your scm (tag, branch, and number of commits).
+
+See [LICENSE](LICENSE) for important licensing information.
+
+
+## Instalation
+
+```bash
+pip install jfaleiro.setup-scmversion
+```
+
+Currently only `git` is supported.
+
+## Use
+
+A semantic version number is created from standard data available in your *scm*, i.e. tag, branch name, and number of commits from a tag or master. It supports a simple workflow:
+
+* Versions follow a simplified [semantic versioning](https://semver.org/) scheme.
+* Non-production releases are produced from release branches named `release/<version>`.
+* Non-production releases are produced from feature-releases named `feature/<version>`.
+* Production releases and releases candidates are generated from a `tag` in `master` after a release branch is merged to master. The version will match the tag.
+
+
+### Simplest Use
+
+Should apply to most projects. Tag the current version before build or deploy using a command line:
+
+```bash
+$ scmversion version
+0.0.1.dev1
+```
+
+```bash
+V=`scmversion version`
+echo $V
+0.0.1.dev1
+```
+
+or the type of version:
+
+```bash
+$ scmversion version-type
+RELEASE_BRANCH
+```
+
+The type of version can be one of `RELEASE`, `RELEASE_BRANCH`, `FEATURE_BRANCH`, or `OTHER`.
+
+
+### Setuptools
+
+
+Add this on the very top of your `setup.py`:
+
+```python
+try:
+    from ._version import __version__  # noqa: F401
+except ImportError:  # pragma: no cover
+    __version__ = "none"
+...
+```
+
+Add these parameters to `version`, `setup_requires`, and `entry_points` arguments of `setup`:
+
+```python
+setup(
+    version=__version__,
+	...
+    setup_requires=['jfaleiro.setup-scmversion'],
+	...
+    entry_points={
+        "distutils.commands": [
+            "tag-version = setup_scmversion.command:TagVersionCommand"
+        ]
+    },
+)
+```
+
+From there you can tag your version using `setuptools`:
+
+```bash
+./setup.py tag-version
+```
+
+## Versioning Schema
+
+* Release branches `release/<version>` with `nnn` differences from master will produce a `RELEASE_BRANCH` with a version `<version>.dev<nnn>`
+* Feature branches `feature/<version>` with `nnn` differences from master will produce a `FEATURE_BRANCH` with a version `<version>.dev<nnn>`
+* A tagged version `<tag>` on master will produce a `RELEASE` version `<tag>`.
+* Everything else will produce `master.dev<nnn>` for master or `no-version.dev<nnn>` for any other branch.
+
+

@@ -1,0 +1,6 @@
+[console_scripts]
+scmversion = setup_scmversion.main:main
+
+[distutils.commands]
+tag-version = setup_scmversion.command:TagVersionCommand
+
