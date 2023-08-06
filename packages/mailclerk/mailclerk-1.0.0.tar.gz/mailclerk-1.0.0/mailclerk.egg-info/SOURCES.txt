@@ -1,0 +1,9 @@
+README.md
+setup.py
+mailclerk/__init__.py
+mailclerk/api_client.py
+mailclerk.egg-info/PKG-INFO
+mailclerk.egg-info/SOURCES.txt
+mailclerk.egg-info/dependency_links.txt
+mailclerk.egg-info/requires.txt
+mailclerk.egg-info/top_level.txt
