@@ -1,0 +1,11 @@
+Flask-Login
+flask_apscheduler
+flask_mail
+libusb1
+pandas
+numpy
+PySocks
+requests
+urllib3
+simplejson
+jsonify
