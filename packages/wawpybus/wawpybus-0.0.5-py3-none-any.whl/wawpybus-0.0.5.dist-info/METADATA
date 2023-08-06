@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: wawpybus
+Version: 0.0.5
+Summary: A package providing tools to collect and analyse Warsaw open bus data
+Home-page: https://gitlab.uw.edu.pl/ig386329/pybus
+Author: Iwona Goździewska
+Author-email: i.gozdziewska@students.mimuw.edu.pl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
+Requires-Dist: geopy
+Requires-Dist: pandas
+Requires-Dist: pytest
+
+# WawPybus
+
+### A package providing tools to collect, process and analyse Warsaw Open Bus Data
+
+##### A final project for Database and network design and administration classes
+
+## Installation
+
+Package is available at PyPi and can be downloaded using pip:  
+``
+pip install wawpybus
+``
+
+PyPi project: https://pypi.org/project/wawpybus/  
+Source code: https://gitlab.uw.edu.pl/ig386329/pybus  
+
+
+##Usage
+Package is designed to collect, process and analyse Warsaw open bus data. It is easy to use and handy.
+It is modular and highly extendable     
+* It enables downloading bus position withing given time range and frequency  
+* Compares bus positions at given time with stops coordinates
+* Checks buses punctuality by downloading timetable for bus line at stop and compare arrival times between actual and timetable
+* Checks if buses exceeded speed between consecutive positions
+* Calculates mean difference in time between actual bus arrival and timetable
+* Finds bus which arrival time differs the most from timetable
+* Enables to check which buses exceeded given speed threshold
+
+Tutorial is included in package in a form of Jupyter Notebook: **WawPybus_tutorial.ipynb**    
+
+
+## Comments on Warsaw Open Data
+Data available at https://api.um.warszawa.pl/# should be improved. It is inconsistent and contains errors.
+For example once stop number is named in english once in polish as 'slupek', some stops coordinates are null, 
+json returned from api has wrong structure - each key has name 'key' and respects to actual key name, 
+the same with values.
+
+
+
+
