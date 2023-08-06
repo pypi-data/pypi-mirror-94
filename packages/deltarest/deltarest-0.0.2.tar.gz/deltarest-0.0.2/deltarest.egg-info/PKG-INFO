@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: deltarest
+Version: 0.0.2
+Summary: Interact with Delta Lake through a RESTful API.
+Home-page: http://github.com/enzobnl/delta-rest
+Author: Enzo Bonnal
+Author-email: enzobonnal@gmail.com
+License: Apache 2.
+Description: UNKNOWN
+Platform: UNKNOWN
