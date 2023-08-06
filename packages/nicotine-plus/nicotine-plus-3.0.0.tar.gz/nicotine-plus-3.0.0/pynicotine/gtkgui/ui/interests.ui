@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.18"/>
+  <object class="GtkBox" id="Main">
+    <property name="visible">1</property>
+    <property name="spacing">6</property>
+    <child>
+      <object class="GtkPaned">
+        <property name="visible">1</property>
+        <property name="can-focus">1</property>
+        <property name="hexpand">1</property>
+        <child>
+          <object class="GtkBox">
+            <property name="width-request">240</property>
+            <property name="visible">1</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">1</property>
+                <property name="halign">start</property>
+                <property name="margin-start">10</property>
+                <property name="margin-end">10</property>
+                <property name="margin-top">13</property>
+                <property name="margin-bottom">13</property>
+                <property name="label" translatable="yes">My Interests</property>
+                <attributes>
+                  <attribute name="weight" value="bold"/>
+                </attributes>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">1</property>
+                <property name="orientation">vertical</property>
+                <property name="vexpand">1</property>
+                <child>
+                  <object class="GtkScrolledWindow">
+                    <property name="visible">1</property>
+                    <property name="can-focus">1</property>
+                    <property name="vexpand">1</property>
+                    <child>
+                      <object class="GtkTreeView" id="LikesList">
+                        <property name="visible">1</property>
+                        <property name="can-focus">1</property>
+                        <property name="enable-search">0</property>
+                        <signal name="button-press-event" handler="on_til_list_clicked" swapped="no"/>
+                        <signal name="popup-menu" handler="on_popup_til_menu" swapped="no"/>
+                        <signal name="touch-event" handler="on_til_list_clicked" swapped="no"/>
+                        <child internal-child="selection">
+                          <object class="GtkTreeSelection"/>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkActionBar">
+                    <property name="visible">1</property>
+                    <child>
+                      <object class="GtkEntry" id="AddLikeEntry">
+                        <property name="visible">1</property>
+                        <property name="can-focus">1</property>
+                        <property name="hexpand">1</property>
+                        <property name="width-chars">15</property>
+                        <property name="placeholder-text" translatable="yes">Add something you like...</property>
+                        <property name="primary-icon-name">non-starred-symbolic</property>
+                        <signal name="activate" handler="on_add_thing_i_like" swapped="no"/>
+                        <signal name="icon-press" handler="on_add_thing_i_like" swapped="no"/>
+                        <style>
+                          <class name="flat"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">1</property>
+                <property name="margin-top">6</property>
+                <property name="orientation">vertical</property>
+                <property name="vexpand">1</property>
+                <child>
+                  <object class="GtkScrolledWindow">
+                    <property name="visible">1</property>
+                    <property name="can-focus">1</property>
+                    <property name="vexpand">1</property>
+                    <child>
+                      <object class="GtkTreeView" id="DislikesList">
+                        <property name="visible">1</property>
+                        <property name="can-focus">1</property>
+                        <property name="enable-search">0</property>
+                        <signal name="button-press-event" handler="on_tidl_list_clicked" swapped="no"/>
+                        <signal name="popup-menu" handler="on_popup_tidl_menu" swapped="no"/>
+                        <signal name="touch-event" handler="on_tidl_list_clicked" swapped="no"/>
+                        <child internal-child="selection">
+                          <object class="GtkTreeSelection"/>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkActionBar">
+                    <property name="visible">1</property>
+                    <child>
+                      <object class="GtkEntry" id="AddDislikeEntry">
+                        <property name="visible">1</property>
+                        <property name="can-focus">1</property>
+                        <property name="hexpand">1</property>
+                        <property name="width-chars">15</property>
+                        <property name="placeholder-text" translatable="yes">Add something you dislike...</property>
+                        <property name="primary-icon-name">action-unavailable-symbolic</property>
+                        <signal name="activate" handler="on_add_thing_i_dislike" swapped="no"/>
+                        <signal name="icon-press" handler="on_add_thing_i_dislike" swapped="no"/>
+                        <style>
+                          <class name="flat"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="resize">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkPaned">
+            <property name="visible">1</property>
+            <property name="can-focus">1</property>
+            <child>
+              <object class="GtkBox" id="RecommendationsVbox">
+                <property name="visible">1</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="visible">1</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">1</property>
+                        <property name="margin-start">6</property>
+                        <property name="margin-end">6</property>
+                        <property name="margin-top">6</property>
+                        <property name="margin-bottom">6</property>
+                        <property name="spacing">6</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">1</property>
+                            <property name="halign">start</property>
+                            <property name="hexpand">1</property>
+                            <property name="margin-start">5</property>
+                            <property name="label" translatable="yes">Recommendations</property>
+                            <attributes>
+                              <attribute name="weight" value="bold"/>
+                            </attributes>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="GlobalRecommendationsButton">
+                            <property name="visible">1</property>
+                            <property name="can-focus">1</property>
+                            <signal name="clicked" handler="on_global_recommendations_clicked" swapped="no"/>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">1</property>
+                                <property name="spacing">6</property>
+                                <child>
+                                  <object class="GtkImage">
+                                    <property name="visible">1</property>
+                                    <property name="icon-name">view-refresh-symbolic</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="visible">1</property>
+                                    <property name="label" translatable="yes">Global</property>
+                                    <property name="use-underline">1</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="RecommendationsButton">
+                            <property name="visible">1</property>
+                            <property name="can-focus">1</property>
+                            <signal name="clicked" handler="on_recommendations_clicked" swapped="no"/>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">1</property>
+                                <property name="spacing">6</property>
+                                <child>
+                                  <object class="GtkImage">
+                                    <property name="visible">1</property>
+                                    <property name="icon-name">view-refresh-symbolic</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="visible">1</property>
+                                    <property name="label" translatable="yes">Personal</property>
+                                    <property name="use-underline">1</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="visible">1</property>
+                        <property name="can-focus">1</property>
+                        <property name="vexpand">1</property>
+                        <child>
+                          <object class="GtkTreeView" id="RecommendationsList">
+                            <property name="visible">1</property>
+                            <property name="can-focus">1</property>
+                            <signal name="button-press-event" handler="on_r_list_clicked" swapped="no"/>
+                            <signal name="popup-menu" handler="on_popup_r_menu" swapped="no"/>
+                            <signal name="touch-event" handler="on_r_list_clicked" swapped="no"/>
+                            <child internal-child="selection">
+                              <object class="GtkTreeSelection"/>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="visible">1</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkLabel" id="UnrecommendationsLabel">
+                        <property name="visible">1</property>
+                        <property name="halign">start</property>
+                        <property name="margin-start">10</property>
+                        <property name="margin-end">10</property>
+                        <property name="margin-top">13</property>
+                        <property name="margin-bottom">13</property>
+                        <property name="label" translatable="yes">Unrecommendations</property>
+                        <attributes>
+                          <attribute name="weight" value="bold"/>
+                        </attributes>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="visible">1</property>
+                        <property name="can-focus">1</property>
+                        <property name="vexpand">1</property>
+                        <child>
+                          <object class="GtkTreeView" id="UnrecommendationsList">
+                            <property name="visible">1</property>
+                            <property name="can-focus">1</property>
+                            <signal name="button-press-event" handler="on_un_rec_list_clicked" swapped="no"/>
+                            <signal name="popup-menu" handler="on_popup_un_rec_menu" swapped="no"/>
+                            <signal name="touch-event" handler="on_un_rec_list_clicked" swapped="no"/>
+                            <child internal-child="selection">
+                              <object class="GtkTreeSelection"/>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="resize">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="width-request">280</property>
+                <property name="visible">1</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="visible">1</property>
+                    <property name="margin-start">6</property>
+                    <property name="margin-end">6</property>
+                    <property name="margin-top">6</property>
+                    <property name="margin-bottom">6</property>
+                    <property name="spacing">6</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">1</property>
+                        <property name="halign">start</property>
+                        <property name="hexpand">1</property>
+                        <property name="margin-start">5</property>
+                        <property name="label" translatable="yes">Similar Users</property>
+                        <attributes>
+                          <attribute name="weight" value="bold"/>
+                        </attributes>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="SimilarUsersButton">
+                        <property name="visible">1</property>
+                        <property name="can-focus">1</property>
+                        <property name="tooltip-text">Show users with similar interests</property>
+                        <signal name="clicked" handler="on_similar_users_clicked" swapped="no"/>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="visible">1</property>
+                            <property name="icon-name">view-refresh-symbolic</property>
+                          </object>
+                        </child>
+                        <style>
+                          <class name="circular"/>
+                          <class name="image-button"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkScrolledWindow">
+                    <property name="visible">1</property>
+                    <property name="can-focus">1</property>
+                    <property name="vexpand">1</property>
+                    <child>
+                      <object class="GtkTreeView" id="RecommendationUsersList">
+                        <property name="visible">1</property>
+                        <property name="can-focus">1</property>
+                        <signal name="button-press-event" handler="on_ru_list_clicked" swapped="no"/>
+                        <signal name="popup-menu" handler="on_popup_ru_menu" swapped="no"/>
+                        <signal name="touch-event" handler="on_ru_list_clicked" swapped="no"/>
+                        <child internal-child="selection">
+                          <object class="GtkTreeSelection"/>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="resize">0</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
