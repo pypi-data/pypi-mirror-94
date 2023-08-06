@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: big-sleep
+Version: 0.4.11
+Summary: Big Sleep
+Home-page: https://github.com/lucidrains/big-sleep
+Author: Phil Wang
+Author-email: lucidrains@gmail.com
+License: MIT
+Keywords: artificial intelligence,deep learning,transformers,text to image,generative adversarial networks
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: torch (>=1.7.1)
+Requires-Dist: einops (>=0.3)
+Requires-Dist: fire
+Requires-Dist: ftfy
+Requires-Dist: pytorch-pretrained-biggan
+Requires-Dist: regex
+Requires-Dist: torchvision (>=0.8.2)
+Requires-Dist: tqdm
+
+UNKNOWN
+
+

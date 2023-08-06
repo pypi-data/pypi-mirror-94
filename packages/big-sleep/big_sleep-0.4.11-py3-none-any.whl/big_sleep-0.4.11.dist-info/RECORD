@@ -1,0 +1,14 @@
+big_sleep/__init__.py,sha256=hkEhgS53-54ZLGcsq5CYEqm9zAw9vd-bU3KSxa26o8U,50
+big_sleep/big_sleep.py,sha256=5EKO-gaP2yW8vBhfhokj_b252GPi9aFAFxySxRH45Sw,11106
+big_sleep/biggan.py,sha256=0u5RVA0JjKHkkrAEtq36eKMAvaXvOTP-f13qgasjq4I,23241
+big_sleep/cli.py,sha256=Opktvb5BqeMjlAA1hyzbtR4RVtCwlfjk9umLrAKuA8Y,1574
+big_sleep/clip.py,sha256=h51CTSm15IvrqCPmyEagdEDGxCbEfjsfpU0zAspr_Rs,8626
+big_sleep/resample.py,sha256=id98rccJiOVmuSz9eVpSBm74w309l8fD8eIXZU82Ix4,2062
+big_sleep/version.py,sha256=l0RT8PECO3Q8kefoigqMq7rCaY369q99YFD90F2FCc8,23
+big_sleep/data/bpe_simple_vocab_16e6.txt,sha256=Z2A8_aLgMq13tfiAivN3idWQ22ZLJt-HBdK_izxVP8g,3194984
+big_sleep-0.4.11.dist-info/LICENSE,sha256=_nRlQFj-K6BpgI2_Nt79biB7r4hZ82NmpqPOrlqm7MU,1066
+big_sleep-0.4.11.dist-info/METADATA,sha256=gyKBHopGjVtbgXHnmWIDGRAqryh6D_DtVzozJwek0zI,805
+big_sleep-0.4.11.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+big_sleep-0.4.11.dist-info/entry_points.txt,sha256=Zzyw5LxV4Kw_RLLRHsJdvgH3UGE-br4c-FV8YqlIppM,46
+big_sleep-0.4.11.dist-info/top_level.txt,sha256=PdvHFGhHQDcbE0EtKmo4cR8Zaq4hov2Ca8vk3Ce-s8I,10
+big_sleep-0.4.11.dist-info/RECORD,,
