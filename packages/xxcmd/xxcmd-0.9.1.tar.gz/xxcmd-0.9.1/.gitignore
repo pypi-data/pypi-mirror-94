@@ -1,0 +1,13 @@
+dist
+__pycache__
+*.pyc
+.coverage
+htmlcov
+build.install
+.vscode
+build
+pkg
+src
+*.zst
+*.tar.gz
+.SRCINFO
