@@ -1,0 +1,17 @@
+pymodaq_plugins_femto/VERSION,sha256=axN4nkPlSFY0Uz3hamXYup00xMl1hYi2ZYBUNfgOsRU,5
+pymodaq_plugins_femto/__init__.py,sha256=YD9lgRdnqZGxpz_FF2pKZNTKtO1YrJiS28Ri6gUF8uw,138
+pymodaq_plugins_femto/daq_move_plugins/__init__.py,sha256=3gcm0_ff5vZa8-zXW8AXj-yXkqtowefk1EdFiDY1jZc,483
+pymodaq_plugins_femto/daq_viewer_plugins/__init__.py,sha256=ajz1GSNU9xYVrFEDSz6Xwg7amWQ_yvW75tQa1ZvRIWc,3
+pymodaq_plugins_femto/daq_viewer_plugins/plugins_0D/__init__.py,sha256=zWncrdNxbgpb2RG5xVjEkITM13bBnKelS2Izt8eqDGU,487
+pymodaq_plugins_femto/daq_viewer_plugins/plugins_1D/__init__.py,sha256=oREg_nYD8kxfERPujPRc4KAMFnhN7UIpnPAizJd0-Kk,487
+pymodaq_plugins_femto/daq_viewer_plugins/plugins_1D/daq_1Dviewer_Femto.py,sha256=X_SYbMHb_P141Q6HPsTD8X1oXzAJ1T06uqMx5CQsN_0,11283
+pymodaq_plugins_femto/daq_viewer_plugins/plugins_2D/__init__.py,sha256=ImKMNjX1EKXh-lhcgALosH6kEKZ3byU3-r5aoHJL03o,488
+pymodaq_plugins_femto/daq_viewer_plugins/plugins_ND/__init__.py,sha256=HEtV8mDAlcGtKEVmHTLAvEsOCok4lazunGiJtnbrQIs,487
+pymodaq_plugins_femto/data/spectral_data.csv,sha256=ilnHycVzZ6DdgtBxw2lqKOlG5ClLE30np-DxCOUkF1A,36345
+pymodaq_plugins_femto/hardware/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymodaq_plugins_femto-0.0.1.dist-info/LICENSE,sha256=azGNQD9Uk7YtLeTwFCwzrm0IpC3yF8OHMIiPtTOFPqw,1073
+pymodaq_plugins_femto-0.0.1.dist-info/METADATA,sha256=WNMRocgyFqyl5MltKlvkypwlSgeYDY7S5QkAUNID3hA,1888
+pymodaq_plugins_femto-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pymodaq_plugins_femto-0.0.1.dist-info/entry_points.txt,sha256=BdzgQ4Q9396YpQuiq1yQnUfUwSzsgf6pghLxM4dEL30,49
+pymodaq_plugins_femto-0.0.1.dist-info/top_level.txt,sha256=5rGgFI1QVlZMBt1D4DZAyvStwDNUUzOvzqESD-N-HfI,22
+pymodaq_plugins_femto-0.0.1.dist-info/RECORD,,
