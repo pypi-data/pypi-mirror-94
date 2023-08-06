@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: vzg.jconv
+Version: 1.0.15
+Summary: Python library to create JSON Data
+Home-page: https://github.com/gbv/vzg.jconv
+Author: Marc-J. Tegethoff
+Author-email: tegethoff@gbv.de
+License: GNU Affero General Public License v3
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: VZG Python JSON XML JAST
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: >=3.6
