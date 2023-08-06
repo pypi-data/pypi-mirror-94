@@ -1,0 +1,8 @@
+TEST_ETAE/__init__.py,sha256=--8fj6xz7vt6Eg_mtzKyXANlkXwJZMln9j-GkqtD9_U,157
+TEST_ETAE/main.py,sha256=04kKt32BfnnpygrbjeCwlsgy8mZvWKtc0fpjxJJQw4Q,1550
+TEST_ETAE/externals/__init__.py,sha256=0VJkXlLNRO60TIlSf2JG02L-XvNwH8imiGeUoR8g3g8,307
+TEST_ETAE/externals/my.py,sha256=O76lZyX9dCK7ZqJaYd9k9lVKwvTELEqMjBJOByVTDX4,4714
+TEST_ETAE-0.0.4.dist-info/METADATA,sha256=UJhamwOyJQH7qMiYS5GtxRBjq82zpDQRa05l-zH9x9A,514
+TEST_ETAE-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+TEST_ETAE-0.0.4.dist-info/top_level.txt,sha256=3x_hKyO3rQ181MiuynbzpnNG7B9WwEmGZLQ-EzgVIfI,10
+TEST_ETAE-0.0.4.dist-info/RECORD,,
