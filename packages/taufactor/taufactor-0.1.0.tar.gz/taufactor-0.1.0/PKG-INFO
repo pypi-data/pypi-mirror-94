@@ -1,0 +1,73 @@
+Metadata-Version: 1.2
+Name: taufactor
+Version: 0.1.0
+Summary: TauFactor is an application for calculating tortuosity factors from tomographic data
+Home-page: https://github.com/tldr-group/taufactor
+Author: Isaac Squires
+Author-email: is21@ic.ac.uk
+License: MIT license
+Description: =========
+        TauFactor
+        =========
+        
+        
+        .. image:: https://img.shields.io/pypi/v/taufactor.svg
+                :target: https://pypi.python.org/pypi/taufactor
+        
+        .. image:: https://readthedocs.org/projects/taufactor/badge/?version=latest
+                :target: https://taufactor.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        .. image:: https://pyup.io/repos/github/tldr-group/taufactor/shield.svg
+                :target: https://pyup.io/repos/github/tldr-group/taufactor/
+                :alt: Updates
+        
+        
+        .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
+                :target: https://opensource.org/licenses/MIT
+        
+        .. image:: tau_example.png
+                :width: 400
+                :alt: TauFactor
+        
+        TauFactor is an application for calculating tortuosity factors from tomographic data. TauFactor uses CuPy_ which is an implementation of NumPy-compatible multi-dimensional array on CUDA. **You will need an NVIDIA CUDA GPU to run TauFactor.**
+        
+        .. _CuPy: https://github.com/cupy/cupy 
+        
+        
+        * Free software: MIT license
+        * Documentation: https://taufactor.readthedocs.io.
+        
+        
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2021-02-09)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: taufactor
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
