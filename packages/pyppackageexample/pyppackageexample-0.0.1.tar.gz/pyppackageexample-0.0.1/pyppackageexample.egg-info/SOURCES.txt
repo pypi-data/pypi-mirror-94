@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+economypackage/__init__.py
+economypackage/mathseconomy/__init__.py
+economypackage/mathseconomy/mymathsutils.py
+pyppackageexample.egg-info/PKG-INFO
+pyppackageexample.egg-info/SOURCES.txt
+pyppackageexample.egg-info/dependency_links.txt
+pyppackageexample.egg-info/top_level.txt
