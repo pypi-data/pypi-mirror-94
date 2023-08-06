@@ -1,0 +1,6 @@
+include *.py LICENSE MANIFEST.in
+exclude *.egg
+global-include *.rst *.txt *.ini *.cfg
+prune build
+prune dist
+prune .tox
