@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: lite3
+Version: 0.0.1
+Summary: Maintain sqlite3 databases easily and without MYSQL syntax
+Home-page: UNKNOWN
+Author: Rogers Kabuye
+Author-email: rogerskabuye0@gmail.com
+License: UNKNOWN
+Description: # lite3
+        It helps to create an sqlite3 database easily and maintainable without MYSQL syntax with just using simple familar python functions with the same names as sqlite3 python builtin module.
+        
+        ## Installation
+        '''pip install lite3'''
+        
+        ## Documentation
+        '''https://lite3.herokuapp.com/'''
+        
+        ## Usage
+        
+        '''python
+        import lite3
+        
+        db = lite3.lite('customers.db', 'connect', 'cursor')
+        
+        table = 'Common'
+        cols = ['name', 'gender']
+        
+        db.execute(table, cols)
+        # creates a database with a Table name common with two columns
+        
+        '''
+        
+        Change Log
+        ==========
+        
+        0.0.1 (11/02/2021)
+        -------------------
+        - First Release
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
