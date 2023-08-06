@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pip-with-requires-python
+Version: 1.0.1
+Summary: install pip with Requires-Python support
+Home-page: https://github.com/graingert/pip-with-requires-python
+License: UNKNOWN
+Author: Thomas Grainger
+Author-email: pip-with-requires-python@graingert.co.uk
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pip~=20.3; python_version < '3'
+Requires-Dist: pip~=10.0; python_version == '3.3.*'
+Requires-Dist: pip~=19.1.1; python_version == '3.4.*'
+Requires-Dist: pip~=20.3; python_version == '3.5.*'
+Requires-Dist: pip>=21; python_version > '3.5'
+
+# pip-with-requires-python
+
+install a pip with Requires-Python support
+
+```
+pip install -U pip-with-requires-python
+pip install -U pip
+```
+
