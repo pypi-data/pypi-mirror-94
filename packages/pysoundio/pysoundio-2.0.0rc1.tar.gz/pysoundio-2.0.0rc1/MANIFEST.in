@@ -1,0 +1,16 @@
+include LICENSE.txt
+include README.rst
+include examples/play.py
+include examples/devices.py
+include examples/record.py
+include examples/sine.py
+include tests/__init__.py
+include tests/test_pysoundio.py
+include pysoundio/builder/soundio.py
+include pysoundio/include/soundio/*
+include pysoundio/libraries/darwin/*
+include pysoundio/libraries/linux/*
+include pysoundio/libraries/windows/win/x64/*
+include pysoundio/libraries/windows/win/x86/*
+exclude pysoundio/libraries/windows/.git
+exclude pysoundio/libraries/windows/.gitignore

@@ -1,0 +1,6 @@
+[console_scripts]
+pysio_devices = examples.devices:main
+pysio_play = examples.play:main
+pysio_record = examples.record:main
+pysio_sine = examples.sine:main
+

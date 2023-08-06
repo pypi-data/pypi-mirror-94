@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: pysoundio
+Version: 2.0.0rc1
+Summary: Python wrapper for libsoundio
+Home-page: http://pysoundio.readthedocs.io/en/latest/
+Author: Joe Todd
+Author-email: joextodd@gmail.com
+License: MIT
+Download-URL: https://github.com/joextodd/pysoundio/archive/2.0.0rc1.tar.gz
+Description: A robust, cross-platform solution for real-time audio
+Keywords: audio,sound,stream
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Multimedia :: Sound/Audio
+Requires-Python: >=3.6
