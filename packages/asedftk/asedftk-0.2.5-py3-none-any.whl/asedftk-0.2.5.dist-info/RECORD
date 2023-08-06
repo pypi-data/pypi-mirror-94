@@ -1,0 +1,14 @@
+asedftk/__init__.py,sha256=hpEBICo6YeqeOgOSjm3u7KaHFW6sMcVHzthAhj1jSAU,9168
+asedftk/juliatests.jl,sha256=a2pcN5VuFitscIvbnFcTKmsXTUCh11BEeGmbtq4H4lk,8041
+asedftk/precompile.jl,sha256=aOnynkc6mYyJxLBddV_muovdYn66ivOZuzp1VjsFidw,636
+asedftk/run_calculation.jl,sha256=QoeVjTUKcQyIfjciihpFHdZTRwBkxObuFT67JOOfJ0c,9003
+asedftk/test_ase_default_calculator_tests.py,sha256=sjpGyfHsaQx72yinhAZM8CbJJTXR4JoS4y6Ya7Begog,3890
+asedftk/test_juliatests.py,sha256=vSdGJyj482TsBVhWuBhaxWgPQpkVT-hdJCq3B28ZkYM,637
+asedftk/test_registering.py,sha256=frnqVmjo4V_C1VcGhymUMf01L3uGdLhXkK1ZDnKXZOg,134
+asedftk/test_silicon.py,sha256=cJ6L3n2uqlDoR40XyRKJ912wmfHRl141ae-r7CIgxRc,580
+asedftk/dftk_environment/Project.toml,sha256=-yjl6eEAuI6Y6ratDZydCFkEJcoCAKmFmdgDr6v1Ic4,487
+asedftk-0.2.5.dist-info/LICENSE,sha256=mBGCCRl7WZIDUCL-w5GdFwzlyjO--EiBkOQG_qXWPHY,1074
+asedftk-0.2.5.dist-info/METADATA,sha256=kte618qVDxjCGkXayV6Vi0MY563A---mwMtrSMPuRSs,3139
+asedftk-0.2.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+asedftk-0.2.5.dist-info/top_level.txt,sha256=Ojn-JAVIO9Zxacud09p5NhjCAhflwK_a1BYVnh6Lt6o,8
+asedftk-0.2.5.dist-info/RECORD,,
