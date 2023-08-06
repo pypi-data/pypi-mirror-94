@@ -1,0 +1,17 @@
+sqlalchemy<1.4,>=1.3.22
+pandas<1.2,>=1.1.5
+pyyaml<5.4,>=5.3.1
+numpy==1.19.3
+click<7.2,>=7.1.2
+
+[mssql]
+pyodbc<4.1,>=4.0.30
+
+[mysql]
+pymysql[rsa]<0.11,>=0.10.1
+
+[oracle]
+cx_Oracle<8.2,>=8.1.0
+
+[postgres]
+psycopg2-binary<2.9,>=2.8.6
