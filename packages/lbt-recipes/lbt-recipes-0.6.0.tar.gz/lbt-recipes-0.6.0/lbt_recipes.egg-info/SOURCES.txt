@@ -1,0 +1,103 @@
+.gitignore
+.releaserc.json
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+README.md
+deploy.sh
+dev-requirements.txt
+requirements.txt
+setup.cfg
+setup.py
+.dependabot/config.yml
+.github/workflows/ci.yaml
+lbt_recipes/__init__.py
+lbt_recipes/recipe.py
+lbt_recipes.egg-info/PKG-INFO
+lbt_recipes.egg-info/SOURCES.txt
+lbt_recipes.egg-info/dependency_links.txt
+lbt_recipes.egg-info/requires.txt
+lbt_recipes.egg-info/top_level.txt
+lbt_recipes/annual_daylight/package.json
+lbt_recipes/annual_daylight/run.py
+lbt_recipes/annual_daylight/flow/__init__.py
+lbt_recipes/annual_daylight/flow/main.py
+lbt_recipes/annual_daylight/flow/dependencies/__init__.py
+lbt_recipes/annual_daylight/flow/dependencies/annual_daylight_ray_tracing.py
+lbt_recipes/daylight_factor/package.json
+lbt_recipes/daylight_factor/run.py
+lbt_recipes/daylight_factor/flow/__init__.py
+lbt_recipes/daylight_factor/flow/main.py
+lbt_recipes/daylight_factor/flow/dependencies/__init__.py
+lbt_recipes/daylight_factor/flow/dependencies/daylight_factor_ray_tracing.py
+tests/__init__.py
+tests/recipes_test.py
+tests/assets/inputs.json
+tests/assets/project folder/model.hbjson
+tests/assets/project folder/weather.wea
+tests/assets/project folder/annual-daylight-test/__inputs__.json
+tests/assets/project folder/annual-daylight-test/model.hbjson
+tests/assets/project folder/annual-daylight-test/weather.wea
+tests/assets/project folder/annual-daylight-test/__params/model/grid/_info.json
+tests/assets/project folder/annual-daylight-test/model/folder.cfg
+tests/assets/project folder/annual-daylight-test/model/aperture/aperture.blk
+tests/assets/project folder/annual-daylight-test/model/aperture/aperture.mat
+tests/assets/project folder/annual-daylight-test/model/aperture/aperture.rad
+tests/assets/project folder/annual-daylight-test/model/grid/TestRoom_1.json
+tests/assets/project folder/annual-daylight-test/model/grid/TestRoom_1.pts
+tests/assets/project folder/annual-daylight-test/model/grid/TestRoom_2.json
+tests/assets/project folder/annual-daylight-test/model/grid/TestRoom_2.pts
+tests/assets/project folder/annual-daylight-test/model/grid/_info.json
+tests/assets/project folder/annual-daylight-test/model/scene/envelope.blk
+tests/assets/project folder/annual-daylight-test/model/scene/envelope.mat
+tests/assets/project folder/annual-daylight-test/model/scene/envelope.rad
+tests/assets/project folder/annual-daylight-test/model/scene/shades.blk
+tests/assets/project folder/annual-daylight-test/model/scene/shades.mat
+tests/assets/project folder/annual-daylight-test/model/scene/shades.rad
+tests/assets/project folder/annual-daylight-test/resources/scene.oct
+tests/assets/project folder/annual-daylight-test/resources/sky.dome
+tests/assets/project folder/daylight-factor-test/__inputs__.json
+tests/assets/project folder/daylight-factor-test/daylight_factor_ray_tracing.done
+tests/assets/project folder/daylight-factor-test/model.hbjson
+tests/assets/project folder/daylight-factor-test/__params/model/grid/_info.json
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_1/daylight_factor_ray_tracing.done
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_1/ray_tracing.done
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_1/__params/output/grids_info.json
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_1/results/grid_0000.res
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_1/results/grid_0001.res
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_1/results/grid_0002.res
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_1/sub_grids/grid_0000.pts
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_1/sub_grids/grid_0001.pts
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_1/sub_grids/grid_0002.pts
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_1/sub_grids/grids_info.json
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/daylight_factor_ray_tracing.done
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/ray_tracing.done
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/__params/output/grids_info.json
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/results/grid_0000.res
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/results/grid_0001.res
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/results/grid_0002.res
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/results/grid_0003.res
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/sub_grids/grid_0000.pts
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/sub_grids/grid_0001.pts
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/sub_grids/grid_0002.pts
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/sub_grids/grid_0003.pts
+tests/assets/project folder/daylight-factor-test/initial_results/TestRoom_2/sub_grids/grids_info.json
+tests/assets/project folder/daylight-factor-test/model/folder.cfg
+tests/assets/project folder/daylight-factor-test/model/aperture/aperture.blk
+tests/assets/project folder/daylight-factor-test/model/aperture/aperture.mat
+tests/assets/project folder/daylight-factor-test/model/aperture/aperture.rad
+tests/assets/project folder/daylight-factor-test/model/grid/TestRoom_1.json
+tests/assets/project folder/daylight-factor-test/model/grid/TestRoom_1.pts
+tests/assets/project folder/daylight-factor-test/model/grid/TestRoom_2.json
+tests/assets/project folder/daylight-factor-test/model/grid/TestRoom_2.pts
+tests/assets/project folder/daylight-factor-test/model/grid/_info.json
+tests/assets/project folder/daylight-factor-test/model/scene/envelope.blk
+tests/assets/project folder/daylight-factor-test/model/scene/envelope.mat
+tests/assets/project folder/daylight-factor-test/model/scene/envelope.rad
+tests/assets/project folder/daylight-factor-test/model/scene/shades.blk
+tests/assets/project folder/daylight-factor-test/model/scene/shades.mat
+tests/assets/project folder/daylight-factor-test/model/scene/shades.rad
+tests/assets/project folder/daylight-factor-test/resources/100000_lux.sky
+tests/assets/project folder/daylight-factor-test/resources/scene.oct
+tests/assets/project folder/daylight-factor-test/results/TestRoom_1.res
+tests/assets/project folder/daylight-factor-test/results/TestRoom_2.res
