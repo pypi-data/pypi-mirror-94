@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: Enx
+Version: 0.1
+Summary: A package to help me and maybe other people use more efficient lists
+Home-page: https://github.com/shachy/Enx
+Author: shachy
+Author-email: shachar262@gmail.com
+License: MIT
+Download-URL: https://github.com/shachy/Enx/archive/0.1.zip
+Description: UNKNOWN
+Keywords: list,vector,enx
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
