@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pioneer-sdk
+Version: 0.2.4
+Summary: Programming tools for programming geoscan pioneer drone
+Home-page: https://github.com/geoscan/pioneer_sdk
+Author: geoscan
+Author-email: info@geoscan.aero
+License: MIT
+Keywords: mavlink,pioneer,geoscan
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: pymavlink
+
+UNKNOWN
+
+
