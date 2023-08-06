@@ -1,0 +1,14 @@
+iso20275/Cleaned - ISO-20275 - 2017-11-30.csv,sha256=iGx5wIjGPwsvRG8rBWFLiwkU7a0JpJpFY9wWYmdf9BM,250023
+iso20275/Cleaned - ISO-20275 - 2019-11-06.csv,sha256=x7zX-LytwdKqupt4DfMLgwIV4C5pZ2NDTaxdrf_xMoQ,411598
+iso20275/ISO-20275 - 2017-11-30.csv,sha256=NYvbn5vnDRl0LCx54LsY8JVuM6uzE1QXd0Cre_nMlZI,253216
+iso20275/ISO-20275 - 2019-11-06.csv,sha256=x9QGzsrOKMI0ipir9euMdIPo5ds7z7IR7LAwUnymgqY,411652
+iso20275/__init__.py,sha256=pBdalSaw-j_3zhTbz_c_vJUsTf-K81uNkxBL53CEWtE,6150
+iso20275/merge_additional_legal_forms.py,sha256=DvOu9DYSBWlvnY_QQ6zvXrVK5A91ve_QesgymTtr5KQ,4209
+iso20275/trim.py,sha256=XXovV4Q9abb558kK99VXsDiDaL5Yn7tQ4EWKaz2GsOY,817
+tests/__init__.py,sha256=dr_7VwyTfgzin4X1_qY6RVSvD3TSUZ-ghybkg6q8l70,30
+tests/test_iso20275.py,sha256=hpOEfU5AbLa-yN-dNbzjiKBLZSDI6zdKdsRwAdnVBkU,3833
+iso_20275-0.0.13.dist-info/LICENSE,sha256=LSZm8DCw0NyIRM9WMeyab4YYHgOEnF_8XxOTDAlJ60o,1088
+iso_20275-0.0.13.dist-info/METADATA,sha256=0ABqRurBu-cQZNUmZv5sr3VrI8TC_c-iAmuWXt3phc4,14599
+iso_20275-0.0.13.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+iso_20275-0.0.13.dist-info/top_level.txt,sha256=zOGxyPbijWbGWTOP_uLOm6EBmCahzJ4DJguZHyAeFc0,15
+iso_20275-0.0.13.dist-info/RECORD,,
