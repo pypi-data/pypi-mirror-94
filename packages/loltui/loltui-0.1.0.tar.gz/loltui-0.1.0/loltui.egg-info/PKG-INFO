@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: loltui
+Version: 0.1.0
+Summary: LoL assistant with a TUI-interface
+Home-page: https://github.com/j-nikki/loltui
+Author: j-nikki
+Author-email: 72250615+j-nikki@users.noreply.github.com
+License: UNKNOWN
+Description: # loltui
+        
+        This is a proof-of-concept LoL assistant using a TUI-interface. When you join a lobby it shows the following about each of the players.
+        
+        - Recent ranked game outcomes
+        - Mastery points for hovered champion
+        - Last season end rank and current rank
+        
+        See LICENSE for terms of use.
+        
+        ## Installation
+        
+        1. `git clone git@github.com:j-nikki/loltui.git`
+        2. `pip install loltui`
+        
+        ## Usage
+        
+        1. `py -m loltui --help`
+        
+        ## Creating EXE
+        
+        1. `py -m loltui --exe` (undocumented flag)
+        2. Use created `loltui.exe`
+        
+        ## Acknowledgments
+        
+        League of Legends is a Riot Games product. loltui is not associated with Riot Games.
+        <a target="_blank" href="https://icons8.com/icons/set/console">Console icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        
+Keywords: lol league of legends champ champion select
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Topic :: Games/Entertainment :: Real Time Strategy
+Requires-Python: ~=3.9
+Description-Content-Type: text/markdown
