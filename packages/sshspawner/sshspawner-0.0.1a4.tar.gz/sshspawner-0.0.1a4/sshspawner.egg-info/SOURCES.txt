@@ -1,0 +1,9 @@
+README.rst
+setup.py
+sshspawner/__init__.py
+sshspawner/sshspawner.py
+sshspawner.egg-info/PKG-INFO
+sshspawner.egg-info/SOURCES.txt
+sshspawner.egg-info/dependency_links.txt
+sshspawner.egg-info/requires.txt
+sshspawner.egg-info/top_level.txt
