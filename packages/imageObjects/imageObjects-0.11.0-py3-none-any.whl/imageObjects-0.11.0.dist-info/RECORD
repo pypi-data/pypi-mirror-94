@@ -1,0 +1,14 @@
+imageObjects/ContourObject.py,sha256=qi1PLxCbnCF8SXSr2sMa5WMa-TyWSoiCL8HQY5FZRfU,6708
+imageObjects/ImageObject.py,sha256=nFGv2SqTdpbumfXtjiLl0Zdinr4cxCbjuXrA5rfFxZ0,19432
+imageObjects/LineObject.py,sha256=bxZ1KjiYBOLkPDpbn4m2e4Q9bI9O4T2GDBZ5iYLPbxE,8916
+imageObjects/PolySupport.py,sha256=4JC6Pf5See0EAA3Z9EyaBPq38uK0DUzUBShFBrrpJzA,3354
+imageObjects/__init__.py,sha256=W9q3gejdLiXgM-0hxnQaFTlfIDS3Ba8_z1JcIEUD9QU,286
+imageObjects/Support/__init__.py,sha256=0MB-kNgWYHBtUJF3STo42dlPFFtKH1S1lR2MrA4XO1Q,150
+imageObjects/Support/_create_as_image.py,sha256=Py7-OnMdJEwiHr8THpe0Zk1hLqcqrnw6UzLTJFdL2zM,2590
+imageObjects/Support/_extract_from_image.py,sha256=oZVGNd2x4UOFeqWZn3i9J_suOy5Wdk9U7Pe1u3nChwM,6523
+imageObjects/Support/_misc.py,sha256=P8LwfKM-e7f4PkfL2rMVYc3Ih-gOEmJlZ6PUdci0PYY,397
+imageObjects-0.11.0.dist-info/LICENSE,sha256=m6Hmim3NNA-_y97X6yarvaf6IUerwLQFF3hlCXsc0KI,1090
+imageObjects-0.11.0.dist-info/METADATA,sha256=3EAk-TKRS2vmY2ficR1hznOMANHOFn3s9jnlXSska34,2111
+imageObjects-0.11.0.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+imageObjects-0.11.0.dist-info/top_level.txt,sha256=y3BFITj40gIqW-xzvDt7TnnfbEQN-IE60b0P4i_NVyo,13
+imageObjects-0.11.0.dist-info/RECORD,,
