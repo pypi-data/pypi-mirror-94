@@ -1,0 +1,10 @@
+README.md
+setup.py
+one_cli_plugin_foundation.egg-info/PKG-INFO
+one_cli_plugin_foundation.egg-info/SOURCES.txt
+one_cli_plugin_foundation.egg-info/dependency_links.txt
+one_cli_plugin_foundation.egg-info/requires.txt
+one_cli_plugin_foundation.egg-info/top_level.txt
+plugin_foundation/__init__.py
+plugin_foundation/data.py
+plugin_foundation/jinja2_env.py
