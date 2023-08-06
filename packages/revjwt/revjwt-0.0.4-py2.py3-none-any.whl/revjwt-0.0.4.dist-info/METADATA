@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: revjwt
+Version: 0.0.4
+Summary: revtel jwt encode and decode tools
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: ChienHsiao
+Author-email: chien.hsiao@revteltech.com
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pyjwt >= 2.0.0
+Requires-Dist: jwcrypto
+Requires-Dist: google-auth
+Requires-Dist: boto3
