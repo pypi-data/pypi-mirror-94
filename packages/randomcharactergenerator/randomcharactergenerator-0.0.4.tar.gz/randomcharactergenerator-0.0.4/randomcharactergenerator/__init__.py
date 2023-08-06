@@ -1,0 +1,1 @@
+from randomcharactergenerator.code import *
