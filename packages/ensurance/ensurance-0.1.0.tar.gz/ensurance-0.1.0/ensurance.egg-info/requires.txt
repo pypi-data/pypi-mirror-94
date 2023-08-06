@@ -1,0 +1,7 @@
+numpy
+numpydoc
+pytest
+sphinx_rtd_theme
+
+[test]
+coverage
