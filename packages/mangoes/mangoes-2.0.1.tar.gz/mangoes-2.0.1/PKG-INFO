@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mangoes
+Version: 2.0.1
+Summary: Mangoes 2.0 is a toolbox for constructing and evaluating static or contextual token vector representations (aka word embeddings).
+Home-page: https://gitlab.inria.fr/magnet/mangoes/
+Author: Inria - Magnet
+Author-email: nathalie.vauquier@inria.fr
+License: LGPL
+Download-URL: https://gitlab.inria.fr/magnet/mangoes/repository/2.0.0/archive.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Provides-Extra: visualize
+Provides-Extra: generator
