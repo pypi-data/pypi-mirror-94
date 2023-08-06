@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: search-that-hash
+Version: 0.1.3
+Summary: Search hashes quickly before cracking them
+Author: Jayy
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: appdirs (>=1.4.4,<2.0.0)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: loguru (>=0.5.2,<0.6.0)
+Requires-Dist: name-that-hash (>=0.8.0,<0.9.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: rich (>=9.10.0,<10.0.0)
+Requires-Dist: toml (>=0.10.1,<0.11.0)
