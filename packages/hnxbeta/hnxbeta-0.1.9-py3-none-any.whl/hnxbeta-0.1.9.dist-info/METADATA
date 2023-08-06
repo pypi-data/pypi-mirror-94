@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: hnxbeta
+Version: 0.1.9
+Summary: HyperNetX is a Python library for the creation and study of hypergraphs.
+Home-page: https://github.com/pnnl/HyperNetX
+Author: Brenda Praggastis, Dustin Arendt, Emilie Purvine, Cliff Joslyn
+Author-email: hypernetx@pnnl.gov
+License: 3-Clause BSD license
+Platform: UNKNOWN
+Requires-Dist: networkx (<3.0,>=2.2)
+Requires-Dist: numpy (<2.0,>=1.15.0)
+Requires-Dist: scipy (<2.0,>=1.1.0)
+Requires-Dist: matplotlib (>3.0)
+Requires-Dist: scikit-learn (>=0.20.0)
+Provides-Extra: all
+Requires-Dist: sphinx (>=1.8.2) ; extra == 'all'
+Requires-Dist: nb2plots (>=0.6) ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme (>=0.4.2) ; extra == 'all'
+Requires-Dist: pytest (>=4.0) ; extra == 'all'
+Requires-Dist: jupyter (>=1.0) ; extra == 'all'
+Requires-Dist: pandas (>=0.23) ; extra == 'all'
+Provides-Extra: documentation
+Requires-Dist: sphinx (>=1.8.2) ; extra == 'documentation'
+Requires-Dist: nb2plots (>=0.6) ; extra == 'documentation'
+Requires-Dist: sphinx-rtd-theme (>=0.4.2) ; extra == 'documentation'
+Provides-Extra: notebooks
+Requires-Dist: jupyter (>=1.0) ; extra == 'notebooks'
+Requires-Dist: pandas (>=0.23) ; extra == 'notebooks'
+Provides-Extra: testing
+Requires-Dist: pytest (>=4.0) ; extra == 'testing'
+Provides-Extra: tutorials
+Requires-Dist: jupyter (>=1.0) ; extra == 'tutorials'
+Requires-Dist: pandas (>=0.23) ; extra == 'tutorials'
+
+
+Hnxbeta is a development version of HyperNetX
+intended for super users to test and give feedback.
+Please install in a virtual environment and send comments 
+and bug reports to `hypernetx@pnnl.gov`. 
+
+The HyperNetX library provides classes and methods for complex network data.
+HyperNetX uses data structures designed to represent set systems containing
+nested data and/or multi-way relationships. The library generalizes traditional
+graph metrics to hypergraphs. It can be found at `https://github.com/pnnl/HyperNetX`
+
+Hnxbeta has C++ support available from the NWHypergraph library.
+It is available via `pip install nwhy`.
+This library is still in development and will be updated frequently on PyPI.
+At present it is only available for OSX and Centos7.
+To use, first `conda install tbb` in your environment, note that pip does not
+install the correct version of tbb at present.
+
+
