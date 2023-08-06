@@ -1,0 +1,6 @@
+[ops_reactive_interface.provides]
+loadbalancer = loadbalancer_interface:LBProducer
+
+[ops_reactive_interface.requires]
+loadbalancer = loadbalancer_interface:LBConsumer
+
