@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+lib/run_dynamodblocal/__init__.py
+lib/run_dynamodblocal/version.py
+lib/run_dynamodblocal.egg-info/PKG-INFO
+lib/run_dynamodblocal.egg-info/SOURCES.txt
+lib/run_dynamodblocal.egg-info/dependency_links.txt
+lib/run_dynamodblocal.egg-info/requires.txt
+lib/run_dynamodblocal.egg-info/top_level.txt
