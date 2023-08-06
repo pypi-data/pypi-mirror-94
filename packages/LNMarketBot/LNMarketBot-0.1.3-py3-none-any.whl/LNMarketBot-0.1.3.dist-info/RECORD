@@ -1,0 +1,15 @@
+LNMarketBot/BacktestBroker.py,sha256=PuYc64-7BysM2-bq7KPb2C_FIFsxy6sml57-4-hVW3s,10769
+LNMarketBot/Bot.py,sha256=zYAD9Qazn3XQLnCETRHhWhOvDVxt15KNL494ToT2pHs,1391
+LNMarketBot/Broker.py,sha256=58xa1jlpW_Fn4EpC9A6rOyiXwj2DH_uxIomeVrxWAF0,1033
+LNMarketBot/CSVData.py,sha256=TJY7WFtL0ofkA-d0IbL1lj926spjAJxoPOjBvUrpQT8,1642
+LNMarketBot/Data.py,sha256=JsglUHesAtpW1M2vGx0IosoWEgWcIHjUxe_hq3S-8yg,360
+LNMarketBot/KrakenData.py,sha256=3VTqhNhWmyr56VoEN8LOUwMo91czf5r_8tWK6gGi1oE,1606
+LNMarketBot/LNMBroker.py,sha256=Em3qI36QRF8AiaiC_XY9uYfGnlLaBD5Nb-C1n2fxWgs,3855
+LNMarketBot/Notifier.py,sha256=NKynxhfGVA7w5k2xiWEbC_3sIM5PTtbIhsDpWF1sg_g,2506
+LNMarketBot/Strategy.py,sha256=4pE8YDf1mRpXraXlXD58YmqDtDYzEs6Kiaa2IzBqPts,801
+LNMarketBot/__init__.py,sha256=T-HCnhN8f51Lko1MuKIlWuA8rhgx7ckYxiD1aP5LDI4,250
+LNMarketBot-0.1.3.dist-info/LICENSE,sha256=bj4Fg0oR4S-tJEKw0TFbpsVEjyfr6u2tvMlZsPbBklY,1071
+LNMarketBot-0.1.3.dist-info/METADATA,sha256=nwGcOZ5VBTcyxpQs3XBK64c4dWav7HMN9cfSkHy6VDw,3596
+LNMarketBot-0.1.3.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+LNMarketBot-0.1.3.dist-info/top_level.txt,sha256=cw8yHyvDMZOQpdA8PFz7UgMNPnbU9JInmhlIcqj5eZU,12
+LNMarketBot-0.1.3.dist-info/RECORD,,
