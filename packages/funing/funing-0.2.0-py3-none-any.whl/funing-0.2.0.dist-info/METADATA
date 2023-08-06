@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: funing
+Version: 0.2.0
+Summary: A face recognition gui
+Home-page: https://github.com/larryw3i/Funing
+Author: larryw3i
+Author-email: larryw3i@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: dlib
+Requires-Dist: face-recognition
+Requires-Dist: opencv-python
+Requires-Dist: language-data
+Requires-Dist: langcodes
+Requires-Dist: pony
+Requires-Dist: pyyaml
+
+# Funing
+
+
