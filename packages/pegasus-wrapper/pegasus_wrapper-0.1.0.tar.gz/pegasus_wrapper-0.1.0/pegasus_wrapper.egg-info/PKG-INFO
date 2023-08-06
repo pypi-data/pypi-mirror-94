@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: pegasus-wrapper
+Version: 0.1.0
+Summary: A higher-level API for ISI Pegasus, adapted to the quirks of the ISI Vista group
+Home-page: https://github.com/isi-vista/vista-pegasus-wrapper
+Author: Jacob Lichtefeld, Ryan Gabbard
+Author-email: jalichtefeld@gmail.com,ryan.gabbard@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=3.6
