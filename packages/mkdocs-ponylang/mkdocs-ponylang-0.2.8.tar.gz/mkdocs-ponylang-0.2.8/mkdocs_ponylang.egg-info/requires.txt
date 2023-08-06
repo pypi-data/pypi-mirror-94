@@ -1,0 +1,4 @@
+mkdocs>=1.0.4
+Pygments>=2.2
+pymdown-extensions>=3.4
+setuptools>=38.6.0
