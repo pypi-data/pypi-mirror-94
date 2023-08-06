@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: leverage
+Version: 0.0.9
+Summary: Lightweight Python Build Tool.
+Home-page: http://github.com/binbashar/
+Author: BinBash Inc
+Author-email: info@binbash.com.ar
+License: MIT License
+Description: A hack of Pynt for https://github.com/binbashar/leverage project
+Keywords: BINBASH,LEVERAGE
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
