@@ -1,0 +1,14 @@
+gstomd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gstomd/__main__.py,sha256=lGcXu8l8SAW9vhHmruQJrhWLy5Y1tNXbDAicf790Lys,1506
+gstomd/convert.py,sha256=3ZcNcWYetREUVgEiiwlQRLH3qCywUmniatVbigl2TGw,1369
+gstomd/gdoc.py,sha256=8oPK3d--_17S8b6HpftPUoF7dKOWg-Wps6D6wvhDmjM,2508
+gstomd/gfolder.py,sha256=W52OlbINI1bCI_RgULaEDTBQ8bbUlxa8W3CfOYLmJd4,5783
+gstomd/node.py,sha256=Npw-p1tLhUVqB-AlaeFZA34dJue-F_bHd9JfYVkH1aY,1571
+gstomd/utils.py,sha256=gUQXn_FzN7YPnfaDJWctDFOk-uRMIgV-1hS4TO-Fxos,1288
+gstomd/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gstomd/test/test_Folder.py,sha256=8IeA-8u0bWbev0W7ei09PJaFMBdz1vHXHqcEfKaVYrE,617
+GsuiteToMd-1.3.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+GsuiteToMd-1.3.0.dist-info/METADATA,sha256=fPSJtCMorwsGH9cFQCkH6mVHSQEtMuSQCVkfWtUUW6k,2199
+GsuiteToMd-1.3.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+GsuiteToMd-1.3.0.dist-info/top_level.txt,sha256=JlBAkKeoYurvdA2ZgWL1qrrz1fJ-7fzxPhaFow61Ayo,7
+GsuiteToMd-1.3.0.dist-info/RECORD,,
