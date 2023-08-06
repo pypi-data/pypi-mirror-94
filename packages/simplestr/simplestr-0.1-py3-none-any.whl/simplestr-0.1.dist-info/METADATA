@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: simplestr
+Version: 0.1
+Summary: Simple annotations to automatically generate __str__ and __repr__ methods
+Home-page: https://github.com/jpleorx/simplestr
+Author: Leo Ertuna
+Author-email: leo.ertuna@gmail.com
+License: MIT
+Download-URL: https://pypi.org/project/simplestr/
+Keywords: str,repr,generate,automatic,annotation
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# simplestr
+A python package with annotations to automatically generate `__str__(self)` and `__repr__(self)` methods in classes
+
+
+# Description
+This package provides only two annotations:
+- `@gen_str` to generate `__str__(self)` method
+- `@gen_repr` to generate `__repr__(self)` method
+
+# Installation
+
+## Normal installation
+
+```bash
+pip install simplestr
+```
+
+## Development installation
+
+```bash
+git clone https://github.com/jpleorx/simplestr.git
+cd simplestr
+pip install --editable .
+```
+
