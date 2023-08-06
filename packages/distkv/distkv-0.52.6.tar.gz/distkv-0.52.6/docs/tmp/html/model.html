@@ -1,0 +1,970 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Data Model &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Verifying and Translating Entries" href="translator.html" />
+    <link rel="prev" title="Code in DistKV" href="code.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#acls">ACLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#helper-methods-and-classes">Helper methods and classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Data Model</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/model.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-model">
+<h1>Data Model<a class="headerlink" href="#data-model" title="Permalink to this headline">¶</a></h1>
+<p>This section documents some of DistKV’s server-internal classes.</p>
+<span class="target" id="module-distkv.model"></span><p>This module contains DistKV’s basic data model.</p>
+<p>TODO: message chains should be refactored to arrays: much lower overhead.</p>
+<dl class="py class">
+<dt id="distkv.model.Node">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.model.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">tick</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents one DistKV participant.</p>
+<dl class="py method">
+<dt id="distkv.model.Node.enumerate">
+<em class="property">for ... in </em><code class="sig-name descname">enumerate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">current</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.enumerate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of valid keys for that node.</p>
+<p>Used to find data from no-longer-used nodes so they can be deleted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.seen">
+<code class="sig-name descname">seen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tick</span></em>, <em class="sig-param"><span class="n">entry</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.seen" title="Permalink to this definition">¶</a></dt>
+<dd><p>An event with this tick was in the entry’s chain.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tick</strong> – The event affecting the given entry.</p></li>
+<li><p><strong>entry</strong> – The entry affected by this event.</p></li>
+<li><p><strong>local</strong> – The message was not broadcast, thus do not assume that
+other nodes saw this.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.is_deleted">
+<code class="sig-name descname">is_deleted</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tick</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.is_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether this tick has been marked as deleted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.mark_deleted">
+<code class="sig-name descname">mark_deleted</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tick</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.mark_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data for this tick will be deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tick</strong> – The event that caused the deletion.</p>
+</dd>
+</dl>
+<p>Returns: the entry, if still present</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.clear_deleted">
+<code class="sig-name descname">clear_deleted</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tick</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.clear_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data for this tick are definitely gone (deleted).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.purge_deleted">
+<code class="sig-name descname">purge_deleted</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span><span class="p">:</span> <span class="n">range_set.RangeSet</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.purge_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>All entries in this rangeset are deleted.</p>
+<p>This is a shortcut for calling <a class="reference internal" href="#distkv.model.Node.clear_deleted" title="distkv.model.Node.clear_deleted"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear_deleted()</span></code></a> on each item.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.supersede">
+<code class="sig-name descname">supersede</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tick</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.supersede" title="Permalink to this definition">¶</a></dt>
+<dd><p>The event with this tick is no longer in the referred entry’s chain.
+This happens when an entry is updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tick</strong> – The event that once affected the given entry.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.report_superseded">
+<code class="sig-name descname">report_superseded</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span><span class="p">:</span> <span class="n">range_set.RangeSet</span></em>, <em class="sig-param"><span class="n">local</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.report_superseded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some node said that these entries may have been superseded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>range</strong> – The RangeSet thus marked.</p></li>
+<li><p><strong>local</strong> – The message was not broadcast, thus do not assume that
+other nodes saw this.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.report_missing">
+<code class="sig-name descname">report_missing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span><span class="p">:</span> <span class="n">range_set.RangeSet</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.report_missing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some node doesn’t know about these ticks.</p>
+<p>We may need to broadcast either their content,
+or the fact that these ticks have been superseded.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.report_deleted">
+<code class="sig-name descname">report_deleted</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span><span class="p">:</span> <span class="n">range_set.RangeSet</span></em>, <em class="sig-param"><span class="n">server</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.report_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>This range has been reported as deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>range</strong> (<em>RangeSet</em>) – the range that’s gone.</p></li>
+<li><p><strong>add</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><em>dict</em></a>) – store additional vanished items. Nodename -&gt; RangeSet</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.local_present">
+<code class="sig-name descname">local_present</code><a class="headerlink" href="#distkv.model.Node.local_present" title="Permalink to this definition">¶</a></dt>
+<dd><p>Values I know about</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.local_superseded">
+<code class="sig-name descname">local_superseded</code><a class="headerlink" href="#distkv.model.Node.local_superseded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Values I knew about</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.local_deleted">
+<code class="sig-name descname">local_deleted</code><a class="headerlink" href="#distkv.model.Node.local_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Values I know to have vanished</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.local_missing">
+<code class="sig-name descname">local_missing</code><a class="headerlink" href="#distkv.model.Node.local_missing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Values I have not seen, the inverse of <a class="reference internal" href="#distkv.model.Node.local_present" title="distkv.model.Node.local_present"><code class="xref py py-meth docutils literal notranslate"><span class="pre">local_present()</span></code></a>
+plus <a class="reference internal" href="#distkv.model.Node.local_superseded" title="distkv.model.Node.local_superseded"><code class="xref py py-meth docutils literal notranslate"><span class="pre">local_superseded()</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.remote_missing">
+<code class="sig-name descname">remote_missing</code><a class="headerlink" href="#distkv.model.Node.remote_missing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Values from this node which somebody else has not seen</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Node.kill_this_node">
+<code class="sig-name descname">kill_this_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cache</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Node.kill_this_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove this node from the system.
+No chain’s first link may point to this node.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.model.NodeSet">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.model.</code><code class="sig-name descname">NodeSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encoded</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.NodeSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a dict (nodename &gt; RangeSet).</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.model.NodeEvent">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.model.</code><code class="sig-name descname">NodeEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#distkv.model.Node" title="distkv.model.Node">distkv.model.Node</a></span></em>, <em class="sig-param"><span class="n">tick</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prev</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#distkv.model.NodeEvent" title="distkv.model.NodeEvent">distkv.model.NodeEvent</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.NodeEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents any event originating at a node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> – The node thus affected</p></li>
+<li><p><strong>tick</strong> – Counter, timestamp, whatever</p></li>
+<li><p><strong>prev</strong> – The previous event, if any</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="distkv.model.NodeEvent.equals">
+<code class="sig-name descname">equals</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.NodeEvent.equals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether these chains are equal. Used for ping comparisons.</p>
+<p>The last two items may be missing from either chain.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.NodeEvent.find">
+<code class="sig-name descname">find</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.NodeEvent.find" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the position of a node in this chain.
+Zero if the first entry matches.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">None</span></code> if not present.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.NodeEvent.filter">
+<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span></em>, <em class="sig-param"><span class="n">server</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.NodeEvent.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an event chain without the given node.</p>
+<p>If the node is not in the chain, the result is <em>not</em> a copy.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.NodeEvent.attach">
+<code class="sig-name descname">attach</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prev</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#distkv.model.NodeEvent" title="distkv.model.NodeEvent">distkv.model.NodeEvent</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.NodeEvent.attach" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy this node, if necessary, and attach a filtered <cite>prev</cite> chain to it</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.model.UpdateEvent">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.model.</code><code class="sig-name descname">UpdateEvent</code><span class="sig-paren">(</span><em class="sig-param">event: distkv.model.NodeEvent</em>, <em class="sig-param">entry: distkv.model.Entry</em>, <em class="sig-param">new_value</em>, <em class="sig-param">old_value=&lt;class 'distkv.util._impl.NotGiven'&gt;</em>, <em class="sig-param">tock=None</em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.UpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an event which updates something.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.model.Entry">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.model.</code><code class="sig-name descname">Entry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span></em>, <em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#distkv.model.Entry" title="distkv.model.Entry">distkv.model.Entry</a></span></em>, <em class="sig-param"><span class="n">tock</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents one key/value pair</p>
+<dl class="py attribute">
+<dt id="distkv.model.Entry.SUBTYPE">
+<code class="sig-name descname">SUBTYPE</code><a class="headerlink" href="#distkv.model.Entry.SUBTYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#distkv.model.Entry" title="distkv.model.Entry"><code class="xref py py-class docutils literal notranslate"><span class="pre">distkv.model.Entry</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Entry.follow_acl">
+<code class="sig-name descname">follow_acl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">create</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">nulls_ok</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl_key</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Entry.follow_acl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Follow this path.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">create</span></code> is True (default), unknown nodes are silently created.
+Otherwise they cause a <cite>KeyError</cite>. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, assume
+<code class="docutils literal notranslate"><span class="pre">create=True</span></code> but only check the ACLs.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">nulls_ok</span></code> is False (default), <cite>None</cite> is not allowed as a path
+element. If 2, it is allowed anywhere; if True, only as the first
+element.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">acl</span></code> is not <code class="docutils literal notranslate"><span class="pre">None</span></code>, then <code class="docutils literal notranslate"><span class="pre">acl_key</span></code> is the ACL letter to
+check for. <code class="docutils literal notranslate"><span class="pre">acl</span></code> must be an <a class="reference internal" href="#distkv.types.ACLFinder" title="distkv.types.ACLFinder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ACLFinder</span></code></a>
+created from the root of the ACL in question.</p>
+<p>The ACL key ‘W’ is special: it checks ‘c’ if the node is new, else
+‘w’.</p>
+<p>Returns a (node, acl) tuple.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Entry.follow">
+<code class="sig-name descname">follow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">create</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">nulls_ok</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Entry.follow" title="Permalink to this definition">¶</a></dt>
+<dd><p>As <a class="reference internal" href="#distkv.model.Entry.follow_acl" title="distkv.model.Entry.follow_acl"><code class="xref py py-meth docutils literal notranslate"><span class="pre">follow_acl()</span></code></a>, but isn’t interested in ACLs and only returns the node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Entry.mark_deleted">
+<code class="sig-name descname">mark_deleted</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">server</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Entry.mark_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>This entry has been deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the entry’s chain.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Entry.purge_deleted">
+<code class="sig-name descname">purge_deleted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Entry.purge_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call <a class="reference internal" href="#distkv.model.Node.clear_deleted" title="distkv.model.Node.clear_deleted"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Node.clear_deleted()</span></code></a> on each link in this entry’s chain.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Entry.set_data">
+<em class="property">await </em><code class="sig-name descname">set_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#distkv.model.NodeEvent" title="distkv.model.NodeEvent">distkv.model.NodeEvent</a></span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="n">server</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tock</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Entry.set_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>This entry is updated by that event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event</strong> – The <a class="reference internal" href="#distkv.model.NodeEvent" title="distkv.model.NodeEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">NodeEvent</span></code></a> to base the update on.</p></li>
+<li><p><strong>data</strong> (<em>Any</em>) – whatever the node should contains. Use <a class="reference internal" href="#distkv.util.distkv.util.NotGiven" title="distkv.util.distkv.util.NotGiven"><code class="xref any py py-data docutils literal notranslate"><span class="pre">distkv.util.NotGiven</span></code></a>
+to delete.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#distkv.model.UpdateEvent" title="distkv.model.UpdateEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">UpdateEvent</span></code></a> that has been generated and applied.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Entry.apply">
+<em class="property">await </em><code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">evt</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#distkv.model.UpdateEvent" title="distkv.model.UpdateEvent">distkv.model.UpdateEvent</a></span></em>, <em class="sig-param"><span class="n">server</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">root</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">loading</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Entry.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply this :cls`UpdateEvent` to me.</p>
+<p>Also, forward to watchers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Entry.walk">
+<em class="property">await </em><code class="sig-name descname">walk</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">proc</span></em>, <em class="sig-param"><span class="n">acl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_depth</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">min_depth</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">_depth</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">full</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Entry.walk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call coroutine <code class="docutils literal notranslate"><span class="pre">proc</span></code> on this node and all its children).</p>
+<p>If <cite>acl</cite> (must be an ACLStepper) is given, <cite>proc</cite> is called with
+the acl as second argument.</p>
+<p>If <cite>proc</cite> raises <cite>StopAsyncIteration</cite>, chop this subtree.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Entry.serialize">
+<code class="sig-name descname">serialize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">chop_path</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">nchain</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">conv</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Entry.serialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize this entry for msgpack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chop_path</strong> – If &lt;0, do not return the entry’s path.
+Otherwise, do, but remove the first N entries.</p></li>
+<li><p><strong>nchain</strong> – how many change events to include.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.model.Entry.updated">
+<em class="property">await </em><code class="sig-name descname">updated</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#distkv.model.UpdateEvent" title="distkv.model.UpdateEvent">distkv.model.UpdateEvent</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Entry.updated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send an event to this node (and all its parents)’s watchers.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.model.Watcher">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.model.</code><code class="sig-name descname">Watcher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">root</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#distkv.model.Entry" title="distkv.model.Entry">distkv.model.Entry</a></span></em>, <em class="sig-param"><span class="n">full</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">q_len</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.model.Watcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>This helper class is used as an async context manager plus async
+iterator. It reports all updates to an entry (or its children).</p>
+<p>If a watcher terminates, sending to its channel has blocked.
+The receiver needs to take appropriate re-syncing action.</p>
+</dd></dl>
+
+<div class="section" id="acls">
+<h2>ACLs<a class="headerlink" href="#acls" title="Permalink to this headline">¶</a></h2>
+<p>ACL checks are performed by <a class="reference internal" href="#distkv.types.ACLFinder" title="distkv.types.ACLFinder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ACLFinder</span></code></a>. This class
+collects all relevant ACL entries for any given (sub)path, sorted by
+depth-first specificty. This basically means that you collect all ACLs
+that could possibly match a path and sort them; the <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">#</span></code>
+wildcards get sorted last. Then the system picks the first entry that
+actually has a value.</p>
+<p>This basically means that if you have a path <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">b</span> <span class="pre">c</span> <span class="pre">d</span> <span class="pre">e</span> <span class="pre">f</span> <span class="pre">g</span></code> and ACLs <code class="docutils literal notranslate"><span class="pre">a</span>
+<span class="pre">b</span> <span class="pre">#</span> <span class="pre">g</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">#</span> <span class="pre">d</span> <span class="pre">e</span> <span class="pre">f</span> <span class="pre">g</span></code>, the first ACL will match because <code class="docutils literal notranslate"><span class="pre">b</span></code> is
+more specific than <code class="docutils literal notranslate"><span class="pre">#</span></code>, even though the second ACL is longer and thus
+could be regarded as being more specific. However, the current rule is more
+stable when used with complex ACLs and thus more secure.</p>
+<dl class="py class">
+<dt id="distkv.types.ACLFinder">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.types.</code><code class="sig-name descname">ACLFinder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">acl</span></em>, <em class="sig-param"><span class="n">blocked</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.types.ACLFinder" title="Permalink to this definition">¶</a></dt>
+<dd><p>A NodeFinder which expects ACL strings as elements</p>
+</dd></dl>
+
+</div>
+<div class="section" id="helper-methods-and-classes">
+<h2>Helper methods and classes<a class="headerlink" href="#helper-methods-and-classes" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="distkv.util.MsgWriter">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.util.</code><code class="sig-name descname">MsgWriter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">a</span></em>, <em class="sig-param"><span class="n">buflen</span><span class="o">=</span><span class="default_value">65536</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.util.MsgWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a stream of messages to a file (encoded with MsgPack).</p>
+<p>Usage:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">with</span> <span class="n">MsgWriter</span><span class="p">(</span><span class="s2">&quot;/tmp/msgs.pack&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">some_source_of_messages</span><span class="p">():</span>  <span class="c1"># or &quot;async for&quot;</span>
+        <span class="k">await</span> <span class="n">f</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buflen</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The buffer size. Defaults to 64k.</p></li>
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – the file to write to.</p></li>
+<li><p><strong>stream</strong> – the stream to write to.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Exactly one of <code class="docutils literal notranslate"><span class="pre">path</span></code> and <code class="docutils literal notranslate"><span class="pre">stream</span></code> must be used.</p>
+<p>The stream is buffered. Call <a class="reference internal" href="#distkv.util.MsgWriter.flush" title="distkv.util.MsgWriter.flush"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flush()</span></code></a> to flush the buffer.</p>
+<dl class="py method">
+<dt id="distkv.util.MsgWriter.flush">
+<em class="property">await </em><code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#distkv.util.MsgWriter.flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush the buffer.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-distkv.util"></span><dl class="py data">
+<dt id="distkv.util.distkv.util.NotGiven">
+<code class="sig-prename descclassname">distkv.util.</code><code class="sig-name descname">NotGiven</code><a class="headerlink" href="#distkv.util.distkv.util.NotGiven" title="Permalink to this definition">¶</a></dt>
+<dd><p>This object marks the absence of information where simply not using the
+data element or keyword at all would be inconvenient.</p>
+<p>For instance, in <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">fn(value=NotGiven,</span> <span class="pre">**kw)</span></code> you’d need to test
+<code class="docutils literal notranslate"><span class="pre">'value'</span>&#160; <span class="pre">in</span> <span class="pre">kw</span></code>, or use an exception. The problem is that this would
+not show up in the function’s signature.</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">NotGiven</span></code> you can simply test <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">is</span></code> (or <code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code>) <code class="docutils literal notranslate"><span class="pre">NotGiven</span></code>.</p>
+</dd></dl>
+
+<span class="target" id="module-distkv.runner"></span><p>This module’s job is to run code, resp. to keep it running.</p>
+<dl class="py exception">
+<dt id="distkv.runner.NotSelected">
+<em class="property">exception </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">NotSelected</code><a class="headerlink" href="#distkv.runner.NotSelected" title="Permalink to this definition">¶</a></dt>
+<dd><p>This node has not been selected for a very long time. Something is amiss.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.RunnerMsg">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">RunnerMsg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.RunnerMsg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Superclass for runner-generated messages.</p>
+<p>Not directly instantiated.</p>
+<p>This message and its descendants take one opaque parameter: <code class="docutils literal notranslate"><span class="pre">msg</span></code>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.ChangeMsg">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">ChangeMsg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.ChangeMsg" title="Permalink to this definition">¶</a></dt>
+<dd><p>A message telling your code that some entry has been updated.</p>
+<p>Subclass this and use it as <cite>CallAdmin.watch</cite>’s <code class="docutils literal notranslate"><span class="pre">cls</span></code> parameter for easier
+disambiguation.</p>
+<p>The runner sets <code class="docutils literal notranslate"><span class="pre">path</span></code> and <code class="docutils literal notranslate"><span class="pre">value</span></code> attributes.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.MQTTmsg">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">MQTTmsg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.MQTTmsg" title="Permalink to this definition">¶</a></dt>
+<dd><p>A message transporting some MQTT data.</p>
+<p><cite>value</cite> is the MsgPack-decoded content. If that doesn’t exist the
+message is not decodeable.</p>
+<p>The runner also sets the <code class="docutils literal notranslate"><span class="pre">path</span></code> attribute.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.ReadyMsg">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">ReadyMsg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.ReadyMsg" title="Permalink to this definition">¶</a></dt>
+<dd><p>This message is queued when the last watcher has read all data.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.TimerMsg">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">TimerMsg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.TimerMsg" title="Permalink to this definition">¶</a></dt>
+<dd><p>A message telling your code that a timer triggers.</p>
+<p>Subclass this and use it as <cite>CallAdmin.timer</cite>’s <code class="docutils literal notranslate"><span class="pre">cls</span></code> parameter for easier
+disambiguation.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.CallAdmin">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">CallAdmin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">runner</span></em>, <em class="sig-param"><span class="n">state</span></em>, <em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.CallAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class collects some standard tasks which async DistKV-embedded
+code might want to do.</p>
+<dl class="py method">
+<dt id="distkv.runner.CallAdmin.cancel">
+<em class="property">await </em><code class="sig-name descname">cancel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.CallAdmin.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancel the running task</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.CallAdmin.spawn">
+<em class="property">await </em><code class="sig-name descname">spawn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">proc</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">a</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.CallAdmin.spawn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start a background subtask.</p>
+<p>The task is auto-cancelled when your code ends.</p>
+<dl class="simple">
+<dt>Returns: an <cite>anyio.abc.CancelScope</cite> which you can use to cancel the</dt><dd><p>subtask.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.CallAdmin.setup_done">
+<em class="property">await </em><code class="sig-name descname">setup_done</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.CallAdmin.setup_done" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call this when your code has successfully started up.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.CallAdmin.error">
+<em class="property">await </em><code class="sig-name descname">error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.CallAdmin.error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record that an error has occurred. This function records specific
+error data, then raises <cite>ErrorRecorded</cite> which the code is not
+supposed to catch.</p>
+<p>See <cite>distkv.errors.ErrorRoot.record_error</cite> for keyword details. The
+<code class="docutils literal notranslate"><span class="pre">path</span></code> argument is auto-filled to point to the current task.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.CallAdmin.watch">
+<em class="property">await </em><code class="sig-name descname">watch</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">cls=&lt;class 'distkv.runner.ChangeMsg'&gt;</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.CallAdmin.watch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a watcher. This path is monitored as per <cite>distkv.client.Client.watch</cite>;
+messages are encapsulated in <cite>ChangeMsg</cite> objects.
+A <cite>ReadyMsg</cite> will be sent when all watchers have transmitted their
+initial state.</p>
+<p>By default a watcher will only monitor a single entry. Set
+<code class="docutils literal notranslate"><span class="pre">max_depth</span></code> if you also want child entries.</p>
+<p>By default a watcher will not report existing entries. Set
+<code class="docutils literal notranslate"><span class="pre">fetch=False</span></code> if you want them.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.CallAdmin.send">
+<em class="property">await </em><code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">value=&lt;class 'distkv.util._impl.NotGiven'&gt;</em>, <em class="sig-param">raw=None</em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.CallAdmin.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publish an MQTT message.</p>
+<p>Set either <code class="docutils literal notranslate"><span class="pre">value</span></code> or <code class="docutils literal notranslate"><span class="pre">raw</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.CallAdmin.set">
+<em class="property">await </em><code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">value</em>, <em class="sig-param">chain=&lt;class 'distkv.util._impl.NotGiven'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.CallAdmin.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a DistKV value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.CallAdmin.get">
+<em class="property">await </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.CallAdmin.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a DistKV value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.CallAdmin.monitor">
+<em class="property">await </em><code class="sig-name descname">monitor</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">cls=&lt;class 'distkv.runner.MQTTmsg'&gt;</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.CallAdmin.monitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an MQTT monitor.
+Messages are encapsulated in <cite>MQTTmsg</cite> objects.</p>
+<p>By default a monitor will only monitor a single entry. You may use
+MQTT wildcards.</p>
+<p>The message is decoded and stored in the <code class="docutils literal notranslate"><span class="pre">value</span></code> attribute unless
+it’s either undecodeable or <code class="docutils literal notranslate"><span class="pre">raw</span></code> is set, in which case it’s
+stored in <code class="docutils literal notranslate"><span class="pre">.msg</span></code>. The topic the message was sent to is in
+<code class="docutils literal notranslate"><span class="pre">topic</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.RunnerEntry">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">RunnerEntry</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">a</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">k</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.RunnerEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>An entry representing some hopefully-running code.</p>
+<p>The code will run some time after <code class="docutils literal notranslate"><span class="pre">target</span></code> has passed.
+On success, it will run again <code class="docutils literal notranslate"><span class="pre">repeat</span></code> seconds later (if &gt;0).
+On error, it will run <code class="docutils literal notranslate"><span class="pre">delay</span></code> seconds later (if &gt;0), multiplied by 2**backoff.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a>) – pointer to the code that’s to be started.</p></li>
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><em>dict</em></a>) – additional data for the code.</p></li>
+<li><p><strong>delay</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – time before restarting the job on error.
+Default 100.</p></li>
+<li><p><strong>repeat</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – time before restarting on success.
+Default: zero: no restart.</p></li>
+<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – time the job should be started at.
+Default: zero: don’t start.</p></li>
+<li><p><strong>ok_after</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – the job is marked OK if it has run this long.
+Default: zero: the code will do that itself.</p></li>
+<li><p><strong>backoff</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – Exponential back-off factor on errors.
+Default: 1.1.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The code runs with these additional keywords:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span>_self: the `CallEnv` object, which the task can use to actually do things.
+_client: the DistKV client connection.
+_info: a queue which the task can use to receive events. A message of
+    ``None`` signals that the queue was overflowing and no further
+    messages will be delivered. Your task should use that as its
+    mainloop.
+_P: build a path from a string
+_Path: build a path from its arguments
+</pre></div>
+</div>
+<p>Some possible messages are defined in <a class="reference internal" href="#module-distkv.actor" title="distkv.actor"><code class="xref py py-mod docutils literal notranslate"><span class="pre">distkv.actor</span></code></a>.</p>
+<dl class="py method">
+<dt id="distkv.runner.RunnerEntry.send_event">
+<em class="property">await </em><code class="sig-name descname">send_event</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">evt</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.RunnerEntry.send_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send an event to the running process.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.RunnerEntry.set_value">
+<em class="property">await </em><code class="sig-name descname">set_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.RunnerEntry.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process incoming value changes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.RunnerEntry.run_at">
+<em class="property">await </em><code class="sig-name descname">run_at</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.RunnerEntry.run_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>Next run at this time.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.RunnerEntry.should_start">
+<code class="sig-name descname">should_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.RunnerEntry.should_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tell whether this job might want to be started.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>No, it’s running (or has run and doesn’t restart).
+<code class="docutils literal notranslate"><span class="pre">0</span></code>: No, it should not start
+<code class="docutils literal notranslate"><span class="pre">&gt;0</span></code>: timestamp at which it should start, or should have started</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.RunnerNode">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">RunnerNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">root</span></em>, <em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.RunnerNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents all nodes in this runner group.</p>
+<p>This is used for load balancing and such. TODO.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.StateEntry">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">StateEntry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.StateEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the actual state associated with a RunnerEntry.
+It must only be managed by the node that actually runs the code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>started</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – timestamp when the job was last started</p></li>
+<li><p><strong>stopped</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – timestamp when the job last terminated</p></li>
+<li><p><strong>pinged</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – timestamp when the state was last verified by the runner</p></li>
+<li><p><strong>result</strong> (<em>Any</em>) – the code’s return value</p></li>
+<li><p><strong>node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – the node running this code</p></li>
+<li><p><strong>backoff</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – on error, the multiplier to apply to the restart timeout</p></li>
+<li><p><strong>computed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – computed start time</p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – reason why (not) starting</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="distkv.runner.StateEntry.result">
+<code class="sig-name descname">result</code><a class="headerlink" href="#distkv.runner.StateEntry.result" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">distkv.util._impl.NotGiven</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.StateRoot">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">StateRoot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">need_wait</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">cfg</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_client</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.StateRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for handling the state of entries.</p>
+<p>This is separate from the RunnerRoot hierarchy because the latter may
+be changed by anybody while this subtree may only be affected by the
+actual runner. Otherwise we get interesting race conditions.</p>
+<dl class="py method">
+<dt id="distkv.runner.StateRoot.kill_stale_nodes">
+<em class="property">await </em><code class="sig-name descname">kill_stale_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">names</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.StateRoot.kill_stale_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>States with node names in the “names” set are stale. Kill them.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.AnyRunnerRoot">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">AnyRunnerRoot</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">a</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.AnyRunnerRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents the root of a code runner. Its job is to start
+(and periodically restart, if required) the entry points stored under it.</p>
+<p><a class="reference internal" href="#distkv.runner.AnyRunnerRoot" title="distkv.runner.AnyRunnerRoot"><code class="xref py py-class docutils literal notranslate"><span class="pre">AnyRunnerRoot</span></code></a> tries to ensure that the code in question runs
+on one single cluster member. In case of a network split, the code will
+run once in each split areas until the split is healed.</p>
+<dl class="py method">
+<dt id="distkv.runner.AnyRunnerRoot.max_age">
+<code class="sig-name descname">max_age</code><a class="headerlink" href="#distkv.runner.AnyRunnerRoot.max_age" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timeout after which we really should have gotten another go</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="distkv.runner.AnyRunnerRoot.find_stale_nodes">
+<em class="property">await </em><code class="sig-name descname">find_stale_nodes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cur</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.AnyRunnerRoot.find_stale_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find stale nodes (i.e. last seen &lt; cur) and clean them.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.SingleRunnerRoot">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">SingleRunnerRoot</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">a</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.SingleRunnerRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents the root of a code runner. Its job is to start
+(and periodically restart, if required) the entry points stored under it.</p>
+<p>While <a class="reference internal" href="#distkv.runner.AnyRunnerRoot" title="distkv.runner.AnyRunnerRoot"><code class="xref py py-class docutils literal notranslate"><span class="pre">AnyRunnerRoot</span></code></a> tries to ensure that the code in question runs
+on any cluster member, this class runs tasks on a single node.
+The code is able to check whether any and/or all of the cluster’s main
+nodes are reachable; this way, the code can default to local operation
+if connectivity is lost.</p>
+<p>Local data (dict):</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cores</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a>) – list of nodes whose reachability may determine
+whether the code uses local/emergency/??? mode.</p>
+</dd>
+</dl>
+<p>Config file:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a>) – the location this entry is stored at. Defaults to
+<code class="docutils literal notranslate"><span class="pre">('.distkv',</span> <span class="pre">'process')</span></code>.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – this runner’s name. Defaults to the client’s name plus
+the name stored in the root node, if any.</p></li>
+<li><p><strong>actor</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><em>dict</em></a>) – the configuration for the underlying actor. See
+<code class="docutils literal notranslate"><span class="pre">asyncactor</span></code> for details.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="distkv.runner.SingleRunnerRoot.max_age">
+<code class="sig-name descname">max_age</code><a class="headerlink" href="#distkv.runner.SingleRunnerRoot.max_age" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timeout after which we really should have gotten another ping</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.runner.AllRunnerRoot">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.runner.</code><code class="sig-name descname">AllRunnerRoot</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">a</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.runner.AllRunnerRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents the root of a code runner. Its job is to start
+(and periodically restart, if required) the entry points stored under it.</p>
+<p>This class behaves like <cite>SingleRunner</cite>, except that it runs tasks on all nodes.</p>
+</dd></dl>
+
+<span class="target" id="module-distkv.actor"></span><p>This module implements a <code class="xref py py-class docutils literal notranslate"><span class="pre">asyncactor.Actor</span></code> which works on top of
+a DistKV client.</p>
+<dl class="py class">
+<dt id="distkv.actor.ActorState">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.actor.</code><code class="sig-name descname">ActorState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.actor.ActorState" title="Permalink to this definition">¶</a></dt>
+<dd><p>base class for states</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.actor.BrokenState">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.actor.</code><code class="sig-name descname">BrokenState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.actor.BrokenState" title="Permalink to this definition">¶</a></dt>
+<dd><p>I have no idea what’s happening, probably nothing good</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.actor.DetachedState">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.actor.</code><code class="sig-name descname">DetachedState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.actor.DetachedState" title="Permalink to this definition">¶</a></dt>
+<dd><p>I am detached, my actor group is not visible</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.actor.PartialState">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.actor.</code><code class="sig-name descname">PartialState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.actor.PartialState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some but not all members of my actor group are visible</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="distkv.actor.CompleteState">
+<em class="property">class </em><code class="sig-prename descclassname">distkv.actor.</code><code class="sig-name descname">CompleteState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#distkv.actor.CompleteState" title="Permalink to this definition">¶</a></dt>
+<dd><p>All members of my actor group are visible</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="translator.html" class="btn btn-neutral float-right" title="Verifying and Translating Entries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="code.html" class="btn btn-neutral float-left" title="Code in DistKV" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

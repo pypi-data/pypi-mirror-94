@@ -1,0 +1,2415 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Index &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Index</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#Symbols"><strong>Symbols</strong></a>
+ | <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ 
+</div>
+<h2 id="Symbols">Symbols</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    --acl &lt;acl&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-test-a">distkv-client-acl-test command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --acl &lt;MODES&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-set-a">distkv-client-acl-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --all
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-a">distkv-client-type-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --as-dict &lt;text&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-d">distkv-client-code-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-d">distkv-client-data-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-d">distkv-client-data-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --as-dict TEXT
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-dump-d">distkv-client-acl-dump command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --async
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-a">distkv-client-code-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --auth &lt;params&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-a">distkv-client command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --backoff
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-b">distkv-client-run-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --broadcast
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-b">distkv-client-internal-mark command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --cfg &lt;FILE&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-c">distkv command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --chain &lt;int&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-get-c">distkv-client-auth-user-get command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --code &lt;code&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-c">distkv-client-run-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --codec
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-convert-c">distkv-client-codec-convert command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --conf &lt;location=value&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-C">distkv command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --data &lt;file&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-D">distkv-client-codec-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --data &lt;filename&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-set-d">distkv-client-code-module-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-d">distkv-client-code-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --debug
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-D">distkv command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --decode &lt;file&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-d">distkv-client-codec-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-d">distkv-client-codec-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --delay &lt;seconds&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-d">distkv-client-run-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --delete
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-deleter-d">distkv-client-internal-deleter command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-match-d">distkv-client-type-match command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --deleted
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-d">distkv-client-internal-mark command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-d">distkv-client-internal-state command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --encode &lt;file&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-e">distkv-client-codec-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-e">distkv-client-codec-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --eval
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-e">distkv-client-data-delete command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-e">distkv-client-data-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-e">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --full
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-f">distkv-client-code-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --group &lt;group&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-g">distkv-client-run command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --host &lt;address&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-h">distkv-client command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --in &lt;source&gt; &lt;dest&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-i">distkv-client-codec-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --incremental
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-log-dest-i">distkv-client-log-dest command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-i">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --init &lt;value&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-server-I">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --last &lt;node&gt; &lt;count&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-l">distkv-client-data-delete command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-l">distkv-client-data-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --load &lt;file&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-server-l">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --log &lt;source=LEVEL&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-l">distkv command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --maxdepth &lt;integer&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-M">distkv-client-code-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-M">distkv-client-data-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-M">distkv-client-data-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --metadata
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-m">distkv-client command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --method &lt;name&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-m">distkv-client-auth command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --mindepth &lt;integer&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-m">distkv-client-code-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-m">distkv-client-data-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-m">distkv-client-data-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --missing
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-m">distkv-client-internal-state command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --mode &lt;mode&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-test-m">distkv-client-acl-test command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --msgpack
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-update-m">distkv-client-data-update command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-m">distkv-client-data-watch command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --new
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-n">distkv-client-data-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --node &lt;node&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-n">distkv-client-run command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --nodes
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-n">distkv-client-internal-state command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --ok &lt;seconds&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-k">distkv-client-run-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --only
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-o">distkv-client-data-watch command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --out &lt;source&gt; &lt;dest&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-o">distkv-client-codec-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --port &lt;port&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-p">distkv-client command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --present
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-p">distkv-client-internal-state command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --prev &lt;value&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-p">distkv-client-data-delete command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-p">distkv-client-data-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --quiet
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-q">distkv command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --recursive
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-r">distkv-client-data-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-r">distkv-client-data-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --remote-missing
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-r">distkv-client-internal-state command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --repeat &lt;seconds&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-r">distkv-client-run-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --save &lt;file&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-server-s">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --schema &lt;filename&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-S">distkv-client-type-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-S">distkv-client-type-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --script &lt;file&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-s">distkv-client-codec-get command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --script &lt;filename&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-get-s">distkv-client-code-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-get-s">distkv-client-code-module-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-set-s">distkv-client-code-module-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-s">distkv-client-code-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-s">distkv-client-type-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-s">distkv-client-type-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --short
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-s">distkv-client-code-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --state
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-s">distkv-client-data-watch command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-list-s">distkv-client-run-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --state-only
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-list-S">distkv-client-run-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --superseded
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-s">distkv-client-internal-state command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --switch
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-init-s">distkv-client-auth-init command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --thread
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-t">distkv-client-code-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --time &lt;when&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-t">distkv-client-run-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --value &lt;value&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-v">distkv-client-data-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --verbose
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-v">distkv command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --yaml
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-y">distkv-client-internal-state command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-y">distkv-client-type-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-y">distkv-client-type-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -a
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-a">distkv-client command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-set-a">distkv-client-acl-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-test-a">distkv-client-acl-test command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-a">distkv-client-code-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-a">distkv-client-type-set command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    -b
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-b">distkv-client-internal-mark command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-b">distkv-client-run-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -b &lt;value&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-b">distkv-client-type-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -C
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-C">distkv command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -c
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-c">distkv command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-get-c">distkv-client-auth-user-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-convert-c">distkv-client-codec-convert command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-c">distkv-client-run-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -D
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-D">distkv command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-D">distkv-client-codec-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -d
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-dump-d">distkv-client-acl-dump command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-d">distkv-client-code-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-set-d">distkv-client-code-module-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-d">distkv-client-code-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-d">distkv-client-codec-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-d">distkv-client-codec-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-d">distkv-client-data-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-d">distkv-client-data-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-deleter-d">distkv-client-internal-deleter command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-d">distkv-client-internal-mark command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-d">distkv-client-internal-state command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-d">distkv-client-run-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-match-d">distkv-client-type-match command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -e
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-e">distkv-client-codec-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-e">distkv-client-codec-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-e">distkv-client-data-delete command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-e">distkv-client-data-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-e">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -f
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-f">distkv-client-code-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -g
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-g">distkv-client-run command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -g &lt;value&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-g">distkv-client-type-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -h
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-h">distkv-client command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -I
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-server-I">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -i
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-i">distkv-client-codec-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-log-dest-i">distkv-client-log-dest command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-i">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -k
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-k">distkv-client-run-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -l
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-l">distkv command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-l">distkv-client-data-delete command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-l">distkv-client-data-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-l">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -M
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-M">distkv-client-code-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-M">distkv-client-data-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-M">distkv-client-data-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -m
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-m">distkv-client command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-test-m">distkv-client-acl-test command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-m">distkv-client-auth command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-m">distkv-client-code-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-m">distkv-client-data-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-m">distkv-client-data-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-update-m">distkv-client-data-update command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-m">distkv-client-data-watch command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-m">distkv-client-internal-state command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -n
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-n">distkv-client-data-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-n">distkv-client-internal-state command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-n">distkv-client-run command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -o
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-o">distkv-client-codec-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-o">distkv-client-data-watch command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -p
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-p">distkv-client command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-p">distkv-client-data-delete command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-p">distkv-client-data-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-p">distkv-client-internal-state command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -q
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-q">distkv command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -r
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-r">distkv-client-data-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-r">distkv-client-data-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-r">distkv-client-internal-state command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-r">distkv-client-run-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -S
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-list-S">distkv-client-run-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-S">distkv-client-type-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-S">distkv-client-type-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -s
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-init-s">distkv-client-auth-init command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-get-s">distkv-client-code-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-s">distkv-client-code-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-get-s">distkv-client-code-module-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-set-s">distkv-client-code-module-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-s">distkv-client-code-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-s">distkv-client-codec-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-s">distkv-client-data-watch command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-s">distkv-client-internal-state command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-list-s">distkv-client-run-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-s">distkv-client-type-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-s">distkv-client-type-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-s">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -t
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-t">distkv-client-code-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-t">distkv-client-run-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-match-t">distkv-client-type-match command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -v
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-v">distkv command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-v">distkv-client-data-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -y
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-y">distkv-client-internal-state command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-y">distkv-client-type-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-y">distkv-client-type-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;acl&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-get-arg-acl">distkv-client-acl-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-set-arg-acl">distkv-client-acl-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;file&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-dump-file-arg-file">distkv-dump-file command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-dump-init-arg-file">distkv-dump-init command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;ident&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-ident">distkv-client-auth-user-mod-&lt;ident&gt;-&lt;key&gt;=&lt;value&gt;… command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-param-ident-type-key-arg-ident">distkv-client-auth-user-param-&lt;ident&gt;-&lt;type&gt;-&lt;key&gt; command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;item&gt; …
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-arg-item">distkv-client-internal-mark command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;key&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-param-ident-type-key-arg-key">distkv-client-auth-user-param-&lt;ident&gt;-&lt;type&gt;-&lt;key&gt; command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;key&gt;=&lt;value&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-add-key-value-...-arg-key">distkv-client-auth-user-add-&lt;key&gt;=&lt;value&gt;… command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-key">distkv-client-auth-user-mod-&lt;ident&gt;-&lt;key&gt;=&lt;value&gt;… command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;name&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-dump-arg-name">distkv-client-acl-dump command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-convert-arg-name">distkv-client-codec-convert command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-arg-name">distkv-client-codec-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-arg-name">distkv-client-codec-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;node&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-arg-node">distkv-client-internal-mark command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-dump-init-arg-node">distkv-dump-init command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;node&gt; …
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-deleter-arg-node">distkv-client-internal-deleter command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;path&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-dump-arg-path">distkv-client-acl-dump command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-get-arg-path">distkv-client-acl-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-set-arg-path">distkv-client-acl-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-test-arg-path">distkv-client-acl-test command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-convert-arg-path">distkv-client-codec-convert command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-arg-path">distkv-client-codec-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-arg-path">distkv-client-codec-set command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;path&gt; …
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-get-arg-path">distkv-client-code-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-get-arg-path">distkv-client-code-module-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-dump-arg-path">distkv-client-internal-dump command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;prefix&gt; …
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-list-arg-prefix">distkv-client-run-list command line option</a>
+</li>
+      </ul></li>
+      <li>
+    &lt;type&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-param-ident-type-key-arg-type">distkv-client-auth-user-param-&lt;ident&gt;-&lt;type&gt;-&lt;key&gt; command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.types.ACLFinder">ACLFinder (class in distkv.types)</a>
+</li>
+      <li><a href="model.html#distkv.actor.ActorState">ActorState (class in distkv.actor)</a>
+</li>
+      <li><a href="model.html#distkv.runner.AllRunnerRoot">AllRunnerRoot (class in distkv.runner)</a>
+</li>
+      <li><a href="model.html#distkv.runner.AnyRunnerRoot">AnyRunnerRoot (class in distkv.runner)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Entry.apply">apply() (distkv.model.Entry method)</a>
+</li>
+      <li><a href="model.html#distkv.model.NodeEvent.attach">attach() (distkv.model.NodeEvent method)</a>
+</li>
+      <li><a href="auth.html#distkv.auth.BaseClientAuth.auth">auth() (distkv.auth.BaseClientAuth method)</a>
+
+      <ul>
+        <li><a href="auth.html#distkv.auth.BaseServerAuth.auth">(distkv.auth.BaseServerAuth method)</a>
+</li>
+      </ul></li>
+      <li><a href="auth.html#distkv.auth.BaseClientAuth.auth_data">auth_data() (distkv.auth.BaseClientAuth method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="auth.html#distkv.auth.BaseClientAuth">BaseClientAuth (class in distkv.auth)</a>
+</li>
+      <li><a href="auth.html#distkv.auth.BaseClientAuthMaker">BaseClientAuthMaker (class in distkv.auth)</a>
+</li>
+      <li><a href="auth.html#distkv.auth.BaseServerAuth">BaseServerAuth (class in distkv.auth)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="auth.html#distkv.auth.BaseServerAuthMaker">BaseServerAuthMaker (class in distkv.auth)</a>
+</li>
+      <li><a href="model.html#distkv.actor.BrokenState">BrokenState (class in distkv.actor)</a>
+</li>
+      <li><a href="auth.html#distkv.auth.BaseClientAuth.build">build() (distkv.auth.BaseClientAuth class method)</a>
+
+      <ul>
+        <li><a href="auth.html#distkv.auth.BaseClientAuthMaker.build">(distkv.auth.BaseClientAuthMaker class method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.runner.CallAdmin">CallAdmin (class in distkv.runner)</a>
+</li>
+      <li><a href="model.html#distkv.runner.CallAdmin.cancel">cancel() (distkv.runner.CallAdmin method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.ChangeMsg">ChangeMsg (class in distkv.runner)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="auth.html#distkv.auth.BaseServerAuth.check_read">check_read() (distkv.auth.BaseServerAuth method)</a>
+</li>
+      <li><a href="auth.html#distkv.auth.BaseServerAuth.check_write">check_write() (distkv.auth.BaseServerAuth method)</a>
+</li>
+      <li><a href="model.html#distkv.model.Node.clear_deleted">clear_deleted() (distkv.model.Node method)</a>
+</li>
+      <li><a href="model.html#distkv.actor.CompleteState">CompleteState (class in distkv.actor)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.actor.DetachedState">DetachedState (class in distkv.actor)</a>
+</li>
+      <li>
+    distkv command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-c">--cfg &lt;FILE&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-C">--conf &lt;location=value&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-D">--debug</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-l">--log &lt;source=LEVEL&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-q">--quiet</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-v">--verbose</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-c">-c</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-C">-C</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-D">-D</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-l">-l</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-q">-q</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-v">-v</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-a">--auth &lt;params&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-h">--host &lt;address&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-m">--metadata</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-p">--port &lt;port&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-a">-a</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-h">-h</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-m">-m</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-p">-p</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-acl-dump command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-dump-d">--as-dict TEXT</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-dump-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-dump-arg-name">&lt;name&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-dump-arg-path">&lt;path&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-acl-get command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-get-arg-acl">&lt;acl&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-get-arg-path">&lt;path&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-acl-set command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-set-a">--acl &lt;MODES&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-set-a">-a</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-set-arg-acl">&lt;acl&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-set-arg-path">&lt;path&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-acl-test command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-test-a">--acl &lt;acl&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-test-m">--mode &lt;mode&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-test-a">-a</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-test-m">-m</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-acl-test-arg-path">&lt;path&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-auth command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-m">--method &lt;name&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-m">-m</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-auth-init command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-init-s">--switch</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-init-s">-s</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-auth-user-add-&lt;key&gt;=&lt;value&gt;… command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-add-key-value-...-arg-key">&lt;key&gt;=&lt;value&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-auth-user-auth command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-auth-arg-options...">options…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-auth-user-get command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-get-c">--chain &lt;int&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-get-c">-c</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-get-arg-ident">ident</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-auth-user-mod-&lt;ident&gt;-&lt;key&gt;=&lt;value&gt;… command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-ident">&lt;ident&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-key">&lt;key&gt;=&lt;value&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-Set">Set an auth-specific parameter.</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-auth-user-param-&lt;ident&gt;-&lt;type&gt;-&lt;key&gt; command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-param-ident-type-key-arg-ident">&lt;ident&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-param-ident-type-key-arg-key">&lt;key&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-param-ident-type-key-arg-type">&lt;type&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-code-get command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-get-s">--script &lt;filename&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-get-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-get-arg-path">&lt;path&gt; …</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-code-list command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-d">--as-dict &lt;text&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-f">--full</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-M">--maxdepth &lt;integer&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-m">--mindepth &lt;integer&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-s">--short</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-f">-f</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-m">-m</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-M">-M</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-arg-path...">path…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-code-module-get command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-get-s">--script &lt;filename&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-get-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-get-arg-path">&lt;path&gt; …</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-code-module-set command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-set-d">--data &lt;filename&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-set-s">--script &lt;filename&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-set-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-set-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-set-arg-name...">name…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-code-set command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-a">--async</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-d">--data &lt;filename&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-s">--script &lt;filename&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-t">--thread</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-a">-a</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-t">-t</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-arg-name...">name…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-codec-convert command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-convert-c">--codec</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-convert-c">-c</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-convert-arg-name">&lt;name&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-convert-arg-path">&lt;path&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-codec-get command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-d">--decode &lt;file&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-e">--encode &lt;file&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-s">--script &lt;file&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-e">-e</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-arg-name">&lt;name&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-get-arg-path">&lt;path&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-codec-set command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-D">--data &lt;file&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-d">--decode &lt;file&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-e">--encode &lt;file&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-i">--in &lt;source&gt; &lt;dest&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-o">--out &lt;source&gt; &lt;dest&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-D">-D</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-e">-e</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-i">-i</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-o">-o</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-arg-name">&lt;name&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-codec-set-arg-path">&lt;path&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-data-delete command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-e">--eval</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-l">--last &lt;node&gt; &lt;count&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-p">--prev &lt;value&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-e">-e</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-l">-l</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-p">-p</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-arg-path...">path…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-data-get command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-d">--as-dict &lt;text&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-M">--maxdepth &lt;integer&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-m">--mindepth &lt;integer&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-r">--recursive</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-m">-m</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-M">-M</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-r">-r</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-arg-path...">path…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-data-list command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-d">--as-dict &lt;text&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-M">--maxdepth &lt;integer&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-m">--mindepth &lt;integer&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-r">--recursive</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-m">-m</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-M">-M</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-r">-r</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-arg-path...">path…</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    distkv-client-data-set command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-e">--eval</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-l">--last &lt;node&gt; &lt;count&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-n">--new</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-p">--prev &lt;value&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-v">--value &lt;value&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-e">-e</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-l">-l</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-n">-n</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-p">-p</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-v">-v</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-arg-path...">path…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-data-update command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-update-m">--msgpack</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-update-m">-m</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-update-arg-path...">path…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-data-watch command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-m">--msgpack</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-o">--only</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-s">--state</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-m">-m</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-o">-o</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-arg-path...">path…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-internal-deleter command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-deleter-d">--delete</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-deleter-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-deleter-arg-node">&lt;node&gt; …</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-internal-dump command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-dump-arg-path">&lt;path&gt; …</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-internal-mark command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-b">--broadcast</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-d">--deleted</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-b">-b</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-arg-item">&lt;item&gt; …</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-mark-arg-node">&lt;node&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-internal-state command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-d">--deleted</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-m">--missing</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-n">--nodes</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-p">--present</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-r">--remote-missing</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-s">--superseded</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-y">--yaml</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-m">-m</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-n">-n</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-p">-p</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-r">-r</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-internal-state-y">-y</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-log-dest command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-log-dest-i">--incremental</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-log-dest-i">-i</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-log-dest-arg-path">path</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-log-save command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-log-save-arg-path">path</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-run command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-g">--group &lt;group&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-n">--node &lt;node&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-g">-g</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-n">-n</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-run-list command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-list-s">--state</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-list-S">--state-only</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-list-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-list-S">-S</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-list-arg-prefix">&lt;prefix&gt; …</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-run-set command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-b">--backoff</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-c">--code &lt;code&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-d">--delay &lt;seconds&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-k">--ok &lt;seconds&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-r">--repeat &lt;seconds&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-t">--time &lt;when&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-b">-b</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-c">-c</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-k">-k</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-r">-r</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-run-set-t">-t</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-type-get command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-S">--schema &lt;filename&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-s">--script &lt;filename&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-y">--yaml</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-S">-S</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-y">-y</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-arg-name...">name…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-type-match command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-match-d">--delete</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-match-d">-d</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-match-t">-t</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-match-arg-path...">path…</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-match-t">type &lt;name&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-client-type-set command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-a">--all</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-S">--schema &lt;filename&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-s">--script &lt;filename&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-y">--yaml</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-a">-a</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-b">-b &lt;value&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-g">-g &lt;value&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-S">-S</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-y">-y</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-arg-name...">name…</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-dump-file command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-dump-file-arg-file">&lt;file&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-dump-init command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-dump-init-arg-file">&lt;file&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-dump-init-arg-node">&lt;node&gt;</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-dump-msg-NAME… command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-dump-msg-NAME...-arg-NAME">NAME</a>
+</li>
+      </ul></li>
+      <li>
+    distkv-server command line option
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-server-e">--eval</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-i">--incremental</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-I">--init &lt;value&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-l">--load &lt;file&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-s">--save &lt;file&gt;</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-e">-e</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-i">-i</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-I">-I</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-l">-l</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-s">-s</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-server-arg-name">name</a>
+</li>
+      </ul></li>
+      <li>
+    distkv.actor
+
+      <ul>
+        <li><a href="model.html#module-distkv.actor">module</a>
+</li>
+      </ul></li>
+      <li>
+    distkv.auth
+
+      <ul>
+        <li><a href="auth.html#module-distkv.auth">module</a>
+</li>
+      </ul></li>
+      <li>
+    distkv.model
+
+      <ul>
+        <li><a href="model.html#module-distkv.model">module</a>
+</li>
+      </ul></li>
+      <li>
+    distkv.runner
+
+      <ul>
+        <li><a href="model.html#module-distkv.runner">module</a>
+</li>
+      </ul></li>
+      <li>
+    distkv.util
+
+      <ul>
+        <li><a href="model.html#module-distkv.util">module</a>
+</li>
+      </ul></li>
+      <li><a href="model.html#distkv.util.distkv.util.NotGiven">distkv.util.NotGiven (in module distkv.util)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Entry">Entry (class in distkv.model)</a>
+</li>
+      <li><a href="model.html#distkv.model.Node.enumerate">enumerate() (distkv.model.Node method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.NodeEvent.equals">equals() (distkv.model.NodeEvent method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.CallAdmin.error">error() (distkv.runner.CallAdmin method)</a>
+</li>
+      <li><a href="auth.html#distkv.auth.BaseClientAuthMaker.export">export() (distkv.auth.BaseClientAuthMaker method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.NodeEvent.filter">filter() (distkv.model.NodeEvent method)</a>
+</li>
+      <li><a href="model.html#distkv.model.NodeEvent.find">find() (distkv.model.NodeEvent method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.AnyRunnerRoot.find_stale_nodes">find_stale_nodes() (distkv.runner.AnyRunnerRoot method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.util.MsgWriter.flush">flush() (distkv.util.MsgWriter method)</a>
+</li>
+      <li><a href="model.html#distkv.model.Entry.follow">follow() (distkv.model.Entry method)</a>
+</li>
+      <li><a href="model.html#distkv.model.Entry.follow_acl">follow_acl() (distkv.model.Entry method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.runner.CallAdmin.get">get() (distkv.runner.CallAdmin method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    ident
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-get-arg-ident">distkv-client-auth-user-get command line option</a>
+</li>
+      </ul></li>
+      <li><a href="auth.html#distkv.auth.BaseClientAuth.ident">ident() (distkv.auth.BaseClientAuth property)</a>
+
+      <ul>
+        <li><a href="auth.html#distkv.auth.BaseClientAuthMaker.ident">(distkv.auth.BaseClientAuthMaker property)</a>
+</li>
+        <li><a href="auth.html#distkv.auth.BaseServerAuthMaker.ident">(distkv.auth.BaseServerAuthMaker property)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="auth.html#distkv.auth.BaseServerAuth.info">info() (distkv.auth.BaseServerAuth method)</a>
+</li>
+      <li><a href="model.html#distkv.model.Node.is_deleted">is_deleted() (distkv.model.Node method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.runner.StateRoot.kill_stale_nodes">kill_stale_nodes() (distkv.runner.StateRoot method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Node.kill_this_node">kill_this_node() (distkv.model.Node method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="auth.html#distkv.auth.BaseServerAuth.load">load() (distkv.auth.BaseServerAuth class method)</a>
+
+      <ul>
+        <li><a href="auth.html#distkv.auth.BaseServerAuthMaker.load">(distkv.auth.BaseServerAuthMaker class method)</a>
+</li>
+      </ul></li>
+      <li><a href="auth.html#distkv.auth.loader">loader() (in module distkv.auth)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Node.local_deleted">local_deleted() (distkv.model.Node property)</a>
+</li>
+      <li><a href="model.html#distkv.model.Node.local_missing">local_missing() (distkv.model.Node property)</a>
+</li>
+      <li><a href="model.html#distkv.model.Node.local_present">local_present() (distkv.model.Node property)</a>
+</li>
+      <li><a href="model.html#distkv.model.Node.local_superseded">local_superseded() (distkv.model.Node property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Entry.mark_deleted">mark_deleted() (distkv.model.Entry method)</a>
+
+      <ul>
+        <li><a href="model.html#distkv.model.Node.mark_deleted">(distkv.model.Node method)</a>
+</li>
+      </ul></li>
+      <li><a href="model.html#distkv.runner.AnyRunnerRoot.max_age">max_age() (distkv.runner.AnyRunnerRoot property)</a>
+
+      <ul>
+        <li><a href="model.html#distkv.runner.SingleRunnerRoot.max_age">(distkv.runner.SingleRunnerRoot property)</a>
+</li>
+      </ul></li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="model.html#module-distkv.actor">distkv.actor</a>
+</li>
+        <li><a href="auth.html#module-distkv.auth">distkv.auth</a>
+</li>
+        <li><a href="model.html#module-distkv.model">distkv.model</a>
+</li>
+        <li><a href="model.html#module-distkv.runner">distkv.runner</a>
+</li>
+        <li><a href="model.html#module-distkv.util">distkv.util</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.runner.CallAdmin.monitor">monitor() (distkv.runner.CallAdmin method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.MQTTmsg">MQTTmsg (class in distkv.runner)</a>
+</li>
+      <li><a href="model.html#distkv.util.MsgWriter">MsgWriter (class in distkv.util)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    NAME
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-dump-msg-NAME...-arg-NAME">distkv-dump-msg-NAME… command line option</a>
+</li>
+      </ul></li>
+      <li>
+    name
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-server-arg-name">distkv-server command line option</a>
+</li>
+      </ul></li>
+      <li>
+    name…
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-module-set-arg-name...">distkv-client-code-module-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-set-arg-name...">distkv-client-code-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-get-arg-name...">distkv-client-type-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-set-arg-name...">distkv-client-type-set command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Node">Node (class in distkv.model)</a>
+</li>
+      <li><a href="model.html#distkv.model.NodeEvent">NodeEvent (class in distkv.model)</a>
+</li>
+      <li><a href="model.html#distkv.model.NodeSet">NodeSet (class in distkv.model)</a>
+</li>
+      <li><a href="model.html#distkv.runner.NotSelected">NotSelected</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    options…
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-auth-arg-options...">distkv-client-auth-user-auth command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.actor.PartialState">PartialState (class in distkv.actor)</a>
+</li>
+      <li>
+    path
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-log-dest-arg-path">distkv-client-log-dest command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-log-save-arg-path">distkv-client-log-save command line option</a>
+</li>
+      </ul></li>
+      <li>
+    path…
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-code-list-arg-path...">distkv-client-code-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-delete-arg-path...">distkv-client-data-delete command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-get-arg-path...">distkv-client-data-get command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-list-arg-path...">distkv-client-data-list command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-set-arg-path...">distkv-client-data-set command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-update-arg-path...">distkv-client-data-update command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-data-watch-arg-path...">distkv-client-data-watch command line option</a>
+</li>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-match-arg-path...">distkv-client-type-match command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Entry.purge_deleted">purge_deleted() (distkv.model.Entry method)</a>
+
+      <ul>
+        <li><a href="model.html#distkv.model.Node.purge_deleted">(distkv.model.Node method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.runner.ReadyMsg">ReadyMsg (class in distkv.runner)</a>
+</li>
+      <li><a href="auth.html#distkv.auth.BaseClientAuthMaker.recv">recv() (distkv.auth.BaseClientAuthMaker class method)</a>
+
+      <ul>
+        <li><a href="auth.html#distkv.auth.BaseServerAuthMaker.recv">(distkv.auth.BaseServerAuthMaker class method)</a>
+</li>
+      </ul></li>
+      <li><a href="model.html#distkv.model.Node.remote_missing">remote_missing() (distkv.model.Node property)</a>
+</li>
+      <li><a href="model.html#distkv.model.Node.report_deleted">report_deleted() (distkv.model.Node method)</a>
+</li>
+      <li><a href="model.html#distkv.model.Node.report_missing">report_missing() (distkv.model.Node method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Node.report_superseded">report_superseded() (distkv.model.Node method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.StateEntry.result">result (distkv.runner.StateEntry attribute)</a>
+</li>
+      <li><a href="model.html#distkv.runner.RunnerEntry.run_at">run_at() (distkv.runner.RunnerEntry method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.RunnerEntry">RunnerEntry (class in distkv.runner)</a>
+</li>
+      <li><a href="model.html#distkv.runner.RunnerMsg">RunnerMsg (class in distkv.runner)</a>
+</li>
+      <li><a href="model.html#distkv.runner.RunnerNode">RunnerNode (class in distkv.runner)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="auth.html#distkv.auth.BaseServerAuthMaker.save">save() (distkv.auth.BaseServerAuthMaker method)</a>
+</li>
+      <li><a href="model.html#distkv.model.Node.seen">seen() (distkv.model.Node method)</a>
+</li>
+      <li><a href="auth.html#distkv.auth.BaseClientAuthMaker.send">send() (distkv.auth.BaseClientAuthMaker method)</a>
+
+      <ul>
+        <li><a href="auth.html#distkv.auth.BaseServerAuthMaker.send">(distkv.auth.BaseServerAuthMaker method)</a>
+</li>
+        <li><a href="model.html#distkv.runner.CallAdmin.send">(distkv.runner.CallAdmin method)</a>
+</li>
+      </ul></li>
+      <li><a href="model.html#distkv.runner.RunnerEntry.send_event">send_event() (distkv.runner.RunnerEntry method)</a>
+</li>
+      <li><a href="model.html#distkv.model.Entry.serialize">serialize() (distkv.model.Entry method)</a>
+</li>
+      <li>
+    Set an auth-specific parameter.
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-Set">distkv-client-auth-user-mod-&lt;ident&gt;-&lt;key&gt;=&lt;value&gt;… command line option</a>
+</li>
+      </ul></li>
+      <li><a href="model.html#distkv.runner.CallAdmin.set">set() (distkv.runner.CallAdmin method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Entry.set_data">set_data() (distkv.model.Entry method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.RunnerEntry.set_value">set_value() (distkv.runner.RunnerEntry method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.CallAdmin.setup_done">setup_done() (distkv.runner.CallAdmin method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.RunnerEntry.should_start">should_start() (distkv.runner.RunnerEntry method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.SingleRunnerRoot">SingleRunnerRoot (class in distkv.runner)</a>
+</li>
+      <li><a href="model.html#distkv.runner.CallAdmin.spawn">spawn() (distkv.runner.CallAdmin method)</a>
+</li>
+      <li><a href="model.html#distkv.runner.StateEntry">StateEntry (class in distkv.runner)</a>
+</li>
+      <li><a href="model.html#distkv.runner.StateRoot">StateRoot (class in distkv.runner)</a>
+</li>
+      <li><a href="model.html#distkv.model.Entry.SUBTYPE">SUBTYPE (distkv.model.Entry attribute)</a>
+</li>
+      <li><a href="model.html#distkv.model.Node.supersede">supersede() (distkv.model.Node method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.runner.TimerMsg">TimerMsg (class in distkv.runner)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    type &lt;name&gt;
+
+      <ul>
+        <li><a href="command_line.html#cmdoption-distkv-client-type-match-t">distkv-client-type-match command line option</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Entry.updated">updated() (distkv.model.Entry method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.UpdateEvent">UpdateEvent (class in distkv.model)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.model.Entry.walk">walk() (distkv.model.Entry method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#distkv.runner.CallAdmin.watch">watch() (distkv.runner.CallAdmin method)</a>
+</li>
+      <li><a href="model.html#distkv.model.Watcher">Watcher (class in distkv.model)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
