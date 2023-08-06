@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/uci/__init__.py
+src/uci/stop_words.py
+src/uci.egg-info/PKG-INFO
+src/uci.egg-info/SOURCES.txt
+src/uci.egg-info/dependency_links.txt
+src/uci.egg-info/requires.txt
+src/uci.egg-info/top_level.txt
