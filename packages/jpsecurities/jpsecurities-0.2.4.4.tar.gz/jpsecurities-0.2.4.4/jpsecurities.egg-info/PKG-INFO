@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: jpsecurities
+Version: 0.2.4.4
+Summary: API for jp securities
+Home-page: https://rescala.jp
+Author: rv
+Author-email: yo-maruya@rescala.jp
+License: MIT
+Project-URL: Bug Reports, https://github.com/rv-rescala/jpsecurities/issues
+Project-URL: Source, https://github.com/rv-rescala/jpsecurities
+Description: ## License
+        [MIT](https://choosealicense.com/licenses/mit/)
+        
+        
+Keywords: python crawler scraping
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
