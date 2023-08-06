@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+dl20211.egg-info/PKG-INFO
+dl20211.egg-info/SOURCES.txt
+dl20211.egg-info/dependency_links.txt
+dl20211.egg-info/top_level.txt
+helloapp/__init__.py
+helloapp/hello.py
+myapp/__init__.py
+myapp/myapplication.py
