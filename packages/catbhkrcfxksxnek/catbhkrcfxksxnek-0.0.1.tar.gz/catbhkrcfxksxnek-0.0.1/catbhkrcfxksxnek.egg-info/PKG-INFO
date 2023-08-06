@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: catbhkrcfxksxnek
+Version: 0.0.1
+Summary: A bogus package used to test vulnerabilities in dependency resolution
+Home-page: https://github.com/Peltarion/project-evil
+Author: Martin Parm
+Author-email: martin.parm@peltarion.com
+License: MIT
+Description: catbhkrcfxksxnek
+        ================
+        This is a bogus package used to test vulnerabilities in dependency resolution.
+        
+        _Never use this package for anything!_
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
