@@ -1,0 +1,94 @@
+# shytools
+
+The **shytools** module provides tools to implement shy classes, that is,
+classes whose instances have real private attributes:
+
+* `shymethod` - Shy methods decorator.
+
+* `shyproperty` - Shy properties decorator.
+
+* `shytype` - Shy abstract base class.
+
+## Usage
+
+    `from shytools import *`
+
+    `class MyShy(shytype):`
+
+        `__slots__ = ()`
+
+        `@shymethod`
+        `def __init__(self):`
+            `self.private = "spam"`
+
+        `@shymethod`
+        `def get(self):`
+            `return self.private`
+
+        `@shymethod`
+        `def set(self, value):`
+            `self.private = value`
+
+        `@shyproperty`
+        `def public(self):`
+            `return self.private`
+
+        `@public.setter`
+        `def public(self, value):`
+            `self.private = value`
+
+    `my_shy = MyShy()`
+
+    `print(my_shy.get()) # "spam"`
+    `print(my_shy.public) # "spam"`
+
+    `my_shy.set("eggs") # ok`
+
+    `print(my_shy.get()) # "eggs"`
+    `print(my_shy.public) # "eggs"`
+
+    `my_shy.public = "spam" # ok`
+
+    `print(my_shy.get()) # "spam"`
+    `print(my_shy.public) # "spam"`
+
+    `print(my_shy.private) # AttributeError`
+
+## Issues and limitations
+
+* The shy subclasses must necessarily define an `__slots__` attribute, and that
+attribute must necessarily be an empty tuple:
+
+        `class MyShy(shytype):`
+
+            `__slots__ = ()`
+
+* Within shy properties and methods, self is not a real instance of the shy
+subclass:
+
+        `class MyShy(shytype):`
+
+            `__slots__ = ()`
+
+            `@shymethod`
+            `def __init__(self):`
+                `print(isinstance(self, MyShy)) # False`
+
+            `def regular_method(self):`
+                `print(isinstance(self, MyShy)) # True`
+
+* If the shy subclasses implement their own `__new__` and `__del__`, they need
+to call `__new__` and `__del__` of the base class manually:
+
+        `class MyShy(shytype):`
+
+            `__slots__ = ()`
+
+            `def __new__(cls, *pargs, **kwargs):`
+                `my_shy = shytype.__new__(cls)`
+                `<do something>`
+                `return my_shy`
+
+            `def __del__(self):`
+                `<do something>`
+                `shytype.__del__(self)`

@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+shytools.py
+shytools.egg-info/PKG-INFO
+shytools.egg-info/SOURCES.txt
+shytools.egg-info/dependency_links.txt
+shytools.egg-info/top_level.txt
