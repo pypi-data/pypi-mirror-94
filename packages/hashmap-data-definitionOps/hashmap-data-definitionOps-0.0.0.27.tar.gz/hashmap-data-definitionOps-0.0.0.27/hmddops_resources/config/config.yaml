@@ -1,0 +1,55 @@
+
+loglevel: INFO
+
+# Used for storing history of previous deployments choosen to be deployed
+registry_dir: registry
+
+# Used for temporary storage
+work_dir: work
+
+# Used for storing generated scripts
+generated_dir: generated
+
+report_dir: report
+
+plan_dir: plan
+
+# The file which would contain the list of objects identified to be deployed
+plan_file: plan.csv
+
+template_dir: templates
+
+PLAN:
+  # This is the query tag, this will aid in identifying in the query_history
+  session_tag: DWPLANNER_
+
+  # The file which would contain the list of objects identified to be deployed
+  delta_file: delta.csv
+
+  # Holds the ddl definition of various objects, as retreived using get_ddl command.
+  # this is a temp file
+  ddl_file: ddls.json
+
+
+APPLY:
+  # This is the query tag, this will aid in identifying in the query_history
+  session_tag: DWAPPLICATOR_
+
+  #  Jinja templates would sometime have a need to reference specific environmental
+  #  variables, example SNOWSQL_DATABASE. In such cases we need to retrieve these
+  #  environmental variables and pass it down the script.
+  #
+  #  These environment variables are retreived during runtime and passed to the template
+  #  script under template variable os_env.
+  #  
+  #  For each variable that you would like pass, specify them here.
+  # Lists the environment to retrieve and add to jinja template variable 'env'
+  ENV:
+    - SNOWSQL_ROLE
+    - DEPLOY_ENV # A prefix, ex: QA or DEV indicating the environment variable
+
+  # This is a key-value pair, which will be exposed in jinja template as 'KEYWORD_MAP'. It can be used
+  # for mapping environment specific values 
+  KEYWORD_MAP:
+    # XYZ_ROLE: QA_PII_ROLE
+    DBA: XXX
