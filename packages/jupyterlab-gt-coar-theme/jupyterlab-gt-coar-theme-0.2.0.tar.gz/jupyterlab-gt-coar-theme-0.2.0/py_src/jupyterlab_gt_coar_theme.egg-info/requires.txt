@@ -1,0 +1,16 @@
+jupyterlab<4,>=3
+
+[dev]
+black
+flake8
+isort
+pyflakes
+wheel
+twine
+doit
+
+[lint]
+black
+flake8
+isort
+pyflakes
