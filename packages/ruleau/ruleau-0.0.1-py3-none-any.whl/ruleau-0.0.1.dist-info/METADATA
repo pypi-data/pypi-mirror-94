@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ruleau
+Version: 0.0.1
+Summary: A python rules engine
+Home-page: https://github.com/unai/ruleau
+Author: Unai Ltd
+Author-email: pypa@unai.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Ruleau
+
+A Python Rules Engine library
+
+
