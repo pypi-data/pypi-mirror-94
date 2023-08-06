@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: molecular-rectifier
+Version: 0.1
+Summary: Given an RDKit molecule that does not sanitise, correct it until it does, regardless of the severity of the change.
+Home-page: https://github.com/matteoferla/molecular_rectifier
+Author: Matteo Ferla
+Author-email: matteo.ferla@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
