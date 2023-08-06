@@ -1,0 +1,15 @@
+alyahmor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alyahmor/aly_stem_noun_const.py,sha256=hiXkKD60OsKnm80HzTiFoC0EhvjWQrMCoGlTAO605mg,43075
+alyahmor/aly_stem_verb_const.py,sha256=slOSWFjPOiNyxP9LUJnZ55lPxvvny2XlmPgTTSLqZLE,45808
+alyahmor/basic_affixer.py,sha256=rMh83rgUg-omsfcWADUUKCY3NvOYkt3taQi9ey0Zcr8,3772
+alyahmor/genelex.py,sha256=qucqEZVuwZB76ecD80lmQdMDEGf7E-PFBHHqTNXoUYY,10202
+alyahmor/noun_affixer.py,sha256=aZXj2M79f5YM6FrhdWiiKc4tAHbnAexjxhovc9pis8s,27854
+alyahmor/stem_noun_const.py,sha256=sL7CluSp2sfPp602wv-ymmIhExAKyo245Qfr2okGZG0,36811
+alyahmor/stem_verb_const.py,sha256=0OS-EQuYzzEQ5CnNtz1Yn2O5TGPIlWsJ_lPfrjLIn8E,45769
+alyahmor/verb_affixer.py,sha256=smmn7M-9evFc2Fa4CjoaIw9dmQKaK9Y1GffJHtgEoQo,12547
+alyahmor-0.1.2.dist-info/AUTHORS.md,sha256=ln2QqDtjsxTLGgnj5Pv1d3tepViMtt3YFHaRhCQSUNw,91
+alyahmor-0.1.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+alyahmor-0.1.2.dist-info/METADATA,sha256=SFHKqPnD7ydNsUJnCvsy82ht5bEWF_iAJeSBXr613C0,9045
+alyahmor-0.1.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+alyahmor-0.1.2.dist-info/top_level.txt,sha256=qKYdyObqjgEKLyoAcWye_70scUnEQNXqITdq-KlJT7A,9
+alyahmor-0.1.2.dist-info/RECORD,,
