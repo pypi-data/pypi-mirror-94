@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mkbak_iterfzf/__init__.py
+mkbak_iterfzf.egg-info/PKG-INFO
+mkbak_iterfzf.egg-info/SOURCES.txt
+mkbak_iterfzf.egg-info/dependency_links.txt
+mkbak_iterfzf.egg-info/not-zip-safe
+mkbak_iterfzf.egg-info/requires.txt
+mkbak_iterfzf.egg-info/top_level.txt
