@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: aldryn-background-image-hf
+Version: 0.1.1
+Summary: Background Image Plugin for django CMS - HF
+Home-page: https://github.com/vpdotta/aldryn-background-image
+Author: vpdotta
+Author-email: vpdotta@gmail.com
+License: LICENSE.txt
+Description: UNKNOWN
+Platform: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development
