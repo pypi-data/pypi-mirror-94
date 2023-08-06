@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+data_toolz.egg-info/PKG-INFO
+data_toolz.egg-info/SOURCES.txt
+data_toolz.egg-info/dependency_links.txt
+data_toolz.egg-info/requires.txt
+data_toolz.egg-info/top_level.txt
+datatoolz/__init__.py
+datatoolz/filesystem.py
+datatoolz/io.py
+datatoolz/logging.py
