@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: tfiers
+Version: 0.3.2
+Summary: My notebook setup and matplotlib style
+Home-page: https://github.com/tfiers/tfiers-py
+Author: Tomas Fiers
+Author-email: tomas.fiers@gmail.com
+License: UNKNOWN
+Project-URL: Source Code, https://github.com/tfiers/tfiers-py
+Description: # tfiers-py
+        
+        My IPython notebook setup and my Matplotlib style.
+        
+        Used in notebooks as:
+        ```
+        from tfiers.nb import *
+        ```
+        This will import `numpy` as `np`, setup autoreload, set the mpl style, etc. 
+        
+        ## Installation
+        
+        ```
+        pip install tfiers
+        ```
+        This will get you the
+        
+        [![Latest release on PyPI](https://img.shields.io/pypi/v/tfiers.svg?label=latest%20release%20on%20PyPI:)](https://pypi.python.org/pypi/tfiers/)
+        
+        (Update an existing installation with `pip install -U tfiers`).
+        
+Platform: UNKNOWN
+Requires-Python: >= 3.8
+Description-Content-Type: text/markdown
