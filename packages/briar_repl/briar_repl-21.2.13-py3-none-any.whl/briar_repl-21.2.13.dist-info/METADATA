@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: briar_repl
+Version: 21.2.13
+Summary: briar cli-messenger for briar:headless
+Home-page: https://code.briarproject.org/fphemeral/briar_repl
+License: UNKNOWN
+Author: fphemeral
+Author-email: fphemeral@i2pmail.org
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: colorful>=0.5.4
+Requires-Dist: prompt-toolkit>=3.0.14
+Requires-Dist: httpx>=0.16.1
+Requires-Dist: websockets>=8.1.0
+
+# briar_repl
+
+python repl cli chat client, to be used with briar-headless:
+
+https://code.briarproject.org/briar/briar/tree/master/briar-headless
+
+### currently it features:
+* contact listing
+* contact adding
+* contact removing
+* contact renaming
+* contacts pending list
+* contacts display online status
+* contacts display unread message count (currently per session only)
+* direct chat with contacts
+* briar link display
+* command help
+
+### two modes:
+* command mode (blue bottom bar)
+* chat mode    (green bottom bar)
+
+commands in chat mode are called by pre-pending `/` so a `/back` or `/exit_chat` brings you back to command mode
+
+commands are auto completed thanks to the amazing prompt_toolkit package
+
+https://github.com/prompt-toolkit/python-prompt-toolkit
+
