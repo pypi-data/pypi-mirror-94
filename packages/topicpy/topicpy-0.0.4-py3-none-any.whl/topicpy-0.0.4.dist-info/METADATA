@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: topicpy
+Version: 0.0.4
+Summary: Package to extract information from topic models.
+Home-page: https://github.com/fvalle1/topicpy
+Author: Filippo Valle
+Author-email: filippo.valle@unito.it
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow
+Requires-Dist: gseapy
+Requires-Dist: seaborn
+Requires-Dist: sklearn
+Requires-Dist: tensorflow-probability
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
+![Python application](https://github.com/fvalle1/topicpy/workflows/Python%20application/badge.svg)
+![CodeQL](https://github.com/fvalle1/topicpy/workflows/CodeQL/badge.svg)
+[![made-with-sphinx-doc](https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg)](https://topicpy.readthedocs.io/en/latest/)
+[![GitHub](https://img.shields.io/github/license/fvalle1/topicpy)](LICENSE)
+
+# topicpy
+Python package for topic modelling pre and post processing
+
+# Documentation
+[https://topicpy.readthedocs.io/en/latest/](https://topicpy.readthedocs.io/en/latest/)
+
+# Test
+Run unittest with
+
+``` python
+python test/test.py
+```
+
+# License
+See [LICENSE](LICENSE)
+
+
