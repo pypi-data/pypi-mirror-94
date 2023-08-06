@@ -1,0 +1,14 @@
+code_opener_cli/__init__.py,sha256=c0O7hRBPhUWW7O_ido3AD4qyPh3VyRzQ_aMrFh0PFug,26
+code_opener_cli/main.py,sha256=M5E1Ro-ycCnuZ1iDboIlzWG4jFxruwyRnx8fcQn_89s,4651
+code_opener_cli/path_definitions.py,sha256=JR_WJ44wQ_JYDEPB8tiPbcp96EHqgOcRnYdOE6t9gAo,366
+code_opener_cli/resources/settings.json,sha256=FBv8S1lBj14lXllKxPQlrjM3EN9lnF87hu_J_Cyyhz0,44
+code_opener_cli/tests/conftest.py,sha256=PM_wzZQbDtILnxExHr6pqkKIpbIhEC3ZcE8puo7MixU,296
+code_opener_cli/tests/test_main.py,sha256=Me0-Bej9gBWvnNaPoHPPEaOSVOYf0VOHYxYLJ8EcRm8,4187
+code_opener_cli/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+code_opener_cli/utils/config.py,sha256=3kYCwk0_gtpcg0iq3nmrG-qIg22CiTPCZgjsOP-IN6k,286
+code_opener_cli/utils/helpers.py,sha256=KlEtXbltr8PNVSBUUpthhKzBBDqZatHQyny0O_5IEQ4,803
+code_opener_cli-1.0.0.dist-info/entry_points.txt,sha256=jdX96bpd4An2sljnhbCzKy6oRtqdxtEA1i4Y9tJbZMg,50
+code_opener_cli-1.0.0.dist-info/LICENSE,sha256=ftDTJJ61wVNLYTdqwjFS5nkF6e7bmr_29fgBW8jDdEA,1071
+code_opener_cli-1.0.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+code_opener_cli-1.0.0.dist-info/METADATA,sha256=XhL8HVNeeYYx4gvjUUHr1B_YIykt59FHJCD9r3-1XTo,3054
+code_opener_cli-1.0.0.dist-info/RECORD,,

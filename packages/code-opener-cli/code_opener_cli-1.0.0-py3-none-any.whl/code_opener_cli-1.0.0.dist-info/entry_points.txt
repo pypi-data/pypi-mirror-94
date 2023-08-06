@@ -1,0 +1,3 @@
+[console_scripts]
+copen=code_opener_cli.main:app
+
