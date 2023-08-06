@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+huetui
+setup.py
+.resources/huetui.gif
+.resources/screen.jpg
+.resources/setup1.png
+.resources/setup2.png
+huetui.egg-info/PKG-INFO
+huetui.egg-info/SOURCES.txt
+huetui.egg-info/dependency_links.txt
+huetui.egg-info/requires.txt
+huetui.egg-info/top_level.txt
