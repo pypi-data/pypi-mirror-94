@@ -1,0 +1,13 @@
+setup.py
+superkwargs/__init__.py
+superkwargs/annotations.py
+superkwargs/decorator.py
+superkwargs/exceptions.py
+superkwargs/inject.py
+superkwargs/typing.py
+superkwargs.egg-info/PKG-INFO
+superkwargs.egg-info/SOURCES.txt
+superkwargs.egg-info/dependency_links.txt
+superkwargs.egg-info/not-zip-safe
+superkwargs.egg-info/requires.txt
+superkwargs.egg-info/top_level.txt
