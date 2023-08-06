@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+aws_log_parser/__init__.py
+aws_log_parser/exceptions.py
+aws_log_parser/models.py
+aws_log_parser/parser.py
+aws_log_parser.egg-info/PKG-INFO
+aws_log_parser.egg-info/SOURCES.txt
+aws_log_parser.egg-info/dependency_links.txt
+aws_log_parser.egg-info/requires.txt
+aws_log_parser.egg-info/top_level.txt
+test/test_parse.py

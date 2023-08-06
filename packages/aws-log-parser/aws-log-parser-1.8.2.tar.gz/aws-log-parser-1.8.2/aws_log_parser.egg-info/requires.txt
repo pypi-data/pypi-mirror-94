@@ -1,0 +1,15 @@
+user-agents==2.0
+geoip2==2.9.0
+python-whois==0.7.1
+
+[dev]
+black
+bpython
+flake8
+pre-commit
+setuptools
+twine
+wheel
+pytest
+pytest-cov
+python-coveralls
