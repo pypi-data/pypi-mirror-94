@@ -1,0 +1,14 @@
+jaal/__init__.py,sha256=NRYBL3OIYU8sSduhFKt7rXhH22LjQikBCLy4-RvDIO0,22
+jaal/jaal.py,sha256=tfj-avi9pE1jyhX4ZlT55XY0mB1_qynlyHgMPpD8hHg,7687
+jaal/layout.py,sha256=kS_XCkFof0TEqB8in8qs_uuRFhACwXbFR4A9zOr0Bno,8043
+jaal/assest/logo.png,sha256=9LZYMQcEeBbezjDF8Y8l7bo6Igw6URk-Pjt_gNiDxQU,9212
+jaal/datasets/__init__.py,sha256=sBl1fWpiS-n1h921KUvo59BpjbFH1aEZ1CIXYUCxfmA,30
+jaal/datasets/load_got.py,sha256=WBKvvlhiwa3o7MzQNYDqy7L8oVOoW6zjDuGHnjdt2sQ,738
+jaal/datasets/parse_dataframe.py,sha256=v6roTQ4ufl_nyqGfE4S8rcgH7eIwmVIFJm-O7SOgrr4,1963
+jaal/datasets/got/got_edge_df.csv,sha256=L4sGUGzsqzOWmYq2pNr4bwR2PLQQF6rJvJ4ul8Z6ZdI,6400
+jaal/datasets/got/got_node_df.csv,sha256=LUw7QC4ApWCLsIDFgJ1o_yZG-PRQKw_fud4DjA6SSD0,1443
+jaal-0.0.5.dist-info/LICENSE,sha256=ydzMG33tjYOBFDIinLvz6ilQSCv4_U2JeeHBoDp1W7g,1083
+jaal-0.0.5.dist-info/METADATA,sha256=_KNtRgDeN8omEMxPqw9P7b3U_StgjUn13rTerhfKMyM,4157
+jaal-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jaal-0.0.5.dist-info/top_level.txt,sha256=jc7ah550ECofOC-kGMN3xvSBzErDrRzFHmWtS6-jFLc,5
+jaal-0.0.5.dist-info/RECORD,,
