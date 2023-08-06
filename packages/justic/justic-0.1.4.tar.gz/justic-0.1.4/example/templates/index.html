@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{TITLE}}{% endblock %}
+
+{% block content %}
+<h1>{{TITLE}}</h1>
+<hr>
+{% for item in CONTENT %}
+<p>{{item}}</p>
+{% endfor %}
+{% endblock %}
