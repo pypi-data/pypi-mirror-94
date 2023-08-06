@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: micropython-eydam-prototyping-lcd-menu
+Version: 0.0.2
+Summary: Some LCD Menu functionality for Micropython
+Home-page: https://github.com/eydam-prototyping/tutorials_de/blob/master/micropython/packages/ep_lcd_menu
+Author: Tobias Eydam
+Author-email: eydam-prototyping@outlook.com
+License: UNKNOWN
+Description: # Eydam-Prototyping: ep_lcd_menu
+        
+        Python module to display a menu on an LCD-Display
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: Implementation :: MicroPython
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
