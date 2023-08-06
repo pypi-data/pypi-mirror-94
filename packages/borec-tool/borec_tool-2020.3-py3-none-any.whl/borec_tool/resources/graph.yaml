@@ -1,0 +1,315 @@
+illum_4000.mat:
+  link: None
+  path: ./illumination/illum_4000.mat
+  x_scale:
+  - 400
+  - 720
+  y_scale:
+  - 0
+  - 1
+illum_6500.mat:
+  link: None
+  path: ./illumination/illum_6500.mat
+  x_scale:
+  - 400
+  - 720
+  y_scale:
+  - 0
+  - 1
+illum_25000.mat:
+  link: None
+  path: ./illumination/illum_25000.mat
+  x_scale:
+  - 400
+  - 720
+  y_scale:
+  - 0
+  - 1
+EP2012-350IR4.svg:
+  link: https://www.chip1stop.com/pdf/product/PRLT/EP2012-350IR4-T-PL.PDF
+  path: ./CAMEA-LED/EP2012-350IR4.svg
+  x_scale:
+  - 825
+  - 875
+  y_scale:
+  - 0
+  - 1
+EP2016-350IR4.svg:
+  link: http://13.124.15.139/pdf/download.php?id=8dc35d83210d6c905cf00c27e1028f76721712&type=M&term=EP201
+  path: ./CAMEA-LED/EP2016-350IR4.svg
+  x_scale:
+  - 825
+  - 875
+  y_scale:
+  - 0
+  - 1
+EP201C-350IR4.svg:
+  link: None
+  path: ./CAMEA-LED/EP201C-350IR4.svg
+  x_scale:
+  - 825
+  - 875
+  y_scale:
+  - 0
+  - 1
+EP201K-350IR4.svg:
+  link: None
+  path: ./CAMEA-LED/EP201K-350IR4.svg
+  x_scale:
+  - 825
+  - 875
+  y_scale:
+  - 0
+  - 1
+EP503IR4L017W.svg:
+  link: None
+  path: ./CAMEA-LED/EP503IR4L017W.svg
+  x_scale:
+  - 700
+  - 1000
+  y_scale:
+  - 0
+  - 1
+EP505L-350Y1.svg:
+  link: None
+  path: ./CAMEA-LED/EP505L-350Y1.svg
+  x_scale:
+  - 510
+  - 675
+  y_scale:
+  - 0
+  - 1
+L760-AU-03AU.svg:
+  link: None
+  path: ./CAMEA-LED/L760-AU-03AU.svg
+  x_scale:
+  - 710
+  - 810
+  y_scale:
+  - 0
+  - 1
+SFH4258-Z.svg:
+  link: None
+  path: ./CAMEA-LED/SFH4258-Z.svg
+  x_scale:
+  - 700
+  - 950
+  y_scale:
+  - 0
+  - 1
+SFH4550.svg:
+  link: None
+  path: ./CAMEA-LED/SFH4550.svg
+  x_scale:
+  - 700
+  - 950
+  y_scale:
+  - 0
+  - 1
+SFH4715S.svg:
+  link: None
+  path: ./CAMEA-LED/SFH4715S.svg
+  x_scale:
+  - 700
+  - 950
+  y_scale:
+  - 0
+  - 1
+SFH4780S.svg:
+  link: None
+  path: ./CAMEA-LED/SFH4780S.svg
+  x_scale:
+  - 700
+  - 950
+  y_scale:
+  - 0
+  - 1
+SFH4787S.svg:
+  link: None
+  path: ./CAMEA-LED/SFH4787S.svg
+  x_scale:
+  - 700
+  - 950
+  y_scale:
+  - 0
+  - 1
+SMBB590D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB590D-1100-02.svg
+  x_scale:
+  - 490
+  - 685
+  y_scale:
+  - 0
+  - 1
+SMBB620D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB620D-1100-02.svg
+  x_scale:
+  - 520
+  - 710
+  y_scale:
+  - 0
+  - 1
+SMBB660D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB660D-1100-02.svg
+  x_scale:
+  - 560
+  - 760
+  y_scale:
+  - 0
+  - 1
+SMBB670D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB670D-1100-02.svg
+  x_scale:
+  - 570
+  - 770
+  y_scale:
+  - 0
+  - 1
+SMBB690D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB690D-1100-02.svg
+  x_scale:
+  - 590
+  - 785
+  y_scale:
+  - 0
+  - 1
+SMBB740D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB740D-1100-02.svg
+  x_scale:
+  - 640
+  - 840
+  y_scale:
+  - 0
+  - 1
+SMBB750D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB750D-1100-02.svg
+  x_scale:
+  - 650
+  - 850
+  y_scale:
+  - 0
+  - 1
+SMBB760D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB760D-1100-02.svg
+  x_scale:
+  - 710
+  - 860
+  y_scale:
+  - 0
+  - 1
+SMBB780D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB780D-1100-02.svg
+  x_scale:
+  - 680
+  - 880
+  y_scale:
+  - 0
+  - 1
+SMBB800D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB800D-1100-02.svg
+  x_scale:
+  - 700
+  - 895
+  y_scale:
+  - 0
+  - 1
+SMBB810D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB810D-1100-02.svg
+  x_scale:
+  - 710
+  - 905
+  y_scale:
+  - 0
+  - 1
+SMBB850D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB850D-1100-02.svg
+  x_scale:
+  - 750
+  - 940
+  y_scale:
+  - 0
+  - 1
+SMBB880D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB880D-1100-02.svg
+  x_scale:
+  - 780
+  - 975
+  y_scale:
+  - 0
+  - 1
+SMBB890D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB890D-1100-02.svg
+  x_scale:
+  - 810
+  - 985
+  y_scale:
+  - 0
+  - 1
+SMBB910D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB910D-1100-02.svg
+  x_scale:
+  - 810
+  - 1000
+  y_scale:
+  - 0
+  - 1
+SMBB940D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB940D-1100-02.svg
+  x_scale:
+  - 780
+  - 1080
+  y_scale:
+  - 0
+  - 1
+SMBB970D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB970D-1100-02.svg
+  x_scale:
+  - 870
+  - 1070
+  y_scale:
+  - 0
+  - 1
+SMBB980D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB980D-1100-02.svg
+  x_scale:
+  - 830
+  - 1120
+  y_scale:
+  - 0
+  - 1
+SMBB1050D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBB1050D-1100-02.svg
+  x_scale:
+  - 850
+  - 1250
+  y_scale:
+  - 0
+  - 1
+SMBD850D-1100-02.svg:
+  link: None
+  path: ./CAMEA-LED/SMBD850D-1100-02.svg
+  x_scale:
+  - 750
+  - 950
+  y_scale:
+  - 0
+  - 1
