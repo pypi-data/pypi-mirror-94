@@ -1,0 +1,12 @@
+frigga/__init__.py,sha256=N0GrK0zYclA-Yj3ho6ltA0z-v6t2MpgJ_8ppu6xDLwQ,26
+frigga/__main__.py,sha256=epF_nr8vxMNjzYpHB8fnIr1evlUVsdA6xsCtl0J2UoE,109
+frigga/config.py,sha256=R3dFRn2VlhDNaYd_TJFrpf-6qpRCZgZOrhi3MtQ7DLs,1988
+frigga/frigga.py,sha256=AqqvER7pAVgr65--VuMztKZkrcnAoj8SXCIGCd7oUNg,3436
+frigga/grafana.py,sha256=nKzrnvQlMLIRd1UpcJl53oAp-94Xf2LFcHna-obKIxQ,4875
+frigga/prometheus.py,sha256=TcL5Dfumf-D6amfrkN_KbG_HB_rID8ueTjxGRUAluqs,4442
+frigga-1.0.10rc4.dist-info/LICENSE,sha256=m5RJE9Wl6UH061PyIrXWHpZ4Lxb5NaztHjisxKyqw9k,1061
+frigga-1.0.10rc4.dist-info/METADATA,sha256=BHm1jJnwqO06O0cwdJ-MkcZClnu7Z7CcLHR5Jf3bUQI,11248
+frigga-1.0.10rc4.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+frigga-1.0.10rc4.dist-info/entry_points.txt,sha256=EIu0uO7TM-Kk45uZ5xe8qG6M-fe0lGzEWNHrJ31X0Gs,49
+frigga-1.0.10rc4.dist-info/top_level.txt,sha256=zjjymiL60sqW1RcpbLSB3DT7kH8hxTG4ZNkz_Oz18jI,7
+frigga-1.0.10rc4.dist-info/RECORD,,
