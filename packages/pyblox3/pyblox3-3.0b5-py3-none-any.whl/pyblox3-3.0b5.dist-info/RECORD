@@ -1,0 +1,17 @@
+pyblox3/__init__.py,sha256=8Xi3OH-_JvOX6_TkwZE4INk2XAEIPKVXuxwcQe58kCQ,571
+pyblox3/src/abtesting.py,sha256=e2ZSRIV7lG6IbKliCdvsHq1B4n3lJ9XPYet4idjWtg4,2208
+pyblox3/src/accountInformation.py,sha256=T_XPbo1uWijrbupb55GlM-c4Il2gcVvBGtQuhxcqhhQ,11684
+pyblox3/src/auth.py,sha256=XBLoW22MMhWKt-vwGh39Wk_YYdT-f_GFlJITQQ3InSo,328
+pyblox3/src/games.py,sha256=8eLGetAX7s4d3POS9d4nK1OG4EkOiTaCDWmtNdTlbEw,12285
+pyblox3/src/groups.py,sha256=ZOlaYwddu65QSge9c9jnfWUIkhwkZEt4Mi0VkgjyC2g,34885
+pyblox3/src/privateMessages.py,sha256=gw4gJJR7rhbWWAeFQomNXdRpMsUWFFzBUJQhaghtuVk,6058
+pyblox3/src/users.py,sha256=vkFBJ0yQ90k6sNqY2A7nxe7dxmCCQBq-sHJfEzcRxPw,2991
+pyblox3/src/util/__init__.py,sha256=bs8IGHztdQoXZ8sTbCbH0sYDs3IlzPG41Fbbzc2iQiY,368
+pyblox3/src/util/cached.py,sha256=XFir7bFlZmyV86WF1n1K_OAh2GskXy0bHMAkvz8tFkg,200
+pyblox3/src/util/io.py,sha256=6G6URya7q0AwfmmtQIPoMEhk8YGhd1i41mSXPQ8jjBg,846
+pyblox3/src/util/req.py,sha256=PDhcHKXRaRN0t7M7WmPrGH57zJrlvGS6iYhh5VUQa9A,2439
+pyblox3-3.0b5.dist-info/LICENSE,sha256=OZlSwTb1PtzTX5oYBj6a0QRHIHz-1_lj4bR7o7tNtqs,1081
+pyblox3-3.0b5.dist-info/METADATA,sha256=K8kYugO0wGTsp1emEBzLpjt7GGAoJ5k5qZ47XqQG_YQ,3262
+pyblox3-3.0b5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyblox3-3.0b5.dist-info/top_level.txt,sha256=Zwqks-N_BKoM5XCneAa2RE4BcfYXaOaj5OhD8-Hzwpo,8
+pyblox3-3.0b5.dist-info/RECORD,,
