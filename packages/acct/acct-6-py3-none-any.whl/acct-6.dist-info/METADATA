@@ -1,0 +1,272 @@
+Metadata-Version: 2.1
+Name: acct
+Version: 6
+Summary: Simple, secure, account and credential management
+Home-page: https://saltstack.com
+Author: Thomas S Hatch
+Author-email: thatch@saltstack.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: aiofiles
+Requires-Dist: dict-toolbox (>=1.8)
+Requires-Dist: cryptography
+Requires-Dist: msgpack
+Requires-Dist: pop (>=16.3)
+Requires-Dist: pyyaml
+Requires-Dist: rend (>=5)
+
+====
+ACCT
+====
+
+Simple and secure account management
+
+=====
+USAGE
+=====
+
+Yaml files containing confidential information can be encrypted for use inside of `acct` base applications.
+This is an example of what an `acct` credentials file might look like.
+
+credentials.yml
+
+.. code-block:: yaml
+
+    provider:
+      profile_name:
+        username: XXXXXXXXXXXX
+        password: XXXXXXXXXXXX
+        api_key: XXXXXXXXXXXXXXXXXXX
+
+Next use the `acct` command to encrypt this file using the fernet algorithm:
+
+.. code-block:: bash
+
+    $ acct encrypt credentials.yml
+    YeckEnWEGOjBDVxxytw13AsdLgquzhCtFHOs7kDsna8=
+
+The `acct` command can also be used to decrypt the encrypted file:
+
+.. code-block:: bash
+
+    $ acct decrypt credentials.yml.fernet --output=yaml --acct-key="YeckEnWEGOjBDVxxytw13AsdLgquzhCtFHOs7kDsna8="
+
+===========
+INTEGRATION
+===========
+
+CLI
+===
+Your own app can extend `acct`'s command line interface to use the `--acct-file` and `--acct-key` options:
+
+my_project/conf.py
+
+.. code-block:: python
+
+    CLI_CONFIG = {
+        "acct_file": {"source": "acct", "os": "ACCT_FILE"},
+        "acct_key": {"source": "acct", "os": "ACCT_KEY"},
+        "crypto_plugin": {"source": "acct"},
+    }
+
+
+In your own project, you can vertically merge `acct` and extend it with your own plugins:
+
+my_project/conf.py
+
+.. code-block:: python
+
+    DYNE = {
+        "acct": ["acct"],
+    }
+
+
+PLUGINS
+=======
+
+Create the directory  `my_project/acct/my_project` and add your acct plugins there.
+`acct` plugins need to implement a `gather` function.
+If your app used "hub.acct.init.unlock()" to initialize profile data then you can read profiles from
+`hub.acct.PROFILES` as a starting point for sub_profile data.
+`gather()` should return a dictionary of processed profiles.
+Gather functions can be asynchronous or synchronous.
+
+my_project/acct/my_project/my_plugin.py
+
+.. code-block:: python
+
+        async def gather(hub):
+            """
+            Get [my_plugin] profiles from an encrypted file
+
+            Example:
+
+            .. code-block:: yaml
+
+                my_plugin:
+                  profile_name:
+                    username: XXXXXXXXXXXX
+                    password: XXXXXXXXXXXX
+                    api_key: XXXXXXXXXXXXXXXXXXXXXXX
+            """
+            processed_profiles = {}
+            for profile, ctx in hub.acct.PROFILES.get("my_plugin", {}).items():
+                # Create a connection through [some_library] for each of the profiles
+                sub_profiles[profile] = {
+                    "connected": False,
+                    "connection": await some_library.connect(**ctx),
+                }
+            return processed_profiles
+
+The `gather` function can optionally take a "profiles" parameter.
+"profiles" will be an implicitly passed dictionary of data that was read from the encrypted acct file.
+This is useful when profiles are collected explicitly by your own program and aren't stored in the
+traditional location within acct.
+
+my_project/acct/my_project/my_plugin.py
+
+.. code-block:: python
+
+        async def gather(hub, profiles):
+            """
+            Get [my_plugin] profiles from an encrypted file
+
+            Example:
+
+            .. code-block:: yaml
+
+                my_plugin:
+                  profile_name:
+                    username: XXXXXXXXXXXX
+                    password: XXXXXXXXXXXX
+                    api_key: XXXXXXXXXXXXXXXXXXXXXXX
+            """
+            processed_profiles = {}
+            for profile, ctx in profiles.get("my_plugin", {}).items():
+                # Create a connection through [some_library] for each of the profiles
+                sub_profiles[profile] = {
+                    "connected": False,
+                    "connection": await some_library.connect(**ctx),
+                }
+            return processed_profiles
+
+
+`acct` plugins can also define how to shut down or close the connections made in a profile.
+Simply include a function called "close" in your plugin that takes a "profiles" parameter.
+These profiles will be the processed profiles from the gather function.
+
+.. code-block:: python
+
+    async def close(hub, profiles):
+        """
+        Define how to close the connections for the profile
+        """
+        for name, sub_profile in profiles.items():
+            await sub_profile.connection.close()
+
+
+BACKENDS
+========
+
+You can make an acct backend plugin to collect profiles from an alternate source.
+Backends are processed after the initial encrypted acct_file reading, but before profiles are processed.
+This makes it so you can define credentials to access an external secret store in your `acct_file` --
+and then define extra profiles within that external secret store.  acct backend plugins transform data from
+that external secret store into acct profiles.  `unlock` functions optionally take a `profiles` parameter
+and can be synchronous or asynchronous.
+
+my_project/acct/my_project/my_plugin.py
+
+.. code-block:: python
+
+        async def unlock(hub):
+            """
+            Get profiles from an external store
+
+            Example:
+
+            .. code-block:: yaml
+
+                backend_key: my_backend_key
+
+                my_backend_key:
+                  my_plugin:
+                    profile_name:
+                      username: XXXXXXXXXXXX
+                      password: XXXXXXXXXXXX
+                      api_key: XXXXXXXXXXXXXXXXXXXXXXX
+            """
+            backends = hub.acct.PROFILES.get(hub.acct.BACKEND_KEY, {})
+            profiles = {}
+            for profile, ctx in backends.get("my_plugin", {}).items():
+                # Create a connection through [some_library] for each of the profiles
+                connection = await some_library.connect(**ctx)
+
+                # get profile information from the connection and turn it into a dictionary that looks like:
+                # {"provider": "profile1":  {"kwarg1": "value1"}
+                profiles.update(connection.get_profiles())
+
+            return profiles
+
+
+INTERNAL
+========
+
+Add `acct` startup code to your project's initializer:
+
+my_project/my_project/init.py
+
+.. code-block:: python
+
+    def __init__(hub):
+        # Horizontally merge the acct dynamic namespace into your project
+        hub.pop.sub.add(dyne_name="acct")
+
+    def cli(hub):
+        # Load the config from evbus onto hub.OPT
+        hub.pop.config.load(["my_project", "acct"], cli="my_project")
+
+        # decrypt the encrypted file using the given key and populate hub.acct.PROFILES with the decrypted structures
+        hub.acct.init.unlock(hub.OPT.acct.acct_file, hub.OPT.acct.acct_key)
+
+        # Process profiles from subs in `hub.acct.my_project` and put them into `hub.acct.SUB_PROFILES`
+        # return the explicitly named profile
+        profile = hub.acct.init.gather(subs=["my_project"], profile=hub.OPT.acct.acct_profile)
+
+Alternatively, your app can collect profiles explicitly without storing them on the hub:
+
+my_project/my_project/init.py
+
+.. code-block:: python
+
+    def __init__(hub):
+        # Horizontally merge the acct dynamic namespace into your project
+        hub.pop.sub.add(dyne_name="acct")
+
+    def cli(hub):
+        # Load the config from evbus onto hub.OPT
+        hub.pop.config.load(["my_project", "acct"], cli="my_project")
+
+        # Collect profiles without storing them on the hub
+        profiles = await hub.acct.init.profiles(hub.OPT.acct.acct_file, hub.OPT.acct.acct_key)
+
+        # Collect subs without storing them on the hub
+        sub_profiles = await hub.acct.init.process(["my_project"], profiles)
+
+        # Retrieve a specifically named profile
+        profile = await.hub.acct.init.single(
+            profile_name=hub.OPT.acct.acct_profile,
+            subs=["my_project"],
+            sub_profiles=sub_profiles,
+            profiles=profiles
+        )
+
+
