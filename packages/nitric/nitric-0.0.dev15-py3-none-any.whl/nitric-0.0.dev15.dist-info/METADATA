@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: nitric
+Version: 0.0.dev15
+Summary: The Nitric SDK, used to communicate with native cloud services
+Home-page: https://github.com/nitric-dev/python-sdk
+Author: Nitric
+Author-email: team@nitric.io
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: grpcio (==1.33.2)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: protobuf (==3.13.0)
+
+# Nitric Python SDK
+
+The Python SDK supports the use of the cloud-portable [Nitric](http://nitric.io) framework with Python 3.7+.
+
+> The Nitric Python SDK is in early stage development and is currently only available on test.pypi.org.
+
+## Usage
+
+### Nitric Functions (FaaS):
+
+ - Install Python 3.7+
+ - Install the [Nitric CLI](#)
+ - Create / Open a Nitric Project
+ - Make a Python37 function
+
+ ```bash
+# Create a new project
+nitric make:project example-python
+cd example-python
+
+# Create a python37 Nitric Function
+nitric make:function python37 example-function
+```
+
+> note: The SDK will be included in the requirements.txt of a new Python function by default.
+
+### Standard Python Project
+
+ - Install Python 3.7+
+
+```bash
+# Install the Nitric SDK
+pip3 install nitric
+```
+
+```python
+# import classes/modules as required
+from nitric.sdk.v1 import EventingClient, DocumentsClient
+```
+
