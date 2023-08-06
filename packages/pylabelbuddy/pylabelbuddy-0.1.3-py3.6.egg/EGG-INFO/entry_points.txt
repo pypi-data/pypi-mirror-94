@@ -1,0 +1,3 @@
+[console_scripts]
+pylabelbuddy = pylabelbuddy._label_buddy:start_label_buddy
+

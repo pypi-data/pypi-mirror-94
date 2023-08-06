@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: pylabelbuddy
+Version: 0.1.3
+Summary: A small application for annotating text
+Home-page: https://github.com/jeromedockes/pylabelbuddy
+Maintainer: Jerome Dockes
+Maintainer-email: jerome@dockes.org
+License: BSD 3-Clause License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
