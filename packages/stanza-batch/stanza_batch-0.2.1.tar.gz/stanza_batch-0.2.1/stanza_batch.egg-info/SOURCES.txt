@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+stanza_batch/__init__.py
+stanza_batch/version.py
+stanza_batch.egg-info/PKG-INFO
+stanza_batch.egg-info/SOURCES.txt
+stanza_batch.egg-info/dependency_links.txt
+stanza_batch.egg-info/requires.txt
+stanza_batch.egg-info/top_level.txt
