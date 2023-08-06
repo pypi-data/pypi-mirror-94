@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: auditee
+Version: 0.0.1.dev0
+Summary: auditee
+Home-page: https://github.com/sbellem/auditee
+Author: Sylvain Bellemare
+License: GPLv3
+Project-URL: Source, https://github.com/sbellem/auditee
+Project-URL: Tracker, https://github.com/sbellem/auditee/issues
+Description: # auditee
+        
+Platform: linux
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
