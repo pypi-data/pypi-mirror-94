@@ -1,0 +1,13 @@
+notecard/__init__.py,sha256=SB7osP-AlydvbXwMwopSt4l-cdb_3Kyyvr5d0A8GCDY,64
+notecard/card.py,sha256=YDKS7a5_CyD0JP_nTmWhkvkcsHoCaITfKpA6y0RsfNA,4112
+notecard/env.py,sha256=DkzmBZSFpEZShjf12sujNgSQg5ZEVzv-Ss8zkAbYkbM,2131
+notecard/file.py,sha256=D3qxpvrk-Ts0__fQPHFvVLUYcesOBhOzd1sSgnoe87w,1913
+notecard/hub.py,sha256=gPLvsMAc8RM8q0t9eyFRePYfbuFiAX680NBxNnY3mlM,4085
+notecard/note.py,sha256=ZFaBADvvesj7D_hPGXIrO8vn5MU1mIcGTO4VGkdwgTc,5167
+notecard/notecard.py,sha256=hwd_ZJ4PFMVCSkNXwMJipN9iWznFlyedKzChaygTurE,11701
+notecard/validators.py,sha256=wUeHyOoGKxudyBv2uGPGnuT_H-fSi-9ZgEC1mzINFUU,569
+note_python-1.3.1.dist-info/LICENSE,sha256=z8w9yxJkDl7hly8F-8AvAIZ0XgwvDK0Wu3RYFIoADgA,1053
+note_python-1.3.1.dist-info/METADATA,sha256=vwUQMeTL7FHwG8qzeGPWa4fAUQegb7ljZC1YRHmUjys,5629
+note_python-1.3.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+note_python-1.3.1.dist-info/top_level.txt,sha256=Vu1k0zgBQ_oiuzH4acBJro3tdUCUihis3lCaN4DEouU,9
+note_python-1.3.1.dist-info/RECORD,,
