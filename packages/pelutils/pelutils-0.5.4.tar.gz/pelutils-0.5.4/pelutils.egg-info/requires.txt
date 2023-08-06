@@ -1,0 +1,9 @@
+numpy
+gitpython
+rich
+regex
+
+[ds]
+torch
+matplotlib
+scipy
