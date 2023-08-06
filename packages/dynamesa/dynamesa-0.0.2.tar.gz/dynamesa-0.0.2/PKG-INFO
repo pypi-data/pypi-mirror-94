@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: dynamesa
+Version: 0.0.2
+Summary: A simple dynamodb client
+Home-page: http://jiaaro.com
+Author: James Robert
+Author-email: me@jiaaro.com
+License: MIT
+Description: UNKNOWN
+Keywords: dynamodb
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
