@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: fluidreleaser
+Version: 1.1.0
+Summary: ProjectFluid OTA releaser.
+Home-page: https://github.com/Project-Fluid/fluidreleaser
+License: Apache-2.0
+Author: Sebastiano Barezzi
+Author-email: barezzisebastiano@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: GitPython (>=3.1.12,<4.0.0)
+Requires-Dist: paramiko (>=2.7.2,<3.0.0)
+Project-URL: Repository, https://github.com/Project-Fluid/fluidreleaser
+Description-Content-Type: text/markdown
+
+# ProjectFluid OTA releaser
+
+## Installation
+
+```
+pip3 install fluidreleaser
+```
+The module is supported on Python 3.6 and above.
+
