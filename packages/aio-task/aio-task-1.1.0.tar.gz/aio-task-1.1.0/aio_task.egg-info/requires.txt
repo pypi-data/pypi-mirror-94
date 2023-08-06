@@ -1,0 +1,12 @@
+aioredis==1.3.0
+aio-pika==6.1.2
+
+[doc]
+sphinx
+recommonmark
+changelogfromtags
+
+[test]
+asynctest
+pytest
+pytest-cov
