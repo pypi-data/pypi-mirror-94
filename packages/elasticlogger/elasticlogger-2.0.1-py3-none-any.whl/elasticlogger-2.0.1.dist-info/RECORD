@@ -1,0 +1,9 @@
+elasticlogger/__init__.py,sha256=EbWNs7aX95IkUkgOfSDLxvRIsLflJMU6V2Ruj7tIsXA,55
+elasticlogger/context.py,sha256=vlD-NZ67CArxW-Blapue3mNJis5mYMGmlTmJV3CEd_M,1160
+elasticlogger/errors.py,sha256=ky8ym3cW-AOHVTM_NS26fFr8aYIlkpfQm88TcldXxRE,660
+elasticlogger/json_encoder.py,sha256=T3jU3TJgHdQUArUIbjNqeZSGeVVjANOqDEWgd3OzNwY,752
+elasticlogger/logger.py,sha256=k3cNVdpe2CJ7cAQzyhslduzp963VzWp_Dmi7j-_AqKE,13659
+elasticlogger-2.0.1.dist-info/METADATA,sha256=OZ8yicWEYzpOJtdGA963MpeCTLjI5iXudRSlGeqrMSE,692
+elasticlogger-2.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+elasticlogger-2.0.1.dist-info/top_level.txt,sha256=-8D0S7WmTX4nE9CXztZ__KOxvK5jeOYtAUERm_rDSyk,14
+elasticlogger-2.0.1.dist-info/RECORD,,

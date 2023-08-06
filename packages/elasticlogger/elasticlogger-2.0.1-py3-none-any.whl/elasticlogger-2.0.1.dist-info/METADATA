@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: elasticlogger
+Version: 2.0.1
+Summary: Standardized json logger for easy implementation
+Home-page: https://gitlab.com/eduardoay/elasticlogger
+Author: Eduardo Aguilar
+Author-email: dante.aguilar41@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: python-json-logger
+Requires-Dist: elasticsearch
+Requires-Dist: urllib3
+Requires-Dist: certifi
+Requires-Dist: sentry-sdk
+
+# ElasticLogger
+
+Simple standardized logger tool that implements python-json-logger formatter and a simple
+elastic search integration.
+
+Se the documentation [here](https://eduardoay.gitlab.io/elasticlogger-docs/index.html)
+
+
