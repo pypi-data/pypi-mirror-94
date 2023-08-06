@@ -1,0 +1,10 @@
+README.md
+setup.py
+d2apy/__init__.py
+d2apy/__main__.py
+d2apy/dhis2api.py
+d2apy.egg-info/PKG-INFO
+d2apy.egg-info/SOURCES.txt
+d2apy.egg-info/dependency_links.txt
+d2apy.egg-info/requires.txt
+d2apy.egg-info/top_level.txt
