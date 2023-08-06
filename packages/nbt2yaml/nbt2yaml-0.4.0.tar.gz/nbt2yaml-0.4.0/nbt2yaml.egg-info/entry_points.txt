@@ -1,0 +1,5 @@
+[console_scripts]
+nbt2yaml = nbt2yaml.main:nbt2yaml
+nbtedit = nbt2yaml.main:nbtedit
+yaml2nbt = nbt2yaml.main:yaml2nbt
+
