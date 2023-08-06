@@ -1,0 +1,10 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+__init__.py
+license.txt
+setup.py
+ninadcalc.egg-info/PKG-INFO
+ninadcalc.egg-info/SOURCES.txt
+ninadcalc.egg-info/dependency_links.txt
+ninadcalc.egg-info/top_level.txt
