@@ -1,0 +1,9 @@
+ublox_gps/__init__.py,sha256=911_wU7PRxciNaCnRc6gaOOFjuspnsrmk2pRtbir5RI,2549
+ublox_gps/core.py,sha256=H4uzN7qbXrGX0Cx08kNzV8jHt3U3t9IJxhntnEhcrHI,16242
+ublox_gps/sparkfun_predefines.py,sha256=1xH5N20vidX9UFEcx0uE4EH8tHTKL4MlVurMmdSHlRQ,39084
+ublox_gps/ublox_gps.py,sha256=05uuTLAqzo3MPK3MXPB1mxjn-eiCpqZiJVcCiO-utIM,30155
+sparkfun_ublox_gps-1.1.4.dist-info/LICENSE,sha256=Q75uard9iIBj2mW39IsLlBRO4dCkeinRfrHQ1O33NqQ,702
+sparkfun_ublox_gps-1.1.4.dist-info/METADATA,sha256=yhGWHjE4R5DzKebQo-0twZcLmLjhIRTIGOXshdVykUM,828
+sparkfun_ublox_gps-1.1.4.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+sparkfun_ublox_gps-1.1.4.dist-info/top_level.txt,sha256=vlw-pK7XR0TEaqZDQfBuCF0ysiIepccxOX4LGRaE8vs,10
+sparkfun_ublox_gps-1.1.4.dist-info/RECORD,,
