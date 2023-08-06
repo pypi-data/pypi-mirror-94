@@ -1,0 +1,15 @@
+README.rst
+setup.cfg
+setup.py
+arboreto/__init__.py
+arboreto/algo.py
+arboreto/core.py
+arboreto/utils.py
+arboreto.egg-info/PKG-INFO
+arboreto.egg-info/SOURCES.txt
+arboreto.egg-info/dependency_links.txt
+arboreto.egg-info/requires.txt
+arboreto.egg-info/top_level.txt
+tests/__init__.py
+tests/test_algo.py
+tests/test_core.py
