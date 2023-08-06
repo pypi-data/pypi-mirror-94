@@ -1,0 +1,9 @@
+README.md
+setup.py
+pytestorz/__init__.py
+pytestorz.egg-info/PKG-INFO
+pytestorz.egg-info/SOURCES.txt
+pytestorz.egg-info/dependency_links.txt
+pytestorz.egg-info/entry_points.txt
+pytestorz.egg-info/requires.txt
+pytestorz.egg-info/top_level.txt
