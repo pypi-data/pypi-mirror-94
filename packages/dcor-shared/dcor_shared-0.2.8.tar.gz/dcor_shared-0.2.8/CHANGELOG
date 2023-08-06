@@ -1,0 +1,22 @@
+0.2.8
+ - enh: introduce get_resource_path and check for availability of
+   ckanext-dcor_depot on-the-fly, which makes it possible to run
+   pytest-ckan with a custom configuration
+0.2.7
+ - ci: migrate to GH Actions
+0.2.6
+ - fix: wait_for_resource now checks whether resource is symlinked
+0.2.5
+ - enh: get_resource_path now returns a pathlib.Path
+0.2.4
+ - enh: allow to get the resource path from outside CKAN
+0.2.3
+ - maintenance release
+0.2.2
+ - allow import when ckan is not installed
+0.2.1
+ - automated releases
+0.2.0
+ - added get_resource_path
+0.1.0
+ - initial version
