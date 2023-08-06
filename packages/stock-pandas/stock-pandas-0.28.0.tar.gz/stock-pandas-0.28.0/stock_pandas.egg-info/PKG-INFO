@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: stock-pandas
+Version: 0.28.0
+Summary: The wrapper of `pandas.DataFrame` with stock statistics and indicators support.
+Home-page: https://github.com/kaelzhang/stock-pandas
+Author: Kael Zhang
+Author-email: i+pypi@kael.me
+License: MIT
+Description: <README.md>
+Keywords: pandas pandas-dataframe stock stat indicators macd
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
