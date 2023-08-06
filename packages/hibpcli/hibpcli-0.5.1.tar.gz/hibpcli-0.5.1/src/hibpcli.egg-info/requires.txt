@@ -1,0 +1,10 @@
+click>=7.1.2
+pykeepass==3.2.1
+httpx>=0.13.3
+
+[dev]
+pdbpp
+
+[test]
+pytest
+coverage
