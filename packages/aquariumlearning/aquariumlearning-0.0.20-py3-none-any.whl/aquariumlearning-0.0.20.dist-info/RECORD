@@ -1,0 +1,17 @@
+aquariumlearning/__init__.py,sha256=2HYvQfZOjZuDCVTa8spoLOEUeuW6rtZisiaTTpTO3DE,859
+aquariumlearning/class_map.py,sha256=s9aR_k21Kvo5CvF1h6v1G3_u6jCe9KNSkTpAcl1cGtE,15124
+aquariumlearning/client.py,sha256=oHbW4DoYed5mZrPTJQS6IOOn6YtyLz8kVJlqLFh-088,47468
+aquariumlearning/collection_client.py,sha256=H50u37XzrXqqn2jT1D1qLgVRUI84k7p0Hdplijd_78w,11951
+aquariumlearning/dataset.py,sha256=FqzTO9XwSBNfTbqp3rmdiFUfRFM4_7m7EHDgL7iCjjo,45752
+aquariumlearning/datasharing.py,sha256=EWLbrrd4Qq2dMvY5fPwbxpXvqYmVDLyU9P99wYCI9WQ,2529
+aquariumlearning/embedding_distance_sampling.py,sha256=X5aU3dcjcNGYDsVm1ouId3PNIfnU9n_-kl7bkmoqsEk,3223
+aquariumlearning/inference.py,sha256=W1RDNClf-K2PoTfe5g5nhtfd5YkZ81eSNL1CW0wPyG0,29095
+aquariumlearning/issues.py,sha256=NN3TiyJ0Q1C6g8FGJ9OHgmGhYBP5y9JClDAFRxTM_OY,11934
+aquariumlearning/sampling_agent.py,sha256=5IQRaGiW45xvfrTegfFL7PL6VYkK9O-PobBml-HCw7Y,1520
+aquariumlearning/turbo.py,sha256=QjU_yVL74Pff-Cqy2cGbCkmNsVGWdzo080BJ-A0lJRI,8622
+aquariumlearning/util.py,sha256=kKrfof2J1Y28LfnAycP2eLW5aZHthHFf9AdnoWm2ADM,4011
+aquariumlearning/viridis.py,sha256=8p1eU5D8UNfcwFE0fZeXUGuGH4DDEpdti0AiyL3bwnY,9477
+aquariumlearning-0.0.20.dist-info/METADATA,sha256=eOCoh6x5Zjr1mdT9WGkDCAzGC52eRD5dLMrsXxroAUg,1129
+aquariumlearning-0.0.20.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aquariumlearning-0.0.20.dist-info/top_level.txt,sha256=OTD4qJ21bkNkKRA-I3fjHSDTMjfIiUHGcbFEp0ZeWO8,17
+aquariumlearning-0.0.20.dist-info/RECORD,,
