@@ -1,0 +1,12 @@
+swdl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+swdl/camera.py,sha256=3Gj4lZe01ImRR7k-Nhg1XeET52EZWVIE1RJGsLl8AmA,1215
+swdl/club.py,sha256=hKpCaVLW7pit3uifsg54Lfs3u6dD-jahIv2OZq1XH1Y,1567
+swdl/labels.py,sha256=GJl8Pjibhkkk99IWDqZs_cyquEZ8MuDdvA1j6W_zl8A,15455
+swdl/matches.py,sha256=ljDgGPo04VGa_TZ5modmgKUGK88-AmeejdOmzqClLos,13429
+swdl/swrest.py,sha256=xpUQ1ZZuZpd-ka67E15hbf6KoqTfOf37yxgw8o68YvE,14737
+swdl-1.4.0rc0.data/scripts/swdl-login,sha256=HN-MQra72h9KsxddC8Ejcrgo7kVBz6DslApVmNpCk90,95
+swdl-1.4.0rc0.dist-info/LICENSE,sha256=SYoKT5xuN9rZoXv4nanLwmwUD8WkmZ2C_QOUcNh090I,1097
+swdl-1.4.0rc0.dist-info/METADATA,sha256=SXGTl1kCTR-5MXEU9PorJt7IO4_br16fRl6VJhwBADM,515
+swdl-1.4.0rc0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+swdl-1.4.0rc0.dist-info/top_level.txt,sha256=ewYoV9WP7XVlXR72d6MbUtBaYHLcNfI1TfdLZBzEjdM,5
+swdl-1.4.0rc0.dist-info/RECORD,,
