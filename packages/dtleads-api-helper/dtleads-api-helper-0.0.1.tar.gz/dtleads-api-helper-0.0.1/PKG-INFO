@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dtleads-api-helper
+Version: 0.0.1
+Summary: A small Python package to assist with Daniel Timothy Leads API
+Home-page: https://github.com/Daniel-Timothy-Leads/dtleads-api-helper
+Author: Graham Ormond
+Author-email: graham@danieltimothyleads.com
+License: UNKNOWN
+Description: # Daniel Timothy Leads API package
+        
+        Read me coming soon.
+        
+        Please refer to https://danieltimothyleads.com/Help/Api for information.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
