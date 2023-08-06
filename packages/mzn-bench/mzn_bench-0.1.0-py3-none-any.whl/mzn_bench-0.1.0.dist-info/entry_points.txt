@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        mzn-bench = mzn_bench.cli:main
+    
