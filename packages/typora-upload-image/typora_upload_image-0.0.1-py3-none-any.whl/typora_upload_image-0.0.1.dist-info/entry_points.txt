@@ -1,0 +1,3 @@
+[console_scripts]
+timg = timg:run_main
+
