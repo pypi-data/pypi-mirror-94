@@ -1,0 +1,7 @@
+bgzip<0.4,>=0.3.5
+cli-builder<0.2,>=0.1.5
+firecloud
+google-cloud-storage==1.31.2
+gs-chunked-io<0.6,>=0.5.1
+jmespath==0.10.0
+oauth2client

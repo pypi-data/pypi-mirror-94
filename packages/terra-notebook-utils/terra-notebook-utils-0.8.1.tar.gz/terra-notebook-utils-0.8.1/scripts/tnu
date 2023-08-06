@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+import os
+import sys
+
+pkg_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))  # noqa
+sys.path.insert(0, pkg_root)  # noqa
+
+import terra_notebook_utils.cli.config
+import terra_notebook_utils.cli.vcf
+import terra_notebook_utils.cli.workspace
+import terra_notebook_utils.cli.profile
+import terra_notebook_utils.cli.drs
+import terra_notebook_utils.cli.table
+import terra_notebook_utils.cli.workflows
+from terra_notebook_utils.cli import dispatch
+
+
+if __name__ == "__main__":
+    if 2 == len(sys.argv) and "--version" == sys.argv[1].strip():
+        from terra_notebook_utils import version
+        print(version.__version__)
+    else:
+        dispatch(sys.argv[1:])
