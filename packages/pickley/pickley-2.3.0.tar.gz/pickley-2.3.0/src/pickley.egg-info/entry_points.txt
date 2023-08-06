@@ -1,0 +1,3 @@
+[console_scripts]
+pickley = pickley.cli:protected_main
+
