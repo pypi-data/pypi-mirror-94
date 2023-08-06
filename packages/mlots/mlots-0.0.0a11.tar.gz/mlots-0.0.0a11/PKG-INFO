@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mlots
+Version: 0.0.0a11
+Summary: Machine Learning Over Time-Series: A toolkit for time-series analysis
+Home-page: https://github.com/vivekmahato/mlots
+Author: Vivek Mahato
+Author-email: vivek.mahato@ucdconnect.ie
+License: UNKNOWN
+Description: # Machine Learning Over Time-Series (MLOTS)
+        
+        A toolkit for time-series analysis.
+        
+        ## Placeholder
+        
+        Work is under progress for the initial public release of the toolkit.
+        
+        Regards,<br />
+        Vivek Mahato.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
