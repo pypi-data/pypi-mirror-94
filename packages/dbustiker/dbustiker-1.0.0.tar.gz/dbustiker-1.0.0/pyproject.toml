@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "dbustiker"
+version = "1.0.0"
+description = "Получение наборов стикеров которые есть у других пользователей вк их ценну в рублях и голосах."
+authors = ["Сергей Бухтояров <darsox.anime@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+vk-api = "^11.9.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

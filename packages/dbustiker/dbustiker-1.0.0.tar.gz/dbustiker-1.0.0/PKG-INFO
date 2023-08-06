@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dbustiker
+Version: 1.0.0
+Summary: Получение наборов стикеров которые есть у других пользователей вк их ценну в рублях и голосах.
+Author: Сергей Бухтояров
+Author-email: darsox.anime@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: vk-api (>=11.9.1,<12.0.0)
