@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk8s_redis_sts/__init__.py
+src/cdk8s_redis_sts/py.typed
+src/cdk8s_redis_sts.egg-info/PKG-INFO
+src/cdk8s_redis_sts.egg-info/SOURCES.txt
+src/cdk8s_redis_sts.egg-info/dependency_links.txt
+src/cdk8s_redis_sts.egg-info/requires.txt
+src/cdk8s_redis_sts.egg-info/top_level.txt
+src/cdk8s_redis_sts/_jsii/__init__.py
+src/cdk8s_redis_sts/_jsii/cdk8s-redis-sts@0.0.6.jsii.tgz
