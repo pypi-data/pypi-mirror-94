@@ -1,0 +1,15 @@
+README.md
+setup.py
+app/__init__.py
+app/app.py
+app/init.py
+app/language.py
+app/main.py
+libretranslate.egg-info/PKG-INFO
+libretranslate.egg-info/SOURCES.txt
+libretranslate.egg-info/dependency_links.txt
+libretranslate.egg-info/entry_points.txt
+libretranslate.egg-info/requires.txt
+libretranslate.egg-info/top_level.txt
+tests/__init__.py
+tests/test_init.py
