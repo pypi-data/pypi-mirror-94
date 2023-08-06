@@ -1,0 +1,12 @@
+mud/__init__.py,sha256=PiP3JL0ojUHe8HHlcwvNpNGmHADKo7zIYWbz22fUVsM,425
+mud/base.py,sha256=MijP4w51rQmCah8UhUFENrPHSSI7fgCbTVnUGgqVNH4,4331
+mud/funs.py,sha256=izPkAYXc0ogGvP9-BGMAxnTuTYlKAFcJqMq3-Eh4aHY,9646
+mud/norm.py,sha256=zLFsV_4bVjTBTLcOsAymsG1mJ7p-o2Chg6DMHRedmko,1685
+mud/plot.py,sha256=5y3xNBk8pOhaI-aHPGiy4CmvR1TBL9-ZiFTKg1_eoCc,1673
+mud/util.py,sha256=leL4VcQI6Cgw2j3BPUtr5W8udexa9LfnCmV4uSkR-6k,3179
+mud-0.0.18.dist-info/AUTHORS.rst,sha256=EJDVaLmxuwt305xKUvKo2TCesJE-XFO4UodtW7FAOeg,91
+mud-0.0.18.dist-info/LICENSE.txt,sha256=PIIHpMuyp1KehRb2OwjAF7Q44DP5dK3NzVmg6iOrL1M,1087
+mud-0.0.18.dist-info/METADATA,sha256=BZIMdCKcEp0hDWYrGLyMF3CaWQge_viZpyEdwoo_0KE,1827
+mud-0.0.18.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+mud-0.0.18.dist-info/top_level.txt,sha256=Fk1WPmabIIjp7_iZXLYpbAVqiq7lG7TeAHt30AsOKtQ,4
+mud-0.0.18.dist-info/RECORD,,
