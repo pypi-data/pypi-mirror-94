@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: wechat_msg
+Version: 0.3
+Summary: wechat send message
+Home-page: https://github.com/wnma3mz/wechat_msg
+Author: wnma3mz
+Author-email: 
+License: UNKNOWN
+Description: ## Wechat_msg
+        
+        企业微信发送消息接口，Python
+        
+        ```python
+        from wechat_msg.WeChat import Authorize, Send, Upload
+        
+        corpid = ''
+        corpsecret = ''
+        agentid = ''
+        
+        a = Authorize(corpid, corpsecret)
+        token = a.get_token()
+        
+        s = Send(agentid, token)
+        s.send_msg("TEST", name="username")
+        s.send_img("img_path", name="username")
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+wechat_msg/WeChat.py
+wechat_msg/__init__.py
+wechat_msg.egg-info/PKG-INFO
+wechat_msg.egg-info/SOURCES.txt
+wechat_msg.egg-info/dependency_links.txt
+wechat_msg.egg-info/requires.txt
+wechat_msg.egg-info/top_level.txt
