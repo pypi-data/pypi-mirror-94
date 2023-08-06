@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: CordraPy
+Version: 0.3.2
+Summary: Python client interface to a cordra instance
+Home-page: UNKNOWN
+Author: Zachary Trautt, Faical Yannick Congo, Sven Voigt
+Author-email: zachary.trautt@nist.gov
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests (==2.22.0)
+
+UNKNOWN
+
+
