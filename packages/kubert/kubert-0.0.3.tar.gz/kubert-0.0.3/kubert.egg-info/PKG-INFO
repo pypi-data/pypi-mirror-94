@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kubert
+Version: 0.0.3
+Summary: A Python Kubernetes API client designed to for making easy to register callbacks for watches
+Home-page: https://github.com/nginx-architects/kubert
+Author: James Jones
+Author-email: jam.jones@f5.com
+License: UNKNOWN
+Description: # Kubert
+        A Python Kubernetes API client designed to for making easy to register callbacks for watches
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Freely Distributable
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
