@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: pystock-hts
+Version: 0.1.5
+Summary: HTS stock api service in python
+Home-page: https://github.com/hYe0kjUn/pystock-hts
+Author: henry kwon
+Author-email: soc06103@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/hYe0kjUn/pystock-hts/archive/master.zip
+Description: # HELLO
+        
+        github : https://github.com/hYe0kjUn/pystock-hts
+         
+        soc06103@gmail.com
+Keywords: pystock,HTS,stock api
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
