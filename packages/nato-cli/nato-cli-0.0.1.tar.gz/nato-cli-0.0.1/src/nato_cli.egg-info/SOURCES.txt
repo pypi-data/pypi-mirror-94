@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/nato.py
+src/nato_cli.egg-info/PKG-INFO
+src/nato_cli.egg-info/SOURCES.txt
+src/nato_cli.egg-info/dependency_links.txt
+src/nato_cli.egg-info/entry_points.txt
+src/nato_cli.egg-info/top_level.txt
