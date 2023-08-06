@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ECY_clangd
+Version: 0.0.1
+Summary: clangd for ECY
+Home-page: https://github.com/clangd/clangd/releases/tag/11.0.0
+Author: jimmy huang
+Author-email: 1902161621@qq.com
+License: UNKNOWN
+Description: Clone from https://github.com/clangd/clangd/releases/tag/11.0.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown

@@ -1,0 +1,7 @@
+setup.py
+ECY_clangd/__init__.py
+ECY_clangd.egg-info/PKG-INFO
+ECY_clangd.egg-info/SOURCES.txt
+ECY_clangd.egg-info/dependency_links.txt
+ECY_clangd.egg-info/requires.txt
+ECY_clangd.egg-info/top_level.txt
