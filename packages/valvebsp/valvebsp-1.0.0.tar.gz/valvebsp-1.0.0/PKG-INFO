@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: valvebsp
+Version: 1.0.0
+Summary: A library to parse .bsp files used by the source engine.
+Home-page: https://github.com/pySourceSDK/ValveBSP
+Author: Maxime Dupuis
+Author-email: mdupuis@hotmail.ca
+License: gpl-3.0
+Download-URL: https://github.com/pySourceSDK/ValveBSP/archive/v1.0.0.tar.gz
+Description: UNKNOWN
+Keywords: bsp,source,sourcesdk,hammer,valve
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
