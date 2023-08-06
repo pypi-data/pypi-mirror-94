@@ -1,0 +1,26 @@
+blocker:
+  items:
+    stuff:
+      statement:
+        here: there
+      type: print
+    things:
+      statement:
+        fun: '{{ foo }}'
+      type: print
+  merge: true
+  type: block
+foo: bar
+jinja:
+  extra_context: '{{ this }}'
+  output_path: things.py
+  template_path: templates/things.py.j2
+  type: jinja
+output:
+  contents: '{{ this }}'
+  path: output.yaml
+  type: yaml
+stuff:
+  here: there
+things:
+  fun: bar

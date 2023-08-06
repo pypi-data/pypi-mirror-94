@@ -1,0 +1,3 @@
+[console_scripts]
+tackle = tackle.__main__:main
+

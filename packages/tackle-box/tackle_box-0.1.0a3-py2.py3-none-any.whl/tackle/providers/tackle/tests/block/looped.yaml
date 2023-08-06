@@ -1,0 +1,37 @@
+alist:
+  type: var
+  input:
+    - stuff
+    - things
+
+blocker:
+  type: block
+  loop: "{{ alist }}"
+  items:
+    first:
+      type: tackle
+      template: .
+      chdir: fake-tackle
+
+    print:
+      type: print
+      statement: "{{ first }}"
+
+blocker2:
+  type: block
+  loop: "{{ alist }}"
+  items:
+    thing: false
+    print:
+      type: print
+      when: "{{ thing }}"
+      statement: this
+
+output:
+  type: print
+  statement: "{{ this }}"
+
+empty:
+  type: var
+  loop: []
+  input: this
