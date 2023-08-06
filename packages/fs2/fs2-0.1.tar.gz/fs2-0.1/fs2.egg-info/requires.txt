@@ -1,0 +1,6 @@
+setuptools
+click
+fs
+
+[:python_version < '3.6']
+typing~=3.6
