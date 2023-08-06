@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: wsbtrading
+Version: 1.0.0a9
+Summary: wsbtrading is a library that handles data I/O, aggregation, and modeling to facilitate algorithmic trading stategies.
+Home-page: https://github.com/bordumb/wsbtrading
+Maintainer: bordumb
+License: Apache License, Version 2.0
+Description: wsbtrading is a library that handles data I/O, aggregation,
+        and modeling to facilitate algorithmic trading stategies.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
