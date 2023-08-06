@@ -1,0 +1,10 @@
+__title__ = 'Django Package Template'
+__description__ = 'A Django Application template by Krypted Gaming'
+__package_name__ = 'django-package-template'
+__github_url__ = 'https://github.com/KryptedGaming/django-package-template'
+__version__ = '0.0.1'
+__author__ = 'porowns'
+__author_email__ = 'porowns@gmail.com'
+__license__ = 'MIT License'
+__copyright__ = f"Copyright © 2017-2020 porowns. All rights reserved."
+default_app_config = "django_package_template.apps.DjangoPackageTemplateConfig"
