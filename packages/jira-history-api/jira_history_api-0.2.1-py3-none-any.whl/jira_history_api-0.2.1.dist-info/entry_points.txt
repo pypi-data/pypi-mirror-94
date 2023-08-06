@@ -1,0 +1,3 @@
+[console_scripts]
+jira-history = jira_history_api.cli:main
+
