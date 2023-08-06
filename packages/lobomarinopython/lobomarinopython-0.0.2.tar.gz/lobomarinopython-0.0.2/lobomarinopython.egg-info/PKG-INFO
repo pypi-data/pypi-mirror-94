@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: lobomarinopython
+Version: 0.0.2
+Summary: Lobillo
+Home-page: https://github.com/sahil-rajput/excel2jsonapi
+Author: guillermo castanon
+Author-email: guillermo.h.castanon18@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Requires-Python: >=3.6
