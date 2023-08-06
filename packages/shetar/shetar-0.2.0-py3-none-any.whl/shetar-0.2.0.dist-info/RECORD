@@ -1,0 +1,12 @@
+shetar/__init__.py,sha256=7NGFtOkoCJWQZhWlI0By8A92NiPvuakCb08KkYaCJyI,337
+shetar/_version.py,sha256=xT484hNkJPDbWCrYtw3PZPiCv6VJW-98nk8FKtDFB8c,200
+shetar/bases.py,sha256=dC1SYPVugzu1q2M3KHF9taSPZw7oVnjmoanxHlVOOmY,14688
+shetar/coordinates.py,sha256=ac4SIaLe2RBGezD--HOsb_6Q9HogKN8Hv7joComWUg4,21049
+shetar/expansions.py,sha256=1R4r0dmU8H4W3wO0UB5jpEnpvDATrOMP5I5Pok4HnWM,12054
+shetar/rotations.py,sha256=i_O1ZWixy6AXs4wA8bvNFecFr9QiiyJgyfdDI1Qq070,12055
+shetar/translations.py,sha256=nTnZ-IPQzcPjVR_vneDVEZTpyfzqpgtMIxwCaqyd5Is,16573
+shetar-0.2.0.dist-info/LICENSE,sha256=qXpOIL-iaFn41dDgAa8346_708CALXy_E0-ZZbsHZ4I,1123
+shetar-0.2.0.dist-info/METADATA,sha256=pRiAvPQd47xUkbAO34lyRjmFgdn3W_-h5hvwoU75HLM,1665
+shetar-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+shetar-0.2.0.dist-info/top_level.txt,sha256=5vHRKoB7B1pp99Mm67L2WHXvDEBUz2J33Wo7PYKf570,7
+shetar-0.2.0.dist-info/RECORD,,
