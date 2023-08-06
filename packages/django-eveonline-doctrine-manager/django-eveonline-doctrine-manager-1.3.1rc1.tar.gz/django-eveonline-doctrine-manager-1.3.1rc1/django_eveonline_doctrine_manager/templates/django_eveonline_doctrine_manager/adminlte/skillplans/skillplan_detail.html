@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}
+View Skillplan
+{% endblock %}
+
+{% block breadcrumbs %}
+<li class="breadcrumb-item"><a href="{% url 'django-eveonline-doctrine-manager-skillplans-list' %}">Skillplans</a></li>
+{% endblock %}
+
+{% block breadcrumb %}
+View Skillplan
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">EFT Format</h3>
+            </div>
+            <div class="card-body">
+                <textarea style="width:100%" onclick="this.select()" class="col-md-12" rows="15" readonly="readonly">{{object.skills}}</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-info card-outline">
+            <div class="card-header">
+                <h3 class="card-title">Description</h3>
+            </div>
+            <div class="card-body">
+            <p>
+                {% autoescape off %}
+                {{object.description}}
+                {% endautoescape %}
+            </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $.fn.DataTable.ext.pager.numbers_length = 5;
+    $(function () {
+        $('table').DataTable({
+            'paging': true,
+            'lengthChange': true,
+            'searching': true,
+            'ordering': true,
+            'order': [[1, 'asc']],
+            'pageLength': 5,
+            "autoWidth": false,
+        })
+    })
+</script>
+
+{% endblock %}

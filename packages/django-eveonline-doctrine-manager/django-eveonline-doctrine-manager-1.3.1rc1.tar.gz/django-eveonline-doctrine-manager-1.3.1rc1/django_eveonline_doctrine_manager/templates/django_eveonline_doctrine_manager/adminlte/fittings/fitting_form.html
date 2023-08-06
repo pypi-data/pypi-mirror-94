@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Fittings
+{% endblock %}
+
+{% block breadcrumbs %}
+<li class="breadcrumb-item"><a href="{% url 'django-eveonline-doctrine-manager-fittings-list' %}">Fittings</a></li>
+{% endblock %}
+
+{% block breadcrumb %}
+Fitting Form
+{% endblock %}
+
+{% block content %}
+<div class="card card-outline card-warning">
+    <div class="card-header ">
+        <h3 class="card-title">
+            Fitting Form
+        </h3>
+    </div>
+    <div class="card-body pad">
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input class="btn btn-success btn-block" type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(function () {
+        // Summernote
+        $('#id_description').summernote()
+
+    })
+</script>
+{% endblock %}

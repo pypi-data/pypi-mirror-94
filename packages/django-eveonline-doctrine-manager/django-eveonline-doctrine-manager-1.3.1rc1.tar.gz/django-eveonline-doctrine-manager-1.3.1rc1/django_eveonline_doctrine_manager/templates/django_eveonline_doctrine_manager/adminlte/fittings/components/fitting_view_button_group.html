@@ -1,0 +1,16 @@
+<div class="btn-group btn-block">
+    {% if perms.django_eveonline_doctrine_manager.view_evecharacterdoctrinereport %}
+    <a href="{% url 'django-eveonline-doctrine-manager-fittings-audit' object.pk %} " style="flex: 1;"
+        class="btn btn-info fas fa-chart-bar"></a>
+    {% endif %}
+    {% if perms.django_eveonline_doctrine_manager.change_evefitting %}
+    <a href="{% url 'django-eveonline-doctrine-manager-fittings-update' object.pk %}" style="flex: 1;"
+        class="btn btn-warning fas text-white fa-edit">
+    </a>
+    {% endif %}
+
+    {% if perms.django_eveonline_doctrine_manager.delete_evefitting%}
+    <a href="{% url 'django-eveonline-doctrine-manager-fittings-delete' object.pk %}" style="flex: 1;"
+        class="btn btn-danger fas fa-times-circle"></a>
+    {% endif %}
+</div>

@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}
+View Fitting
+{% endblock %}
+
+
+{% block breadcrumbs %}
+<li class="breadcrumb-item"><a href="{% url 'django-eveonline-doctrine-manager-fittings-list' %}">Fittings</a></li>
+{% endblock %}
+
+{% block breadcrumb %}
+View Fitting
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+    {% include 'django_eveonline_doctrine_manager/adminlte/fittings/components/fitting_view_button_group.html' %}
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">EFT Format</h3>
+            </div>
+            <div class="card-body">
+                <textarea style="width:100%" onclick="this.select()" class="col-md-12" rows="15" readonly="readonly">{{object.fitting}}</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-info card-outline">
+            <div class="card-header">
+                <h3 class="card-title">Description</h3>
+            </div>
+        <div class="card-body">
+            {% if object.description %}
+            <p>
+                {% autoescape off %}
+                {{object.description}}
+                {% endautoescape %}
+            </p>
+            {% else %}
+            <p>No description set.</p>
+            {% endif %}
+        </div>
+        <div class="card-footer">
+            {% if object.tags.all %}
+            <p>
+                Tags:
+                {% for tag in object.tags.all %}
+                <span class="badge badge-primary">{{tag}}</span>
+                {% endfor %}
+            </p>
+            {% endif %}
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-danger card-outline">
+            <div class="card-header">
+                <h3 class="card-title">Potential Refits</h3>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped dataTable">
+                    <thead>
+                        <th></th>
+                        <th>Fitting Name</th>
+                        <th>Actions</th>
+
+                    </thead>
+                    <tbody>
+                        {% for fitting in object.refits %}
+                        <tr>
+                            <td class="text-center"><img class="img-circle"
+                                    src="https://images.evetech.net/types/{{fitting.ship_id}}/icon?size=32"
+                                    title="{{fitting.get_ship_name}}" width="32px"></td>
+                            <td>{{fitting.name}}</td>
+                            <td>
+                                <div style="display: flex;" class="btn-group btn-group-md">
+                                    <a href="{% url 'django-eveonline-doctrine-manager-fittings-detail' fitting.pk %}" style="flex: 1;"
+                                        class="btn btn-info fa fa-eye"></a>
+                                    <a href="{% url 'django-eveonline-doctrine-manager-fittings-update' fitting.pk %}" style="flex: 1;"
+                                        class="btn btn-warning text-white fa fa-edit"></a>
+                                    <a href="{% url 'django-eveonline-doctrine-manager-fittings-delete' fitting.pk %}" style="flex: 1;"
+                                        class="btn btn-danger fa fa-times-circle"></a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $.fn.DataTable.ext.pager.numbers_length = 5;
+    $(function () {
+        $('table').DataTable({
+            'paging': true,
+            'lengthChange': true,
+            'searching': true,
+            'ordering': true,
+            'order': [[1, 'asc']],
+            'pageLength': 5,
+            "autoWidth": false,
+        })
+    })
+</script>
+
+{% endblock %}

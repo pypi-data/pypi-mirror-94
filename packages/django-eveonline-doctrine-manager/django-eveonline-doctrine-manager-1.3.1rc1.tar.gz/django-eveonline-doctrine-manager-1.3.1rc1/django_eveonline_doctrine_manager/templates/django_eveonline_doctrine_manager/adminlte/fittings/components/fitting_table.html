@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-success card-outline">
+            <div class="card-header">
+                <h3 class="card-title">Fittings</h3>
+            </div>
+            <div id="{{object.pk}}" class="card-body doctrine-id">
+                    <table class="table table-bordered table-striped dataTable">
+                        <thead>
+                            <th></th>
+                            <th>Roles</th>
+                            <th>Fitting Name</th>
+                            <th>Actions</th>
+                        </thead>
+                        <tbody>
+                            {% for fitting in object.fittings %}
+                            <tr>
+                                <td class="text-center">
+                                    <img src="https://images.evetech.net/types/{{fitting.ship_id}}/icon?size=32" class="img-circle" alt="Avatar"
+                                        width="32px" title="{{character.character.name}}">
+                                <td>
+                                    {% for role in fitting.roles.all %}
+                                    <span class="badge badge-{{role.color}}">{{role}}</span>
+                                    {% endfor %}
+                                </td>
+                                <td>
+                                    {{fitting.name}}
+                                </td>
+                                <td>
+                                    <div style="display: flex;" class="btn-group">
+                                        <a style="flex: 1;" class="btn btn-info fa fa-eye" href="{% url 'django-eveonline-doctrine-manager-fittings-detail' fitting.pk %}"></a>
+                                    </div>  
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+</div>

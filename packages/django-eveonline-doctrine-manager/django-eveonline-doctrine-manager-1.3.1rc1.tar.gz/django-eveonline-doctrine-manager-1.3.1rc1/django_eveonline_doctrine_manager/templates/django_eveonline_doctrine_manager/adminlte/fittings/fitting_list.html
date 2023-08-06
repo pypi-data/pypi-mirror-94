@@ -1,0 +1,187 @@
+
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+Fittings
+{% endblock %}
+
+{% block breadcrumb %}
+Fittings
+{% endblock %}
+
+{% block head %}
+<!-- Select2 -->
+<link rel="stylesheet" href="{% static 'adminlte/plugins/select2/css/select2.min.css' %}">
+<link rel="stylesheet" href="{% static 'adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="card card-primary card-outline">
+    <div class="card-header">
+        <h3 class="float-left card-title">
+            Fitting Table
+        </h3>
+        {% if perms.django_eveonline_doctrine_manager.add_evefitting %}
+        <a class="btn float-right" href="{% url 'django-eveonline-doctrine-manager-fittings-create' %}">
+            <i class="fa fa-plus"></i>
+        </a>
+        {% endif %}
+    </div>
+    
+    <div class="card-body">
+        <div>
+            <div class="row">
+                <div class="col">
+                    <h6>Filter by Role</h5>
+                    <select id="roleFilter" class="select2 w-100 p-3" name="states[]" multiple="multiple">
+                        {% for role in roles %}
+                        <option value="{{role}}">{{role}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col">
+                    <h6>Filter by Tag</h5>
+                    <select id="tagFilter" class="select2 w-100 p-3" name="states[]" multiple="multiple">
+                        {% for tag in tags %}
+                        <option value="{{tag}}">{{tag}}</option>
+                        {% endfor %}
+                    </select>
+                    </select>
+                </div>
+                <div class="col">
+                    <h6>Filter by Doctrine</h5>
+                    <select id="doctrineFilter" class="select2 w-100 p-3" name="states[]" multiple="multiple">
+                        {% for doctrine in doctrines %}
+                        <option value="{{doctrine}}">{{doctrine}}</option>
+                        {% endfor %}
+                    </select>
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+
+        <hr>
+        <table class="table table-bordered table-striped dataTable">
+            <thead>
+                <th></th>
+                <th>Fitting Name</th>
+                
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                {% for fitting in object_list %}
+                <tr>
+                    <td class="text-center">
+                        <img class="img-circle" src="https://images.evetech.net/types/{{fitting.ship_id}}/icon?size=32"
+                            title="{{fitting.ship_name}}" width="32px">
+                        <!-- Hiding Roles in Column -->
+                        <div hidden>
+                            {% for role in fitting.roles.all %}
+                            <span class="badge badge-{{role.color}}">
+                            {{role}}
+                            </span>
+                            {% endfor %}
+                        </div>
+                        <!-- Hiding Tags in Column -->
+                        <div hidden>
+                            {% for tag in fitting.tags.all %}
+                            <p hidden>
+                                {{tag}}
+                            </p>
+                            {% endfor %}
+                        </div>
+                        <!-- Hiding Doctrines in Column -->
+                        <div hidden>
+                            {% for doctrine in fitting.doctrines.all %}
+                            <p hidden>
+                                {{doctrine.name}}
+                            </p>
+                            {% endfor %}
+                        </div>
+                    </td>
+                    
+                    <td>
+                        <p>
+                            {{fitting.name}}
+                        </p>
+                    </td>
+                    
+                    <td >
+                        <div style="display: flex;" class="btn-group btn-group-md">
+                            <a href="{% url 'django-eveonline-doctrine-manager-fittings-detail' fitting.pk %}" style="flex: 1;" class="btn btn-info btn-sm fas fa-eye"></a>
+                            {% if perms.django_eveonline_doctrine_manager.change_evefitting %}
+                            <a href="{% url 'django-eveonline-doctrine-manager-fittings-update' fitting.pk %}" style="flex: 1;" class="btn btn-warning btn-sm text-white fas fa-edit"></a>
+                            {% endif %}
+                            {% if perms.django_eveonline_doctrine_manager.delete_evefitting %}
+                            <a href="{% url 'django-eveonline-doctrine-manager-fittings-delete' fitting.pk %}" style="flex: 1;" class="btn btn-danger btn-sm  fas fa-times-circle"><i class=""></i></a>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer">
+        
+    </div>  
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<!-- Select2 -->
+<script src="{% static 'adminlte/plugins/select2/js/select2.full.min.js' %}"></script>
+<script>
+$.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+        
+        let roleList = $('#roleFilter').select2('data').map(function(item) { return item.id; });
+        let tagList = $('#tagFilter').select2('data').map(function(item) { return item.id; });
+        let doctrineList= $('#doctrineFilter').select2('data').map(function(item) { return item.id; });
+
+        let roleRegexCheck = new RegExp(roleList.join("|"));
+        let tagRegexCheck = new RegExp(tagList.join("|"));
+        let doctrineRegexCheck = new RegExp(doctrineList.join("|"));
+
+        if (!roleRegexCheck.test(data[0])) {
+            return false; 
+        }
+
+        if (!tagRegexCheck.test(data[0])) {
+            return false; 
+        }
+
+        if (!doctrineRegexCheck.test(data[0])) {
+            return false;
+        }
+
+        return true;
+    }
+);
+
+$.fn.DataTable.ext.pager.numbers_length = 5;
+
+$(document).ready(function() {
+    $('.select2').select2()
+    var table = $('table').DataTable({
+        'paging': true,
+        'lengthChange': true,
+        'searching': true,
+        'ordering': true,
+        'order': [[1, 'asc']],
+        'pageLength': 5,
+        "autoWidth": false,
+    })
+    $('.select2').on('select2:select', function (e) {
+        table.draw();
+    });
+    $('.select2').on('select2:unselect', function (e) {
+        table.draw();
+    });
+});
+</script>
+
+{% endblock %}

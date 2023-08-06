@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}
+Skillplans
+{% endblock %}
+
+
+{% block breadcrumb %}
+Skillplans
+{% endblock %}
+
+
+{% block content %}
+<div class="card card-primary card-outline">
+    <div class="card-header">
+        <h3 class="card-title">
+            Skillplan Table
+        </h3>
+        {% if perms.django_eveonline_doctrine_manager.add_eveskillplan %}
+        <a class="btn float-right" href="{% url 'django-eveonline-doctrine-manager-skillplans-create' %}">
+            <i class="fa fa-plus"></i>
+        </a>
+        {% endif %}
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered table-striped dataTable">
+            <thead>
+                <th>Name</th>
+                <th>Roles</th>
+                <th>Actions</th>
+                
+            </thead>
+            <tbody>
+                {% for skillplan in object_list %}
+                <tr>
+                    <td>
+                        <p class="pull-left">{{skillplan.name}}</p>
+                        {% for tag in skillplan.tags.all %}
+                        <span class="badge badge-primary float-right">{{tag}}</span>
+                        {% endfor %}
+                    </td>
+                    <td class="hidden-xs">
+                        {% for role in skillplan.roles.all %}
+                        <span class="badge badge-{{role.color}}">{{role}}</span>
+                        {% endfor %}
+                    </td>
+                    <td >
+                        <div style="display: flex;" class="btn-group btn-group-md">
+                            <a href="{% url 'django-eveonline-doctrine-manager-skillplans-detail' skillplan.pk %}" style="flex: 1;" class="btn btn-info fa fa-eye"></a>
+                            {% if perms.django_eveonline_doctrine_manager.change_eveskillplan %}
+                            <a href="{% url 'django-eveonline-doctrine-manager-skillplans-update' skillplan.pk %}" style="flex: 1;" class="btn btn-warning text-white fa fa-edit"></a>
+                            {% endif %}
+                            {% if perms.django_eveonline_doctrine_manager.delete_eveskillplan %}
+                            <a href="{% url 'django-eveonline-doctrine-manager-skillplans-delete' skillplan.pk %}" style="flex: 1;" class="btn btn-danger fa fa-times-circle"></a>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer">
+        
+    </div>  
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $.fn.DataTable.ext.pager.numbers_length = 5;
+    $(function () {
+        $('table').DataTable({
+            'paging': true,
+            'lengthChange': true,
+            'searching': true,
+            'ordering': true,
+            'order': [[1, 'asc']],
+            'pageLength': 10,
+            "autoWidth": false,
+        })
+    })
+</script>
+
+{% endblock %}
