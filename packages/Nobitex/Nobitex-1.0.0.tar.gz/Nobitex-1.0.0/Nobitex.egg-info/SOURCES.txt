@@ -1,0 +1,9 @@
+README.md
+setup.py
+Nobitex.egg-info/PKG-INFO
+Nobitex.egg-info/SOURCES.txt
+Nobitex.egg-info/dependency_links.txt
+Nobitex.egg-info/requires.txt
+Nobitex.egg-info/top_level.txt
+NobitexAPI/Nobitex.py
+NobitexAPI/__init__.py

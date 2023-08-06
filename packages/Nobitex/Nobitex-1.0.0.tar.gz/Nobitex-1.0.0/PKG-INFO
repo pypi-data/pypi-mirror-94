@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: Nobitex
+Version: 1.0.0
+Summary: python nobitex api
+Home-page: https://github.com/aminghani/NobitexAPI
+Author: amin ghanizadeh
+Author-email: aminkhosroshahi80328@gmail.com
+License: MIT
+Download-URL: https://github.com/aminghani/NobitexAPI/archive/1.0.0.tar.gz
+Description: ## Nobitex python api
+        
+        ###installation
+        ```
+        pip install NobitexAPI
+        ```
+        
+        ### working with package
+        
+        ```
+        from NobitexAPI import Nobitex
+        nt = Nobitex('your nobitex email' , 'your nobitex password')
+        ```
+        
+        ####calling object functions
+        ```
+        print(nt.global_market_stats())
+        ```
+        
+        for more info please check [nobitex docs](https://apidocs.nobitex.ir/#82d68ae596)
+Keywords: Nobitex,NobitexAPI,pythonNobitex
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
