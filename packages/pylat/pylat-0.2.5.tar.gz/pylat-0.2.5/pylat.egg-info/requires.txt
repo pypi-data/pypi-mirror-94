@@ -1,0 +1,9 @@
+gensim==3.8.3
+scikit-learn==0.20.3
+numpy
+pandas
+spacy==2.0.18
+tensorflow==1.13.1
+xmltodict
+en_core_web_sm
+es_core_news_sm
