@@ -1,0 +1,95 @@
+[tool.poetry]
+name = "drf-openapi-tester"
+version = "1.0.0"
+description = "Django test utility for validating OpenAPI response documentation"
+authors = ["Sondre Lillebø Gundersen <sondrelg@live.no>", "Na'aman Hirschfeld <nhirschfeld@gmail.com>"]
+maintainers = ["Jonas Krüger Svensson <jonas-ks@hotmail.com>"]
+license = "BSD-4-Clause"
+readme = "README.md"
+homepage = "https://github.com/snok/drf-openapi-tester"
+repository = "https://github.com/snok/drf-openapi-tester"
+documentation = "https://github.com/snok/drf-openapi-tester"
+keywords = ["openapi", "swagger", "api", "testing", "docs", "documentation", "django"]
+classifiers = [
+    "Development Status :: 4 - Beta",  # TODO: Update when stable
+    "Environment :: Web Environment",
+    "Framework :: Pytest",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Documentation",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Testing :: Unit",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+include = ["CHANGELOG.rst"]
+packages = [
+    { include = "openapi_tester" },
+]
+
+[tool.poetry.dependencies]
+djangorestframework = "*"
+django = "^2.2 || ^3.0"
+inflection = "^0.4.0"
+openapi-spec-validator = "^0.2.9"
+prance = "^0.16.0"
+python = "^3.6.1"
+pyYAML = "*"
+
+[tool.poetry.dev-dependencies]
+drf-spectacular = "^0.13.1"
+drf-yasg = "^1.17.1"
+Faker = "^5.6.5"
+ipython = "^7.16.1"
+pre-commit = "^2.10.0"
+pytest = "^6.2"
+pytest-cov = "2.11.1"
+pytest-django = "^4.1.0"
+pylint = "^2.6.0"
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+line_length = 120
+known_third_party = ["django", "drf_spectacular", "drf_yasg", "inflection", "openapi_spec_validator", "prance", "pytest", "rest_framework", "yaml"]
+known_first_party = ["openapi_tester"]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.pylint.FORMAT]
+max-line-length = 120
+
+[tool.pylint.MESSAGE_CONTROL]
+disable = """
+    unsubscriptable-object,
+    unnecessary-pass,
+    missing-function-docstring,
+    import-outside-toplevel,
+    fixme,
+"""
+
+[tool.pylint.BASIC]
+max-args = 6
+max-returns = 21
+max-branches = 20
+good-names = "_,e"
