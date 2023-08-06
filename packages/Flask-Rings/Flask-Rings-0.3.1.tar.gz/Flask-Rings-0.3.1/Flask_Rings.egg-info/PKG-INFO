@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: Flask-Rings
+Version: 0.3.1
+Summary: Rings(https://github.com/ringsings/Rings) helper for flask.
+Home-page: https://github.com/ringsings/flask-rings
+Author: Andy Zhou
+Author-email: zhoutianyou11@gmail.com
+License: LGPL-3.0
+Description: # flask-rings
+        ![Build Status](https://github.com/ringsings/flask-rings/workflows/Test/badge.svg)
+        
+        Rings helper for flask.
+        
+Keywords: flask extension development rings
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
