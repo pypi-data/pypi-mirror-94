@@ -1,0 +1,9 @@
+apache-airflow>=2.0.0
+azure-core>=1.10.0
+azure-storage-blob
+azure-storage-common
+snowflake-connector-python>=2.3.8
+snowflake-sqlalchemy>=1.1.0
+
+[slack]
+apache-airflow-providers-slack
