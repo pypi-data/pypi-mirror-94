@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+data_dependencies_server.egg-info/PKG-INFO
+data_dependencies_server.egg-info/SOURCES.txt
+data_dependencies_server.egg-info/dependency_links.txt
+data_dependencies_server.egg-info/top_level.txt
