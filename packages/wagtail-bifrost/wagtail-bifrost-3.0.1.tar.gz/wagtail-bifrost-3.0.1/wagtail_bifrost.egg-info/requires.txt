@@ -1,0 +1,10 @@
+Django<3.2.0,>=3.1.0
+wagtail<2.12.0,>=2.11.0
+graphene-django==2.7.1
+graphql-core==2.2.1
+channels==2.4.0
+django-graphql-jwt==0.3.1
+PyJWT==1.7.1
+graphene-subscriptions
+graphene-file-upload
+wagtail-headless-preview
