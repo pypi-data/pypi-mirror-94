@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: django-amenities
+Version: 0.0.3
+Summary: App that provides amenities API
+Home-page: https://github.com/okfde/django-amenities
+Author: Stefan Wehrmeyer
+Author-email: mail@stefanwehrmeyer.com
+License: MIT
+Description: Django app that stores OpenStreetMap objects for local querying
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Utilities
