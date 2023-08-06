@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+accuracy/__init__.py
+accuracy/verify_box.py
+verify_box.egg-info/PKG-INFO
+verify_box.egg-info/SOURCES.txt
+verify_box.egg-info/dependency_links.txt
+verify_box.egg-info/not-zip-safe
+verify_box.egg-info/requires.txt
+verify_box.egg-info/top_level.txt
