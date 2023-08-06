@@ -1,0 +1,3 @@
+[console_scripts]
+bairy = bairy.__main__:main
+
