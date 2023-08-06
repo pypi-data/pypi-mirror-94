@@ -1,0 +1,165 @@
+# Hashmap Data Validator
+
+## About
+Hashmap Data Validator, or hdv, tool that is used to validate the data in two database tables. HDV uses great expectations to run validation on the two tables. It currently supports connections to Snowflake with the Snowflake-connector-python and to 
+Oracle via cx_Oracle. HDV currently runs expectations on row count and row hash values to validate the tables.
+
+## How To Use
+* The user installs the package via PyPi with:
+```bash
+pip install hashmap-data-validator
+```
+* After installation, user needs to run a `.py` file with the following import: `import hdv`
+* Two `.yml` files will then be created in the user's `home` directory with the following path: `.hashmap_data_validator/hdv_profiles.yml` and `.hashmap_data_validator/hdv_configuration.yml`
+* The user then configures both of the newly created YAML files accordingly. (Examples below)
+* After configuration is complete, the user can call `hdv` from the command line with:
+```bash 
+hdv validate
+```
+* HDV writes the validation results to a newly created `validation_results.html` file (if it does not exist) in the directory where the command is called and opens that file in your browser
+## Time To Execute Method
+- 2 million total rows = ~15 seconds
+- 8 million total rows = ~2 minutes
+- 15 million total rows = ~3.5 minutes
+## User Documentation
+
+### Classes
+Configuration templates for HDV supported databases. Add these YAML templates to your `hdv_configuration.yml` and configure accordingly.
+
+#### Oracle
+
+Oracle database resource.
+
+*base class*
+
+```
+OracleResource
+```
+
+*configuration*
+
+- required
+    - `env`: section name in `hdv` profile yml file for connection information
+    - `table_name`: table name to validate
+- optional    
+    - `chunk_size`: the number of rows in the table to grab in batches (iterates over table with offset)
+    - `offset`: the number of rows to skip between table batch grabs
+    
+    *__NOTE:__* Only include `chunk_size` and `offset` values if you would like to validate a samples of your tables.
+```yaml
+    oracle:
+      type: OracleResource
+      conf:
+        env: oracle
+        table_name: <oracle_db>.<oracle_table>
+        chunk_size: 100000 # batches are grabbed in chunks of 100000 rows (optional)
+        offset: 200000 # skips every 200000 rows in the table after a batch grab (optional)
+```
+
+#### Snowflake
+
+Snowflake database resource.
+
+*base class*
+
+```
+SnowflakeResource
+```
+
+*configuration*
+
+- required
+    - `env`: section name in `hdv` profile yml file for connection information
+    - `table_name`: table name to validate
+- optional    
+    - `chunk_size`: the number of rows in the table to grab in batches (iterates over table with offset)
+    - `offset`: the number of rows to skip between table batch grabs
+    
+    *__NOTE:__* Only include `chunk_size` and `offset` values if you would like to validate a samples of your tables.
+```yaml
+    oracle:
+      type: SnowflakeResource
+      conf:
+        env: snowflake
+        table_name: <snowflake_table_name>
+        chunk_size: 100000 # batches are grabbed in chunks of 100000 rows (optional)
+        offset: 200000 # skips every 200000 rows in the table after a batch grab (optional)
+```
+
+   
+
+__More database support to come__
+
+## HDV Configuration Setup
+After you run the python file with `import hdv`, two configuration files will be created in your `home` directory under the
+`.hashmap_data_validator/` folder.
+1. `hdv_profiles.yml` is where you configure your connection credentials for the databases you would like to validate. The default 
+file will look similar to this:
+```yaml
+dev:
+  oracle:
+    host: <host>
+    port: <port>
+    sid: <sid>
+    user: <oracle_username>
+    password: <oracle_password>
+    client_library_dir: <path to oracle client library files e.g. C:\instantclient-basic-windows.x64-19.9.0.0.0dbru\instantclient_19_9>
+  snowflake:
+    account: <account>
+    role: <role>
+    warehouse: <warehouse_name>
+    database: <database_name>
+    schema: <schema_name>
+    user: <snowflake_username>
+    password: <snowflake_password>
+```
+HDV uses this file to manage the connections to the necessary databases. HDV only supports Oracle and Snowflake at the moment, 
+but we plan to extend support to other databases in the future. 
+In this file, you can add your credentials for any database that HDV supports. When the validation method is called, HDV is pointed to the individual configurations in this file
+and connects using the corresponding credentials. 
+
+*__Note__*: you can add any number of database configurations in this file. The above is just a starting template with two databases. For example, you could have multiple Snowflake
+configurations. However, the names would need to be unique (e.g. `snowflake_1`, `snowflake_2`)
+
+2. `hdv_configuration.yml` is where you configure the specifics of your validation. The file should look similar to below:
+```yaml
+version: 1beta
+
+validations:
+  from: oracle_1
+  to: snowflake_1
+
+resources:
+  oracle_1:
+    type: OracleResource
+    conf:
+      env: oracle
+      table_name: <oracle_db>.<oracle_table>
+      chunk_size: <optional>
+      offset: <optional>
+  snowflake_1:
+    type: SnowflakeResource
+    conf:
+      env: snowflake
+      table_name: <snowflake_table>
+      chunk_size: <optional>
+      offset: <optional>
+  dummy_database:
+    type: TestResource
+    conf:
+      env: test_environment
+      table_name: <test_table>
+      chunk_size: <optional>
+      offset: <optional>
+```
+As you can see above, you can add any number of resources in this file. Then, to run a validation, you call the 
+specific resources in the `validations` section of the YAML. 
+
+The example above will run a validation on the `oracle_1` and 
+`snowflake_1` resources, which are both configured in the above file as well. Notice that the `env` values of the `oracle_1` and `snowflake_1` resources
+point to named configurations in the example `hdv_profiles.yml` shown above. The `type` values point to which HDV class type to use in validation (`SnowflakeResource` and `OracleResource` in this case). Refer above to the HDV supported class types.
+
+If I wanted to run a validation on different tables, I merely have to alter the `to` and `from` values to point to different resources configured in the file
+or I could just change the current configurations.
+
+*__Note__*: You can configure any number of resources in `hdv_configuration.yml`
