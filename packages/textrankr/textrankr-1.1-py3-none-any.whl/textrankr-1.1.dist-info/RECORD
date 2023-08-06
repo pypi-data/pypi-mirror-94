@@ -1,0 +1,12 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test.py,sha256=KG0X1FDXa7KSqu7ltbh7kQyiEJ2yEfqG5PQ0lxJ-b-I,3229
+tests/tokenizers.py,sha256=fx-2ZR8DwHLNY0u90PrUnpV_H-qVyQnE-ZVS8BJMxw4,1209
+textrankr/__init__.py,sha256=xuaR3JxJE1ROKytTfQXc4Yd_9KYh9LpJ1mbf1GQqWHs,192
+textrankr/sentence.py,sha256=VXvYPjpn3Gd3XuUkYWGTAyP9Gnq-tiEni9oaEygZ640,730
+textrankr/textrank.py,sha256=iJXh2gFseraj4E_UhyRjHxMlNjan31Rs7qSAGQtaWNk,2191
+textrankr/utils.py,sha256=wWpGv5EOyZs5wmkZ_aSMU1yVCGe8omUKkBrOTUHTUos,2716
+textrankr-1.1.dist-info/LICENSE,sha256=53kFcPFrOyrs2-Aqigy1ooR0hrnONdTcsJM4KqSJTYo,1080
+textrankr-1.1.dist-info/METADATA,sha256=_yb-EhHqEE_ImZNU_Qv7Z0xWRRGAecIFk160kQaFUPk,287
+textrankr-1.1.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+textrankr-1.1.dist-info/top_level.txt,sha256=wR_Kb1BGFu2UJJjXvQ96bd3h6V3v29EuPEBWholIoRk,16
+textrankr-1.1.dist-info/RECORD,,
