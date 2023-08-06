@@ -1,0 +1,1 @@
+from encod26 import encode
