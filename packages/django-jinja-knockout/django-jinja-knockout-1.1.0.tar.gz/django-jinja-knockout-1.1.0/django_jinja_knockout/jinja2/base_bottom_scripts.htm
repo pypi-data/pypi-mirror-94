@@ -1,0 +1,30 @@
+    <script src="{{ static('djk/js/lib/jquery.min.js') }}"></script>
+    <script src="{{ static('djk/js/lib/css.escape.js') }}"></script>
+    <script src="{{ static('djk/js/lib/underscore-min.js') }}"></script>
+    <script src="{{ static('djk/js/lib/sprintf.min.js') }}"></script>
+    <script src="{{ static('djk/js/lib/js.cookie.js') }}"></script>
+    <script src="{{ static('djk/js/lib/QueryString.js') }}"></script>
+    <script src="{{ static('djk/js/lib/url-search-params-polyfill.js') }}"></script>
+    <script src="{{ tpl.url('javascript-catalog') }}"></script>
+    <script src="{{ static('djk/js/lib/knockout.js') }}"></script>
+    <!-- script src="{{ static('djk/js/lib/knockout-es5.min.js') }}"></script -->
+    <script src="{{ static('djk/js/lib/jquery.form.min.js') }}"></script>
+    <script src="{{ static('djk/js/lib/moment-with-locales.min.js') }}"></script>
+    <script src="{{ static('djk/js/lib/bootstrap.min.js') }}"></script>
+    <script src="{{ static('djk/js/lib/bootstrap-dialog.min.js') }}"></script>
+    <script src="{{ static('djk/js/lib/bootstrap-datetimepicker.min.js') }}"></script>
+    <script src="{{ static('djk/js/lib/spin.min.js') }}"></script>
+    <script src="{{ static('djk/js/lib/ladda.min.js') }}"></script>
+    <script src="{{ static('djk/js/plugins.js') }}"></script>
+    <script src="{{ static('djk/js/app.js') }}"></script>
+    <script src="{{ static('djk/js/ui.js') }}"></script>
+    <script src="{{ static('djk/js/modelform.js') }}"></script>
+    <script language="JavaScript">
+        App.conf = {{ page_context.get_client_conf()|to_json(True) }};
+        App.clientData = {{ page_context.get_client_data()|to_json(True) }};
+    </script>
+    <script src="{{ static('djk/js/button-popover.js') }}"></script>
+    <script src="{{ static('djk/js/tooltips.js') }}"></script>
+    {% for script in page_context.get_custom_scripts() -%}
+    <script src="{{ static(script) }}"></script>
+    {% endfor -%}
