@@ -1,0 +1,3 @@
+[pymodaq.plugins]
+physical_measurements = pymodaq_plugins_physical_measurements
+
