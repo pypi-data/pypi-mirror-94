@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "pytest_vimqf"
+version = "0.8.1"
+description = "A simple pytest plugin that will shrink pytest output when specified, to fit vim quickfix window."
+
+license = "GPL-3.0-only"
+
+authors = [
+  "Carlo De Pieri"
+]
+
+readme = 'README.md'
+
+repository = "https://github.com/CarloDePieri/pytest_vimqf"
+homepage = "https://github.com/CarloDePieri/pytest_vimqf"
+
+packages = [
+  { include = "pytest_vimqf" }
+]
+
+keywords = ["pytest", "vim"]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Framework :: Pytest",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Testing",
+  "Topic :: Utilities"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pytest = "^6.2.2"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "^1.5.5"
+flake8 = "^3.8.4"
+pytest = "^6.2.2"
+
+[tool.poetry.plugins.pytest11]
+vimqf = "pytest_vimqf.main"
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
