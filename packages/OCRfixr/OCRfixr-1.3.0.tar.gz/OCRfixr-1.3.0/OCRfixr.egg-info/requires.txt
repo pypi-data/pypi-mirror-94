@@ -1,0 +1,4 @@
+transformers
+symspellpy
+tensorflow>=2.0
+importlib_resources
