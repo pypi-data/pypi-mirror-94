@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: dependencynet
+Version: 0.1.4
+Summary: represent and analyse dependency graphs (networks)
+Home-page: https://github.com/cfalguiere/dependencynet
+Author: Claude Falguiere
+Author-email: 
+License: MIT
+Platform: Any
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: networkx
+Requires-Dist: ipycytoscape
+Requires-Dist: pyyed
+
+# dependencynet
+Dependency representation and analysis with graphs (networks)
+
+
+
+
+# Changelog
+
+# 0.1.""
+Bug fixes:
+- packaging issue (missing dependencies)
+
+# 0.1.2
+New features:
+- allow to type resource as input / output
+- inputs are directed toward the node
+
+## 0.1.1
+New features:
+- helper to build the cytoscape style document
+- helper convert the graph into a pyyed file (GraphML)
+
+## 0.1.0
+New features:
+- Build a networkx/cytoscape network
+
+Improvements of Data Loader:
+- explode a list a column consisting in a items into multiple lines
+- ignore nan in resource columns
+
+## 0.0.5
+New features:
+- Load a 3 levels hierarchy and resources
+
+
