@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+reasoner_validator/__init__.py
+reasoner_validator/util.py
+reasoner_validator.egg-info/PKG-INFO
+reasoner_validator.egg-info/SOURCES.txt
+reasoner_validator.egg-info/dependency_links.txt
+reasoner_validator.egg-info/not-zip-safe
+reasoner_validator.egg-info/requires.txt
+reasoner_validator.egg-info/top_level.txt
+reasoner_validator/data/TranslatorReasonerAPI.yml
+reasoner_validator/data/__init__.py
