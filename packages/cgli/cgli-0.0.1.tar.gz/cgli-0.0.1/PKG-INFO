@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cgli
+Version: 0.0.1
+Summary: utility to execute a pythonscript from both commandline and webserver
+Home-page: https://github.com/technetium/cgli/
+Author: Toni Cornelissen
+Author-email: cgli@technetium.be
+License: UNKNOWN
+Description: # cgli
+        
+        A utility to use a python program from both command line (cli) as website (cgi)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
