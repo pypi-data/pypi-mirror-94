@@ -1,0 +1,3 @@
+[console_scripts]
+vizcode=vizcode.main:start
+
