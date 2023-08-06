@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: msrdm
+Version: 0.0.1
+Summary: Multi-Stage Robust Decision Making
+Home-page: https://github.com/shunichironomura/msrdm
+Author: Shunichiro Nomura
+Author-email: nomura@space.t.u-tokyo.ac.jp
+License: BSD 3-Clause
+Download-URL: https://github.com/shunichironomura/msrdm/archive/v0.0.1.tar.gz
+Description: # Multi-Stage Robust Decision Making (MSRDM)
+        Multi-Stage Robust Decision Making (MSRDM) is a decision-support framework under deep uncertainty.
+        
+        ## Installation
+        MSRDM runs on Python 3.8 or higher.
+        
+        Dependencies are numpy and pandas. Optional dependencies are matplotlib, seaborn, and plotly, which are required for plotting functions.
+        
+        It can be installed by
+        
+        ```sh
+        pip install msrdm
+        ```
+        
+        ## Usage
+        
+        ### HoU Analysis
+        
+        ```python
+        from msrdm.uncertainty import RealUncertainParameter, EllipticUncertaintyRegion
+        
+        # Define uncertain parameters
+        w1 = RealUncertainParameter('w1', nominal=0, lower_deviation=1, upper_deviation=1, dog='greater')
+        w2 = RealUncertainParameter('w2', nominal=3, lower_deviation=4, upper_deviation=5, dog='greater')
+        
+        # Define uncertain region
+        uncertainty_region = EllipticUncertaintyRegion([w1, w2])
+        
+        # Define objective function
+        def func(x, w):
+        
+        ```
+        
+        ## License
+        
+        - [BSD 3-Clause License](https://choosealicense.com/licenses/bsd-3-clause/)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown

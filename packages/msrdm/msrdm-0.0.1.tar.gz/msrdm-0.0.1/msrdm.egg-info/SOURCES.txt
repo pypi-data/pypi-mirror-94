@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+msrdm/__init__.py
+msrdm.egg-info/PKG-INFO
+msrdm.egg-info/SOURCES.txt
+msrdm.egg-info/dependency_links.txt
+msrdm.egg-info/not-zip-safe
+msrdm.egg-info/requires.txt
+msrdm.egg-info/top_level.txt
