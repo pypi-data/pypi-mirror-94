@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: fepr-py-rpa
+Version: 1.0.3
+Summary: Sheets_api_v4, pydriveの扱いを簡易的に行うパッケージ
+Home-page: https://github.com/FUMiYAEMPiRE/Python_RPA_Module
+Author: FUMiYA EMPiRE
+Author-email: kamijumper336@gmail.com
+License: MIT
+Description: # 2021-02-02
+        Python_RPAモジュール追加
+        
+        
+        
+        
+        
+        
+        # ==================== Emojis ====================
+        # 🎉  :初めてのコミット（Initial Commit）
+        # 🔖  :バージョンタグ（Version Tag）
+        # ✨  :新機能（New Feature）
+        # 🐛  :バグ修正（Bugfix）
+        # ♻️  :リファクタリング(Refactoring)
+        # 📚  :ドキュメント（Documentation）
+        # 🎨  :デザインUI/UX(Accessibility)
+        # 🐎  :パフォーマンス（Performance）
+        # 🚀  :パフォーマンス改善
+        # 🔧  :ツール（Tooling）
+        # 🚨  :テスト（Tests）
+        # 💩  :非推奨追加（Deprecation）
+        # 🗑️  :削除（Removal）
+        # 🚧  :WIP(Work In Progress)
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
