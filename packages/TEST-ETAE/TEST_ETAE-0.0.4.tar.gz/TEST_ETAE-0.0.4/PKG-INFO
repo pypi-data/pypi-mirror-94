@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: TEST_ETAE
+Version: 0.0.4
+Summary: A temp upload for ETA prediction
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires: matplotlib
+Requires: tensorflow
+Requires: seaborn
+Requires: pycallgraph2
+Requires: joblib
+Requires: PyYAML
+Requires: twine
+Requires: lightgbm
+Requires: ETAES
+Description-Content-Type: text/markdown
