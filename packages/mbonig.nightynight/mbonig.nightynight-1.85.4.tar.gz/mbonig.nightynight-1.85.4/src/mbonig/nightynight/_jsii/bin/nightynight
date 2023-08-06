@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+import jsii
+import sys
+
+__jsii_assembly__ = jsii.JSIIAssembly.load(
+    "@matthewbonig/nightynight",
+    "1.85.4",
+    "mbonig.nightynight",
+    "nightynight@1.85.4.jsii.tgz",
+)
+
+__jsii_assembly__.invokeBinScript(
+    "@matthewbonig/nightynight", "nightynight", sys.argv[1:]
+)
