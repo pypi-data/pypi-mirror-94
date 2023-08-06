@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: basic_calculator_finite
+Version: 0.0.1
+Summary: Calculator
+Home-page: UNKNOWN
+Author: Suraj
+Author-email: hrishabhsuraj52@gmail.com
+License: MIT
+Description: A simple calculator for carrying out basic operations like add, subtract, multiply, divide, modulus, power.
+        
+        
+        Change Log
+        ==========
+        
+        0.0.1 (10/02/2021)
+        -------------------
+        - Second Release.
+        
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
