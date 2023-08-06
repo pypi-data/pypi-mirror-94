@@ -1,0 +1,9 @@
+numpy>=1.16.5
+aioinflux
+pandas
+astropy
+pyyaml
+tables
+
+[dev]
+documenteer[pipelines]<0.6.0,>=0.5.6
