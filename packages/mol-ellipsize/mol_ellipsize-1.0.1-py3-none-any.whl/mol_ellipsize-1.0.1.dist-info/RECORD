@@ -1,0 +1,16 @@
+molellipsize/__init__.py,sha256=Lsx3h4UzDxizpq7ee2HQVF-4Q29zXcmlbWsq1VWVUAs,102
+molellipsize/ellipsefitter.py,sha256=LyzLE1FQHYZ3_sHrY4xRCKam1EcPcHaQppTH-1klF5c,3148
+molellipsize/molecule.py,sha256=N6_G-BCCeuzPOAhzprmzkzBMaY3Z3Wc4YKkFATp4xH4,5180
+molellipsize/utilities.py,sha256=81O1GM0GdzS0X58LFJZpOJD8aQJOBaW849g2-a-Pjb8,5045
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/ellipsefitter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/ellipsefitter/conftest.py,sha256=-WLjIGwSbQTHhC3BW98Q5ajxgnSOsOihRQWJ4Mdcs-Y,2825
+tests/ellipsefitter/test_ellipsefitter.py,sha256=dIzejX5QVQISZLiWxhJWFpjc3LD6YnrLEFHu5sQf380,683
+tests/molecule/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/molecule/conftest.py,sha256=ynGSaDlk1j8R6IkHOhMcr-MDvnt2MayBJ9AnK6xgieA,3009
+tests/molecule/test_molecule.py,sha256=NUr031glZihIfNaqkuZq_1VdB_zQJxyiWOac1TPknF8,1085
+mol_ellipsize-1.0.1.dist-info/LICENSE,sha256=5wRL9XMf_ncx7XEIyzNWvHiA14JoQIGTgQCBorunnf0,1070
+mol_ellipsize-1.0.1.dist-info/METADATA,sha256=kqOrrJUa1HEK9qaULpcZyoyMr79NtWOmpVLGwKZw5gY,510
+mol_ellipsize-1.0.1.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+mol_ellipsize-1.0.1.dist-info/top_level.txt,sha256=8CFCCiaWdGEnJVg5xa4owlstZUIIxLnv9cM2K02hqF4,19
+mol_ellipsize-1.0.1.dist-info/RECORD,,
