@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: minknow_api
+Version: 4.1.5
+Summary: MinKNOW RPC API bindings
+Home-page: UNKNOWN
+Author: Oxford Nanopore Technologies Ltd
+Author-email: info@nanoporetech.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
