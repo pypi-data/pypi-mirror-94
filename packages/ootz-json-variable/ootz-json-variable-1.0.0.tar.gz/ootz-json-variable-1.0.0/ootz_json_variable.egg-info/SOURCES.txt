@@ -1,0 +1,10 @@
+README.md
+setup.py
+jsonvariable/__init__.py
+jsonvariable/error.py
+jsonvariable/resolver.py
+ootz_json_variable.egg-info/PKG-INFO
+ootz_json_variable.egg-info/SOURCES.txt
+ootz_json_variable.egg-info/dependency_links.txt
+ootz_json_variable.egg-info/requires.txt
+ootz_json_variable.egg-info/top_level.txt
