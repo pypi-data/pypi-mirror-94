@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pjlsa
+Version: 0.2.5
+Summary: A Python wrapping of Java LSA API
+Home-page: https://gitlab.cern.ch/scripting-tools/pjlsa
+Author: LSA / InCA team
+Author-email: inca-support@cern.ch
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: core
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: all
