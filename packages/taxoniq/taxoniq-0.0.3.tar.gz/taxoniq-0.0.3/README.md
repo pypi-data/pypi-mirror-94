@@ -1,0 +1,44 @@
+Taxoniq: Taxon Information Query - fast, offline querying of NCBI Taxonomy and related data
+===========================================================================================
+
+Taxoniq is a Python and command-line interface to the
+[NCBI Taxonomy database](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7408187/) and selected data sources that
+cross-reference it.
+
+Taxoniq's features include:
+
+- Pre-computed indexes updated monthly from NCBI, [WoL](https://biocore.github.io/wol/) and cross-referenced databases
+- Completely offline operation: all indexes are bundled with the package; no network calls are made when querying
+- A CLI capable of JSON I/O, batch processing and streaming of inputs for ease of use and pipelining in shell scripts
+- A stable, well-documented, type-hinted Python API (Python 3.6 and higher is supported)
+- Comprehensive testing and continuous integration
+- An intuitive interface with useful defaults
+- Compactness, readability, and extensibility
+
+The Taxoniq package bundles an indexed, compressed copy of the
+[NCBI taxonomy database files](https://ncbiinsights.ncbi.nlm.nih.gov/2018/02/22/new-taxonomy-files-available-with-lineage-type-and-host-information/),
+the related accession2taxid database, the [WoL](https://biocore.github.io/wol/) database, and relevant information from
+other databases. Accessions which appear in NCBI BLAST nt/nr databases (and by inclusion, RefSeq) are indexed so that
+given a taxon ID, accession ID, or taxon name, you can quickly retrieve the taxon's rank, lineage, description,
+citations, representative RefSeq IDs, LCA information, evolutionary distance, and more, as described in the Cookbook
+section below.
+
+# Installation
+
+    pip3 install taxoniq
+
+# Synopsis
+
+```
+t = taxoniq.Taxon(9606)
+assert t.scientific_name == "Homo sapiens"
+assert t.common_name == "human"
+assert t.ranked_lineage == [taxoniq.Taxon(scientific_name='Homo sapiens'),
+                            taxoniq.Taxon(scientific_name='Homo'),
+                            taxoniq.Taxon(scientific_name='Hominidae'),
+                            taxoniq.Taxon(scientific_name='Primates'),
+                            taxoniq.Taxon(scientific_name='Mammalia'),
+                            taxoniq.Taxon(scientific_name='Chordata'),
+                            taxoniq.Taxon(scientific_name='Metazoa'),
+                            taxoniq.Taxon(scientific_name='Eukaryota')]
+```
