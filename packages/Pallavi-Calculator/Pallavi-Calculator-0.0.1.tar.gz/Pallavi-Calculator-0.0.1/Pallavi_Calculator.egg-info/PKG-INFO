@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: Pallavi-Calculator
+Version: 0.0.1
+Summary: Our Package will give you a basic calculator function such as add,sub,mul and div.
+Home-page: UNKNOWN
+Author: Pallavi Vishwakarma
+Author-email: pallavivushwakarma999@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
