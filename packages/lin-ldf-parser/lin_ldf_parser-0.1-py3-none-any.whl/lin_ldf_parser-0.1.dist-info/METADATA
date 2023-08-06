@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: lin-ldf-parser
+Version: 0.1
+Summary: Simple regex based parser for the lin description file.
+Home-page: https://github.com/makreft/ldf_parser
+Author: Marco Kreft
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (~=1.20.0)
+Requires-Dist: pandas (~=1.2.1)
+Requires-Dist: pip (~=21.0.1)
+Provides-Extra: dev
+Requires-Dist: pytest (>=6.2.2) ; extra == 'dev'
+
+# lin_ldf_parser
+Simple regex based parser for the lin discription file. It does what the title says and
+nothing more!
+
+# Developing lin_ldf_parser
+To install lin_ldf_parser, along with the tools
+you need to develop and run tests, run the
+following in your virtualenv:
+
+```bash
+$ pip install -e .[dev]
+```
+
