@@ -1,0 +1,10 @@
+README.md
+setup.py
+pydream3/__init__.py
+pydream3/display.py
+pydream3/font.py
+pydream_led_3.egg-info/PKG-INFO
+pydream_led_3.egg-info/SOURCES.txt
+pydream_led_3.egg-info/dependency_links.txt
+pydream_led_3.egg-info/requires.txt
+pydream_led_3.egg-info/top_level.txt
