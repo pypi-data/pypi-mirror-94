@@ -1,0 +1,3 @@
+[console_scripts]
+halfling = halfling.main:run
+

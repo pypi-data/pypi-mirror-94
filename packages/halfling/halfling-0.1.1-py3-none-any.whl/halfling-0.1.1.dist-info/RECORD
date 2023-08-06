@@ -1,0 +1,12 @@
+halfling/__init__.py,sha256=RvYDBT4LfZ2Ht-16r2XPMwYyTusFHl8_sh5DEWOMg60,193
+halfling/compile.py,sha256=BdfmTbmTFYSDQX0nJlSwVIC_c_cMabP8tjhGD3IICDs,4581
+halfling/config.py,sha256=4q7F9uMGzX75dxHNvgmOIzwqXI99FmQ4nt7yKrS5x6E,745
+halfling/exceptions.py,sha256=rkZDzIQeGWuGGwr6IkD4DZIkwDngdqtM1H1XPg94Cx8,331
+halfling/main.py,sha256=i2Oy5pIGSsLKvM8Brc4WPG8os1_5nlRs6zdZnRFYNCw,1547
+halfling/tasks.py,sha256=Kj_6NJ4-2pWVG-vADB1WW_aXPJUuK-YOfKJK7oWfuG8,3204
+halfling-0.1.1.dist-info/LICENSE,sha256=NaHy62ZEVZDDzfjFWGWHGO6UDL-ALTHLhlsju-b9v5s,1069
+halfling-0.1.1.dist-info/METADATA,sha256=naOOL5LERp_IvcIJ4amiXGUFyF60vtpJNH5PHVYhYa0,3031
+halfling-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+halfling-0.1.1.dist-info/entry_points.txt,sha256=2yxiaxzhCnWnHN5UXFT-0GBrc2R5Cfe6GjVGH3Gh5mk,48
+halfling-0.1.1.dist-info/top_level.txt,sha256=-IV-JTUkC24YsUZwRSCUk8pm5E5Gaq4JbU5x8RuQE6Y,9
+halfling-0.1.1.dist-info/RECORD,,
