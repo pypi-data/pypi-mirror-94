@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Project      : MeUtils.
+# @File         : confs
+# @Time         : 2021/2/7 8:19 下午
+# @Author       : yuanjie
+# @WeChat       : 313303303
+# @Software     : PyCharm
+# @Description  : 
+
+
+from meutils.models import BaseConfig
+
+
+class WebhooksConf(BaseConfig):
+    _path = '/mipush/bot/webhooks'
+
+    logger = ''
+
+
+if __name__ == '__main__':
+    WebhooksConf.init()
