@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: djangocms-parallaxjs
+Version: 0.2.0
+Summary: A Django CMS plugin that creates parallax effects
+Home-page: https://github.com/georgema1982/djangocms-parallaxjs
+Author: George Ma
+Author-email: george.ma1982@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: django-cms (>=3.3.0)
+
+djangocms-parallaxjs
+====================
+
+Installation
+------------
+
+To get started using ``djangocms-parallaxjs``:
+
+- install it with ``pip``::
+
+    $ pip install djangocms-parallaxjs
+
+- add the app to ``INSTALLED_APPS``::
+
+    INSTALLED_APPS = (
+        ...
+        'djangocms_parallaxjs',
+        ...
+    )
+
+Plugin Options
+--------------
+
+Please reference https://pixelcog.github.io/parallax.js/ for all the options.
+
