@@ -1,0 +1,4 @@
+
+    [babel.extractors]
+    wheezyhtml = wheezy_extractor:extract_wheezy
+    
