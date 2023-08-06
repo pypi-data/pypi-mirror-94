@@ -1,0 +1,13 @@
+beautifulsoup4
+lxml
+setuptools
+
+[development]
+check-manifest
+pyroma
+zest.releaser
+
+[test]
+flake8
+pytest
+pytest-cov
