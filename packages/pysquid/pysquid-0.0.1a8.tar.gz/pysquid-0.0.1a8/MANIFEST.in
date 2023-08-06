@@ -1,0 +1,4 @@
+include LICENSE.txt
+include setup.py
+include build.yaml
+include requirements.txt
