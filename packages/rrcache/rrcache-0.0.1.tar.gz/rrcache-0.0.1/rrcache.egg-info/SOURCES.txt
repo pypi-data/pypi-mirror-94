@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+rrcache/__init__.py
+rrcache.egg-info/PKG-INFO
+rrcache.egg-info/SOURCES.txt
+rrcache.egg-info/dependency_links.txt
+rrcache.egg-info/requires.txt
+rrcache.egg-info/top_level.txt
