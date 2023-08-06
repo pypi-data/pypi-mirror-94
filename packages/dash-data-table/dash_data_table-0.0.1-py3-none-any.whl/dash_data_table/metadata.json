@@ -1,0 +1,354 @@
+{
+  "src/lib/components/DashDataTable.react.js": {
+    "description": "",
+    "displayName": "DashDataTable",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      },
+      "containerClassName": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Container className"
+      },
+      "containerStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Container style"
+      },
+      "currentPage": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Current page"
+      },
+      "currentRowsPerPage": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Current rows per page"
+      },
+      "currentClickedRow": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "Current clicked row"
+      },
+      "currentDoubleClickedRow": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "Current double clicked row"
+      },
+      "currentSelectedRows": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "any"
+          }
+        },
+        "required": false,
+        "description": "Current row selected"
+      },
+      "currentSorting": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Current sorting"
+      },
+      "title": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Table title"
+      },
+      "columns": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "object"
+          }
+        },
+        "required": true,
+        "description": "Column definitions"
+      },
+      "data": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "object"
+          }
+        },
+        "required": false,
+        "description": "Row data"
+      },
+      "keyField": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Key field the id that uniquely identifies the row"
+      },
+      "striped": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Stripe odd rows"
+      },
+      "highlightOnHover": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Highlight rows on hover"
+      },
+      "pointerOnHover": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Point icon on hover"
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Table className"
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Style"
+      },
+      "responsive": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Horizontally scrollable"
+      },
+      "disabled": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disable the table section"
+      },
+      "overflowY": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "if a table is responsive, items such as \nlayovers/menus/dropdowns will be clipped \non the last row(s)"
+      },
+      "overflowYOffset": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Used with overflowY"
+      },
+      "dense": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "compact the rows"
+      },
+      "noTableHead": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Hides the sort columns"
+      },
+      "persistTableHead": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Show the table head event when progressPending is true"
+      },
+      "direction": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Direction"
+      },
+      "selectableRows": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Selectable rows"
+      },
+      "selectableRowsVisibleOnly": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Select only visible rows\nmatters for pagination.\nIf this option is not set to\ntrue it will select all \nrows specified in data also\nthose now shown"
+      },
+      "selectableRowsHighlight": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Highlight selected rows"
+      },
+      "selectableRowsNoSelectAll": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Show select all icon"
+      },
+      "sortServer": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Disables internal sorting"
+      },
+      "expandableRows": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Make rows expandable"
+      },
+      "expandOnRowClicked": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Expand rows on click"
+      },
+      "expandOnRowDoubleClicked": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Expand rows on double click"
+      },
+      "expandableRowsHideExpander": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Hide expander button"
+      },
+      "defaultSortField": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Default pre sorting"
+      },
+      "defaultSortAsc": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Default pre sorting direction"
+      },
+      "pagination": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Enable pagination",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "paginationServer": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Use server side pagination"
+      },
+      "paginationDefaultPage": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Start page"
+      },
+      "paginationPerPage": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Rows per page"
+      },
+      "paginationRowsPerPageOptions": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "number"
+          }
+        },
+        "required": false,
+        "description": "Row per page options"
+      },
+      "paginationTotalRows": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Total rows when using serverside pagination"
+      },
+      "noHeader": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "No table header"
+      },
+      "fixedHeader": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Fixed header"
+      },
+      "fixedHeaderScrollHeight": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Fixed header scroll height"
+      }
+    }
+  }
+}
