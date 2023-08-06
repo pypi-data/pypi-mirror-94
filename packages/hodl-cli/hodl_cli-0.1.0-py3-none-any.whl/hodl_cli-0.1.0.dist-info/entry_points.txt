@@ -1,0 +1,3 @@
+[console_scripts]
+hodl-cli=hodl_cli.cli:run
+
