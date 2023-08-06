@@ -1,0 +1,38 @@
+==========================
+Joyous 1.4.0 release notes
+==========================
+
+.. contents::
+    :local:
+    :depth: 3
+
+
+What's new
+==========
+
+Translations
+~~~~~~~~~~~~
+Thanks to Tomas Walch for the new Swedish translation.
+
+Compatibility with Wagtail 2.11
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Now that 2.11 is the new LTS for Wagtail
+replace request.site with Site.find_for_request(request) removing the need 
+for wagtail.core.middleware.SiteMiddleware.  Thanks to Tomas Walch for this.
+
+Compatibility with Wagtail 2.12
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Deprecated
+~~~~~~~~~~
+The ``JOYOUS_DEFEND_FORMS`` setting is deprecated.  It still works, but
+is no longer documented.
+
+Bug fixes
+~~~~~~~~~
+ * FormDefender should cope with `base_form_class = None`
+ * Do not assimilate subclasses
+ * Fix for _gregorian_to_ssweek where date is in last week of prev year
+ * Tests should cope with year missing from title of exceptions
+ * Stop using deprecated is_ajax function
+
