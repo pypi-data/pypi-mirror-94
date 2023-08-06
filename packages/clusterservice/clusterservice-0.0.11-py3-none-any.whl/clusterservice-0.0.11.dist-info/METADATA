@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: clusterservice
+Version: 0.0.11
+Summary: ClusterService API
+Home-page: https://github.com/markmo/clusterservice
+Author: Mark Moloney
+Author-email: m4rkmo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# clusterservice
+
+Clusters comments given seed questions.
+
+This model uses TensorFlow and PyTorch.
+
+Supporting Bitbucket Pipelines and GitHub Actions for CI/CD-based model deployment.
+
