@@ -1,0 +1,15 @@
+apkpatcher/__init__.py,sha256=yGcvxKdXhfn_oxqxLywBC3lqRbB2MUc7v9-rtRvob5c,30226
+apkpatcher/__main__.py,sha256=aYTSQkOwGaHKVtmr5LjoeWg6_77hXHhG9IhautZi4xw,123
+apkpatcher/network_security_config.xml,sha256=vhmxlHxVySMl1TZDpaSq7Rb0skHdenyaUi0lKHEHzsQ,560
+apkpatcher/network_security_config_custom.xml,sha256=39gf-rEuZVtse74JJVuwvFKvFlkiSFK1bm5NR5QjK1c,780
+apkpatcher/pyaml/libaml/__init__.py,sha256=U1-oMmkcJwLF3KuIYtkA62TJ8B5Jk2XaGdWLkPR_Ric,76
+apkpatcher/pyaml/libaml/aml.py,sha256=fsW3ZmVOnd8WLk6UC4riw6Oybqw2XOyKBLrcpExYygs,22856
+apkpatcher/pyaml/libaml/android-attrs.json,sha256=4biX8Um6woQci4G_mUV7hxooyLMm-v79glY0kHi5Db0,31408
+apkpatcher/pyaml/libaml/utils/__init__.py,sha256=U1-oMmkcJwLF3KuIYtkA62TJ8B5Jk2XaGdWLkPR_Ric,76
+apkpatcher/pyaml/libaml/utils/decorator.py,sha256=HMGi5iSVXa1ZxOx7JyB2-EJ1m-XNo9gJtucWnD7Ph80,3858
+apkpatcher-0.0.6a0.dist-info/LICENSE,sha256=2ylvL381vKOhdO-w6zkrOxe9lLNBhRQpo9_0EbHC_HM,18046
+apkpatcher-0.0.6a0.dist-info/METADATA,sha256=C2_RU7jXfqCm0KMOZnPVj6eog6MyuM9QShcVwFivGOI,1923
+apkpatcher-0.0.6a0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+apkpatcher-0.0.6a0.dist-info/entry_points.txt,sha256=1iXPYk6hvpfLnW2kYAGlBXNRJCP0GPB_vwOtDGbZEsc,48
+apkpatcher-0.0.6a0.dist-info/top_level.txt,sha256=uHd_yApC63mTQouB78anCTMpyoLF3aUoiZQwnP8e1vk,11
+apkpatcher-0.0.6a0.dist-info/RECORD,,
