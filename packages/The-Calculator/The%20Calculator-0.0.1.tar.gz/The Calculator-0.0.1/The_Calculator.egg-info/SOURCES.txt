@@ -1,0 +1,13 @@
+MANIFEST.in
+__init__.py
+changelog.txt
+license.txt
+readme.txt
+setup.py
+The_Calculator.egg-info/PKG-INFO
+The_Calculator.egg-info/SOURCES.txt
+The_Calculator.egg-info/dependency_links.txt
+The_Calculator.egg-info/top_level.txt
+calculator.egg-info/SOURCES.txt
+calculator.egg-info/dependency_links.txt
+calculator.egg-info/top_level.txt
