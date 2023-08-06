@@ -1,0 +1,114 @@
+IBoxLoader: !include [
+  autoscaling/autoscalinggroup.yml,
+  loadbalancing/loadbalancing-elb.yml,
+  securitygroup.yml,
+  alarms.yml,
+  cloudfront/cloudfront-ios.yml,
+  iam/parameterstore.yml,
+]
+
+ec2:
+  Parameter:
+    - UpdateMode:
+        Description: 'How to update Instances'
+        AllowedValue: ['None', 'Replace', 'Rolling', 'CodeDeploy', 'Cfn']
+        Default: 'None'
+    - AutoScalingGroupBaseHealthCheckGracePeriod:
+        Description: 'How long to wait before ASG check instance health - empty for default based on env/role'
+  Condition:
+    - RollingUpdate:
+        Equals(Ref('UpdateMode'), 'Rolling')
+    - WillReplace:
+        Equals(Ref('UpdateMode'), 'Replace')
+    - Spot:
+        And(
+          Condition('LaunchTemplateDataInstanceMarketOptionsSpotOptionsMaxPrice'),
+          Equals('1', '1'),
+        )
+  Output:
+    - UpdateMode:
+        Value: Ref('UpdateMode')
+  MappingClass:
+    - EC2:
+  AlarmCPUBase: &cpu
+    Dimensions:
+      - Autoscaling:
+          Name: AutoScalingGroupName
+          Value: Ref('AutoScalingGroup')
+    Namespace: 'AWS/EC2'
+  Alarm:
+    - CPUHigh:
+        <<: *cpu
+        IBOXENABLED: True
+    - CPULow:
+        <<: *cpu
+        IBOXENABLED: True
+  CustomUserDataScript: init.sh
+  DeploymentGroup: False
+  LoadBalancer:
+    CookieSticky: None
+    IdleTimeout: 60
+  IAMPolicy:
+    - CloudFormation:
+        Roles:
+          - Ref('RoleInstance')
+        Statement:
+          - 1:
+              Action:
+                - 'cloudformation:DescribeStackResource'
+                - 'cloudformation:SignalResource'
+              Resource: Sub('arn:aws:cloudformation:*:*:stack/${AWS::StackName}/*')
+    - ParameterStore:
+        Roles:
+          - Ref('RoleInstance')
+  Role:
+    - Instance:
+        ManagedPolicyArns:
+          - get_expvalue('IAMPolicyBaseInstance')
+          - get_expvalue('IAMPolicySSM')
+        Principal: ec2.amazonaws.com
+  AutoScalingScalingPolicy:
+    - Custom:
+        TargetTrackingConfiguration:
+          CustomizedMetricSpecification:
+            Dimensions:
+              - AutoScaling:
+                  Name: AutoScalingGroupName
+                  Value: Ref('AutoScalingGroup')
+    - Down:
+        IBOXENABLED: True
+    - Up:
+        IBOXENABLED: True
+  ScheduledAction:
+    - Down:
+        DesiredSize: CapacityDesired
+        MaxSize: CapacityMax
+        MinSize: CapacityMin
+        Recurrence: '00 19 * * *'
+    - Up:
+        DesiredSize: CapacityDesired
+        MaxSize: CapacityMax
+        MinSize: CapacityMin
+        Recurrence: '30 08 * * mon-fri'
+
+dev: &cfg_dev
+  Alarm:
+    - BackendExternal5XX:
+        EvaluationPeriods: 0
+    - BackendInternal5XX:
+        EvaluationPeriods: 0
+    - TargetEC2External5XX:
+        EvaluationPeriods: 0
+    - TargetEC2Internal5XX:
+        EvaluationPeriods: 0
+
+stg: *cfg_dev 
+
+
+prd:
+  #AutoScalingGroupBaseHealthCheckType: ELB
+
+IBoxLoaderAfter: !include [
+  autoscaling/spot-auto.yml,
+  autoscaling/cloudwatch-agent.yml,
+]

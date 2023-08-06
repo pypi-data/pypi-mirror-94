@@ -1,0 +1,57 @@
+global:
+  Parameter:
+    - SpotAuto:
+        Description: 'ASG TAG for autospotting https://github.com/AutoSpotting/AutoSpotting - empty for default based on env/role'
+        AllowedValues: ['', 'True', 'None']
+    - SpotAutoMinOnDemandNumber:
+        Description: 'ASG TAG for autospotting minimum on-demand instance to keep - empty for default based on env/role - None to disable'
+    - SpotAutoAllowedInstances:
+        Description: 'ASG TAG for autospotting allowed instance types (space delimited) - current to use the same of ASG - empty for default based on env/role - None to disable'
+  Condition:
+    - Spot:
+        Or(
+          Condition('SpotAuto'),
+          Condition('LaunchTemplateDataInstanceMarketOptionsSpotOptionsMaxPrice'),
+        )
+    - SpotAuto:
+        get_condition('', 'not_equals', 'None', 'SpotAuto')
+    - SpotAutoMinOnDemandNumber:
+        And(
+          Condition('SpotAuto'),
+          get_condition('', 'not_equals', 'None', 'SpotAutoMinOnDemandNumber')
+        )
+    - SpotAutoAllowedInstances:
+        And(
+          Condition('SpotAuto'),
+          get_condition('', 'not_equals', 'None', 'SpotAutoAllowedInstances')
+        )
+  AutoScalingGroup:
+    - Base:
+        Tags:
+          - SpotAuto:
+              IBOXIF:
+                - SpotAuto
+                - IBOXIFVALUE
+                - Ref('AWS::NoValue')
+              Key: spot-enabled
+              Value: 'true'
+              PropagateAtLaunch: True
+          - SpotAutoMinOnDemandNumber:
+              IBOXIF:
+                - SpotAutoMinOnDemandNumber
+                - IBOXIFVALUE
+                - Ref('AWS::NoValue')
+              Key: autospotting_min_on_demand_number
+              Value: get_endvalue('SpotAutoMinOnDemandNumber')
+              PropagateAtLaunch: True
+          - SpotAutoAllowedInstances:
+              IBOXIF:
+                - SpotAutoAllowedInstances
+                - IBOXIFVALUE
+                - Ref('AWS::NoValue')
+              Key: autospotting_allowed_instance_types
+              Value: get_endvalue('SpotAutoAllowedInstances')
+              PropagateAtLaunch: True
+  SpotAuto: None
+  SpotAutoMinOnDemandNumber: None
+  SpotAutoAllowedInstances: None
