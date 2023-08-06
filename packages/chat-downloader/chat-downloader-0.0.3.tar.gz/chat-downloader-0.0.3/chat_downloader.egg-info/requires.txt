@@ -1,0 +1,15 @@
+requests
+datetime
+isodate
+regex
+argparse
+docstring-parser
+colorlog
+
+[dev]
+flake8
+twine
+wheel
+tox
+sphinx
+pytest
