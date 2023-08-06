@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: EasyMuse
+Version: 0.0.3
+Summary: A Python library for connecting and communicate with MUSE headbands. Uses Bleak as the underlying Bluetooth interface.
+Home-page: https://github.com/bardiabarabadi/EasyMuse
+Author: Bardia Barabadi
+Author-email: bardiabarabadi@uvic.ca
+License: MIT
+Keywords: muse lsl eeg ble neuroscience matlab UDP
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
+Requires-Dist: bitstring
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: pexpect
+Requires-Dist: bleak
+Requires-Dist: pygments
+Requires-Dist: pyserial
+Requires-Dist: esptool
+Requires-Dist: nest-asyncio
+
+UNKNOWN
+
+
