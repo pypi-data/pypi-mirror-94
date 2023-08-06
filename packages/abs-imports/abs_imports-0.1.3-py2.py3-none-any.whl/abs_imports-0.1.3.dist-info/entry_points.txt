@@ -1,0 +1,3 @@
+[console_scripts]
+abs_imports = abs_imports:main
+
