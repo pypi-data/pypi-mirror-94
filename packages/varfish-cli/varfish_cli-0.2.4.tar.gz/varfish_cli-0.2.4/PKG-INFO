@@ -1,0 +1,86 @@
+Metadata-Version: 1.1
+Name: varfish_cli
+Version: 0.2.4
+Summary: Command line interface client for VarFish Server.
+Home-page: https://github.com/bihealth/varfish-cli
+Author: Manuel Holtgrewe
+Author-email: manuel.holtgrewe@bihealth.de
+License: MIT license
+Description: ===========
+        VarFish CLI
+        ===========
+        
+        ------------
+        Installation
+        ------------
+        
+        .. code-block:: bash
+        
+            $ git clone git@github.com:bihealth/varfish-cli.git
+            $ cd varfish-cli
+            $ conda create -n varfish-cli python=3.7
+            $ conda activate varfish-cli
+            $ pip install -e .
+            $ cat >~/.varfishrc.toml <<EOF
+            [global]
+        
+            # URL to VarFish server.
+            varfish_server_url = "https://varfish.example.com/"
+            # API token to use for VarFish API.
+            varfish_api_token = "XXX"
+            EOF
+        
+        
+        =======
+        History
+        =======
+        
+        ------
+        v0.2.4
+        ------
+        
+        - Added ``--no-verify-ssl``.
+        
+        ------
+        v0.2.3
+        ------
+        
+        - Added state field to ``VariantSetImportInfo`` class.
+        - Added endpoint for updating variant set import info.
+        
+        ------
+        v0.2.2
+        ------
+        
+        - More `MANIFEST.in` fixes.
+        
+        ------
+        v0.2.1
+        ------
+        
+        - Fixing package (`MANIFEST.in`).
+        
+        ------
+        v0.2.0
+        ------
+        
+        - Adjusted to upstream REST API changes.
+        - Cases with all files can now be uploaded.
+        
+        ------
+        v0.1.0
+        ------
+        
+        - everything is new
+        
+Keywords: varfish_cli
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
