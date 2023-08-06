@@ -1,0 +1,14 @@
+anvage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anvage/__main__.py,sha256=_pMq2WZ9KIgwVCkGTsKQ-P6N1CnFEAfMR-yDg2a7rFM,4374
+anvage/arguments.py,sha256=-OzusiMfPV4ZIJgA7buHtybZxou-SZMXXUijm4IYKBE,3278
+anvage/dbfasta2CdsSeq.py,sha256=ssu9ufGTFc2a-fkLRgYjAeHtfwrjxaZzDY-UeD3ZdLk,1086
+anvage/flankingSequences.py,sha256=BoPs2EUrTjwTlLNoWMqVi7W7XkY3NKX7oYfTQCaKdHw,1790
+anvage/objets.py,sha256=KKkwBvoyke5LW9JippQPW8tkW9y9jwapWffWlbh689E,586
+anvage/selectAnnotatedVariants.py,sha256=_6PF-BGobJHRt4omTaMyZQ2mVT10AnOT4Xb0C0Gz0dg,916
+anvage/synonymous.py,sha256=X3kObfnomivDHbUiNfW_Z9oW1puDjivgfO7JmNcjVNA,880
+anvage-0.1.1.dist-info/LICENSE,sha256=TupZZkup3p1mPMOKOIChdVQ-ejTtwwvVfpP1fJDCErU,1078
+anvage-0.1.1.dist-info/METADATA,sha256=q7pg7FpFw2qgs0vih-bThpyK8hvZOuV6L6oTejgzQlc,1616
+anvage-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+anvage-0.1.1.dist-info/entry_points.txt,sha256=gSKOUl6yLWH1t39KBzE0DzGT5N1S0U9axYXj8ebNgr4,49
+anvage-0.1.1.dist-info/top_level.txt,sha256=LLoC1lS8gyUr5SgiRSuniQjPWBpgQ-dm67yVXPJ5kRk,7
+anvage-0.1.1.dist-info/RECORD,,

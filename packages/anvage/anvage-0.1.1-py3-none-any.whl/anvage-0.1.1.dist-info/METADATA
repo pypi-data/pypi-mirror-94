@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: anvage
+Version: 0.1.1
+Summary: toolkit to process routine operation on gff3, vcf and fasta files
+Home-page: https://github.com/Grelot/anvage
+Author: Pierre-Edouard GUERIN
+Author-email: pierre-edouard.guerin@cefe.cnrs.fr
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+Requires-Dist: numpy
+Requires-Dist: biopython
+Requires-Dist: bcbio-gff
+Requires-Dist: pyfaidx
+Requires-Dist: gffutils
+Requires-Dist: PyVCF
+
+# ANVAGE
+
+[![Build Status](https://travis-ci.com/Grelot/anvage.svg?branch=main)](https://travis-ci.com/Grelot/anvage)
+
+
+ANnotation Variants GEnome is a toolkit software to perform routine operations that involve VCF, GFF3 and FASTA genome files.
+
+# usage
+
+
+```
+anvage select --vcf tests/data/sample.vcf \
+--genome tests/data/genome.fasta \
+--annotation tests/data/genome.gff3 \
+--selectionAnnotationType CDS \
+--output_prefix res
+```
+
+
+```
+anvage synonymous --vcf tests/data/sample.vcf \
+--genome tests/data/genome.fasta \
+--annotation tests/data/genome.gff3 \
+--output_prefix res
+```
+
+
+```
+anvage flank --vcf tests/data/sample.vcf \
+--genome tests/data/genome.fasta \
+--windowsSize 25 \
+--output_prefix res
+```
+
+
+https://github.com/laurabenestan/BLAST/blob/master/flanking_sequence.py
+
