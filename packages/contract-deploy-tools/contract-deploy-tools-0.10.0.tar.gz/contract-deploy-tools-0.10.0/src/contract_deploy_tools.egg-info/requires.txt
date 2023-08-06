@@ -1,0 +1,7 @@
+py-solc
+web3<6.0.0,>=5.4.0
+eth-tester[py-evm]
+eth-utils
+eth-keyfile
+click
+eth-tester-rpc

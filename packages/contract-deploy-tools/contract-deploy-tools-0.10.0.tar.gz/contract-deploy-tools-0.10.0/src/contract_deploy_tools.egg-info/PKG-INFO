@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: contract-deploy-tools
+Version: 0.10.0
+Summary: Compile, test and deploy smart contracts
+Home-page: https://github.com/trustlines-protocol/contract-deploy-tools
+Author: Trustlines-Network
+Author-email: contact@brainbot.com
+License: MIT
+Description: UNKNOWN
+Keywords: ethereum compile test deploy
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst; charset=UTF-8
