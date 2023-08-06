@@ -1,0 +1,16 @@
+README.md
+setup.py
+kcore_migrate/__init__.py
+kcore_migrate/base.py
+kcore_migrate/dependency_resolver.py
+kcore_migrate/ibackend.py
+kcore_migrate/imigrator.py
+kcore_migrate/migrator.py
+kcore_migrate/utils.py
+kcore_migrate.egg-info/PKG-INFO
+kcore_migrate.egg-info/SOURCES.txt
+kcore_migrate.egg-info/dependency_links.txt
+kcore_migrate.egg-info/requires.txt
+kcore_migrate.egg-info/top_level.txt
+kcore_migrate/backends/__init__.py
+kcore_migrate/backends/asyncpg.py
