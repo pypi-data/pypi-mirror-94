@@ -1,0 +1,10 @@
+LICENSE
+README.md
+plovary.py
+setup.cfg
+setup.py
+plovary.egg-info/PKG-INFO
+plovary.egg-info/SOURCES.txt
+plovary.egg-info/dependency_links.txt
+plovary.egg-info/top_level.txt
+plovary.egg-info/zip-safe
