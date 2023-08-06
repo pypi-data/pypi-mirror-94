@@ -1,0 +1,10 @@
+command4bot/__init__.py,sha256=wyAku5JwHDOkpYNNFvby88YmSek1W8bEisH5atGgx0o,376
+command4bot/command.py,sha256=wvMFj0JpV7j45iTLIG34ACPsk9t7rn_DPuF5NAWxL7k,7315
+command4bot/context.py,sha256=zx1Q9REJl7VMjVELcuUC8_vBnyD4GQGCKOX6_MHe6HQ,3829
+command4bot/fallback.py,sha256=HOANpxCf5KQ9dd1Lh08tY6rCjg-a4HsKU0LTszSmo8w,916
+command4bot/manager.py,sha256=lqY3qAWmtOQidFaGsdO6oIic5H0qi43-2YI3R5Rx3aw,11886
+command4bot/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+command4bot/typing_ext.py,sha256=THi3zeNSXwSXwURZHBdALP6r0RzYQC3BGXXMFPB7FKE,115
+command4bot-0.4.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+command4bot-0.4.1.dist-info/METADATA,sha256=A8y7bDDCQG0BfobSrV6p5TGL5J-MvfUKYCcV4_5ckbw,3073
+command4bot-0.4.1.dist-info/RECORD,,
