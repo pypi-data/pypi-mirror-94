@@ -1,0 +1,31 @@
+ZLMDB
+=====
+
+.. image:: https://img.shields.io/pypi/v/zlmdb.svg
+    :target: https://pypi.python.org/pypi/zlmdb
+    :alt: PyPI
+
+.. image:: https://readthedocs.org/projects/zlmdb/badge/?version=latest
+    :target: https://zlmdb.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation
+
+.. image:: https://github.com/crossbario/zlmdb/workflows/main/badge.svg
+   :target: https://github.com/crossbario/zlmdb/actions?query=workflow%3Amain
+   :alt: Build
+
+.. image:: https://github.com/crossbario/zlmdb/workflows/main/deploy.svg
+   :target: https://github.com/crossbario/zlmdb/actions?query=workflow%3Adeploy
+   :alt: Deploy
+
+.. image:: https://codecov.io/gh/crossbario/zlmdb/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/crossbario/zlmdb
+    :alt: Coverage
+
+Object-relational in-memory database layer based on LMDB:
+
+* High-performance (see below)
+* Supports multiple serializers (JSON, CBOR, Pickle, Flatbuffers)
+* Supports export/import from/to Apache Arrow
+* Support native Numpy arrays and Pandas data frames
+* Automatic indexes
+* Free software (MIT license)
