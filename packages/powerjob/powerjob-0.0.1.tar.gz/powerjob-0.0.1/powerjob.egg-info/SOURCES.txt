@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+client/__init__.py
+powerjob.egg-info/PKG-INFO
+powerjob.egg-info/SOURCES.txt
+powerjob.egg-info/dependency_links.txt
+powerjob.egg-info/top_level.txt
+worker/__init__.py

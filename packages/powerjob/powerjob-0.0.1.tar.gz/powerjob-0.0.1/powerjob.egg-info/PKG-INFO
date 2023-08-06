@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: powerjob
+Version: 0.0.1
+Summary: Enterprise job scheduling middleware with distributed computing ability.
+Home-page: https://github.com/PowerJob/powerjob-python
+Author: Teng Jiqi
+Author-email: tengjiqi@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/PowerJob/powerjob-python/issues
+Project-URL: Funding, https://opencollective.com/powerjob
+Project-URL: Say Thanks!, https://github.com/PowerJob/PowerJob/issues/6
+Project-URL: Source, https://github.com/PowerJob/powerjob-python
+Description: UNKNOWN
+Keywords: job-scheduler,task-scheduler,scheduler,workflow
+Platform: UNKNOWN
+Requires-Python: >=3.6, <4
