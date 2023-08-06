@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: groupstackbar
+Version: 0.0.3
+Summary: groupstackbar package
+Home-page: UNKNOWN
+Author: Nishant Kumar
+Author-email: abc.nishant007@gmail.com
+License: UNKNOWN
+Description: # groupstackbar
+        Python package for creating grouped and stacked bar plots using matplotlib.
+        
+        ## Installing
+        pip install groupstackbar
+        
+        ## Usage:
+        Please refer to example.py
+        
+        ## Image showing the meaning of each parameter
+        <img width="1850" alt="Screenshot 2021-02-10 at 10 26 22 PM" src="https://user-images.githubusercontent.com/9101260/107526035-64109c80-6bf2-11eb-86e4-500ecfe80160.png">
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
