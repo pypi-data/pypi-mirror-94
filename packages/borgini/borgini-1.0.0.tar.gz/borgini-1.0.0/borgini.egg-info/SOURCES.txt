@@ -1,0 +1,16 @@
+README.rst
+pyproject.toml
+setup.py
+borgini/__init__.py
+borgini/__main__.py
+borgini.egg-info/PKG-INFO
+borgini.egg-info/SOURCES.txt
+borgini.egg-info/dependency_links.txt
+borgini.egg-info/entry_points.txt
+borgini.egg-info/not-zip-safe
+borgini.egg-info/requires.txt
+borgini.egg-info/top_level.txt
+borgini/src/__init__.py
+borgini/src/config.py
+borgini/src/funcs.py
+borgini/src/parser.py

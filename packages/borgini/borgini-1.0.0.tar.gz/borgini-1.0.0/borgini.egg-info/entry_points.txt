@@ -1,0 +1,3 @@
+[console_scripts]
+borgini = borgini:main
+
