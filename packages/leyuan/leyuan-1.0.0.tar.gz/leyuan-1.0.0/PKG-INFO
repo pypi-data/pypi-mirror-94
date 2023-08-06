@@ -1,0 +1,28 @@
+Metadata-Version: 1.0
+Name: leyuan
+Version: 1.0.0
+Summary: Leyuan Cluster Tool
+Home-page: https://github.com/qorzj/leyuan
+Author: qorzj
+Author-email: inull@qq.com
+License: MIT
+Description: 
+        leyuan
+        ~~~~~~~~
+        
+        Leyuan is a consul based cluster management tool.
+        
+        Setup
+        -----
+        
+        .. code-block:: bash
+        
+            > pip install leyuan
+        
+        Links
+        -----
+        * `README <https://github.com/qorzj/leyuan>`_
+        
+        
+Keywords: lesscli
+Platform: any
