@@ -1,0 +1,3 @@
+[console_scripts]
+starry-process = starry_process.app:entry_point [app]
+
