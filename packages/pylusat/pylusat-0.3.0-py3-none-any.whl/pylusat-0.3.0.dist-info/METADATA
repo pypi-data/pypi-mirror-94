@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pylusat
+Version: 0.3.0
+Summary: Python for Land-use suitability analysis tools
+Home-page: https://github.com/chjch/pylusat
+Author: Changjie Chen
+Author-email: chj.chen@hotmail.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: geopandas
+Requires-Dist: rasterio
+Requires-Dist: rasterstats
+Requires-Dist: scipy
+
+# PyLUSAT
+Python Land-Use Suitability Analysis Toolkit
+
+## Introduction
+PyLUSAT intends to provide users with tools that can be used to conduct land-use 
+suitability analysis.
+
+## Install
+PyLUSAT depends on the following packages.
+- geopandas
+- rasterio
+- rasterstats
+- scipy
+
+
