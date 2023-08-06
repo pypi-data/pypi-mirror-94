@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: navigation_2d
+Version: 1.0.5
+Summary: 2d navigation environment with Box2D
+Home-page: https://github.com/mjyoo2/2d_navi_with_obstacle
+Author: Minjong Yoo, Gwangpyo Yoo
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
