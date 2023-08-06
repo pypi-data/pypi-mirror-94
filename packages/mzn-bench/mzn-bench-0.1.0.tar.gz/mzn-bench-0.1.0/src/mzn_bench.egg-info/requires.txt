@@ -1,0 +1,11 @@
+minizinc
+ruamel.yaml
+click<8,>=7
+
+[plotting]
+pandas<2,>=1.1
+bokeh>=2.2.3
+
+[scripts]
+tabulate
+pytest<7,>=6
