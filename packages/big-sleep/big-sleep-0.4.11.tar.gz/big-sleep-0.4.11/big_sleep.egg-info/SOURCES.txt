@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+big_sleep/__init__.py
+big_sleep/big_sleep.py
+big_sleep/biggan.py
+big_sleep/cli.py
+big_sleep/clip.py
+big_sleep/resample.py
+big_sleep/version.py
+big_sleep.egg-info/PKG-INFO
+big_sleep.egg-info/SOURCES.txt
+big_sleep.egg-info/dependency_links.txt
+big_sleep.egg-info/entry_points.txt
+big_sleep.egg-info/requires.txt
+big_sleep.egg-info/top_level.txt
+big_sleep/data/bpe_simple_vocab_16e6.txt
