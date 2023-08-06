@@ -1,0 +1,13 @@
+peppercorn
+statistics
+pandas
+numpy
+scipy
+sklearn
+matplotlib
+
+[dev]
+check-manifest
+
+[test]
+coverage

@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/cars.csv
+src/koleksyon/__init__.py
+src/koleksyon/lib.py
+src/koleksyon.egg-info/PKG-INFO
+src/koleksyon.egg-info/SOURCES.txt
+src/koleksyon.egg-info/dependency_links.txt
+src/koleksyon.egg-info/entry_points.txt
+src/koleksyon.egg-info/requires.txt
+src/koleksyon.egg-info/top_level.txt
