@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: odoo13-addons-oca-wms
+Version: 13.0.20210212.0
+Summary: Meta package for oca-wms Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo13-addon-delivery-carrier-preference
+Requires-Dist: odoo13-addon-delivery-carrier-warehouse
+Requires-Dist: odoo13-addon-delivery-preference-glue-stock-picking-group
+Requires-Dist: odoo13-addon-sale-stock-available-to-promise-release
+Requires-Dist: odoo13-addon-shopfloor
+Requires-Dist: odoo13-addon-shopfloor-batch-automatic-creation
+Requires-Dist: odoo13-addon-shopfloor-checkout-sync
+Requires-Dist: odoo13-addon-shopfloor-mobile
+Requires-Dist: odoo13-addon-shopfloor-mobile-custom-example
+Requires-Dist: odoo13-addon-shopfloor-packing-info
+Requires-Dist: odoo13-addon-shopfloor-workstation
+Requires-Dist: odoo13-addon-stock-available-to-promise-release
+Requires-Dist: odoo13-addon-stock-available-to-promise-release-dynamic-routing
+Requires-Dist: odoo13-addon-stock-checkout-sync
+Requires-Dist: odoo13-addon-stock-dynamic-routing
+Requires-Dist: odoo13-addon-stock-dynamic-routing-checkout-sync
+Requires-Dist: odoo13-addon-stock-move-source-relocate
+Requires-Dist: odoo13-addon-stock-move-source-relocate-dynamic-routing
+Requires-Dist: odoo13-addon-stock-picking-type-shipping-policy
+Requires-Dist: odoo13-addon-stock-picking-type-shipping-policy-group-by
+Requires-Dist: odoo13-addon-stock-reception-screen
+Requires-Dist: odoo13-addon-stock-storage-type
+Requires-Dist: odoo13-addon-stock-storage-type-buffer
+Requires-Dist: odoo13-addon-stock-storage-type-putaway-abc
+
+UNKNOWN
+
+
