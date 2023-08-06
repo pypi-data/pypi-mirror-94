@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: inbot-auth
+Version: 1.0.4
+Summary: Flask wrapper with pre-configured azure OIDC support
+Home-page: https://github.com/Inbot/inbotauth.git
+Maintainer: Aarni Alasaarela
+Maintainer-email: aarni.alasaarela@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
