@@ -1,0 +1,3 @@
+[console_scripts]
+emobpy = emobpy.__main__:main
+

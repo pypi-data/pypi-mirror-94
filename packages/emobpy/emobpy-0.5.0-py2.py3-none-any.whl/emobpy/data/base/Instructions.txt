@@ -1,0 +1,29 @@
+Base case:
+
+The creation of 
+    - 6 mobility profiles
+    - 1 consumption profiles
+    - 1 grid availability profiles
+    - 4 grid demand profiles
+
+Before running this example, install and activate an emobpy dedicated environment (conda recommended). Install emobpy in the environment if it is not yet installed (pip install emobpy).
+
+Run the script in the following order:
+
+    python mobility.py
+    
+    python DrivingConsumption.py
+    
+    python GridAvailability.py
+    
+    python GridDemand.py
+    
+    
+After finishing all the runs open the notebook for visualtization and export results.
+
+    
+See the documentation to convert pickle files to CSV and use visualtization tools.
+https://gitlab.com/diw-evu/emobpy/emobpy
+    
+    
+
