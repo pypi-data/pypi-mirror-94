@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+py_midiplus_fit/Fader.py
+py_midiplus_fit/MidiPlus.py
+py_midiplus_fit/__init__.py
+py_midiplus_fit/__main__.py
+py_midiplus_fit/test.py
+py_midiplus_fit.egg-info/PKG-INFO
+py_midiplus_fit.egg-info/SOURCES.txt
+py_midiplus_fit.egg-info/dependency_links.txt
+py_midiplus_fit.egg-info/requires.txt
+py_midiplus_fit.egg-info/top_level.txt
