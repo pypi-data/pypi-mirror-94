@@ -1,0 +1,24 @@
+graft docs
+graft opendebates
+graft plugins
+
+include .editorconfig
+
+include AUTHORS.rst
+include CHANGELOG.rst
+include CONTRIBUTING.rst
+include LICENSE
+include README.rst
+include DESCRIPTION.rst
+
+include CODE_OF_CONDUCT.md
+
+include tox.ini .travis.yml .readthedocs.yml
+
+include requirements.txt
+
+recursive-include .github *
+
+recursive-exclude docs/_build *
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib
