@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: mol-ellipsize
+Version: 1.0.1
+Summary: Ellipsoid fitting over conformer ensembles for calculating size.
+Home-page: https://github.com/andrewtarzia/mol-ellipsize
+Author: Andrew Tarzia
+Author-email: andrew.tarzia@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
