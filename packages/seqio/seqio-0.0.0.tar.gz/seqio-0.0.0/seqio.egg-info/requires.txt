@@ -1,0 +1,12 @@
+absl-py
+numpy
+scipy
+sentencepiece
+tensorflow-text
+tfds-nightly
+
+[cache-tasks]
+apache-beam
+
+[test]
+pytest
