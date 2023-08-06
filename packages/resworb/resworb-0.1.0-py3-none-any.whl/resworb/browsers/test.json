@@ -1,0 +1,78 @@
+{
+    "checksum": "3a0c6d0f8fa20b5bab0182408a26fadd",
+    "roots": {
+        "bookmark_bar": {
+            "children": [
+                {
+                    "date_added": "13038493422263000",
+                    "guid": "dc954925-f037-fa8b-8ae9-8281c517e864",
+                    "id": "6",
+                    "name": "猫的天空之城",
+                    "type": "url",
+                    "url": "http://www.douban.com/people/59424341/"
+                },
+                {
+                    "date_added": "13257352430581668",
+                    "guid": "a89f4058-cfa7-483d-980d-3bd463af4dd9",
+                    "id": "5",
+                    "name": "YouTube",
+                    "type": "url",
+                    "url": "https://www.youtube.com/"
+                },
+                {
+                    "children": [
+                        {
+                            "children": [
+                                {
+                                    "date_added": "13257352501595241",
+                                    "guid": "8a056f76-1047-4511-88df-fb77a388a5c6",
+                                    "id": "7",
+                                    "name": "V2EX",
+                                    "type": "url",
+                                    "url": "https://v2ex.com/"
+                                }
+                            ],
+                            "date_added": "13257352516187433",
+                            "date_modified": "13257352516187519",
+                            "guid": "b5bad183-acc0-4d7e-9f57-5f1cb8466fbd",
+                            "id": "9",
+                            "name": "yyy",
+                            "type": "folder"
+                        }
+                    ],
+                    "date_added": "13257352516187015",
+                    "date_modified": "13257352516187016",
+                    "guid": "0021a0f7-05ee-42bd-a784-2b818860d9bc",
+                    "id": "8",
+                    "name": "xxx",
+                    "type": "folder"
+                }
+            ],
+            "date_added": "13257352408950272",
+            "date_modified": "13257352501595241",
+            "guid": "00000000-0000-4000-a000-000000000002",
+            "id": "1",
+            "name": "Bookmarks Bar",
+            "type": "folder"
+        },
+        "other": {
+            "children": [],
+            "date_added": "13257352408950296",
+            "date_modified": "0",
+            "guid": "00000000-0000-4000-a000-000000000003",
+            "id": "2",
+            "name": "Other Bookmarks",
+            "type": "folder"
+        },
+        "synced": {
+            "children": [],
+            "date_added": "13257352408950297",
+            "date_modified": "0",
+            "guid": "00000000-0000-4000-a000-000000000004",
+            "id": "3",
+            "name": "Mobile Bookmarks",
+            "type": "folder"
+        }
+    },
+    "version": 1
+}
