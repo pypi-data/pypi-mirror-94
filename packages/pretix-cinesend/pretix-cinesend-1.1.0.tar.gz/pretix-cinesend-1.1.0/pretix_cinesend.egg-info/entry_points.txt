@@ -1,0 +1,3 @@
+
+[pretix.plugin]
+pretix_cinesend=pretix_cinesend:PretixPluginMeta
