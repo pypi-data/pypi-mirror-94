@@ -1,0 +1,13 @@
+tablify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tablify/parse.py,sha256=U4fWm4e9yvBL43btsIzSjzkxSgCoOiE-Gz7nXqbNV5I,1366
+tablify/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tablify/core/html.py,sha256=iV4sxzVPWxyl6gngKKxH65v6nxUyV7qnTDfcAxwVUMc,1210
+tests/__init__.py,sha256=M9j1NuexsmXRO0O_LLRNrLF7fEfPAHWIxm90hC6gV3I,27
+tests/context.py,sha256=8uoaODl_ANM8LXbhMBCICU7ZQE74kv241tRlqC22R3o,152
+tests/test_advanced.py,sha256=iwhb0fOdbtzdcg4KRAUzor-cxbIInhZP1XcSHxQ5ZyM,186
+tests/test_basic.py,sha256=h6kOi2YcLbcAx4qVCFPwd4HhmwHluhW6uX8ggU-D6Rg,180
+tablify-0.0.1.dist-info/LICENSE,sha256=aHgRduTyzV6C13CxPBgrZxYyorKXkHrwX0yLVvEgTMA,1085
+tablify-0.0.1.dist-info/METADATA,sha256=gyW2XREL_3cBXFdTKW9mnaY_WvM26moFi1WDalL6q6I,1301
+tablify-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tablify-0.0.1.dist-info/top_level.txt,sha256=04qdRDaFNhVHG4Pn9EQjokaNGK5Ip2ya_QHhxWMHdTs,14
+tablify-0.0.1.dist-info/RECORD,,
