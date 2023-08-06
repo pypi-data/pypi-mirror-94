@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: nlogo-utils
+Version: 0.1.0
+Summary: Utilities to manipulate and create native NetLogo (.nlogo) files
+Home-page: https://gitlab.com/breisfeld/nlogo_utils.git
+Author: Brad Reisfeld
+Author-email: brad.reisfeld@gmail.com
+License: MIT
+Description: # nlogo_utils
+        
+        Utilities to manipulate and create native NetLogo (.nlogo) files.
+        
+        Information about the NetLogo project itself may be found [here](https://ccl.northwestern.edu/netlogo/).
+        
+        ## Scope
+        
+        Current utilities include the following:
+        
+        `split_nlogo_file`: Split a .nlogo file and store the resulting section files in a specified directory
+        
+        `combine_nlogo_sections`: Assemble sections from specified directories into a .nlogo file
+        
+        ## Usage
+        
+        ```
+        $ split_nlogo_file -h
+        
+        usage: split_nlogo_file [-h] -i INPUT_FILE [-o OUTPUT_DIR]
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          -i INPUT_FILE, --input-file INPUT_FILE
+                                path to .nlogo file
+          -o OUTPUT_DIR, --output-dir OUTPUT_DIR
+                                path to .nlogo section directory
+        
+        ```
+        
+        ```
+        $ combine_nlogo_sections -h
+        
+        usage: combine_nlogo_sections [-h] -i INPUT_DIR -o OUTPUT_FILE [--code-file CODE_FILE] [--interface-file INTERFACE_FILE]
+                                      [--info-file INFO_FILE] [--turtleshapes-file TURTLESHAPES_FILE] [--version-file VERSION_FILE]
+                                      [--previewcommands-file PREVIEWCOMMANDS_FILE] [--systemdynamics-file SYSTEMDYNAMICS_FILE]
+                                      [--behaviorspace-file BEHAVIORSPACE_FILE] [--hubnetclient-file HUBNETCLIENT_FILE]
+                                      [--linkshapes-file LINKSHAPES_FILE] [--modelsettings-file MODELSETTINGS_FILE]
+                                      [--deltatick-file DELTATICK_FILE]
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          -i INPUT_DIR, --input-dir INPUT_DIR
+                                path to directory of .nlogo section files
+          -o OUTPUT_FILE, --output-file OUTPUT_FILE
+                                path to the output .nlogo file
+          --code-file CODE_FILE
+                                path to the code section file
+          --interface-file INTERFACE_FILE
+                                path to the interface section file
+          --info-file INFO_FILE
+                                path to the info section file
+          --turtleshapes-file TURTLESHAPES_FILE
+                                path to the turtleshapes section file
+          --version-file VERSION_FILE
+                                path to the version section file
+          --previewcommands-file PREVIEWCOMMANDS_FILE
+                                path to the previewcommands section file
+          --systemdynamics-file SYSTEMDYNAMICS_FILE
+                                path to the systemdynamics section file
+          --behaviorspace-file BEHAVIORSPACE_FILE
+                                path to the behaviorspace section file
+          --hubnetclient-file HUBNETCLIENT_FILE
+                                path to the hubnetclient section file
+          --linkshapes-file LINKSHAPES_FILE
+                                path to the linkshapes section file
+          --modelsettings-file MODELSETTINGS_FILE
+                                path to the modelsettings section file
+          --deltatick-file DELTATICK_FILE
+                                path to the deltatick section file
+        
+        ```
+        
+        ## Examples
+        
+        ### Split a .nlogo file into component sections
+        
+        ```
+        $ split_nlogo_file -i 'Wolf Sheep Predation.nlogo'
+        ```
+        
+        This creates a directory of section files called `Wolf Sheep Predation.sections`.
+        
+        ### Split a .nlogo file into component sections and specify the target directory
+        
+        ```
+        $ split_nlogo_file -i 'Wolf Sheep Predation.nlogo' -o '~/wfp_sections'
+        ```
+        
+        ### Combine component sections from a single directory into a .nlogo file
+        
+        ```
+        $ combine_nlogo_sections.exe -i 'Wolf Sheep Predation.sections' -o wolf_sheep_predation.nlogo
+        ```
+        
+        ### Combine component sections from various directories into a .nlogo file
+        
+        ```
+        $ combine_nlogo_sections.exe -i 'Wolf Sheep Predation.sections' -o wolf_sheep_predation.nlogo --code-file ~/wsp1/code.nlsec --modelsettings-file ~/wsp2/modelsettings.nlsec --info-file ~/info_files/wsp_info.nlsec
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
