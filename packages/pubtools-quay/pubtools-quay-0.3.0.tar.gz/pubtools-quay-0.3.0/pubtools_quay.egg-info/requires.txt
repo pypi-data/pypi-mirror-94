@@ -1,0 +1,8 @@
+setuptools
+pyrsistent
+pushcollector
+paramiko
+requests
+
+[reST]
+Sphinx
