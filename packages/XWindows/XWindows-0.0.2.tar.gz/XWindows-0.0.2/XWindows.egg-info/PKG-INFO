@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: XWindows
+Version: 0.0.2
+Summary: X Server client to access windows and automate keypresses
+Home-page: UNKNOWN
+Author: sleepingsaint
+Author-email: suryasantosh14523@gmail.com
+License: UNKNOWN
+Description: It is created to provide features like getting specific window attributes 
+            like height, width, co-ordinates, image of the window and automate keypresses all these 
+            features without compromising speed and efficiency. Main intention is to provide support for
+            opencv projects on linux to get specific window images and automate keyboard based on gestures etc,
+         
+Keywords: python3,XServer,Opencv,linux
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
