@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: smartdb
+Version: 0.3
+Summary: smartchart db
+Home-page: https://www.smartchart.cn/
+Author: JohnYan
+Author-email: 84345999@qq.com
+License: Apache License 2.0
+Download-URL: https://www.smartchart.cn/
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6

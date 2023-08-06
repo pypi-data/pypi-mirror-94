@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+smart_chart/db.sqlite3
+smartdb.egg-info/PKG-INFO
+smartdb.egg-info/SOURCES.txt
+smartdb.egg-info/dependency_links.txt
+smartdb.egg-info/not-zip-safe
+smartdb.egg-info/top_level.txt
