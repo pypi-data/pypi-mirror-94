@@ -1,0 +1,11 @@
+README.md
+setup.py
+louis_distributions/Binomialdistribution.py
+louis_distributions/Gaussiandistribution.py
+louis_distributions/Generaldistribution.py
+louis_distributions/__init__.py
+louis_distributions.egg-info/PKG-INFO
+louis_distributions.egg-info/SOURCES.txt
+louis_distributions.egg-info/dependency_links.txt
+louis_distributions.egg-info/not-zip-safe
+louis_distributions.egg-info/top_level.txt
