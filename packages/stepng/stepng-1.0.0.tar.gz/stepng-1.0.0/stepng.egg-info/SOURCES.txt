@@ -1,0 +1,8 @@
+README.md
+setup.py
+stepng/__init__.py
+stepng/__main__.py
+stepng.egg-info/PKG-INFO
+stepng.egg-info/SOURCES.txt
+stepng.egg-info/dependency_links.txt
+stepng.egg-info/top_level.txt
