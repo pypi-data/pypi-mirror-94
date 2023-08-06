@@ -1,0 +1,3 @@
+[console_scripts]
+s2_cli = zephyrus_sc2_parser.s2protocol_fixed.s2_cli:main
+
