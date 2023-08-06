@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: maps-cli
+Version: 0.0.2
+Summary: A CLI for maps services.
+Home-page: https://github.com/sackh/maps-cli
+License: MIT
+Author: Sachin Kharude
+Author-email: sachinkharude10@gmail.com
+Requires-Python: >=3.7.1,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: geopy (>=2.1.0,<3.0.0)
+Requires-Dist: overpy (>=0.4,<0.5)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: simplejson (>=3.17.2,<4.0.0)
+Project-URL: Bug Tracker, https://github.com/sackh/maps-cli/issues
+Project-URL: Repository, https://github.com/sackh/maps-cli
+Description-Content-Type: text/markdown
+
+# Maps CLI 
+
+[![Main Actions Status](https://github.com/sackh/maps-cli/workflows/main/badge.svg)](https://github.com/sackh/maps-cli/actions)
+[![Documentation Status](https://readthedocs.org/projects/maps-cli/badge/?version=latest)](https://maps-cli.readthedocs.io/en/latest/?badge=latest)
+[![codecov](https://codecov.io/gh/sackh/maps-cli/branch/master/graph/badge.svg?token=98J9ILF6VG)](https://codecov.io/gh/sackh/maps-cli)
+[![PyPI - Python Version](https://img.shields.io/pypi/v/maps-cli.svg?logo=pypi)](https://pypi.org/project/maps-cli/)
+[![Downloads](https://pepy.tech/badge/maps-cli)](https://pepy.tech/project/maps-cli)
+[![PyPI - License](https://img.shields.io/pypi/l/maps-cli)](https://pypi.org/project/maps-cli/)
+[![GitHub contributors](https://img.shields.io/github/contributors/sackh/maps-cli)](https://github.com/sackh/maps-cli/graphs/contributors)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![commits since](https://img.shields.io/github/commits-since/sackh/maps-cli/latest.svg)](https://github.com/sackh/maps-cli/commits/master)
+
+A simple command line tool to access services of various map services providers.
+
+## Usage
+# ![demo](https://github.com/sackh/maps-cli/raw/master/gifs/demo.gif)
+
+## Installation
+```bash
+  pip install maps-cli
+```
+
+## Test Suite
+```bash
+  poetry install
+  pytest -v --durations=10 --cov=maps tests
+```
+
+### Commands
+
+```bash
+  maps -h
+  maps show
+```
+
+## Maps Service Providers
+Currently, this library is supporting following providers.
+
+- [OSM](https://www.openstreetmap.org/)
+- [HERE](https://www.here.com/)
+- [MapBox](https://www.mapbox.com/)
+- [TomTom](https://www.tomtom.com/)
+
+
+## Services
+Currently, all providers support forward and reverse geocoding services.
+
