@@ -1,0 +1,3 @@
+[console_scripts]
+ratings = ratings.__main__:main
+
