@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: chargebee-cli
+Version: 0.0.23
+Summary: cli for chargebee apis
+Home-page: UNKNOWN
+Author: Nandkishor bhasker
+Author-email: bhasker.nandkishor@gmail.com
+License: UNKNOWN
+Description: # chargebee-cli chargebee-cli
+Platform: UNKNOWN
+Requires-Python: >=3.9
