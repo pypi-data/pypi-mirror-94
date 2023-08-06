@@ -1,0 +1,10 @@
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+ordpy/__init__.py
+ordpy/ordpy.py
+ordpy.egg-info/PKG-INFO
+ordpy.egg-info/SOURCES.txt
+ordpy.egg-info/dependency_links.txt
+ordpy.egg-info/top_level.txt
