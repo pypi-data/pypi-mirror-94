@@ -1,0 +1,16 @@
+mjango/__init__.py,sha256=JgyUpKo77sl5ZGLWfz5uq5KndnSdJXrK58wBXRkcPPs,109
+mjango/db.py,sha256=PTI6t9D2NZO6cX-fgqccL2CQOvbRL1zeWUJXeKgMDLY,1931
+mjango/exceptions.py,sha256=fDKKUb76wN2ozBhEUhL8WAOW0BGpv1MT4cjLbkBwtT8,237
+mjango/expressions.py,sha256=5xibsiRS2Tk2-wlrAVvMTH8nOXHhbBu-3mKoldXVudk,2462
+mjango/manager.py,sha256=ApNOuRLYv3VzWBhbInPPAgpWtJhcp-4T2QfJRuk-deM,2489
+mjango/models.py,sha256=1uRUF09sOAgDnCNzeTZWNOvKC7UNago8f5lZ6CJrgqo,2725
+mjango/operators.py,sha256=cbyJE60hMAumKC50SEAlGEa655CS_MtAwYHKgcBMuZM,1082
+mjango/query.py,sha256=ysSfpF_dHeVPxW-prrhwasFLId3wVZjyTG9933VqzEg,5752
+mjango/settings.py,sha256=AaSXW0-d0ryO2WdSNidEg7UTuspkV5u9cMDrF-IomqI,303
+mjango/mongodb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mjango/mongodb/backends.py,sha256=ioI2_uhn1BTpbRncs7PO6tLGTm75_-uNzWxWVirj4v0,4066
+mjango/mongodb/compilers.py,sha256=Vt5UtUPESC24Q7-36-c6jAH7jU5QKjSKup-hQ-7Z2NI,1897
+mjango-0.2.3.dist-info/LICENSE,sha256=3Z1JKIJ-6X0L_nCosevNDuTfSsBQiyaDS6z04obZtn4,1077
+mjango-0.2.3.dist-info/WHEEL,sha256=NLqmsx-ZFZ6gDavYgh2oH0ZSN-KRmpcdEXIZDnYy9Pg,99
+mjango-0.2.3.dist-info/METADATA,sha256=KgOaUyaa-QTXyoDigGntBgYYtNnOpQ16edGf915DoR0,294
+mjango-0.2.3.dist-info/RECORD,,
