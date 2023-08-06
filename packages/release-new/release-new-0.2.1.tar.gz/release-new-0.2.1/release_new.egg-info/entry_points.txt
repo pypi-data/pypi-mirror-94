@@ -1,0 +1,3 @@
+[console_scripts]
+release-new = release_new.main:main
+
