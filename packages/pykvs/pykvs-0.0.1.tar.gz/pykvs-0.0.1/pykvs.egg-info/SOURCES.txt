@@ -1,0 +1,9 @@
+README.md
+setup.py
+pykvs/__init__.py
+pykvs/kvs.py
+pykvs/version.py
+pykvs.egg-info/PKG-INFO
+pykvs.egg-info/SOURCES.txt
+pykvs.egg-info/dependency_links.txt
+pykvs.egg-info/top_level.txt
