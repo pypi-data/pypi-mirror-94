@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: EODHistoricalWrapper
+Version: 0.0.1rc0
+Summary: Wrapper for fetching individual stock information from EODHistorical
+Home-page: https://github.com/palmbook/EODHistoricalWrapper
+Author: Chakrit Yau
+Author-email: palmbook@gmail.com
+License: MIT
+Download-URL: https://github.com/palmbook/EODHistoricalWrapper/archive/v0.0.1c.tar.gz
+Description: # EODHistoricalWrapper
+        Wrapper for fetching individual stock information from EODHistorical
+        
+Keywords: EODHistorical,Stock,Finance
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
