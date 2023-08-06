@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-12-17 10:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+msgid "Add"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Group"
+msgstr ""
+
+#: collective/z3cform/jsonwidget/configure.zcml:27
+msgid "Installs the collective.z3cform.jsonwidget add-on."
+msgstr ""
+
+msgid "Load more"
+msgstr ""
+
+msgid "Navigate through site structure and select one or more contents."
+msgstr ""
+
+msgid "Select contents"
+msgstr ""
+
+msgid "Select items"
+msgstr ""
+
+#: collective/z3cform/jsonwidget/configure.zcml:36
+msgid "Uninstalls the collective.z3cform.jsonwidget add-on."
+msgstr ""
+
+#: collective/z3cform/jsonwidget/configure.zcml:27
+msgid "collective.z3cform.jsonwidget"
+msgstr ""
+
+#: collective/z3cform/jsonwidget/configure.zcml:36
+msgid "collective.z3cform.jsonwidget (uninstall)"
+msgstr ""

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer
+      name="collective.z3cform.jsonwidget"
+      interface="collective.z3cform.jsonwidget.interfaces.ICollectiveZ3CformJsonwidgetLayer"
+      />
+</layers>

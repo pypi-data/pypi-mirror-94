@@ -1,0 +1,49 @@
+.json-textarea-widget {
+    background-color: #ccc;
+
+    .data-wrapper {
+        .json-row {
+            padding: 10px;
+            margin: 10px;
+            background-color: #fff;
+
+            .row-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2rem;
+
+                button.standalone {
+                    font-size: 1.5rem;
+
+                    + button.standalone {
+                        margin-left: 0.5rem;
+                    }
+
+                    + strong {
+                        margin-left: 1.5rem;
+                    }
+                }
+
+                button.disruptive {
+                    font-size: 1.5rem;
+                }
+
+                strong {
+                    margin-right: auto;
+                }
+            }
+
+            > .column {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .data-footer {
+            padding: 10px;
+
+            button.context {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

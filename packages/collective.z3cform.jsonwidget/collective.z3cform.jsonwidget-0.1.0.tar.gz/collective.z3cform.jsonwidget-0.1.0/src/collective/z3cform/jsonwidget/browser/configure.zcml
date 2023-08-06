@@ -1,0 +1,34 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    i18n_domain="collective.z3cform.jsonwidget">
+
+  <plone:static
+      name="collective.z3cform.jsonwidget"
+      type="plone"
+      directory="static"
+      />
+  
+  <!-- define new widget -->
+  <class class=".widget.JSONWidget">
+    <require
+        permission="zope.Public"
+        interface=".widget.IJSONWidget"
+        />
+  </class>
+
+  <adapter
+      factory=".widget.JSONFieldWidget"
+      for="*
+           z3c.form.interfaces.IFormLayer"
+      />
+
+  <z3c:widgetTemplate
+      mode="input"
+      widget=".widget.IJSONWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="json_widget_input.pt"
+      />
+</configure>
