@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: smhi-open-data
+Version: 0.0.8
+Summary: Simple Python interface to the Swedish Meteorological and Hydrological Institute's (SMHI).
+Home-page: https://github.com/LasseRegin/smhi-open-data
+Author: Lasse Regin Nielsen
+Author-email: lasseregin@gmail.com
+License: UNKNOWN
+Description: 
+        # SMHI Open Data API
+        
+        Simple Python interface to the Swedish Meteorological and Hydrological Institute's (SMHI) [Open Data API](https://opendata.smhi.se/apidocs/metobs/index.html).
+        
+        Weather data from Sweden are publicly available through SMHI's Open Data API. Fetch raw weather observations from all available weather stations in Sweden. Parameters available include _temperature_, _windspeed_, _humidity_, _pressure_, _precipitation__, and many more.
+        
+        ## Requirements
+        
+        * Python 3.6+
+        
+        ## Installation
+        
+        ```bash
+        $ pip install smhi-open-data
+        ```
+        
+        ## Example
+        
+        ```python
+        from smhi_open_data import SMHIOpenDataClient, Parameter
+        
+        
+        # Get 10 stations
+        client = SMHIOpenDataClient()
+        
+        # Get all stations
+        stations = client.get_stations()
+        
+        # Get closest station
+        closest_station = client.get_closest_station(
+            latitude=55.707722,
+            longitude=12.562119)
+        
+        # Get available parameters
+        parameters = client.list_parameters()
+        
+        # Get available parameters at station
+        parameters_station = client.get_station_parameters(station_id=173010)
+        
+        # Get temperature observations from available stations from past hour
+        observations = client.get_latest_observations(
+            parameter=Parameter.TemperaturePast1h)
+        ```
+        
+        ## Tests
+        
+        Run tests
+        ```bash
+        $ python -m unittest discover tests
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+smhi_open_data/__init__.py
+smhi_open_data/client.py
+smhi_open_data/enums.py
+smhi_open_data/utils.py
+smhi_open_data.egg-info/PKG-INFO
+smhi_open_data.egg-info/SOURCES.txt
+smhi_open_data.egg-info/dependency_links.txt
+smhi_open_data.egg-info/requires.txt
+smhi_open_data.egg-info/top_level.txt
+tests/__init__.py
+tests/test_client.py
