@@ -1,0 +1,16 @@
+google_photos_archiver/__init__.py,sha256=-WHldE5CrJRgQY1aEHsVK2hpBi4qD0-M8qCirjxko0k,86
+google_photos_archiver/album.py,sha256=EGV8G_9nfaWCPNT71weUaQFZMW4SY-ccVAviKLp6RH0,1848
+google_photos_archiver/archivers.py,sha256=8bbiFRVYYyXDpupHNhIzBmNGvQRG-NP5kFzF1neMa-M,2025
+google_photos_archiver/cli.py,sha256=6VgI43vfGVyKhsL6dIixyrhsGT_g6-1S9MhAVPiIxh8,4787
+google_photos_archiver/cli_utils.py,sha256=6LWr_gSBBx3nJtZwOCEaN_wxk1uC6g9cDNMmMhX64qg,4643
+google_photos_archiver/filters.py,sha256=ksAf_5TqHW-Yl4GckKWkK1MEI9f1cN_p62f3YmWdozQ,1582
+google_photos_archiver/media_item.py,sha256=DgQNvrN9CxHoPxwwjlF9OnjXFudwtb-g9dNPVL7rtP4,3939
+google_photos_archiver/media_item_archiver.py,sha256=hmqrJmCWdYR4XUWvz3iCBSDGQzEy7_bcW29Mg9KzoAM,1501
+google_photos_archiver/media_item_recorder.py,sha256=IuumD0S9AvsQGdAGcyIPGDrMm7VrzLAn_eRzdwOshNc,1103
+google_photos_archiver/oauth_handler.py,sha256=_sTWpof0jFoq4KomnbMIyMQ8Q2fIAuOoxkmuNn2z5Qc,2669
+google_photos_archiver/rest_client.py,sha256=QeYUSDoDVWpESBz7yI7RcE7Go81xVd1OKpTbKjEWjjA,7472
+google_photos_archiver-0.2.0.dist-info/entry_points.txt,sha256=nj_X5UQ2R3Lw2Ptxqh9lccjf1qde8brTulaLYuL_j5M,73
+google_photos_archiver-0.2.0.dist-info/LICENSE,sha256=Fd6hN_gqCmB2Urwh9JF2eynSX-q45JBN-rRe2GgRTy4,1078
+google_photos_archiver-0.2.0.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+google_photos_archiver-0.2.0.dist-info/METADATA,sha256=jvb9ePXkHBXUDbSCmOD_DQ3BaobZ-G4T4VZj_8Tv3dk,6148
+google_photos_archiver-0.2.0.dist-info/RECORD,,
