@@ -1,0 +1,21 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+ffms2/__init__.py
+ffms2/__main__.py
+ffms2/av_log.py
+ffms2/console_mode.py
+ffms2/enums.py
+ffms2/get_library.py
+ffms2/libffms2.py
+ffms2/test.py
+ffms2.egg-info/PKG-INFO
+ffms2.egg-info/SOURCES.txt
+ffms2.egg-info/dependency_links.txt
+ffms2.egg-info/requires.txt
+ffms2.egg-info/top_level.txt
+ffms2/../COPYING
+ffms2/../COPYING.LESSER
+ffms2/data/ffmsinfo.cpp
+ffms2/data/morning rescue.mkv
