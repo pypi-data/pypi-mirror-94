@@ -1,0 +1,13 @@
+setup.py
+hmjr/Entries.py
+hmjr/SortedBy.py
+hmjr/__init__.py
+hmjr.egg-info/PKG-INFO
+hmjr.egg-info/SOURCES.txt
+hmjr.egg-info/dependency_links.txt
+hmjr.egg-info/requires.txt
+hmjr.egg-info/top_level.txt
+hmjr/tests/__init__.py
+hmjr/tests/queries.py
+hmjr/tests/sort.py
+hmjr/tests/subCollections.py
