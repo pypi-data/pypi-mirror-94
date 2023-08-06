@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+choixpeau/__init__.py
+choixpeau/amplitude.py
+choixpeau/choixpeau.py
+choixpeau.egg-info/PKG-INFO
+choixpeau.egg-info/SOURCES.txt
+choixpeau.egg-info/dependency_links.txt
+choixpeau.egg-info/requires.txt
+choixpeau.egg-info/top_level.txt
+choixpeau/decorators/__init__.py
+choixpeau/decorators/fastapi.py
