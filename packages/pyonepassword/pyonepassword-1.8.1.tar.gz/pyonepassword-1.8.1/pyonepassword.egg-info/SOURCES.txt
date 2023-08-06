@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+pyonepassword/__about__.py
+pyonepassword/__init__.py
+pyonepassword/_py_op_cli.py
+pyonepassword/_py_op_commands.py
+pyonepassword/_py_op_deprecation.py
+pyonepassword/_py_op_items.py
+pyonepassword/command_options.py
+pyonepassword/py_op_exceptions.py
+pyonepassword/pyonepassword.py
+pyonepassword/version.py
+pyonepassword.egg-info/PKG-INFO
+pyonepassword.egg-info/SOURCES.txt
+pyonepassword.egg-info/dependency_links.txt
+pyonepassword.egg-info/top_level.txt
