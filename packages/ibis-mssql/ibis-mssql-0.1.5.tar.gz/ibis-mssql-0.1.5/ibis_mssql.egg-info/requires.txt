@@ -1,0 +1,17 @@
+ibis-framework>=1.4
+sqlalchemy
+pyodbc
+
+[develop]
+black
+click
+pydocstyle==4.0.1
+flake8
+isort
+mypy
+pre-commit
+pygit2
+pytest>=4.5
+plumbum
+toolz
+pandas

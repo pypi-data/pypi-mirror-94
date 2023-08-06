@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ibis_mssql/__init__.py
+ibis_mssql/api.py
+ibis_mssql/client.py
+ibis_mssql/compiler.py
+ibis_mssql.egg-info/PKG-INFO
+ibis_mssql.egg-info/SOURCES.txt
+ibis_mssql.egg-info/dependency_links.txt
+ibis_mssql.egg-info/requires.txt
+ibis_mssql.egg-info/top_level.txt
