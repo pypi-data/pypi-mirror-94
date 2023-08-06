@@ -1,0 +1,5 @@
+[console_scripts]
+refitt = refitt.apps.refitt:main
+refittctl = refitt.apps.refittctl:main
+refittd = refitt.apps.refittd:main
+
