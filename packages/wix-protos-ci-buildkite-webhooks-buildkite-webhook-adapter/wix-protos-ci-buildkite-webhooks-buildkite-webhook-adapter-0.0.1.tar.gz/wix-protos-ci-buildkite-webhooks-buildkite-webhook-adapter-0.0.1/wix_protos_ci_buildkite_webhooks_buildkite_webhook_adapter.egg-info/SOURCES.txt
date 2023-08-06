@@ -1,0 +1,7 @@
+pyproject.toml
+setup.cfg
+setup.py
+wix_protos_ci_buildkite_webhooks_buildkite_webhook_adapter.egg-info/PKG-INFO
+wix_protos_ci_buildkite_webhooks_buildkite_webhook_adapter.egg-info/SOURCES.txt
+wix_protos_ci_buildkite_webhooks_buildkite_webhook_adapter.egg-info/dependency_links.txt
+wix_protos_ci_buildkite_webhooks_buildkite_webhook_adapter.egg-info/top_level.txt
