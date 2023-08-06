@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: odoo13-addons-oca-reporting-engine
+Version: 13.0.20210209.0
+Summary: Meta package for oca-reporting-engine Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo13-addon-bi-sql-editor
+Requires-Dist: odoo13-addon-kpi-dashboard
+Requires-Dist: odoo13-addon-report-batch
+Requires-Dist: odoo13-addon-report-context
+Requires-Dist: odoo13-addon-report-csv
+Requires-Dist: odoo13-addon-report-layout-config
+Requires-Dist: odoo13-addon-report-py3o
+Requires-Dist: odoo13-addon-report-py3o-fusion-server
+Requires-Dist: odoo13-addon-report-qr
+Requires-Dist: odoo13-addon-report-qweb-element-page-visibility
+Requires-Dist: odoo13-addon-report-qweb-parameter
+Requires-Dist: odoo13-addon-report-qweb-pdf-fixed-column
+Requires-Dist: odoo13-addon-report-wkhtmltopdf-param
+Requires-Dist: odoo13-addon-report-xlsx
+Requires-Dist: odoo13-addon-report-xlsx-helper
+Requires-Dist: odoo13-addon-report-xml
+
+UNKNOWN
+
+
