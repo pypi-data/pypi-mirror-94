@@ -1,0 +1,6 @@
+[console_scripts]
+n2sn_add_user = N2SNUserTools.cli:n2sn_add_user
+n2sn_list_users = N2SNUserTools.cli:n2sn_list_users
+n2sn_remove_user = N2SNUserTools.cli:n2sn_remove_user
+n2sn_search_user = N2SNUserTools.cli:n2sn_search_user
+
