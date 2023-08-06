@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "cvdastwrapper"
+version = "1.48.17"
+description = "This is a wrapper around CVDAST"
+authors = ["Bala Kumaran <balak@cloudvector.com>"]
+# New attributes
+license = "MIT"
+readme = "README.md"
+#homepage = "https://github.com/ArecaBay"
+#repository = "https://github.com/ArecaBay"
+keywords = ["cv-dast", "cloudvector", "apishark"]
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+cvdast = "*"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+cvdast-wrapper = 'cvdastwrapper.entry:main'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
