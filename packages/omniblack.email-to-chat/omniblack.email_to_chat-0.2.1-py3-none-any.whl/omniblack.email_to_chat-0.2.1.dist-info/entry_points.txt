@@ -1,0 +1,3 @@
+[console_scripts]
+email_to_chat=omniblack.email_to_chat:run_email
+
