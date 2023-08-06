@@ -1,0 +1,12 @@
+gfparser/__init__.py,sha256=45wEijUZlu-TZoPcTtnYpRZvzEz-tJT-fQ1nC-FHa2Y,65
+gfparser/_nbdev.py,sha256=5DENwIBvdCcZWP4sgu5TLh7A-CkK8OKUqIscO8xBTPc,1353
+gfparser/config.py,sha256=_XwHIVq7A6seag_hZwPlgjpQtk98bmGUnYfNtnn8YmA,1601
+gfparser/wikiparser.py,sha256=y8qmYWSHr8odcBv6-qOsPXC-1xO0NDCQX6cYojQeFOU,24286
+gfparser/word.py,sha256=3rNAYvA-2uN7cg3I_I6YfxxxM0lduMKq7ip4CDszomI,800
+gfparser/wordtype.py,sha256=wsr-MsC70eUxCTay-X9G0-hrBCDYC5Pjx5qPdD510ug,5215
+gfparser-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gfparser-0.0.1.dist-info/METADATA,sha256=iOOZcXwBfWdNq0VpfsQhXt1pjThZSnvQJM2cyfCJOXA,7145
+gfparser-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gfparser-0.0.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+gfparser-0.0.1.dist-info/top_level.txt,sha256=-AhKzGzqMIXr_ku_XPzjQfngcdGQf6fvHm6DT3lVIiM,9
+gfparser-0.0.1.dist-info/RECORD,,
