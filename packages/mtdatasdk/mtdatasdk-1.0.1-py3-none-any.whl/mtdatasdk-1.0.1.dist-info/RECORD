@@ -1,0 +1,15 @@
+mtdatasdk/__init__.py,sha256=b1oBxlAqLQ3Z7j-CfOafC923OFroMakt7tjIwXrqo5I,1785
+mtdatasdk/api.py,sha256=GqZtlbGFykHPytivgCsIX4_Q-mlmCFxxrQ4wRlgwRRI,33740
+mtdatasdk/calendar_service.py,sha256=gx-r2Yxo6GWJS2WxdnBYT-2irJUuEYg1YjwnnHVXBX4,1687
+mtdatasdk/client.py,sha256=TVwanpLp48Hy8jfsNIsKZqs1UI608S9z5vskKaujufY,8395
+mtdatasdk/finance_service.py,sha256=7cYpMRwDyUak8R642jjfoSsP-yR1icA8Q_BJ3qhW3-I,10027
+mtdatasdk/finance_tables.py,sha256=iYn1Q0_40XEGKFsmV48tNk1rSGMmxkgqEbjXtVXTTKk,28674
+mtdatasdk/fundamentals_tables_gen.py,sha256=FnP55VlDuu38IsqC_TlmNNTIrpH0I8jdK0YI_oAwLbE,33747
+mtdatasdk/mtdata.thrift,sha256=oOT-SDl7oESaNy2szlUVwGN9f6npQmzULu8YCzO59ts,498
+mtdatasdk/table.py,sha256=Q0m4ORYUJ9o5HWnrDEJO0-OyjObvFlHnQ_pTOCHoZps,2774
+mtdatasdk/utils.py,sha256=MRp0x5Q2SKsnuCPtUGHfxmEvu7j_74wXxP6AwsutIGQ,9220
+mtdatasdk-1.0.1.dist-info/LICENSE,sha256=3OBLcZkoHkAVk9RycpZ_OBnQ4nCW96bE1_zsgosXPv8,1067
+mtdatasdk-1.0.1.dist-info/METADATA,sha256=C_Od9EfyU7AzRw30e3AVG_cJGvLeqNDk9YbXw5yCYa8,1025
+mtdatasdk-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mtdatasdk-1.0.1.dist-info/top_level.txt,sha256=8Cq9YITCPA_D4LlEd7dSE5Qr0Em7BzR0JXnSJ6qOcy0,10
+mtdatasdk-1.0.1.dist-info/RECORD,,
