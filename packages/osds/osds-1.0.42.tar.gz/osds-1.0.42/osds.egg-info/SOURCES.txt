@@ -1,0 +1,10 @@
+README.md
+setup.py
+osds/__init__.py
+osds/utils.py
+osds.egg-info/PKG-INFO
+osds.egg-info/SOURCES.txt
+osds.egg-info/dependency_links.txt
+osds.egg-info/requires.txt
+osds.egg-info/top_level.txt
+test/test_utils.py
