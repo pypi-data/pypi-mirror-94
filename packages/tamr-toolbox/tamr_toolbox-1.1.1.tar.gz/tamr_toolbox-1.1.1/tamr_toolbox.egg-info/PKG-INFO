@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tamr-toolbox
+Version: 1.1.1
+Summary: Tools for Tamr
+Home-page: https://github.com/Datatamer/tamr-toolbox
+Author: Tamr Inc.
+Author-email: 
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Provides-Extra: pandas
+Provides-Extra: slack
+Provides-Extra: testing
+Provides-Extra: translation
