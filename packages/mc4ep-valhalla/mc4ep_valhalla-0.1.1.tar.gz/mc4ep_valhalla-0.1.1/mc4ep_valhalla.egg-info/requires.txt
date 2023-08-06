@@ -1,0 +1,7 @@
+Flask>=1.1
+Flask-UUID==0.2
+flask_httpauth==4.2.0
+nidhoggr_core>=0.11
+pydantic>=1.7
+flask-redis==0.4.0
+Pillow==8.1.0
