@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: rompy
+Version: 0.0.4a0
+Summary: Relocatable Ocean Modelling in PYthon (rompy)
+Home-page: https://github.com/rom-py/rompy
+Maintainer: Paul Branson
+Maintainer-email: paul.branson@csiro.au
+License: BSD
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: xarray
+Requires-Dist: intake
+Requires-Dist: intake-xarray (==0.3.1)
+Requires-Dist: fsspec
+Requires-Dist: cookiecutter
+Requires-Dist: dask
+Requires-Dist: h5py
+Requires-Dist: netcdf4
+Requires-Dist: tqdm
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: owslib
+Provides-Extra: complete
+
+# rompy
+
+[![PyPi version](https://pypip.in/v/rompy/badge.png)](https://crate.io/packages/rompy/)
+[![Documentation Status](https://readthedocs.org/projects/rompy/badge/?version=latest)](https://rompy.readthedocs.io/en/latest/?badge=latest)
+
+Relocatable Ocean Modelling in PYthon (rompy) combines templated cookie-cutter model configuration with various xarray extensions to assist in the setup and evaluation of coastal ocean model
+
+

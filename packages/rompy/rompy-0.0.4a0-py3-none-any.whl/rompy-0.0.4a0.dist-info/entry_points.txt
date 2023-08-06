@@ -1,0 +1,6 @@
+[intake.catalogs]
+rompy_data = rompy:cat
+
+[intake.drivers]
+netcdf_fcstack = rompy.intake:NetCDFFCStackSource
+

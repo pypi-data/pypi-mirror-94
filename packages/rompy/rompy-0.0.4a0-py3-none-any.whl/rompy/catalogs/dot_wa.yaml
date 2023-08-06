@@ -1,0 +1,12 @@
+sources:
+  warnboro:
+    args:
+      urlpath: 'https://s3-ap-southeast-2.amazonaws.com/transport.wa/Bathymetry/Rasters/Warnbro_5m.tif'
+    description: 5m LADS data
+    driver: rasterio
+  dawesville:
+    args:
+      urlpath: 'https://s3-ap-southeast-2.amazonaws.com/transport.wa/Bathymetry/Rasters/Dawesville_5m.tif'
+    description: 5m LADS data
+    driver: rasterio
+
