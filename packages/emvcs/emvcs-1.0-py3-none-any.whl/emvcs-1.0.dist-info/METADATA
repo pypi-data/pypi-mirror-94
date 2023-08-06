@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: emvcs
+Version: 1.0
+Summary: Email via-code sender.
+Home-page: https://mstouk57g.github.io/emvcs/
+Author: mstouk57g
+Author-email: mstouk57g@yeah.net
+License: UNKNOWN
+Project-URL: Documentation, https://github.com/mstouk57g/emvcs/blob/main/README.md
+Project-URL: Source, https://github.com/mstouk57g/emvcs
+Project-URL: Changelog, https://github.com/mstouk57g/emvcs/releases
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+
+# emvcs
+You can see the lastest README in our website.
+
+[https://github.com/mstouk57g/emvcs/blob/main/README.md](https://github.com/mstouk57g/emvcs/blob/main/README.md)
+
