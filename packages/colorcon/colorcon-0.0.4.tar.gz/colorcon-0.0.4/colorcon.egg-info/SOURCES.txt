@@ -1,0 +1,13 @@
+MANIFEST.in
+README.txt
+colored.cpp
+setup.py
+colorcon/__init__.py
+colorcon/_colored.pyd
+colorcon/_colored.so
+colorcon/_infs.py
+colorcon/colored.py
+colorcon.egg-info/PKG-INFO
+colorcon.egg-info/SOURCES.txt
+colorcon.egg-info/dependency_links.txt
+colorcon.egg-info/top_level.txt

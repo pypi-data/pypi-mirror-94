@@ -1,0 +1,7 @@
+include README.txt
+include setup.py
+include colorcon/__init__.py
+include colorcon/_colored.pyd
+include colorcon/_colored.so
+include colorcon/colored.py
+include colorcon/_infs.py
