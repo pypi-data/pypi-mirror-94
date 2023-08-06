@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: srikanth-test-python-sdk
+Version: 1.0.1
+Summary: Python server SDK
+Home-page: https://github.com/IBM/appconfiguration-python-sdk
+Author: ME
+Author-email: kms100@gmail.com
+License: Apache 2.0
+Description: # IBM Cloud App Configuration Python server SDK
+        
+        Repository for IBM Cloud App Configuration Python server SDK
+        
+        ## Install SDK
+        
+        To install, use `pip` or `easy_install`:
+          
+        ```sh
+        pip install --upgrade ibm-appconfiguration-python-sdk
+        ```
+        or
+        
+        ```sh
+         easy_install --upgrade ibm-appconfiguration-python-sdk
+        ```
+        ## Import the SDK
+        
+        ```py
+        from ibm_appconfiguration import AppConfiguration, Feature, FeatureType
+        ```
+        ## Initialize SDK
+        
+        ```py
+        app_config = AppConfiguration.get_instance()
+        app_config.init(region=AppConfiguration.REGION_US_SOUTH,
+                       guid='GUID',
+                       apikey='APIKEY')
+        
+        ## Initialize feature 
+        app_config.set_collection_id(collection_id='collection_id') 
+        
+        ## set the file or offline feature
+        app_config.fetch_features_from_file(feature_file='custom/userJson.json', # Add this field if liveFeatureUpdateEnabled false or get features when the device is offline during the first app load.
+                                            live_feature_update_enabled=True) # This is for live update from server.
+        
+        ```
+        
+        - region : Region name where the service instance is created. Eg: `AppConfiguration.REGION_US_SOUTH`
+        - guid : GUID of the App Configuration service. Get it from the service credentials section of the dashboard
+        - apikey : ApiKey of the App Configuration service. Get it from the service credentials section of the dashboard
+        * collection_id : Id of the collection created in App Configuration service instance.
+        * feature_file : Path to the JSON file which contains feature details and segment details. r
+        * live_feature_update_enabled : Set this value to false if the new feature values shouldn't be fetched from the server. Make sure to provide a proper JSON file in the feature_file path. By default, this value is enabled.
+        
+        ## Set listener for feature data changes
+        
+        ```py
+        def features_update(self):
+            print('Get your Feature value NOW')
+        
+        app_config.register_features_update_listener(features_update)
+        
+        ```
+        
+        ## Get single feature
+        
+        ```py
+        feature = app_config.get_feature('feature_id')
+        ```
+        
+        ## Get all features 
+        
+        ```py
+        features_dictionary = app_config.get_features()
+        ```
+        
+        ## Evaluate a feature
+        
+        ```py
+        
+        identity = {
+            'city': 'Bangalore',
+            'country': 'India'
+        }
+        feature_value = feature.get_current_value(identity_id='pvQr45', identity_attributes=identity)
+        ```
+        
+        ## Fetch latest data 
+        
+        ```py
+        app_config.fetch_feature_data()
+        ```
+        
+        ## License
+        
+        This project is released under the Apache 2.0 license. The license's full text can be found in [LICENSE](https://github.com/IBM/appconfiguration-python-client-sdk/blob/master/LICENSE)
+        
+Keywords: python,ibm_appconfiguration
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
