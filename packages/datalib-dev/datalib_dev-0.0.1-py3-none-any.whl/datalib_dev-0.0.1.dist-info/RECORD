@@ -1,0 +1,14 @@
+datalib/__init__.py,sha256=zVPpwHXvixxY_fKzGaf6O_wIG8oQNtayY_5QmYff3L0,367
+datalib/datasets.py,sha256=Buy2IUdMnDULgvXaoL5PUe4AqdvD2vJGyQU94O1WtyY,1537
+datalib/keras_datasets.py,sha256=CnxGflTVlosMRDmnjOfHzgSTAgy9p_PnIj4zMPSx3nI,3222
+datalib/processors.py,sha256=-9bQyOpjIGYIVYHx23gANorr7zvojJMwQMbdFhTJGZw,6193
+datalib/sklearn_datasets.py,sha256=bHRx8NgdJKGIzIUz7Xho1v7zK5kWvQyId2oYVlA4yKo,2591
+datalib/splitters.py,sha256=n7kTiLLLJPjBHKc7CbHIFdeBoR_d0qLNJkzjdOhbAgM,1657
+datalib/watermarkers/__init__.py,sha256=iUm4vWJ7VkGvPcdFQ2ski3W9Cck8QLLsryGfIuJnLBU,90
+datalib/watermarkers/detection.py,sha256=dqNJt23WIlTsAXCpTZ3pc2fzFsSxQV-3A3KHxFB2HyQ,536
+datalib/watermarkers/watermarkers.py,sha256=oWLnbctk_LI3AnMh2-OwvR3hlLZtOnoXuDoAkaTb9a4,3193
+datalib_dev-0.0.1.dist-info/LICENSE,sha256=9W4e3WoeLZmCfxbYUPfmo46ZXhc8qJJetuzBYoRhfCI,1067
+datalib_dev-0.0.1.dist-info/METADATA,sha256=42nv1Pa0DlTvRICvN760urYfqGrByvdyrWLqKFT6RFU,383
+datalib_dev-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+datalib_dev-0.0.1.dist-info/top_level.txt,sha256=9YS_7QdUMb5k5ohqwzBQAky9PACreCnlMkLn3Yuwr6s,8
+datalib_dev-0.0.1.dist-info/RECORD,,
