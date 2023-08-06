@@ -1,0 +1,9 @@
+inputs.oracle:
+    DESWS:
+      tnsnames: /home/enrique/projects/python/agents/src/m360/config/tnsnames.ora
+      username: m360
+      password: monim360
+      address: 192.168.0.107
+      port: 1523
+      sid: DESWS
+      extra_metrics: ['*']

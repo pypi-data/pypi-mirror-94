@@ -1,0 +1,8 @@
+inputs.oraclecloud:
+    ADWBI:
+        compartment_id: ocid1.compartment.oc1..aaaaaaaa2wnm7wrwejiixtsmusekmyjn7anwvl7ach6j37ewvldopudrviia
+        ocifile: /home/enrique/projects/python/agents/src/m360/config.d/oci.conf
+
+    DB202008311128:
+        compartment_id: ocid1.compartment.oc1..aaaaaaaaex23gldz5iqqo4osks47asgqxt53xkv7xjg5invdz2hzhsla4vha
+        ocifile: /home/enrique/projects/python/agents/src/m360/config.d/oci.conf

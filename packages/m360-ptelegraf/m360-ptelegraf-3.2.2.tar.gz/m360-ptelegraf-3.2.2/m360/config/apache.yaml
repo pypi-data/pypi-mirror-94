@@ -1,0 +1,12 @@
+inputs.apache:
+    instancia1:
+        logformats:
+            combinedio: "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %I %O"
+            combined: "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\""
+            common: "%h %l %u %t \"%r\" %>s %b"
+        vhosts:
+            192.168.0.40:
+                log: /var/log/apache2/access.log
+                format: common
+        endpoint: http://127.0.0.1/server-status
+        conf: /usr/local/apache24/conf/instancia1.conf

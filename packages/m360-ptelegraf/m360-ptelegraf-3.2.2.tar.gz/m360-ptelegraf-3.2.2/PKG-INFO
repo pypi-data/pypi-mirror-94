@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: m360-ptelegraf
+Version: 3.2.2
+Summary: Agentes python de M360 para Telegraf
+Home-page: https://github.com/alerta/alerta-contrib
+Author: Enrique Pacheco Aragon
+Author-email: pacheco-aragon@dxc.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.6

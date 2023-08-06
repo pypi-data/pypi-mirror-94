@@ -1,0 +1,3 @@
+recursive-include m360/config *.yaml
+recursive-include m360/agents/jboss/jmxmonitor *.jar
+recursive-include m360/agents/weblogic/jmxmonitor *.jar

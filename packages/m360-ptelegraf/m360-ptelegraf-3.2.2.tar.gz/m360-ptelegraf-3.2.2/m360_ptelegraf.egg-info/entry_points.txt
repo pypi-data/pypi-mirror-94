@@ -1,0 +1,15 @@
+[console_scripts]
+ptelegraf = m360.ptelegraf:main
+
+[ptelegraf.monitors]
+apache = m360.agents.apache.monitor:Monitor
+custom = m360.agents.custom.monitor:Monitor
+internal = m360.agents.internal.monitor:Monitor
+jboss = m360.agents.jboss.monitor:Monitor
+oracle = m360.agents.oracle.monitor:Monitor
+oraclecloud = m360.agents.oraclecloud.monitor:Monitor
+procstat = m360.agents.procstat.monitor:Monitor
+tomcat = m360.agents.tomcat.monitor:Monitor
+unix = m360.agents.unix.monitor:Monitor
+weblogic = m360.agents.weblogic.monitor:Monitor
+

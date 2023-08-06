@@ -1,0 +1,16 @@
+inputs.weblogic:
+        CitSLIServer01:
+                modules: ["access"]
+                logformats:
+                        common: "%h %l %u %t \"%r\" %>s %b"
+                vhosts:
+                        localhost:
+                                log: /home/enrique/projects/python/agents/access.log
+                                format: common
+                passwd: Midd;pro
+                endpoint: http://192.168.0.107:9021
+                domain: false
+                user: weblogic
+                javaruntime: /home/enrique/projects/java/jdk1.8.0_271/bin/java
+                global_tags:
+                    domain: CitMix12PRO

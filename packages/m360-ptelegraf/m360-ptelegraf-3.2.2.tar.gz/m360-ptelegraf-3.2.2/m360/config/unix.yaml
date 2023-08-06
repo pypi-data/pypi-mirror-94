@@ -1,0 +1,7 @@
+inputs.unix:
+    hostname:
+        modules: ['top']
+        root: passwd_root
+        users": ["m360"]
+        SLEEP_BEFORE_CPU: 30
+        INTERVAL_CPU: 10.0

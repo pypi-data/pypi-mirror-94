@@ -1,0 +1,25 @@
+inputs.tomcat:
+    tomcat7:
+        passwd: secret
+        basepath: "/soft/apache-tomcat-7.0.56"
+        endpoint: "http://localhost:10080/manager"
+        user: tomcat
+        javaruntime: "/usr/local/jdk/bin/java"
+
+    tomcat8:
+        passwd: secret
+        basepath: "/soft/apache-tomcat-7.0.56"
+        endpoint: "http://localhost:10080/manager"
+        user: tomcat
+        javaruntime: "/usr/local/jdk/bin/java"
+
+    tomcat9:
+        passwd: secret
+        basepath: "/usr/share/tomcat9" #CATALINA_HOME
+        endpoint: "http://localhost:8080/manager"
+        user: tomcat
+        javaruntime: "/usr/lib/jvm/default-java/bin/java"
+#        jvmversion: 11.0.9.1
+#        version: 9.0.31
+#        gclog: "/var/log/tomcat9/gc.log"
+
