@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: utils-ak
+Version: 0.1.4
+Summary: Lots of small utils
+License: MIT
+Author: akadaner
+Author-email: arseniikadaner@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Delorean (>=1.0.0,<2.0.0)
+Requires-Dist: GitPython (>=3.1.9,<4.0.0)
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
+Requires-Dist: anyconfig (>=0.9.11,<0.10.0)
+Requires-Dist: boto3 (>=1.15.18,<2.0.0)
+Requires-Dist: empyrical (>=0.5.5,<0.6.0)
+Requires-Dist: filelock (>=3.0.12,<4.0.0)
+Requires-Dist: fire (>=0.4.0,<0.5.0)
+Requires-Dist: h5py (>=2.10.0,<3.0.0)
+Requires-Dist: joblib (>=0.17.0,<0.18.0)
+Requires-Dist: loguru (>=0.5.3,<0.6.0)
+Requires-Dist: mongoengine (>=0.22.1,<0.23.0)
+Requires-Dist: msgpack (>=1.0.2,<2.0.0)
+Requires-Dist: numpy (>=1.19.2,<2.0.0)
+Requires-Dist: opencv-python (>=4.4.0,<5.0.0)
+Requires-Dist: openpyxl (>=3.0.6,<4.0.0)
+Requires-Dist: pandas (>=1.1.3,<2.0.0)
+Requires-Dist: paramiko (>=2.7.2,<3.0.0)
+Requires-Dist: pathlib (>=1.0.1,<2.0.0)
+Requires-Dist: pickleDB (>=0.9.2,<0.10.0)
+Requires-Dist: portion (>=2.1.4,<3.0.0)
+Requires-Dist: pymongo (>=3.11.0,<4.0.0)
+Requires-Dist: pyperclip (>=1.8.1,<2.0.0)
+Requires-Dist: pyzmail36 (>=1.0.4,<2.0.0)
+Requires-Dist: pyzmq (>=19.0.2,<20.0.0)
+Requires-Dist: requests-futures (>=1.0.0,<2.0.0)
+Requires-Dist: retrypy (>=0.0.33,<0.0.34)
+Requires-Dist: scp (>=0.13.2,<0.14.0)
+Requires-Dist: seaborn (>=0.11.0,<0.12.0)
+Requires-Dist: slacker (>=0.14.0,<0.15.0)
+Requires-Dist: sortedcollections (>=2.1.0,<3.0.0)
+Requires-Dist: stackprinter (>=0.2.5,<0.3.0)
+Requires-Dist: telegram (>=0.0.1,<0.0.2)
+Requires-Dist: tenacity (>=6.2.0,<7.0.0)
+Requires-Dist: tqdm (>=4.50.2,<5.0.0)
