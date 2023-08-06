@@ -1,0 +1,5 @@
+cython
+numpy
+
+[docs]
+sphinx>=1.4
