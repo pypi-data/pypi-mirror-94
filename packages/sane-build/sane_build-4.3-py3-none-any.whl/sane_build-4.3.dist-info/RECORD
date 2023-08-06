@@ -1,0 +1,9 @@
+sane.py,sha256=ey1L3yAtxmFK6-TI5Uvvn_glnP7JUwzLzV9CY-drgJ0,12316
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_empty.py,sha256=kdHVEaeUBeum19k0-y55jbp8IL3Kdeh2xciY_yuZMNg,85
+tests/test_recipe_dep.py,sha256=XE8_auf8KQvRtwVSsWxvYC-E-FQXUF1TZCp0bJQm4lw,255
+sane_build-4.3.dist-info/LICENSE.txt,sha256=zHRrNmu2JGqmxfsAeLkohNtZUhCWvvJWZRe8HmDgbG0,1054
+sane_build-4.3.dist-info/METADATA,sha256=Yzy1hYGzzZ3T3nIME5txedmdVQBI8xlPFh-yJEV5K0Q,3191
+sane_build-4.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sane_build-4.3.dist-info/top_level.txt,sha256=Jl5GBJpXIR0GXcSQc0OzkGHYMldvrgJJpZ6IUQPRzlU,11
+sane_build-4.3.dist-info/RECORD,,
