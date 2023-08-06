@@ -1,0 +1,13 @@
+
+[ai-platform]
+google-cloud-storage
+google-api-python-client
+
+[cli]
+click
+docker
+future
+
+[sagemaker]
+boto3
+sagemaker-training
