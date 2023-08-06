@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: ucla-geotech-tools-random-field
+Version: 0.0.9
+Summary: Randosm field generation
+Home-page: UNKNOWN
+Author: Yang Yang
+Author-email: dienyoung@outlook.com
+License: MIT
+Description: # random_field
+        
+        This function generates a spatially correlated random field using both Cholesky Decomposition method and Kriging
+        
+        ## Installation
+        ```bash
+        pip install ucla_geotech_tools.random_field
+        ```
+        
+        ## Documentation
+        
+        [https://ucla_geotech_tools.readthedocs.io/en/latest/](https://ucla_geotech_tools.readthedocs.io/en/latest/)
+        
+        ## Source Code
+        
+        [https://github.com/sjbrandenberg/ucla_geotech_tools](https://github.com/sjbrandenberg/ucla_geotech_tools)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

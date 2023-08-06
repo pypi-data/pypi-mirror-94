@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+ucla_geotech_tools/__init__.py
+ucla_geotech_tools/random_field/__init__.py
+ucla_geotech_tools_random_field.egg-info/PKG-INFO
+ucla_geotech_tools_random_field.egg-info/SOURCES.txt
+ucla_geotech_tools_random_field.egg-info/dependency_links.txt
+ucla_geotech_tools_random_field.egg-info/namespace_packages.txt
+ucla_geotech_tools_random_field.egg-info/top_level.txt
