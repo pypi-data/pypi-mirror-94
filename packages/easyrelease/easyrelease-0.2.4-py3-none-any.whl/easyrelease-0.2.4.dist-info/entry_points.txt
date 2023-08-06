@@ -1,0 +1,10 @@
+[console_scripts]
+build-conda-package = easyrelease.conda:build_conda_package
+easyrelease-init = easyrelease.cli:init_configs
+gh-release = easyrelease.cli:make_gh_release_cli
+login-to-anaconda = easyrelease.conda:login_to_anaconda
+make-changelog = easyrelease.gh:make_changelog
+publish-pypi-package = easyrelease.pypi:build_and_publish_pypi
+update-meta-yaml = easyrelease.conda:update_meta_yaml
+upload-conda-package = easyrelease.conda:upload_conda_package
+
