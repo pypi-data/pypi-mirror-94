@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: StatsWithSahira
+Version: 0.0.2
+Summary: Making statistics easier with python
+Home-page: UNKNOWN
+Author: Sahira Sheikh
+Author-email: <sheikh_sahira1703@hotmail.com>
+License: UNKNOWN
+Keywords: python,statistics,made,easy,mean,median,mode,standard deviation,skewness
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: statsmodels
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: sklearn
+Requires-Dist: matplotlib
+
+A package that allows to do complex statsitical calculation very easily
+
+
