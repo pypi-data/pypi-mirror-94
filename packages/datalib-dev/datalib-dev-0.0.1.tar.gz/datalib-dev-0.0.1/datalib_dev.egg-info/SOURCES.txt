@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.py
+datalib/__init__.py
+datalib/datasets.py
+datalib/keras_datasets.py
+datalib/processors.py
+datalib/sklearn_datasets.py
+datalib/splitters.py
+datalib/watermarkers/__init__.py
+datalib/watermarkers/detection.py
+datalib/watermarkers/watermarkers.py
+datalib_dev.egg-info/PKG-INFO
+datalib_dev.egg-info/SOURCES.txt
+datalib_dev.egg-info/dependency_links.txt
+datalib_dev.egg-info/requires.txt
+datalib_dev.egg-info/top_level.txt

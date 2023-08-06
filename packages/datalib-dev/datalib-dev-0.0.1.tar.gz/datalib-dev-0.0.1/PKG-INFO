@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: datalib-dev
+Version: 0.0.1
+Summary: library for loading, processing, and splitting common datasets
+Home-page: UNKNOWN
+Author: Klas Leino
+License: UNKNOWN
+Description: file: README.md
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

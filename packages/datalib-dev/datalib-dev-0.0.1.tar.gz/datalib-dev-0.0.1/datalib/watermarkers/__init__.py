@@ -1,0 +1,2 @@
+from .watermarkers import StaticWatermarker
+from .watermarkers import LightDarkWatermarker
