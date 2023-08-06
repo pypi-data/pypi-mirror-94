@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: doctrine
+Version: 0.0.0
+Summary: UNKNOWN
+Home-page: https://github.com/avengerpenguin/doctrine
+Author: Ross Fenning
+Author-email: github@rossfenning.co.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-watch ; extra == 'test'
+Requires-Dist: pytest-pikachu ; extra == 'test'
+
+# Doctrine
+
+Helper for [Invoke](https://www.pyinvoke.org/) to allow you to build libraries
+of useful tasks for a particular problem domain.
+
