@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+metDataModel.egg-info/PKG-INFO
+metDataModel.egg-info/SOURCES.txt
+metDataModel.egg-info/dependency_links.txt
+metDataModel.egg-info/not-zip-safe
+metDataModel.egg-info/top_level.txt
