@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pelican/plugins/mdimage/__init__.py
+pelican/plugins/mdimage/core.py
+pelican_markdown_image.egg-info/PKG-INFO
+pelican_markdown_image.egg-info/SOURCES.txt
+pelican_markdown_image.egg-info/dependency_links.txt
+pelican_markdown_image.egg-info/requires.txt
+pelican_markdown_image.egg-info/top_level.txt
