@@ -1,0 +1,16 @@
+#! /usr/bin/env python3
+import os, sys
+
+fd = "/".join(__file__.replace(".","").split("/")[:-1])
+
+fd = os.getcwd() + fd.replace(os.getcwd(), "")
+vs = sys.version_info
+m, n = vs.major, vs.minor
+
+comm = f'gcc -Os -I /usr/include/python{m}.{n} PyEdit.c -lpython{m}.{n}m -o pyedit'
+
+os.chdir(fd)
+print(comm)
+#os.remove(__file__.split("/")[-1])
+#os.system(comm)
+#os.system("./pyedit")
