@@ -1,0 +1,12 @@
+aioscrapy/__init__.py,sha256=5OBfCEzZaIVCvaVJ__jk96wCIsfuFAVHVTmD9U1P2-E,485
+aioscrapy/cache.py,sha256=1DBj5KuSMjNcfaE8pIEg9tZHw7ODSIRHeFRucF9y4m8,2009
+aioscrapy/client.py,sha256=fJ5nxMCuPZBEWQltf5h4N2nx0QfDIqiB1pEMFhkkTXo,6178
+aioscrapy/html.py,sha256=sz0tMMzXRDxg3q3gQ8pA5hhdtIAe74aKF7nx-_DbE64,799
+aioscrapy/session.py,sha256=R9aW2JmTN4tlokAtxtFLohQYpoIjSIV234-sMFTrFLQ,3263
+aioscrapy/typedefs.py,sha256=7zbTTF-aGbrxiebB7YIjPWKX5OQB464VBDHzCkeZQTk,191
+aioscrapy/worker.py,sha256=JoUVuo_IMiPF4--J-DOlcBHMZiY8SMLPfV-LTNuPJ6Q,3519
+aioscrapy-0.2.0.dist-info/LICENSE,sha256=nqkXZqBG_sH5xUSBFz-DblU2QWZ8SuH4_B1tYB2gi0M,1064
+aioscrapy-0.2.0.dist-info/METADATA,sha256=zgBLVj1ANkELUzkk2OHxhgN37o5BzQihTs6yDQMQS_s,3297
+aioscrapy-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aioscrapy-0.2.0.dist-info/top_level.txt,sha256=8l08KyMt22wfX_5BmhrGH0PgwZdzZIPq-hBUa1GNir4,10
+aioscrapy-0.2.0.dist-info/RECORD,,
