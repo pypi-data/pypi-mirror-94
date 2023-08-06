@@ -1,0 +1,14 @@
+# Build files
+/build/
+__pycache__/
+*.pyc
+tmp/
+tmpKubos/
+node_modules/
+docs/public/
+docs/resources/
+package-lock.json
+**/.DS_Store
+.vscode/
+.eggs/
+dist/

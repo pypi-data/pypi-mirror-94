@@ -1,0 +1,54 @@
+substitutions:
+  _HUGO: 0.57.2
+steps:
+- name: gcr.io/cloud-builders/git
+  entrypoint: bash
+  id: Clone Docsy theme
+  args: ['-c', 'git clone --recurse-submodules --depth 1 https://github.com/google/docsy.git docs/themes/docsy']
+
+- name: node:10.15.1
+  entrypoint: npm
+  args: ['install', 'autoprefixer', 'postcss-cli']
+  id: Install PostCSS for final CSS assets
+
+- name: gcr.io/cloud-builders/wget
+  entrypoint: bash
+  args: ['-c', 'wget -O- https://github.com/gohugoio/hugo/releases/download/v${_HUGO}/hugo_extended_${_HUGO}_Linux-64bit.tar.gz | tar zx']
+  id: Install Hugo manually
+
+- name: docker.io/library/python:3.7
+  args: ['pip3', 'install', '-r', 'requirements.txt', '--user']
+  id: Install dependencies for Python execution
+
+- name: docker.io/library/python:3.7
+  entrypoint: python3
+  id: Generate Hugo-compatible Markdown for our peripherals
+  args:
+    - 'cyanobyte/codegen.py'
+    - '-t'
+    - 'doc'
+    - '-o'
+    - './docs/content/docs/Reference/Peripheral Docs'
+    - 'peripherals/ADS1015.yaml'
+    - 'peripherals/BH1750FVI.yaml'
+    - 'peripherals/BMP180.yaml'
+    - 'peripherals/BMP280.yaml'
+    - 'peripherals/LSM303D.yaml'
+    - 'peripherals/MCP4725.yaml'
+    - 'peripherals/MCP9808.yaml'
+    - 'peripherals/TCS3472.yaml'
+
+- name: gcr.io/cloud-builders/git
+  entrypoint: bash
+  id: Move up content directory
+  args: ['-c', 'mv docs/* .']
+
+- name: node:10.15.1
+  entrypoint: bash
+  args: ['-c', './hugo']
+  id: Run Hugo manually
+
+  # Setup https://github.com/GoogleCloudPlatform/cloud-builders-community/tree/master/firebase
+- name: gcr.io/$PROJECT_ID/firebase
+  args: ['deploy', '--project', '$PROJECT_ID']
+  id: Deploy to Firebase
