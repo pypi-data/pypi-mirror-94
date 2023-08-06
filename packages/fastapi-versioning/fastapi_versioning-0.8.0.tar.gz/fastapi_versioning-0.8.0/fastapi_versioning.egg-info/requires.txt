@@ -1,0 +1,2 @@
+fastapi>=0.56.0
+starlette
