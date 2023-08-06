@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: strainge
+Version: 1.0
+Summary: Strain Genome Explorer: a tool suite for tracking and characterizing low-abundance strains.
+Home-page: UNKNOWN
+Author: Bruce Walker, Tim Straub, Lucas van Dijk
+Author-email: bruce@broadinstitute.org, tstraub@broadinstitute.org, lvandijk@broadinstitute.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: h5py
+Requires-Dist: intervaltree
+Requires-Dist: matplotlib
+Requires-Dist: scikit-bio (>=0.5)
+Requires-Dist: pysam
+Requires-Dist: pyvcf
+
+UNKNOWN
+
+
