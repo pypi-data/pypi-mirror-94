@@ -1,0 +1,12 @@
+meteoblue_dataset_sdk/Dataset.proto,sha256=qegV127v4HmP0DjwMs9KQ9CLNoJbi70zUMzEG950dXI,2643
+meteoblue_dataset_sdk/Dataset_pb2.py,sha256=5jtL0UQfyHXXwHLKSNSDiOO8pSuAGHUUxlTHvvPHtxM,26591
+meteoblue_dataset_sdk/__init__.py,sha256=g4-Ve-mDGcTDRYVliIAUSMHh6YcL8Y5Bcc8zDUdFPIo,84
+meteoblue_dataset_sdk/client.py,sha256=VqKuZDVrmRT3dXMb90WT0H3mxu6nj0idRf-hSIJ4vaU,6677
+meteoblue_dataset_sdk/utils.py,sha256=H4sHPXiKMwF2ND9dU9AuBlA7GzvclsTJf2Op6w8MKGA,1686
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_query.py,sha256=7N6-3gpopm_TqbrUxqvVdu6ZKMvNG689vpdUr4WbwSQ,5695
+meteoblue_dataset_sdk-1.0.1.dist-info/LICENSE,sha256=Q_37_pSZkbBLF0nOB32K76mcdpGGPRJqbLCb7kgsLAE,1066
+meteoblue_dataset_sdk-1.0.1.dist-info/METADATA,sha256=ZOxik-kq-N6OKIrJzrmJIY49IMlTiyS30YBY7p7Yg1M,5097
+meteoblue_dataset_sdk-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+meteoblue_dataset_sdk-1.0.1.dist-info/top_level.txt,sha256=yVJ0GYDPfH0vUFR2cmPHZdiyHSMIElgfeXu71mgzeRc,28
+meteoblue_dataset_sdk-1.0.1.dist-info/RECORD,,
