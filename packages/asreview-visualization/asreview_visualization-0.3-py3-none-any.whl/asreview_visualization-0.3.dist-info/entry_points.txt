@@ -1,0 +1,3 @@
+[asreview.entry_points]
+plot = asreviewcontrib.visualization.entrypoint:PlotEntryPoint
+
