@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        fquotes=fastquotes.cli:cli
+    
