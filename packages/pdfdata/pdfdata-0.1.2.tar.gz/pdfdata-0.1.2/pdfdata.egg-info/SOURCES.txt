@@ -1,0 +1,14 @@
+README.md
+setup.py
+pdfdata/__init__.py
+pdfdata/flag_decomposer.py
+pdfdata/parse_pdf.py
+pdfdata/pdf_doc_extract_line.py
+pdfdata/pdf_doc_extract_span_df.py
+pdfdata/pdf_doc_extract_span_list.py
+pdfdata/pdf_text_to_jsonnl.py
+pdfdata.egg-info/PKG-INFO
+pdfdata.egg-info/SOURCES.txt
+pdfdata.egg-info/dependency_links.txt
+pdfdata.egg-info/requires.txt
+pdfdata.egg-info/top_level.txt
