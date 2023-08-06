@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: gambaterm
+Version: 0.9.0
+Summary: A terminal frontend for gambatte game boy color emulator 
+Home-page: https://github.com/vxgmichel/gambatte-terminal
+Author: Vincent Michel
+Author-email: vxgmichel@gmail.com
+License: GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6

@@ -1,0 +1,12 @@
+numpy>=1
+asyncssh>=2
+prompt_toolkit>=3
+sounddevice
+samplerate
+pygame>=1.9.5
+
+[:sys_platform != "linux"]
+pynput
+
+[:sys_platform == "linux"]
+xlib
