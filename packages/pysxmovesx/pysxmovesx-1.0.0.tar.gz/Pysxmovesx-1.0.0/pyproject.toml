@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "Pysxmovesx"
+version = "1.0.0"
+description = "Use class Global to move."
+authors = ["Your Name <you@example.com>"]
+license = "n"
+
+[tool.poetry.dependencies]
+python = "^3.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
