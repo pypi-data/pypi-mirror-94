@@ -1,0 +1,4 @@
+
+            [vpype.plugins]
+            iread=vpype_vectrace.iread:iread
+        
