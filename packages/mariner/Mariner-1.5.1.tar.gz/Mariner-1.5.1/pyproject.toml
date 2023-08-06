@@ -1,0 +1,79 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.black]
+line-length = 100
+
+[tool.poetry]
+name = "Mariner"
+version = "1.5.1"
+description = "Navigate torrents in CLI"
+authors = ["Radek Sprta <mail@radeksprta.eu>"]
+license = "GPL-3.0"
+
+readme = "README.md"
+
+homepage = "https://radek-sprta.gitlab.io/mariner/"
+repository = "https://gitlab.com/radek-sprta/mariner"
+documentation = "https://radek-sprta.gitlab.io/mariner/"
+
+keywords = ["cli", "torrent", "search", "scraper", "downloader"]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: English",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9"
+]
+
+packages = [
+    { include = "mariner", from = "src" },
+]
+
+include = ["LICENSE", "config/*.yaml"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+aiodns = "^2.0"
+aiofiles = "^0.6"
+aiohttp = "^3.7"
+beautifulsoup4 = "^4.9"
+cachalot = "^1.5"
+cliff = "^3.6"
+colorama = "^0.4"
+lxml = "^4.6"
+maya = "^0.6"
+"ruamel.yaml" = "^0.16"
+tokenize-rt = "^3.2"
+
+[tool.poetry.dev-dependencies]
+coverage = "^5.3"
+flake8 = "^3.8"
+flake8-spellcheck = "^0.23"
+pre-commit = "^2.1"
+pylint="^2.6"
+pytest = "^6.2"
+pytest-asyncio = "^0.14"
+pytest-vcr = "^1.0"
+vcrpy = "^4.1"
+
+[tool.poetry.scripts]
+mariner = 'mariner.main:main'
+
+[tool.poetry.plugins."mariner.cli"]
+"config" = "mariner.commands.config:Config"
+"details" = "mariner.commands.details:Details"
+"download" = "mariner.commands.download:Download"
+"magnet" = "mariner.commands.magnet:Magnet"
+"open" = "mariner.commands.open:Open"
+"search" = "mariner.commands.search:Search"
