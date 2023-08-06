@@ -1,0 +1,10 @@
+CHANGELOG.txt
+License.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+vmani.egg-info/PKG-INFO
+vmani.egg-info/SOURCES.txt
+vmani.egg-info/dependency_links.txt
+vmani.egg-info/top_level.txt

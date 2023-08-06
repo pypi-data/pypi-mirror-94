@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: vmani
+Version: 0.0.1
+Summary: Our package will give u a basic calculator function such as add, sub, mul, div for the two number.
+Home-page: UNKNOWN
+Author: ManishKumar Vishwakarma
+Author-email: vmanish1313@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
