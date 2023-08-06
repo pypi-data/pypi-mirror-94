@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: django-cavalry
+Version: 0.2.0
+Summary: Performance tracer middleware for Django
+Home-page: https://github.com/valohai/django-cavalry
+Author: Valohai
+Maintainer: Aarni Koskela
+Maintainer-email: akx@iki.fi
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Provides-Extra: dev

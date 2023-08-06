@@ -1,0 +1,11 @@
+Django
+requests
+
+[dev]
+black
+flake8
+isort
+pydocstyle
+pytest-cov
+pytest-django>=3.7.0
+requests-mock
