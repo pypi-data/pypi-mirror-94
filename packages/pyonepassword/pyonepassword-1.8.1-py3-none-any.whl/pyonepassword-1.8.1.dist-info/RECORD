@@ -1,0 +1,15 @@
+pyonepassword/__about__.py,sha256=FxGakUwSs5wPmSe6jEwM4EnqUEUpgQRrTieuwPyCAIw,523
+pyonepassword/__init__.py,sha256=lITGKpJSBmNCeN6qRDkuG2Hop37i70P2WjyMq9pP53A,516
+pyonepassword/_py_op_cli.py,sha256=ZMTDOJYZP4DDbC1xFDVVeNRAzEVXGT9ScwXE9dvE92c,9708
+pyonepassword/_py_op_commands.py,sha256=QuiP5MTgCcTB86UfayVmr985O9jNLyXFoxm8vutvnRs,2826
+pyonepassword/_py_op_deprecation.py,sha256=8GpCJucjBF38XoYPERs2le94eH7ViApeCMeC31DAvIQ,1770
+pyonepassword/_py_op_items.py,sha256=r8zB2CWCqwVDJ41tULMccDXpHbMMhSNyRlui0YonKqY,2571
+pyonepassword/command_options.py,sha256=Z98DFaJ4GjT6huqjc2hk7d8bqGNWpbrt9wKbZTI4qJ0,973
+pyonepassword/py_op_exceptions.py,sha256=KErqzR-IQHWd1iwZpSACZ6U0-aIZ7bOW5Z2NxQ0tV0o,2827
+pyonepassword/pyonepassword.py,sha256=mXWq5ZjaGkXyNrscCqfq_T1R_lWDwF-CM-vTBnuIVWE,10363
+pyonepassword/version.py,sha256=1LyLbNN425i9sf4xih8dU4-oDOLxtwokhwT2XlHQb4M,192
+pyonepassword-1.8.1.dist-info/LICENSE,sha256=y3jgiNz7COPUnHCozvv3NEA8Oh3RzLqGILXJs6vErFQ,1071
+pyonepassword-1.8.1.dist-info/METADATA,sha256=rw9QDQnZV88jNxn5i4V594CfCHRdyOb4Xr1MX8pVZX8,9094
+pyonepassword-1.8.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyonepassword-1.8.1.dist-info/top_level.txt,sha256=VhZTByARQOgGVyGz8g6M5xLPfpBnfH8GCijPN1b8uAg,14
+pyonepassword-1.8.1.dist-info/RECORD,,
