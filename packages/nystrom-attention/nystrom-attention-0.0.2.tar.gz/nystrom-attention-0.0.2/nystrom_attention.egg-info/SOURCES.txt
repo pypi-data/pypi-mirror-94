@@ -1,0 +1,9 @@
+README.md
+setup.py
+nystrom_attention/__init__.py
+nystrom_attention/nystrom_attention.py
+nystrom_attention.egg-info/PKG-INFO
+nystrom_attention.egg-info/SOURCES.txt
+nystrom_attention.egg-info/dependency_links.txt
+nystrom_attention.egg-info/requires.txt
+nystrom_attention.egg-info/top_level.txt
