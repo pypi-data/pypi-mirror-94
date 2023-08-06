@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+onsen/__main__.py
+onsen.egg-info/PKG-INFO
+onsen.egg-info/SOURCES.txt
+onsen.egg-info/dependency_links.txt
+onsen.egg-info/entry_points.txt
+onsen.egg-info/requires.txt
+onsen.egg-info/top_level.txt
+onsen/assets/bell.wav
+onsen/assets/thank_you.wav
+onsen/assets/water.wav
+onsen/assets/welcome.wav
