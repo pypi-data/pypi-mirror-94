@@ -1,0 +1,3 @@
+[console_scripts]
+MMM = MoveMyMusic.__main__:main
+
