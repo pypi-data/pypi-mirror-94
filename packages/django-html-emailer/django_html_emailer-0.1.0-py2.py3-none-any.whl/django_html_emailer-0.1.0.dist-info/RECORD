@@ -1,0 +1,17 @@
+htmlemailer/__init__.py,sha256=KcDIqFCR7uDQpLMba5q_8fC9FXEZbt4LUIFnnYoCPQQ,5961
+htmlemailer/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+htmlemailer/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+htmlemailer/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+htmlemailer/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+htmlemailer/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+htmlemailer/templates/htmlemailer/boilerplate.html,sha256=IzpMcLsV0X0CVjMil2bJevFXEKx_V3pgk9gwcHJJ0-0,4841
+htmlemailer/templates/htmlemailer/example.html,sha256=iRCvYPmX0-gYI7w2VWW0e8ZMYQNcUS5ZklCpdAloydo,1455
+htmlemailer/templates/htmlemailer/example.txt,sha256=_M3CB7uoahaP1yHhSWxa9sFuoy7KX4aywoAKX1o9BxA,210
+htmlemailer/templates/htmlemailer/example_subject.txt,sha256=-gyZxdVOKycaUgUuKTJXSMLgGMUqx8zchbrdbPseqJg,89
+htmlemailer/templates/htmlemailer/example_template.html,sha256=3ltO1yvV2f3fOWstCExqFYqDV0oRPI0K4PsZUtngtc0,360
+htmlemailer/templates/htmlemailer/example_template.txt,sha256=YpSCaoM5eQznhPpgna8z5fYkjDsrCO8thsjmbYm4e_g,112
+django_html_emailer-0.1.0.dist-info/LICENSE,sha256=JDOITh_DvLF4MJsszSjduoEeginsKBKpdqKyLrEIozk,1092
+django_html_emailer-0.1.0.dist-info/METADATA,sha256=qhs9KxcyRW3Lbg1otzjS7kQCUuR3I90N6XEXq72qXU0,6792
+django_html_emailer-0.1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+django_html_emailer-0.1.0.dist-info/top_level.txt,sha256=vA0pWS-FTcDhLoZVLtTR5A0RkBD5Gax8zqkUAiqYNE4,12
+django_html_emailer-0.1.0.dist-info/RECORD,,
