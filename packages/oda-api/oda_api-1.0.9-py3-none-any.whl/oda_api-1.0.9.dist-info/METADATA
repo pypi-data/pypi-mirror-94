@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: oda-api
+Version: 1.0.9
+Summary: API plugin  for CDCI online data analysis
+Home-page: UNKNOWN
+Author: Andrea Tramacere
+Author-email: andrea.tramacere@unige.ch
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Requires-Dist: requests
+Requires-Dist: future
+Requires-Dist: astropy (>=3.2)
+Requires-Dist: json-tricks
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: jsonschema
+
+UNKNOWN
+
+
