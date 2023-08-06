@@ -1,0 +1,1 @@
+recursive-include Project2Installer *.json *.wav *.txt *.md
