@@ -1,0 +1,12 @@
+acdc_nn/__init__.py,sha256=hFb6EbLfEYynjonyaO7G_HQDjziJ9Reugbm-EhZgBAU,81
+acdc_nn/__main__.py,sha256=HYOG1twgS2ZVJxAIzmM-d-9rlZDvngai9tTPp-f5d3E,64
+acdc_nn/cmd.py,sha256=BPZLwRprULbQNsHdc8kc1MGFnIii2XJ3H9p0g2oUJ3Q,6012
+acdc_nn/nn.py,sha256=f_hgUAxwZAR3h9IldjaeTvbcPBagRA5ehe1vnHj891w,4122
+acdc_nn/util.py,sha256=OKxvuAXr4kXxZwhlOgBRwnlguVQknuqJEIyYhCnU7AA,6327
+acdc_nn/weights/full_dataset_TL.data-00000-of-00001,sha256=paH2dvBTtOjW_hjvdcb4LuHY063BJTT4y5e46-qs3ac,23995
+acdc_nn/weights/full_dataset_TL.index,sha256=BElZ81bD3_e60mKknfbiJVZ4PEha5j5OxBPo9VcoboA,1732
+acdc_nn-0.0.5.dist-info/METADATA,sha256=q3qlUU9SwqKLw31W4OIaDQV3Wkzw9ZlOujcS6j_D2Yg,3128
+acdc_nn-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+acdc_nn-0.0.5.dist-info/entry_points.txt,sha256=l77aBRqDiDMjerX6vFq1ItR9-Kah3l11DTd5uaMiJHQ,46
+acdc_nn-0.0.5.dist-info/top_level.txt,sha256=BGOUXnJF0xdBcUVHeCajetjqIh-St3Kjysych2JyVxs,8
+acdc_nn-0.0.5.dist-info/RECORD,,
