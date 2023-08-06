@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.cfg
+pilapse/__main__.py
+pilapse/image_saver.py
+pilapse/ip_finder.py
+pilapse/scheduler.py
+pilapse/server.py
+pilapse.egg-info/PKG-INFO
+pilapse.egg-info/SOURCES.txt
+pilapse.egg-info/dependency_links.txt
+pilapse.egg-info/entry_points.txt
+pilapse.egg-info/requires.txt
+pilapse.egg-info/top_level.txt
