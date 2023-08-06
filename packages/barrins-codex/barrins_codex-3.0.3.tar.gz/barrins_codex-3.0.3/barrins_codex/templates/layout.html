@@ -1,0 +1,145 @@
+{% import "layout_bootstrap.html" as bootstrap with context %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-F9Q44T07MM"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-F9Q44T07MM');
+	</script>
+	<!-- Data Crawling -->
+	<meta name="robots" content="all">
+	<!-- Preload -->
+	<link rel="preload" href="{{ url_for('static', filename='js/svg_handler.js') }}" as="script">
+	<link rel="preload" href="{{ url_for('static', filename='css/base_new.css') }}" as="style">
+	{% block preload %}{% endblock %}
+	{% block head %}
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta property="og:title" content="{{ og_title|default('Barrin\'s Codex') }}" />
+	<meta property="og:description"
+		content="{{ og_description|default('Ressources stratégiques pour le Duel Commander') }}" />
+	<meta property="og:image" content="{{ og_image|default(url_for('static', filename='img/codex.jpg')) }}" />
+	<meta property="og:image:url" content="{{ og_image|default(url_for('static', filename='img/codex.jpg')) }}" />
+	{% if og_image_dimensions %}
+	<meta property="og:image:width" content="{{ og_image_dimensions[0] }}" />
+	<meta property="og:image:height" content="{{ og_image_dimensions[1] }}" />
+	{% endif %}
+	{% if og_image_secure %}
+	<meta property="og:image:secure_url" content="{{ og_image_secure }}" />
+	{% endif %}
+	<meta name="description" content="Ressources stratégiques pour le Duel Commander">
+	<meta name="keywords" content="Magic: the Gathering, MtG, Duel Commander, Commander, Duel, EDH">
+	{% block meta %}{% endblock %}
+	<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+	<link rel="icon" href="{{ url_for('static', filename='img/icons/codex.svg') }}">
+	<!-- Style Sheets -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/base_new.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/light-theme.css') }}" id="theme-link">
+	{% block scripts %}{% endblock %}
+	<title>Barrin's Codex{% if self.title() | trim %} - {% endif %}{% block title %}{% endblock %}</title>
+	{% endblock %}
+</head>
+
+<body>
+	<header>
+		<div class="header">
+			<p class="site-logo"><a <a href="{{ i18n_url('') }}">Barrin's Codex</a></p>
+			<nav role="navigation">
+				<ul>
+					<li>{{ link('/archetypes') }}</li>
+					<li>{{ link('/articles') }}</li>
+					<li>{{ link('/cartes-thematiques') }}</li>
+				</ul>
+			</nav>
+			<div class="theme-switch">
+				<div class="theme-toggle">Toggle Dark Mode</div>
+			</div>
+			<!--
+			<nav role="translation">
+				<ul>
+					<li>{{ translation('en', "🇬🇧") }}</li>
+					<li>{{ translation('fr', "🇫🇷") }}</li>
+				</ul>
+			</nav>
+			-->
+		</div>
+		{% block banner %}{% endblock %}
+	</header>
+
+	{% block card_display %}
+	<template id="card-hover">
+		<strong>Bolded content</strong>
+	</template>
+	{% endblock %}
+
+	{% block article %}
+	<article id="article">
+		{% block content %}{% endblock %}
+	</article>
+	{% endblock %}
+
+	<footer>
+		{% block footer %}
+		<nav role="navigation">
+			{{ prev() }}
+			{{ top() }}
+			{{ next() }}
+		</nav>
+		{% endblock %}
+	</footer>
+</body>
+
+<!-- SCRIPTS -->
+<script src="{{ url_for('static', filename='js/svg_handler.js') }}"></script>
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@4"></script>
+<script>
+<!-- Mode sombre -->
+const btn = document.querySelector(".theme-toggle");
+const theme = document.querySelector("#theme-link");
+
+if (localStorage.getItem("theme") == "dark") {
+	theme.href = "{{ url_for('static', filename='css/dark-theme.css') }}";
+}
+
+btn.addEventListener("click", function() {
+	// Swap out the URL for the different stylesheets
+	if (localStorage.getItem("theme") == "light") {
+		theme.href = "{{ url_for('static', filename='css/dark-theme.css') }}";
+		localStorage.setItem("theme", "dark");
+	} else {
+		theme.href = "{{ url_for('static', filename='css/light-theme.css') }}";
+		localStorage.setItem("theme", "light");
+	}
+});
+</script>
+{% block script %}
+<script>
+<!-- Displaying card images -->
+<!-- https://github.com/atomiks/tippyjs/issues/562 -->
+tippy('span.card', {
+	touchHold: true,
+	hideOnClick: false,
+	interactive: true,
+	placement: 'left',
+	distance: 20,
+	arrow: true,
+	animateFill: false,
+	animation: 'shift-away',
+	// In ES5 as you don't have a transpilation step(?):
+	onShow: function(instance) {
+		var img = instance.popper.querySelector('img');
+		img.src = img.dataset.src;
+	}
+});
+</script>
+{% endblock %}
+{% block style %}{% endblock %}
+
+</html>
