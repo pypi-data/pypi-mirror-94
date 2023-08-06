@@ -1,0 +1,16 @@
+boututils~=0.1.7
+func_timeout~=4.3
+matplotlib~=3.2
+netCDF4~=1.5
+numpy~=1.18
+optionsfactory~=1.0.1
+pyparsing~=2.4
+PyYAML~=5.1
+scipy~=1.4
+Qt.py~=1.2
+
+[gui-PyQt5]
+PyQt5~=5.12
+
+[gui-pyside2]
+pyside2~=5.13
