@@ -1,0 +1,53 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+amphetype/Amphetype.py
+amphetype/Config.py
+amphetype/Data.py
+amphetype/Lesson.py
+amphetype/Performance.py
+amphetype/QtUtil.py
+amphetype/Quizzer.py
+amphetype/StatWidgets.py
+amphetype/Text.py
+amphetype/TextManager.py
+amphetype/__init__.py
+amphetype/_version.py
+amphetype/fake_imports.py
+amphetype.egg-info/PKG-INFO
+amphetype.egg-info/SOURCES.txt
+amphetype.egg-info/dependency_links.txt
+amphetype.egg-info/entry_points.txt
+amphetype.egg-info/not-zip-safe
+amphetype.egg-info/requires.txt
+amphetype.egg-info/top_level.txt
+amphetype/Widgets/Database.py
+amphetype/Widgets/Plotters.py
+amphetype/Widgets/__init__.py
+amphetype/data/about.html
+amphetype/data/css/AMOLED.qss
+amphetype/data/css/Aqua.qss
+amphetype/data/css/ConsoleStyle.qss
+amphetype/data/css/ElegantDark.qss
+amphetype/data/css/MacOS.qss
+amphetype/data/css/ManjaroMix.qss
+amphetype/data/css/MaterialDark.qss
+amphetype/data/css/NeonButtons.qss
+amphetype/data/css/Ubuntu.qss
+amphetype/data/texts/Austen, Jane - Pride and Prejudice.txt
+amphetype/data/texts/Conrard, Joseph - Heart of Darkness.txt
+amphetype/data/texts/Eliot, George - Brother Jacob.txt
+amphetype/data/texts/Fairy Tales of Hans Christian Andersen.txt
+amphetype/data/texts/Huxley, Aldous - Crome Yellow.txt
+amphetype/data/texts/Joyce, James - Dubliners.txt
+amphetype/data/texts/Kafka, Franz - Metamorphosis.txt
+amphetype/data/texts/Proust, Marcel - Swann's Way.txt
+amphetype/data/texts/Tarantino, Quentin - Pulp Fiction.txt
+amphetype/data/texts/Wells, H. G. - The Island of Doctor Moreau.txt
+amphetype/data/texts/Woolf, Virginia - The Voyage Out.txt
+amphetype/data/wordlists/words-10.txt
+amphetype/data/wordlists/words-20.txt
+amphetype/data/wordlists/words-35.txt
+amphetype/data/wordlists/words-40.txt
+amphetype/data/wordlists/words-50.txt
