@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pbzlib
+Version: 0.20210128
+Summary: Library for serializing a list of protobuf objects
+Home-page: https://github.com/fabgeyer/pbzlib
+Author: fabgeyer
+License: MIT
+Keywords: protobuf
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Description-Content-Type: text/markdown
+Requires-Dist: protobuf
+
+# Library for serializing protobuf objects - Python version
+
+This library is used for simplifying the serialization and deserialization of [protocol buffer](https://developers.google.com/protocol-buffers/) objects to/from files.
+The main use-case is to save and read a large collection of objects of the same type.
+Each file contains a header with the description of the protocol buffer, meaning that no compilation of `.proto` description file is required before reading a `pbz` file.
+
+
+## Installation
+
+```
+$ pip install --upgrade https://github.com/fabgeyer/pbzlib-py/archive/master.tar.gz
+```
+
+## Example
+
+Reading a `pbz` file:
+
+```python
+from pbzlib import open_pbz
+
+for msg in open_pbz("/path/to/file.pbz"):
+	print(msg)
+```
+
+
+## Versions in other languages
+
+- [Go version](https://github.com/fabgeyer/pbzlib-go)
+- [Java version](https://github.com/fabgeyer/pbzlib-java)
+- [C/C++ version](https://github.com/fabgeyer/pbzlib-c-cpp)
+
+
