@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: celery-types
+Version: 0.1.0
+Summary: Type stubs for Celery and its related packages
+Home-page: https://github.com/sbdchd/celery-types
+License: UNKNOWN
+Keywords: celery,kombu,vine,amqp,billiard,django_celery_results,types,mypy,stubs
+Author: Steve Dignam
+Author-email: steve@dignam.xyz
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, https://github.com/sbdchd/celery-types
+Description-Content-Type: text/markdown
+
+# celery-types [![PyPI](https://img.shields.io/pypi/v/celery-types.svg)](https://pypi.org/project/celery-types/)
+
+Type stubs for celery related projects:
+
+- [`celery`](https://github.com/celery/celery)
+- [`django-celery-results`](https://github.com/celery/django-celery-results)
+- [`amqp`](http://github.com/celery/py-amqp)
+- [`kombu`](https://github.com/celery/kombu)
+- [`billiard`](https://github.com/celery/billiard)
+- [`vine`](https://github.com/celery/vine)
+- [`ephem`](https://github.com/brandon-rhodes/pyephem)
+
+## install
+
+```shell
+pip install celery-types
+```
+
+## dev
+
+```shell
+poetry install
+
+# run formatting, linting, and typechecking
+s/lint
+
+# build and publish
+poetry publish --build
+```
+
+
