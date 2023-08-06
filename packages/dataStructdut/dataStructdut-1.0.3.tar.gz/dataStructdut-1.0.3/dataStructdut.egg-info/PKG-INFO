@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: dataStructdut
+Version: 1.0.3
+Summary: This package provides all kinds of dataStructs.
+Home-page: https://github.com/ChinaVeryNb/dataStruct.git
+Author: tjg
+Author-email: 1205322591@qq.com
+License: MIT
+Description: A sequential container based on a doubly linked list that allows
+        location access to elements. Provided method: Access method: first,
+        last, before, after, **iter**. Addition, deletion and modification
+        methods: add\_first, add\_last, add\_before, add\_after, delete,
+        replace. See notes for details... ----By Tjg
+        
+Keywords: dataStruct,dut
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
