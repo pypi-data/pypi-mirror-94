@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "googlepy"
+version = "0.1.0"
+description = "Google.py is a cli client of google written in python"
+authors = ["Sakurai07"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+google-api-helper = "^0.3.1"
+twine = "^3.3.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
