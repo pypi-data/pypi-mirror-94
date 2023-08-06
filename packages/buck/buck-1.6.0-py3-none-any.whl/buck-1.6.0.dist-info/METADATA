@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: buck
+Version: 1.6.0
+Summary: Get started with your projects faster .
+Home-page: https://github.com/Pleasant-tech/Buck/
+Author: Pleasant Tech
+Author-email: dummyware2020@gmail.com
+License: MIT
+Keywords: productivity,setuptools,bucket,cli
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+
+Store buckets of cli commands and run them with a custom keyword of your choice.
+
+Installation - Pip install buck 🗑️
+
+Support my YouTube channel 
+👇
+youtube.com/c/Pleasanttech
+
