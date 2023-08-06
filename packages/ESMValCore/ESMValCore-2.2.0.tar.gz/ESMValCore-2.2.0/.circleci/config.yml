@@ -1,0 +1,216 @@
+---
+version: 2.1
+
+orbs:
+  coverage-reporter: codacy/coverage-reporter@11.4.1
+
+commands:
+  check_changes:
+    steps:
+      - run: |
+          if (test "$CIRCLE_BRANCH" = master ||
+            git --no-pager diff --name-only origin/master... |
+            grep -q -E -f .circleci/install_triggers)
+          then
+            echo Running installation tests
+          else
+            echo Skipping installation tests
+            circleci step halt
+          fi
+
+jobs:
+  test:
+    # Run tests
+    working_directory: /test
+    docker:
+      - image: esmvalgroup/esmvalcore:development
+    steps:
+      - checkout
+      - restore_cache:
+          key: test-{{ .Branch }}
+      - run:
+          command: |
+            . /opt/conda/etc/profile.d/conda.sh
+            conda activate esmvaltool
+            pip install .[test]
+            pytest -n 2 -m "not installation"
+      - save_cache:
+          key: test-{{ .Branch }}
+          paths:
+            - ".eggs"
+            - ".pytest_cache"
+      - store_test_results:
+          path: test-reports/
+      - store_artifacts:
+          path: test-reports/
+
+  install:
+    # Test installation
+    working_directory: /install
+    docker:
+      - image: continuumio/miniconda3
+    steps:
+      - checkout
+      - check_changes
+      - restore_cache:
+          key: install-{{ .Branch }}
+      - run:
+          command: |
+            . /opt/conda/etc/profile.d/conda.sh
+            set -x
+            mkdir /logs
+            # Install
+            # conda update -y conda > /logs/conda.txt 2>&1
+            conda env update >> /logs/conda.txt 2>&1
+            set +x; conda activate esmvaltool; set -x
+            conda install -yS r-base r-yaml ncl -c conda-forge
+            pip install .[test] > /logs/install.txt 2>&1
+            # Log versions
+            dpkg -l > /logs/versions.txt
+            conda env export > /logs/environment.yml
+            pip freeze > /logs/requirements.txt
+            # Test installation
+            pytest -n 2
+            esmvaltool version
+      - save_cache:
+          key: install-{{ .Branch }}
+          paths:
+            - "/opt/conda/pkgs"
+            - ".eggs"
+            - ".pytest_cache"
+      - store_artifacts:
+          path: /logs
+      - store_artifacts:
+          path: test-reports/
+      - store_test_results:
+          path: test-reports/
+      - coverage-reporter/send_report:
+          coverage-reports: 'test-reports/coverage.xml'
+          project-token: $CODACY_PROJECT_TOKEN
+
+  documentation:
+    # Test building documentation
+    working_directory: /doc
+    docker:
+      - image: continuumio/miniconda3
+    steps:
+      - checkout
+      - restore_cache:
+          key: documentation-{{ .Branch }}
+      - run:
+          command: |
+            mkdir /logs
+            # Install
+            pip install -r doc/requirements.txt > /logs/install.txt 2>&1
+            pip install sphinx sphinx_rtd_theme >> /logs/install.txt 2>&1
+            # Log versions
+            dpkg -l > /logs/versions.txt
+            pip freeze > /logs/requirements.txt
+            # Test building documentation
+            MPLBACKEND=Agg python setup.py build_sphinx --warning-is-error
+      - save_cache:
+          key: documentation-{{ .Branch }}
+          paths:
+            - ".eggs"
+      - store_artifacts:
+          path: /logs
+
+  develop:
+    # Test development installation
+    working_directory: /develop
+    docker:
+      - image: continuumio/miniconda3
+    steps:
+      - checkout
+      - check_changes
+      - run:
+          command: |
+            . /opt/conda/etc/profile.d/conda.sh
+            mkdir /logs
+            # Install
+            # conda update -y conda > /logs/conda.txt 2>&1
+            conda env update >> /logs/conda.txt 2>&1
+            conda activate esmvaltool
+            pip install -e .[develop] > /logs/install.txt 2>&1
+            # install additional requirements for running all tests
+            conda install -yS r-base r-yaml ncl -c conda-forge
+            # Log versions
+            dpkg -l > /logs/versions.txt
+            conda env export > /logs/environment.yml
+            pip freeze > /logs/requirements.txt
+            # Test installation
+            esmvaltool version
+            pytest -n 2
+      - store_artifacts:
+          path: /logs
+
+  conda_build:
+    # Test conda build
+    working_directory: /esmvaltool
+    docker:
+      - image: continuumio/miniconda3
+    steps:
+      - checkout
+      - check_changes
+      - run:
+          command: |
+            . /opt/conda/etc/profile.d/conda.sh
+            set -x
+            # Install prerequisites
+            mkdir /logs
+            # conda update -y conda > /logs/conda_base.txt 2>&1
+            conda install -y conda-build conda-verify ripgrep >> /logs/conda_base.txt 2>&1
+            # Log versions
+            dpkg -l > /logs/versions.txt
+            conda env export -n base > /logs/build_environment.yml
+            # Build conda package
+            conda build package -c conda-forge -c esmvalgroup > /logs/build_log.txt
+      - store_artifacts:
+          path: /logs
+
+  conda_install:
+    # Test conda package installation
+    working_directory: /esmvaltool
+    docker:
+      - image: continuumio/miniconda3
+    steps:
+      - run:
+          command: |
+            . /opt/conda/etc/profile.d/conda.sh
+            set -x
+            # Install prerequisites
+            mkdir /logs
+            # conda update -y conda > /logs/conda.txt 2>&1
+            # Create and activate conda environment
+            conda create -y --name esmvaltool
+            set +x; conda activate esmvaltool; set -x
+            # Install
+            conda install -y esmvalcore -c esmvalgroup -c conda-forge
+            # Log versions
+            conda env export > /logs/environment.yml
+            # Test installation
+            esmvaltool version
+
+workflows:
+  commit:
+    jobs:
+      - test
+      - install
+      - develop
+      - conda_build
+      - documentation
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - test
+      - install
+      - documentation
+      - develop
+      - conda_build
+      - conda_install
