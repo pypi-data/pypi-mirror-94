@@ -1,0 +1,60 @@
+CHANGES
+=======
+
+1.0.1
+-----
+
+* Delete unnecessary f-string
+* Support auth token
+* Update version code
+
+1.0
+---
+
+* Update version
+* Update README
+* Add Travis CI
+* Fix command outputs
+* Fix error of -m option
+* Fix rst format
+
+0.2
+---
+
+* Change version number to 0.2
+* Add Schedule cli
+* Add main paramter to FunctionUpdate
+* Add an entrypoint parameter for java
+* Update README
+
+0.1
+---
+
+* Update requirements txt
+* Support to pbr
+* Add requiremetns.txt
+* Add README.rst
+* Add command list to README
+* Update README and update description
+* Add LICENSE
+* Update README for pypi
+* Modify setup for pypi
+* Fix metavar of function parameter
+* Fix to display parameters
+* Fix default port number
+* Add update and delete to function
+* Add metavar to argument
+* Support to create function
+* Support to BaseClient
+* Support to show source code at function
+* Add getting function api
+* Add endpoint cli
+* Add subscription cli
+* Add validate parameter to \_action method
+* Add result cli
+* Fix README
+* Add coreapi package
+* Change package name
+* Add Pipfile
+* Add installation procedure and example use
+* Initial commit
