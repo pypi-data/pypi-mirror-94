@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: melvil-test-packages
+Version: 0.0.24
+Summary: Plays alarm when long script finishes
+Home-page: https://github.com/dave-shawley/contacts
+Author: Melvil James
+Author-email: melvil.mec@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
