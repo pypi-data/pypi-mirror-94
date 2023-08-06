@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: alphaserve
+Version: 0.1.2
+Summary: A local web server providing an accessible remote for controling your computer
+Home-page: https://bitbucket.org/chris18191/alphaserve/
+Author: chris18191
+Author-email: chris18191@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
+Requires-Dist: Flask-SocketIO (==4.3.2)
+Requires-Dist: Flask (==1.1.2)
+Requires-Dist: Jinja2 (==2.11.3)
+Requires-Dist: MarkupSafe (==1.1.1)
+Requires-Dist: MouseInfo (==0.1.3)
+Requires-Dist: Pillow (==8.1.0)
+Requires-Dist: PyGetWindow (==0.0.9)
+Requires-Dist: PyMsgBox (==1.0.9)
+Requires-Dist: PyRect (==0.1.4)
+Requires-Dist: PyScreeze (==0.1.26)
+Requires-Dist: PyTweening (==1.0.3)
+Requires-Dist: Werkzeug (==1.0.1)
+Requires-Dist: bidict (==0.21.2)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: evdev (==1.4.0)
+Requires-Dist: itsdangerous (==1.1.0)
+Requires-Dist: pynput (==1.7.2)
+Requires-Dist: pyperclip (==1.8.1)
+Requires-Dist: python-engineio (==3.14.2)
+Requires-Dist: python-socketio (==4.6.1)
+Requires-Dist: python-xlib (==0.29)
+Requires-Dist: python3-xlib (==0.15)
+Requires-Dist: six (==1.15.0)
+
+# **Project AlphaServe**
+_currently running on python3 and Flask_
+***
+
+## Idea
+create a webserver, that receives control commands from clients using:
+- *Flask* is used for running the webserver
+- *Hammer.js* serves implementations for mouse and click events
+- *socket.io* lets us establish an TCP connection, so that the commands are sent faster
+
+## TODOS
+- fix CSS for remote to properly render and disable scrolling when using the touchpad
+- fix the scrolling bar
+- add argument option for en-/disabling the debug mode
+
+
+

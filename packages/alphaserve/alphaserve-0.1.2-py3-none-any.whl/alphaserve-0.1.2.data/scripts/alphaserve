@@ -1,0 +1,156 @@
+#!python
+from flask import Flask, jsonify, render_template, request
+from flask_socketio import SocketIO
+import sys
+import time
+import utils
+import json
+
+from control import Mouse, Keyboard, Control
+
+DEBUG = True
+
+app = Flask(__name__)
+app.debug = DEBUG
+app.config["SECRET_KEY"] = "verysecret"
+socketio = SocketIO(app)
+socketio.init_app(app)
+
+keyboard = Keyboard()
+mouse = Mouse()
+control = Control()
+
+class Button():
+    def __init__(self, func, id=None, label=""):
+        self.func = func
+        self.id = id
+        if label == "":
+            self.label = func.split("(")[1][1:-2]
+        else:
+            self.label = label
+
+buttons = []
+specialButtons = []
+#buttonsVol = []
+#buttonsArrows = []
+#buttonsKeys = []
+#buttonsSystem = []
+#buttonsVol.append(Button("vol(1)", id="g02", label="Volume Up"))
+#buttonsVol.append(Button("vol(0)", id="g00", label="Mute"))
+#buttonsVol.append(Button("vol(-1)", id="g22", label="Volume Down"))
+#buttonsKeys.append(Button("pressKey('f')", id="g"))
+#buttonsKeys.append(Button("pressKey('space')", id="g"))
+#buttonsKeys.append(Button("pressKey('f11')", id="g"))
+#buttonsKeys.append(Button("pressKey('f5')", id="g"))
+#buttonsArrows.append(Button("pressKey('up')", id="g"))
+#buttonsArrows.append(Button("pressKey('down')", id="g"))
+#buttonsArrows.append(Button("pressKey('left')", id="g"))
+#buttonsArrows.append(Button("pressKey('right')", id="g"))
+#buttonsSystem.append(Button("shutdown(0, 0)", label="Shut down"))
+
+specialButtons.append(Button("pressKey('f11')"))
+specialButtons.append(Button("pressKey('f5')"))
+
+buttons.append(Button("vol(0)", id="g00", label="Mute"))
+buttons.append(Button("pressKey('up')", id="g01"))
+buttons.append(Button("vol(1)", id="g02", label="Volume Up"))
+buttons.append(Button("pressKey('left')", id="g10"))
+buttons.append(Button("pressKey('space')", id="g11"))
+buttons.append(Button("pressKey('right')", id="g12"))
+buttons.append(Button("pressKey('f')", id="g20"))
+buttons.append(Button("pressKey('down')", id="g21"))
+buttons.append(Button("vol(-1)", id="g22", label="Volume Down"))
+buttons.append(Button("shutdown(0, 0)", id="g3footer", label="Shut down"))
+
+#allButtons = {"Volume": buttonsVol, "Keys": buttonsKeys, "Arrow-Keys": buttonsArrows, "System": buttonsSystem}
+#buttonOrder = ["Volume", "Keys", "Arrow-Keys", "System"]
+
+def log(s):
+    if DEBUG:
+        print(s)
+
+
+def move_mouse():
+    pass
+
+def tap_key(char):
+    keyboard.tap_key(char)
+    
+def vol(val):
+    keyboard.vol(val)
+
+def shutdown(mode_time_tuple):
+    control.shutdown(mode_time_tuple)
+
+commands = [move_mouse, tap_key, vol, shutdown]
+
+@app.route("/")
+def main():
+    return render_template('control.html', specialButtons=specialButtons, buttonsGrid=buttons)
+
+@socketio.on("key_event")
+def handle_keys(msg):
+    log("[Key] received message: {}".format(str(msg)))
+    
+    try:
+        param = msg["param"]
+        command = commands[msg["cmd"]]
+        command(param)
+    except Exception as e:
+        print("Failed to parse key!")
+        print(e)
+
+@socketio.on("mouse_event")
+def handle_mouse(msg):
+    log("[Mouse] received message: {}".format(str(msg)))
+    try:
+      if msg["MouseEvent"] == "tap":
+          try:
+            mouse.tap()
+          except Exception as e:
+            print(e)
+          return
+      elif msg["MouseEvent"] == "press":
+          try:
+            mouse.tap(button = 2)
+          except Exception as e:
+            print(e)
+          return
+      elif msg["MouseEvent"] == "scroll":
+          try:
+            veloY = msg["velocityY"]
+            scrollDeltaY = 0
+            if veloY < 0:
+              scrollDeltaY = -1
+            else:
+              scrollDeltaY = 1
+            if abs(veloY) < 0.01:
+              scrollDeltaY = 0
+            mouse.scroll(scrollDeltaY)
+          except Exception as e:
+            print(e)
+      if msg["isFinal"]:
+          mouse.resetDelta()
+      try:
+        mouse.move(msg["deltaX"], msg["deltaY"], velocityX=msg["velocityX"], velocityY=msg["velocityY"])
+      except Exception as e:
+        print(e)
+        
+    except Exception as e:
+        print("Failed to parse command!")
+        print(e)
+
+
+if __name__ == "__main__":
+    print("\n#############################")
+    print("connect to: {}:5000".format(utils.get_local_ip()))
+    print("#############################\n")
+    host = None
+    try:
+        if len(sys.argv) >= 2:
+            host = sys.argv[1]
+        else:
+            host = "0.0.0.0"
+    except Exception as e:
+        print(e)
+    socketio.run(app, host=host)
