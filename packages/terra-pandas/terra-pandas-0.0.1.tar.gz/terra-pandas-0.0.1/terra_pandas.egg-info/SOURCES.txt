@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+terra_pandas/__init__.py
+terra_pandas/version.py
+terra_pandas.egg-info/PKG-INFO
+terra_pandas.egg-info/SOURCES.txt
+terra_pandas.egg-info/dependency_links.txt
+terra_pandas.egg-info/not-zip-safe
+terra_pandas.egg-info/requires.txt
+terra_pandas.egg-info/top_level.txt
