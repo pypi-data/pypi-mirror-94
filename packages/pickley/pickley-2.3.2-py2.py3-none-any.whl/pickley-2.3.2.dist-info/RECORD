@@ -1,0 +1,14 @@
+pickley/__init__.py,sha256=7kGmdLxRBMilaotFvkV10qyxpiMsm2GthfUXczJJ2Bs,36077
+pickley/__main__.py,sha256=cd_HVIPk86ra68ugEgPxdWr2sP2-wetLmZcid838aBY,131
+pickley/cli.py,sha256=JT6xNRVqScvhRQYHERNtXSKTi2hd5RPjRq2Y5BnqjwQ,27997
+pickley/delivery.py,sha256=sgEa3gHvZilpEiM-BtlGNkzLKlAFoM7Wqui2WSkTA8Q,6526
+pickley/env.py,sha256=fqv7pIxHWlzjHHY3Ep2tYxJBtb7xViLcmtvVFBslEuI,8591
+pickley/package.py,sha256=ZAh6hpEwUINhgqFm7utcRX17WqoB8alsZAZmsJaJEZQ,13403
+pickley/pypi.py,sha256=8nlqaQ38AgOnQj_tXjcYbCM52X1Uk-D_SXa3pZ1ErKA,6663
+pickley/v1upgrade.py,sha256=905_4Uyduw2ZlRXXkCe1btA5QO0oChgNVxE662r6LWA,1667
+pickley-2.3.2.dist-info/LICENSE,sha256=D3rgeg_D_Mr05-eIjfUkc6vLwrKbR7fCz-jBJVKOFTY,1068
+pickley-2.3.2.dist-info/METADATA,sha256=elIoyaZCGGfeoHN_LVK605qkhJn4kynr3rUXUFWmKwk,7530
+pickley-2.3.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+pickley-2.3.2.dist-info/entry_points.txt,sha256=C0FfGITCixLz-2xbVldW21vjjgxlpXDR8nF3jI-mEvg,56
+pickley-2.3.2.dist-info/top_level.txt,sha256=WqF9O026KmjRFWMsE_TexOGwH55_tfkFf8KqpOak2LM,8
+pickley-2.3.2.dist-info/RECORD,,
