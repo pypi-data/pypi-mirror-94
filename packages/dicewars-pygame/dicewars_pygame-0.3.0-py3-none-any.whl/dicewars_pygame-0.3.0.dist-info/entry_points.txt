@@ -1,0 +1,3 @@
+[console_scripts]
+dicewars_pygame = dicewars_pygame.main:run
+
