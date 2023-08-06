@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: blender-downloader
+Version: 0.0.1
+Summary: Multiplatorm Blender downloader.
+Home-page: https://github.com/mondeja/blender-downloader
+Author: Álvaro Mondéjar Rubio
+Author-email: mondejar1994@gmail.com
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tqdm
+Requires-Dist: dmglib ; sys_platform == "darwin"
+Provides-Extra: dev
+Requires-Dist: black (==20.8b1) ; extra == 'dev'
+Requires-Dist: bump2version (==1.0.1) ; extra == 'dev'
+Requires-Dist: flake8 (==3.8.4) ; extra == 'dev'
+Requires-Dist: flake8-implicit-str-concat (==0.2.0) ; extra == 'dev'
+Requires-Dist: flake8-print (==4.0.0) ; extra == 'dev'
+Requires-Dist: isort (==5.7.0) ; extra == 'dev'
+Requires-Dist: pre-commit (==2.9.3) ; extra == 'dev'
+Requires-Dist: pytest (==6.2.1) ; extra == 'dev'
+Requires-Dist: pytest-xdist (==2.2.0) ; extra == 'dev'
+Requires-Dist: yamllint (==1.25.0) ; extra == 'dev'
+Provides-Extra: lint
+Requires-Dist: black (==20.8b1) ; extra == 'lint'
+Requires-Dist: flake8 (==3.8.4) ; extra == 'lint'
+Requires-Dist: flake8-implicit-str-concat (==0.2.0) ; extra == 'lint'
+Requires-Dist: flake8-print (==4.0.0) ; extra == 'lint'
+Requires-Dist: isort (==5.7.0) ; extra == 'lint'
+Requires-Dist: yamllint (==1.25.0) ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest (==6.2.1) ; extra == 'test'
+
+# blender-downloader
+
+Multiplatorm Python CLI utility that just downloads a specific portable
+release of Blender by version/os/bits from official Blender repositories. The
+minimum supported version is v2.64.
+
+## Install
+
+```bash
+pip install blender-downloader
+```
+
+## Usage
+
+Execute `blender-downloader --help` to see all supported arguments.
+
+### Download release by version number
+
+```bash
+blender-downloader 2.90
+```
+
+### Download current stable release
+
+```bash
+blender-downloader stable
+```
+
+### Download nightly release and extract/mount it, showing executable paths
+
+```bash
+blender-downloader nightly --extract --print-executables
+```
+
+
