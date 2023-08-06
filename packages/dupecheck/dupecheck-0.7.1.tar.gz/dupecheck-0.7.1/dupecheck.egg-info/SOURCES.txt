@@ -1,0 +1,14 @@
+README.md
+setup.py
+dupecheck/__init__.py
+dupecheck/chunks.py
+dupecheck/contractions_list.py
+dupecheck/preprocess.py
+dupecheck/sliding_window.py
+dupecheck/sliding_window2.py
+dupecheck/utils.py
+dupecheck.egg-info/PKG-INFO
+dupecheck.egg-info/SOURCES.txt
+dupecheck.egg-info/dependency_links.txt
+dupecheck.egg-info/requires.txt
+dupecheck.egg-info/top_level.txt
