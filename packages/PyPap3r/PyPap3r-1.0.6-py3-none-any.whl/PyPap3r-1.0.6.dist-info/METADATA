@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: PyPap3r
+Version: 1.0.6
+Summary: A python package that can change your mac's wallpaper to a file or a url. It can also download images.
+Home-page: https://github.com/TheBaconPug/PyPap3r
+Author: TheBaconPug
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# PyPap3r
+
+A python package that can change a mac's wallpaper from a url or file.
+
+# Usage
+
+## Importing the package
+
+```python
+from PyPap3r import wallpaper_url, wallpaper_file, download_image
+```
+
+## Wallpaper from url
+
+```python
+wallpaper_url('https://www.thebaconpug.com/css/img/background.jpg')
+```
+## Wallpaper from file
+
+```python
+wallpaper_file('file path here')
+```
+## Download image (from url)
+
+```python
+download_image('https://www.thebaconpug.com/css/img/background.jpg')
+```
+
