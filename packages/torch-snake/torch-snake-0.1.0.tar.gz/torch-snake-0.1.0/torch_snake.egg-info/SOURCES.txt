@@ -1,0 +1,9 @@
+README.md
+setup.py
+snake/__init__.py
+snake/activations.py
+torch_snake.egg-info/PKG-INFO
+torch_snake.egg-info/SOURCES.txt
+torch_snake.egg-info/dependency_links.txt
+torch_snake.egg-info/requires.txt
+torch_snake.egg-info/top_level.txt
