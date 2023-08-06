@@ -1,0 +1,17 @@
+setup.py
+mol_ellipsize.egg-info/PKG-INFO
+mol_ellipsize.egg-info/SOURCES.txt
+mol_ellipsize.egg-info/dependency_links.txt
+mol_ellipsize.egg-info/requires.txt
+mol_ellipsize.egg-info/top_level.txt
+molellipsize/__init__.py
+molellipsize/ellipsefitter.py
+molellipsize/molecule.py
+molellipsize/utilities.py
+tests/__init__.py
+tests/ellipsefitter/__init__.py
+tests/ellipsefitter/conftest.py
+tests/ellipsefitter/test_ellipsefitter.py
+tests/molecule/__init__.py
+tests/molecule/conftest.py
+tests/molecule/test_molecule.py
