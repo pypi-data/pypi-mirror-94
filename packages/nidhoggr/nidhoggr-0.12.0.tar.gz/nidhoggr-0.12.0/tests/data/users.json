@@ -1,0 +1,45 @@
+[
+  {
+    "uuid": "3388364d-4e96-4567-aaf9-3d113cdef2af",
+    "login": "Twilight",
+    "email": "twilight_sparkle@ponyville.eq",
+    "password": "12345",
+    "access": "f3d73280-1c6c-4545-b565-899ddf324ddf",
+    "client": "2f34064e-6e0b-422f-824a-ae442a3a8d92",
+    "properties": [
+      {
+        "name": "loves",
+        "value": "books"
+      }
+    ],
+    "textures": {
+      "SKIN": "https://server/feather.png"
+    }
+  },
+  {
+    "uuid": "0b6b2656-73fb-41ce-b116-c3c4cc5753c4",
+    "login": "Luna",
+    "email": "luna@canterlot.eq",
+    "password": "night",
+    "client": "ec391774-d89b-4332-ab05-cd9c2dbf8326",
+    "textures": {
+      "SKIN": "https://server/knight.png"
+    }
+  },
+  {
+    "uuid": "3ad95d5d-7986-4464-837f-dd6dd7444ed5",
+    "login": "CarrotTop",
+    "email": "carrot@ponymail.eq",
+    "password": "first_pie",
+    "properties": [
+      {
+        "name": "age",
+        "value": "26"
+      },
+      {
+        "name": "verified",
+        "value": "true"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+wheel==0.36.2
+pylint==2.6.0
+twine==3.3.0
+flake8==3.8.4
+Sphinx==3.4.3
+pytest==6.2.2
+pytest-cov==2.11.1
+pytest-runner==5.2
+coverage==5.4
+pytest-flask==1.1.0
+tox==3.21.4
+watchdog==1.0.2
