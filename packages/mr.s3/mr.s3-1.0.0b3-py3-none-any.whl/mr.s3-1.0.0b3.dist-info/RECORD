@@ -1,0 +1,10 @@
+mr_s3/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mr_s3/pull.py,sha256=XLH3ltqC2jfHnSGIuDTemNQ_kaKkFG0RF_E1PDoIzJU,778
+mr_s3/push.py,sha256=uYC9rp1NnIHhLuBhU46tyFNUArn_zSWezfyNXZD9aU4,1168
+mr_s3/router.py,sha256=IcjcZFP5VBWihMujRRngDlymHX0goxRV7wlxVDQs4Co,993
+mr.s3-1.0.0b3.dist-info/LICENSE,sha256=ZBMu_sF_uZXIZXtBTdy62_B9I91ilpjjL-9EDO_T58s,1064
+mr.s3-1.0.0b3.dist-info/METADATA,sha256=QSlRXN5aFSiaIEpAmBSvycnHQDpVpKqV4CnbuyvKND8,1221
+mr.s3-1.0.0b3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mr.s3-1.0.0b3.dist-info/entry_points.txt,sha256=Ttxyi0M_UuU-LMCTdZBoCYIGOozT0LO9N7B-2xvMktY,55
+mr.s3-1.0.0b3.dist-info/top_level.txt,sha256=7ed4Su0ZV1QIkC77IrTk-_6ODOuSPzF2dVnJXmKC2V8,6
+mr.s3-1.0.0b3.dist-info/RECORD,,

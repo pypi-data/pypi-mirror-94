@@ -1,0 +1,3 @@
+    [console_scripts]
+    mr.s3 = mr_s3.router:cli
+    
