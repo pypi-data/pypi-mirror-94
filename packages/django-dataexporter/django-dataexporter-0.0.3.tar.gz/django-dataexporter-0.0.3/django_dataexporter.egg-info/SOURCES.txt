@@ -1,0 +1,15 @@
+LICENSE.rst
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+django_dataexporter/__init__.py
+django_dataexporter/admin.py
+django_dataexporter/base.py
+django_dataexporter/csv.py
+django_dataexporter/excel.py
+django_dataexporter.egg-info/PKG-INFO
+django_dataexporter.egg-info/SOURCES.txt
+django_dataexporter.egg-info/dependency_links.txt
+django_dataexporter.egg-info/requires.txt
+django_dataexporter.egg-info/top_level.txt
