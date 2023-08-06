@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: chargebee-cli
+Version: 0.0.23
+Summary: cli for chargebee apis
+Home-page: UNKNOWN
+Author: Nandkishor bhasker
+Author-email: bhasker.nandkishor@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.9
+Requires-Dist: click
+Requires-Dist: pyfiglet
+Requires-Dist: colorama
+Requires-Dist: configparser
+Requires-Dist: tqdm
+Requires-Dist: tabulate
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: setuptools
+Requires-Dist: wheel
+
+# chargebee-cli chargebee-cli
+
+

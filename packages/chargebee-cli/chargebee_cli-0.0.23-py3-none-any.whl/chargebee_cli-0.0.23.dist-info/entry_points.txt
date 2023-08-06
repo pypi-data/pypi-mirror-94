@@ -1,0 +1,3 @@
+[console_scripts]
+cb = chargebeecli.__main__:main
+
