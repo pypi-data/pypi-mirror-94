@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: OpenQuestion
+Version: 0.0.9
+Summary: An open source survey platform written in Python.
+Home-page: https://github.com/Alcampopiano/OpenQuestion
+Author: Allan Campopiano
+Author-email: campopianoa@hcdsb.org
+License: BSD 3-clause
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: anvil-app-server
+Requires-Dist: mistune
+Requires-Dist: anvil-uplink
+Requires-Dist: bcrypt
+
+# OpenQuestion <a href="https://Alcampopiano.github.io/OpenQuestion/"><img align="right" src="https://github.com/Alcampopiano/OpenQuestion/blob/master/docs/docs/img/logow.png" height="50"></img></a>
+[![PyPI version](https://img.shields.io/pypi/v/OpenQuestion?style=flat-square)](https://pypi.org/project/OpenQuestion/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dw/OpenQuestion?style=flat-square)](https://pypistats.org/packages/OpenQuestion)
+[![license](https://img.shields.io/pypi/l/OpenQuestion?style=flat-square)](https://github.com/Alcampopiano/OpenQuestion/blob/master/LICENSE)
+
+An open source survey platform written in Python
+
+## Documentation
+:book: Please visit the [OpenQuestion documentation site](https://Alcampopiano.github.io/OpenQuestion/).
+
+## Citing OpenQuestion
+
+... coming soon
+
+
