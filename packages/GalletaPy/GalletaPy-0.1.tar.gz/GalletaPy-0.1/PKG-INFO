@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: GalletaPy
+Version: 0.1
+Summary: Paquete con código para ERIs
+Home-page: https://github.com/felipelewyee/galleta
+Author: Juan Felipe Huan Lew Yee
+Author-email: felipe.lew.yee@gmail.com
+License: UNKNOWN
+Description: # GALLETA
+        
+        Galleta es una libreria para el calculo de ERIs. Actualmente se encuentra en versión desarrollo.
+        
+        ## Autores
+        
+        Juan Felipe Huan Lew Yee
+        Alfonso Esqueda García
+        Jorge Martín del Campo Ramírez
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
