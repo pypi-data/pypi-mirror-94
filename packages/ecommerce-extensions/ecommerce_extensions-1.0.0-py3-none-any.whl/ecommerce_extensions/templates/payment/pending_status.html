@@ -1,0 +1,34 @@
+{% extends 'edx/base.html' %}
+{% load core_extras %}
+{% load currency_filters %}
+{% load i18n %}
+{% load django_markup %}
+{% load l10n %}
+{% load offer_tags %}
+{% load static %}
+{% load enterprise %}
+
+{% block content %}
+    {% if msg == "PENDING" %}
+        <div class="receipt container content-container">
+            <h2 class="thank-you">{% trans "Awaiting confirmation of payment." as tmsg %}{{ tmsg | force_escape }}</h2>
+            <div class="confirm-message">
+                Thank you, your order will be ready when the payment is confirmed.
+            </div>
+        </div>
+    {% elif msg == "DECLINED" %}
+        <div class="receipt container content-container">
+            <h2 class="thank-you">{% trans "Your payment has been declined." as tmsg %}{{ tmsg | force_escape }}</h2>
+            <div class="confirm-message">
+                There was a problem in validating your payment and it could not be done.
+            </div>
+        </div>
+    {% elif msg == "error" %}
+        <div class="receipt container content-container">
+            <h2 class="thank-you">{% trans "Error 404" as tmsg %}{{ tmsg | force_escape }}</h2>
+            <div class="confirm-message">
+                Order not found
+            </div>
+        </div>
+    {% endif %}
+{% endblock content %}
