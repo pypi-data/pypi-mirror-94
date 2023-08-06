@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: hassfeld
+Version: 0.2.0a2
+Summary: Integration of Raumfeld into Home Assistant
+Home-page: https://github.com/B5r1oJ0A9G/hassfeld
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Requires-Dist: aiohttp
+Requires-Dist: requests
+Requires-Dist: upnpclient
+Requires-Dist: xmltodict
+
+
+hassfeld
+========
+
+hassfeld is a module primarily aimed to integrated Teufel smart speaker (aka Raumfeld Multiroom) into https://www.home-assistant.io/.
+
+Look how it is to use::
+
+    import hassfeld
+    raumfeld_host = "teufel-host.example.com"
+    zone = [ "Living room", "Kitchen" ]
+    raumfeld = hassfeld.RaumfeldHost(raumfeld_host)
+    raumfeld.start_update_thread()
+    raumfeld.search_and_zone_play(zone, 'raumfeld:any contains "Like a Rolling Stone"')
+
+
+Features
+--------
+
+- Management and snapshot of zones.
+- Search and play songs.
+
+Install hassfeld by running::
+
+    python3 -m pip install hassfeld
+
+Contribute
+----------
+
+- Issue Tracker: https://github.com/B5r1oJ0A9G/hassfeld/issues
+- Source Code: https://github.com/B5r1oJ0A9G/hassfeld
+
+License
+-------
+
+The project is licensed under the GNU General Public License v3 (GPLv3).
+
+
+
+
