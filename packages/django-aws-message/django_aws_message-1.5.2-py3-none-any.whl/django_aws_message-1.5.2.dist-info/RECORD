@@ -1,0 +1,17 @@
+aws_message/VERSION,sha256=3tG2AegdMcofZcTzzPLr15krY5Dje8Kobzg3KC8eAM8,6
+aws_message/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_message/crypto.py,sha256=9iW08oJHe9qadgfOvcACqpdOfXF-0B4AYhODw2vBSqE,3769
+aws_message/gather.py,sha256=HSWyEWT5-Ko0Se1gl8iQULfBAaAf9o1uI_C90z04AJg,1716
+aws_message/message.py,sha256=RrKJ_mvYN6no_sMaM4QPRkteg10PGtFakKpP3XW-NrI,2801
+aws_message/mock_sqs.py,sha256=glBaNeV4RXaY7CTou_8FxCA6d9ntz5PPxDdob4HQWtk,3742
+aws_message/processor.py,sha256=mgXiC5BFF99Ru5EgU236A25QsMqkUDduzcC8Dfn9jjM,1688
+aws_message/sqs.py,sha256=Q36v_eqiwn89bQ8EIDmHu3nI-kHmAO_pPXu0pkLNSLE,2641
+aws_message/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_message/tests/test_message.py,sha256=sVGVVI8720mizAF1qG307bRJ_0ssyb8EqJOwlZYSQjs,4609
+aws_message/tests/test_processor.py,sha256=lKWQL97WjID9naWTckS2_jHCnEBLtIjzVA-B2ixOALg,2936
+aws_message/tests/test_sqs.py,sha256=VgqWAsJ8YE9OSgcWVIusgbr0MDUNyZLk3kzbZQyMj7g,2514
+django_aws_message-1.5.2.dist-info/LICENSE,sha256=xllut76FgcGL5zbIRvuRc7aezPbvlMUTWJPsVr2Sugg,11358
+django_aws_message-1.5.2.dist-info/METADATA,sha256=1EdIwpmR0ZK16dUK2DSvjF8A4SI013wzUN9Gd7wWSok,833
+django_aws_message-1.5.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_aws_message-1.5.2.dist-info/top_level.txt,sha256=khBrSEQCAjPb1oTrtRXDbM1Ct9I2sgjMwUhPa8wMYdQ,12
+django_aws_message-1.5.2.dist-info/RECORD,,

@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: django-aws-message
+Version: 1.5.2
+Summary: An application on which to build AWS SQS endpoints and SQS gatherers
+Home-page: https://github.com/uw-it-aca/django-aws-message
+Author: UW-IT AXDD
+Author-email: aca-it@uw.edu
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: Django (<3.2,>=2.1)
+Requires-Dist: boto3
+Requires-Dist: pycrypto
+Requires-Dist: oscrypto
+Requires-Dist: urllib3
+
+
+See the README on `GitHub
+<https://github.com/uw-it-aca/django-aws-message>`_.
+
+
