@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: pylim
+Version: 1.3.3
+Summary: Wrapper around morningstar commodity (LIM)
+Home-page: https://github.com/aeorxc/pylim
+Author: aeorxc
+License: UNKNOWN
+Project-URL: Source, https://github.com/aeorxc/pylim
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
