@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Random-Event
+Version: 0.1
+Summary: A python module made to generate random event at almost random time
+Home-page: UNKNOWN
+Author: mossyegghead01
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: schedule
+
+# random-event
+A python module made to make random event at almost random time based on interval and chance
+
+**Work In Progress**
+
