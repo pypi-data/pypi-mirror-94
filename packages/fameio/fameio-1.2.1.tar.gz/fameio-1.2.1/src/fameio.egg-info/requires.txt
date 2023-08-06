@@ -1,0 +1,6 @@
+pandas
+protobuf
+pyyaml
+
+[test]
+pytest
