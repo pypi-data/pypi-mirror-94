@@ -1,0 +1,3 @@
+[console_scripts]
+automapdb = automapdb.cli:main
+

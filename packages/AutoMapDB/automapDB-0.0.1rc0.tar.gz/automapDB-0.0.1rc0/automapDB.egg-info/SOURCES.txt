@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+automapDB.egg-info/PKG-INFO
+automapDB.egg-info/SOURCES.txt
+automapDB.egg-info/dependency_links.txt
+automapDB.egg-info/entry_points.txt
+automapDB.egg-info/not-zip-safe
+automapDB.egg-info/requires.txt
+automapDB.egg-info/top_level.txt
+automapdb/__init__.py
+automapdb/cli.py
+automapdb/db.py
+automapdb/mappings.py
+automapdb/table.py
+automapdb/utils.py

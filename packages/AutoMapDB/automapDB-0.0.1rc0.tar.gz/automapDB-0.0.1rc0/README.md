@@ -1,0 +1,171 @@
+# AutoMapDB
+*Automagically provides CRUD API to an arbitrary PostgreSQL database*
+
+## Getting Started
+### Prerequisites
+#### Dependencies
+* Python3 & pip
+* Postgres (10+) Client & Server Dev
+* GCC
+* libffi
+
+~~~bash
+apt install -y python3-pip gcc postgresql postgresql-server-dev-10
+# or
+pacman -S python3 python-pip gcc postgresql postgresql-libs libffi
+~~~
+
+#### Install
+
+~~~bash
+pip install automapdb
+~~~
+
+## Usage
+### From Shell
+#### Table Mappings
+Table Mappings are representations of Database Tables.
+They live in your `tables.json` and can be used to customize API and cli
+access to the database tables.
+
+To start, create a mapping for a table you'd like to CRUD on:
+
+```bash
+$ automapdb --connection_string=postgresql://i2b2:demouser@localhost:5433/i2b2 mapping add_all i2b2pm
+$ export PG_CONNECTION=postgresql://i2b2:demouser@localhost:5433/i2b2
+
+automapdb mapping add i2b2pm.pm_user_data
+```
+
+This creates an entry in your `tables.json`:
+```json
+{
+"i2b2pm.pm_user_data":  # Customizable name for your table (sql path by default)
+  {
+    "path": "i2b2pm.pm_user_data",  # SQL path to table (schema.table)
+    "get_args": ["user_id"],        # Reqired fields to select an entry (PRIMARY KEY fields)
+    "set_args": ["user_id"]         # Reqired fields to create/update an entry (NOT NULLABLE fields)
+}
+```
+
+To create a mapping to your own gusto, specify the database path and the field you'd like to change:
+```bash
+automapdb mapping update i2b2pm.pm_user_data --name=user --get_args=[user_id] --set_args=[user_id,full_name]
+```
+__Hint:__ You can omit the flags if you give the arguments in proper order
+
+Now have a look at what happened:
+
+```bash
+automapdb mapping show i2b2pm.pm_user_data
+```
+
+To customize the columns needed to create or select a table entry can be done by setting `get_args` and `set_args`:.
+By default the `get_args` are the PRIMARY KEY fields in the database, the `set_args` are NOT NULLABLE fields.
+
+To inspect the columns and see the columns, use `show_fields TABLE`:
+```bash
+automapdb mapping show_fields i2b2pm.pm_project_data
+```
+
+#### Table Operations
+`Usage: automapdb table TABLENAME [add|get|update|delete|list]`
+
+Basic CRUD operations:
+```bash
+automapdb table list user
+automapdb table add user testuser full_name "Test User" project_path "/test"
+automapdb table get user testuser
+automapdb table update user testuser email user@example.org
+automapdb table delete user testuser
+```
+
+Show info on table columns from database:
+```bash
+python automapdb/cli.py table list_fields users
+```
+
+### From Python
+```python
+from automapdb.db import AutoMapDB
+from automapdb.mappings import TableMappings
+from automapdb.table import TableManager
+
+# Create AutoMapDB
+connection_string = "postgresql://i2b2:demouser@localhost:5433/i2b2"
+db = AutoMapDB(connection_string)
+
+# Create mappings for Tables
+mappings = TableMappings(db)
+mappings.add_all("i2b2pm")
+# Change mapping shortcut
+mappings.update("i2b2pm.pm_project_data", name="project")
+
+# Create TableManager object
+manager = TableManager(db)
+
+# List rows in Table project (=i2b2pm.pm_project_data)
+projects = manager.list("project", fields=["project_id", "project_path", "status_cd"])
+
+# Iterate over rows
+for project in projects:
+    print(project)
+
+    # Get row data
+    if project["status_cd"] == "D":
+
+        # Update data in row
+        manager.update("project", project["project_id"], project["project_path"], "status_cd", "A")
+```
+
+### Help
+The cli is built around [Fire](https://github.com/google/python-fire),
+therefore you can ask for help at any point simply by firing off your command:
+
+`$ automapdb table`
+```bash
+> COMMANDS
+>     COMMAND is one of the following:
+>      add
+>        Add row to table, with args mapped to the tables not_nullable fields
+>      delete
+>        Delete row from table
+>      get
+>        Query database for one/multiple rows. Use args to provide the primary keys
+>      list
+>        Open query to table with kwargs as WHERE filters
+>      list_fields
+>        Shows the name, datatype, primary_key and nullable flags for the columns of given Table
+>      query
+>        Construct raw SQL query for a table.
+>      update
+>        Update row with args mapped to the tables not_nullable fields
+```
+
+`$ automapdb table add i2b2pm.pm_user_data`
+```bash
+> ERROR: ERROR: Missing fields: 'user_id'
+> Usage: i2b2fire add i2b2pm.pm_user_data 'user_id' ['full_name'|'password'|'email'|'project_path']
+```
+
+### Development
+```bash
+pip install -r requirements.dev.txt
+pre-commit install
+pre-commit install --hook-type commit-msg
+```
+
+#### Test
+Start the i2b2 postgres backend:
+```bash
+docker run -p 5433:5432 i2b2/i2b2-pg:p1
+```
+
+Run tests:
+```bash
+python -m pytest --cov=automapdb
+```
+
+## LICENSE
+&copy; 2020 - 2021 [Fabian Thomczyk](https://www.uniklinik-freiburg.de/imbi/mitarbeiter.html?imbiuser=thomczyk) and [Raphael Scheible](https://www.uniklinik-freiburg.de/imbi/mitarbeiter.html?imbiuser=scheiblr), Faculty of Medicine, University of Freiburg  
+Released under the LGPL License.
