@@ -1,0 +1,8 @@
+numpy
+kubernetes
+packaging
+requests
+pydantic
+cloudpickle
+python-rclone
+seldon-deploy-sdk
