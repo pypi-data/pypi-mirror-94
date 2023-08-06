@@ -1,0 +1,9 @@
+pyproject.toml
+setup.cfg
+setup.py
+StringAnalysis/__init__.py
+StringAnalysis/string_analysis.py
+gabriel_take_string.egg-info/PKG-INFO
+gabriel_take_string.egg-info/SOURCES.txt
+gabriel_take_string.egg-info/dependency_links.txt
+gabriel_take_string.egg-info/top_level.txt
