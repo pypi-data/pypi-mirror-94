@@ -1,0 +1,157 @@
+CHANGES
+=======
+
+v0.2.11
+-------
+
+* remove debug output
+
+v0.2.10
+-------
+
+* remove empty line
+
+v0.2.9
+------
+
+* allow oldstyle keys
+
+v0.2.8
+------
+
+* add support for finding registries of one service
+* remove unused lsdf\_service paramter
+* change -f, -e, -c
+* add get\_list\_of\_registrations\_in\_service
+* improve config argument handling
+* also catch simplejson decode errors
+* extensify registry display
+
+v0.2.7
+------
+
+* improve output
+* make sure there is a default parameter
+*  Add installation information
+* Add configuration information
+
+v0.2.6
+------
+
+* remove error on empty cmdline
+
+v0.2.5
+------
+
+* remove trailing\\n
+
+v0.2.4
+------
+
+* add information about registry status
+* add information about registry status
+* add reference to email
+* split on the last "@" not on "@https", to be aligned with code in feudalAdapterLDF
+* sub and iss splited by "@https://" instead of just "@"
+* Unittest fixed with expected external\_id return
+* Rename of test class by BWidmMethods
+* rename of "external\_id" functions -> "username"
+* small fix on test-offline, external\_id\_from\_subiss should return, not print & exit
+* More unittest added (including an egi subiss)
+* First unittest using 'test-offline' sub\_iss
+* First unittest draft
+* gitignore added vscode exceptions
+* deduplicate paths
+
+v0.2.3
+------
+
+* catch PermissionError
+
+v0.2.2
+------
+
+* renaming for setuptools
+
+v0.2.1
+------
+
+* breaking the list
+* add many commandline options for bwidm-tool
+* reorganise cmdline
+* add several calls agains regApp; Naming is not quite ideal
+* add code for logging url
+* Classes to capture and visualise users grups and registry
+* swiss army knife
+* add bwidm-tool
+* overview of regapp endpoints
+* catch ugly exception in case username is no sub@iss
+
+v0.1.12
+-------
+
+* cleaner error handling
+* ignore build
+
+v0.1.11
+-------
+
+* dont return sshkeys, but zero; return key output to the original place
+* fix error messages on root login
+
+v0.1.10
+-------
+
+* add logfile; show ssh-keys at a different place
+
+v0.1.9
+------
+
+* add configargparse
+
+v0.1.8
+------
+
+* allow \_ and - in config file name
+
+v0.1.7
+------
+
+* chck if config fiel was found
+
+v0.1.6
+------
+
+* add missing load and test routines
+
+v0.1.5
+------
+
+* check for the existence of config file entries and exit gracefully
+
+v0.1.4
+------
+
+* rename for the sake of setuptools
+
+v0.1.3
+------
+
+* - -> \_
+
+v0.1.2
+------
+
+* add ssh-key-retriever
+
+v0.1.1
+------
+
+* remove unnecessary imports
+
+v0.1
+----
+
+* cleanup; restructure; ensure base functionality is preserved
+* initial
+* initial
