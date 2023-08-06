@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: odoo13-addons-oca-server-auth
+Version: 13.0.20210208.0
+Summary: Meta package for oca-server-auth Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo13-addon-auth-api-key
+Requires-Dist: odoo13-addon-auth-from-http-remote-user
+Requires-Dist: odoo13-addon-auth-ldaps
+Requires-Dist: odoo13-addon-auth-oauth-multi-token
+Requires-Dist: odoo13-addon-auth-session-timeout
+Requires-Dist: odoo13-addon-auth-signup-verify-email
+Requires-Dist: odoo13-addon-auth-user-case-insensitive
+Requires-Dist: odoo13-addon-base-user-show-email
+Requires-Dist: odoo13-addon-password-security
+Requires-Dist: odoo13-addon-users-ldap-mail
+
+UNKNOWN
+
+
