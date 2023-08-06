@@ -1,0 +1,17 @@
+_FaustCorePy.cp37-win_amd64.pyd,sha256=M3FImsOFolxsRfsaRRk2UlL3G6w2yBdAdf8lxgf4Wlk,4802560
+pyfaust/__init__.py,sha256=v680IPzVv7l8YBRdX-R2OgtrlJZn2FnasV-jhy0564Y,117709
+pyfaust/datadl.py,sha256=K3dWrVd5Gp3yDQ-7La_WM5_wM7RyVVvNuw0XnPT_rpk,2288
+pyfaust/demo.py,sha256=UU8QwyXCXbZHFEEjde8dANkUZ4lICo6xK9OoXnSkKcc,41719
+pyfaust/fact.py,sha256=Bir_8t8fZnGZ-toMYXy9VZwuP_hxGZ9sQuP7uDnfYp0,28765
+pyfaust/factparams.py,sha256=ho3Cppk6bGTs3SvIes5h7PUbTLIRei5RhAmXegK39EA,60474
+pyfaust/license.txt,sha256=f0VCuIEiXKBTcgVoH1Dfb5uBWpQEEWB6Ghhz9opWt2w,1796
+pyfaust/license_hdf5.txt,sha256=6nXHBoKT38mDl53kv-geA_Jcz1vDmjrCPjKV8Soa_08,4765
+pyfaust/license_matio.txt,sha256=CYeSUJ0oLMnFm5pBWJl5u2-hKMBaxTQ_8ZJOhQuFJYc,1355
+pyfaust/license_zlib.txt,sha256=HH8TD7w2s06tR6G86aPpGS8RGYlJuRjcG0jMNa2657U,1134
+pyfaust/proj.py,sha256=5DF-4EBKWR3hwNvlt4ZdsomFYLAUZ-IJTGNMXr3pUJQ,26592
+pyfaust/tools.py,sha256=EDYRwtKNPB5y5_zbX3eiXGr_v9uU1vZtu6y53lZ9Nec,11300
+pyfaust/lib/gm.dll,sha256=e4yK8ZA9FMoLQttmsFL9_137XK-rErpoRZNCiLZ-Hoc,1413120
+pyfaust-3.0.5.dist-info/METADATA,sha256=1EoWsCylJw5cbHNWylMPgPcgNVYq8AwHOHRuP9oSY18,978
+pyfaust-3.0.5.dist-info/WHEEL,sha256=g8eocn77V_iXxq9laUIPSuxdwRHlhOsH3tLpu1uKUvQ,106
+pyfaust-3.0.5.dist-info/top_level.txt,sha256=RjmJjXT53_-9yoDGPug20s4pRwQOVbgN4u5z2o7w9KU,21
+pyfaust-3.0.5.dist-info/RECORD,,
