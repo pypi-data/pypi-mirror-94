@@ -1,0 +1,16 @@
+vanqc/__init__.py,sha256=U8xn-e6irsyJc_gpJggZii_S8LthbPjtGbe1V2nUkWU,47
+vanqc/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vanqc/cli/main.py,sha256=qBeo1TbP5MYoQuCNYTBLhjTcPneFExfOpcXvA-nHj9g,12031
+vanqc/task/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vanqc/task/bcftools.py,sha256=aKX8DkkH7-hpPKVkE9hfoROjLE7_ECB-B_KMMzSMftE,4168
+vanqc/task/core.py,sha256=b25-IPdSd5QiKl4X4oOU-wtDEzWeop0OVgwAjCSwlCg,1539
+vanqc/task/gatk.py,sha256=c51DfFfRo4A5oY2VArDZIAvLKVt5BdXYLHuoFOiL2aA,7703
+vanqc/task/picard.py,sha256=vsqqzCP6M7eoQJAKyeDG2lUDLGceLfNWqlzay-1jV4w,2469
+vanqc/task/snpeff.py,sha256=CfUuWFVS2awor-6kqJYUd2qCFeiwothexsslXtA5cgg,5050
+vanqc/task/vep.py,sha256=i4TCq5_tEqQueemLXNbG6iAy2ldo0RUO9egXGkvKCHI,4522
+vanqc-0.1.0.dist-info/LICENSE,sha256=aUFtAH4eaz98FbGfa7zq5q-BrbXOq1lPX9Y8CC5eudw,1073
+vanqc-0.1.0.dist-info/METADATA,sha256=YWEe5Ct2v0tVSOQ9VmqLmKmdWJ86czoObQ9fMMmWeV8,2700
+vanqc-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vanqc-0.1.0.dist-info/entry_points.txt,sha256=j4QQOFu9yPEAOp9bSUeuZcNMrwj3h_680I0_NYSHF7s,47
+vanqc-0.1.0.dist-info/top_level.txt,sha256=PwXfulzCuRpyQYSbN6zoMnTs53eW4PwddBDwdaBUIXU,6
+vanqc-0.1.0.dist-info/RECORD,,

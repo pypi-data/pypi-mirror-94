@@ -1,0 +1,3 @@
+[console_scripts]
+vanqc = vanqc.cli.main:main
+
