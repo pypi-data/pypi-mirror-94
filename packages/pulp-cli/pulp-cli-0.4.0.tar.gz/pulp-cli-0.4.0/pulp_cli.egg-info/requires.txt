@@ -1,0 +1,8 @@
+click
+packaging
+PyYAML
+requests
+toml
+
+[pygments]
+pygments
