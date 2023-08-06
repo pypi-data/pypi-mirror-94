@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: yandexdirectpy
+Version: 1.1.8
+Summary: UNKNOWN
+Home-page: https://github.com/Kriptos1834/py-yandexdirect/
+Author: Kriptos
+Author-email: kriptos1834@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pandas
+Requires-Dist: colorama
+Requires-Dist: requests
+Requires-Dist: xmltodict
+
+Description
+===========
+
+Yandexdirect API.
+
