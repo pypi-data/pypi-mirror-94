@@ -1,0 +1,14 @@
+desktop_notifier/__init__.py,sha256=4By2YnRMypl6rPGZo0QypTljxTrlipwEjbUXSkjNMww,199
+desktop_notifier/base.py,sha256=oj3cNJ6Kf4NA8YtSgZQAg17yd6RLdjhB9IAAZ_t_9Lc,9239
+desktop_notifier/dbus.py,sha256=zR0jH0H5DjoTNk1JBym5ODcBwG1NFhpF0Exa1FgzBGY,8694
+desktop_notifier/dummy.py,sha256=bsQWqyRrqivUEV78pG0w29Zrg7YBJVyZuE-Nl3Pb6-8,1359
+desktop_notifier/macos.py,sha256=irM2xzhk0irg1zDpNupkaSdWMJKKTgHhBQ1tiseDv3E,14165
+desktop_notifier/macos_legacy.py,sha256=NKRhwk-Dw973KsSrm5PBoV0muTrsGJa7MkFYVGSyYko,5691
+desktop_notifier/main.py,sha256=4EIee5xhYhMVu3G-a4XdBNYEzun3LojUs0DZl23Q9TM,9194
+desktop_notifier/resources/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+desktop_notifier/resources/python.png,sha256=guP0M4b6dnprPLnl-ery8skP3Ot32jjJOMYebZ5G3Ss,5526
+desktop_notifier-2.0.4.dist-info/LICENSE,sha256=NpXk4SuT80v8umQM93FjKztlrUPp5qhN7tbI3Ek-I4s,1069
+desktop_notifier-2.0.4.dist-info/METADATA,sha256=a0YjdWMB9Ak02OJLsgeZ9lonFBo-ESq8Mm86s8yEpFA,6376
+desktop_notifier-2.0.4.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+desktop_notifier-2.0.4.dist-info/top_level.txt,sha256=Su2Hgb-H69rVamhdu7qvs_HlQ4rvrjegtlAyAfCYyTM,17
+desktop_notifier-2.0.4.dist-info/RECORD,,
