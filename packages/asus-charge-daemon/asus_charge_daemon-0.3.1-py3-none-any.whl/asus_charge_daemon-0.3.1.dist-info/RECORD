@@ -1,0 +1,14 @@
+LICENCE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+asuscharged/__init__.py,sha256=_A5NQgbLtbXT3GSnDXm6lieS497zbuecoTUerJOBajE,1074
+asuscharged/__main__.py,sha256=WSZfJ1JN7ZJ8NQPsPh8AbtXDhTqsTHm_kydIAJFMyOA,8746
+asuscharged/config.py,sha256=Xj81We_BI_0VNeTAfPQDt8iKAb-OJqOi0XXk69iAQwA,659
+asuscharged/notify.py,sha256=NKwaAEeqBCaIiUEGJKhLPyGoahF6k3PHUcSzS26LFD8,4372
+data/asuscharged.service,sha256=jdtpGgck4zWyH1CkAz6m1Gs1iszcHiHA4av61qsjsOE,354
+data/ca.cforrester.AsusChargeDaemon1.conf,sha256=mmSXhy6PFD59dk7jbE3vDJcAaJPEg6BrGzO1j8Zly9E,947
+data/ca.cforrester.AsusChargeDaemon1.service,sha256=9Dx7yLHDPvJviAUxGpohSF7LdENqQf82NYSIYf2ADBo,124
+data/ca.cforrester.AsusChargeDaemon1.xml,sha256=69rCXts7wm9vYgiJLdUruHRlvccS9QWIFDf1JMzynN8,847
+install.py,sha256=8gBorkib87vTDAI_TGJHYvNjBrMHJ-leTkT02IktvPI,5220
+asus_charge_daemon-0.3.1.dist-info/entry_points.txt,sha256=npGC2XzTKNI0E7_1qzmjFRPp2RNiV-GiFSq_BqyEd7o,57
+asus_charge_daemon-0.3.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+asus_charge_daemon-0.3.1.dist-info/METADATA,sha256=Vxxh9TjWOYH5EGQXsOI66lmrYkZNepRXmVGfHTV0594,3833
+asus_charge_daemon-0.3.1.dist-info/RECORD,,
