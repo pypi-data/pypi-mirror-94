@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: coroflow
+Version: 3.2.3
+Summary: Asynchronous pipeline builder
+Home-page: https://github.com/dewaldabrie/coroflow/
+Keywords: asyncio,pipelines,fast,threads,airflow,coroutines
+Author: Dewald Abrie
+Author-email: dewaldabrie@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: anytree (>=2.8.0,<3.0.0)
+Project-URL: Documentation, https://coroflow.readthedocs.io/en/latest/
+Project-URL: Issues, https://github.com/dewaldabrie/coroflow/issues
+Project-URL: Repository, https://github.com/dewaldabrie/coroflow/
+Description-Content-Type: text/markdown
+
+# Coroflow
+
+This is a library for building asynchronous coroutine-based pipelines in Python.
+Useful features include:
+
+* pass data between tasks with queues
+* Connect stages of the pipeline with fanout/fanin patterns or load-balancer patterns
+* mix in blocking taks, coroflow will run it in threads
+* has an apache ariflow like api for connecting tasks
+
+
