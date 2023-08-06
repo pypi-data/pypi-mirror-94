@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        :root {
+            --table_border_color: darkgray;
+            --table_background_color_even: lightgrey;
+        }
+
+        #submission_file {
+            width: 95%;
+            max-width: 95%;
+            top: 20px;
+            margin: auto;
+            text-align: center
+        }
+
+        #submission_metadata {
+            width: 95%;
+            max-width: 95%;
+            top: 20px;
+            margin: auto;
+            text-align: center
+        }
+
+        #submission_description {
+            width: 80%;
+            max-width: 600px;
+            top: 20px;
+            margin: auto;
+            text-align: justify;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid var(--table_border_color);
+        }
+
+        table th {
+            padding: 2px;
+            border: 2px solid var(--table_border_color);
+            text-align: center;
+        }
+
+        table td {
+            padding: 2px;
+            border: 1px solid var(--table_border_color);
+        }
+
+        .overflow {
+            overflow: hidden;
+            white-space: normal;
+        }
+
+        #submission_metadata table {
+            width: 300px;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        #submission_metadata .value {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: center"><h2>{{ submission["TITLE"] }}</h2></div>
+<div id="submission_file">
+    {% if not submission["FILESAVED"] %}
+        Submission has no file
+    {% elif submission["FILEEXT"].lower() in ("jpg", "jpeg", "png", "gif") %}
+        <a href="/submission/{{ submission["ID"] }}/file/{{ submission["ID"] }}.{{ submission["FILEEXT"] }}">
+            <img src="/submission/{{ submission["ID"] }}/file/{{ submission["ID"] }}.{{ submission["FILEEXT"] }}"
+                 alt=""
+                 onerror="$('submission_file').innerText = 'File not found'"
+                 onload="$('download_file').disabled = false">
+        </a>
+    {% elif submission["FILEEXT"].lower() in ("mp3", "wav", "mid") %}
+        <audio src="/submission/{{ submission["ID"] }}/file/{{ submission["ID"] }}.{{ submission["FILEEXT"] }}"
+               onload="$('download_file').disabled = false"
+               controls>
+            File not found
+        </audio>
+    {% elif submission["FILEEXT"].lower() == "txt" %}
+        <object data="/submission/{{ submission["ID"] }}/file/{{ submission["ID"] }}.{{ submission["FILEEXT"] }}"
+                type=""
+                style="width: 100%; max-width: 600px; text-align: justify; height: 300px; border: 1px solid black"
+                onload="$('download_file').disabled = false">
+            File not found
+        </object>
+    {% else %}
+        <a href="/submission/{{ submission["ID"] }}/file/{{ submission["ID"] }}.{{ submission["FILEEXT"] }}"
+           style="border: 1px solid black; padding: 3px">
+            Submission.{{ submission["FILEEXT"] }}
+        </a>
+    {% endif %}
+</div>
+<br>
+<div id="submission_metadata">
+    <table style="max-width: 300px">
+        <tr>
+            <td>Author</td>
+            <td class="overflow value"><a href="/user/{{ submission["AUTHOR"] }}">
+                {{ submission["AUTHOR"] }}
+            </a></td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td class="overflow value">{{ submission["DATE"] }}</td>
+        </tr>
+        <tr>
+            <td>Tags</td>
+            <td class="overflow value">
+                {% for tag in submission["TAGS"].split(",") %}
+                    {% if tag != "" %}
+                        <a href='/search/submissions/?tags=%25{{ tag }}%25'>{{ tag }}</a>
+                    {% endif %}
+                {% endfor %}
+            </td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td class="overflow value"><a href="/search/submissions/?category=%25{{ submission["CATEGORY"] }}%25">
+                {{ submission["CATEGORY"] }}
+            </a></td>
+        </tr>
+        <tr>
+            <td>Species</td>
+            <td class="overflow value"><a href="/search/submissions/?species=%25{{ submission["SPECIES"] }}%25">
+                {{ submission["SPECIES"] }}
+            </a></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td class="overflow value"><a href="/search/submissions/?gender=%25{{ submission["GENDER"] }}%25">
+                {{ submission["GENDER"] }}
+            </a></td>
+        </tr>
+        <tr>
+            <td>Rating</td>
+            <td class="overflow value"><a href="/search/submissions/?rating=%25{{ submission["RATING"] }}%25">
+                {{ submission["RATING"] }}
+            </a></td>
+        </tr>
+    </table>
+    <br>
+    <form action="/submission/{{ submission["ID"] }}/file/{{ submission["ID"] }}.{{ submission["FILEEXT"] }}">
+        <button id="download_file" type="submit"
+                {{ "disabled" if (submission["FILESAVED"] and submission["FILEEXT"]) or not submission["FILESAVED"] }}>
+            Download File
+        </button>
+    </form>
+    <form action="/submission/{{ submission["ID"] }}/zip/submission-{{ "{0:010}".format(submission["ID"]) }}.zip">
+        <button type="submit">Download Submission as ZIP</button>
+    </form>
+    <form action="https://www.furaffinity.net/view/{{ submission["ID"] }}">
+        <button type="submit">Open on Fur Affinity</button>
+    </form>
+    <form id="prevNext" action="">
+        <button type="submit" onclick="this.form.action='/submission/{{ next }}'" {{ "disabled" if not next }}>
+            Next
+        </button>
+        <button type="submit" onclick="this.form.action='/submission/{{ prev }}'" {{ "disabled" if not prev }}>
+            Prev
+        </button>
+    </form>
+</div>
+<br><br>
+<div id="submission_description">
+    {% autoescape false %}
+    {{ submission["DESCRIPTION"].replace("https://www.furaffinity.net/", "/").replace("http://www.furaffinity.net/", "/") }}
+    {% endautoescape %}
+</div>
+<script>
+    const $ = (id) => document.getElementById(id)
+    window.onload = () => {
+        const dpi = Number(window.devicePixelRatio || 1)
+        if (dpi <= 1) return
+        document.getElementById("submission_description").style.maxWidth = `${600 * (dpi / Math.floor(dpi))}px`
+    }
+</script>
+</body>
+</html>

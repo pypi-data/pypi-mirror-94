@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        :root {
+            --table_border_color: darkgray;
+            --table_background_color_odd: white;
+            --table_background_color_even: lightgrey;
+        }
+
+        body > h2 {
+            text-align: center;
+        }
+
+        #search_form {
+            width: 95%;
+            top: 20px;
+            margin: auto;
+            text-align: center
+        }
+
+        #search_fields {
+            width: 40%;
+            top: 20px;
+            margin: auto;
+            text-align: left
+        }
+
+        #header, #footer {
+            width: 95%;
+            top: 20px;
+            margin: auto;
+            text-align: center
+        }
+
+        td.col1 {
+            width: 90px;
+        }
+
+        td.col2 {
+            width: available;
+        }
+
+        td.col3 {
+            width: 25px;
+            text-align: center;
+        }
+
+        td a.celllink {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a.nocolor {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        td img {
+            display: block;
+            margin: auto;
+            object-fit: contain;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .hover_highlight:hover {
+            background-blend-mode: multiply;
+            background-color: cyan;
+        }
+
+        .hover_underline:hover {
+            text-decoration: underline;
+        }
+
+        #search_results table.results_list {
+            border-collapse: collapse;
+            border: 1px solid var(--table_border_color);
+            width: 95%;
+            max-width: 95% !important;
+            top: 20px;
+            margin: auto;
+        }
+
+        #search_results table.results_list td {
+            border: 1px solid var(--table_border_color);
+        {% if table == "submissions" %}
+            height: 50px;
+            min-height: 50px;
+            max-height: 50px;
+        {% endif %}
+            text-align: center;
+            vertical-align: center;
+        }
+
+        #search_results table.results_list td span {
+            padding: 2px;
+        }
+
+        #search_results table.results_list th {
+            padding: 2px;
+            border: 2px solid var(--table_border_color);
+            text-align: center;
+            vertical-align: center;
+        }
+
+        #search_results table.results_list td.id {
+            width: 80px;
+            min-width: 80px;
+            max-width: 80px;
+        }
+
+        #search_results table.results_list td.author, #search_results table.results_list td.username {
+            width: 190px;
+            min-width: 190px;
+            max-width: 190px;
+        }
+
+        #search_results table.results_list td.date {
+            width: 90px;
+            min-width: 90px;
+            max-width: 90px;
+        }
+
+        #search_results table.results_list td.title {
+            min-width: 50px;
+            max-width: available;
+            text-overflow: clip;
+            text-align: left;
+        }
+
+        #search_results table.results_list td.folders {
+            max-width: 300px;
+        }
+
+        #search_results table.results_list th.thumbnail {
+            background: var(--table_background_color_odd);
+            border: none;
+        }
+
+        #search_results table.results_list td.thumbnail {
+            width: 100px;
+            min-width: 100px;
+            max-width: 100px;
+        }
+
+        #search_results table.results_list tr.odd {
+            background-image: linear-gradient(0deg, var(--table_background_color_odd), var(--table_background_color_odd));
+        }
+
+        #search_results table.results_list tr.even {
+            background-image: linear-gradient(0deg, var(--table_background_color_even), var(--table_background_color_even));
+        }
+
+        #search_results div.results_grid {
+            width: 96%;
+            top: 20px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            align-content: center;
+        }
+
+        #search_results div.results_grid div.grid_item {
+            padding: 15px;
+            max-width: 250px;
+            text-align: center;
+        }
+
+        #header button, #footer button {
+            position: relative;
+            top: 10px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+{% set table_short %}{{ table[:-1] }}{% endset %}
+<h2>{{ title }}</h2>
+<form id="search_form" action="">
+    <table id="search_fields">
+        <tr>
+            <td colspan="3" style="text-align: center">
+                <button type="button" onclick="addSearchField()">Add Field</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <hr style="width: 100%">
+            </td>
+        </tr>
+        <tr>
+            <td class="col1"><label for="sort_field">Sort by</label></td>
+            <td class="col2"><select id="sort_field" name="sort" style="width: 100%;">
+                {% for col in columns_table if col.lower() != "any" %}
+                    <option {{ "selected" if sort == col.lower() }} value="{{ col.lower() }}">
+                        {{ col.title() if col|length > 2 else col.upper() }}
+                    </option>
+                {% endfor %}
+            </select></td>
+            <td class="col3"></td>
+        </tr>
+        <tr>
+            <td class="col1"><label for="order_field">Order</label></td>
+            <td class="col2"><select id="order_field" name="order" style="width: 100%;">
+                <option {{ "selected" if order == "asc" }} value="asc">Ascending</option>
+                <option {{ "selected" if order == "desc" }} value="desc">Descending</option>
+            </select></td>
+            <td class="col3"></td>
+        </tr>
+        <tr {{ "hidden" if not allow_view else "" }}>
+            <td class="col1"><label for="view">View</label></td>
+            <td class="col2"><select id="view" name="view" style="width: 100%;" onchange="changeView(this.value)">
+                <option {{ "selected" if view == "list" or not allow_view }} value="list">List</option>
+                <option {{ "selected" if view == "grid" and allow_view }} value="grid">Grid</option>
+            </select></td>
+            <td class="col3"></td>
+        </tr>
+    </table>
+    <br>
+    <button type="submit" onclick="this.form.action = window.location.pathname">Search</button>
+</form>
+<br>
+{% if results or params %}
+<div id="header">
+    {% set navigation %}
+    Results: {{ offset }}-{{ offset + results|length }} of {{ results_total }} · Page {{ page }}
+    <br>
+    <button type="submit" form="search_form" name="page" value="1" {{ 'disabled' if page == 1 }}>
+        First
+    </button>
+    <button type="submit" form="search_form" name="page" value="{{ page - 1 }}" {{ 'disabled' if page == 1 }}>
+        Prev
+    </button>
+    <button type="button" onclick="window.location = '/search/{{ table }}'">New Search</button>
+    <button type="submit" form="search_form" name="page"
+            value="{{ page + 1 }}" {{ 'disabled' if offset + limit >= results_total }}>
+        Next
+    </button>
+    <button type="submit" form="search_form" name="page" value="-1" {{ 'disabled' if offset + limit >= results_total }}>
+        Last
+    </button>
+    {% endset %}
+    {{ navigation }}
+    <br>&nbsp;<br>
+</div>
+{% endif %}
+{% if results %}
+    <div id="search_results" style="text-align: center">
+        <table id="results_table_list"
+               class="results_list" {{ "" if view == "list" or not allow_view else "style=\"display: none\""|safe }}>
+            <tr class="even">
+                {% for column in columns_results %}
+                    <th class="{{ column.lower() }}">{{ column }}</th>
+                {% endfor %}
+                {% if thumbnails %}
+                    <th class="thumbnail"></th>
+                {% endif %}
+            </tr>
+            {% for item in results %}
+                <tr class="hover_highlight clickable {{ loop.cycle('odd', 'even') }}">
+                    {% for column in columns_results %}
+                        <td class="{{ column.lower() }} {{ 'hover_underline' if column == "AUTHOR" }}">
+                            {% if column == "AUTHOR" %}
+                                <a class="celllink" href="/user/{{ item[column] }}">
+                                    <span>{{ item[column] }}</span>
+                                </a>
+                            {% else %}
+                                <a class="celllink" href="/{{ table_short }}/{{ item[column_id] }}">
+                                    <span>{{ " ".join(item[column].split(",")) if column in columns_list else item[column] }}</span>
+                                </a>
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                    {% if thumbnails %}
+                        <td class="thumbnail">
+                            <a class="celllink" href="/{{ table_short }}/{{ item[column_id] }}">
+                                <img class="lazy"
+                                     style="max-width: 100px; max-height: 50px"
+                                     src="/static/loading.gif"
+                                     data-src="/{{ table_short }}/{{ item[column_id] }}/thumbnail/100x50/" alt=""
+                                     onerror="this.parentNode.removeChild(this)">
+                            </a>
+                        </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+        <div id="results_table_grid" class="results_grid"
+             style="display: {{ "flex" if view == "grid" and allow_view else "none" }}">
+            {% if allow_view %}
+                {% for item in results %}
+                    <div class="grid_item">
+                        {% if thumbnails %}
+                            <a class="nocolor" href="/{{ table_short }}/{{ item[column_id] }}">
+                                <img class="lazy" alt=""
+                                     style="max-width: 200px; max-height: 200px"
+                                     src="/static/loading.gif"
+                                     data-src="/{{ table_short }}/{{ item[column_id] }}/thumbnail/200/"
+                                     onerror="this.parentNode.removeChild(this)">
+                            </a>
+                            <br>
+                        {% endif %}
+                        <b><a class="nocolor" href="/{{ table_short }}/{{ item[column_id] }}">
+                            <span>{{ item["TITLE"] }}</span>
+                        </a></b>
+                        <br>
+                        <i>by</i>&nbsp;
+                        <a class="nocolor hover_underline"
+                           href="/user/{{ item["AUTHOR"] }}">
+                            <span>{{ item["AUTHOR"] }}</span>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <br>
+    <div id="footer">
+        {{ navigation }}
+        <br>&nbsp;<br>
+    </div>
+{% endif %}
+<script async>
+    const $ = (id) => document.getElementById(id)
+    const addSearchField = (fieldType = null) => {
+        let table = $("search_fields")
+
+        let row = table.insertRow(table.rows.length - 5)
+        let col1 = row.insertCell(0)
+        let col2 = row.insertCell(1)
+        let col3 = row.insertCell(2)
+
+        col1.classList.add("col1")
+        col2.classList.add("col2")
+        col3.classList.add("col3")
+
+        let fieldSelect = col1.appendChild(document.createElement("select"))
+        columns.forEach(([c, C]) => {
+            let o = document.createElement("option")
+            o.name = c
+            o.text = C
+            if (fieldType === o.name) o.selected = true
+            fieldSelect.options.add(o)
+        })
+
+        let fieldInput = col2.appendChild(document.createElement("input"))
+        fieldInput.type = "text"
+        fieldInput.name = fieldSelect.options[fieldSelect.selectedIndex].name
+        fieldInput.classList.add("search_field")
+        fieldInput.style.width = "100%"
+
+        let fieldRemove = col3.appendChild(document.createElement("button"))
+        fieldRemove.textContent = "-"
+        fieldRemove.type = "button"
+        fieldRemove.onclick = () => table.deleteRow(row.rowIndex)
+
+        fieldSelect.onchange = () => fieldInput.name = fieldSelect.options[fieldSelect.selectedIndex].name
+
+        return fieldInput
+    }
+    const changeView = (view) => {
+        if (view === "list") {
+            $("results_table_list").style.display = ""
+            $("results_table_grid").style.display = "none"
+        } else if (view === "grid") {
+            $("results_table_list").style.display = "none"
+            $("results_table_grid").style.display = "flex"
+        }
+        const url = new URL(window.location.href)
+        url.searchParams.set("view", view)
+        window.history.replaceState({}, document.title, url.href)
+    }
+    const lazyLoad = (element, container) => {
+        const bounding = container.getBoundingClientRect()
+        if (element.loaded ||
+            (bounding.top >= 0 && bounding.top <= (window.innerHeight || document.documentElement.clientHeight)) ||
+            (bounding.bottom >= 0 && bounding.top <= (window.innerHeight || document.documentElement.clientHeight))) {
+            element.src = element.dataset.src
+            element.classList.remove("lazy")
+        }
+    }
+
+    const columns = Array.from(document.getElementById("sort_field").options)
+        .map((o) => o.value)
+        .concat("any")
+        .map((c) => [c, c.length > 2 ? c[0].toUpperCase() + c.substring(1) : c.toUpperCase()])
+    Array.from((new URL(window.location.href)).searchParams.entries())
+        .map(([k, v]) => [k.toLowerCase(), v])
+        .filter(([k, _]) => columns.find(([c, _]) => c === k))
+        .forEach(([k, v]) => addSearchField(k).value = v)
+    document.querySelectorAll("img.lazy").forEach((img) => lazyLoad(img, img.parentElement.parentElement))
+    window.onscroll = window.onresize = () =>
+        document.querySelectorAll("img.lazy").forEach((img) => lazyLoad(img, img.parentElement.parentElement))
+</script>
+</body>
+</html>
