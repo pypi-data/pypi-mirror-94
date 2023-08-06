@@ -1,0 +1,14 @@
+sockapp/__init__.py,sha256=5GbAsPLmpMdNJUEWp02RlEUhZQQ-dx94EiWi17Fi1mQ,27
+sockapp/app.py,sha256=MC07ST5uosQ4hvG9eAONMtlx8ILzW-QlS_XYhJn1bnk,915
+sockapp/receiver.py,sha256=dy7adGpCr-n-8Sldu3wWxPGvGx6XsIdhdJfkZ0Ccq8k,1956
+sockapp/run_app.py,sha256=cUsb760EMye3MquBXtfKAUrli2oNb-ZtqOIRQkBMcdE,50
+sockapp/sender.py,sha256=d9Ecs5wrqYwxIUdigDP9xQEqTehk6dyNyCXvbeATy1Y,1589
+sockapp/static/css/styles.css,sha256=JGnOSueTtt0T_AXM5Aa_5tfa1ZjL7TcQUylFQutGsKE,488
+sockapp/static/js/jquery.min.js,sha256=h0cGsrExGgcZtSZ_fRz4AwV-Nn6Urh_3v3jFRQ0w9dQ,84245
+sockapp/static/js/main.js,sha256=kFE1WMkNndU0tuVwOtNEdlMN2mJYFU57aA9zaa8w2QE,857
+sockapp/templates/index.html,sha256=56V267pknLYqFpRfledbZInVGXfGpxnbjNmLX5yIirQ,1086
+sockapp-0.1a0.dist-info/METADATA,sha256=bKHQkyyHAW7Y4chuKK_MHWGX3WeHIIG3g2KHIiUsqqU,1123
+sockapp-0.1a0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+sockapp-0.1a0.dist-info/entry_points.txt,sha256=7nJKba5QllIJki7Pao8I4gt3IdWf0EBoh0mI2IwbTxU,53
+sockapp-0.1a0.dist-info/top_level.txt,sha256=0PTgZ65oyqLo6B6R-rHxb1QER4vCPSNv0v5DVp0wics,8
+sockapp-0.1a0.dist-info/RECORD,,
