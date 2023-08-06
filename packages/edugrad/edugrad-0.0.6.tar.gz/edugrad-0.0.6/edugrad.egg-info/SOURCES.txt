@@ -1,0 +1,13 @@
+README.md
+setup.py
+edugrad/__init__.py
+edugrad/data.py
+edugrad/nn.py
+edugrad/ops.py
+edugrad/optim.py
+edugrad/tensor.py
+edugrad.egg-info/PKG-INFO
+edugrad.egg-info/SOURCES.txt
+edugrad.egg-info/dependency_links.txt
+edugrad.egg-info/requires.txt
+edugrad.egg-info/top_level.txt
