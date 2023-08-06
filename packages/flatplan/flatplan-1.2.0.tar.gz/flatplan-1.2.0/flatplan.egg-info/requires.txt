@@ -1,0 +1,11 @@
+colorama
+coloredlogs
+fire
+
+[dev]
+black
+coverage
+pytest
+sphinx
+tox
+twine
