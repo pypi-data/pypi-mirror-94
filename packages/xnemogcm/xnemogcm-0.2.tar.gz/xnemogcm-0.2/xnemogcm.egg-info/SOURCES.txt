@@ -1,0 +1,15 @@
+README.md
+setup.py
+xnemogcm/__init__.py
+xnemogcm/arakawa_points.py
+xnemogcm/domcfg.py
+xnemogcm/merge.py
+xnemogcm/metrics.py
+xnemogcm/namelist.py
+xnemogcm/nemo.py
+xnemogcm/tools.py
+xnemogcm.egg-info/PKG-INFO
+xnemogcm.egg-info/SOURCES.txt
+xnemogcm.egg-info/dependency_links.txt
+xnemogcm.egg-info/requires.txt
+xnemogcm.egg-info/top_level.txt

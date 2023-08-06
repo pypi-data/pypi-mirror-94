@@ -1,0 +1,6 @@
+xarray
+netcdf4
+dask[array]
+
+[namelist]
+f90nml
