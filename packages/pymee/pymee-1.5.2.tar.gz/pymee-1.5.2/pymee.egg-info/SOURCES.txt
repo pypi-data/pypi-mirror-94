@@ -1,0 +1,14 @@
+.gitignore
+CHANGELOG.md
+LICENSE
+README.md
+setup.cfg
+setup.py
+.github/workflows/main.yml
+pymee/__init__.py
+pymee/const.py
+pymee/model.py
+pymee.egg-info/PKG-INFO
+pymee.egg-info/SOURCES.txt
+pymee.egg-info/dependency_links.txt
+pymee.egg-info/top_level.txt
