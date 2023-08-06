@@ -1,0 +1,13 @@
+oarepo_actions/__init__.py,sha256=dlrZ4GTdK7ieei4nJOMVO052Wy84yfvCgs4XklZ3D8Q,383
+oarepo_actions/config.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oarepo_actions/decorators.py,sha256=RgJqJjCFa8tqaVM3ZPwdJTqy5Igbn_puB9UJYRGpDyQ,1196
+oarepo_actions/ext.py,sha256=EtY17bwSX3KcZ-rxYytMbbmepuMt1QMNmcH0T52H4pk,4720
+oarepo_actions/record_action.py,sha256=FGYh_jpuiJaKxXkd4RZ_urbIp95ecnFxhgl6EoDwfq4,1249
+oarepo_actions/record_action_list.py,sha256=prwXXujdVAWPwLZB5_0xzccQRyeduYO-6GME52C7ioA,1368
+oarepo_actions/version.py,sha256=Y1hGEZfnm6KKI67MjnJhxJECNNXiA5J0GDDgCQKz6Do,416
+oarepo_actions-1.0.6.dist-info/LICENSE,sha256=zzBcVTTA9PNizNdnB2-Pxm10zRxBsEJS35pWjR4YvsY,1064
+oarepo_actions-1.0.6.dist-info/METADATA,sha256=pYDKIB_Of0rA9XC6V4e4lYxiNmx4ZbTihvpgxMQEqsA,5501
+oarepo_actions-1.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+oarepo_actions-1.0.6.dist-info/entry_points.txt,sha256=0FZ8VREFnso2EkEcSeoh__MAbRAD_ELcugyvyCmUoxA,126
+oarepo_actions-1.0.6.dist-info/top_level.txt,sha256=7rXF3pbu9ORsKLiF9LPgMTSTVaFL1ZBgvtSdh60QQes,15
+oarepo_actions-1.0.6.dist-info/RECORD,,
