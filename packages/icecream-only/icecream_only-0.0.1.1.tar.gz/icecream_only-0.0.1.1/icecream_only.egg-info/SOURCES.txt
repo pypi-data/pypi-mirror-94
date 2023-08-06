@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+icecream_only/icecream_only.py
+icecream_only/ysco.py
+icecream_only.egg-info/PKG-INFO
+icecream_only.egg-info/SOURCES.txt
+icecream_only.egg-info/dependency_links.txt
+icecream_only.egg-info/top_level.txt
