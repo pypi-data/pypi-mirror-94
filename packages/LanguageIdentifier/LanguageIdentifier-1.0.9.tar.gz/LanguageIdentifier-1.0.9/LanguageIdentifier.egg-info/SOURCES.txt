@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+LanguageIdentifier.egg-info/PKG-INFO
+LanguageIdentifier.egg-info/SOURCES.txt
+LanguageIdentifier.egg-info/dependency_links.txt
+LanguageIdentifier.egg-info/requires.txt
+LanguageIdentifier.egg-info/top_level.txt
+LanguageIdentifierPackage/LIDModel.py
+LanguageIdentifierPackage/LID_mixed_model.pkl
+LanguageIdentifierPackage/LSTMLID.py
+LanguageIdentifierPackage/LanguageIdentifier.py
+LanguageIdentifierPackage/__init__.py
