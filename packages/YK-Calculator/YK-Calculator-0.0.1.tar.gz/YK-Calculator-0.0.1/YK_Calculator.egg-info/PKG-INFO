@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: YK-Calculator
+Version: 0.0.1
+Summary: Our package will give you a basic calculator function such as addition,subtraction, multiplication and division. It will provide you a basic undersanding of how a calculator works.
+Home-page: UNKNOWN
+Author: Yumna Khan
+Author-email: yumnakhan2611@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: div,sub,mul,add
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
