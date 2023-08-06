@@ -1,0 +1,78 @@
+Metadata-Version: 1.2
+Name: ketl
+Version: 0.1.0
+Summary: komprehensive ETL
+Home-page: https://github.com/grapesmoker/ketl
+Author: Jerry Vinokurov
+Author-email: grapesmoker@gmail.com
+License: MIT license
+Description: ====
+        kETL
+        ====
+        
+        
+        .. image:: https://img.shields.io/pypi/v/ketl.svg
+                :target: https://pypi.python.org/pypi/ketl
+        
+        .. image:: https://img.shields.io/travis/grapesmoker/ketl.svg
+                :target: https://travis-ci.com/grapesmoker/ketl
+        
+        .. image:: https://readthedocs.org/projects/ketl/badge/?version=latest
+                :target: https://ketl.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        konfigurable ETL
+        
+        
+        * Free software: MIT license
+        * Documentation: https://ketl.readthedocs.io.
+        
+        
+        Introduction
+        ------------
+        
+        kETL is a konfigurable ETL library. Its job is to simplify the process of extracting, transforming,
+        and loading files from the internet. The goal of kETL is not to be all things to all use cases,
+        but rather to maintain a simple but useful set of features intended to get your data from wherever
+        it lives to some place where you can do stuff with it.
+        
+        Features
+        --------
+        
+        * Strict separation of extraction, transformation, and loading concerns
+        * Easily configurable for most use cases; derive subclasses to define your own behaviors
+        * Simple API to use with or without pipelining logic
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2020-10-18)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: ketl
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
