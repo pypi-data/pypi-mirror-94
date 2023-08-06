@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: ParlPy
+Version: 0.0.1
+Summary: Scraper and utilities for UK Parliamentary bills
+Home-page: https://github.com/Litharge/ParlPy
+Author: Robert Chambers
+Author-email: 1robertchambers@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ParlPy
+
+## Data Sources
+
+### BillsOverview()
+
+Fetches data from https://bills.parliament.uk, rather than https://services.parliament.uk/bills/, as *services* gives
+less precise updated dates per bill
+
+### Not Yet Utilised
+
+* https://hansard.parliament.uk/
+* https://votes.parliament.uk/Votes/Commons
+* https://members.parliament.uk/members/Commons
+
+## Parliament Information
+
+https://www.parliament.uk/
+
