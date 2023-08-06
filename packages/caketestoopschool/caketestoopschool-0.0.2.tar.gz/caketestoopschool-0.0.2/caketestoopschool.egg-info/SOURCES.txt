@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+caketestoopschool/__init__.py
+caketestoopschool/newschool.py
+caketestoopschool/school.py
+caketestoopschool.egg-info/PKG-INFO
+caketestoopschool.egg-info/SOURCES.txt
+caketestoopschool.egg-info/dependency_links.txt
+caketestoopschool.egg-info/top_level.txt
