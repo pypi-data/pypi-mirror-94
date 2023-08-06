@@ -1,0 +1,10 @@
+lifefit/__about__.py,sha256=V4X0pkT8ORlIs250PKzPLEvOpZlHMMEwt4v_nRwiqwU,582
+lifefit/__init__.py,sha256=DBr5ZvDcTpPspv8nHfX8clWRyH87iITM_H96BxTJIfw,295
+lifefit/tcspc.py,sha256=HouVcE0Zup4NdPzjloP9JUB-zRi7QiEc__tkb8pwwTc,32908
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_tcspc.py,sha256=8Uj0g4oJvoU3f7-_QzMKCLDMj-6roQ3pKwdnUru9-fw,3435
+lifefit-1.0.4.dist-info/LICENSE,sha256=3zjpxbaGJFumF1cdxndas3V25BF3S--ZxoEwZjmVI7A,1070
+lifefit-1.0.4.dist-info/METADATA,sha256=XDWlV7QwpQ-i16qfa22BbhUUeuUQ7tvaBYqsVqaJ_pg,2755
+lifefit-1.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+lifefit-1.0.4.dist-info/top_level.txt,sha256=8SMkyfsQX6bq6HzzooUSFtbBIqD8QKfYHCCN3AFaETs,14
+lifefit-1.0.4.dist-info/RECORD,,
