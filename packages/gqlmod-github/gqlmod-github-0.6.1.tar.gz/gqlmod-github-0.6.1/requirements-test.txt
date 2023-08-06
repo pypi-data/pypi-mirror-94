@@ -1,0 +1,4 @@
+git+https://github.com/gqlmod/gqlmod.git#egg=gqlmod
+.[app,sync,async]
+
+pytest

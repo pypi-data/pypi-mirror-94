@@ -1,0 +1,5 @@
+[graphql_providers]
+github = gqlmod_github:GitHubSyncProvider
+github-async = gqlmod_github:GitHubAsyncProvider
+github-sync = gqlmod_github:GitHubSyncProvider
+
