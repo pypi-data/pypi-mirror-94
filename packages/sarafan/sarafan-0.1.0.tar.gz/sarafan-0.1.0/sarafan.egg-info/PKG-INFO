@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: sarafan
+Version: 0.1.0
+Summary: Sarafan node and client application. Sarafan is a distributed publication delivery network for anonymous.
+Home-page: https://github.com/sarafanio/sarafan.git
+Author: Sarafan Community
+Author-email: flu2020@pm.me
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev
