@@ -1,0 +1,14 @@
+2020-10-03 11:31:50,991 root: foo
+2020-10-03 11:31:50,993 My _logging: bar
+2020-10-03 11:31:50,993 My _logging: foo
+2020-10-03 11:31:50,993 My _logging: bar
+2020-10-03 11:31:50,993 My _logging: bar
+2020-10-03 11:31:50,993 My _logging: debug message
+2020-10-03 11:32:58,348 root: foo
+2020-10-03 11:32:58,348 My _logging: bar
+2020-10-03 11:33:01,317 root: foo
+2020-10-03 11:33:01,317 My _logging: bar
+2020-10-03 11:33:01,317 My _logging: foo
+2020-10-03 11:33:01,317 My _logging: bar
+2020-10-03 11:33:01,317 My _logging: bar
+2020-10-03 11:33:01,317 My _logging: debug message

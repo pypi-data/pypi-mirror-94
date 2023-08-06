@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 601fbb5002f5d3c83008580d
+spec:
+  selector:
+    matchLabels:
+      deployment_id: 601fbb5002f5d3c83008580d
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        deployment_id: 601fbb5002f5d3c83008580d
+    spec:
+      containers:
+      - name: test-worker
+        image: akadaner/test-worker
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: 601fbb5002f5d3c83008580d-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: 601fbb5002f5d3c83008580d-config
+data:
+  CONFIG: '{"worker_id": "601fbb5002f5d3c83008580d", "payload": {"type": "batch"},
+    "message_broker": ["zmq", {"endpoints": {"monitor": {"endpoint": "tcp://host.docker.internal:5555",
+    "type": "sub"}}}]}'
