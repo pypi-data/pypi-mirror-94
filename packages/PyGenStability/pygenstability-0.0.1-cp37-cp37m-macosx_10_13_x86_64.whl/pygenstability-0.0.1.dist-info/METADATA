@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pygenstability
+Version: 0.0.1
+Summary: Python binding of generalised Louvain with Markov Stability
+Home-page: https://github.com/ImperialCollegeLondon/PyGenStability
+Author: Alexis Arnaudon
+Author-email: alexis.arnaudon@epfl.ch
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.18.1)
+Requires-Dist: scipy (>=1.4.1)
+Requires-Dist: matplotlib (>=3.1.3)
+Requires-Dist: networkx (>=2.4)
+Requires-Dist: sklearn (>=0.0)
+Requires-Dist: cmake (>=3.16.3)
+Requires-Dist: click (>=7.0)
+Requires-Dist: tqdm (>=4.45.0)
+Requires-Dist: pybind11 (>=2.6.2)
+Requires-Dist: pandas (>=1.0.0)
+Provides-Extra: plotly
+Requires-Dist: plotly (>=3.6.0) ; extra == 'plotly'
+
+UNKNOWN
+
+
