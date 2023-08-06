@@ -1,0 +1,13 @@
+othdrplot/__init__.py,sha256=ofIhlvm5-QjVo6UwePgNvqBN8Me_9Es6qZA9Rn9Pylk,289
+othdrplot/high_density_region_algorithm.py,sha256=Q-SsfpwVr1isUNBiYDi0TOkRNnx5pp6NS2lJt6NsQgQ,8824
+othdrplot/process_high_density_region_algorithm.py,sha256=dSe1xVTkvl317O92eItx0TTuiE3gkc25-Io1q5iGEMg,9879
+othdrplot/data/chute-trajectories.csv,sha256=8nui7nL-Qlj7P9b0JH8ECAvCHD_KChns2qnJ_rw-Mhw,2302300
+othdrplot/data/gauss-mixture-3D.csv,sha256=m69zVGN_9zEuzQz0r4utRZjR7u2TV1cvWO9wy2bR_H8,35188
+othdrplot/data/gauss-mixture.csv,sha256=jpaOrunnwZYk6jAXJStR6Xx3cD1Jc2UXIdjQ6NvK-A4,49069
+othdrplot/data/logistic-trajectories.csv,sha256=P_sufdBihx9LiJ79KiWphyPPNdvDxuro2NAZtlzEW0s,2302300
+othdrplot-2.0.dist-info/COPYING,sha256=xTplwv1WHIfqq_EHLvXcq4ZTBCvBUwhGX1JBNYXrYnE,35146
+othdrplot-2.0.dist-info/COPYING.LESSER,sha256=6or154nLLU6bELzjh0mCreFjt0m2v72zLi3yHE0QbeE,7650
+othdrplot-2.0.dist-info/METADATA,sha256=48SVR69Bwob0oH8M97o9SpU9I3fbjsoexdtBn94MGwY,5918
+othdrplot-2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+othdrplot-2.0.dist-info/top_level.txt,sha256=6lByyEMnPwfgqJmh0FgaMxymN2Y-eSJSugPe1fJ_5sI,10
+othdrplot-2.0.dist-info/RECORD,,
