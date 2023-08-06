@@ -1,0 +1,9 @@
+[run]
+source = trashpanda
+
+[report]
+exclude_lines =
+    pass
+    def __repr__
+    def __str__
+    raise NotImplementedError

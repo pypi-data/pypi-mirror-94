@@ -1,0 +1,4 @@
+pandas>=1.0.0
+numpy>=1.16.0
+examplecurves>=1.0.0
+doctestprinter>=1.0.0
