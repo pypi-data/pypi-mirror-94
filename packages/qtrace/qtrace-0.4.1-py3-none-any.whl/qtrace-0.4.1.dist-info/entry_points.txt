@@ -1,0 +1,3 @@
+[console_scripts]
+qtrace = qtrace.__main__:main
+
