@@ -1,0 +1,1 @@
+(self.webpackChunk_data_exp_lab_jupyterlab_twitch=self.webpackChunk_data_exp_lab_jupyterlab_twitch||[]).push([[568],{1568:(e,a,t)=>{"use strict";t.r(a),t.d(a,{TwitchPlayerWidget:()=>l.w,TwitchPlayerModel:()=>w.TwitchPlayerModel,TwitchPlayerView:()=>w.TwitchPlayerView});var l=t(6086),w=t(1367)}}]);
