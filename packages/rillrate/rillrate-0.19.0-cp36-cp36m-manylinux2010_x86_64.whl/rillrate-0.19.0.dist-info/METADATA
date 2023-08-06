@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: rillrate
+Version: 0.19.0
+Summary: rillrate bindings for python
+Keywords: logging
+Home-Page: https://github.com/rate-technology/rillrate-py
+Author: Denis Kolodin <deniskolodin@gmail.com>, overfloat <rillrate@gmail.com>
+Author-Email: Denis Kolodin <deniskolodin@gmail.com>, overfloat <rillrate@gmail.com>
+License: MIT
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# rillrate-py
+
+[![PyPI][pypi-badge]][pypi-url]
+
+[pypi-badge]: https://badge.fury.io/py/rillrate.svg
+[pypi-url]: https://pypi.org/project/rillrate
+
+Dynamic tracing system that tends to be real-time.
+
+Python 3 bindings.
+
+## How to use
+
+Install the library:
+
+```sh
+pip install rillrate
+```
+
+Import it in your code and install a tracer:
+
+```python
+import rillrate
+rillrate.install()
+```
+
+Add a metric and use methods to update it:
+
+```python
+gauge = rillrate.Gague("my.gauge");
+gauge.set(123.0);
+```
+
+## Expansions
+
