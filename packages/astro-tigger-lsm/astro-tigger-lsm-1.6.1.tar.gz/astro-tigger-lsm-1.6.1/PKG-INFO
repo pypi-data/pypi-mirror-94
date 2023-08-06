@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: astro-tigger-lsm
+Version: 1.6.1
+Summary: Python libraries and command-line tools for manipulating Tigger-format LSMs
+Home-page: https://github.com/ska-sa/tigger-lsm
+Author: Oleg Smirnov
+Author-email: osmirnov@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.0.0
