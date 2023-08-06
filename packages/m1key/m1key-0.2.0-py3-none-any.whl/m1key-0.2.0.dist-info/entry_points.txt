@@ -1,0 +1,3 @@
+[console_scripts]
+m1key = m1key.__main__:main
+
