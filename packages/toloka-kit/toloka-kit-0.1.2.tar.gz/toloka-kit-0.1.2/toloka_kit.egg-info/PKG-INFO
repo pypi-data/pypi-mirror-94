@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: toloka-kit
+Version: 0.1.2
+Summary: Toloka API client
+Home-page: UNKNOWN
+Author: Vladimir Losev
+Author-email: losev@yandex-team.ru
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6.0
+Provides-Extra: dev
