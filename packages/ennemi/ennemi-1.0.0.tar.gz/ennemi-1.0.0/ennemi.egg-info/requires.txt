@@ -1,0 +1,8 @@
+numpy>=1.17.5
+numpy<2.0
+scipy~=1.4
+
+[dev]
+pandas~=1.0
+pytest~=5.4
+mypy~=0.770
