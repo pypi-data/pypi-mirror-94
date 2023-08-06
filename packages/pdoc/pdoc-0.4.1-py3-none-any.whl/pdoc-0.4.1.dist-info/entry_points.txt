@@ -1,0 +1,3 @@
+[console_scripts]
+pdoc = pdoc_old:warn_old_python
+
