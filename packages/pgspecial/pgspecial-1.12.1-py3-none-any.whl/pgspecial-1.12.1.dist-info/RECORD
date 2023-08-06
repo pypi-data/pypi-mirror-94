@@ -1,0 +1,11 @@
+pgspecial/__init__.py,sha256=i9UIhRlLIcsHLUa_yqMlmL_apMnj4o0b80i70TTxEOI,270
+pgspecial/dbcommands.py,sha256=oKWUxhNDoD3A9qdV4GXDHbiKoqIf_Y1x6MvvsfOr8pM,70784
+pgspecial/iocommands.py,sha256=LU23CDeBECnsj4BZueYXoACHEin9ya5NHFwOO-dfWAI,9115
+pgspecial/main.py,sha256=4FLj44dWm6tQajd6ZJgwr0W9pIIdFNFp46V4gJ204Mc,9401
+pgspecial/namedqueries.py,sha256=HvmmUdHnLVYkbhjZAypXNiQKD8QpmohtjsUdt4M7AnE,1648
+pgspecial/help/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgspecial/help/commands.py,sha256=bWJQLuIEOn3so0jcab6ZQ_lDkKCBX_93-iOyzMgwt08,77881
+pgspecial-1.12.1.dist-info/METADATA,sha256=cmGdncx8go-p6be9lFxl-CB1-bLHJs9INgstGfC_VN8,3227
+pgspecial-1.12.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pgspecial-1.12.1.dist-info/top_level.txt,sha256=Cn8xkj-VavEDqJy2LPAnZlpmLibfi3orixN_14LdAdA,10
+pgspecial-1.12.1.dist-info/RECORD,,
