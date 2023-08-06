@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+scrapy_toolbox/__init__.py
+scrapy_toolbox/command_line.py
+scrapy_toolbox/database.py
+scrapy_toolbox/error_handling.py
+scrapy_toolbox/error_processing.py
+scrapy_toolbox.egg-info/PKG-INFO
+scrapy_toolbox.egg-info/SOURCES.txt
+scrapy_toolbox.egg-info/dependency_links.txt
+scrapy_toolbox.egg-info/entry_points.txt
+scrapy_toolbox.egg-info/requires.txt
+scrapy_toolbox.egg-info/top_level.txt
