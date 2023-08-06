@@ -1,0 +1,9 @@
+ffmpeg-python
+matplotlib
+numpy
+mayavi
+psutil
+pyqt5
+scipy
+sphinx-autoapi
+sphinx-rtd-theme
