@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: DijkstraAlgo
+Version: 0.0.2
+Summary: To measure the shortest distance of any nodes or any particular points, we can use this package.
+    By using this package, we will get the shortest path and also the distance.
+Home-page: https://github.com/MizanMustakim/Dijkstra-s-Shortest-Path-Algorithm
+Author: Md Mizanur Rahman Mustakim
+Author-email: mustakim.mizan@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/MizanMustakim/Dijkstra-s-Shortest-Path-Algorithm/archive/0.0.1.tar.gz
+Description: # DijsktraAlgorithm
+        
+        
+        Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph. It was conceived by computer scientist **Edsger W. Dijkstra** in 1956 and published three years later.
+        Here, I used his method in python to find the shortest path and also the distance.
+        
+        # Installing
+        
+        Run the following code to install on your terminal:
+        
+        ```python
+        pip install DijkstraAlgo
+        ```
+        
+        # Using
+        
+        Follow the given way to use it:
+        
+        ```python
+        '''First Import our module'''
+        import DijkstraAlgo as da
+        '''Initializing the Class Attributes'''
+        x = da.DijkstraAlgorithm()
+        
+        '''Now pass the arguments through the following method'''
+        x.dijkstraWithPath(graph, source, destination)  #Here, this graph is about the distance between each nodes.
+        
+        '''Lets define some methods'''
+        shortest_path = x.path()
+        distance = x.distance()
+        print(*shortest_path)   #It will print the path
+        print(*distance)         #It will print the distance
+        ```
+        
+        ### Plugins
+        
+        Few useful links:
+        
+        | Plugin | README |
+        | ------ | ------ |
+        | 2D Model | https://github.com/MizanMustakim/Dijkstra-s-Shortest-Path-Algorithm/tree/main/Shortest%20Path%20in%202D%20model |
+        | 3D Model | https://github.com/MizanMustakim/Dijkstra-s-Shortest-Path-Algorithm/tree/main/Shortest%20Path%20in%203D%20model |
+        
+        
+        
+        License
+        ----
+        
+        MIT
+        
+        
+        **Free Software, Happy Coding!**
+Keywords: Shortest Path,Dijkstra Algorithm,Graph,Shortest Distance,Shortest Route,Dijkstra_2D,Dijkstra_3D
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: dev
