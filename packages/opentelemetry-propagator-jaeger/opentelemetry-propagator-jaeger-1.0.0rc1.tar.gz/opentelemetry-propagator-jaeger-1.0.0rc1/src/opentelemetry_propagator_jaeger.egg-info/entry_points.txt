@@ -1,0 +1,3 @@
+[opentelemetry_propagator]
+jaeger = opentelemetry.propagators.jaeger:JaegerPropagator
+
