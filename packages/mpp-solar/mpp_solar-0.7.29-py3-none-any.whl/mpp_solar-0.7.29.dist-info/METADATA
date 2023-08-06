@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: mpp-solar
+Version: 0.7.29
+Summary: Package to communicate with MPP Solar PIP-4048MS inverter
+Home-page: https://github.com/jblance/mpp-solar
+Author: John Blance
+Author-email: 
+License: MIT
+Keywords: hardware serial communication
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyserial
+Requires-Dist: paho-mqtt
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+# MPP Solar Inverter Python Package
+
+_Note: python2 no longer supported_
+
+Python package with reference library of serial commands (and responses)
+for PIP-4048MS inverters - aka:
+- PIP-4048MS
+- IPS-4000WM
+- Voltronic Axpert MKS 5KVA Off-grid Inverter-Chargers
+
+Now also supports LV5048 inverter commands
+
+see full README at [github](https://github.com/jblance/mpp-solar/blob/master/README.md)
+
+
