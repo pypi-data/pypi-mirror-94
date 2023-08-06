@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+hellopip/__init__.py
+hellopip/hellopip.py
+hellopippkg.egg-info/PKG-INFO
+hellopippkg.egg-info/SOURCES.txt
+hellopippkg.egg-info/dependency_links.txt
+hellopippkg.egg-info/top_level.txt
+tests/__init__.py
+tests/test_all.py
