@@ -1,0 +1,28 @@
+#!/usr/bin/env docker-compose
+
+version: "3"
+services:
+  pytest-docker-registry-insecure:
+    container_name: pytest-docker-registry-insecure
+    environment:
+      REGISTRY_STORAGE_DELETE: '{"enabled":true}'
+      REGISTRY_LOG_LEVEL_DEBUG: "true"
+    image: library/registry:2.7.1
+    ports:
+    - "5000/tcp"
+  pytest-docker-registry-secure:
+    container_name: pytest-docker-registry-secure
+    environment:
+      REGISTRY_AUTH_HTPASSWD_REALM: "Pytest Docker Registry Realm"
+      REGISTRY_AUTH_HTPASSWD_PATH: "/htpasswd"
+      REGISTRY_HTTP_TLS_CERTIFICATE: "/pytest-docker-registry.crt"
+      REGISTRY_HTTP_TLS_KEY: "/pytest-docker-registry.key"
+      REGISTRY_STORAGE_DELETE: '{"enabled":true}'
+      REGISTRY_LOG_LEVEL_DEBUG: "true"
+    image: library/registry:2.7.1
+    ports:
+    - "5000/tcp"
+    volumes:
+    - "$PATH_HTPASSWD:/htpasswd:ro"
+    - "$PATH_CERTIFICATE:/pytest-docker-registry.crt:ro"
+    - "$PATH_KEY:/pytest-docker-registry.key:ro"
