@@ -1,0 +1,29 @@
+#a: 1
+#b: 2
+#f: "lambda x: x+1"
+#ff:
+auto_id: true
+fields:
+    -   indexes:
+            - {}
+        name: source
+        params: {}
+        type: !!python/object/apply:milvus.client.types.DataType
+            - 4
+    -   indexes:
+            - {}
+        name: category
+        params: {}
+        type: !!python/object/apply:milvus.client.types.DataType
+            - 4
+    -   indexes:
+            -   index_type: IVF_FLAT
+                metric_type: IP
+                params:
+                    nlist: 1024
+        name: title_vec
+        params:
+            dim: 768
+        type: !!python/object/apply:milvus.client.types.DataType
+            - 101
+segment_row_limit: 4096
