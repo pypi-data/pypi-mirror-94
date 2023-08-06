@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pymapr-kafkarest
+Version: 0.0.1
+Summary: Python MAPR Kafka REST wrapper
+Home-page: UNKNOWN
+Author: Andrea Carmisciano
+Author-email: andrea.carmisciano@gmail.com
+License: UNKNOWN
+Keywords: MAPR,Kafka,REST,data
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: requests
+Requires-Dist: urllib3
+
+Lazy way to interact with MAPR Kafka REST proxy from python.
+
+
