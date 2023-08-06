@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: os_android_apk_builder
+Version: 1.23
+Summary: This module will create an APK/App Bundle programmatically (dynamically), without Android Studio.
+Home-page: https://github.com/osfunapps/os_android_apk_builder-py
+Author: Oz Shabat
+Author-email: admin@os-apps.com
+License: MIT
+Description: UNKNOWN
+Keywords: python,osfunapps,apk,android,automation,release,assemble-release,create,pre-publish,app_bundle
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.9
