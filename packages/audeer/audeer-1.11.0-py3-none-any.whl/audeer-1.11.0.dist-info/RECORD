@@ -1,0 +1,11 @@
+audeer/__init__.py,sha256=WGrRG-8Jv-jset1ySHAz0v03uZE7D4OufHjRu9Cwu_E,951
+audeer/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+audeer/core/config.py,sha256=nxStkDliB5rT5BN8P3jrkAKe1BnulN648yuzVXxWjlE,612
+audeer/core/io.py,sha256=qM7pEI4j9vR-3zVByvvLuznKz4rP1Qgg3U4t2BYY19Y,9494
+audeer/core/tqdm.py,sha256=wqrYT0i5GETz2fZmfNiNCFxfClkEnCyIL0SJzdgvgEU,1897
+audeer/core/utils.py,sha256=fHWSumjVqPU0xm3nDhliaNnFM-ZtQac_hMfEvjvvsA4,19928
+audeer-1.11.0.dist-info/LICENSE,sha256=6mdTiSng86zbEtqvxS7kieu5RVgcfxEQhgc0RqWAr3s,1143
+audeer-1.11.0.dist-info/METADATA,sha256=AB0G8tiAFNiqtRQ9WJ98fZDPCboiVncD8tDh9d7fFYM,2646
+audeer-1.11.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+audeer-1.11.0.dist-info/top_level.txt,sha256=EvyTn4MN00qJ59xVWTDvL_dhe5JOJozePayK8KNKL7k,7
+audeer-1.11.0.dist-info/RECORD,,
