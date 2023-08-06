@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: pesel
+Version: 0.1.1
+Summary: Polish PESEL
+Home-page: https://github.com/jsporna/pypesel
+Author: Jakub Spórna <jakub.sporna@gmail.com>
+Author-email: jakub@sporna.dev
+License: UNKNOWN
+Description: # pypesel
+        
+        PESEL Python module
+        
+        PESEL is the national identification number used in Poland since 1979. It always has 11 digits, identifies just one person and cannot be changed to another one (except some specific situations such as gender reassignment).
+        
+        ## Installation
+        
+        ```shell
+        pip install pesel
+        ```
+        
+        ## Usage
+        
+        ```python
+        from pesel import Pesel
+        
+        random_pesel = Pesel.generate()
+        random_pesel_male = Pesel.generate(male=True)
+        random_pesel_2021 = Pesel.generate(year=2021)
+        
+        pesel = Pesel("65432101239")
+        ```
+Keywords: pesel
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
