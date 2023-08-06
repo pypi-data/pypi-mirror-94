@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: rasa-d
+Version: 0.0.1
+Summary: Expose your Rasa model to the internet in one line of code.
+Home-page: https://github.com/maximedb/rasa-d
+Author: Maxime De Bruyn
+Author-email: maximedebruyn@gmail.com
+License: MIT
+Description: Expose your Rasa model to the internet in one line of code.
+Keywords: rasa deploy
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6.1
+Description-Content-Type: text/markdown
