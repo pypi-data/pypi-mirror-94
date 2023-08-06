@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: HighDim
+Version: 0.0.1
+Summary: HighDim is a numerical package for computing the marginal density distribution.
+Home-page: UNKNOWN
+Author: Lily Young
+Author-email: <lilyyoung1122@gmail.com>
+License: UNKNOWN
+Description: HighDim is a numerical package for computing the marginal density distribution.
+Keywords: python,high dimensional data
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
