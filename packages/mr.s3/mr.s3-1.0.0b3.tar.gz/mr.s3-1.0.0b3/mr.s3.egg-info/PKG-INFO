@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: mr.s3
+Version: 1.0.0b3
+Summary: Syncing scripts Plone data between local and AWS S3
+Home-page: https://github.com/peacock0803sz/mr.s3
+Author: Peacock
+Author-email: contact@peacock0803sz.com
+License: UNKNOWN
+Description: mr.s3
+        =====
+        
+        Syncing scripts Plone data between local and AWS S3
+        
+        Installation
+        ------------
+        
+        Just run ``pip install mr.s3``
+        
+        Uses
+        ----
+        
+        You have to set AWS Credentials to ``$HOME/.aws/credentials``.
+        
+        See also Boto3's docs. https://github.com/boto/boto3#using-boto3
+        
+        
+        ::
+        
+        $ mr.s3 push path/to/datadir  # uploading
+        $ mr.s3 pull path/to/datadir  # downloading
+        
+        Features
+        --------
+        
+        - Compress blobstorage and filestorage as tar, and upload to S3
+        - Download them from S3, and extract to specific directory
+        
+        Dependences
+        -----------
+        
+        - boto3 https://github.com/boto/boto3
+        - click https://github.com/pallets/click
+        
+        
+Keywords: Plone Python AWS
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: Plone
+Provides-Extra: tests
