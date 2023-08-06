@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: verkada_py
+Version: 1.0.0.post1
+Summary: Unofficial Verkada API Python Library
+Home-page: https://github.com/Cyb3r-Jak3/Verkada_py
+Author: Cyber_Jake
+Author-email: jake@jwhite.network
+License: MPL 2.0
+Download-URL: https://github.com/Cyb3r-Jak3/Verkada_py/releases/latest
+Project-URL: Changelog, https://github.com/Cyb3r-Jak3/Verkada_py/blob/main/CHANGELOG.md
+Project-URL: Issues, https://github.com/Cyb3r-Jak3/Verkada_py/issues
+Description: # Verkada_py
+        
+        ![Python Checking](https://github.com/Cyb3r-Jak3/Verkada_py/workflows/Python%20Checking/badge.svg) [![Documentation Status](https://readthedocs.org/projects/verkada_py/badge/?version=latest)](https://verkada_py.docs.jwhite.network/en/latest/?badge=latest)  
+        ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/verkada_py) ![PyPI](https://img.shields.io/pypi/v/verkada_py)
+        
+        
+        An unofficial Verkada API Python Library. Useful for individuals or companies looking to easily and pragmatically interact with their Verkada cameras. The goal of this library is to make it easier for developers to interact with Verkada's API.
+        Read the documentation here: https://verkada_py.docs.jwhite.network
+        
+        Read Verkada's REST API's Documentation here: https://apidocs.verkada.com.
+        
+Keywords: verkada,restapi
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
