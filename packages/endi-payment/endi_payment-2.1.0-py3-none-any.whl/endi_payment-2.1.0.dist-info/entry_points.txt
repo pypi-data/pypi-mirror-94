@@ -1,0 +1,3 @@
+[console_scripts]
+endi-payment = endi_payment.scripts:entry_point
+
