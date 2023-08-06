@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ezephys/__init__.py
+ezephys/pltools.py
+ezephys/pltools_test.py
+ezephys/rectools.py
+ezephys/rectools_test.py
+ezephys/stimtools.py
+ezephys/stimtools_test.py
+ezephys.egg-info/PKG-INFO
+ezephys.egg-info/SOURCES.txt
+ezephys.egg-info/dependency_links.txt
+ezephys.egg-info/requires.txt
+ezephys.egg-info/top_level.txt

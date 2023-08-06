@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: ezephys
+Version: 0.4.2
+Summary: Tools for working with electrophysiological data.
+Home-page: https://github.com/efharkin/ez-ephys
+Author: Emerson Harkin
+Author-email: emerson.f.harkin@gmail.com
+License: MIT
+Download-URL: https://pypi.org/project/ez-ephys/
+Description: UNKNOWN
+Keywords: neuroscience,electrophysiology
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: ==3.8.*
