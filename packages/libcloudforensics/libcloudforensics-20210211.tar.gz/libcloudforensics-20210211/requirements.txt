@@ -1,0 +1,22 @@
+-i https://pypi.org/simple
+PyJWT<2  # Bad overlap in azure dependencies
+httplib2>=0.15.0
+google-api-python-client
+google-auth<2.0.0.dev0
+google-api-core<1.26.0.dev0
+boto3
+botocore
+azure-common
+azure-core
+azure-identity
+azure-mgmt-compute
+azure-mgmt-resource
+azure-mgmt-storage
+azure-storage-blob
+azure-mgmt-network
+azure-mgmt-monitor
+msrest
+msrestazure
+netaddr
+sshpubkeys
+pycryptodome
