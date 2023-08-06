@@ -1,0 +1,4 @@
+Flask>=1.0.4
+PyYAML>=5
+xmltodict>=0
+json2html>=1
