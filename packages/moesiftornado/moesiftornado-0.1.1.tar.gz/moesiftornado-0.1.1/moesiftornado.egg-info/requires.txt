@@ -1,0 +1,9 @@
+requests
+isodatetimehandler
+moesifapi
+apscheduler
+
+[dev]
+
+[test]
+nose
