@@ -1,0 +1,9 @@
+flask
+flask-restful
+flask-socketio>=5.0
+requests
+pyyaml>=5.0
+easyserial>=0.2
+
+[qt]
+pycuteweb
