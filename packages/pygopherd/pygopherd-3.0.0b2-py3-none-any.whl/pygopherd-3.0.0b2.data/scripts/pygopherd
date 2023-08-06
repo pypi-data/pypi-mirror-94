@@ -1,0 +1,43 @@
+#!python
+
+# Python-based gopher server
+# COPYRIGHT #
+# Copyright (C) 2021 Michael Lazar
+# Copyright (C) 2002-2019 John Goerzen
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; version 2 of the License.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+# END OF COPYRIGHT #
+import argparse
+
+from pygopherd import initialization, __version__
+
+parser = argparse.ArgumentParser(
+    prog="pygopherd",
+    description="A multiprotocol gopher information server",
+    formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+)
+parser.add_argument(
+    "config",
+    nargs="?",
+    default="/etc/pygopherd/pygopherd.conf",
+    help="pygopherd config",
+)
+parser.add_argument(
+    "-V", "--version", action="version", version="pygopherd " + __version__
+)
+
+args = parser.parse_args()
+
+s = initialization.initialize(args.config)
+s.serve_forever()
