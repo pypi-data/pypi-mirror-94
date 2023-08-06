@@ -1,0 +1,13 @@
+sugarrush/__init__.py,sha256=__KeKY-EROh_j80FamK2LVyncSESIZ2a-EA5cLr-VKk,337
+sugarrush/solver.py,sha256=XQFftDcdXGBvSuYk3oB_R7peWjrBF2vjqpU93Eg6Ubk,17386
+sugarrush/utils.py,sha256=-hXpO_z9Pmp55D8JrKJjptMfYxuofpqoYhCjif5lDw8,1253
+sugarrush/examples/disjunction.py,sha256=VMC4krSethMR5rAwWCn4rH4DJZLxZO7JuwcS5bGNipg,2715
+sugarrush/examples/langford.py,sha256=BbcNlFIWEGDKX57yhoxYoqveCfQ1vYdoUN9RrvMFdc4,1966
+sugarrush/examples/parity_board.py,sha256=QyMhnG9EvdsABJCpl1n0r-ZD7IAJ7ipSN_dXEwabmYM,3373
+sugarrush/examples/pincus.py,sha256=rkq16VoLxazFkdlKXvUyrutzLKENowxBM4S8y0JG0nU,1647
+sugarrush/examples/tests.py,sha256=SVkCZCVhj2-qbTGvPthgw0PFrEvHXw-TBAUlAwwYOlY,3116
+sugarrush-0.0.5.dist-info/LICENSE,sha256=UM1NBU01z8O94DkKArFWKQXvwlq7wzvJirLGIUMYIwE,1072
+sugarrush-0.0.5.dist-info/METADATA,sha256=GDaMdMu6QCnN6lY53JZWkaaYk2v7ESCIDh6GVDnwnT8,1906
+sugarrush-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sugarrush-0.0.5.dist-info/top_level.txt,sha256=aELpduXB6IiVW8Jg-s3eZu0bFfz8YzrTBhGMBYhrTHM,10
+sugarrush-0.0.5.dist-info/RECORD,,
