@@ -1,0 +1,4 @@
+[console_scripts]
+name-that-hash=search_that_hash.main:main
+sth=search_that_hash.main:main
+
