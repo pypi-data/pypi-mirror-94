@@ -1,0 +1,15 @@
+parchments/__init__.py,sha256=FfrUJVcI9gvkKaLl5uXq65aVla0YjfGGCskQUryfYJk,37
+parchments/core/__init__.py,sha256=aSZYEXuuhQseHr3wifVlojZ3ukQD8Bk1ZhiDmEY-l_o,119
+parchments/core/block.py,sha256=Pok_Pz33jsqQKX3M7VFPq6CUB7NVCVVtaMAwmXPN9Gc,1527
+parchments/core/choices.py,sha256=Utx0VP-IOSTlvpcYfDO55V7XngNQiKm5cmFSS174wkc,253
+parchments/core/core.py,sha256=iOdJ2QuRLncUJ8-D1yNbgF-md3QmutMxup05goYai1I,311
+parchments/core/grid.py,sha256=HZbIGKAoYHsL7Dt8orReQ1l79MvKCxgzWSd6_kXJbqk,1783
+parchments/core/row.py,sha256=qPGjp9kaui8ygKJVffWBoMzNhpz0GaT30aQzokVPPtg,1973
+parchments/core/validation.py,sha256=WLtp8vR4B5cu-o25gUNYJXi8uRNNtk6vsqvLKOj-83w,408
+parchments/core/value.py,sha256=Ax6bp6giZ6uunHmrQVNesoPh9jEjgm1L2rPWUfp5yOM,656
+parchments/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parchments-0.0.2.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+parchments-0.0.2.dist-info/METADATA,sha256=u5s5iisXoK1HVrgHW_-Me6iZdLb1UrVxZ06zCRSYWag,22451
+parchments-0.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+parchments-0.0.2.dist-info/top_level.txt,sha256=wwWn0uTX72ojcFD7N6SnVei3-eQohJz4nEYp6fGb3T4,11
+parchments-0.0.2.dist-info/RECORD,,
