@@ -1,0 +1,3 @@
+[console_scripts]
+stepik = stepik.__main__:main
+
