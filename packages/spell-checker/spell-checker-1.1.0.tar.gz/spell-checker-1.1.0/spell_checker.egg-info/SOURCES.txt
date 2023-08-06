@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+spell_checker.egg-info/PKG-INFO
+spell_checker.egg-info/SOURCES.txt
+spell_checker.egg-info/dependency_links.txt
+spell_checker.egg-info/requires.txt
+spell_checker.egg-info/top_level.txt
+speller3x/__init__.py
+speller3x/checker.py
+speller3x/english.txt
+speller3x/francais.txt
+speller3x/german.txt
+speller3x/italian.txt
+speller3x/spanish.txt
