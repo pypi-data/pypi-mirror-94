@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: pip-with-requires-python
+Version: 1.0.1
+Summary: install pip with Requires-Python support
+Home-page: https://github.com/graingert/pip-with-requires-python
+Author: Thomas Grainger
+Author-email: pip-with-requires-python@graingert.co.uk
