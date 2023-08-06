@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: synint
+Version: 0.0.5
+Summary: synint package
+Home-page: UNKNOWN
+Author: Aaron S. Parker
+Author-email: aparker@hitachisolutions.com
+License: All Rights Reserved.
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: math
+Requires-Dist: decimal
+
+UNKNOWN
+
+
