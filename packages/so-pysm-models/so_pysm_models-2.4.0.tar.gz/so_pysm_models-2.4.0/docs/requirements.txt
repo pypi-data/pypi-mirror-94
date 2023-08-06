@@ -1,0 +1,11 @@
+astropy
+toml
+numba
+numpy
+sphinx-astropy
+healpy
+quaternionarray
+pysm3
+https://github.com/simonsobs/so_pysm_models/archive/master.zip
+importlib_resources
+sphinx-math-dollar
