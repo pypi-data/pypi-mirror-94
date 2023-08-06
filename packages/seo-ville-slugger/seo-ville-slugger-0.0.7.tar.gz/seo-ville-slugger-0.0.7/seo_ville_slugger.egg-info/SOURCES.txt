@@ -1,0 +1,16 @@
+README.rst
+setup.cfg
+setup.py
+seo/__init__.py
+seo/settings.py
+seo/storage.py
+seo/utils.py
+seo/ville/__init__.py
+seo/ville/slugger.py
+seo/ville/sorl.py
+seo_ville_slugger.egg-info/PKG-INFO
+seo_ville_slugger.egg-info/SOURCES.txt
+seo_ville_slugger.egg-info/dependency_links.txt
+seo_ville_slugger.egg-info/not-zip-safe
+seo_ville_slugger.egg-info/requires.txt
+seo_ville_slugger.egg-info/top_level.txt
