@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: Zapurl
+Version: 0.2.0
+Summary: A tool that allows you to connect directly to ZapURL to shorten link through Python.
+Home-page: UNKNOWN
+Author: Jonathan Wang
+Author-email: jonathanwang2018@gmail.com
+License: UNKNOWN
+Description: # ZapURL
+        The ZapURL package allows you to shorten your links directly through Python.
+        
+        # Usage
+        Here is how you can shorten your URL.
+        
+        ```python
+        Zapurl.short([PUT_YOUR_URL_HERE]) # Shorten a URL with random directory
+        ```
+        ```python
+        Zapurl.custom(url, email, name, custom_directory) # Create custom URLs
+        ```
+        ```python
+        Zapurl.about() # Returns ZapURL build info
+        ```
+        ```python
+        Zapurl.site() # Gives you the official ZapURL site.
+        ```
+        ```python
+        Zapurl.latest() # Returns the latest version of ZapURL, download size, how to install it, and other information.
+        ```
+        ```python
+        Zapurl.update() # Updates your module automatically for you
+        ```
+        
+        # Upcoming
+        More features will be coming soon. 
+        - No new features planned yet. (Even if there were, we aren't telling you!)
+        
+        
+        # Change Log
+        
+        ## v0.0.1 (2/3/2021)
+        - First Release
+        
+        ## v0.1.0 (2/9/2021)
+        - Support for new security measure in ZapURL
+        - Custom URL Shortening enabled
+        - Package Build Version and Info
+        - Latest version function
+        - Shows Official Site Function
+        
+        
+        ## v0.1.1 (2/9/2021)
+        - Bug fixed where classic short could display extra `<` character at end resulting in link issues.
+        
+        ## v0.2.0 (2/10/2021)
+        - Bug fixes and Improvements.
+        - This is the most stable version of ZapURL
+        - Bug where ZapURL displayed wrong version number in .about() function.
+        - Release date displaying weird fixed. 
+        - Connecting to Update Server bug is fixed.
+        - Error Reporting added, which tells you when a URL is taken or not.
+        - Site and server information is now an added feature.
+        - Bug where ZapURL is ot displaying an important module of our updating system is fixed.
+        - New diologue added during package updating.
+        - This version is going to be the base of which all our future versions will be built off of.
+        
+Keywords: URL,Shortener,ZapURL
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Information Technology
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Description-Content-Type: text/markdown
