@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nwhy
+Version: 0.0.7
+Summary: NWhy project using pybind11 and CMake
+Home-page: UNKNOWN
+Author: Xu Tony Liu
+Author-email: xu.liu2@wsu.edu
+License: 3-Clause BSD license
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
+Requires-Python: >=3.8
+
+This is an alpha release
+
+
