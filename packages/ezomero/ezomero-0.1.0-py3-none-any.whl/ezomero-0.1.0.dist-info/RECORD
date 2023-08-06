@@ -1,0 +1,12 @@
+ezomero/__init__.py,sha256=5ZyG8QRMH-3xN82xBt40PL7twyu8XcjIA2ZknOVu5tA,1608
+ezomero/_ezomero.py,sha256=Sdr7BP7xadty5n9Tyk8lZpnNspxrb5Ox_riOtaEd0kA,42393
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=CpRz_5ZQKHlMy8HujvtwCKlMUX0c7KvQnLGUKOE2Lt8,16035
+tests/test_connect.py,sha256=BNvX3Saxi5bDOopZo7wlQofsiwacMlej8TgA2tlk83g,2739
+tests/test_ezomero.py,sha256=gUQXBZI2NK384ukqQj77rPlqYQKBPIgBftxxq_PZ5b8,14705
+tests/test_users_group.py,sha256=8pKtVp9fGdflrIKxKqpSEugxpgGnWgEi87OTdzxegR4,295
+ezomero-0.1.0.dist-info/LICENSE,sha256=UhAOo2LkKbLc0h11ikwbbkbohDAiktGCfFF7njYiwaA,1079
+ezomero-0.1.0.dist-info/METADATA,sha256=nbRFQLKJHlgYIJYF3Po3bzq8nJVC9UzWUauF_sckhY4,1300
+ezomero-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ezomero-0.1.0.dist-info/top_level.txt,sha256=MI_SWDk26L_FZZIfBZRPQJgobhZlozVFcRhan2UYTqg,14
+ezomero-0.1.0.dist-info/RECORD,,
