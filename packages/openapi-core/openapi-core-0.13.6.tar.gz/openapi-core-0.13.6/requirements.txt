@@ -1,0 +1,8 @@
+isodate==0.6.0
+openapi-spec-validator
+openapi-schema-validator
+six
+lazy-object-proxy
+attrs
+parse==1.14.0
+more-itertools>=5.0.0
