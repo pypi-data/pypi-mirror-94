@@ -1,0 +1,3 @@
+[console_scripts]
+linger=qqbot_linger.main:main
+
