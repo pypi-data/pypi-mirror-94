@@ -1,0 +1,13 @@
+mypy_boto3_workmailmessageflow/__init__.py,sha256=I7jkBOHxgX0tilepf3kbNrXvRvtdoKXWHK191fGsaVI,569
+mypy_boto3_workmailmessageflow/__init__.pyi,sha256=1JZ340isjHoZ2qgBQYN_F_IbCpl71VZYYp66jocw1Pw,568
+mypy_boto3_workmailmessageflow/__main__.py,sha256=MVZGxrHgLarBBpzrdgCazv-E_TfjaTMqkAT-AU7utmU,416
+mypy_boto3_workmailmessageflow/client.py,sha256=UzGFLzrNGeDJOhBZf4F_dC1N45Q5vT1r_Puea6-FwEc,2098
+mypy_boto3_workmailmessageflow/client.pyi,sha256=AoWEWp_d63sUmp8LQ_vriZJO2PLky-8YlvTSegFLAG0,2091
+mypy_boto3_workmailmessageflow/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_workmailmessageflow/type_defs.py,sha256=epdKeLWYGSMXKnIvlk9tl2n_xO7SnlplRkMkE1i-7B4,606
+mypy_boto3_workmailmessageflow/type_defs.pyi,sha256=qET-QCJNMlJBNDOTBBVDM0Kv3MCEP0rJlRgwMHjQvCc,605
+mypy_boto3_workmailmessageflow/version.py,sha256=4fv4EQg-GyvaXCCMFPkM6_DE53x0FCM3wljYc2TMmV0,56
+mypy_boto3_workmailmessageflow-1.17.7.0.dist-info/METADATA,sha256=4YbeZkxj8BWnk6heolzjAsXcdyaLTjKXqU0VgDYdvwY,6445
+mypy_boto3_workmailmessageflow-1.17.7.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mypy_boto3_workmailmessageflow-1.17.7.0.dist-info/top_level.txt,sha256=pO2FLF7giCYsq7uHhcODMdeTtB4OGmixtZwpc31Yh1A,31
+mypy_boto3_workmailmessageflow-1.17.7.0.dist-info/RECORD,,
