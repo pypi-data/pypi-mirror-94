@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: jrpystan
+Version: 0.0.1
+Summary: Jumping Rivers: Introduction to Bayesian inference using PyStan
+Author: Jumping Rivers
+Author-email: info@jumpingrivers.com
+Requires-Python: >=3.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: matplotlib (>=3.0)
+Requires-Dist: numpy (>=1.19)
+Requires-Dist: pandas (>=1)
+Requires-Dist: pystan (>=2.19,<3.0)

@@ -1,0 +1,11 @@
+jrpystan/__init__.py,sha256=XYV5sD5bnsNtEXzouopa3pb7Kod2nHZuouM3j56nzRc,123
+jrpystan/__version__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+jrpystan/data/api.zip,sha256=XnbwHMPDOgN62A1w4BxCFsrqgwDA6nYMCvzK0nZskXQ,1969
+jrpystan/data/centipedes.zip,sha256=EX6UNJcHSHS33AlyHQUH6ZKeasXFoYYbex1xDk6-ZHg,1012
+jrpystan/data/faithful.zip,sha256=L4xU96_N4uFraAv-cxurY1GUpPC5a8rUzDiRhm3_Q2A,1059
+jrpystan/data/oxboys.zip,sha256=UlQ_TFaJEnaMk8gICdy59AgtwZKupFyoseD5kgb4pDs,1576
+jrpystan/data.py,sha256=am1kSEoMVyyvENysQGmt5-PZj0jfzAyHrypHpV6O-7c,315
+jrpystan/vignettes.py,sha256=fmpJyji1-m7vDaqGvgKg0wQIZx6ZoWtGdbGSUgl63lM,1068
+jrpystan-0.0.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+jrpystan-0.0.1.dist-info/METADATA,sha256=c9Vdrvkv1D52o2Iwj6esycBZxWJkTghH9z-2I-Zw288,534
+jrpystan-0.0.1.dist-info/RECORD,,
