@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: jjnsegutils
+Version: 0.0.14
+Summary: A package of common utilities for Medical images segmentation and evaluation.
+Home-page: https://github.com/Ordgod/jjnsegutils
+Author: Jingnan
+Author-email: jiajingnan2222@gmail.com
+License: UNKNOWN
+Description: # My own utilities for medical image segmentation and  evaluation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

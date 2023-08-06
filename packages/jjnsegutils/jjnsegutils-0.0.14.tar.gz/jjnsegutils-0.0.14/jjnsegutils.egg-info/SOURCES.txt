@@ -1,0 +1,8 @@
+README.md
+setup.py
+jjnsegutils.egg-info/PKG-INFO
+jjnsegutils.egg-info/SOURCES.txt
+jjnsegutils.egg-info/dependency_links.txt
+jjnsegutils.egg-info/top_level.txt
+myutil/__init__.py
+myutil/myutil.py
