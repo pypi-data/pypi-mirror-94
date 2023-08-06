@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pyopenset/__init__.py
+pyopenset/keras.py
+pyopenset.egg-info/PKG-INFO
+pyopenset.egg-info/SOURCES.txt
+pyopenset.egg-info/dependency_links.txt
+pyopenset.egg-info/requires.txt
+pyopenset.egg-info/top_level.txt
