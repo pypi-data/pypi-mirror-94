@@ -1,0 +1,10 @@
+kafka_robot/__init__.py,sha256=I5paaNyI90TxW151lIVKPFZnL206SzQn0KJua2AdUxo,38
+kafka_robot/kafka_client.py,sha256=n8bZKSky6l_fUi6VtYjurds4CsubOU5Sxg8Rb8se2pQ,19742
+kafka_robot/t1.py,sha256=r2M-cU2NE0SpYU_B4jmZbK-UxCjRTwPjcIhGJ-nePto,90
+kafka_robot/test.py,sha256=Le-Hm0urxOt5JkHF51Eu0MZ66fqPZrIPZpyuJKhSdcY,107
+kafka_robot-2.3.0.data/data/LICENSE,sha256=RgD0xs7FsakXsb0RQVZ7UHTzeC1Ideb7DkpbxSY-oow,552
+kafka_robot-2.3.0.dist-info/LICENSE,sha256=RgD0xs7FsakXsb0RQVZ7UHTzeC1Ideb7DkpbxSY-oow,552
+kafka_robot-2.3.0.dist-info/METADATA,sha256=meHkXJxVp_ntnow-GaieCg27gLd7-0S7hcyK9NdqUgU,442
+kafka_robot-2.3.0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+kafka_robot-2.3.0.dist-info/top_level.txt,sha256=Kll3P_w0lEWbZlSHDVDe1GcYHI4kscUA2POWdWYg5UY,12
+kafka_robot-2.3.0.dist-info/RECORD,,
