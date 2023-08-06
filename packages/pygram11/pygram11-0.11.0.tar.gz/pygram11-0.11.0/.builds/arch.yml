@@ -1,0 +1,24 @@
+image: archlinux
+packages:
+- python
+- gcc
+sources:
+- https://github.com/douglasdavis/pygram11.git
+tasks:
+- setup: |
+    curl https://pyenv.run | bash
+    export PATH=$HOME/.pyenv/bin:$PATH
+    eval "$(pyenv init -)"
+    pyenv install 3.9.1
+- build: |
+    export PATH=$HOME/.pyenv/bin:$PATH
+    eval "$(pyenv init -)"
+    cd pygram11
+    pyenv shell 3.9.1
+    pip install pip pytest setuptools wheel numpy -U
+    pip install .
+    python -m pytest
+triggers:
+- action: email
+  condition: failure
+  to: "<ddavis@ddavis.io>"
