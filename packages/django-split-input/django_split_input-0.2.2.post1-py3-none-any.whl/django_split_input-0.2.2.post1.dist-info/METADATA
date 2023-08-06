@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: django-split-input
+Version: 0.2.2.post1
+Summary: A widget to have a django text input split into multiple HTML inputs.
+Home-page: https://edugit.org/AlekSIS/libs/django-split-input
+License: Apache-2.0
+Keywords: django,widget
+Author: Julian Leucker
+Author-email: leuckerj@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Typing :: Typed
+Requires-Dist: Django (>=2.0,<4.0)
+Project-URL: Repository, https://edugit.org/AlekSIS/libs/django-split-input
+Description-Content-Type: text/markdown
+
+# django_split_input
+
+## About
+
+This is a django widget for multiple fixed size inputs for one form field. These could be used for those super fancy
+verification code forms. The cursor is moved to the next input field using JS/jQuery.
+
+![django_split_input Showcase](django_split_input_showcase.png)
+
+## Usage
+
+1. Install `django_split_input` and add it to your `INSTALLED_APPS`.
+   ```shell
+   pip install django-split-input
+   ```
+   In your settings.py:
+   ```python
+   "django_split_input",
+   ```
+2. Install `jQuery` using your preferred method (e.g.
+   [django-yarnpkg](https://pypi.org/project/django-yarnpkg/))
+   
+3. Create a form with a `CharField`.
+4. Use `SplitInput` as a widget and supply the sizes of all input fields.
+
+```python
+from django import forms
+from django_split_input import SplitInput
+
+
+class VerificationForm(forms.Form):
+   auth_code = forms.CharField(label='Code', widget=SplitInput(sizes=(3, 3, 3)))
+```
+
+

@@ -1,0 +1,7 @@
+.split-input-group {
+  display: flex;
+  justify-content: center; }
+
+.split-input {
+  font-family: "Roboto Mono", monospace;
+  margin: 0 5px; }
