@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "vizcode"
+version = "0.3.10"
+description = "Visualize your codebase as a graph"
+readme = "README.md"
+homepage = "https://vizcode.dev"
+keywords = ["code visualization", "static analysis", "debugging"]
+classifiers = [
+    "Topic :: Software Development"
+]
+authors = ["Alex Rubin, Maciej Holubiec, Karthik Rao"]
+license = "GPL Public License"
+packages = [
+    { include = "vizcode" },
+    { include = "vizcode/**/*.py" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+parso = "^0.7.0"
+jedi = "^0.17.2"
+art = "^5.1"
+pickleDB = "^0.9.2"
+
+[tool.poetry.dev-dependencies]
+pyinstaller = "^3.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+vizcode = 'vizcode.main:start'
