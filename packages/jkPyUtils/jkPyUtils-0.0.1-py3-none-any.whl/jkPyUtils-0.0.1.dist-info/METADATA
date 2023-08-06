@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: jkPyUtils
+Version: 0.0.1
+Summary: Common Utils for Python from Jackon
+Home-page: https://github.com/JackonYang/jkPyUtils
+Author: Jackon Yang
+Author-email: i@jackon.me
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# jkPyUtils
+
+Common Utils for Python from Jackon
+
+
+
+## 贡献代码
+
+#### 开发环境
+
+```bash
+make dev-setup
+```
+
+#### 测试
+
+```bash
+make test
+```
+
+#### 发布
+
+
+
