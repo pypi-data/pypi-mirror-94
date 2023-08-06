@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: omniblack.logging
+Version: 0.2.0
+Summary: Default logging configuration for omniblack projects
+License: AGPL-3.0-or-later
+Author: Terry Patterson
+Author-email: Terryp@wegrok.net
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: rich
+Requires-Dist: rich (>=9.10.0,<10.0.0); extra == "rich"
+Description-Content-Type: text/x-rst
+
+Omniblack Logging
+*****************
+
+Configures logging to use a standard format and enables color output.
+
+Color Output
+************
+
+Omniblack Logging supports color logging using
+`Rich <https://github.com/willmcgugan/rich>`_.
+Color output will be disabled when either :code:`NO_COLOR` or the
+:code:`OMNIBLACK_NO_COLOR` enviroment variables. :code:`OMNIBLACK_NO_COLOR`
+is custom to Omniblack Logging to disable our color output without
+disable color output for other programs.
+
