@@ -1,0 +1,3 @@
+[console_scripts]
+ses-smtp-credentials=ses_smtp_credentials.cli:run
+

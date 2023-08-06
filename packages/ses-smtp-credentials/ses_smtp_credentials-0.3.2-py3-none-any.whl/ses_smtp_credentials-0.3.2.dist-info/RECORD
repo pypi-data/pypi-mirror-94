@@ -1,0 +1,9 @@
+ses_smtp_credentials/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ses_smtp_credentials/cli.py,sha256=lfIQ1asVT-ZrZTnJAkcmprYfurc_EGw6bi7odD75tuw,749
+ses_smtp_credentials/constants.py,sha256=8Yf2K3vSiaZ3VDTpc9eBtCanyI0C4KUYvn5_xv9thR8,805
+ses_smtp_credentials/lib.py,sha256=drG5j-EFmfQocRfSMq6HWjMRN1v0VVJSz40oghjzVsA,816
+ses_smtp_credentials-0.3.2.dist-info/entry_points.txt,sha256=X3cgkUeBe32E8x0uZXoTvoRTHeRjfyx39QOnpYs5yuI,69
+ses_smtp_credentials-0.3.2.dist-info/LICENSE,sha256=8Dc13jAA7UFWQuDp4gFz2CZ5fKwzuiXYZY1MByMv3N8,978
+ses_smtp_credentials-0.3.2.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+ses_smtp_credentials-0.3.2.dist-info/METADATA,sha256=YhL2URuMj5NGEpYMGe39-ZVHCLUsWW2-lSGLuzpLY-g,373
+ses_smtp_credentials-0.3.2.dist-info/RECORD,,
