@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 60212d461d8bad556bd388ae
+spec:
+  selector:
+    matchLabels:
+      deployment_id: 60212d461d8bad556bd388ae
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        deployment_id: 60212d461d8bad556bd388ae
+    spec:
+      containers:
+      - name: test-worker
+        image: akadaner/test-worker
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: 60212d461d8bad556bd388ae-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: 60212d461d8bad556bd388ae-config
+data:
+  CONFIG: '{"worker_id": "60212d461d8bad556bd388ae", "payload": {"type": "batch"},
+    "message_broker": ["zmq", {"endpoints": {"monitor": {"endpoint": "tcp://host.k3d.internal:5555",
+    "type": "sub"}}}]}'
