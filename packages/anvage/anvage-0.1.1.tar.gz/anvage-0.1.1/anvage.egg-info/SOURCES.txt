@@ -1,0 +1,16 @@
+README.md
+setup.py
+anvage/__init__.py
+anvage/__main__.py
+anvage/arguments.py
+anvage/dbfasta2CdsSeq.py
+anvage/flankingSequences.py
+anvage/objets.py
+anvage/selectAnnotatedVariants.py
+anvage/synonymous.py
+anvage.egg-info/PKG-INFO
+anvage.egg-info/SOURCES.txt
+anvage.egg-info/dependency_links.txt
+anvage.egg-info/entry_points.txt
+anvage.egg-info/requires.txt
+anvage.egg-info/top_level.txt

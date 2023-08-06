@@ -1,0 +1,3 @@
+[console_scripts]
+anvage = anvage.__main__:main
+
