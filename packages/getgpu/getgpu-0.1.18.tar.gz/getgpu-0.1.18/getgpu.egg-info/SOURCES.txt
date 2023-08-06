@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+getgpu/__init__.py
+getgpu/get_idle.py
+getgpu/get_idle_v2.py
+getgpu/gpuinfo.py
+getgpu.egg-info/PKG-INFO
+getgpu.egg-info/SOURCES.txt
+getgpu.egg-info/dependency_links.txt
+getgpu.egg-info/requires.txt
+getgpu.egg-info/top_level.txt
