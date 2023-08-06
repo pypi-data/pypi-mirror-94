@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "delphai-discovery"
+version = "0.1.2"
+description = "delphai microservice discovery"
+authors = ["Barath Kumar <barath@delphai.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-consul = "^1.1.0"
+grpcio = "^1.35.0"
+grpcio-reflection = "^1.35.0"
+httpx = {extras = ["http2"], version = "^0.16.1"}
+
+[tool.poetry.dev-dependencies]
+yapf = "^0.30.0"
+pep8-naming = "^0.11.1"
+flake8 = "^3.8.3"
+poethepoet = "^0.8.0"
+grpcio-tools = "^1.35.0"
+
+
+[tool.poe.tasks]
+test = "ptw -- --verbose"
+publish-test = "poetry publish -r testpypi"
+publish = [
+  {cmd = "poetry version patch"},
+  {cmd = "poetry build"},
+  {cmd = "poetry publish --username ${PYPI_USERNAME} --password ${PYPI_PASSWORD}"},
+  {cmd = "poetry publish --username ${PYPI_USERNAME} --password ${PYPI_PASSWORD} -r testpypi"}
+]
+codegen = [
+  {cmd = "mkdir -p ./src/proto"},
+  {cmd = "protodep up"},
+  {cmd = "python -m grpc_tools.protoc -I./.vendor -I. --grpc_python_out=./src/proto --python_out=./src/proto ./.vendor/**/*.proto"}
+]
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
