@@ -1,0 +1,29 @@
+{
+    "alias": "{{ alias }}",
+    "resultFormat": "time_series",
+    "fields": [
+        {
+            "func": "mean",
+            "name": "{{ name }}"
+        }
+    ],
+    "select": [
+        [
+            {
+                "params": [
+                    "{{ name }}"
+                ],
+                "type": "field"
+            },
+            {
+                "params": [],
+                "type": "mean"
+            }
+        ]
+    ],
+    "tags": {{ tags }},
+    "groupByTags": [],
+    "measurement": "{{ measurement }}",
+    "query": "SELECT mean(\"{{ name }}\") FROM \"{{ measurement }}\" WHERE $timeFilter GROUP BY time($interval)",
+    "rawQuery": false
+}
