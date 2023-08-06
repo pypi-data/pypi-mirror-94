@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: deadman
+Version: 0.1.10
+Summary: Checks up endpoints and alerts slack
+Home-page: https://github.com/ptdorf/deadman
+Author: jpedro
+Author-email: ptdorf@gmail.com
+License: MIT
+Download-URL: https://github.com/ptdorf/deadman/tarball/master
+Description: Checks up endpoints and alerts slack when they fail.
+Keywords: monitoring alerts slack http
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License

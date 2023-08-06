@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+deadman/__init__.py
+deadman/cli.py
+deadman.egg-info/PKG-INFO
+deadman.egg-info/SOURCES.txt
+deadman.egg-info/dependency_links.txt
+deadman.egg-info/entry_points.txt
+deadman.egg-info/requires.txt
+deadman.egg-info/top_level.txt
