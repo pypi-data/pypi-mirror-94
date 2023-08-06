@@ -1,0 +1,19 @@
+Change Log
+==========
+
+0.0.1 (7/2/2021)
+-------------------
+- First Release
+
+0.0.2 (7/2/2021)
+----------------
+- Added first class called New
+- Tested out library
+- Added profile mechanism
+
+0.0.3 (7/2/2021)
+----------------
+- Added eat mechanisms little part
+- Used with Django to test for web
+- Fixed all of the README.txt
+- Added Doctor

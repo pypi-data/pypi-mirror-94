@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+crisps/__init__.py
+crisps.egg-info/PKG-INFO
+crisps.egg-info/SOURCES.txt
+crisps.egg-info/dependency_links.txt
+crisps.egg-info/top_level.txt
