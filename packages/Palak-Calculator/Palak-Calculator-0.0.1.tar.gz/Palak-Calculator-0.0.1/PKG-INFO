@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: Palak-Calculator
+Version: 0.0.1
+Summary: Our package will give us a basic calculator function such as add, subtract, multiply and divide.
+Home-page: UNKNOWN
+Author: Palak Kabra
+Author-email: palakkabra2001@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education 
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
