@@ -1,0 +1,11 @@
+format.type = image
+format.quantity = column
+geometry.origin = Mercury
+geometry.dims = 501,501
+geometry.center = 0,0
+geometry.width = 8,8
+geometry.subobslongitude = 0.
+geometry.subobslatitude = 1.57
+geometry.polarangle = 0
+
+
