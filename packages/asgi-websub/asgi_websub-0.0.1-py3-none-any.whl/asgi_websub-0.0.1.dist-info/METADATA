@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: asgi-websub
+Version: 0.0.1
+Summary: 
+Home-page: https://github.com/Kludex/asgi-websub
+License: MIT
+Author: Marcelo Trylesinski
+Author-email: marcelotryle@gmail.com
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: httpx (>=0.16.1,<0.17.0)
+Project-URL: Repository, https://github.com/Kludex/asgi-websub
+Description-Content-Type: text/markdown
+
+<h1 align="center">
+    <strong>asgi-websub</strong>
+</h1>
+<p align="center">
+    <a href="https://github.com/Kludex/asgi-websub" target="_blank">
+        <img src="https://img.shields.io/github/last-commit/Kludex/asgi-websub" alt="Latest Commit">
+    </a>
+        <img src="https://img.shields.io/github/workflow/status/Kludex/asgi-websub/Test">
+        <img src="https://img.shields.io/codecov/c/github/Kludex/asgi-websub">
+    <br />
+    <a href="https://pypi.org/project/asgi-websub" target="_blank">
+        <img src="https://img.shields.io/pypi/v/asgi-websub" alt="Package version">
+    </a>
+    <img src="https://img.shields.io/pypi/pyversions/asgi-websub">
+    <img src="https://img.shields.io/github/license/Kludex/asgi-websub">
+</p>
+
+
+## Installation
+
+``` bash
+pip install asgi-websub
+```
+
+## License
+
+This project is licensed under the terms of the MIT license.
+
