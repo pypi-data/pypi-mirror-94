@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: flogging
+Version: 0.0.10
+Summary: flogging nice logging formatting and structured logging.
+Home-page: UNKNOWN
+Author: fragiletech
+Author-email: 
+License: MIT
+Keywords: Machine learning,artificial intelligence
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+Requires-Dist: xxhash
+
+# flogging
+[![Documentation Status](https://readthedocs.org/projects/flogging/badge/?version=latest)](https://flogging.readthedocs.io/en/latest/?badge=latest)
+[![Code coverage](https://codecov.io/github/fragiletech/flogging/coverage.svg)](https://codecov.io/github/fragiletech/flogging)
+[![PyPI package](https://badgen.net/pypi/v/flogging)](https://pypi.org/project/flogging/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+`flogging` offers nice logging formatting and structured logging. 
+
