@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: omniblack.email-to-chat
+Version: 0.2.0
+Summary: An smtp server that forwards messages to chat services.
+License: AGPL-3.0-or-later
+Author: Terry Patterson
+Author-email: Terryp@wegrok.net
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: discord
+Requires-Dist: aiosmtpd (>=1.2.4,<2.0.0)
+Requires-Dist: discord.py (>=1.6.0,<2.0.0); extra == "discord"
+Requires-Dist: omniblack.logging (>=0.1.3,<0.2.0)

@@ -1,0 +1,14 @@
+omniblack/email_to_chat/InputSink.py,sha256=xeTQwFgLvBoyLrBKF-YkABllnq1aOWFs-q5aPqDbFEo,276
+omniblack/email_to_chat/OutputSink.py,sha256=KdEBUlpqcKeXyVYAf-WHlTCpyBYDtM6Ap2FmWP3DqnY,315
+omniblack/email_to_chat/__init__.py,sha256=xaJBQLDPjiXw26vyZ4AHY6hylcjWq3ynnZjhm7p42l0,64
+omniblack/email_to_chat/__main__.py,sha256=WIg_qPF3NPO7T0w5vawfIIoNh_U2jAcDNvpolF_m-sg,1836
+omniblack/email_to_chat/async_utils.py,sha256=ig1GDqnUUW0exMhCKDOCQVOFlMbMHujDyyXaO35XobQ,367
+omniblack/email_to_chat/creds.py,sha256=IOwvz_vmjGTiyqduLNDEG7MP-UTsEcwfyuKU4_hLg3o,536
+omniblack/email_to_chat/discord_sink.py,sha256=QDDp9Q6M3OMATrbRS9wTBb7JOkl_5UYrgZzTIaQThOs,1423
+omniblack/email_to_chat/email_sink.py,sha256=-kI77Si5wh2Lpb5S5EgewSUttCyY7EtnNFN384vSVr4,3216
+omniblack/email_to_chat/get_fds.py,sha256=jMbOYmlyyYjQYj1IbMMlw08uN6CQMG53MRT-oB5XQGg,703
+omniblack/email_to_chat/msg_queue.py,sha256=KiPjhTtfTf7DYgGYAAFPH2S20eoRDu9Cg-Hfoyck0ag,168
+omniblack.email_to_chat-0.2.0.dist-info/entry_points.txt,sha256=PaAIK991LvRgVP4OO2D7-Ld6LdcL8M5mRU4tYkGVJAc,67
+omniblack.email_to_chat-0.2.0.dist-info/WHEEL,sha256=Q99itqWYDhV793oHzqzi24q7L7Kdiz6cb55YDfTXphE,84
+omniblack.email_to_chat-0.2.0.dist-info/METADATA,sha256=vzG04rxarIhnwZmIMJbFTNQLFTqo-1B9JVcf2MbZGAk,564
+omniblack.email_to_chat-0.2.0.dist-info/RECORD,,
