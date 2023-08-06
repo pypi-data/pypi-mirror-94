@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+gen_exe.egg-info/PKG-INFO
+gen_exe.egg-info/SOURCES.txt
+gen_exe.egg-info/dependency_links.txt
+gen_exe.egg-info/entry_points.txt
+gen_exe.egg-info/requires.txt
+gen_exe.egg-info/top_level.txt
+genexe/__init__.py
+genexe/generate_exe.py
+genexe/winicon.py
+genexe/res/template
