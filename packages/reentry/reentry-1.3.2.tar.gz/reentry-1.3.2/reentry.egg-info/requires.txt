@@ -1,0 +1,20 @@
+setuptools>=36.2
+click
+six
+
+[:python_version < "3.5"]
+pathlib2
+
+[pre-commit]
+pre-commit~=2.2
+pylint~=2.6.0
+flake8
+tox
+packaging
+
+[tests]
+pytest
+coverage
+pytest-cov
+wheel
+tox
