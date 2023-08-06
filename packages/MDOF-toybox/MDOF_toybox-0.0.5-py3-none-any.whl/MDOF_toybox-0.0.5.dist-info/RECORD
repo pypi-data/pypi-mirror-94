@@ -1,0 +1,10 @@
+toybox/__init__.py,sha256=zF6See9DsoHqJU6PP6sSnXlflhfN9hxWSMuKrQVpvlY,155
+toybox/base.py,sha256=ZeOXzov7dEcL4zOqsnPRnal2iaMJTpuFfVBAsHgVtkA,3422
+toybox/integrators.py,sha256=aOwpg-h9bc0ilXeubaeeETTv51nGoKkpFt-4w54DKaM,2174
+toybox/nonlinearities.py,sha256=9-wBVOkL2TO7sJr3dPaHRcbUbcE7N4bAWzGSBMiGH-I,263
+toybox/premade.py,sha256=8OEWy9UcF4akviZykalrBGILMPDI1mcpC6lylAdAQyc,1593
+MDOF_toybox-0.0.5.dist-info/LICENSE,sha256=17uhmETZJvul1nH2R1vxWH0QcP0jxHRtevUzgKXe8SY,1070
+MDOF_toybox-0.0.5.dist-info/METADATA,sha256=3_VYx0EGEX5Ll_c5OV-H9jpfnBaXu21oKwUo7l4T6oQ,791
+MDOF_toybox-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+MDOF_toybox-0.0.5.dist-info/top_level.txt,sha256=ow_zUmnDLV4uS0ml7Kp5zJkpo5lLtBJ0wAeN5xHGIrE,7
+MDOF_toybox-0.0.5.dist-info/RECORD,,
