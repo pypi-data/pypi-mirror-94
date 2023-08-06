@@ -1,0 +1,12 @@
+virgo/__init__.py,sha256=AW-jNOXuuU6gnnPyPNAeHX6zQunPuGObkDXDA1djmCI,179
+virgo/ftf.grc,sha256=z5itKMvUxkZuslAgEkdSQAYT-oIbbAcdteBFmg0D4rM,46555
+virgo/map.txt,sha256=FQcKynR-DhoLfifhwS0YDk-gwncRj2mAU9YbujXAQ8U,8000000
+virgo/run_ftf.py,sha256=k_rgXISOlM16GaLThPC22Z1sq7uu_3PYnoPNudrWsCc,8589
+virgo/run_wola.py,sha256=m7B2KeQz8hAHjE-qpepdEmcjKzUppXuOI4_JEWhL7xY,11782
+virgo/virgo.py,sha256=2VQX5HZNri4XNWiyj-YaDfcFd9XhAVIDvwE2RUt6z8I,31592
+virgo/wola.grc,sha256=ORn-aTBDH-ICTy4vbRq7zKYT_vjHRFpDUtzxXy15q7I,60547
+astro_virgo-3.6.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+astro_virgo-3.6.4.dist-info/METADATA,sha256=deN6eUKstpiEYgcMHrnotd4QlceuWeacdYroHe06-BQ,14397
+astro_virgo-3.6.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+astro_virgo-3.6.4.dist-info/top_level.txt,sha256=_MSlYat0rv8SlZUJ6UwjzR80vkux5ZBDoPMxw1s8Xd8,6
+astro_virgo-3.6.4.dist-info/RECORD,,
