@@ -1,0 +1,12 @@
+pikepdf
+tabula-py
+pandas
+numpy
+click
+
+[dev]
+check-manifest
+
+[test]
+pytest
+coverage
