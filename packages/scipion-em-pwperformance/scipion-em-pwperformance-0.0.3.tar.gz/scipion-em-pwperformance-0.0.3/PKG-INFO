@@ -1,0 +1,40 @@
+Metadata-Version: 1.1
+Name: scipion-em-pwperformance
+Version: 0.0.3
+Summary: Python module to provide performance analysis tools and storage of the metrics for a further comparison
+Home-page: UNKNOWN
+Author: Pablo Conesa
+Author-email: pconesa@cnb.csic.es
+License: UNKNOWN
+Description: =============
+        pwperformance
+        =============
+        
+        **pwperformance** is a Scipion plugin with tests to measure performance and send benchmarks to a codeSpeed server
+        
+        
+        The entire collection is licensed under the terms of the GNU Public License,
+        version 3 (GPLv3).
+        
+        --------------------------------
+        Environment variables (optional)
+        --------------------------------
+        
+        ::
+        
+            CODESPEED_URL : Codespeed url to send bencharks to. Defaults to  http://localhost:8000
+            CODESPEED_ENV = Codespeed environment. Defaults to unknown
+            CODESPEED_PROJECT = Codespeed project. Defaults to unknown
+            CODESPEED_REVISION = Codespeed revision. Defaults to unknown
+        
+        You may want to set URL and REVISION to get proper results
+        
+Keywords: scipion cryoem imageprocessing scipion-3.0
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
