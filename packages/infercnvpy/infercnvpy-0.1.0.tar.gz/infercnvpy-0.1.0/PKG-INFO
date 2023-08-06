@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: infercnvpy
+Version: 0.1.0
+Summary: Python library to infer copy number variation (CNV) from single-cell RNA-seq data
+Home-page: https://github.com/icbi-lab/infercnvpy
+Author: Gregor Sturm
+Author-email: gregor.sturm@i-med.ac.at
