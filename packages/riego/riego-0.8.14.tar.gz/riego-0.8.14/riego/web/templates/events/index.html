@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% set title = "Riego - Events" %}
+{% set active_menu = "events" %}
+
+
+{% block content %}
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Datum</th>
+        <th scope="col">Dauer</th>
+        <th scope="col">Kreis</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in items %}
+      <tr>
+        <td>{{ item.created_at }}</td>
+        <td>{{ item.duration }}</td>
+        <td>{{ item.name }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+
+
+{% endblock %}
+
