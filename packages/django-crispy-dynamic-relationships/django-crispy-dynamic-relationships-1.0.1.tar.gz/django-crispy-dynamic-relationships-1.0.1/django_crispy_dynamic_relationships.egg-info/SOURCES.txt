@@ -1,0 +1,9 @@
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+django_crispy_dynamic_relationships.egg-info/PKG-INFO
+django_crispy_dynamic_relationships.egg-info/SOURCES.txt
+django_crispy_dynamic_relationships.egg-info/dependency_links.txt
+django_crispy_dynamic_relationships.egg-info/requires.txt
+django_crispy_dynamic_relationships.egg-info/top_level.txt
