@@ -1,0 +1,17 @@
+jupyternb_task_review-1.0.0.data/data/etc/jupyter/nbconfig/notebook.d/lti-connector.json,sha256=QBLiotTdze8R4GevCAVvTzFgZKkgo-OOsZiJz61AWrM,77
+jupyternb_task_review-1.0.0.data/data/share/jupyter/nbextensions/jupyternb-lti-connector/main.js,sha256=65x9kq3RNMd87qmVdcKy2dIzjaCLjdmcakraQ-96ccM,3101
+taskreview/__init__.py,sha256=vuUyzxvp6sReiHNn8mZOfjDUQ_U4FB3pEJXCyzPTui8,491
+taskreview/choice_task.py,sha256=nUZkCdhZccL-dMyCk62jbvkmY7yYNilJfhvJvSO_m0I,3464
+taskreview/choice_widgets.py,sha256=pBefURu-Utn9-wFLV2u_3LjvOlqBDwzKa4XHj8YFN6w,4214
+taskreview/counter.py,sha256=GV7IsbN7z6vNaKnMMWuk4QYoX6ErB1JGYL7bDf7hP-g,949
+taskreview/dataframe_task.py,sha256=Tf9Xpo1EsNtIUfw4cHeVDZwUQU_-_It7OH3p2YgYAP8,11334
+taskreview/learning_module.py,sha256=23zebhrQXcIzjAH8xf0adTv67Gt3cB3cnAOkQN5w6po,4124
+taskreview/task.py,sha256=zDAwZYraMlgN3EH-GYgG-vNU7X2IbfN1QcU81G94HG8,7473
+taskreview/task_database.py,sha256=CZs7WR0t2zudSyQbBaCCszRnibw2KzkbWb0x58h7Z5M,6275
+taskreview/task_evaluation_widgets.py,sha256=67okIT6ISpPLFkUjXZ4NY3VBAAI0yscogLwss9S926U,6151
+taskreview/img/green_check.png,sha256=9jPtmyRVMrOlTs1qDv6udQBzZYYlR8qkvvRX6JgiwXg,52155
+jupyternb_task_review-1.0.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupyternb_task_review-1.0.0.dist-info/METADATA,sha256=yEENF8qg1dvXazb2zMNa3km0RW20k2YQZgVREPS5A2k,6705
+jupyternb_task_review-1.0.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+jupyternb_task_review-1.0.0.dist-info/top_level.txt,sha256=0kS-ihawFdgRmesZQm4sTdGveknwKQ7pr8lfADPTuGg,11
+jupyternb_task_review-1.0.0.dist-info/RECORD,,
