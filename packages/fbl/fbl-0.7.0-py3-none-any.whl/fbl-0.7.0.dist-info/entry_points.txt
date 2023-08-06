@@ -1,0 +1,3 @@
+[console_scripts]
+fbl = fbl.__main__:main
+

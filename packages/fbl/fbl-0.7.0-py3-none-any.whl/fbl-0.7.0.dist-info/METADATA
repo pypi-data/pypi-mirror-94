@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: fbl
+Version: 0.7.0
+Summary: FBL is tool to find broken links in articles and files
+Home-page: https://github.com/mr-tafreshi/fbl
+Author: Amirmahdi Tafreshi
+Author-email: a.tafreshi440@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: idna (==2.10)
+Requires-Dist: lxml (==4.6.2)
+Requires-Dist: PyMuPDF (==1.18.6)
+Requires-Dist: python-docx (==0.8.10)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: urllib3 (==1.26.2)
+
+# FBL(Find/File broken links)
+
+FBL is tool to find broken links in articles and files
+
+
+
+## how it works
+
+FBL finds all the links and checks them all. Any broken link will be displayed to you
+
+
+
+## How to run
+
+Run this command in your terminal or CMD :
+
+```bash 
+pip3 install fbl
+
+fbl --file_location my.pdf
+```
+
+**or**
+
+1. Install `python3` and `git` on your system
+
+```bash
+git clone https://github.com/mr-tafreshi/fbl
+cd fbl
+pip3 install -e . 
+fbl ---file_location my.pdf
+```
+
+
+
+### TODO
+
+- [x] .txt support
+
+- [x] .pdf support
+- [x] Mark Down Support
+- [x] docx support
+- [ ] .odt support
+- [x] .htm and .html support
+- [ ] .XLS and XLSX support
+- [ ] .PPT and .PPTX support
+
+
