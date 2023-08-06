@@ -1,0 +1,10 @@
+architectures/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+architectures/core/__init__.py,sha256=gH08FuGnBdulAt9EwbkOiBjecXV48Y-ZAnixESHd8Ek,17491
+architectures/providers/__init__.py,sha256=9DDZaBg7lghNXpAIu4SNGJLlneguEO6YpqGd1s4tAmM,490
+architectures/themes/__init__.py,sha256=PIgbPimw-S9lykvOp26VPRkH1e83tOfTDjavdUSUoSs,7394
+architectures/themes/settings/__init__.py,sha256=Q-tnSqKZgLdndLRnxJQsdsDA7qYcsUFH3eDq0xbNNLw,20223
+architectures-0.2.0.dist-info/LICENSE,sha256=HkGqWUVTTaMop6P60XETwa3m-6YB6e9dj-7Z1qvVcPc,1072
+architectures-0.2.0.dist-info/METADATA,sha256=1-CvvhPSTtmVoIbZlKdAKAYacGq_TOZnslAHtBupT94,21202
+architectures-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+architectures-0.2.0.dist-info/top_level.txt,sha256=Ry8P57aco2wTEkX7F8DbF1AEiCIwLuhQk3DSXj5ZTjk,14
+architectures-0.2.0.dist-info/RECORD,,
