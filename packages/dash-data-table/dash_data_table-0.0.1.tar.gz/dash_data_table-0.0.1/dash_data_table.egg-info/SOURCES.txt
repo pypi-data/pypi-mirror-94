@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+pyproject.toml
+setup.py
+dash_data_table/DashDataTable.py
+dash_data_table/__init__.py
+dash_data_table/_imports_.py
+dash_data_table/dash_data_table.min.js
+dash_data_table/dash_data_table.min.js.map
+dash_data_table/metadata.json
+dash_data_table/package-info.json
+dash_data_table.egg-info/PKG-INFO
+dash_data_table.egg-info/SOURCES.txt
+dash_data_table.egg-info/dependency_links.txt
+dash_data_table.egg-info/top_level.txt
