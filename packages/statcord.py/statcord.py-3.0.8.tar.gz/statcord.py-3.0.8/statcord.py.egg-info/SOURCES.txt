@@ -1,0 +1,10 @@
+README.md
+setup.py
+statcord/__init__.py
+statcord/client.py
+statcord/exceptions.py
+statcord.py.egg-info/PKG-INFO
+statcord.py.egg-info/SOURCES.txt
+statcord.py.egg-info/dependency_links.txt
+statcord.py.egg-info/requires.txt
+statcord.py.egg-info/top_level.txt
