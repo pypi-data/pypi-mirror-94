@@ -1,0 +1,9 @@
+README.md
+setup.py
+ofunctions.string_handling.egg-info/PKG-INFO
+ofunctions.string_handling.egg-info/SOURCES.txt
+ofunctions.string_handling.egg-info/dependency_links.txt
+ofunctions.string_handling.egg-info/namespace_packages.txt
+ofunctions.string_handling.egg-info/not-zip-safe
+ofunctions.string_handling.egg-info/top_level.txt
+ofunctions/string_handling/__init__.py
