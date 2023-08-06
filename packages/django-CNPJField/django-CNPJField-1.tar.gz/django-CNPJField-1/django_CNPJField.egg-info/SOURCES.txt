@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+cnpj_field/__init__.py
+cnpj_field/forms.py
+cnpj_field/models.py
+cnpj_field/validators.py
+django_CNPJField.egg-info/PKG-INFO
+django_CNPJField.egg-info/SOURCES.txt
+django_CNPJField.egg-info/dependency_links.txt
+django_CNPJField.egg-info/top_level.txt
