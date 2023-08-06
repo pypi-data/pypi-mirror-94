@@ -1,0 +1,7 @@
+pyproject.toml
+setup.cfg
+setup.py
+wix_protos_grpc_json_rpc_idl_testapp.egg-info/PKG-INFO
+wix_protos_grpc_json_rpc_idl_testapp.egg-info/SOURCES.txt
+wix_protos_grpc_json_rpc_idl_testapp.egg-info/dependency_links.txt
+wix_protos_grpc_json_rpc_idl_testapp.egg-info/top_level.txt
