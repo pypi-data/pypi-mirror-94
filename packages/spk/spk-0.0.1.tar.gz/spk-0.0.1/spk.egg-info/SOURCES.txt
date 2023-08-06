@@ -1,0 +1,8 @@
+setup.py
+spk/__init__.py
+spk/spk.py
+spk.egg-info/PKG-INFO
+spk.egg-info/SOURCES.txt
+spk.egg-info/dependency_links.txt
+spk.egg-info/requires.txt
+spk.egg-info/top_level.txt
