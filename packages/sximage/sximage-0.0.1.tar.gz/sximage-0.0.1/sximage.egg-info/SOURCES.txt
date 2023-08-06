@@ -1,0 +1,12 @@
+README.md
+setup.py
+sximage/__init__.py
+sximage/__main__.py
+sximage/fpgacap.py
+sximage/sximage.py
+sximage.egg-info/PKG-INFO
+sximage.egg-info/SOURCES.txt
+sximage.egg-info/dependency_links.txt
+sximage.egg-info/entry_points.txt
+sximage.egg-info/requires.txt
+sximage.egg-info/top_level.txt
