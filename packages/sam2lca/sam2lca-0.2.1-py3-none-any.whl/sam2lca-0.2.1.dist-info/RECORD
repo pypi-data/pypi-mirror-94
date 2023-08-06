@@ -1,0 +1,15 @@
+sam2lca/__init__.py,sha256=kr4ycOkLRNuQAnS-Qx0ATM6UpydrOCPfxs5yQox3Pp8,56
+sam2lca/cli.py,sha256=lYrb6qlevkYV-OpxbB_al7Arc26eyufEOH20YFlJduo,2242
+sam2lca/config.py,sha256=Wh6QYNXRAYQhuDJaQapllGf_jKc5LGkCJsJHSaQWazo,697
+sam2lca/main.py,sha256=3tT-qS3RldQj0mJ7ZIHz1aUMFcYyEpwoLDKtfhGk8eI,1506
+sam2lca/mapfiles.py,sha256=S61pm-E6UEWWlz3sI2v5-dJJsc6PpBaM3e0448657NE,1081
+sam2lca/ncbi_to_taxid.py,sha256=spWV6LYSuKxIkAID5X7lBc8xxKO3UtDlqcQT3gixrW8,5657
+sam2lca/sam_ete.py,sha256=ZwaQklVKp8BAM56uYf7TNGbfDjeSstAxvx0NSx7ckoo,2865
+sam2lca/sam_pysam.py,sha256=A7aFKTp-39vG5EYv3StiOpeUq9ekeDdtAR9JjNT09jY,2638
+sam2lca/utils.py,sha256=X3eldyvek-P8HvlHWHP9ShPp-c8a09AS4N9g_kumMn0,2164
+sam2lca-0.2.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sam2lca-0.2.1.dist-info/METADATA,sha256=ZWR6JJ25BMxp95Xhuj5AZ223sDtiz9q0tK3mkH2fN6s,1311
+sam2lca-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sam2lca-0.2.1.dist-info/entry_points.txt,sha256=emQ5fG4ew1LjHrgcVVlCBz9chu1jS3_nijL4CzlFvuI,45
+sam2lca-0.2.1.dist-info/top_level.txt,sha256=_IlHFEMq50X9OxN2gQbDr5xJ1FkqxTKTR88Jl9WhGeU,8
+sam2lca-0.2.1.dist-info/RECORD,,
