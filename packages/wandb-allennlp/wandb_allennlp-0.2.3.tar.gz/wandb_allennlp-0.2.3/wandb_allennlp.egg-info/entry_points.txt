@@ -1,0 +1,3 @@
+[console_scripts]
+wandb_allennlp = wandb_allennlp.__main__:run
+
