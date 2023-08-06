@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Pods{% endblock %}
+{% block content %}
+
+
+<h1 class="title">All Pods
+    <span class="links">
+        <a href="./pods.tsv"
+           title="Download Pods as Tab-Separated-Values (TSV)"
+           class="button is-light">
+            <span class="icon"><i class="fas fa-file-download"></i></span>
+        </a>
+    </span>
+</h1>
+
+<table class="table is-striped is-hoverable is-fullwidth" data-sortable>
+    <thead>
+        <tr>
+            <th>Cluster</th>
+            <th>Namespace</th>
+            <th>Name</th>
+            <th>Application</th>
+            <th>Component</th>
+            <th><abbr title="CPU Requests">CR</abbr></th>
+            <th><abbr title="Memory Requests">MR</abbr></th>
+            <th>CPU</th>
+            <th>Memory (MiB)</th>
+            <th class="has-text-right">Cost</th>
+            {% if links['pod']: %}
+            <th></th>
+            {% endif %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for cluster_id, summary in cluster_summaries.items(): %}
+        {% for namespace_name, pod in summary.pods.items(): %}
+        <tr>
+            <td><a href="./cluster-{{ cluster_id }}.html">{{ summary.cluster.name }}</a></td>
+            <td>{{ namespace_name[0] }}</td>
+            <td>{{ namespace_name[1] }}</td>
+            <td>{{ pod.application }}</td>
+            <td>{{ pod.component }}</td>
+            <td>{{ pod.requests.cpu|round(3) }}</td>
+            <td data-value="{{ pod.requests.memory }}">{{ pod.requests.memory|filesizeformat(True) }}</td>
+
+            <td style="font-size: 0.75rem" data-value="{{ pod.usage.cpu }}">
+                {{ elements.resource_bar_cpu(pod) }}
+            </td>
+            <td style="font-size: 0.75rem" data-value="{{ pod.usage.memory }}">
+                {{ elements.resource_bar_memory(pod) }}
+            </td>
+
+            <td class="has-text-right">{{ pod.cost|money }}</td>
+
+            {% if links['pod']: %}
+            <td class="links">
+                <div class="buttons has-addons">
+                    {% for link in links['pod']: %}
+                    <a href="{{ link.href.format(cluster=summary.cluster.name, namespace=namespace_name[0], name=namespace_name[1]) }}"
+                       title="{{ link.title.format(cluster=summary.cluster.name, namespace=namespace_name[0], name=namespace_name[1]) }}"
+                       class="button is-small">
+                        <span class="icon"><i class="fas fa-{{ link.icon }}"></i></span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </td>
+            {% endif %}
+        </tr>
+        {%endfor %}
+        {%endfor %}
+    </tbody>
+
+</table>
+{% endblock %}
