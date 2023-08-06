@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: apply-subs
+Version: 0.1.3
+Summary: A command line tool to apply substitutions to a text file
+Home-page: https://github.com/neutrinoceros/apply_subs
+Author: C.M.T. Robert
+License: GPL-3.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: colorama (>=0.4.4)
+Requires-Dist: more-itertools (>=8.7.0)
+Requires-Dist: schema (>=0.7.4)
+
+# apply-subs
+![PyPI](https://img.shields.io/pypi/v/apply-subs)
+[![codecov](https://codecov.io/gh/neutrinoceros/apply_subs/branch/main/graph/badge.svg)](https://codecov.io/gh/neutrinoceros/apply_subs)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/neutrinoceros/apply_subs/main.svg)](https://results.pre-commit.ci/latest/github/neutrinoceros/apply_subs/main)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+Apply a dictionnary (json) of substitutions to a text file.
+## Installing
+
+```shell
+$ pip install apply-subs
+```
+
+# Examples
+
+## minimal
+```shell
+$ echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit" > mytext.txt
+$ echo '{"Hello": "Lorem ipsum", "goodbye": "adipiscing elit"}' > mysubs.json
+$ apply-subs mytext.txt mysubs.json
+```
+will print the patched content
+```
+Hello dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore goodbye.
+```
+
+## patch mode
+
+
+In patch mode (`-p/--patch`),
+print a patch diff instead of the end result
+```patch
+--- mytext.txt
++++ mytext.txt (patched)
+@@ -1 +1 @@
+-Lorem ipsum dolor sit amet, consectetur adipiscing elit
++Hello dolor sit amet, consectetur goodbye
+```
+
+Use `-cp/--cpatch/--colored-patch` for a colored output (when supported).
+
+## inplace substitutions
+`-i/--inplace`
+```
+apply-subs --inplace mytext.txt mysubs.json
+```
+is equivalent to
+```
+apply-subs mytext.txt mysubs.json > mytext.txt
+```
+
+
