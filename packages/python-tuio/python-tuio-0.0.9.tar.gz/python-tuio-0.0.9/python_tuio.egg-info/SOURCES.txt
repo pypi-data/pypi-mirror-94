@@ -1,0 +1,11 @@
+README.md
+setup.py
+python_tuio.egg-info/PKG-INFO
+python_tuio.egg-info/SOURCES.txt
+python_tuio.egg-info/dependency_links.txt
+python_tuio.egg-info/top_level.txt
+pythontuio/__init__.py
+pythontuio/const.py
+pythontuio/dispatcher.py
+pythontuio/tuio.py
+pythontuio/tuio_profiles.py
