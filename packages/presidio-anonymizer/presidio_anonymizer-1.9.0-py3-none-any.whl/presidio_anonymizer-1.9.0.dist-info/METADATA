@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: presidio-anonymizer
+Version: 1.9.0
+Summary: Persidio Anonymizer package - replaces analyzed text with desired values.
+Home-page: https://github.com/microsoft/presidio
+License: MIT license
+Keywords: presidio_anonymizer
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Requires-Dist: flask (==1.1.2)
+
+UNKNOWN
+
+
