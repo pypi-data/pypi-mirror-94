@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: ubarec
+Version: 0.1.2
+Summary: Universal backup and recovery using S3 repo
+Home-page: http://github.com/fgbm/ubarec
+Author: Chmelyuk Vladislav
+Author-email: neimp@yandex.ru
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
