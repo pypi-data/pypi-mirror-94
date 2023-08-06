@@ -1,0 +1,8 @@
+torch
+torchvision
+pytorch-lightning
+
+[dev]
+nose2
+packaging
+jlabdev
