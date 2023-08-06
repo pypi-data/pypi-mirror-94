@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: sphinxnotes-strike
+Version: 1.0
+Summary: Sphinx extension for HTML strikethrough text support
+Home-page: https://sphinx-notes.github.io/strike
+Author: Shengyu Zhang
+License: BSD
+Download-URL: https://pypi.org/project/strike
+Description: ==================
+        sphinxnotes-strike
+        ==================
+        
+        ----------------------------------------------------
+        Sphinx extension for HTML strikethrough text support
+        ----------------------------------------------------
+        
+        Please refer to https://sphinx-notes.github.io/strike/ for documentation.
+        
+Keywords: documentation,sphinx,extension
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Plugins
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Extension
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Text Processing :: Markup :: reStructuredText
+Requires-Python: >=3
+Description-Content-Type: text/x-rst
