@@ -1,0 +1,6 @@
+[console_scripts]
+mnn = MNN.tools.mnn:main
+mnnconvert = MNN.tools.mnnconvert:main
+mnnops = MNN.tools.mnnops:main
+mnnquant = MNN.tools.mnnquant:main
+
