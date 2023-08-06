@@ -1,0 +1,57 @@
+#!/bin/env python
+
+import argparse
+import xmlrpc.client
+
+import eut.peerless
+
+if __name__ == "__main__":
+    epilog = """
+    Use this script to register or request a new password in order
+    to use Peerless services.
+
+    The process is as follows:
+
+     1. Request a password by issuing the command
+
+        $ peerless_manager -r your@email.com
+
+        An email will be sent to you with a key to finish the
+        registration or password change.
+
+     2. Using the key received in the email, issue the command:
+
+        $ peerless_manager -s your@email.com,key
+    """
+    parser = argparse.ArgumentParser(
+        prog="peerless_manager", description="Peerless manager",
+        epilog=epilog, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("-r", dest="email",
+                        help="register or request a new password")
+    parser.add_argument("-s", dest="key",
+                        help="submit a registration key")
+    parser.add_argument("-u", dest="url",
+                        default=eut.peerless.default_jobstore_url,
+                        help="jobstore url." +
+                        f" Default: {eut.peerless.default_jobstore_url}")
+    args = parser.parse_args()
+    if args.email is None and args.key is None:
+        parser.print_help()
+    elif args.email is not None:
+        ans = input(f"Request a new password using '{args.email}' [Y/n]: ")
+        if len(ans) == 0 or ans.lower() == "y":
+            with xmlrpc.client.ServerProxy(args.url, allow_none=True) as jobstore:
+                jobstore.password_request(args.email)
+            print("Please check your email to find the key" +
+                  " and complete the process")
+    elif args.key is not None:
+        email, key = args.key.split(",")
+        email = email.strip()
+        key = key.strip()
+        ans = input(f"Complete registration using '{email}'"
+                    f" and '{key}' [Y/n]: ")
+        if len(ans) == 0 or ans.lower() == "y":
+            with xmlrpc.client.ServerProxy(args.url,
+                                           allow_none=True) as jobstore:
+                jobstore.register(email, key)
+            print("Please check your email to find your password")
