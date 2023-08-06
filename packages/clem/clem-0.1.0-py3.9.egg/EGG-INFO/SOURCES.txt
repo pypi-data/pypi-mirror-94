@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+clem/__init__.py
+clem/models.py
+clem.egg-info/PKG-INFO
+clem.egg-info/SOURCES.txt
+clem.egg-info/dependency_links.txt
+clem.egg-info/top_level.txt
