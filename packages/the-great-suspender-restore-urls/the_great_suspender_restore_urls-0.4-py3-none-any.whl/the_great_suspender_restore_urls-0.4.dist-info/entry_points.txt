@@ -1,0 +1,3 @@
+[console_scripts]
+restore-the-great-suspender-urls = thegreatsuspender:cli
+
