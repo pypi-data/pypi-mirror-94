@@ -1,0 +1,5 @@
+numpy-quaternion
+trimesh[easy]
+shapely
+scikit-learn
+pcg_gazebo
