@@ -1,0 +1,3 @@
+[console_scripts]
+pyapm = pyapm.__main__:main
+
