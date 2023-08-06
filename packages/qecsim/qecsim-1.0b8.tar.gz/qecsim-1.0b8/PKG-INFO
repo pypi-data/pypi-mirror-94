@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: qecsim
+Version: 1.0b8
+Summary: Quantum error correction simulator
+Home-page: https://github.com/qecsim/qecsim
+Author: David K. Tuckett
+Author-email: qecsim@gmail.com
+License: BSD 3-Clause License
+Project-URL: Source Code, https://github.com/qecsim/qecsim
+Project-URL: Documentation, https://davidtuckett.com/qit/qecsim/
+Project-URL: Issue tracker, https://github.com/qecsim/qecsim/issues
+Description: qecsim
+        ======
+        
+        **qecsim** is a Python 3 package for simulating quantum error correction using
+        stabilizer codes.
+        
+        It provides access to all features via a command-line interface. It can also be
+        used as a library via the fully-documented API. It includes many common codes,
+        error models and decoders, and can be extended with additional components.
+        
+        
+        Installation
+        ------------
+        
+        Install and upgrade using `pip`_:
+        
+        .. code-block:: text
+        
+            $ pip install -U qecsim
+        
+        .. _pip: https://pip.pypa.io/en/stable/quickstart/
+        
+        
+        Usage
+        -----
+        
+        
+        CLI
+        ~~~
+        
+        .. code-block:: text
+        
+            $ qecsim --version
+            qecsim, version 1.0b8
+            $ qecsim --help                 # console script
+            ...
+            $ python -O -m qecsim --help    # module script with Python options e.g. -O for optimize
+            ...
+        
+        
+        API
+        ~~~
+        
+        .. code-block:: text
+        
+            >>> import qecsim
+            >>> qecsim.__version__
+            '1.0b8'
+            >>> from qecsim import app
+            >>> help(app)
+            ...
+        
+        
+        Extension
+        ~~~~~~~~~
+        
+        qecsim can be extended with additional codes, error models and decoders that
+        integrate into the command-line interface.
+        See https://github.com/qecsim/qecsimext for a basic example.
+        
+        
+        License / Citing
+        ----------------
+        
+        qecsim is released under the BSD 3-Clause license. If you use qecsim in your
+        research, please see the `qecsim documentation`_ for citing details.
+        
+        .. _qecsim documentation: https://davidtuckett.com/qit/qecsim/
+        
+        
+        Links
+        -----
+        
+        * Source code: https://github.com/qecsim/qecsim
+        * Documentation: https://davidtuckett.com/qit/qecsim/
+        * Issue tracker: https://github.com/qecsim/qecsim/issues
+        * Releases: https://pypi.org/project/qecsim/
+        * Contact: qecsim@gmail.com
+        
+        ----
+        
+        Copyright 2016 - 2021, David K. Tuckett.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Provides-Extra: dev
