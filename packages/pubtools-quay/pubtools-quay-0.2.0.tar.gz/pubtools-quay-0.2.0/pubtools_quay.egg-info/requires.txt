@@ -1,0 +1,8 @@
+setuptools
+pyrsistent==0.13.0
+pushcollector
+paramiko
+requests
+
+[reST]
+Sphinx
