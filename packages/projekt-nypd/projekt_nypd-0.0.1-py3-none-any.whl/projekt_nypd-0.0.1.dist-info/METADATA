@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: projekt-nypd
+Version: 0.0.1
+Summary: A final solution
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Solution to the Final Assignment in DiP
+
+## Folder data includes:
+- necessary data to perform statistics for the canonical assignment
+- profiler results:
+
+![Screenshot](./data/profiler_results/data_process.png)
+
+![Screenshot](./data/profiler_results/data_stats_for_school.png)
+
+
+## Folder src
+- folder [data_processing](./src/data_processing) includes files for processing of data
+- folder [data_statistics](./src/data_statistics)  includes files for statistics calculation
+- folder data_visualization includes final report in file [raport.ipynb](./src/data_visualization/raport.ipynb)
+- unit tests are located in folder [unit_tests](./src/unit_tests)
+
+
