@@ -1,0 +1,93 @@
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg "black")](https://github.com/python/black)
+
+
+# cquest_secret_manager
+
+python implementation of the functionalities of secret manager
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Development](#development)
+- [Description](#description)
+- [Usage](#usage)
+- [TODO](#todo)
+- [CHANGELOG](#changelog)
+- [Contact](#contact)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+----
+
+## Development
+
+- Use the created conda environment for development
+- Regularly update the requirements.txt file for ci/cd purposes
+
+----
+
+## Description
+
+- PYTHON IMPLEMENTATION OF FUNCTIONALITIES OF SECRET MANAGER:
+   1. SECRET
+   	1.1 List secrets
+   	1.2 Create a secret
+   	1.3 Delete secret
+   2. SECRET VERSION
+   	2.1 List secret version for the given secret
+   	2.2 Access spesific version of the secret
+   	2.3 Add secret version
+   	2.4 delete secret version
+
+At the moment all functionalities are implemented as functions which take parameters
+----
+
+## Usage
+
+### Cloning This Repo
+
+```bash
+git clone --recurse-submodules https://www.gitlab.com/cquest1/prototypes/cquest_secret_manager.git
+```
+
+### Command Line Interface
+
+<!-- START of auto-generated USAGE section, please keep this comment here to allow auto update -->
+
+```text
+
+_This section will be automatically filled with the output of "python cquest_secret_manager/cquest_secret_manager.py --help"_
+
+```
+
+<!-- END of auto-generated USAGE section, please keep this comment here to allow auto update -->
+
+### Installing the python package
+
+```bash
+python -m pip install git+https://gitlab.com/cquest1/cquest_secret_manager.git@<version_number>
+```
+
+
+### Examples
+
+- ADD SOME REPRESENTATIVE EXAMPLES HERE!
+
+----
+
+
+## TODO
+
+- ADD LIST OF MISSING FUNCTIONALITY / POTENTIAL FUTURE IMPROVEMENTS TO MODULE HERE!
+
+----
+
+## CHANGELOG
+
+- ADD CHANGES HERE!
+
+----
+
+## Contact
+
+Ksenija Babarokina ([ksenija.b@cquest.ai](mailto:ksenija.b@cquest.ai))
