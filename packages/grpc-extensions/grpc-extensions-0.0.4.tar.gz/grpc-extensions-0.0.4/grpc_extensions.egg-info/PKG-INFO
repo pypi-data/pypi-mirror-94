@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: grpc-extensions
+Version: 0.0.4
+Summary: Python Grpc Library
+Home-page: https://github.com/go-zs/python-grpc
+Author: haoyinqianzui
+Author-email: 810909753@qq.com
+License: MIT Licence
+Description: python grpc library, provide various tools and middlewares
+Platform: any
+Requires-Python: >=3.7.9
