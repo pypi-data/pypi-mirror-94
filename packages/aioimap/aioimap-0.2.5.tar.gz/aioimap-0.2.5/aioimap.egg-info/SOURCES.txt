@@ -1,0 +1,15 @@
+README.md
+setup.py
+aioimap/__init__.py
+aioimap/__main__.py
+aioimap/about.py
+aioimap/api.py
+aioimap/filter.py
+aioimap/message.py
+aioimap/receiver.py
+aioimap.egg-info/PKG-INFO
+aioimap.egg-info/SOURCES.txt
+aioimap.egg-info/dependency_links.txt
+aioimap.egg-info/requires.txt
+aioimap.egg-info/top_level.txt
+aioimap.egg-info/zip-safe

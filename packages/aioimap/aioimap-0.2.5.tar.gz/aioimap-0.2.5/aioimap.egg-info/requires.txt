@@ -1,0 +1,4 @@
+aioimaplib>=0.7.18
+python-dotenv
+fastapi>=0.61
+uvicorn>=0.12
