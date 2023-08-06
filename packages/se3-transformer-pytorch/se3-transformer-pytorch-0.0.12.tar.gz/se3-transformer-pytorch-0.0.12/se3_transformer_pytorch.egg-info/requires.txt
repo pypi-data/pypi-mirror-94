@@ -1,0 +1,3 @@
+einops>=0.3
+filelock
+torch>=1.6

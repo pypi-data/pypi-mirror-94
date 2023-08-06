@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+se3_transformer_pytorch/__init__.py
+se3_transformer_pytorch/basis.py
+se3_transformer_pytorch/irr_repr.py
+se3_transformer_pytorch/se3_transformer_pytorch.py
+se3_transformer_pytorch/spherical_harmonics.py
+se3_transformer_pytorch/utils.py
+se3_transformer_pytorch.egg-info/PKG-INFO
+se3_transformer_pytorch.egg-info/SOURCES.txt
+se3_transformer_pytorch.egg-info/dependency_links.txt
+se3_transformer_pytorch.egg-info/requires.txt
+se3_transformer_pytorch.egg-info/top_level.txt
+se3_transformer_pytorch/data/J_dense.pt
