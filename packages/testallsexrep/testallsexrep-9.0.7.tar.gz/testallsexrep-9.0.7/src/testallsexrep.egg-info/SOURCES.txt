@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/examplepy/__init__.py
+src/examplepy/module1.py
+src/testallsexrep.egg-info/PKG-INFO
+src/testallsexrep.egg-info/SOURCES.txt
+src/testallsexrep.egg-info/dependency_links.txt
+src/testallsexrep.egg-info/requires.txt
+src/testallsexrep.egg-info/top_level.txt
+tests/test_module1.py
