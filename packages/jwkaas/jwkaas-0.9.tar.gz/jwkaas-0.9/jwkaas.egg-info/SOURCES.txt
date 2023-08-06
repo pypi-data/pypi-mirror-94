@@ -1,0 +1,12 @@
+README.md
+setup.py
+jwkaas/__init__.py
+jwkaas/algorithms.py
+jwkaas/compat.py
+jwkaas/jwkaas.py
+jwkaas/utils.py
+jwkaas.egg-info/PKG-INFO
+jwkaas.egg-info/SOURCES.txt
+jwkaas.egg-info/dependency_links.txt
+jwkaas.egg-info/requires.txt
+jwkaas.egg-info/top_level.txt
