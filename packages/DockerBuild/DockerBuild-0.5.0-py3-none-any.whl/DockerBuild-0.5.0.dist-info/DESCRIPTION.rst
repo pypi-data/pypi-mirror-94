@@ -1,0 +1,23 @@
+
+
+Version: 0.5.0
+
+DockerBuild is a 'dockerfile' file generation tools. It converts a file hierarchy tree into a dockerfile.
+
+Files types:
+
+    - Sources: Source files to be downlaoded.
+
+    - (*)Dockerfile.sh: Executed script in a docker build step.
+
+    - (*)ImageExport: Source file included only in the build process.
+
+    - (*)BuildExport: Source file included in the container and build process.
+
+    - (*)Entrypoint.sh: Entrypoint.
+
+    - (*)DockerfileAppend: Dockerfile raw append.
+
+    Note: All @{*} variables will be replaced with the variable value before adding '(*)ImageExport', '(*)BuildExport' and '(*)Entrypoint.sh'.
+
+
