@@ -1,0 +1,14 @@
+cython==0.29.21
+OctoBot-Commons==1.5.4
+OctoBot-Trading==1.11.29
+OctoBot-Evaluators==1.6.13
+OctoBot-Tentacles-Manager==2.4.5
+OctoBot-Services==1.2.11
+OctoBot-Backtesting==1.6.12
+Async-Channel==2.0.7
+colorlog==4.2.1
+yarl==1.1.0
+idna<2.9,>=2.5
+aiohttp==3.7.3
+requests==2.25.1
+chardet<4.0
