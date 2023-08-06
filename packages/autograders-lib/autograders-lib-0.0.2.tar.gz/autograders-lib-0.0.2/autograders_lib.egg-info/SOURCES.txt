@@ -1,0 +1,10 @@
+README.md
+setup.py
+autograders/__init__.py
+autograders/grade.py
+autograders/utils.py
+autograders_lib.egg-info/PKG-INFO
+autograders_lib.egg-info/SOURCES.txt
+autograders_lib.egg-info/dependency_links.txt
+autograders_lib.egg-info/requires.txt
+autograders_lib.egg-info/top_level.txt
