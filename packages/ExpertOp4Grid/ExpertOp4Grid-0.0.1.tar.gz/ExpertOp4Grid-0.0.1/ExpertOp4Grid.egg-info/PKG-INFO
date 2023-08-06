@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ExpertOp4Grid
+Version: 0.0.1
+Summary: Expert analysis algorithm for solving overloads in a powergrid
+Home-page: https://github.com/marota/ExpertOp4Grid/
+Author: Nicolas Megel
+Author-email: nico.megel@gmail.com
+License: Mozilla Public License 2.0 (MPL 2.0)
+Description: UNKNOWN
+Keywords: ML powergrid optmization RL power-systems
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Provides-Extra: optional
