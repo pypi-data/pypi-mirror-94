@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: seqio
+Version: 0.0.0
+Summary: SeqIO
+Home-page: http://github.com/google-research/text-to-text-transfer-transformer
+Author: Google Inc.
+Author-email: no-reply@google.com
+License: Apache 2.0
+Keywords: text nlp machinelearning
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: absl-py
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: sentencepiece
+Requires-Dist: tensorflow-text
+Requires-Dist: tfds-nightly
+Provides-Extra: cache-tasks
+Requires-Dist: apache-beam ; extra == 'cache-tasks'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+UNKNOWN
+
+
