@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pcsg
+Version: 0.0.2
+Summary: A constructive solid geometry library for Python
+Home-page: https://github.com/WhiteSheet/pcsg
+Author: Julian Dessecker
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# pcsg - a constructive solid geometry library for Python
+
+Constructive solid geometry is a technique used for modeling shapes and solids.
+The ***pycsg*** library can be used to create 3D printable solid objects, images and animations utilizing external programs like [POV-Ray](http://www.povray.org/) and [OpenScad](https://www.openscad.org/).
+Introducing a common description format eleminates the need for learning different scripting languages and rewriting your code.
+
+
+
