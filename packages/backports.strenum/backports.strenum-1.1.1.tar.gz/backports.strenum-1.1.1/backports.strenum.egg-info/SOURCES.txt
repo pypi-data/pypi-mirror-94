@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+Makefile
+README.rst
+pyproject.toml
+requirements.txt
+setup.py
+.github/workflows/ci.yaml
+backports/__init__.py
+backports.strenum.egg-info/PKG-INFO
+backports.strenum.egg-info/SOURCES.txt
+backports.strenum.egg-info/dependency_links.txt
+backports.strenum.egg-info/top_level.txt
+backports/strenum/__init__.py
+backports/strenum/strenum.py
+tests/test_strenum.py
