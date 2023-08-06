@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "spike_monitor"
+version = "0.1.1"
+description = "This package contains the necessary tools to monitor models"
+authors = ["NicolasITC <n.treimun14@gmail.com>"]
+repository = "https://github.com/SpikeLab-CL/spk-logger"
+license = "MIT"
+
+
+[tool.poetry.dependencies]
+python = "~3.7"
+pickle4 = "^0.0.1"
+pydantic = "^1.7.3"
+google-cloud-logging = "^2.2.0"
+pendulum = "^2.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"     
