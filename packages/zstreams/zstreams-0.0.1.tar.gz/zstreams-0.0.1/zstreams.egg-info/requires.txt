@@ -1,0 +1,12 @@
+requests
+watchdog
+numpy
+scipy
+pandas
+scikit-learn
+pyspark
+
+[all]
+pyarrow
+yara-python
+tldextract
