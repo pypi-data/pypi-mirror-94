@@ -1,0 +1,13 @@
+president/__init__.py,sha256=52mXNHtl3cWn4CtW_tEWcfW9JZ6a5AQVqZ9A5z8hgig,266
+president/__main__.py,sha256=9pHVC_iqyN1tOzDN0FjS7jFRGnW4_gwRLIiAo7yN9NQ,8137
+president/_version.py,sha256=7WTQSdomqW3EDwnEHUH7ZOo7zD0nsfjPT96a2R5Z3S0,498
+president/alignment.py,sha256=Xn_tf3j6bPK-05dA_Jy8Cmfgs6NyLZjLKJHBQKlM9Aw,1891
+president/sequence.py,sha256=sD96Nn2-LG_vidwcr8O0KLtrpJ3jGha_XDNluVWsz04,1555
+president/statistics.py,sha256=OZgaf-liOe5_-ObCZGc0PrWi5_UkgWIWc6NHky6p8d8,12942
+president/writer.py,sha256=A3VMVgVKwLupsBBBpRAcDZMhL2MT4areMQEXww8j-V4,4541
+pypresident-0.5.0.dist-info/LICENSE,sha256=-Q5YFe8qstqIKr8TC3RIL7B2g6_jg_CZdmST7r3enYA,1068
+pypresident-0.5.0.dist-info/METADATA,sha256=avQGQ8ffnYR1tfdrG2vJsWv3dvMEHQhwPXFKWzl4qJg,10366
+pypresident-0.5.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pypresident-0.5.0.dist-info/entry_points.txt,sha256=XulT8d1WNt5SsbR71kuGIWRkQfyc4Mc04UKIOkm5k5c,55
+pypresident-0.5.0.dist-info/top_level.txt,sha256=k83zw9TRldwNJXhK5Nt7G0p5ykxH2lqkMl06_PnIb3w,10
+pypresident-0.5.0.dist-info/RECORD,,
