@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+payout/__init__.py
+payout/create_payout_account.py
+payout/payout.py
+payout.egg-info/PKG-INFO
+payout.egg-info/SOURCES.txt
+payout.egg-info/dependency_links.txt
+payout.egg-info/top_level.txt
