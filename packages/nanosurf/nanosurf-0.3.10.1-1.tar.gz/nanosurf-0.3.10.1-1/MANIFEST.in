@@ -1,0 +1,3 @@
+include LICENSE
+include nanosurf/demo/*.ipynb
+exclude nanosurf/demo/*.h
