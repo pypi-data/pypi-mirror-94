@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: snowconvert-helpers
+Version: 1.10.0
+Summary: Migration helpers for Mobilize SnowConvert for Teradata.
+Home-page: https://docs.mobilize.net/snowconvert/for-teradata/introduction
+Author: Mobilize.Net
+Author-email: info@mobilize.com
+License: Proprietary License (Copyright (C) Mobilize.Net - All Rights Reserved)
+Keywords: Mobilize,Snowflake,Teradata,BTEQ,FastLoad,MultiLoad,TPT,TPump,database,cloud
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: SQL
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: snowflake-connector-python (>=2.3.6)
+
+# SnowConvert Helpers
+
+SnowConvert Helpers is a class of functions designed to facilitate the conversion of Teradata BTEQ script files
+to Python files that Snowflake can interpret. Mobilize.Net SnowConvert for Teradata can take in any Teradata SQL or
+scripts (BTEQ, FastLoad, MultiLoad, TPT, and TPump) and convert them to functionally equivalent Snowflake SQL,
+JavaScript embedded in Snowflake SQL, and Python. Any output Python code from SnowConvert will call functions from this
+helper class to complete the conversion and create a functionally equivalent output in Snowflake.
+
+The [Snowflake Connector for Python](https://pypi.org/project/snowflake-connector-python/) will also be called in order 
+to connect to your Snowflake account, and run the output python code created by SnowConvert.
+
+
+For more information, visit the following webpages.
+
+> More Information on Mobilize.Net SnowConvert for Teradata: https://www.mobilize.net/products/database-migrations/teradata-to-snowflake
+
+> Mobilize.Net SnowConvert for Teradata Documentation: https://docs.mobilize.net/snowconvert/for-teradata/introduction
+
+> User Guide for snowconvert-helpers: https://docs.mobilize.net/snowconvert/for-teradata/migration-helpers
+
