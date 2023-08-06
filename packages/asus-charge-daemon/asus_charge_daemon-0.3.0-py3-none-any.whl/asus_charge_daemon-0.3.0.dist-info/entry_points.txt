@@ -1,0 +1,3 @@
+[console_scripts]
+asuscharged=asuscharged.__main__:main
+
