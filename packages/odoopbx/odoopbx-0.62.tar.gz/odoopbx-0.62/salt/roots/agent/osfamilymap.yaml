@@ -1,0 +1,13 @@
+Debian:
+  pkgs:
+    - libssl-dev
+    - ipset
+    - iptables
+    - logrotate
+
+RedHat:
+  pkgs:
+    - openssl-devel
+    - ipset
+    - iptables
+    - logrotate
