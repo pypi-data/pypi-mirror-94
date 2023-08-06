@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: fastel
+Version: 0.1.0
+Summary: revtel fastapi package
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: ChienHsiao
+Author-email: chien.hsiao@revteltech.com
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: fastapi
+Requires-Dist: revjwt
+Requires-Dist: mjango
