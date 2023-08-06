@@ -1,0 +1,1 @@
+This package gives you the basic functions of calculator.
