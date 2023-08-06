@@ -1,0 +1,3 @@
+[console_scripts]
+mjolnir_remote = pytorch_mjolnir.remote_run:main
+

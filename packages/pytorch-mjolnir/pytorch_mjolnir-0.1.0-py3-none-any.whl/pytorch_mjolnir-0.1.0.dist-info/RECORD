@@ -1,0 +1,10 @@
+pytorch_mjolnir/__init__.py,sha256=oDRg8-HE5x3NAeRt0tJLVnSH-OtNjWae3F80qfAn5yo,177
+pytorch_mjolnir/experiment.py,sha256=V9ZAzB-OBDUKiRqOtDhr7W4r5iqzU8mSue0gTx21KY0,7304
+pytorch_mjolnir/remote_run.py,sha256=AqZZAp2tBNX8TFFHnXfw-iATsbyaQx8G7CRQcBNv1-w,6226
+pytorch_mjolnir/supervised_experiment.py,sha256=Rhpia5a-PpEuXjSsKXwne8kwZEa8w3tpj6SLfjRUSwA,1547
+pytorch_mjolnir-0.1.0.dist-info/LICENSE,sha256=japkU7lWUJZb7JoBh3OydTY0mwmBGhLQ1XDxPG5Q8Ww,1086
+pytorch_mjolnir-0.1.0.dist-info/METADATA,sha256=vigxQbrxyeeovUW8b7ivBFe0tMe6VBLhH-4tQVoD4IY,3832
+pytorch_mjolnir-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytorch_mjolnir-0.1.0.dist-info/entry_points.txt,sha256=-cKJhDW_NYjVZggZG7OlaBf8d3DfEi012f1Ybu3cfPo,68
+pytorch_mjolnir-0.1.0.dist-info/top_level.txt,sha256=Wpg5bKgisBgT2uTISaZhtkH-lB1sYwQCo_q4TcNIxgE,16
+pytorch_mjolnir-0.1.0.dist-info/RECORD,,
