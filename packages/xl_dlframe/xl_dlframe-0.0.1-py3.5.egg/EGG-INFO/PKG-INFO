@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: xl-dlframe
+Version: 0.0.1
+Summary: Xiuli's deep learning frame.
+Home-page: https://blog.csdn.net/suezhang9?spm=1000.2115.3001.5343
+Author: XiuliZhang
+Author-email: zhangxiuli_nature@126.com
+License: MIT
+Description: 
+        It's a simple package, which include two functions:
+        sigmoid and linear
+        
+Keywords: xl_dlframe
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Requires-Python: >=3.4.0
+Description-Content-Type: text/markdown
