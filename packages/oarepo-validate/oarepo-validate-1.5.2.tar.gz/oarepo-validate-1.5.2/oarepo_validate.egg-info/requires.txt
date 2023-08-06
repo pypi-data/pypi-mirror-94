@@ -1,0 +1,10 @@
+wrapt>=1.11.2
+
+[dev]
+oarepo[tests]~=3.3.0
+invenio-app
+redis
+markdown-toc
+
+[tests]
+oarepo[tests]~=3.3.0

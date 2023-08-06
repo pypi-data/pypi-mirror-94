@@ -1,0 +1,9 @@
+[flask.commands]
+oarepo:validate = oarepo_validate.cli:validate
+
+[invenio_base.api_apps]
+oarepo_validate = oarepo_validate.ext:OARepoValidate
+
+[invenio_base.apps]
+oarepo_validate = oarepo_validate.ext:OARepoValidate
+
