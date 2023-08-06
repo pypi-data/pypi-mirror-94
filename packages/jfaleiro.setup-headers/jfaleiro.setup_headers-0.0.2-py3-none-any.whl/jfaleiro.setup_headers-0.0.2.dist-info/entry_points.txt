@@ -1,0 +1,6 @@
+[console_scripts]
+adjust-license-header = setup_headers.main:main
+
+[distutils.commands]
+adjust_license_headers = setup_headers.command:LicenseHeaderCommand
+
