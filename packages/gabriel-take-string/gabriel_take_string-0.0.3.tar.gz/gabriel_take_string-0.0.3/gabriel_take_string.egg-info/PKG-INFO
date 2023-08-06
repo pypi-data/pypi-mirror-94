@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gabriel-take-string
+Version: 0.0.3
+Summary: Packet to determine words similarities
+Home-page: https://github.com/gabrielrg/Take_StringAnalyzer
+Author: gabrielrg
+Author-email: gbrll.rg@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.2
+Description-Content-Type: text/markdown
