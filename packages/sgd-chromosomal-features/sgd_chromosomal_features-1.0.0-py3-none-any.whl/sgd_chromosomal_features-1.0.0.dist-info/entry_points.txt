@@ -1,0 +1,3 @@
+[console_scripts]
+collect_features = collect_features:main
+
