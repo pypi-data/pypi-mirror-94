@@ -1,0 +1,11 @@
+README.md
+setup.py
+xswem/__init__.py
+xswem/exceptions.py
+xswem/model.py
+xswem/utils.py
+xswem.egg-info/PKG-INFO
+xswem.egg-info/SOURCES.txt
+xswem.egg-info/dependency_links.txt
+xswem.egg-info/requires.txt
+xswem.egg-info/top_level.txt
