@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ds-semantic-ml
+Version: 0.0.1
+Summary: ds-semantic-ml
+Home-page: https://github.com/wix
+Author: "Wix Devex Infra"
+Author-email: devex-intra@wix.com
+License: UNKNOWN
+Description: /ds-semantic-ml
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
