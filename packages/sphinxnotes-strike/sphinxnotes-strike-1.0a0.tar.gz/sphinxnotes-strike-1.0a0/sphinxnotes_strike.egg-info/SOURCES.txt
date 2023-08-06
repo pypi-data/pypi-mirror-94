@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+sphinxnotes/strike/__init__.py
+sphinxnotes/strike/_static/sphinxnotes-strike.css
+sphinxnotes_strike.egg-info/PKG-INFO
+sphinxnotes_strike.egg-info/SOURCES.txt
+sphinxnotes_strike.egg-info/dependency_links.txt
+sphinxnotes_strike.egg-info/namespace_packages.txt
+sphinxnotes_strike.egg-info/not-zip-safe
+sphinxnotes_strike.egg-info/requires.txt
+sphinxnotes_strike.egg-info/top_level.txt
