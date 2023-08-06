@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: VenC
+Version: 2.0.0rc6
+Summary: A static blog generator.
+Home-page: https://github.com/DenisSalem/VenC
+Author: Denis Salem
+Author-email: denissalem@tuxfamily.org
+License: GNU/GPLv3
+Platform: Linux
+Classifier: Environment :: Console
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: docutils
+Requires-Dist: latex2mathml
+Requires-Dist: markdown2
+Requires-Dist: pyyaml
+Requires-Dist: Pygments
+Requires-Dist: requests
+Requires-Dist: unidecode
+
+A static and light blog generator, Aim to be easy to use.
+
+
