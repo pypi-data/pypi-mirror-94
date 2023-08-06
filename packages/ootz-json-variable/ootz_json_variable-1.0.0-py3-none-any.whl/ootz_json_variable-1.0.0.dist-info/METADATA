@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ootz-json-variable
+Version: 1.0.0
+Summary: json variable using json pointer.
+Home-page: https://github.com/oneofthezombies/json-variable
+Author: oneofthezombies
+Author-email: hunhoekim@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: jsonpointer (==2.0)
+
+# json-variable
+
+
