@@ -1,0 +1,11 @@
+gesang_sqlalchemy/__init__.py,sha256=pxNFBD15Is0CEXWkVN7-czQbyn-y6pTEnygwIkeIGDA,132
+gesang_sqlalchemy/core.py,sha256=xRMwV3mDEl_g7u0Io7jXs_rY1Zdhsk3mz8ORfkWD5VE,4552
+gesang_sqlalchemy/exc.py,sha256=Jrp_np9v1gC-mbjOe8tWGhBSh-rbEzzlTsrTZtt-cYY,93
+gesang_sqlalchemy/model.py,sha256=50dVpIc6Lw85nDN7gdGM4zZvxllERT2l7SL799iTSmE,476
+gesang_sqlalchemy/transaction.py,sha256=tJbZqIpACufOzisCCHmbG2FfQydk6DO07otl_6Bx1FU,1951
+gesang_sqlalchemy/utils.py,sha256=36p2ez-SZZ3AEiMoF7ZVJY86LK_dX_qIlNm62rzLXTw,1172
+gesang_sqlalchemy-1.0.0.dist-info/LICENSE,sha256=vG6AULfHhF5IKJ4E3pOOumcvqCH-mZAaAemyhDbR_Oo,1090
+gesang_sqlalchemy-1.0.0.dist-info/METADATA,sha256=AHM-TjzeAkDDlMfGdmO2NGBLwyKIN-XuXRr2MwluzP4,2650
+gesang_sqlalchemy-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gesang_sqlalchemy-1.0.0.dist-info/top_level.txt,sha256=z52nEZtvFoJkhGFqwagJfRvNeNsqMDfCDazi1AlS7B0,18
+gesang_sqlalchemy-1.0.0.dist-info/RECORD,,
