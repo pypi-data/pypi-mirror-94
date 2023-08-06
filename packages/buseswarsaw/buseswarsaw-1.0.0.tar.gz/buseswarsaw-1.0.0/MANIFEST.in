@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+recursive-include buses_warsaw/data *
+recursive-include buses_warsaw *.ipynb
+recursive-include buses_warsaw *.png
+recursive-include tests *.py
