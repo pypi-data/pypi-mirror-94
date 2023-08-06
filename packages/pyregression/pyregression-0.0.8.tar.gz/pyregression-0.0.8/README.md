@@ -1,0 +1,45 @@
+# PyRegression
+
+PyRegression is a python library for using in machine learning regressions. The first minimal launched version include nonlinear regression with K-Nearest Neighbor (KNN), Random Forest (RFO) and Support Vector Regression (SVR). Of course, you can use PyRegression for Multiple Linear Regression (MLR) too.
+
+The nonlinear methods include the searching of the best hyperparameters using k-fold cross validation. For more details visit the official documentation in pyregression.gitlab.io
+
+## Install
+
+``pip install pyregression``
+
+or if you prefer (recommended) install in a virtual environment:
+
+```bash
+python3 -m venv venv-pyregression
+cd venv-pyregression
+source bin/activate
+
+pip install pyregression
+# install dependencies
+pip install pandas
+pip install sklearn
+```
+
+## Example code
+
+```python
+# import regression methods
+from pyregression.regressors import MLR, KNN, RFO, SVR
+
+# import dataset example
+from pyregression.datasets import load_soilmoisture
+
+# load dataset example
+X,y = load_soilmoisture() 
+
+# do the regressions (test_size = 0.6 by default)
+mlr = MLR(X,y)
+knn = KNN(X,y)
+rfo = RFO(X,y)
+svr = SVR(X,y)
+
+# print predicted values
+for regression in (mlr, knn, rfo, svr):
+    print(regression["y_pred"])
+```

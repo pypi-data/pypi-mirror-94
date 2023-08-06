@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+pyregression/__init__.py
+pyregression/datasets.py
+pyregression/regressors.py
+pyregression.egg-info/PKG-INFO
+pyregression.egg-info/SOURCES.txt
+pyregression.egg-info/dependency_links.txt
+pyregression.egg-info/top_level.txt
+pyregression/data/soil_moisture_example1.pkl
