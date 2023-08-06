@@ -1,0 +1,12 @@
+disclosure_extractor/__init__.py,sha256=BBm5bG25luZRsDykbcQoMr-jx2DQHjgpEa6qK33RZyU,9161
+disclosure_extractor/calculate.py,sha256=rYEB1avBxAdU3V-goueG_9Ue4TdD0vKNRyCBJVIJPyg,3165
+disclosure_extractor/data_processing.py,sha256=J6M3oIviIxK4buIIDpdCgi3ErY2WRWy-a-c1qXb-pP0,9887
+disclosure_extractor/extractor_template.json,sha256=z1LPZKrpqXpPUQZEVeb3yKdOfKMPawaesMnmZn388_o,1678
+disclosure_extractor/image_processing.py,sha256=63Bmb33PmMBo8_4BCpqSI4NbVcKIxArlvM5ldLh3vD8,17200
+disclosure_extractor/judicial_watch_utils.py,sha256=V3HzCRLgsXE1iYTucTahx9dRVrdeLyBwy35DVNcaAVs,16235
+disclosure_extractor/post_processing.py,sha256=XpXXBhAlH54X2VqU3nC3QPc2EJ63lSa_gmxaOzIug0s,6796
+disclosure_extractor-0.0.49.dist-info/LICENSE,sha256=2yw8l0ppvZFBJXoQ2u4TgRbNBOw1TNUjnQr1K8UCV3I,1326
+disclosure_extractor-0.0.49.dist-info/METADATA,sha256=2BeV5wX9e2c1UaH37nD-X8opuk2feWsOQIEIKgViMMw,17255
+disclosure_extractor-0.0.49.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+disclosure_extractor-0.0.49.dist-info/top_level.txt,sha256=blkxFmlj50WYo8GEXxgt_rBJIOO3eX7qSRD7Q0_pEzo,21
+disclosure_extractor-0.0.49.dist-info/RECORD,,
