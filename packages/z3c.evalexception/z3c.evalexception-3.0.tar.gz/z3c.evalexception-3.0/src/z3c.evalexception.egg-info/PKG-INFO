@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: z3c.evalexception
+Version: 3.0
+Summary: Debugging middlewares for zope.publisher-based web applications
+Home-page: UNKNOWN
+Author: Philipp von Weitershausen
+Author-email: philipp@weitershausen.de
+License: ZPL 2.1
+Description: ``z3c.evalexception`` provides two WSGI middlewares for debugging web
+        applications running on the ``zope.publisher`` object publishing
+        framework (e.g. Zope 3).  Both middlewares will intercept an exception
+        thrown by the application and provide means for debugging.
+        
+        Interactive AJAX debugger
+        =========================
+        
+        ``z3c.evalexception.ZopeEvalException`` lets you interactively debug
+        exceptions from a browser.  It is a small wrapper around the
+        ``EvalException`` middleware from ``paste.evalexception``.  You can
+        easily refer to it in a PasteDeploy-style configuration file using the
+        ``ajax`` entry-point::
+        
+          [filter-app:main]
+          use = egg:z3c.evalexception#ajax
+          next = zope
+        
+          [app:zope]
+          use = egg:YourApp
+        
+          [server:main]
+          use = egg:Paste#http
+          host = 127.0.0.1
+          port = 8080
+        
+        Post-mortem pdb
+        ===============
+        
+        ``z3c.evalexception.PostMortemDebug`` invokes pdb's post-mortem mode
+        when the application has thrown an exception.  You can refer to it in
+        a PasteDeploy-style configuration file using the ``pdb`` entry-point::
+        
+          [filter-app:main]
+          use = egg:z3c.evalexception#pdb
+          next = zope
+        
+          [app:zope]
+          use = egg:YourApp
+        
+          [server:main]
+          use = egg:Paste#http
+          host = 127.0.0.1
+          port = 8080
+        
+        
+        Changes
+        =======
+        
+        3.0 (2021-02-10)
+        ----------------
+        
+        - Add support for Python 3.5, 3.6, 3.7, 3.8 and 3.9.
+        
+        
+        2.0 (2007-08-23)
+        ----------------
+        
+        - Add the ``PostMortemDebug`` (pdb) middleware.
+        
+        1.0 (2007-06-02)
+        ----------------
+        
+        - Initial release, featuring the Zope 3-compatible interactive AJAX
+          debugger from Paste.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Zope Public License
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: Zope :: 3
+Classifier: Framework :: Paste
+Provides-Extra: test

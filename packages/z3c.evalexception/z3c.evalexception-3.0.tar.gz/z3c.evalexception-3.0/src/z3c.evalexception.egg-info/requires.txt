@@ -1,0 +1,6 @@
+setuptools
+Paste
+zope.security
+
+[test]
+mock
