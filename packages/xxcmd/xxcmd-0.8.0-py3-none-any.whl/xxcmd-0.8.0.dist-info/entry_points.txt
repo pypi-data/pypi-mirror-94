@@ -1,0 +1,4 @@
+[console_scripts]
+xx=xxcmd:main
+xxcmd=xxcmd:main
+

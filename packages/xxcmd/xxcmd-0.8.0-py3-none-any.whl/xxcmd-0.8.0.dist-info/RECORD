@@ -1,0 +1,13 @@
+xxcmd/__init__.py,sha256=RrRK4q-OIObX7ot-FycMDCi7jWyYcY4MUmsdxC7qsw8,212
+xxcmd/__main__.py,sha256=CvNzFepgCoingJCoI__8EArulpnfKTCYWWjxCTPSi9s,67
+xxcmd/cmdmanager.py,sha256=DfMWxBasLjkDTQK53NScoTpPjqtneb-2Xg1Kp2Po99M,11073
+xxcmd/config.py,sha256=vBZk83CxHjW4UKerxK_pzC5YYiOaIZHeRfZrbhnPGqo,2440
+xxcmd/consoleui.py,sha256=s87GHfZ42gR-Gd5HOZj4U_epVtRab01AUbYPhLQ_tjE,7692
+xxcmd/dbitem.py,sha256=E7e64Ri6VN6CJ8-V634k8eRlqOAVJHH1nv06GSu95MA,644
+xxcmd/lineedit.py,sha256=ngns7eOQ8MaYDH2M_0uJaoj-x7E_e_A0mrNMGpNhwl0,3471
+xxcmd/main.py,sha256=wKtQfTgc-shI216v08eYUkjkEQZ4sy6vLfzaQdYz4ls,4633
+xxcmd-0.8.0.dist-info/entry_points.txt,sha256=gsJuOCse5YyjRrS1AQwoEXnw8k6vdZNs41l8yYsJMGc,50
+xxcmd-0.8.0.dist-info/LICENSE,sha256=WS6eMVOr6jrZrxhc7sFMlt_8TYPAegsUEvMEUwIYiYY,1069
+xxcmd-0.8.0.dist-info/WHEEL,sha256=CqyTrkghQBNsEzLD3HbCSEIJ_fY58-XpoU29dUzwHSk,81
+xxcmd-0.8.0.dist-info/METADATA,sha256=920xVdXO3-G48faMqURQ-forvfIosMZ3Yh9kl6V_1H0,5961
+xxcmd-0.8.0.dist-info/RECORD,,
