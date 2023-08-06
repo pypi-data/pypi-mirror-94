@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: abstractMLBaseModelTask
+Version: 0.1
+Summary: Abstract Machine learning base model with analysis
+Home-page: https://github.com/ulziiutas/abstractMLBaseModelTask
+Author: Ulzii-Utas Narantsatsralt
+Author-email: ulziiutas.n@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: sklearn
+Requires-Dist: seaborn
+Requires-Dist: pandas
+Requires-Dist: tensorflow
+
+UNKNOWN
+
+
