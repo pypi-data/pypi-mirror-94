@@ -1,0 +1,14 @@
+bgetlib/BilibiliAgent.py,sha256=ieOFmSOtWgk35_kIUkDUsfn4I3OASVI2otLjyKt-0TE,3654
+bgetlib/CDNList.py,sha256=v7kEYdNY_TQ1UzKq8fLGiDX1cZptNiMEzZtkpUOn43Q,378
+bgetlib/ConvertAgent.py,sha256=UsjvhYWYvYQVZ7X7cS5lBbXZg5LwyE7ci9e_D7rFBog,2701
+bgetlib/DownloadAgent.py,sha256=wLs6-TMaOmVoA6WujteEy594D-TeEqo23jsWe0rv6yg,4192
+bgetlib/Errors.py,sha256=Las8I7HDMdNewv-IZcvjp8NBlFPYVvTs1ug4LlAP-fQ,1776
+bgetlib/__init__.py,sha256=IGl2bheiICpjoX0yGLsJIJ4EtyBoOQ6rV00xFWR45Hg,161
+bgetlib/Data/DataClass.py,sha256=HA9wAxSO2zsgvZToifx6YnrFL7Qa_oi9H66dqIjk_1Y,1923
+bgetlib/Data/Mappers.py,sha256=_llhcPn72gsI4DRwnJZqvtGuPloRGxbyG-WCAnTDHqs,3815
+bgetlib/Data/__init__.py,sha256=zycw2e0eFzjSASuhVgqFwbqTWHauk3XtTKMOju-bN88,52
+bgetlib-1.0.0.dist-info/LICENSE,sha256=tOqCNRfLDOKGPr0ID8qfxuDjZUua6Kylr2sxPz2Lf4w,1057
+bgetlib-1.0.0.dist-info/METADATA,sha256=hkWYoEtpyPsSGBOcbndf72zUP9QNNYLqgefA3kvK7YI,4604
+bgetlib-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bgetlib-1.0.0.dist-info/top_level.txt,sha256=nERLAIDyOTMaPdiyzp_WLsfknRCz4ghaNXJmRujUKRs,8
+bgetlib-1.0.0.dist-info/RECORD,,
