@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+vpype_vectrace/iread.py
+vpype_vectrace.egg-info/PKG-INFO
+vpype_vectrace.egg-info/SOURCES.txt
+vpype_vectrace.egg-info/dependency_links.txt
+vpype_vectrace.egg-info/entry_points.txt
+vpype_vectrace.egg-info/requires.txt
+vpype_vectrace.egg-info/top_level.txt
