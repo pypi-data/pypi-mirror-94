@@ -1,0 +1,17 @@
+airslate/__init__.py,sha256=KVysrBPBu4E1WHyVcLMgogpU25UySMnDWVhmMBYmlWg,828
+airslate/client.py,sha256=M29vJjqcIkbKG-ZvI3h-OvY4q2rKIZRjquPGJHBcKhQ,10231
+airslate/exceptions.py,sha256=yIayRoRWJXFve7TfXtViKdS2UnKMtj_y4qAnTsR5_a8,5108
+airslate/session.py,sha256=rPe88xmSzem8-5nft1N_wn6rJ1lCwAzPc5hBEthILKo,2717
+airslate/entities/__init__.py,sha256=Y_KlnKhd5L2t05ScT0up2yW1xypXViet3Wg4Ssxo_1k,253
+airslate/entities/addons.py,sha256=9f0YT7szbGH0EEVBEvl36oILh0o7a-b8HSXEKZCcFBc,721
+airslate/entities/base.py,sha256=6KsqA1QuDgDLT7ooEfV5ichf1UWD-myrkfZl8R9hHSw,7021
+airslate/entities/documents.py,sha256=eFerlJebppbXnl2xwbYavBCteIWqaff1N70sFWi_SZA,595
+airslate/entities/fields.py,sha256=1m2KyvcOHt_0KkIWSSCDDHGNWH909rWtp8Z1wG8JTrg,435
+airslate/resources/__init__.py,sha256=7dxJhdb7CX5Fj7wQncIuS_3IoqVF3VyCzmp9CUWxvSE,1139
+airslate/resources/addons.py,sha256=z_N4s2y7jjJ6VApyd-zCarumvwQuYHIfmsd92LI_vDk,1344
+airslate/resources/slate_addon.py,sha256=a-tAocjcB3fMGPTAPKrJKPrt-1HAVIqfYEFQfwpIhz0,934
+airslate-0.2.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+airslate-0.2.1.dist-info/METADATA,sha256=aHxUSgbVZg5wUu4_YnD8gw_76E_nKc_cWwcDEhP5SaQ,3780
+airslate-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+airslate-0.2.1.dist-info/top_level.txt,sha256=AqE1jxII1680nHD22aPXkGUOGWoGR2O-PZK2maaKU6g,9
+airslate-0.2.1.dist-info/RECORD,,

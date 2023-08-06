@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: airslate
+Version: 0.2.1
+Summary: Official Python client library for the airSlate API v1
+Home-page: https://github.com/airslate-oss/python-airslate
+Author: airSlate
+Author-email: dev-support@airslate.com
+Maintainer: airSlate
+Maintainer-email: dev-support@airslate.com
+License: Apache 2.0
+Project-URL: Bug Tracker, https://github.com/airslate-oss/python-airslate/issues
+Project-URL: Source Code, https://github.com/airslate-oss/python-airslate
+Keywords: airslate,crm,nocode,addons,bots
+Platform: any
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/x-rst
+Requires-Dist: requests (==2.*,>=2.20.0)
+Requires-Dist: urllib3 (<1.27,>=1.21.1)
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: responses ; extra == 'testing'
+
+=================================================================
+airslate: Official Python client library for the airSlate API v1
+=================================================================
+
+
+``airslate`` is a Python client library for the `airSlate <https://www.airslate.com>`__ API v1.
+
+This Python client library has been designed to quickly and easily implement
+the airSlate REST API. It offers a simple and elegant way to interact with
+airSlate API resources within your Python applications. Sign up for our API here:
+https://developers.airslate.com
+
+.. teaser-end
+
+.. -project-information-
+
+Project Information
+===================
+
+``airslate`` is released under the `Apache Licence 2.0 <https://choosealicense.com/licenses/apache-2.0/>`_,
+and the code on `GitHub <https://github.com/airslate-oss/python-airslate>`_.
+It’s rigorously tested on Python 3.7+. If you'd like to contribute to ``airslate`` you're most welcome!
+
+.. -support-
+
+Support
+=======
+
+Should you have any question, any remark, or if you find a bug, or if there is
+something you can't do with the ``airslate``, please
+`open an issue <https://github.com/airslate-oss/python-airslate/issues>`_.
+
+
+Release Information
+===================
+
+0.2.1 (2021-02-08)
+------------------
+
+Features
+^^^^^^^^
+
+
+* Provided ability to get slate addon file.
+
+* Added new resources:
+
+  * ``airslate.resources.slate_addon.SlateAddonFiles`` - represent slate addon files resource
+
+* Added new entities:
+
+  * ``airslate.entities.addons.SlateAddon`` - represent slate addon entity
+  * ``airslate.entities.addons.SlateAddonFile`` - represent slate addon file entity
+
+
+* The base entity class as well as all derived classes now provide the following methods:
+
+  * ``has_one()`` - create an instance of the related entity
+  * ``from_one()`` - create an instance of the current class from the provided data
+
+
+
+Trivial/Internal Changes
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Change default string representation of entities. Now it has the
+  following form ``<EntityName: id=ID, type=TYPE>``.
+
+`Full changelog <https://github.com/airslate-oss/python-airslate/blob/master/CHANGELOG.rst>`_.
+
+Credits
+=======
+
+``airslate`` is written and maintained by `airSlate <https://www.airslate.com/>`_.
+
+A full list of contributors can be found in `GitHub's overview <https://github.com/airslate-oss/python-airslate/graphs/contributors>`_.
+
+
