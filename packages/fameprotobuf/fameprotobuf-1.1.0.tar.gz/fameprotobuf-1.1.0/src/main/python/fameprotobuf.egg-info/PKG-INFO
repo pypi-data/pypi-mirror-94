@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: fameprotobuf
+Version: 1.1.0
+Summary: Protobuf definitions converted to python classes for use in `fameio`
+Home-page: https://gitlab.com/fame-framework/fame-protobuf/
+Author: Christoph Schimeczek, Ulrich Frey, Marc Deissenroth-Uhrig, Benjamin Fuchs, Felix Nitsch
+Author-email: fame@dlr.de
+License: Apache License 2.0
+Description: UNKNOWN
+Keywords: FAME,agent-based modelling,fameio
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
