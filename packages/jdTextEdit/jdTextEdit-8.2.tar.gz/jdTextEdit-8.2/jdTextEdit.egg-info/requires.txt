@@ -1,0 +1,13 @@
+PyQt5
+QScintilla
+chardet
+requests
+jdTranslationHelper
+EditorConfig
+pyenchant
+
+[Use cchardet as encoding detector ]
+cchardet
+
+[Use charset_normalizer as encoding detector ]
+charset_normalizer
