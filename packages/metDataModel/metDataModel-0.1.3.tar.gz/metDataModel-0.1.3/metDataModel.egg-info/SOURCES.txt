@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+metDataModel/__init__.py
+metDataModel/core.py
+metDataModel/derived.py
+metDataModel/mummichog.py
+metDataModel/util.py
+metDataModel.egg-info/PKG-INFO
+metDataModel.egg-info/SOURCES.txt
+metDataModel.egg-info/dependency_links.txt
+metDataModel.egg-info/not-zip-safe
+metDataModel.egg-info/top_level.txt
+tests/__init__.py
