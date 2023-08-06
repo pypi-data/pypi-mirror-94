@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: CWGP
+Version: 1.3.1
+Summary: CWGP
+Home-page: https://github.com/andy971022/CWGP
+Author: Andy Chen
+Author-email: andy97_861022_chen@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: autograd
+Requires-Dist: scipy (>=1.5.4)
+Requires-Dist: tqdm (>=4.56.1)
+Requires-Dist: numpy (>=1.18.0)
+
+# Compositionally Warped Gaussian Processes
+This package is dedicated to realizing methods used in this [paper](https://arxiv.org/abs/1906.09665).
+
+## Tutorial
+
+Visit [here](./examples/cwgp_beta.ipynb)
+
+## Transformations
+
+### Sinh-Arcsinh (sa)
+
+`from cwgp.transformations import sa`
+
+### Arcsinh (asinh)
+
+`from cwgp.transformations import asinh`
+
+### Box-Cox (box_cox)
+
+`from cwgp.transformations import box_cox`
+
+### Sinh-Arcsinh and Affine (SAL)
+
+`from cwgp.transformations import sal`
+
+## Kernels
+
+### Ornstein-Uhlenbeck Kernel
+
+`from cwgp.kernel import OU`
+
+### Radial Basis function Kernel
+
+`from cwgp.kernel import RBF`
+
+
