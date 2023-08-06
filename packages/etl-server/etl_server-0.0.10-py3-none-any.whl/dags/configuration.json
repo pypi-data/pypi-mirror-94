@@ -1,0 +1,119 @@
+{
+    "kinds": [
+        {
+            "name": "printer",
+            "display": "Printer",
+            "fields": [
+                {
+                    "name": "url",
+                    "display": "URL"
+                },
+                {
+                    "name": "question-text",
+                    "display": "Question#1",
+                    "description": "This is the description text of question #1"
+                },
+                {
+                    "name": "question-enum",
+                    "display": "Question-Enum",
+                    "description": "This is the description text of the enum question",
+                    "type": "enum",
+                    "options": [
+                        "Option #1",
+                        "Option #2",
+                        "Option #3"
+                    ]
+                },
+                {
+                    "name": "question-bool",
+                    "display": "Question-Boolean",
+                    "description": "This is the description text of the boolean question<br/>In multiple lines and some <strong>formatting</strong>.",
+                    "type": "boolean"
+                },
+                {
+                    "name": "section",
+                    "display": "Question Section",
+                    "description": "This is the description text of the section<br/>In multiple lines and some <strong>formatting</strong>.",
+                    "type": "section",
+                    "fields": [
+                        {
+                            "name": "question-text",
+                            "display": "Question#1",
+                            "description": "This is the description text of question #1"
+                        },
+                        {
+                            "name": "question-enum",
+                            "display": "Question-Enum",
+                            "description": "This is the description text of the enum question",
+                            "type": "enum",
+                            "options": [
+                                "Option #1",
+                                "Option #2",
+                                "Option #3"
+                            ]
+                        },
+                        {
+                            "name": "question-bool",
+                            "display": "Question-Boolean",
+                            "description": "This is the description text of the boolean question<br/>In multiple lines and some <strong>formatting</strong>.",
+                            "type": "boolean"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "dgp_kind",
+            "display": "DGP",
+            "fields": [
+                {
+                    "name": "snippet",
+                    "display": "Snippet"
+                }
+            ],
+            "dgp": true
+        }
+    ],
+    "theme": {
+        "primary": "#333",
+        "primary_dark": "#222",
+        "secondary": "#fff"
+    },
+    "dateFormats": [
+        {"display": "Automatic",                           "format": "auto"},
+        {"display": "Automatic - YMD",                     "format": "auto_ymd"},
+        {"display": "Automatic - YDM",                     "format": "auto_ydm"},
+        {"display": "Automatic - DMY",                     "format": "auto_dmy"},
+        {"display": "Automatic - MDY",                     "format": "auto_mdy"},
+        {"display": "Standard ISO format (YYYY-MM-DD)",    "format": "default"},
+        {"display": "DD/MM/YYYY",                          "format": "%d/%m/%Y"},
+        {"display": "YYYY-MM-DD HH:MM:SS UTC",             "format": "%Y-%m-%d %H:%M:%S UTC"}
+    ],
+    "dataRecords": [
+        {
+            "name": "tidbit",
+            "display": "Tid-bit",
+            "display_plural": "Tid-bits",
+            "id": "title",
+            "snippet": "title",
+            "edit_component": "special",
+            "fields": [
+                {
+                    "name": "title",
+                    "display": "Title"
+                },
+                {
+                    "name": "elaboration",
+                    "display": "Elaboration"
+                }
+            ]
+        }
+    ],
+    "features": {
+        "forcePrivate": false,
+        "titleEditable": false,
+        "titleVisible": false
+    },
+    "taskNameDescription": "Please provide a name for the processing task",
+    "taskDescription": "Describe the main purpose for the collected data"
+}
