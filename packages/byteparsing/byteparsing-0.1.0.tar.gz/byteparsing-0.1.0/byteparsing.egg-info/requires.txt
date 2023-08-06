@@ -1,0 +1,14 @@
+numpy
+
+[dev]
+prospector[with_pyroma]
+yapf
+isort
+
+[test]
+pytest
+mypy
+pytest-cov
+pytest-flake8
+pycodestyle
+pytest-mypy
