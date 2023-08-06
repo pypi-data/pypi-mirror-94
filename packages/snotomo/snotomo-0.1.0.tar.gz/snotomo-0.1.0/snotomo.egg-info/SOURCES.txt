@@ -1,0 +1,10 @@
+README.md
+setup.py
+snotomo/__init__.py
+snotomo/read_data.py
+snotomo/upload_data.py
+snotomo.egg-info/PKG-INFO
+snotomo.egg-info/SOURCES.txt
+snotomo.egg-info/dependency_links.txt
+snotomo.egg-info/requires.txt
+snotomo.egg-info/top_level.txt

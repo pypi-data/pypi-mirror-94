@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: snotomo
+Version: 0.1.0
+Summary: A package for interacting with the Tomo Snowflake data warehouse
+Home-page: https://github.com/TomoNetworks/snotomo
+Author: Colin Bradley
+Author-email: colin@tomonetworks.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.8
