@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: nsdcode
+Version: 1.1.dev260054000
+Summary: NSD map data from various spaces
+Home-page: https://github.com/kendrickkay/nsdcode
+Author: Ian Charest and Kendrick Kay
+Author-email: charest.ian@gmail.com
+Maintainer: Ian Charest
+Maintainer-email: charest.ian@gmail.com
+License: UNKNOWN
+Platform: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn (==0.23.2)
+Requires-Dist: setuptools-scm
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: nibabel (==3.1.0)
+Requires-Dist: tqdm
+Requires-Dist: pandas
+Provides-Extra: dev
+Requires-Dist: matplotlib ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-benchmark ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-gallery ; extra == 'dev'
+Requires-Dist: numpydoc ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: sphinx-copybutton ; extra == 'dev'
+Requires-Dist: sphinxcontrib-matlabdomain ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+
+# nsdcode
+
+This repository contains nsd_mapdata.{m,py}, a light-weight utility that
+allows the user to map data between different reference spaces
+(e.g. anatomical, functional, volume-based, surface-based) in the NSD dataset.
+Both MATLAB and Python versions of the utility are provided.
+
+For more information on the NSD dataset, please see http://naturalscenesdataset.org.
+
+For examples of how to use nsd_mapdata, please take a look at examples_nsdmapdata.{m,py}.
+
+Known issues:
+* Note that the MATLAB and Python implementations give extremely similar but not
+numerically identical results due to differences in interpolation implementation.
+Also, voxels near the edges of valid locations are also handled slightly differently
+in the Python version.
+* The Python version does not yet implement the anat-to-anat case.
+
+
+## MATLAB
+
+The MATLAB implementation relies on a few external toolboxes that are provided
+in the matlab/external directory.
+
+To install, unzip the matlab/external/*.zip files in place, and then
+
+```matlab
+addpath(genpath('/path/to/nsdcode/matlab/'));
+```
+
+Because the utility relies on transformation files provided with the NSD dataset,
+the user must edit **nsd_datalocation.m** with the location of your local copy
+of the NSD dataset.
+
+
+## Python
+
+To install: 
+
+```bash
+cd python
+python setup.py develop
+```
+
+Code dependencies:
+
+There are some external dependencies which are listed in requirements.txt
+These are installed automatically when you run the setup above.
+These dependencies include:
+
+  1. nibabel
+  2. scipy
+  3. numpy
+  4. tqdm
+
+
+## Change history
+
+* Version 1.0 (Dec 20, 2020). This is the first official release of the software.
+
+
