@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/pytest_funparam.py
+src/pytest_funparam.egg-info/PKG-INFO
+src/pytest_funparam.egg-info/SOURCES.txt
+src/pytest_funparam.egg-info/dependency_links.txt
+src/pytest_funparam.egg-info/entry_points.txt
+src/pytest_funparam.egg-info/requires.txt
+src/pytest_funparam.egg-info/top_level.txt
