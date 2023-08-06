@@ -1,0 +1,10 @@
+sl_git_hooks/.gitignore,sha256=lvif_bZIed_gjpCCttFeqmSWsOFAuytpcgLzAYqLmHc,4057
+sl_git_hooks/__init__.py,sha256=m1QZAdvsO-1XSa-yfu2FQHk5MeXXpMW3_nzvkOWV4Jo,1239
+sl_git_hooks/__main__.py,sha256=CvNzFepgCoingJCoI__8EArulpnfKTCYWWjxCTPSi9s,67
+sl_git_hooks/config.py,sha256=U2613NKwMwpiIpZkPEzXap_hk4tgayiBiz4VqyLuIYU,2227
+sl_git_hooks/poetry.lock,sha256=zQA-cSTNmsl4mTnymP8tZaxgbeoG9M_KXc-r5CkgBMo,9016
+sl_git_hooks/utils.py,sha256=3bKADzUO4OT_m05fheiJA2u9jDuGOXfCE6nfEAUk_u4,361
+sl_git_hooks-0.1.1103.dist-info/entry_points.txt,sha256=_nfmTVxXsA9O_1uXebw0AP8_yhNr7HZ7GS12HGUXUqs,50
+sl_git_hooks-0.1.1103.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+sl_git_hooks-0.1.1103.dist-info/METADATA,sha256=jVk-cmXqnelhrG7hXc-Tek_C3FNpBWZA5TZXNvkPkBI,445
+sl_git_hooks-0.1.1103.dist-info/RECORD,,

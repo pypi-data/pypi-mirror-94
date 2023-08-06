@@ -1,0 +1,3 @@
+[console_scripts]
+sl-git-hooks=sl_git_hooks:main
+
