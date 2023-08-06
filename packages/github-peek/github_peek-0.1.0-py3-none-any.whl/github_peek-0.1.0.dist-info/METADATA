@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: github-peek
+Version: 0.1.0
+Summary: 
+Author: unrahul
+Author-email: rahulunair@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: aiofiles (>=0.6.0,<0.7.0)
+Requires-Dist: aiohttp[speedups] (>=3.7.3,<4.0.0)
+Requires-Dist: loguru (>=0.5.3,<0.6.0)
+Requires-Dist: sh (>=1.14.1,<2.0.0)
+Requires-Dist: shellingham (>=1.4.0,<2.0.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)

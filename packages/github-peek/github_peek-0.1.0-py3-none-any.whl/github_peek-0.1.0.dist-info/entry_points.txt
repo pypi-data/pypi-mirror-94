@@ -1,0 +1,3 @@
+[console_scripts]
+ghub=github_peek.cli:app
+
