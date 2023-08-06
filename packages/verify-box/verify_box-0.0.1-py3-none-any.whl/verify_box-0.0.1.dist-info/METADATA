@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: verify-box
+Version: 0.0.1
+Summary: Calculate accuracy between boxes in a image
+Home-page: https://github.com/thaithien001/verify_box
+Author: Thien Ng
+Author-email: thien.nguyenthai.ncc@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: ~=3.3
+Requires-Dist: numpy
+
+UNKNOWN
+
+
