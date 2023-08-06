@@ -1,0 +1,12 @@
+secrets_storage/__init__.py,sha256=gFeK4BAkc12jpbZIs07xmz7YNpS_NfuCjOXigNiIxTA,729
+secrets_storage/storages.py,sha256=qILuIRcEro-GjUGQGfyFDOYuTCCeXXr9OAINPkCuRsQ,2019
+secrets_storage/version.py,sha256=7oEpixq3xE_sACN4RSEuNHBH7XQ8EfiudhgSiNCuuno,39
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_env_storage.py,sha256=IYxaLGYL8Tgz7BEpJ2NlYQsmyOlW0xsSurHQMcF9k3g,629
+tests/test_sercrets.py,sha256=HyPMQUTnPtN4OWsEmVEFkn7iS8-X8BoRsSRN0yKLLLM,862
+tests/test_vault_storage.py,sha256=4NYiEevPC-Z61aSFpXptSuCoImmH27pkyVTybVfmgf4,3773
+secrets_storage-0.1.4.dist-info/LICENSE,sha256=2SItc_2sUJkhdAdu-gT0T2-82dVhVafHCS6YdXBCpvY,11466
+secrets_storage-0.1.4.dist-info/METADATA,sha256=aaeeeU9rVK8REjSCjP8AnVWO2gNMdSZfdUen-9KxM7M,2371
+secrets_storage-0.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+secrets_storage-0.1.4.dist-info/top_level.txt,sha256=F6mdeKZsy2czFifeAUM0B40A1QiSAw9mZbvBbIlnOBU,22
+secrets_storage-0.1.4.dist-info/RECORD,,
