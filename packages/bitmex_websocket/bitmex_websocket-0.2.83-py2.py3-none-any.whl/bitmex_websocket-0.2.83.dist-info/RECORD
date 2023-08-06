@@ -1,0 +1,14 @@
+bitmex_websocket/__init__.py,sha256=8VWfD74BibrDse3Zi07KfXRJhG-pDG6GTPB88a5XKAg,83
+bitmex_websocket/_bitmex_websocket.py,sha256=Sl0PHOFOhTYvJkfudJy90IrzwDepv0N1a_JYDroS6JE,4251
+bitmex_websocket/_instrument.py,sha256=bV5UrfP6r_hWLjnz4u9hkj-cueJQL_XaPRinhp1NkkE,1989
+bitmex_websocket/_settings_base.py,sha256=aLfuZpjJvb7wTxrSFLakN1a32N2oYKFGkfmub3ACwPU,681
+bitmex_websocket/constants.py,sha256=4lVuCqN5NeF-Ab3a9wxFpSaWEWQAyzTNCsdYFWNNXik,1900
+bitmex_websocket/settings.py,sha256=vM_VR8YkLg1iqKrCrTEYHz_-iyT0Q7sJdaL7vimWKKc,81
+bitmex_websocket/auth/__init__.py,sha256=nMtiLwpf9wRqldYpUd3XYPvGXto2RvxIUdWCEfNss_I,28
+bitmex_websocket/auth/api_key_auth.py,sha256=pb4IrDRJeIATZhx95AtIhJfeNZDkkmraJD5rGha9ke4,1934
+bitmex_websocket-0.2.83.dist-info/LICENSE,sha256=t3Q17xmaBQtJBo4qg60g1Wkr_CsG-pa3dLShv2mIALw,1076
+bitmex_websocket-0.2.83.dist-info/METADATA,sha256=9PgRTEI6O1LY7r7cNXCRG41yqxyyjaOGGnEglsH3Eos,2549
+bitmex_websocket-0.2.83.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+bitmex_websocket-0.2.83.dist-info/top_level.txt,sha256=lt5ARXnU1Z7n6927NPf8TwlKRrqw5ejmdfa7HnSf16o,17
+bitmex_websocket-0.2.83.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+bitmex_websocket-0.2.83.dist-info/RECORD,,
