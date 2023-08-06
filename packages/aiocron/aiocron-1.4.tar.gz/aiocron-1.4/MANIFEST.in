@@ -1,0 +1,11 @@
+graft docs
+prune docs/_build
+prune .github/
+graft aiocron
+graft tests
+include Pipfile Pipfile.lock *.rst *.cfg *.ini LICENSE
+global-exclude *.pyc
+global-exclude __pycache__
+include .coveragerc
+recursive-include examples *.py
+exclude .installed.cfg
