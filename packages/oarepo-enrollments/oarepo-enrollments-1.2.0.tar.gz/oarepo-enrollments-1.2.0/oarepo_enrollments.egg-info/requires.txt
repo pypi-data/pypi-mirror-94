@@ -1,0 +1,14 @@
+wrapt>=1.11.2
+flask-rest-paginate
+tabulate
+
+[dev]
+pytest
+oarepo[tests]~=3.3
+mock
+markdown-toc
+
+[tests]
+pytest
+oarepo[tests]~=3.3
+mock
