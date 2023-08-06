@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: simple-httpfs
+Version: 0.4.11
+Summary: A simple FUSE filesystem for reading http files
+Home-page: https://github.com/higlass/simple-httpfs
+Author: Peter Kerpedjiev
+Author-email: pkerpedjiev@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Requires-Dist: diskcache
+Requires-Dist: fusepy
+Requires-Dist: requests
+Requires-Dist: slugid
+Requires-Dist: tenacity
+
+# simple-httpfs
+
+A simple FUSE-based http file system. Read http files as if they were on
+the local filesystem.
+
+## Usage
+
+```
+simple-http /my/mount/dir
+curl /my/mount/dir/http/slashdot.org/country.js..
+```
+
+URLs are referenced relative to the mount directory and suffixed with `..` in
+the style of [Daniel Rozenbergs
+httpfs](https://github.com/danielrozenberg/httpfs).
+
+## Unmounting
+
+```
+umount /my/mount/dir
+```
+
+
