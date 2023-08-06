@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: aeronet
+Version: 0.0.8
+Summary: Deep learning with remote sensing data.
+Home-page: UNKNOWN
+Author: Pavel Yakubovskiy
+Author-email: qubvel@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: keras (==2.2.4)
+Requires-Dist: numpy (>=1.15.4)
+Requires-Dist: rasterio (>=1.0.0)
+Requires-Dist: shapely (>=1.7a1)
+Requires-Dist: opencv-python (>=4.0.0)
+Requires-Dist: tqdm (>=4.36.1)
+Requires-Dist: rtree (>=0.8.3)
+
+Deep learning with remote sensing data.
+
+
