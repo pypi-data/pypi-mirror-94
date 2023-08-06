@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: GoFUSE
+Version: 0.0.6
+Summary: GoFUSE is a pyfuse / xmlrpc based distributed filesystem.
+Home-page: https://pypi.org/project/GoFUSE/0.0.1/
+Author: Georg Gogo. BERNHARD
+Author-email: gogo@bluedynamics.com
+License: GPL
+Description: # GoFUSE
+        
+        GoFUSE is a pyfuse / xmlrpc based distributed filesystem.
+        
+        ## Installation
+        
+        ```
+        pip3 install GoFUSE
+        ```
+        
+        ## Usage
+        
+        ```
+        python3 -m GoFUSE.server ./data
+        python3 -m GoFUSE.client /mnt/test
+        ```
+        
+        ### Example
+        
+        ```
+        LOGLEVEL=DEBUG python3 -m GoFUSE.server .
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
