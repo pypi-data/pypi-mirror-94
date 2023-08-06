@@ -1,0 +1,152 @@
+# ESINet: Electric source imaging using artificial neural networks (ANNs)
+
+ESINet let's you solve the EEG inverse problem using ANNs.
+
+![ESINet](/assets/ESINet.png)
+Neural network design was created [here](http://alexlenail.me/NN-SVG/index.html)
+
+<br/><br/>
+
+## Dependencies:
+* Python >= 3.8.3
+* [mne 0.22.0](https://mne.tools/stable/index.html)
+  * Follow the [installation guide](https://mne.tools/stable/install/mne_python.html#installing-mne-python-and-its-dependencies)
+* [Tensorflow>=2.4.1](https://www.tensorflow.org/)
+  * Follow the [installation guide](https://www.tensorflow.org/install)
+* [Colorednoise](https://github.com/felixpatzelt/colorednoise)
+* [joblib](https://joblib.readthedocs.io/en/latest/#)
+* [pyvista>=0.24](https://docs.pyvista.org/)
+* [pyvistaqt>=0.2.0](https://qtdocs.pyvista.org/)
+* [tqdm](https://github.com/tqdm/tqdm)
+
+<br/>
+
+## Installation from PyPi
+Use [pip](https://pip.pypa.io/en/stable/) to install ESINet and all its
+dependencies from [PyPi](https://pypi.org/):
+
+```
+pip install ESINet
+```
+
+<br/>
+
+## First steps
+
+Check out one of the [tutorials](tutorials/) to learn how to use the package:
+
+* [Base tutorial](tutorials/tutorial.ipynb): Simulate data and train a ANN to predict some sources. Shows the most important functions of this package and serves as the easiest entry point.
+  
+* [Brainstorm Auditory example](tutorials/brainstorm_auditory_example.ipynb): This tutorial shows you how to use ESINet to predict the sources in word processing data. Code was partially used from the [MNE tutorials](https://mne.tools/stable/auto_tutorials/sample-datasets/plot_brainstorm_auditory.html?highlight=brainstorm)
+ 
+<br/>
+
+---
+# Workflow
+ESINet is a lightweight package that provides all building blocks to use an ANN
+to solve the EEG inverse problem. It relies on
+[mne](https://mne.tools/stable/index.html)) to handle all tasks
+related to EEG and [Tensorflow](https://www.tensorflow.org/) to create, train
+and predict with the ANN.
+
+<br/>
+
+## The forward model
+Knowing how cerebral currents will project to the scalp electrodes requires solving the *forward problem*. Fortunately, this problem has a unique solution! We provide a function to quickly create a *forward model* which supplies all assets required for the following processing steps:
+
+```
+pth_fwd = 'forward_models/ico3/'
+sampling = 'ico3'
+create_forward_model(pth_fwd, sampling=sampling, info=epochs.info)
+```
+The sampling defines the number of dipoles in your source model and thereby the resolution of your inverse solution. If you don't have powerful hardware we encourage to leave the sampling at 'ico3'.
+
+<br/>
+
+## Simulating EEG data
+ANNs that find solutions to the inverse problem need to be trained to infer the dipole moments of your source model given the EEG.
+
+You can create a set of sources using our high-level function:
+```
+sources_sim = run_simulations(pth_fwd, durOfTrial=0)
+```
+
+To simulate the corresponding EEG data with added noise you can use our function:
+```
+eeg_sim = create_eeg(sources_sim, pth_fwd)
+```
+
+You can visualize the simulated data with this code block:
+```
+%matplotlib qt
+sample = 0  # index of the simulation
+title = f'Simulation {sample}'
+# Topographic plot
+eeg_sim[sample].average().plot_topomap([0.5])
+# Source plot
+sources_sim.plot(hemi='both', initial_time=sample, surface='white', colormap='inferno', title=title, time_viewer=False)
+```
+
+<br/>
+
+## Training
+Now we want to train an ANN to infer sources given EEG data. Since we have simulated all the required data already we just have to load and train a ANN model.
+
+To load our basic model:
+
+```
+# Find out input and output dimensions based on the shape of the leadfield 
+input_dim, output_dim = load_leadfield(pth_fwd).shape
+# Initialize the artificial neural network model
+model = get_model(input_dim, output_dim)
+```
+Next, we train the model:
+```
+model, history = train_model(model, sources_sim, eeg_sim)
+```
+
+You have now trained your neural network - congratulations!
+
+## Testing the ANN
+Let's see how your ANN performs!
+First, we have to simulate some data for evaluation:
+```
+# Simulate source
+sources_eval = run_simulations(pth_fwd, 1, durOfTrial=0)
+# Simulate corresponding EEG
+eeg_eval = create_eeg(sources_eval, pth_fwd)
+```
+Next, we use the trained ANN model to predict the source given the EEG.
+
+```
+# Predict
+source_predicted = predict(model, eeg_eval, pth_fwd)
+```
+
+Now let's visualize the result:
+```
+# Plot ground truth source...
+title = f'Ground Truth'
+sources_eval.plot(hemi='both', initial_time=0.5, surface='white', colormap='inferno', title=title, time_viewer=False)
+
+# Plot the simulated EEG
+title = f'Simulated EEG'
+eeg_eval[0].average().plot_topomap([0], title=title)
+
+# Plot the predicted source
+title = f'ConvDip Prediction'
+source_predicted.plot(hemi='both', initial_time=0.5, surface='white', colormap='inferno', title=title, time_viewer=False)
+
+```
+
+<br/>
+
+# Feedback
+Leave your feedback and bug reports at lukas_hecker@web.de.
+
+<br/>
+
+# Literature
+Cite us using our preprint (publication is in review):
+
+Hecker, L., Rupprecht, R., van Elst, L. T., & Kornmeier, J. (2020). ConvDip: A convolutional neural network for better M/EEG Source Imaging. bioRxiv.
