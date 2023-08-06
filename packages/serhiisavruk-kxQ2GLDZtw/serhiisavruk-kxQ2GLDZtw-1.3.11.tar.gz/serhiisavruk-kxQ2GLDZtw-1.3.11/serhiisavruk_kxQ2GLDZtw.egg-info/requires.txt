@@ -1,0 +1,7 @@
+pybind11>=2.2
+ase
+numpy
+scipy
+scikit-learn>=0.22
+pandas>=0.23
+spglib>1.12.0
