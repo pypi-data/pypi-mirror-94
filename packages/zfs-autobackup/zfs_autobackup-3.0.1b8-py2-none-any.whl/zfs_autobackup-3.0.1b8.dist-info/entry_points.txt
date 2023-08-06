@@ -1,0 +1,3 @@
+[console_scripts]
+zfs-autobackup = zfs_autobackup:cli
+
