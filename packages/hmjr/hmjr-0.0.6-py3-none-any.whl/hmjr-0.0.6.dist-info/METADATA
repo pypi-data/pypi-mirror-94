@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hmjr
+Version: 0.0.6
+Summary: A collection of tools for analyzing the HMJR Collection.
+Home-page: https://github.com/TeddyRandby/hmjrPyTools
+Author: Teddy Randby
+Author-email: tedrandby@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/TeddyRandby/hmjrPyTools/archive/0.0.6.tar.gz
+Keywords: archives,analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Dist: python-graphql-client
+
+A collection of tools for analyzing the HMJR Collection.
+
+
