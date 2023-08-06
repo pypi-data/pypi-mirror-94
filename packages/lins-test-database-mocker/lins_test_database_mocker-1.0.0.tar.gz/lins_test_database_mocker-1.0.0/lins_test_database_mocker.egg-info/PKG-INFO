@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: lins-test-database-mocker
+Version: 1.0.0
+Summary: Lib para criação e população de databases para testes.
+Home-page: https://bitbucket.org/grupolinsferrao/pypck-lins-test-database-mocker
+Author: Diego Magalhães
+Author-email: diego.magalhaes@dbccompany.com.br
+License: UNKNOWN
+Description: # Database Test Mocker
+        ![pyver](https://img.shields.io/badge/python-3.6%2B-blue)
+        
+        Pacote para criação e população de banco de dados para execução de testes.
+        
+        ### Variáveis de ambiente
+        
+        Este projeto depende das variáveis de ambiente abaixo.
+        
+        ```bash
+        MYSQL_HOST=
+        MYSQL_USER=
+        MYSQL_PASS=
+        MYSQL_DATABASE=
+        MYSQL_PORT=
+        ```
+        
+        
+        ```python
+        
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
