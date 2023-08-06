@@ -1,0 +1,4 @@
+[console_scripts]
+deeptech = deeptech.core.cli:run
+deeptech_tools = deeptech.core.cli_tools:main
+
