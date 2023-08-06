@@ -1,0 +1,12 @@
+dexparser/__init__.py,sha256=m0DyaPxz9OOs0tyqN1BEs0pREDP4Csxrysslq3EOYjw,14427
+dexparser/disassembler.py,sha256=lsxOD4KDr9fyuqzxkCbIwEyG8jCE0OzmZ2azAo4ctmI,9542
+dexparser/errors.py,sha256=4PPdDi9STTeSwSJqtOdFur2OUBLis5uwHc7vDH7U3eE,56
+dexparser/utils.py,sha256=zYldLENcGEMUO4BYmn8RLZ_JeluoL4GA_IgBfAVH-3I,1489
+tests/__init__.py,sha256=Q9kwH_ngEp7BqRxaFPfLs8QmLaAfZYV4Dl87VoZ31Sk,70
+tests/test_load_dex.py,sha256=u_pBs5RyD5bzuC6Go99uKSkf-aPbHTf_ksgtd7oFFak,283
+tests/test_parse_single_dex.py,sha256=q5u50oQiPsvEeKj5swnqVivRk16tK8fK-iTf6EDAQwc,1245
+dexparser-1.0.2.dist-info/LICENSE,sha256=WLO1wJYR9t_7LeKS4UinY1xDaWnGk-OSzZotbbPoVRs,1088
+dexparser-1.0.2.dist-info/METADATA,sha256=X9vIdF4kkp-yq7UI3NTvWB3ndRnlnUb_mpJ-a2DBzXw,1769
+dexparser-1.0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+dexparser-1.0.2.dist-info/top_level.txt,sha256=k6T3ueMAprKPsHBe4b1gf6gt3PKnucB74IJodr-e0dM,16
+dexparser-1.0.2.dist-info/RECORD,,
