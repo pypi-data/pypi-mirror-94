@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+wixtaller.egg-info/PKG-INFO
+wixtaller.egg-info/SOURCES.txt
+wixtaller.egg-info/dependency_links.txt
+wixtaller.egg-info/top_level.txt
