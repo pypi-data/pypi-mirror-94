@@ -1,0 +1,12 @@
+espwrap/__init__.py,sha256=RRwLT6p4EVy1Jtdz4OMtNbu7xEdpC4gTRQ0zWltm1MQ,23
+espwrap/base.py,sha256=mX_4SM6YeGIO1m61146UygWs0qFKq6kSTK-PXDIxgTY,7012
+espwrap/adaptors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+espwrap/adaptors/mandrill.py,sha256=BTGIuRJTNdL2xmkg7KRTVOuWhLsTi3EhUQDu1n_WNCQ,2635
+espwrap/adaptors/noop.py,sha256=ArH85JrOIUdnwe4XYgxn2AthMPrnv9jRNr71XwE5ves,165
+espwrap/adaptors/sendgrid.py,sha256=MG5vJO7p4FOKVsaaBxOvZBW7klM018Y_j4VVh7tv7jc,4681
+espwrap/adaptors/sendgrid_common.py,sha256=K0N9iqP0aY2j802pxENVQI6ov_MirUHSwA48GILf7R4,376
+espwrap/adaptors/sendgrid_v3.py,sha256=h__JJXo2JjVhJcv-zoKTg_g-7Pv5HWsS14XG7n5kQSY,8980
+espwrap-2.0.12.dist-info/METADATA,sha256=_gPfBchkHu0hkE9Qzf653Y6pc-kWbJXTCywuWmKnIhI,584
+espwrap-2.0.12.dist-info/RECORD,,
+espwrap-2.0.12.dist-info/WHEEL,sha256=_V8uWu5F_h-lvAz5Mbq4oZqV_uCfL4cHgm4IIlDevzU,92
+espwrap-2.0.12.dist-info/top_level.txt,sha256=pNgPrAVSYLv1PEZlhthoK_RpwA2Gt_c0NitzZrMr58M,8
