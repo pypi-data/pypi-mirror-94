@@ -1,0 +1,10 @@
+README.md
+setup.py
+XWindows/__init__.py
+XWindows/keys.py
+XWindows/windows.py
+XWindows.egg-info/PKG-INFO
+XWindows.egg-info/SOURCES.txt
+XWindows.egg-info/dependency_links.txt
+XWindows.egg-info/requires.txt
+XWindows.egg-info/top_level.txt
