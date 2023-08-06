@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+tests/__init__.py
+tests/sum.py
+tests/test_config.py
+tests/test_parsing.py
+typarse/__init__.py
+typarse/config.py
+typarse/parsing.py
+typarse.egg-info/PKG-INFO
+typarse.egg-info/SOURCES.txt
+typarse.egg-info/dependency_links.txt
+typarse.egg-info/requires.txt
+typarse.egg-info/top_level.txt
