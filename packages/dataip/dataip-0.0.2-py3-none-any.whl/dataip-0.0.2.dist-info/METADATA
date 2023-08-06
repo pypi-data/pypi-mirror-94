@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: dataip
+Version: 0.0.2
+Summary: dataip package is used to gather information based on your IP address
+Home-page: UNKNOWN
+Author: Aditya Khemka
+License: MIT
+Keywords: ip,aditya,khemka,aditya khemka,ipinfo,ip address,python,ipdata,dataip
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# dataip
+dataip is used to extract some information based on your IP address
+
+### Installation
+install using pip
+
+```sh
+pip install dataip
+```
+
+### Usage
+
+
+```sh
+import dataip
+print(dataip.getIP())
+```
+this will print your current IP address on the machine (you're working on)
+
+
+### Functions
+
+dataip supports the following commands
+
+getIP()
+continent()
+continentCode()
+country()
+countryCode()
+region()
+regionCode()
+city()
+zip()
+latitude()
+longitude()
+timezone()
+offset()
+currencyCode()
+isp()
+org()
+asname()
+
+### Others
+
+you can also call 
+info() to learn about the project or
+debug() to learn about some common errors and their solutions
+
+
