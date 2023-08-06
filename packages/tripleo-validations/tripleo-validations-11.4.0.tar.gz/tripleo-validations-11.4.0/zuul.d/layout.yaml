@@ -1,0 +1,22 @@
+- project:
+    templates:
+    - tripleo-multinode-container-minimal-pipeline
+    - tripleo-standalone-scenarios-pipeline
+    - openstack-python3-train-jobs
+    - tripleo-validations-molecule-jobs
+    - check-requirements
+    - release-notes-jobs-python3
+    check:
+      jobs:
+      - openstack-tox-linters
+      - openstack-tox-docs: &tripleo-docs
+          files:
+          - ^doc/.*
+          - ^README.rst
+    gate:
+      jobs:
+      - openstack-tox-linters
+      - openstack-tox-docs: *tripleo-docs
+    promote:
+      jobs:
+      - promote-openstack-tox-docs: *tripleo-docs

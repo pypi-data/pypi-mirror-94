@@ -1,0 +1,57 @@
+---
+driver:
+  name: docker
+
+log: true
+
+platforms:
+  - name: centos7
+    hostname: centos7
+    etc_hosts:
+      undercloud.ctlplane.mydomain.tld: "127.0.0.1"
+    image: centos:7
+    override_command: true
+    command: /sbin/init
+    privileged: true
+    pkg_extras: python-setuptools python-enum34 python-netaddr epel-release ruby PyYAML
+    volumes:
+      - /etc/ci/mirror_info.sh:/etc/ci/mirror_info.sh:ro
+    easy_install:
+      - pip
+    environment: &env
+      http_proxy: "{{ lookup('env', 'http_proxy') }}"
+      https_proxy: "{{ lookup('env', 'https_proxy') }}"
+
+  - name: centos8
+    hostname: centos8
+    etc_hosts:
+      undercloud.ctlplane.mydomain.tld: "127.0.0.1"
+    image: centos:8
+    override_command: true
+    command: /sbin/init
+    privileged: true
+    pkg_extras: python*-setuptools python*-enum34 python*-netaddr ruby epel-release python*-PyYAML
+    volumes:
+      - /etc/ci/mirror_info.sh:/etc/ci/mirror_info.sh:ro
+    environment:
+      <<: *env
+
+provisioner:
+  name: ansible
+  log: true
+  env:
+    ANSIBLE_STDOUT_CALLBACK: yaml
+    ANSIBLE_LIBRARY: ../../../../library
+    ANSIBLE_ROLES_PATH: ../../../../roles/roles.galaxy/tripleo-ansible/tripleo-ansible/tripleo_ansible/roles
+
+scenario:
+  test_sequence:
+    - destroy
+    - create
+    - prepare
+    - converge
+    - verify
+    - destroy
+
+verifier:
+  name: testinfra
