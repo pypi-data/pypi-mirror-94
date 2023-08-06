@@ -1,0 +1,10 @@
+setup.py
+bits/__init__.py
+bits/gaia/__init__.py
+bits/gaia/auth.py
+bits_gaia.egg-info/PKG-INFO
+bits_gaia.egg-info/SOURCES.txt
+bits_gaia.egg-info/dependency_links.txt
+bits_gaia.egg-info/not-zip-safe
+bits_gaia.egg-info/requires.txt
+bits_gaia.egg-info/top_level.txt
