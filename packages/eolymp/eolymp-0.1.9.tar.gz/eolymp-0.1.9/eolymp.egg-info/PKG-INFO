@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: eolymp
+Version: 0.1.9
+Summary: E-Olymp SDK for Python
+Home-page: https://github.com/eolymp/contracts
+Author: Sergey Kolodyazhnyy
+Author-email: sergey@e-olymp.com
+License: UNKNOWN
+Description: # E-Olymp SDK in Python
+        
+        This is SDK to talk to E-Olymp API server pragmatically.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
