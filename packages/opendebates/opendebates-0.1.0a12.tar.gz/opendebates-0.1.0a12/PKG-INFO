@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: opendebates
+Version: 0.1.0a12
+Summary: Rating System Bot for Open Debates Discord Server
+Home-page: https://github.com/OpenDebates/OpenDebates
+Author: OpenDebates Contributors
+Author-email: contact@taven.me
+License: apache
+Description: OpenDebates for Discord
+        =======================
+        
+        |image0|
+        
+        |image1| |image2|
+        
+        -----------------------------------------------
+        
+        What is OpenDebates for Discord?
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        
+        It is a bot for discord, that allows users to participate in debates that are ranked by ELO ratings.
+        
+        .. |image0| image:: https://i.imgur.com/SxX5wQF.png
+           :width: 100px
+           :target: https://opendebates.rtfd.io
+        .. |image1| image:: https://travis-ci.com/OpenDebates/OpenDebates.svg?branch=master
+           :target: https://travis-ci.com/OpenDebates/OpenDebates
+        .. |image2| image:: https://readthedocs.org/projects/opendebates/badge/?version=latest
+           :target: https://opendebates.readthedocs.io/en/latest/?badge=latest
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Communications :: Chat
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst; charset=UTF-8
+Provides-Extra: docs
+Provides-Extra: tests
+Provides-Extra: release
