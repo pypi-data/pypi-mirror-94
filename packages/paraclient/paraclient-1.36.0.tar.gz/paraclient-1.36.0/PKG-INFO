@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: paraclient
+Version: 1.36.0
+Summary: Python client for Para
+Home-page: https://github.com/Erudika/para-client-python
+Author: Alexander Bogdanovski
+Author-email: alex@erudika.com
+License: Apache 2.0
+Description: **Para** was designed as a simple and modular backend framework for object persistence and retrieval. It helps you build applications faster by taking care of the backend. It works on three levels - objects are stored in a NoSQL data store or any old relational database, then automatically indexed by a search engine and finally, cached. This is the Python client for Para.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown

@@ -1,0 +1,13 @@
+README.md
+setup.py
+paraclient/__init__.py
+paraclient/auth.py
+paraclient/constraint.py
+paraclient/pager.py
+paraclient/paraclient.py
+paraclient/paraobject.py
+paraclient/version.py
+paraclient.egg-info/PKG-INFO
+paraclient.egg-info/SOURCES.txt
+paraclient.egg-info/dependency_links.txt
+paraclient.egg-info/top_level.txt
