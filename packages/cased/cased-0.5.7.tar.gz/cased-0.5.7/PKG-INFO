@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: cased
+Version: 0.5.7
+Summary: Cased Guard adds security and visibility features to the command line tools you and your team love.
+Home-page: https://github.com/cased/guard-client
+Author: Cased
+Author-email: support@cased.com
+License: BSL 1.1
+Project-URL: Bug Tracker, https://github.com/cased/guard/issues
+Project-URL: Documentation, https://docs.cased.com/guard
+Project-URL: Source Code, https://github.com/cased/guard
+Description: Cased Guard adds security and visibility features to the command line tools you and your team love. https://cased.com/guard
+Keywords: cased api
+Platform: UNKNOWN
+Requires-Python: >3.5

@@ -1,0 +1,7 @@
+requests
+responses
+mock
+pytest>=4.0c0
+pytest-mock
+pytest-xdist
+yaspin
