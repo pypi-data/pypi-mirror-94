@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: kt-ai-commons
+Version: 1.0.2
+Summary: module for artificial intelligence
+Home-page: https://github.com/hodragon5237/kt_ai_commons
+Author: hodragon
+Author-email: giddens5237@gmail.com
+License: BEERWARE
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: psycopg2-binary
+
+# AI-commons Intro
+* It is designed to provide a reference point for AI beginners to obtain modeling and data.
+
+# AI-Sample-Dataset uses
+## OneNavi Driving data Sample
+### Library installation
+        pip install kt-ai-commons
+### Train Dataset Loading
+        from kt_ai_commons import dataset
+        df_train = dataset.onenavi_train()
+### Evaluation Dataset Loading
+        from kt_ai_commons import dataset
+        df_valid = dataset.onenavi_evaluation()
+### PNU Dataset Loading
+        from kt_ai_commons import dataset
+        df_valid = dataset.onenavi_pnu()
+### Signal Dataset Loading
+        from kt_ai_commons import dataset
+        df_valid = dataset.onenavi_signal()
+### Weather Dataset Loading
+        from kt_ai_commons import dataset
+        df_valid = dataset.onenavi_weather()
+### Accuracy calculation function
+        from kt_ai_commons import featureCalculation
+        etaa=featureCalculation.cal_etaa(df_valid,et,eta)
+
+# Reference : The user is responsible for issues and problems caused by using this library.
+
