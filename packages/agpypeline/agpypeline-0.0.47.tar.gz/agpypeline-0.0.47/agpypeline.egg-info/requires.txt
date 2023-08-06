@@ -1,0 +1,13 @@
+setuptools
+numpy
+influxdb
+requests>=2.21.0
+python-dateutil
+utm
+matplotlib
+Pillow
+scipy
+piexif
+cryptography
+pyyaml
+pygdal>=2.2.2.*
