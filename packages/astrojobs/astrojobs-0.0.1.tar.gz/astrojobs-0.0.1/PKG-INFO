@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: astrojobs
+Version: 0.0.1
+Summary: Find all citation keys in your LaTeX documents and search NASA ADS to generate corresponding bibtex entries.
+Home-page: https://github.com/pmocz/astrojobs
+Author: Philip Mocz
+Author-email: philip.mocz@gmail.com
+Maintainer: Philip Mocz
+Maintainer-email: philip.mocz@gmail.com
+License: MIT
+Download-URL: https://github.com/pmocz/astrojobs/archive/v0.0.1.tar.gz
+Description: UNKNOWN
+Keywords: astronomy job rumor
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Astronomy

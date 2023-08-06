@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+astrojobs.py
+setup.py
+astrojobs.egg-info/PKG-INFO
+astrojobs.egg-info/SOURCES.txt
+astrojobs.egg-info/dependency_links.txt
+astrojobs.egg-info/entry_points.txt
+astrojobs.egg-info/requires.txt
+astrojobs.egg-info/top_level.txt
