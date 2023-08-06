@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: SagarCalculator
+Version: 0.0.1
+Summary: Our package will give u a basic calculator function such as add, sub, multiply and divide.
+Home-page: UNKNOWN
+Author: Sagar Pachare
+Author-email: sagarpachare143@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

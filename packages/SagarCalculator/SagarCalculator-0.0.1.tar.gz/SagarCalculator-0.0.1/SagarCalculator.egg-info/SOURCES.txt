@@ -1,0 +1,10 @@
+CHANGELOG.txt
+License.txt
+MANIFEST.in
+README.txt
+__.init.__.py
+setup.py
+SagarCalculator.egg-info/PKG-INFO
+SagarCalculator.egg-info/SOURCES.txt
+SagarCalculator.egg-info/dependency_links.txt
+SagarCalculator.egg-info/top_level.txt
