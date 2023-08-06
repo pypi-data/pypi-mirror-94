@@ -1,0 +1,8 @@
+*.pyc
+.idea
+*.shp
+*.prj
+*.shx
+*.dbf
+docs/_build
+docs/api
