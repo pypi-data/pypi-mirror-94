@@ -1,0 +1,6 @@
+PyQt5>=5
+mt_FileMan>=0.0.3
+mt_UI>=0.0.2
+
+[testing]
+pytest
