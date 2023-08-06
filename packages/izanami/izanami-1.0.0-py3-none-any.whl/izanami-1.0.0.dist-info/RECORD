@@ -1,0 +1,16 @@
+izanami/__init__.py,sha256=2XnM-zdMjl-pRd9-mOy5oUAbGonEhJFG981BA2Tz1vU,97
+izanami/controller.py,sha256=klvFJOoeNTFCZHpkPQwEoQD2HGkzF8xMsTRFJBrOPRM,4257
+izanami/gitHttpBackend.py,sha256=VQS1viJIBzUwidDp2yqjALxaQgkynB-zdSxZk8BLzwI,8579
+izanami/main.py,sha256=Bdrey8dRelXVkPMM2BXjFsxesUcqDbgYoXyp0mDs6UQ,949
+izanami/model.py,sha256=Z6uwWPpgHVGEkHTUSJVr1iZn0DCJ1qa3ZWI8X3r95-A,262
+izanami/static/vertical-logo.svg,sha256=1KwlrBeHHawJWYW5-4QY3oXJSIeuwzxr3fvBVkJoI58,9345
+izanami/templates/base.html,sha256=Zc7G7VkHdMXL7q66Otu4oPOgNggj6wEO8BKrl_0OrQA,196
+izanami/templates/repo/create.html,sha256=HOpEj7aHXCqDtlApwRqxDqrUysgFgk17HmATtq2_atM,635
+izanami/templates/repo/delete.html,sha256=mYusoNEo0GHU2F7n7HrFgwUN4RIN1MpjlzSeqNpaIhk,335
+izanami/templates/repo/list.html,sha256=x98qyO8lzPqqUqobq0h2W4nFSVCZ32V6rf0_fFUSCDM,330
+izanami/templates/repo/retrieve.html,sha256=TVYjdjrGrtQgU908OdjVpi1DVBFjfybV5xg1cRJz9HQ,135
+izanami/templates/repo/update.html,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+izanami-1.0.0.dist-info/METADATA,sha256=St_0t6NUxBog9K0dOnNRS2uwN6mGhOafxlhN0m-ENdM,218
+izanami-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+izanami-1.0.0.dist-info/top_level.txt,sha256=ekJ0Pnd8s959SiA6HR8st8L2No9lRSyIyi5rJ7x1zck,8
+izanami-1.0.0.dist-info/RECORD,,
