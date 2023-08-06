@@ -1,0 +1,12 @@
+fastocr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastocr/__main__.py,sha256=LWRMBqFMdUydAb3a2numKyXERpNUHPkbmB82gej4p9c,613
+fastocr/bus.py,sha256=NtMrIDtIA_gev-qSkrkn1x6jwf-UzJGstHIUslpDfQg,1379
+fastocr/grabber.py,sha256=Ba0xJdXNNLYU56Xt8jMks9TNaOaAlc6rzY60EI5nwxg,5649
+fastocr/service.py,sha256=zq-RjhDA0npm_q_Q8LSewS6Nu7YlAHqILH-kmu_RJkI,1191
+fastocr/tray.py,sha256=5kJFDC1W1hBkHLPAHtUys5HVeiWJKrLNXFNHIq_rK8o,2627
+fastocr/util.py,sha256=touuTjxnEhlqeOW2B_OOxynR5yNz3vDDwwOYKQpb9ss,2785
+fastocr-0.1.1.dist-info/entry_points.txt,sha256=SKRgvRaGYv9Fy1pfaeBCzpgSt1fxOG0lASK7XXxNKns,49
+fastocr-0.1.1.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+fastocr-0.1.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+fastocr-0.1.1.dist-info/METADATA,sha256=0YtzzshyGnWzShDn52_yEsu-9MOhtVlJjklsYYJmpUE,873
+fastocr-0.1.1.dist-info/RECORD,,

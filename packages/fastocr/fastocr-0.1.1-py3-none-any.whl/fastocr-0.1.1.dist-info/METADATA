@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: fastocr
+Version: 0.1.1
+Summary: FastOCR is a desktop application for OCR API.
+Home-page: https://github.com/BruceZhang1993/FastOCR
+License: LGPL-3.0-only
+Keywords: ocr
+Author: Bruce Zhang
+Author-email: zttt183525594@gmail.com
+Requires-Python: >=3.7,<3.10
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PySide2 (>=5.15.2,<6.0.0)
+Requires-Dist: baidu-aip (>=2.2.18,<3.0.0)
+Requires-Dist: dbus-python (>=1.2.16,<2.0.0)
+Requires-Dist: qasync (>=0.13.0,<0.14.0)
+Project-URL: Documentation, https://github.com/BruceZhang1993/FastOCR
+Project-URL: Repository, https://github.com/BruceZhang1993/FastOCR
