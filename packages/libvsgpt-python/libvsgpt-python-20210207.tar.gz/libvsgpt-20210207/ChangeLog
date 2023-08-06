@@ -1,0 +1,8 @@
+TODO:
+* vsgptinfo show if corruption was detected
+* vsgptinfo show detailed corruption information, such as checksum failure in backup partition table?
+
+20190223
+* see `git log' for more recent change log
+* initial version based on libvsmbr
+
