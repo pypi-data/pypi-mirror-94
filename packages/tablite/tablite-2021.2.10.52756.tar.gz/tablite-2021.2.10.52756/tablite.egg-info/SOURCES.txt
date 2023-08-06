@@ -1,0 +1,10 @@
+LICENSE
+README.md
+requirements.txt
+setup.py
+table/__init__.py
+tablite.egg-info/PKG-INFO
+tablite.egg-info/SOURCES.txt
+tablite.egg-info/dependency_links.txt
+tablite.egg-info/requires.txt
+tablite.egg-info/top_level.txt
