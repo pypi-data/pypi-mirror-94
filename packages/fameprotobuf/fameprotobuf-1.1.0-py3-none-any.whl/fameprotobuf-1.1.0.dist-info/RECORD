@@ -1,0 +1,13 @@
+fameprotobuf/AgentMessage_pb2.py,sha256=lVl_FZnMdTMhSImzzymZnRcx26lGxHeGiTqVyaGqacI,11923
+fameprotobuf/Bundle_pb2.py,sha256=cM2tvd1pP6wkgUTGW3ntNi1Yad3J3vTwTI8MAMUROsg,6740
+fameprotobuf/Contract_pb2.py,sha256=zZumvkpunP_V2ys-qw9rQEgYNCyuUvWcTJ4ifSXp4Dw,5020
+fameprotobuf/DataStorage_pb2.py,sha256=90wyUbMdz8ekMu-SyTZ-WAjvq0iVWLLbuq8tUf2RgMY,2881
+fameprotobuf/Field_pb2.py,sha256=Weo0Hh1IK38XmVtFO-EQSI-SqZzXbkMmjc2hIwDyhqw,4283
+fameprotobuf/InputFile_pb2.py,sha256=00rNzBHjuLFKakEbrvgqPjzIwv4NagZvnJq-r9m_SR4,17976
+fameprotobuf/Services_pb2.py,sha256=U4vC53LVblZS130Skw0BuchQ0InuTln1U5gHmZRjd1g,18384
+fameprotobuf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fameprotobuf-1.1.0.dist-info/LICENSE,sha256=uFf8cIrUFnvY9dBppZfGB7jlbDeTEaxC4fyREMWiAAI,10389
+fameprotobuf-1.1.0.dist-info/METADATA,sha256=3KTW3SLOKg8e-WFJRDQT3DjU3rxnpxodr7R0cH2-35g,622
+fameprotobuf-1.1.0.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+fameprotobuf-1.1.0.dist-info/top_level.txt,sha256=ZEo6F55BbKUVHxbWWdPdNFKBq-WX5ioZC4oexS3KGH4,13
+fameprotobuf-1.1.0.dist-info/RECORD,,
