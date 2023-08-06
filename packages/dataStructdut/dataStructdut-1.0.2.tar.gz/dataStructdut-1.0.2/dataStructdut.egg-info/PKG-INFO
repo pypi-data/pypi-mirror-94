@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: dataStructdut
+Version: 1.0.2
+Summary: This package provides all kinds of dataStructs.
+Home-page: https://github.com/ChinaVeryNb/dataStruct.git
+Author: tjg
+Author-email: 1205322591@qq.com
+License: MIT
+Description: ä¸ä¸ªåºäºååé¾è¡¨ï¼åè®¸ä½ç½®å­ååç´ çé¡ºåºå®¹å¨ã
+Keywords: dataStruct,dut
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
