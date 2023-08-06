@@ -1,0 +1,3 @@
+[console_scripts]
+hmddops = hm_datadefinitionops.__main__:main
+
