@@ -1,0 +1,64 @@
+{
+  "ant": {
+    "font": "Arial",
+    "font_size": 64,
+    "font_weight": "Normal",
+    "save_name": "ANT_ID{Participant ID}-s{Session}-{Date-Time}.csv",
+    "datetime_format": "{:%Y%b%d-%H%M}",
+    "stimulus_chars": {
+      "right": {
+        "congruent": "\u2192\u2192\u2192\u2192\u2192",
+        "incongruent": "\u2190\u2190\u2192\u2190\u2190",
+        "neutral": "\u2015\u2015\u2192\u2015\u2015"
+      },
+      "left": {
+        "congruent": "\u2190\u2190\u2190\u2190\u2190",
+        "incongruent": "\u2192\u2192\u2190\u2192\u2192",
+        "neutral": "\u2015\u2015\u2190\u2015\u2015"
+      }
+    },
+    "cue_char": "\u2217",
+    "mask_char": "+",
+    "intro_text1": "Attention Network Test",
+    "intro_text1_style": "font-weight: bold; font-size: 16pt",
+    "intro_text2": "Press Space or Enter to Start",
+    "intro_text2_style": "font-size: 12pt"
+  },
+  "rat": {
+    "title_font": "Arial",
+    "title_font_size": 30,
+    "title_font_weight": "Bold",
+    "ques_font": "Arial",
+    "ques_font_size": 30,
+    "ques_font_weight": "Normal",
+    "answer_font": "Arial",
+    "answer_font_size": 40,
+    "answer_font_weight": "Bold",
+    "sol_font": "Arial",
+    "sol_font_size": 30,
+    "sol_font_weight": "Normal",
+    "save_name": "RAT_ID{Participant ID}-s{Session}-{Date-Time}.csv",
+    "datetime_format": "{:%Y%b%d-%H%M}",
+    "question_dir": null,
+    "question_format": "Question {}",
+    "intro_text1": "Remote Associates Test",
+    "intro_text1_style": "font-weight: bold; font-size: 16pt",
+    "intro_text2": "Press Enter to Start",
+    "intro_text2_style": "font-size: 12pt"
+  },
+  "nback": {
+    "stimulus_font": "Arial",
+    "stimulus_font_size": 64,
+    "stimulus_font_weight": "Bold",
+    "answer_font": "Arial",
+    "answer_font_size": 48,
+    "answer_font_weight": "Normal",
+    "save_name": "NBack_ID{Participant ID}-s{Session}-{Date-Time}.csv",
+    "datetime_format": "{:%Y%b%d-%H%M}",
+    "stimulus_dir": null,
+    "intro_text1": "N-Back Test",
+    "intro_text1_style": "font-weight: bold; font-size: 16pt",
+    "intro_text2": "Press Space or Enter to Start",
+    "intro_text2_style": "font-size: 12pt"
+  }
+}
