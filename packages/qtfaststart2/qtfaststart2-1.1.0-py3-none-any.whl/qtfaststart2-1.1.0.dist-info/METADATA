@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: qtfaststart2
+Version: 1.1.0
+Summary: Quicktime atom positioning in Python for fast streaming.
+Home-page: https://github.com/danielyaa5/qtfaststart2
+Author: danielyaa5
+Author-email: danyagithub@gmail.com
+License: MIT License
+Download-URL: https://github.com/danielyaa5/qtfaststart2/archive/1.1.0.tar.gz
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Multimedia :: Video :: Conversion
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides: qtfaststart2
+
+UNKNOWN
+
+
