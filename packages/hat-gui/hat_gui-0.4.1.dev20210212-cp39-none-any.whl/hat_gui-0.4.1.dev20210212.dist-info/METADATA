@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: hat-gui
+Version: 0.4.1.dev20210212
+Summary: Hat GUI server
+Home-page: https://github.com/hat-open/hat-core
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Requires-Dist: appdirs
+Requires-Dist: hat-util
+Requires-Dist: hat-aio
+Requires-Dist: hat-json
+Requires-Dist: hat-sbs
+Requires-Dist: hat-chatter
+Requires-Dist: hat-monitor
+Requires-Dist: hat-event
+Requires-Dist: hat-juggler
+
+Hat Core - GUI server
+=====================
+
+This component is part of Hat Open project - open-source framework of tools and
+libraries for developing applications used for remote monitoring, control and
+management of intelligent electronic devices such as IoT devices, PLCs,
+industrial automation or home automation systems.
+
+Development of Hat Open and associated repositories is sponsored by
+Končar - Power Plant and Electric Traction Engineering Inc.
+(Končar KET - `<https://www.koncar-ket.hr>`_).
+
+For more information see:
+
+    * `hat-gui` documentation - `<https://core.hat-open.com/docs/components/gui.html>`_
+    * Hat Core homepage - `<https://core.hat-open.com>`_
+    * Hat Core git repository - `<https://github.com/hat-open/hat-core.git>`_
+
+.. warning::
+
+    This project is currently in state of active development. Features,
+    functionality and API are unstable.
+
