@@ -1,0 +1,13 @@
+pybso/__init__.py,sha256=pbv7VZEu8KuoAlLPVqoi0_32LHuP0DunocN0D3mb6SY,234
+pybso/charts.py,sha256=TNFLR1g4FLdwtipgVz1Jf8Mxz_ghIApO7o3wPMvUfgI,9673
+pybso/core.py,sha256=4_AFw37SCaG_UcRzX78Q45GkzOiU3WcEZdtpoz8YO8k,4471
+pybso/crossref_api.py,sha256=iQp-48E0nxyqypGIRFaLwmViW8PwQXzw5cGSXloLddo,1748
+pybso/import_export.py,sha256=tacup9lQsDnejBa2CZ81VzhWynUu8P-FrYnpH7hsgCo,2585
+pybso/unpaywall_api.py,sha256=IPkjP0FhFEA2XCNRaRMsfDAOT8QVOaCwkOt5ABF7DNE,2831
+pybso/utils.py,sha256=IU8RxP4ZaCgq9WDkRmE641c6f22jYU-YgL8F_ocJ_To,2396
+pybso/data/sample.csv,sha256=dfGTBNL-nyhlgLEf-8I223lo9pCdMEao5j3yTOnYYNU,2805
+pybso-1.1.0.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+pybso-1.1.0.dist-info/METADATA,sha256=cLkH8Xhr661o7O5ceYk8goA3rHyRVPm5SF7UdGs8QsQ,1536
+pybso-1.1.0.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+pybso-1.1.0.dist-info/top_level.txt,sha256=_MC1ch1rJPjGl_CR1taJsBgRfvboXWbOKJLI4THtM6Y,6
+pybso-1.1.0.dist-info/RECORD,,
