@@ -1,0 +1,22 @@
+{% extends 'costs/base.html' %}
+
+{% block body %}
+    <table>
+        <thead>
+        <tr>
+            <th>Nummer</th>
+            <th>Navn</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cost_center in organisations %}
+            <tr>
+                <td>
+                    <a href="{% url 'employee_info_browser:cost_center' %}?company={{ company }}&amp;value={{ cost_center.value }}">{{ cost_center.value }}</a>
+                </td>
+                <td>{{ cost_center.description }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

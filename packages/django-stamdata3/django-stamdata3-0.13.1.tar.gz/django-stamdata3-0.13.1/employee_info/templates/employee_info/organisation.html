@@ -1,0 +1,22 @@
+{% extends 'employee_info/base.html' %}
+{% block body %}
+    <h2>{{ organisation }}</h2>
+    <table>
+        <tr>
+            <th>Overordnet niv&aring;</th>
+            <td>
+                <a href="{% url 'employee_info_browser:organisation' %}?company={{ organisation.company.companyCode }}&amp;value={{ organisation.parent.orgId }}">{{ organisation.parent }}</a>
+            </td>
+        </tr>
+        <tr>
+            <th>Leder</th>
+            <td>
+                <a href="{% url 'employee_info_browser:resource' %}?company={{ organisation.company.companyCode }}&amp;value={{ organisation.manager.resourceId }}">{{ organisation.manager }}</a>
+            </td>
+        </tr>
+
+    </table>
+
+    {% include 'employee_info/resource_list.html' with relation=organisation %}
+    <p><a href="{% url 'employee_info_browser:organisation' %}?company={{ organisation.company.companyCode }}">Vis alle organisasjonsenheter i {{ organisation.company }}</a></p>
+{% endblock %}

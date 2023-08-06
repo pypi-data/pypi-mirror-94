@@ -1,0 +1,20 @@
+<form action="{% url 'employee_info_browser:resource' %}">
+    <label for="company">Firma</label><br />
+    <select id="company" name="company">
+        {% for company in companies %}
+            {% if company.companyCode == company_select %}
+                <option selected="selected" value="{{ company.companyCode }}">{{ company.companyCode }}</option>
+            {% else %}
+                <option value="{{ company.companyCode }}">{{ company.companyCode }}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+    <br/>
+
+    <label>
+        Ressursnummer<br />
+        <input name="employee" type="text" size="6">
+    </label>
+    <input type="submit" value="Vis">
+</form>
+<span class="error">{{ error }}</span>
