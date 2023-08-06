@@ -1,0 +1,16 @@
+oslo_metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oslo_metrics/__main__.py,sha256=hFjakeK5blgOl6K0pBTk4o1dTPILLjj3Mnx0DxSAXa4,3509
+oslo_metrics/message_router.py,sha256=qM6Eo01zD21OqrU4NaLfJTMAfJRua7lPXh1kEt8HU9M,2764
+oslo_metrics/message_type.py,sha256=MmY-v1NZRqT8yelKIPLEeICY6RJhvT2-NRnqo5eetn0,3007
+oslo_metrics/metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oslo_metrics/metrics/oslo_messaging.py,sha256=lriA9dasfnjB8-R1ksN3Lkv7COKnW8wOBOHAB1sZjCg,2791
+oslo_metrics/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oslo_metrics/tests/test_message_process.py,sha256=XOst0X5MHobQQZ5tTjDNH1cM6PxInu7dB2klOgqG9Os,2266
+oslo.metrics-0.2.1.dist-info/AUTHORS,sha256=RRT9hlDLG7iwDDVEMCmGKBSYmy9jxOLj8Iws-F8Va7I,181
+oslo.metrics-0.2.1.dist-info/LICENSE,sha256=XfKg2H1sVi8OoRxoisUlMqoo10TKvHmU_wU39ks7MyA,10143
+oslo.metrics-0.2.1.dist-info/METADATA,sha256=Yo7roAzKrrV4fW8scAc2ReaTY9pb6Js2QkXibEswdNQ,1270
+oslo.metrics-0.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+oslo.metrics-0.2.1.dist-info/entry_points.txt,sha256=pDE8eERhMH0ZRXoD0Gi6_gUUddGslcOIREDvUil_R9g,61
+oslo.metrics-0.2.1.dist-info/pbr.json,sha256=OEEGSOSOOgoTBIF59OP0X566Ck7lCv7WplTWD5unS8g,46
+oslo.metrics-0.2.1.dist-info/top_level.txt,sha256=0cfpd8Kkzz72BdOab2sD7yL_Tc9PkoKN3OmooUfbqpQ,13
+oslo.metrics-0.2.1.dist-info/RECORD,,
