@@ -1,0 +1,10 @@
+edit_distance
+h5py
+lxml
+opencv-python-headless
+prettytable
+python-bidi
+scikit-image>=0.15.0
+tensorflow~=2.3.0
+tfaip==1.0.1
+xlsxwriter
