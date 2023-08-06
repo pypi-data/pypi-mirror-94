@@ -1,0 +1,17 @@
+tests/__init__.py,sha256=SrZ4lKTYxZOm0c_tTVhPZQW6qq9nC-4gqyX03fAbIqg,69
+tests/test_vagrant_debian.py,sha256=ADMOjMCil-n94R8MSzNCnv-Xnl1nNRhCiPvggU8m7X8,1026
+vagrant_debian/__init__.py,sha256=Nb4XIpDStzuKRvKAOUpNsHW05wVqm3h83WdO7Ww310o,213
+vagrant_debian/__main__.py,sha256=ZBv3wUG6XOChdwQ--Nx-AzCegV0nyGLHBL8s2CAT3HQ,188
+vagrant_debian/vagrant_debian.py,sha256=7MPLeUZC_Xv9wdcYGz1n8p0KeVHqxg5UqncnkfjUxug,16802
+vagrant_debian/templates/Vagrantfile,sha256=IRyb49f36W07Ut6nhzT28lKsbpFkQx7PMXiZxaSphvU,3874
+vagrant_debian/templates/debian_vm.ovf,sha256=HTjBME-6vywcrxMFvskAEE1jPrXCdW8aV4tfdIuj6qY,7516
+vagrant_debian/templates/isolinux.cfg,sha256=9EjD2NrbunsdxhPd27Jlr2PHnNT9Mlo8FYp-pC0SrwI,199
+vagrant_debian/templates/preseed.cfg,sha256=CekijCW50KanKza6zLdOdEopxERi1mhfas1hXS_mYjA,11024
+vagrant_debian-1.0.9.data/data/share/vagrant_debian/README.md,sha256=xBdE9Rz88yzoSt7PpsKQ4LmymDgwSURFGpl8RdiNZGE,1256
+vagrant_debian-1.0.9.dist-info/AUTHORS.md,sha256=9IG3YjKkmIwQ78OSxhu4F2kCD_1H6pWt7uprS2Wjblk,120
+vagrant_debian-1.0.9.dist-info/LICENSE,sha256=Q5o0G2Y0I-ehXYBFoDBwWmVAO_vXUTMqS4IYuCOZhrU,1324
+vagrant_debian-1.0.9.dist-info/METADATA,sha256=GVjm-spaUSGn8e-W3cHtjSUPJoZD_CQAi-5icCBDp9E,2295
+vagrant_debian-1.0.9.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+vagrant_debian-1.0.9.dist-info/entry_points.txt,sha256=s0OLfdLSLjXBo7KBIgcpaxpcPxki03UpxnTSH7DPbYw,71
+vagrant_debian-1.0.9.dist-info/top_level.txt,sha256=Pi5LdGi71wzV18BXBar7zSjKOAWIqdczcco4s3ltIwM,21
+vagrant_debian-1.0.9.dist-info/RECORD,,

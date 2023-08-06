@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: vagrant-debian
+Version: 1.0.9
+Summary: Create vagrant virtualbox from Debian ISO cd
+Home-page: https://github.com/apiou/vagrant-debian
+Author: Stephane APIOU
+Author-email: stephane@apiou.org
+License: BSD-2
+Platform: Linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: System :: Operating System
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: jinja2
+Requires-Dist: wheel
+Requires-Dist: babel
+
+Vagrant-Debian is a program to create vagrant boxes from Debian repositories
+
+In order to run, you need:
+- a Debian linux system (maybe it works on Ubuntu)
+- Virtualbox (if not install Vagrant-Debian will install it for you)
+- Vagrant (Same, it's installed if not detected)
+- a working -- and fast -- internet connection (about 500 MB will be downloaded)
+- Enough diskspace on your current directory (around 3 Gbytes).
+- Enough memory for your PC: 4Gbytes
+
+To run, just type on command line:
+
+        vagrant_debian create --add --clean --headless
+
+This will silently download the Official Debian media, launch a virtualbox instance with the media, install the debian system, add necessary packages and create a runnable and minimal vagrant box.
+
+The script is compatible with Jessie, Stretch, Bullseye and unstable Debian versions and maybe with older (not tested) or future ones. The version is choosen with a command line option.
+Warning: with Buster, you have to install virtualbox by yourself as it's not part of standard Debian packages.
+
+The size of created box is around 300MB large.
+
+Please use:
+
+        vagrant_debian --help
+
+To display command help
+or:
+
+        vagrant_debian create --help
+
+To display help on `create` subcommand.
+
+Have fun !
+
+
