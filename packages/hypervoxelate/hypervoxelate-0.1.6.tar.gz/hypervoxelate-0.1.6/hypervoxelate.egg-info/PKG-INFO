@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: hypervoxelate
+Version: 0.1.6
+Summary: Simple hypervoxelation procedure w/ support for jagged cut-points
+Home-page: http://github.com/califynic/hypervoxelate
+Author: Ali Cy
+Author-email: califynic@gmail.com
+License: MIT
+Description: See the GitHub README.
+        
+Platform: UNKNOWN
