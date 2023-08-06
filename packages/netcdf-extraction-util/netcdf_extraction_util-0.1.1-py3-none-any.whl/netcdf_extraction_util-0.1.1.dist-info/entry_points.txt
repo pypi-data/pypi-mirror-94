@@ -1,0 +1,3 @@
+[console_scripts]
+netcdf_extraction_util = netcdf_extraction_util.command_line:main
+
