@@ -1,0 +1,9 @@
+README.md
+setup.py
+tghtml/__init__.py
+tghtml/parser.py
+tghtml.egg-info/PKG-INFO
+tghtml.egg-info/SOURCES.txt
+tghtml.egg-info/dependency_links.txt
+tghtml.egg-info/requires.txt
+tghtml.egg-info/top_level.txt
