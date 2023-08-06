@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: pygbe
+Version: 0.1.0
+Summary: pygbe is a library with functions to get data from IBGE (Brazilian Institute of Geography and Statistics) via API
+Home-page: https://github.com/LucasMielke/pygbe
+Author: Lucas Mielke
+Author-email: lucas.mielke@outlook.com
+License: MIT
+Project-URL: Código fonte, https://github.com/LucasMielke/pygbe
+Project-URL: Download, https://github.com/LucasMielke/pygbe/archive/0.1.0.zip
+Description: pygbe is a library with functions to get data from IBGE (Brazilian Institute of Geography and Statistics) via API 
+Keywords: Pesquisa Agrícola Municipal (PAM) from IBGE
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Other/Nonlisted Topic

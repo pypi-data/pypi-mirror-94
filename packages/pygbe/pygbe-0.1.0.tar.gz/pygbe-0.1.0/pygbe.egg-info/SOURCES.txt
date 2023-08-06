@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+pygbe/__init__.py
+pygbe/pygbe.py
+pygbe.egg-info/PKG-INFO
+pygbe.egg-info/SOURCES.txt
+pygbe.egg-info/dependency_links.txt
+pygbe.egg-info/top_level.txt
