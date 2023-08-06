@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pelican-markdown-image
+Version: 0.1.1
+Summary: A plugin for pelican to use native markdown image syntax
+Home-page: https://github.com/cjc7373/pelican-markdown-image
+Author: cjc7373
+Author-email: niuchangcun@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+
+# Pelican Markdown Image Processor
+This pelican plugin allows you to use native markdown syntax to reference images,
+no matter whether the image is in your statics folder. This can help you use whatever
+directory structure to store the images.
+
+## Installation
+`pip install pelican-markdown-image`
+
+## Development
+Generating distribution archives:
+`python -m build`
+
+Install this package in development mode:
+`pip install -e . --no-build-isolation`
+(We must add the --no-build-isolation option,
+this can be a pip's bug)
+
+Upload to pypi:
+`twine upload dist/*`
+
+
