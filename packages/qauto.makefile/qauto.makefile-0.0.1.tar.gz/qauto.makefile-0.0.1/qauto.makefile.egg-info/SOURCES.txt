@@ -1,0 +1,6 @@
+setup.py
+qauto.makefile.egg-info/PKG-INFO
+qauto.makefile.egg-info/SOURCES.txt
+qauto.makefile.egg-info/dependency_links.txt
+qauto.makefile.egg-info/top_level.txt
+qauto/makefile/__init__.py
