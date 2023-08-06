@@ -1,0 +1,19 @@
+geometry.planet = Mercury
+geometry.taa = 1.39626
+
+forces.gravity = True
+forces.radpres = True
+
+SpatialDist.type = uniform
+SpatialDist.latitude = 0, 0
+
+SpeedDist.type = gaussian
+SpeedDist.vprob = 4.
+SpeedDist.sigma = 0.
+
+AngularDist.type = radial
+
+options.lifetime = 0.
+options.endtime = 180000
+options.species = Na
+options.step_size = 30
