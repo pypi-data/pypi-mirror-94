@@ -1,0 +1,28 @@
+
+
+0.0.8
+=======
+
+* Added CLI calls to power on/off runs, and corresponding methods
+* Added an option to keep the asset zip files after import/update
+* Added ssh.scp_file method for getting and putting files over SSH using paramiko and scp
+* Added route53 util for creating public/private hosted zones and adding/deleting DNS records
+* Added a --keep flag for the asset command, to keep the asset zip after import, and added project to the asset_data.yml that gets saved on import/update into a site
+* Added methods to the Deployment class to return a boolean if the deployment is in AWS, Azure, Openstack, or VCloud
+* Added StsUtil and StsUtilError classes, to get informationa about the AWS caller
+* Added red-hat as a possible name for Red Hat templates when auto-configuring
+* Added the beginning of a multi-site config file for Cons3rtApi
+
+0.0.7
+=====
+
+* Added the "cons3rt run" CLI command, and added options for snapshotting all hosts in a run, or restoring
+ all hosts in a run from snapshots
+* Updated the SSH generation methods to allow various key types, and added a method to ECDSA keys
+* Added new methods of encryption/decryption for openssl smime
+* Added Arcus site configurations, and removed old site configurations
+
+0.0.1
+=====
+
+* Initial python3 port of pycons3rt and pycons3rtapi
