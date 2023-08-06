@@ -1,0 +1,3 @@
+[console_scripts]
+nani-fighter = nani_fighter:run
+
