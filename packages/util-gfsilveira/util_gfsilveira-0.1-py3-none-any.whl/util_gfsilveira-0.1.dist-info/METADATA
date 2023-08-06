@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: util-gfsilveira
+Version: 0.1
+Summary: Diverse and useful functions for various actions.
+Home-page: https://github.com/gfsilveira/meus_util.git
+Author: GGuilherme F. Silveira
+Author-email: gfsilveira@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+Diverse and useful functions for various actions.
+
+Use, meu_uteis() to know the functions.
+
+## License
+MIT License
+
