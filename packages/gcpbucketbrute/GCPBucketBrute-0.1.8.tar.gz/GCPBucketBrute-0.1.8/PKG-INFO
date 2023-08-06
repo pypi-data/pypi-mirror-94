@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gcpbucketbrute
+Version: 0.1.8
+Summary: 
+Author: Ryan Gerstenkorn
+Author-email: ryan.gerstenkorn@rhinosecuritylabs.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: flake8 (>=3.8.4,<4.0.0)
+Requires-Dist: mypy (>=0.800,<0.801)
