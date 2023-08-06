@@ -1,0 +1,13 @@
+erin
+
+[docs]
+Sphinx
+sphinx_rtd_theme
+
+[release]
+bump2version
+
+[tests]
+pytest
+pytest-cov
+pytest-runner
