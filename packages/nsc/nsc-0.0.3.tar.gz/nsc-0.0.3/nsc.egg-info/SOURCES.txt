@@ -1,0 +1,82 @@
+LICENSE
+README.md
+requirements.txt
+setup.py
+examples/guide_v0.ipynb
+nsc/__init__.py
+nsc/__version__.py
+nsc.egg-info/PKG-INFO
+nsc.egg-info/SOURCES.txt
+nsc.egg-info/dependency_links.txt
+nsc.egg-info/requires.txt
+nsc.egg-info/top_level.txt
+nsc/distributions/__init__.py
+nsc/distributions/coupled_distribution.py
+nsc/distributions/coupled_expotential.py
+nsc/distributions/coupled_kullback_leibler.py
+nsc/distributions/coupled_normal.py
+nsc/distributions/multivariate_coupled_normal.py
+nsc/test/distribution_old.py
+nsc/test/function.py
+nsc/test/.ipynb_checkpoints/kl_pdf_scrapwork-checkpoint.ipynb
+nsc/test/.ipynb_checkpoints/plots-checkpoint.ipynb
+nsc/test/.ipynb_checkpoints/test-checkpoint.ipynb
+nsc/test/.ipynb_checkpoints/tfp_reverse_engineer-checkpoint.ipynb
+nsc/test/.ipynb_checkpoints/tfp_tests-checkpoint.ipynb
+nsc/test/__pycache__/distribution_old.cpython-38.pyc
+nsc/test/__pycache__/function.cpython-38.pyc
+nsc/util/__init__.py
+nsc/util/function.py
+nsc_mathematica/Compare Entropy Functions.nb
+nsc_mathematica/Compare Entropy Functions.pdf
+nsc_mathematica/Coupled Divergence.nb
+nsc_mathematica/Coupled Functions scaps.nb
+nsc_mathematica/Coupled Functions.nb
+nsc_mathematica/Coupled Functions.pdf
+nsc_mathematica/GeneralizedMean.nb
+nsc_mathematica/GeneralizedMean.pdf
+nsc_mathematica/LogCoupledProb.nb
+nsc_mathematica/LogCoupledProb.pdf
+nsc_mathematica/Plot Coupled Functions.nb
+nsc_mathematica/Plot Coupled Functions.pdf
+nsc_mathematica/RandomCoupledVariate.nb
+nsc_mathematica/RandomCoupledVariate.pdf
+nsc_mathematica/evaluation/Evaluation of Student's t Samples.nb
+nsc_mathematica/evaluation/Evaluation of Student's t Samples.pdf
+nsc_mathematica/evaluation/studentt_sample.txt
+workspace/bill/hello.txt
+workspace/daniel/distribution_old.py
+workspace/daniel/function.py
+workspace/daniel/hello.txt
+workspace/daniel/plots.ipynb
+workspace/daniel/.ipynb_checkpoints/plots-checkpoint.ipynb
+workspace/daniel/__pycache__/distribution_old.cpython-38.pyc
+workspace/daniel/__pycache__/function.cpython-38.pyc
+workspace/john/CrossEntropy-Entropy-Divergence.ipynb
+workspace/john/CrossEntropy-Entropy-DivergenceV2.ipynb
+workspace/john/function.py
+workspace/john/function_john.py
+workspace/john/hello.txt
+workspace/john/.ipynb_checkpoints/CrossEntropy-Entropy-Divergence-checkpoint.ipynb
+workspace/john/.ipynb_checkpoints/CrossEntropy-Entropy-DivergenceV2-checkpoint.ipynb
+workspace/john/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+workspace/john/__pycache__/function.cpython-38.pyc
+workspace/john/__pycache__/function_john.cpython-38.pyc
+workspace/kenric/hello.txt
+workspace/kevin/coupled_normal_scrapwork.ipynb
+workspace/kevin/function_scrapwork.ipynb
+workspace/kevin/kl_pdf_scrapwork.ipynb
+workspace/kevin/kl_scrapwork.py
+workspace/kevin/nsc_plots.ipynb
+workspace/kevin/plots.ipynb
+workspace/kevin/studentt_sample.txt
+workspace/kevin/temp.py
+workspace/kevin/tfp_reverse_engineer.ipynb
+workspace/kevin/tfp_tests.ipynb
+workspace/kevin/archive/distribution_old.py
+workspace/kevin/archive/kl_div_test.ipynb
+workspace/kevin/archive/student-t.ipynb
+workspace/kevin/archive/studentt_sample.txt
+workspace/kevin/archive/temp.py
+workspace/kevin/archive/test.ipynb
+workspace/kevin/archive/.ipynb_checkpoints/kl_div_test-checkpoint.ipynb
