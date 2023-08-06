@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: sgd-chromosomal-features
+Version: 1.0.0
+Summary: SGD Chromosomal Features tools
+Home-page: https://github.com/BooneAndrewsLab/sgd_chromosomal_features
+Author: Matej Usaj
+Author-email: usajusaj@gmail.com
+License: MIT License
+Description: Tools to work with Saccharomyces Cerevisiae chromosomal features from SGD
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
