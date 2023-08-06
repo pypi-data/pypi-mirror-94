@@ -1,0 +1,9 @@
+resources/font.ttf,sha256=Tpit7_jMyO9OPs6NRUfiiP-F_cnHynEaRZnCNIdLvoY,330412
+signer_pdf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+signer_pdf/sign_generator.py,sha256=06_2zyCiVwmJc-hLbJcosZeuollrrPlfwiUvTJXyc7k,1252
+signer_pdf/signer.py,sha256=3SAPlcgSB4q2tP5-pZb-eaGnFEcrD4HusvBjPT3QNOc,669
+signer_pdf-0.0.9.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+signer_pdf-0.0.9.dist-info/METADATA,sha256=QtQXJvavFZBNoqsw05OAJ2QzssY0280DUgXTz9wiZ9s,537
+signer_pdf-0.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+signer_pdf-0.0.9.dist-info/top_level.txt,sha256=7DSdN6_qwaIhmzSSH5bIcUwDIFezCrwok8BWrkbYhE4,11
+signer_pdf-0.0.9.dist-info/RECORD,,
