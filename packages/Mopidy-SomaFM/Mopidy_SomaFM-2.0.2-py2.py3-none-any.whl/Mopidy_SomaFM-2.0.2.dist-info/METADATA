@@ -1,0 +1,121 @@
+Metadata-Version: 2.1
+Name: Mopidy-SomaFM
+Version: 2.0.2
+Summary: SomaFM extension for Mopidy
+Home-page: https://github.com/AlexandrePTJ/mopidy-somafm
+Author: Alexandre Petitjean
+Author-email: alpetitjean@gmail.com
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
+Requires-Python: >=3.7
+Requires-Dist: Mopidy (>=3.0)
+Requires-Dist: Pykka (>=2.0.1)
+Requires-Dist: requests (>=2.0.0)
+Requires-Dist: setuptools
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: check-manifest ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: flake8-bugbear ; extra == 'dev'
+Requires-Dist: flake8-import-order ; extra == 'dev'
+Requires-Dist: isort[pyproject] ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Provides-Extra: lint
+Requires-Dist: black ; extra == 'lint'
+Requires-Dist: check-manifest ; extra == 'lint'
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-bugbear ; extra == 'lint'
+Requires-Dist: flake8-import-order ; extra == 'lint'
+Requires-Dist: isort[pyproject] ; extra == 'lint'
+Provides-Extra: release
+Requires-Dist: twine ; extra == 'release'
+Requires-Dist: wheel ; extra == 'release'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
+*************
+Mopidy-SomaFM
+*************
+
+.. image:: https://img.shields.io/pypi/v/Mopidy-SomaFM
+    :target: https://pypi.org/project/Mopidy-SomaFM/
+    :alt: Latest PyPI version
+
+.. image:: https://img.shields.io/circleci/build/gh/AlexandrePTJ/mopidy-somafm
+    :target: https://circleci.com/gh/AlexandrePTJ/mopidy-somafm
+    :alt: CircleCI build status
+
+.. image:: https://img.shields.io/codecov/c/gh/AlexandrePTJ/mopidy-somafm
+    :target: https://codecov.io/gh/AlexandrePTJ/mopidy-somafm
+    :alt: Test coverage
+
+SomaFM extension for Mopidy
+
+
+Installation
+============
+
+
+Debian/Ubuntu
+-------------
+
+Install by running::
+
+    python3 -m pip install Mopidy-SomaFM
+
+Or, if available, install the Debian/Ubuntu package from
+`apt.mopidy.com <https://apt.mopidy.com/>`_.
+
+
+Configuration
+=============
+
+Before starting Mopidy, you must add configuration for
+Mopidy-SomaFM to your Mopidy configuration file::
+
+    [somafm]
+    encoding = aac
+    quality = highest
+
+- ``encoding`` must be either ``aac``, ``mp3`` or ``aacp``
+- ``quality`` must be one of ``highest``, ``fast``, ``slow``, ``firewall``
+
+If the preferred quality is not available for a channel, the extension will fallback
+to ``fast``. And afterwards if the preferred encoding is not available for that
+quality, it will fallback to using ``mp3``.
+It seems that all channels support the combination ``fast`` + ``mp3``
+
+You can also choose to use the channel DJ as the reported track artist (default behavior)::
+
+    [somafm]
+    dj_as_artist = true
+
+
+Project resources
+=================
+
+- `Source code <https://github.com/AlexandrePTJ/mopidy-somafm>`_
+- `Issue tracker <https://github.com/AlexandrePTJ/mopidy-somafm/issues>`_
+- `Changelog <https://github.com/AlexandrePTJ/mopidy-somafm/blob/master/CHANGELOG.rst>`_
+
+
+Credits
+=======
+
+- Original author: `Alexandre Petitjean <https://github.com/AlexandrePTJ>`__
+- Current maintainer: `Alexandre Petitjean <https://github.com/AlexandrePTJ>`__
+- `Contributors <https://github.com/AlexandrePTJ/mopidy-somafm/graphs/contributors>`_
+
+
