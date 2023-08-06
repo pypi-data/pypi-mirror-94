@@ -1,0 +1,13 @@
+sql_formatter/__init__.py,sha256=78mfpLewKVki6c9UONSUdlVme_JsN9ZwIfp4Hf4jmG0,22
+sql_formatter/_nbdev.py,sha256=nWpQH0IKULYkLJLGVHhLcipTcnGxdi8GSFBKIp5I4W4,2979
+sql_formatter/core.py,sha256=AeqkjLH7WCKleiIQjRs1-Vq7WoV9icZF2ZIx-9R6sVQ,16219
+sql_formatter/format_file.py,sha256=R-9mcgdyAVKxgtcLnMIag-zjQ7Md4QJsrNNtOL4AOGw,7274
+sql_formatter/release.py,sha256=yNHtxOtlXnIU_s96qoqMTElEqS9Hr8l6B-PG68htGyk,4619
+sql_formatter/utils.py,sha256=_2uwFe_JMpFceOtd9ITMsAgMJVXxO44aJRzwjgzctqI,25145
+sql_formatter/validation.py,sha256=0sFYiDEL0WpPLrDpMEuTYbSspnOcHmrnKsvHwlVIoVw,5491
+sql_formatter-0.5.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sql_formatter-0.5.5.dist-info/METADATA,sha256=HjqWk_-kCWuEluBDhIQL2Dsmj4GvYe49kIGWdapjPZs,13204
+sql_formatter-0.5.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sql_formatter-0.5.5.dist-info/entry_points.txt,sha256=s1ttmbs-kklyanfSxkch2ntVaUHJuyuy6ICx6ZMUJWE,82
+sql_formatter-0.5.5.dist-info/top_level.txt,sha256=Ib7M2oQ5DHM8GCe62w8AQKYqKydTWudUgQK-_hHsEKc,14
+sql_formatter-0.5.5.dist-info/RECORD,,
