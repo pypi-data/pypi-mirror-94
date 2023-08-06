@@ -1,0 +1,15 @@
+scoredb/__init__.py,sha256=8PUi-Vi1vK1TH9CYOwhuhRy0K8DdJqBvdXWVruz_9u0,28
+scoredb/client/__init__.py,sha256=TALJ_85Ws5daP1y2Xan0o77y1BDCPrgtxcX4uG6YCZI,1039
+scoredb/client/_baseapi.py,sha256=Ujo210IvazKTujnOvhQb-620T3LIQvkVvVeacJ-22Dk,551
+scoredb/client/_pagination.py,sha256=FOS8fAG8lPoHoaWxgpr7rGnp1Uo5ErDIxYzn2a2vd3c,1438
+scoredb/client/studentdb.py,sha256=obYfurgGPN-7HfIo7ooAaM72P1fP6v4C4BJvLpMO8ms,2403
+scoredb/client/users.py,sha256=h9zLYbEtxaH37K0ndJw3dVTP7-fJj1e9u4iDnCZpuSU,199
+scoredb/models/__init__.py,sha256=zK8G8BbGcix64SN222_qZDX9ibS__MlC-bmRuMoy1ZE,175
+scoredb/models/class_.py,sha256=QHBPy8Ba-VClGRnrjDZSat_6JvdzWwJtJ_Ppf76CtKU,383
+scoredb/models/grade.py,sha256=_7eI3irfM7wUdG_besdcGmeRuxigB7BDfnHUvhn8dVk,382
+scoredb/models/student.py,sha256=ahkWPhQdmZpC4MOGax62cLZdyEukWqpaAAKoz2cHBzk,581
+scoredb/models/user.py,sha256=wvXjnLUsifEq6cllxTyDMeeVpArk4JXjqzw3fHRhrFM,635
+scoredb_sdk-0.1.0.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+scoredb_sdk-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+scoredb_sdk-0.1.0.dist-info/METADATA,sha256=CZTGOotuXL4mlwUYRv9scW50t-3OROq2RoT-fQZL-XE,763
+scoredb_sdk-0.1.0.dist-info/RECORD,,
