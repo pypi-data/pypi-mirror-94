@@ -1,0 +1,8 @@
+stock/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stock/stock_pb2.py,sha256=AFZ9nybF8Kj8SuFzZbemT8TrqJWhUGrC30bfcKywdcs,18621
+stock/stock_pb2_grpc.py,sha256=M7u7L2OML3ibvF-xkwOtqzNohHsEJwwMWmg3IguIM3A,9878
+benproto-1.0.1.dist-info/LICENSE,sha256=PXY5RDWDyBvkQJC4YWtz3BuSONjFdH2YEDSTAhuHhww,1516
+benproto-1.0.1.dist-info/METADATA,sha256=eZx46nhG_GTQbMF5W2QI7_vDsxTzN3Kt5Z207GFn43w,291
+benproto-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+benproto-1.0.1.dist-info/top_level.txt,sha256=OUkkYi37pjAD47DrS99pbHPHHlXIPBLVp06HoxyUR3k,6
+benproto-1.0.1.dist-info/RECORD,,
