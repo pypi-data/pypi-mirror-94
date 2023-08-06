@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: allenact-plugins
+Version: 0.2.0a2
+Summary: Plugins for the AllenAct framework
+Home-page: https://github.com/allenai/allenact
+Author: Allen Institute for Artificial Intelligence
+Author-email: lucaw@allenai.org
+License: MIT
+Description: A collection of plugins/extensions for use within the AllenAct framework.
+Keywords: reinforcement learning,embodied-AI,AI,RL,SLAM
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: lighthouse
+Provides-Extra: minigrid
+Provides-Extra: babyai
+Provides-Extra: ithor
+Provides-Extra: robothor
+Provides-Extra: habitat
+Provides-Extra: gym
+Provides-Extra: all
