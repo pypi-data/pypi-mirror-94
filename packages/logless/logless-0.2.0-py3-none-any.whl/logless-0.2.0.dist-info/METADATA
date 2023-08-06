@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: logless
+Version: 0.2.0
+Summary: 
+License: MIT
+Author: AJ Steers
+Author-email: aj.steers@slalom.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: psutil (>=5.8.0,<6.0.0)
+Requires-Dist: tqdm (>=4.56.1,<5.0.0)
+Requires-Dist: xmlrunner (>=1.7.7,<2.0.0)
