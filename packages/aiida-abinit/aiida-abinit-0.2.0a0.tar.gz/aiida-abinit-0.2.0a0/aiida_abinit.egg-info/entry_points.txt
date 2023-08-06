@@ -1,0 +1,15 @@
+[aiida.calculations]
+abinit = aiida_abinit.calculations:AbinitCalculation
+
+[aiida.cmdline.data]
+abinit = aiida_abinit.cli:data_cli
+
+[aiida.data]
+abinit = aiida_abinit.data:DiffParameters
+
+[aiida.parsers]
+abinit = aiida_abinit.parsers:AbinitParser
+
+[aiida.workflows]
+abinit.base = aiida_abinit.workflows.base:AbinitBaseWorkChain
+
