@@ -1,0 +1,13 @@
+setuptools
+pushcollector
+paramiko
+requests
+
+[:python_version < "2.7"]
+pyrsistent==0.13.0
+
+[:python_version < "3.0"]
+pyrsistent==0.15.7
+
+[reST]
+Sphinx
