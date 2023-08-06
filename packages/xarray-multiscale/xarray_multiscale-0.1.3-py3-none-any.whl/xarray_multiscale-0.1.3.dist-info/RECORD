@@ -1,0 +1,11 @@
+xarray_multiscale/__init__.py,sha256=kO4RT0WhpUEEFmEpfGygef-d3CJ7lVjUfeQdouTgmJY,57
+xarray_multiscale/metadata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xarray_multiscale/metadata/cosem_ome.py,sha256=E3f0sY8ZamWv0-Br4-lKDTwsi_91JexdHuoCYXYfJgU,1070
+xarray_multiscale/metadata/neuroglancer.py,sha256=xTi-ONsXZoZV-JJKf5nwd5o1P-JMt9avBxUjOQQntt8,1234
+xarray_multiscale/metadata/util.py,sha256=iPBoy-peig8YD4DUIqB2aU6tyC8wKTGJ097n3SUlUk4,1616
+xarray_multiscale/multiscale.py,sha256=lb7ZB8kcwsfap7f8y17wu9Fxu9I9EK8xhiCr1Vws7oI,11072
+xarray_multiscale/reducers.py,sha256=tqK7if0XV4OUUMgp1oV_n9g60qbIyWDALABwtjX2L84,675
+xarray_multiscale/storage.py,sha256=6rQ4M-ID-UAh8R2C31gycslC_9QK5k7fIz3GIfVUEW8,921
+xarray_multiscale-0.1.3.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+xarray_multiscale-0.1.3.dist-info/METADATA,sha256=rj2QQYpwXdYk1ujgoin6KdDszhJ_QOI6OmtiAYucXPE,570
+xarray_multiscale-0.1.3.dist-info/RECORD,,
