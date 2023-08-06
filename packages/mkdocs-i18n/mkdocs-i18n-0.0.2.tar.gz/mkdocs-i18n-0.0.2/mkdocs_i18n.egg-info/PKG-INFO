@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: mkdocs-i18n
+Version: 0.0.2
+Summary: MkDocs i18n plugin
+Home-page: https://gitlab.com/mkdocs-i18n/mkdocs-i18n
+Author: Simó Albert i Beltran
+Author-email: sim6@bona.gent
+License: AGPL-3.0-or-later
+Project-URL: Bug Reports, https://gitlab.com/mkdocs-i18n/mkdocs-i18n/-/issues
+Project-URL: Funding, https://liberapay.com/mkdocs-i18n/donate
+Project-URL: Source, https://gitlab.com/mkdocs-i18n/mkdocs-i18n/-/tree/main
+Description: # MkDocs i18n plugin
+        
+        A plugin to internationalize MkDocs. It adds links to translated pages for each page. It also hides other languages page links of navigation menu if there is a translation for current page language.
+        
+        Example of mkdocs-18n usage: <https://mkdocs-i18n.gitlab.io/mkdocs-i18n>
+        
+        ## Setup
+        
+        Install the plugin using pip:
+        
+        `pip install mkdocs-i18n`
+        
+        Configure the plugin via [mkdocs.yml](https://gitlab.com/mkdocs-i18n/mkdocs-i18n/-/blob/main/mkdocs.yml)
+        
+        If you have no `plugins` entry in your configuration file you have `search` plugin enabled. If you create `plugins` entry to enable `i18n` plugin you also need to add `search` plugin if you want to have `search` plugin enabled.
+        
+        ## Donations:
+        
+        - [Liberapay](https://liberapay.com/mkdocs-i18n/donate)
+        - [Bitcoin](bitcoin:15QqofyoWxDSZU9VbXwVZKFxAVdmpkE5uH?message=mkdocs-i18n)
+        
+        ## Other interesting works:
+        
+        - [MkDocs Theme i18n](https://github.com/mkdocs/mkdocs/pull/1778): Work in progress.
+        - [Markdown i18n plugin](https://github.com/gisce/markdown-i18n): Provide translation of documents via po files but images cannot be localized.
+        - [MkDocs Multilang](https://pypi.org/project/mkdocs-multilang/): Only released for MkDocs < 1.0
+        - [Site language selector of Material for MkDocs](https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector): Do you know what it does?
+        
+Keywords: mkdocs,plugin,i18n
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+Provides-Extra: test
