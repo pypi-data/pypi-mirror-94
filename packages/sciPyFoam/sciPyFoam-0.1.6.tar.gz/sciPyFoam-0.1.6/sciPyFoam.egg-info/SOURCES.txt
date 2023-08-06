@@ -1,0 +1,14 @@
+setup.py
+sciPyFoam/__init__.py
+sciPyFoam/figure.py
+sciPyFoam/polyMesh2d.py
+sciPyFoam/readvtk.py
+sciPyFoam.egg-info/PKG-INFO
+sciPyFoam.egg-info/SOURCES.txt
+sciPyFoam.egg-info/dependency_links.txt
+sciPyFoam.egg-info/entry_points.txt
+sciPyFoam.egg-info/requires.txt
+sciPyFoam.egg-info/top_level.txt
+sciPyFoam/postProcessing/__init__.py
+sciPyFoam/postProcessing/cuttingPlane.py
+sciPyFoam/postProcessing/foamToVTK.py
