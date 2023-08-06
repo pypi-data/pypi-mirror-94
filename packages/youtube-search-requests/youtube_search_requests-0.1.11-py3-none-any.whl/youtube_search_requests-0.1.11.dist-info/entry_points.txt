@@ -1,0 +1,4 @@
+[console_scripts]
+youtube-search-requests = youtube_search_requests.__main__:main
+ysr = youtube_search_requests.__main__:main
+
