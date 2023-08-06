@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+semiliterate = mkdocs_semiliterate.plugin:SemiliteratePlugin
+
