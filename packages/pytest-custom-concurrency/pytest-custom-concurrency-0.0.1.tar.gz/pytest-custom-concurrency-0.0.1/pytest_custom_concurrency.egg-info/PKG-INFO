@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pytest-custom-concurrency
+Version: 0.0.1
+Summary: Custom grouping concurrence for pytest
+Home-page: https://github.com/fungaegis/fungaegis-pytest-custom-concurrency
+Author: fungaegis
+Author-email: fungaegis@gmail.com
+License: MIT License
+Description: Custom grouping concurrence for pytest;
+         Usage: cmd line or main function --group=group_name --concurrent=on
+Keywords: pytest,py.test,pytest_custom_concurrency,concurrency
+Platform: UNKNOWN
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python :: 3.7
