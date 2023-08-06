@@ -1,0 +1,3 @@
+[console_scripts]
+dwt = cli.__main__:main
+
