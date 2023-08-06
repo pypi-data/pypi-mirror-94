@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        batteryopt=batteryopt.cli:batteryopt
+    

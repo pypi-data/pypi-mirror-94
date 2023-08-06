@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: batteryopt
+Version: 0.1.0
+Summary: battery operation optimization
+Home-page: https://github.com/MITSustainableDesignLab/batteryopt
+Author: Jakub Tomasz Szczesniak
+Author-email: jakubszc@mit.edu
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs (==1.4.3)
+Requires-Dist: atomicwrites (==1.3.0)
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: certifi (==2019.11.28)
+Requires-Dist: cffi (==1.14.0)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: colorama (==0.4.3)
+Requires-Dist: et-xmlfile (==1.0.1)
+Requires-Dist: flake8 (==3.8.4)
+Requires-Dist: flake8-black (==0.2.1)
+Requires-Dist: importlib-metadata (==1.5.0)
+Requires-Dist: jdcal (==1.4.1)
+Requires-Dist: mccabe (==0.6.1)
+Requires-Dist: mip (==1.7.3)
+Requires-Dist: more-itertools (==8.2.0)
+Requires-Dist: mypy-extensions (==0.4.3)
+Requires-Dist: nose (==1.3.7)
+Requires-Dist: numpy (==1.18.1)
+Requires-Dist: openpyxl (==3.0.3)
+Requires-Dist: packaging (==20.3)
+Requires-Dist: pandas (==1.0.3)
+Requires-Dist: path (==13.1.0)
+Requires-Dist: pathspec (==0.8.1)
+Requires-Dist: pluggy (==0.13.1)
+Requires-Dist: ply (==3.11)
+Requires-Dist: py (==1.8.1)
+Requires-Dist: pycodestyle (==2.6.0)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: pyflakes (==2.2.0)
+Requires-Dist: Pyomo (==5.6.9)
+Requires-Dist: pyparsing (==2.4.6)
+Requires-Dist: pytest (==5.4.1)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2019.3)
+Requires-Dist: PyUtilib (==5.8.0)
+Requires-Dist: regex (==2020.11.13)
+Requires-Dist: six (==1.14.0)
+Requires-Dist: tabulate (==0.8.3)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: typed-ast (==1.4.2)
+Requires-Dist: typing-extensions (==3.7.4.3)
+Requires-Dist: wcwidth (==0.1.9)
+Requires-Dist: wincertstore (==0.2)
+Requires-Dist: xlrd (==1.2.0)
+Requires-Dist: zipp (==2.2.0)
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+batteryopt is a battery operation optimization tool developed by Jakub Szcześniak and
+implemented by Samuel Letellier-Duchesne. The objective is to minimize the annual
+electricity costs of a battery-integrated PV system using a Mixed-Integer Linear Program
+(MILP). The algorithm is implemented using the [pyomo](http://www.pyomo.org/) library
+opening up the model to a large array of solvers (e.g.: Gurobi, GLPK, etc.).
+
+# Installation
+
+```cmd
+conda create --name batteryopt python=3.7  # tested with 3.7, 3.8 and 3.9
+conda activate batteryopt
+```
+
+```
+git clone https://github.com/MITSustainableDesignLab/batteryopt.git
+cd batteryopt
+python setup.py install
+```
+
+# Usage
+
+Type `batteryopt --help` to access the command line options
+
+# Output
+
+batteryopt outputs an Excel file with the model Variables for each time step of the year:
+
+|    |  t |  tf |   M |   P_dmd |    P_elec | P_pv | Buying | Charging | Discharging |   E_s | P_charge | P_discharge | P_dmd_unmet |  P_grid | P_pv_excess | P_pv_export |
+|---:|---:|----:|----:|--------:|----------:|-----:|-------:|---------:|------------:|------:|---------:|------------:|------------:|--------:|------------:|------------:|
+|  0 |  1 | nan | nan | 60536.5 | 0.0002624 |    0 |      1 |        0 |           0 | 20000 |       -0 |          -0 |     60536.5 | 60536.5 |           0 |           0 |
+|  1 |  1 |   1 | nan | 60536.5 | 0.0002624 |    0 |      1 |        0 |           0 | 20000 |       -0 |           0 |     60536.5 | 60536.5 |           0 |           0 |
+|  2 |  1 |   1 | nan | 60536.5 | 0.0002624 |    0 |      1 |        0 |           0 | 20000 |       -0 |           0 |     60536.5 | 60536.5 |           0 |           0 |
+|  3 |  1 |   1 | nan | 60536.5 | 0.0002624 |    0 |      1 |        0 |           0 | 20000 |       -0 |           0 |     60536.5 | 60536.5 |           0 |           0 |
+|  4 |  1 |   1 | nan | 60536.5 | 0.0002624 |    0 |      1 |        0 |           0 | 20000 |       -0 |           0 |     60536.5 | 60536.5 |           0 |           0 |
+
+The column names are:
+
+
