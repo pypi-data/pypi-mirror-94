@@ -1,0 +1,14 @@
+gmqtt
+ConfigArgParse
+yoyo-migrations
+aiohttp
+aiohttp_jinja2
+jinja2
+cchardet
+aiohttp_debugtoolbar
+aiohttp_session[aiomcache]
+aiohttp_remotes
+aiosmtplib
+
+[:sys_platform == "linux"]
+uvloop
