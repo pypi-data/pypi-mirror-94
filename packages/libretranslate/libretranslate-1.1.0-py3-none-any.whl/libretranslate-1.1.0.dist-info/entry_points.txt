@@ -1,0 +1,3 @@
+[console_scripts]
+libretranslate = app.main:main
+
