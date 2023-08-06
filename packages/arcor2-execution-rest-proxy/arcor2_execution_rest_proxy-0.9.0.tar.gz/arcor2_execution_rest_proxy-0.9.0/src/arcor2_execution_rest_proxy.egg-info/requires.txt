@@ -1,0 +1,6 @@
+Flask==1.1.1
+arcor2_execution_data~=0.10.0
+arcor2~=0.11.0
+dataclasses-jsonschema-rereleased[fast-validation]==2.12.2
+sqlitedict==1.7.0
+websocket-client==0.57.0
