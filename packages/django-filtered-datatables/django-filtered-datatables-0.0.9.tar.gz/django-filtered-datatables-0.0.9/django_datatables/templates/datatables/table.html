@@ -1,0 +1,28 @@
+{% spaceless %}
+    <table id="{{ datatable.table_id }}" class="{{ datatable.table_class }}">
+        <thead>
+        <tr{% if datatable.table_options.no_titles %} class="d-none"{% endif %}>
+            {% for t in datatable.all_titles %}
+                <th>{{ t }}</th>{% endfor %}
+        </tr>
+        <tr class="column-search-header">
+        {% include 'datatables/search_boxes.html' with table=datatable %}
+        </tr>
+        </thead>
+        {% if not datatable.table_options.nofooter %}
+            <tfoot>
+            <tr>
+                {% for t in datatable.all_titles %}
+                    <th>{{ t }}</th>{% endfor %}
+            </tr>
+            </tfoot>
+        {% endif %}
+    </table>
+
+    <script>
+    $( document ).ready(function() {
+        {{ datatable.table_id }}_configuration = {{ datatable.col_def_str|safe }};
+        new django_datatables.PythonTable("{{ datatable.table_id }}", {{ datatable.table_id }}_configuration);
+    })
+    </script>
+{% endspaceless %}
