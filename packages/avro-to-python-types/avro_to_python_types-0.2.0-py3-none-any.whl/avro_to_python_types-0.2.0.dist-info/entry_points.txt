@@ -1,0 +1,3 @@
+[console_scripts]
+sync-example=examples:generate_types_from_schemas
+
