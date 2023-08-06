@@ -1,0 +1,6 @@
+[console_scripts]
+aprsd = aprsd.main:main
+aprsd-dev = aprsd.dev:main
+aprsd-healthcheck = aprsd.healthcheck:main
+fake_aprs = aprsd.fake_aprs:main
+
