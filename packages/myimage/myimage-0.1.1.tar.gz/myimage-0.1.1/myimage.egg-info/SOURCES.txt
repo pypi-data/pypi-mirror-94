@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.py
+myimage/__init__.py
+myimage/common.py
+myimage/settings.py
+myimage.egg-info/PKG-INFO
+myimage.egg-info/SOURCES.txt
+myimage.egg-info/dependency_links.txt
+myimage.egg-info/requires.txt
+myimage.egg-info/top_level.txt
+myimage/upload/__init__.py
+myimage/upload/ali_oss.py
+myimage/upload/ali_oss_cmd.py
+myimage/upload/qiniuyun.py
+myimage/upload/sm_ms.py
+tests/__init__.py
