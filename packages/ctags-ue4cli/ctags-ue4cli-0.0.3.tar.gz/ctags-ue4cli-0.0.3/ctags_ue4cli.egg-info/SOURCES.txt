@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+ctags_ue4cli/__init__.py
+ctags_ue4cli/descriptor.py
+ctags_ue4cli/main.py
+ctags_ue4cli.egg-info/PKG-INFO
+ctags_ue4cli.egg-info/SOURCES.txt
+ctags_ue4cli.egg-info/dependency_links.txt
+ctags_ue4cli.egg-info/entry_points.txt
+ctags_ue4cli.egg-info/requires.txt
+ctags_ue4cli.egg-info/top_level.txt
+ctags_ue4cli/commands/__init__.py
+ctags_ue4cli/commands/ctags.py
