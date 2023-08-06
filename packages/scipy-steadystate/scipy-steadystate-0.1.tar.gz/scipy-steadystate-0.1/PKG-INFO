@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: scipy-steadystate
+Version: 0.1
+Summary: SciPy extension modules for general purpose steady-state solvers for differential state-equations.
+Home-page: https://gitlab.com/Makman2/scipy-steadystate
+Author: Mischa Krüger
+Author-email: makmanx64@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://gitlab.com/Makman2/scipy-steadystate/issues
+Project-URL: Source Code, https://gitlab.com/Makman2/scipy-steadystate/-/tree/master
+Description: scipy-steadystate
+        =================
+        
+        SciPy extension modules for general purpose steady-state solvers for differential state-equations.
+        
+Keywords: numerics differential-equations ivp
+Platform: any
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
