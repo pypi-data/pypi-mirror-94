@@ -1,0 +1,5 @@
+click~=7.1
+docker~=4.4
+pyyaml~=5.4
+icecream~=2.1
+rich~=9.10

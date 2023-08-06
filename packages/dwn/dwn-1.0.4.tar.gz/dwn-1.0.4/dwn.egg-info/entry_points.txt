@@ -1,0 +1,3 @@
+[console_scripts]
+dwn = dwn.cli.cli:cli
+

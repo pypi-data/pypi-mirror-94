@@ -1,0 +1,6 @@
+name: netcat-reverse
+image: alpine
+tty: true
+command: /usr/bin/nc -lvkp 4444
+ports:
+  4444: 4444

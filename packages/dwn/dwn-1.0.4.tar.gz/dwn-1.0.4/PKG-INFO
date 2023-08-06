@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: dwn
+Version: 1.0.4
+Summary: dwn, a docker pwn tool manager
+Home-page: https://github.com/sensepost/dwn
+Author: Leon Jacobs
+Author-email: leon@sensepost.com
+License: GPL v3
+Download-URL: https://github.com/sensepost/dwn/archive/1.0.4.tar.gz
+Description: UNKNOWN
+Keywords: docker,tool,pentest,framework
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
