@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: soapystone
+Version: 0.1.0
+Summary: Pylint checker for enforcing orange soapstone comments
+License: MIT
+Author: Zach Banks
+Author-email: zjbanks@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pylint (>=2.6.0,<3.0.0)
