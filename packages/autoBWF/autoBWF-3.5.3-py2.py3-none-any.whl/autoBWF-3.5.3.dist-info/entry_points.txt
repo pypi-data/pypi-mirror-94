@@ -1,0 +1,7 @@
+[console_scripts]
+autoBWF = autoBWF.autoBWF:main
+autolame = autoBWF.autolame:main
+autosplice = autoBWF.autosplice:main
+bwf2csv = autoBWF.bwf2csv:main
+bwf2pbcore = autoBWF.bwf2pbcore:main
+
