@@ -1,0 +1,3 @@
+[console_scripts]
+thingtalk=thingtalk.cli:thingtalk
+
