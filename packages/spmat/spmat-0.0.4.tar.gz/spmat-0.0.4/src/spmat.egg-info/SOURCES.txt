@@ -1,0 +1,12 @@
+README.rst
+setup.py
+src/spmat/__about__.py
+src/spmat/__init__.py
+src/spmat/dlmat.py
+src/spmat/utils.py
+src/spmat.egg-info/PKG-INFO
+src/spmat.egg-info/SOURCES.txt
+src/spmat.egg-info/dependency_links.txt
+src/spmat.egg-info/not-zip-safe
+src/spmat.egg-info/requires.txt
+src/spmat.egg-info/top_level.txt
