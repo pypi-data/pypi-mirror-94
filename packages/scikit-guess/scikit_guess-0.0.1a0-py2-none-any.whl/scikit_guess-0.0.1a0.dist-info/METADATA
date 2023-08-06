@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: scikit-guess
+Version: 0.0.1a0
+Summary: Non-iterative initial parameter guesses for fitting routines
+Home-page: https://github.com/madphysicist/scikit-guess
+Author: Joseph R. Fox-Rabinovitz
+Author-email: jfoxrabinovitz@gmail.com
+Maintainer: Joseph R. Fox-Rabinovitz
+Maintainer-email: jfoxrabinovitz@gmail.com
+License: BSD 2-Clause License
+Project-URL: Documentation, https://scikit-guess.readthedocs.io/en/latest/
+Project-URL: Bugs, https://github.com/madphysicist/scikit-guess/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.7)
+Requires-Dist: scipy
+Provides-Extra: docs
+Requires-Dist: matplotlib ; extra == 'docs'
+Requires-Dist: numpy ; extra == 'docs'
+Requires-Dist: scipy ; extra == 'docs'
+Requires-Dist: sphinx (>=1.8) ; extra == 'docs'
+Provides-Extra: docs-rtd
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs-rtd'
+Provides-Extra: pandas
+Requires-Dist: pandas ; extra == 'pandas'
+Provides-Extra: test-pep8
+Requires-Dist: pytest-pep8 ; extra == 'test-pep8'
+Provides-Extra: test-plots
+Requires-Dist: matplotlib ; extra == 'test-plots'
+
+scikit-guess
+============
+
+This scikit contains methods for computing fast, non-iterative estimates of
+fitting parameters for common functions. The estimates may be used as-is on
+their own, or refined through non-linear optimization algorithms. The name of
+the scikit comes from the fact that estimates are a good initial guess for the
+optimal fitting parameters.
+
+Documentation available on Read the Docs: https://scikit-guess.readthedocs.io/en/latest/.
+
+
+Changelog
+=========
+
+0.0.1a0 (2021-02-01)
+--------------------
+
+* First release on PyPI. Still a WIP, but wanted to hog the package name.
+
+
