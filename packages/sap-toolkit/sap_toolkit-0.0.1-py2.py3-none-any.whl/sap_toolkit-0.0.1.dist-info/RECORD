@@ -1,0 +1,12 @@
+sap_toolkit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sap_toolkit/client.py,sha256=-vx1itH385dyLbWBhw042S-JC-cz6zHhjBMoS7llv_0,6806
+sap_toolkit/server.py,sha256=gdP5auzMzKij83FCBwJnapARk0vvk4INNRt5E0hSRC4,10530
+sap_toolkit/utils.py,sha256=XLWKlWTgDenD4qWREXYqy0rhp1lozZ_PjDNE6QHKD_c,3431
+sap_toolkit/generated/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sap_toolkit/generated/eval_server_pb2.py,sha256=i8PGTRTFHLEv4jin1QfNGejJ2kKa-H2he8RpnONiXWQ,13713
+sap_toolkit/generated/eval_server_pb2_grpc.py,sha256=c0jIbVJotAztV3jtw1h-ZHntpwsd_6t2oSXDnAXMJYE,8957
+sap_toolkit-0.0.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+sap_toolkit-0.0.1.dist-info/METADATA,sha256=92ry8DnKFTOs_11QQc1jFlsldaYyOi5jkpROP7a1IAo,663
+sap_toolkit-0.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+sap_toolkit-0.0.1.dist-info/top_level.txt,sha256=BWG57SPLHg8HfJxmkk1pmjJsz5zNct8e9h11od1dlx0,12
+sap_toolkit-0.0.1.dist-info/RECORD,,
