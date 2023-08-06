@@ -1,0 +1,8 @@
+include VERSION
+include README.rst
+include src/*.rs
+include Cargo.toml
+include Cargo.lock
+include LICENSE
+include source/index.rst
+include source/conf.py
