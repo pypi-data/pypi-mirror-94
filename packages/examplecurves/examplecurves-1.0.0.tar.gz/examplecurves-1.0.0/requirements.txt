@@ -1,0 +1,7 @@
+pandas>=1.0.3
+numpy>=1.16.0
+scipy>=1.0.0
+dicthandling>=0.2b2
+importlib_resources; python_version == "3.6"
+doctestprinter>=1.0.0
+matplotlib>=3.3.4
