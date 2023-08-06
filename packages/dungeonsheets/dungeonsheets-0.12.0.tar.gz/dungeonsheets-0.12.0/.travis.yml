@@ -1,0 +1,20 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+before_install:
+  - sudo apt-get -y install pdftk texlive-latex-base  
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install -r requirements-tests.txt
+  - pip install -e .
+# command to run tests
+script:
+  - pytest --cov=dungeonsheets tests/
+  - cd examples/
+  - makesheets
+  - cd ../
+after_success:
+  - coveralls
