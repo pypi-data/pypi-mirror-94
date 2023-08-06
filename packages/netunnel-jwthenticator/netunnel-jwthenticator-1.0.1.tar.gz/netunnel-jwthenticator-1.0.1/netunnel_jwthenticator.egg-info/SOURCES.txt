@@ -1,0 +1,12 @@
+CHANGES.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+netunnel_jwthenticator/__init__.py
+netunnel_jwthenticator/plugin.py
+netunnel_jwthenticator.egg-info/PKG-INFO
+netunnel_jwthenticator.egg-info/SOURCES.txt
+netunnel_jwthenticator.egg-info/dependency_links.txt
+netunnel_jwthenticator.egg-info/requires.txt
+netunnel_jwthenticator.egg-info/top_level.txt
