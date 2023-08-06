@@ -1,0 +1,8 @@
+setup.py
+finpython/__init__.py
+finpython/core.py
+finpython.egg-info/PKG-INFO
+finpython.egg-info/SOURCES.txt
+finpython.egg-info/dependency_links.txt
+finpython.egg-info/requires.txt
+finpython.egg-info/top_level.txt
