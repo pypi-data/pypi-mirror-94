@@ -1,0 +1,4 @@
+python-engineio<4
+python-socketio<5
+requests
+websocket-client
