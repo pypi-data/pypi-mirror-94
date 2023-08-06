@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: scriptify
+Version: 0.0.1
+Summary: turns functions into command line scripts
+Home-page: UNKNOWN
+Author: Klas Leino
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+file: README.md
+
+
