@@ -1,0 +1,10 @@
+README.md
+setup.py
+nse_quadratic_mats/__init__.py
+nse_quadratic_mats/conv_tensor_utils.py
+nse_quadratic_mats/visualization_utils.py
+nse_quadratic_mats.egg-info/PKG-INFO
+nse_quadratic_mats.egg-info/SOURCES.txt
+nse_quadratic_mats.egg-info/dependency_links.txt
+nse_quadratic_mats.egg-info/requires.txt
+nse_quadratic_mats.egg-info/top_level.txt
