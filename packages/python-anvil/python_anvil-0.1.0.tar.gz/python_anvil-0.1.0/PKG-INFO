@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: python-anvil
+Version: 0.1.0
+Summary: Anvil API
+Home-page: https://www.useanvil.com/
+License: MIT
+Keywords: anvil,api,pdf,signing
+Author: Allan Almazan
+Author-email: allan@useanvil.com
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: dataclasses-json (>=0.5.2,<0.6.0)
+Requires-Dist: ratelimit (>=2.2.1,<3.0.0)
+Requires-Dist: requests (>=2.25.0,<3.0.0)
+Requires-Dist: tabulate (>=0.8.7,<0.9.0)
+Project-URL: Documentation, https://github.com/anvilco/python-anvil
+Project-URL: Repository, https://github.com/anvilco/python-anvil
+Description-Content-Type: text/markdown
+
+# Anvil API Library
+
+[![PyPI Version](https://img.shields.io/pypi/v/python_anvil.svg)](https://pypi.org/project/python_anvil)
+[![PyPI License](https://img.shields.io/pypi/l/python_anvil.svg)](https://pypi.org/project/python_anvil)
+
+This is a library that provides an interface to access the [Anvil API](https://www.useanvil.com/developers) from applications
+written in the Python programming language.
+
+Anvil is a suite of tools for integrating document-based workflows and PDFs within your application:
+
+1. Anvil Workflows converts your PDF forms into simple, intuitive websites that 
+   fill the PDFs and gather signatures for you.
+2. Anvil PDF Filling API allows you to fill any PDF with JSON data.
+3. Anvil PDF Generation API allows you to create new PDFs.
+4. Anvil Etch E-sign API allows you to request signatures on a PDF signing packet.
+
+Currently, this API library only supports our PDF filling API and our GraphQL API.
+
+### Documentation
+
+General API documentation: [Anvil API docs](https://www.useanvil.com/docs)
+
+# Setup
+
+## Requirements
+
+* Python 3.6+
+
+## Installation
+
+Install it directly into an activated virtual environment:
+
+```text
+$ pip install python-anvil
+```
+
+or add it to your [Poetry](https://poetry.eustace.io/) project:
+
+```text
+$ poetry add python-anvil
+```
+
+
