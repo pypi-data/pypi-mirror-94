@@ -1,0 +1,57 @@
+# Changelog
+
+<!--next-version-placeholder-->
+
+## v2.5.6 (2021-02-08)
+### Fix
+* Set location of trash can on first render ([#1160](https://github.com/ocadotechnology/rapid-router/issues/1160)) ([`a879d5c`](https://github.com/ocadotechnology/rapid-router/commit/a879d5c88ea3629a9cb5401477c2e9dbe50ec9b3))
+
+## v2.5.5 (2021-01-08)
+### Fix
+* Revert Rapid Rudolph changes ([#1156](https://github.com/ocadotechnology/rapid-router/issues/1156)) ([`02507f5`](https://github.com/ocadotechnology/rapid-router/commit/02507f5deefbe49116f5d78425023ada77250740))
+
+## v2.5.4 (2020-12-24)
+### Fix
+* Replace youtube embeds with youtube-nocookie ([#1151](https://github.com/ocadotechnology/rapid-router/issues/1151)) ([`f7157eb`](https://github.com/ocadotechnology/rapid-router/commit/f7157eb8b0bd06081d35be895a3cc51ca821ef95))
+
+## v2.5.3 (2020-12-22)
+### Fix
+* Move autoconfig back to Pipfile ([#1150](https://github.com/ocadotechnology/rapid-router/issues/1150)) ([`8e8c8aa`](https://github.com/ocadotechnology/rapid-router/commit/8e8c8aaa9ab995627d8d7b72200bf6f8e343a9a7))
+
+## v2.5.2 (2020-12-21)
+### Fix
+* Fix translation files owner ([#1149](https://github.com/ocadotechnology/rapid-router/issues/1149)) ([`7617f4a`](https://github.com/ocadotechnology/rapid-router/commit/7617f4abafc98e4ca1993277b9a843aa66d5f87d))
+* Remove build dependencies ([#1148](https://github.com/ocadotechnology/rapid-router/issues/1148)) ([`b533301`](https://github.com/ocadotechnology/rapid-router/commit/b53330182a2bf618d05533962eaaaa67b0c658b8))
+
+## v2.5.1 (2020-12-17)
+### Fix
+* Lock file ([`2fc0a3f`](https://github.com/ocadotechnology/rapid-router/commit/2fc0a3fc44013226e86bfee46632f98dbee85964))
+* Install autoconfig not editable ([`78a7d8c`](https://github.com/ocadotechnology/rapid-router/commit/78a7d8c367b3ee4830cef73f7555afb18df37886))
+* Try not installing with system ([`13cfe38`](https://github.com/ocadotechnology/rapid-router/commit/13cfe386212f5013b26e704ca22cd4bd397a5954))
+* Revert autoconfig move ([`3aecff2`](https://github.com/ocadotechnology/rapid-router/commit/3aecff2cca08c6c00fcdebcdb6c04662edb5dec4))
+* Move autoconfig installation to Pipfile ([`f422f54`](https://github.com/ocadotechnology/rapid-router/commit/f422f54be00b4a11d601f264748f61502d394102))
+
+## v2.5.0 (2020-12-16)
+### Feature
+* Upgrade to Django 2.2 ([#1132](https://github.com/ocadotechnology/rapid-router/pull/1132)) ([`aacebbc`](https://github.com/ocadotechnology/rapid-router/commit/aacebbccf4aceba55ebb4d733d3a05d8e2e899ba))
+
+### Fix
+* Don't fix cfl-common version ([`a5d47b3`](https://github.com/ocadotechnology/rapid-router/commit/a5d47b3fb57bd7e414f068ea61fa75b9c2faee48))
+* Merge in master ([`a57fda7`](https://github.com/ocadotechnology/rapid-router/commit/a57fda7bcd0459c9de2e7105b89beead148bc053))
+* Upgrade dependencies ([#1140](https://github.com/ocadotechnology/rapid-router/pull/1140)) ([`32736f5`](https://github.com/ocadotechnology/rapid-router/commit/32736f56b56ae26b39d82155ebc6a25976a1f624))
+
+## v2.4.12 (2020-12-04)
+### Fix
+* Stop retriggering of CI job on release (#1141) ([`ae07c53`](https://github.com/ocadotechnology/rapid-router/commit/ae07c5310673108a1ce107ab33818c129c4f68c4))
+
+## v2.4.11 (2020-12-04)
+### Fix
+* Bring back Rapid Rudolph (#1144) ([`dc20b48`](https://github.com/ocadotechnology/rapid-router/commit/dc20b486824ca1d5316b7e96577329594511e366))
+
+## v2.4.10 (2020-11-27)
+### Fix
+* Use correct token for publishing packages (#1139) ([`af711cc`](https://github.com/ocadotechnology/rapid-router/commit/af711ccdb6492430c13e629c76958b12cf100892))
+
+## v2.4.9 (2020-11-27)
+### Fix
+* Use Github Actions to publish rapid-router to PyPi (#1136) ([`e52dd23`](https://github.com/ocadotechnology/rapid-router/commit/e52dd23966ffb5f8400b41a5d8378bf087a4a20c))

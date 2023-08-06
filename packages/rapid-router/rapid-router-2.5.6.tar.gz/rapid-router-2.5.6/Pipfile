@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+rapid-router = {path = ".",editable = true}
+django-autoconfig = { git = 'https://github.com/ocadotechnology/django-autoconfig.git', ref = 'master' }
+
+[dev-packages]
+django-selenium-clean = "==0.3.2"
+django-test-migrations = "==1.0.0"
+selenium = "==3.141.0"
+pytest-django = "==4.1.0"
+pytest = "==6.*"
+
+[requires]
+python_version = "3.6.7"
