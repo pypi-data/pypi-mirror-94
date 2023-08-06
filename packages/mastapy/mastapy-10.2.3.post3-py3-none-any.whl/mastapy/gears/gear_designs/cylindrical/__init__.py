@@ -1,0 +1,83 @@
+﻿'''__init__.py'''
+
+
+from mastapy._internal.dummy_base_class_importer import _DummyBaseClassImport
+
+
+with _DummyBaseClassImport():
+    from ._763 import AddendumModificationDistributionRule
+    from ._764 import BacklashSpecification
+    from ._765 import BasicRackProfiles
+    from ._766 import CaseHardeningProperties
+    from ._767 import CreateNewSuitableCutterOption
+    from ._768 import CrossedAxisCylindricalGearPair
+    from ._769 import CrossedAxisCylindricalGearPairLineContact
+    from ._770 import CrossedAxisCylindricalGearPairPointContact
+    from ._771 import CylindricalGearAbstractRack
+    from ._772 import CylindricalGearBasicRack
+    from ._773 import CylindricalGearCuttingOptions
+    from ._774 import CylindricalGearDefaults
+    from ._775 import CylindricalGearDesign
+    from ._776 import CylindricalGearDesignConstraint
+    from ._777 import CylindricalGearDesignConstraints
+    from ._778 import CylindricalGearDesignConstraintsDatabase
+    from ._779 import CylindricalGearDesignConstraintSettings
+    from ._780 import CylindricalGearDesignSettings
+    from ._781 import CylindricalGearMeshDesign
+    from ._782 import CylindricalGearPinionTypeCutter
+    from ._783 import CylindricalGearProfileMeasurement
+    from ._784 import CylindricalGearProfileMeasurementType
+    from ._785 import CylindricalGearProfileModifications
+    from ._786 import CylindricalGearSetDesign
+    from ._787 import CylindricalGearSetMacroGeometryOptimiser
+    from ._788 import CylindricalGearSetManufacturingConfigurationSelection
+    from ._789 import CylindricalGearTableMGItemDetail
+    from ._790 import CylindricalGearTableWithMGCharts
+    from ._791 import CylindricalGearToothThicknessSpecification
+    from ._792 import CylindricalMeshAngularBacklash
+    from ._793 import CylindricalMeshedGear
+    from ._794 import CylindricalMeshLinearBacklashSpecification
+    from ._795 import CylindricalPlanetaryGearSetDesign
+    from ._796 import CylindricalPlanetGearDesign
+    from ._797 import DIN3967AllowanceSeries
+    from ._798 import DIN3967ToleranceSeries
+    from ._799 import FinishStockSpecification
+    from ._800 import FinishToothThicknessDesignSpecification
+    from ._801 import GearFitSystems
+    from ._802 import GearManufacturingConfigSetupViewModel
+    from ._803 import GearSetFCAImportSetup
+    from ._804 import GearSetManufacturingConfigurationSetup
+    from ._805 import GeometrySpecificationType
+    from ._806 import HardenedMaterialProperties
+    from ._807 import HardnessProfileCalculationMethod
+    from ._808 import HeatTreatmentType
+    from ._809 import ISO6336Geometry
+    from ._810 import ISO6336GeometryBase
+    from ._811 import ISO6336GeometryForShapedGears
+    from ._812 import ISO6336GeometryManufactured
+    from ._813 import LTCALoadCaseModifiableSettings
+    from ._814 import LtcaSettings
+    from ._815 import MicroGeometryConvention
+    from ._816 import MicroGeometryProfileConvention
+    from ._817 import Micropitting
+    from ._818 import NamedPlanetAssemblyIndex
+    from ._819 import NamedPlanetSideBandAmplitudeFactor
+    from ._820 import RelativeMeasurementViewModel
+    from ._821 import RelativeValuesSpecification
+    from ._822 import Scuffing
+    from ._823 import ScuffingCoefficientOfFrictionMethods
+    from ._824 import ScuffingTemperatureMethodsAGMA
+    from ._825 import ScuffingTemperatureMethodsISO
+    from ._826 import ShaperEdgeTypes
+    from ._827 import SpurGearLoadSharingCodes
+    from ._828 import StandardRack
+    from ._829 import SurfaceRoughness
+    from ._830 import ThicknessType
+    from ._831 import TiffAnalysisSettings
+    from ._832 import TipAlterationCoefficientMethod
+    from ._833 import TolerancedMetalMeasurements
+    from ._834 import TolerancedValueSpecification
+    from ._835 import ToothThicknessSpecification
+    from ._836 import ToothThicknessSpecificationBase
+    from ._837 import TypeOfMechanismHousing
+    from ._838 import Usage
