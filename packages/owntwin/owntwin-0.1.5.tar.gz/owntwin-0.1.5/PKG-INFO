@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: owntwin
+Version: 0.1.5
+Summary: User-driven digital twin framework.
+Home-page: https://github.com/owntwin/owntwin-cli
+License: MIT
+Author: Kentaro Ozeki
+Author-email: kentaro.ozeki+dev@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: InquirerPy (>=0.1.0,<0.2.0)
+Requires-Dist: Pillow (>=8.0.1,<9.0.0)
+Requires-Dist: colorama (>=0.4.4,<0.5.0)
+Requires-Dist: geopandas (>=0.8.1,<0.9.0)
+Requires-Dist: geopy (>=2.0.0,<3.0.0)
+Requires-Dist: halo (>=0.0.31,<0.0.32)
+Requires-Dist: importlib-resources (>=5.1.0,<6.0.0)
+Requires-Dist: loguru (>=0.5.3,<0.6.0)
+Requires-Dist: mercantile (>=1.1.6,<2.0.0)
+Requires-Dist: requests (>=2.24.0,<3.0.0)
+Requires-Dist: scour (>=0.38.1,<0.39.0)
+Requires-Dist: svgwrite (>=1.4,<2.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
+Requires-Dist: xdg (>=5.0.1,<6.0.0)
+Project-URL: Repository, https://github.com/owntwin/owntwin-cli
+Description-Content-Type: text/markdown
+
+# OwnTwin CLI
+
+[![PyPI](https://img.shields.io/pypi/v/owntwin.svg)](https://pypi.python.org/pypi/owntwin/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/owntwin.svg)](https://pypistats.org/packages/owntwin)
+
+OwnTwin CLI is a toolchain for [OwnTwin](https://github.com/owntwin/owntwin), a user-driven digital twin framework.
+
+## Installation
+
+```
+pip install owntwin
+```
+
+_Note for Windows users:_ [Fiona](https://github.com/Toblerity/Fiona#installation) is required to be preinstalled.
+
+## Usage
+
+See the [documentation](https://beta.owntwin.com/docs/getting-started) for details.
+
+```
+owntwin init
+owntwin add-terrain
+owntwin add [module names...]
+owntwin export
+owntwin view
+```
+
