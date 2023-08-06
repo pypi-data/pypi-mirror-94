@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: AbCluster
+Version: 1.1.0
+Summary: antibody sequence analysis including translation, numbering and clustering
+Home-page: https://www.biospace.info/
+Author: BioSpace
+Author-email: biospaceinfo@gmail.com
+License: Apache License 2.0
+Keywords: antibody sequence translation numbering clustering
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: Japanese
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+UNKNOWN
+
+
