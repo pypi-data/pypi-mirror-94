@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pysparkly"
+version = "0.1.0"
+description = "Pyspark useful functions and extensions"
+authors = ["ugo-quelhas <ugo.quelhas@edu.devinci.fr>"]
+packages = [
+    { include = "pysparkly" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+py-deco = "^0.1.0"
+pyspark = "^3.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+build = "^0.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
