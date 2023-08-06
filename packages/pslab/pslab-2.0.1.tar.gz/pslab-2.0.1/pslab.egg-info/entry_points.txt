@@ -1,0 +1,3 @@
+[console_scripts]
+pslab = PSL.cli:cmdline
+
