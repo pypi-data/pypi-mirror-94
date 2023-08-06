@@ -1,0 +1,9 @@
+README.md
+setup.py
+jkPyUtils.egg-info/PKG-INFO
+jkPyUtils.egg-info/SOURCES.txt
+jkPyUtils.egg-info/dependency_links.txt
+jkPyUtils.egg-info/not-zip-safe
+jkPyUtils.egg-info/top_level.txt
+src/jkPyUtils/__init__.py
+src/jkPyUtils/__version__.py
