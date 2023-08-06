@@ -1,0 +1,5 @@
+[run]
+source =
+    odoo_rpc_client
+omit = 
+    odoo_rpc_client/tests/*.*
