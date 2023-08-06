@@ -1,0 +1,11 @@
+ctags_ue4cli/__init__.py,sha256=2iVkoKiigNHgIZjwzvHDeg3RvZCwrnqOAxcQDzbyRXU,46
+ctags_ue4cli/descriptor.py,sha256=3N-L15rk1Ob6q-hlBXFoKAIKS7dCO78J90Z9wp2Vcek,229
+ctags_ue4cli/main.py,sha256=p230nWseQ1HZgyCERXA7hY9MpT0R7KehPT6vKN6MxhI,1711
+ctags_ue4cli/commands/ctags.py,sha256=LDXOGMmvFcrLgcx5WfiPGojTHWUnp1eZ3UzjjBwayKo,1516
+ctags_ue4cli/commands/install.py,sha256=Up4NsPSKaMnSHMRDoTN-ENkNOFQYurACRSbwgLFn7-c,266
+ctags_ue4cli-0.0.1.dist-info/LICENSE,sha256=ZAUUFjsX-XetyZfLFvUYcRIs-wVV660aPwHhZ7e6iFc,1235
+ctags_ue4cli-0.0.1.dist-info/METADATA,sha256=KaFaPBe1xBexaGSoLXDukfOwPo3T4yQkW-ZUKvpJqfI,969
+ctags_ue4cli-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ctags_ue4cli-0.0.1.dist-info/entry_points.txt,sha256=Ba97HNbSJHp8GFxmOcYdKSYIr_aoMuZnG_m0wNzI0_M,61
+ctags_ue4cli-0.0.1.dist-info/top_level.txt,sha256=CPodHhu8wk91JpIIzJfXIfZXP9pUfen4XYnLgCv_5K4,13
+ctags_ue4cli-0.0.1.dist-info/RECORD,,
