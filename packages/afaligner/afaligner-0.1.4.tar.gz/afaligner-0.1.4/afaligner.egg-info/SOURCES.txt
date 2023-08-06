@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+afaligner/__init__.py
+afaligner/c_dtwbd_wrapper.py
+afaligner/dtwbd.py
+afaligner.egg-info/PKG-INFO
+afaligner.egg-info/SOURCES.txt
+afaligner.egg-info/dependency_links.txt
+afaligner.egg-info/requires.txt
+afaligner.egg-info/top_level.txt
+afaligner/c_modules/dtwbd.c
+afaligner/templates/template.smil
+tests/__init__.py
+tests/test_align.py
+tests/test_dtwbd.py
