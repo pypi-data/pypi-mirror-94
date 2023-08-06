@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: sytk
+Version: 0.0.3
+Summary: Some tools making life a little easier :)
+Home-page: https://github.com/whusober/sytk
+Author: WHUSOBER
+Author-email: whusober@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# sytk
+Some tools making life a little easier :)
+## @admin
+Apply for the administrator right for the decorated function.
+## @cache
+Cache the `{'funcname-params': return value}` of the decorated functions. It is mainly used on functions calculating duplicate data.
+## @debug
++ Show `parameters` and `return value` of the decorated function in a vivid color.
++ Meanwhile, in the same usage with `print()`, `d_print()`is also available to show the debug information in functions decorated with `@debug`.
+## clean(path)
+Delete code lines containing '@debug' and 'd_print'. It is used to turn projects into productions.
+
+
