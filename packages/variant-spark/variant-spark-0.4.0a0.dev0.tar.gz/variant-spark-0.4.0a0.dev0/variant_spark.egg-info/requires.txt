@@ -1,0 +1,13 @@
+typedecorator==0.0.5
+
+[deps]
+pandas>=0.25.0
+
+[hail]
+hail==0.2.61
+
+[spark]
+pyspark>=2.4.1
+
+[test]
+pyspark>=2.4.1
