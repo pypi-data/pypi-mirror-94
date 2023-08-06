@@ -1,0 +1,9 @@
+README.md
+setup.py
+pandaserd/__init__.py
+pandaserd/module.py
+pandaserd.egg-info/PKG-INFO
+pandaserd.egg-info/SOURCES.txt
+pandaserd.egg-info/dependency_links.txt
+pandaserd.egg-info/requires.txt
+pandaserd.egg-info/top_level.txt
