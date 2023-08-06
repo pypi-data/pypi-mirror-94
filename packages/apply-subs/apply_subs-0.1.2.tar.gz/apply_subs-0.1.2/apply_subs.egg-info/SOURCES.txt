@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+apply_subs/__init__.py
+apply_subs/__main__.py
+apply_subs/main.py
+apply_subs.egg-info/PKG-INFO
+apply_subs.egg-info/SOURCES.txt
+apply_subs.egg-info/dependency_links.txt
+apply_subs.egg-info/entry_points.txt
+apply_subs.egg-info/requires.txt
+apply_subs.egg-info/top_level.txt

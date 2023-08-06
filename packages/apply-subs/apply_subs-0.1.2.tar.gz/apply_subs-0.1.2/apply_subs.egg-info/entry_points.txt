@@ -1,0 +1,3 @@
+[console_scripts]
+apply-subs = apply_subs.main:main
+
