@@ -1,0 +1,8 @@
+vosk/libvosk.so,sha256=Euw2McDIsygu4QjyZwNLqmDXvCdugV3DOX6udqhTVVs,28363352
+vosk/vosk_cffi.py,sha256=4Y61tZ2y9xU8t4Yzbzo45VreprfB8ppTx3RofRklqkM,2116
+vosk/__init__.py,sha256=Jv8jAdlobN3909E-HTnWKN8zQ7cqcNR3gDck6yRs0UQ,2336
+vosk-0.3.21.dist-info/RECORD,,
+vosk-0.3.21.dist-info/WHEEL,sha256=jUujCL1stczLLfPjIS8XwyhY0fU3E6Budv5vYKyLUD8,109
+vosk-0.3.21.dist-info/top_level.txt,sha256=VyhCKFInHWKAvlbaAYoqHJ2Y35GrQNYA-Ul2CRc30Uk,5
+vosk-0.3.21.dist-info/METADATA,sha256=nt3oIslsGsmmAHNC1D0h6SVRiHtnhSp1UKFVWh6Jz-8,1663
+vosk.libs/libatomic-1abecf58.so.1.2.0,sha256=n5Ol5isPsEC6h2xgFeLj0V9N-H8eg4ebDF524bitoW4,32008
