@@ -1,0 +1,13 @@
+include LICENSE.txt
+include README.md
+
+recursive-include galaxychop *.dat
+recursive-include galaxychop *.npy
+
+recursive-exclude docs *
+recursive-exclude legacy *
+recursive-exclude resource *
+recursive-exclude tests *
+
+exclude tox.ini
+exclude pyproject.toml
