@@ -1,0 +1,3 @@
+[console_scripts]
+aurore = aurore.__main__:main
+
