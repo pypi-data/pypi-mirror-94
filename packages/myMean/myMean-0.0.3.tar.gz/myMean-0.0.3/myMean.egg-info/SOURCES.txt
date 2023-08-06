@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+myMean/__init__.py
+myMean.egg-info/PKG-INFO
+myMean.egg-info/SOURCES.txt
+myMean.egg-info/dependency_links.txt
+myMean.egg-info/requires.txt
+myMean.egg-info/top_level.txt
