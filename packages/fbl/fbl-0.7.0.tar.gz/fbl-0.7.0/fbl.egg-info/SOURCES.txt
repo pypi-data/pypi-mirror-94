@@ -1,0 +1,10 @@
+README.md
+setup.py
+fbl/__init__.py
+fbl/__main__.py
+fbl.egg-info/PKG-INFO
+fbl.egg-info/SOURCES.txt
+fbl.egg-info/dependency_links.txt
+fbl.egg-info/entry_points.txt
+fbl.egg-info/requires.txt
+fbl.egg-info/top_level.txt
