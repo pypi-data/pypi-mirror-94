@@ -1,0 +1,12 @@
+se3_transformer_pytorch/__init__.py,sha256=d2hROTloXFvQClzawXAxZzG7y_-5ln_d5UN6XeGq3h0,75
+se3_transformer_pytorch/basis.py,sha256=4l17TikvCntExIZt-OS5Wl1uEh_L70SD8Hc_wihlbzY,6838
+se3_transformer_pytorch/irr_repr.py,sha256=dFR0rXhg2IxucN05Wlii5JAUBrKnzVZAhFkhQVM5PoQ,2964
+se3_transformer_pytorch/se3_transformer_pytorch.py,sha256=i-lndkJBpFxWGEi8ok020MsTQj_fHDNXflRcwB0sZ_o,18781
+se3_transformer_pytorch/spherical_harmonics.py,sha256=vSoqJwFiy4XGAd8etZasjHcRkvYTf29r2zWNV-tJ1Mc,3023
+se3_transformer_pytorch/utils.py,sha256=JsUgAhVWpOHhS562NJMyDc7-aYWcrwYkkrAGKWfov2U,4143
+se3_transformer_pytorch/data/J_dense.pt,sha256=9BxMAZoyhYnPP2PbcmmAdW-zYDWYaH-5HVykqcwiGtQ,36766718
+se3_transformer_pytorch-0.0.12.dist-info/LICENSE,sha256=_nRlQFj-K6BpgI2_Nt79biB7r4hZ82NmpqPOrlqm7MU,1066
+se3_transformer_pytorch-0.0.12.dist-info/METADATA,sha256=-cxPWvCBQx7NqX2IzXuknB3j7xD5ntDgTbh8XeVD7l4,689
+se3_transformer_pytorch-0.0.12.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+se3_transformer_pytorch-0.0.12.dist-info/top_level.txt,sha256=_JladobhzPL9Itce5HG0qpofi31JUOIqdfedc_gSHQ0,24
+se3_transformer_pytorch-0.0.12.dist-info/RECORD,,
