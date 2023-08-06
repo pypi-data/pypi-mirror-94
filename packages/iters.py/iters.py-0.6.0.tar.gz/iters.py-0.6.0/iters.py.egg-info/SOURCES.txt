@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+iters/__init__.py
+iters/async_iters.py
+iters/async_utils.py
+iters/iters.py
+iters/py.typed
+iters/utils.py
+iters.py.egg-info/PKG-INFO
+iters.py.egg-info/SOURCES.txt
+iters.py.egg-info/dependency_links.txt
+iters.py.egg-info/top_level.txt
