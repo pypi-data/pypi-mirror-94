@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mtdatasdk
+Version: 1.0.1
+Summary: mtdatasdk<easy utility for getting financial market data of China>
+Home-page: https://github.com/xjtu-quant/mtdatasdk
+Author: zzb
+Author-email: bwyuchi@163.com
+License: MIT License
+Description: # MTDataSDK
+        
+        ![logo](logo/logo.png)
+        
+        本地量化数据调取SDK(客户端)
+        
+        服务端及数据库见[MTData](https://github.com/xjtu-quant/mtdata)
+        
+Platform: all
+Classifier: Programming Language :: Python
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
