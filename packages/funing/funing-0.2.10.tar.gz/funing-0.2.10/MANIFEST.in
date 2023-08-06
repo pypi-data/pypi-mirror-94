@@ -1,0 +1,12 @@
+
+include LICENSE
+include README.md
+include setup.py
+include funing setting.yml.example
+
+recursive-include * *.po
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * venv
+
+recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
