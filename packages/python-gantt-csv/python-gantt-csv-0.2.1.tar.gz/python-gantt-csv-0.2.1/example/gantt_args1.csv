@@ -1,0 +1,8 @@
+name,start,depends_of,duration,percent_done,resources,color,id
+tache1,2014-12-25,None,4,44,ANO,#FF8080,1
+tache2,2014-12-28,None,6,0,JLS,#c70039,2
+tache3,2014-12-25,1:2:6,5,50,ANO:JLS,#f37121,3
+tache4,2015-01-01,1,4,40,JLS,#c0e218,4
+tache6,2014-12-25,6,4,0,ANO:JLS,#f37121,5
+tache7,2014-12-28,None,6,0,JLS,#c0e218,6
+tache8,today,6,4,0,ANO:JLS,#111d5e,7
