@@ -1,0 +1,5 @@
+prettytable<1
+ipython>=1.0
+ipython-genutils>=0.1.0
+azure-kusto-data>=1.0.2
+azure-cli-core>=2.10.1
