@@ -1,0 +1,13 @@
+titivillus/__init__.py,sha256=1MTj6sfzmM1YhdzMnLuDKMpy_Ww5eqKRYh5F65HEgwA,446
+titivillus/__main__.py,sha256=QFQ60SCybV4XjSkSvFO25PM6FYPibCq1fXRmeW6VIg4,5291
+titivillus/codex.py,sha256=MgCYz6eJ6jyTTR5ok_5GFdIZeopws9JSwarkPgD2emk,4545
+titivillus/common.py,sha256=FHjkbi4FIwj9eq32LqXVH9QGDgKc0kQ1r_TzrWc8GII,5475
+titivillus/distance.py,sha256=qTBg4KVoxNLeC3hIoo5yzc66073S3FJWwpw1lyl6LGk,9245
+titivillus/ngrams.py,sha256=0CqUUJgP9F4ooAHHGJHFCsqIMbUpr11EQHsV-Nril6Y,2486
+titivillus/stemma.py,sha256=m0ua50zR7goKrw_33xz2DriX8NXR6FNjwuZ_bc7xoMs,5798
+titivillus-0.0.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+titivillus-0.0.1.dist-info/METADATA,sha256=HzXuM7mIQQZFO5CqlCakOs-aHrHyMLLwnsKPKcyUc4M,4199
+titivillus-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+titivillus-0.0.1.dist-info/entry_points.txt,sha256=BFASAM830HJgRr1bGezu9hN7R0trnSWEv6IGJoaHiXk,57
+titivillus-0.0.1.dist-info/top_level.txt,sha256=GShjebzx73zeLkv9i7znaCGcXk-8FE21KPaFOcwcUnI,11
+titivillus-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+titivillus = titivillus.__main__:main
+
