@@ -1,0 +1,14 @@
+octvi/__init__.py,sha256=5BCx-MoD5xmJkf0mEwhEhby7hcwERTg5xvQZbN1SYcU,16021
+octvi/_version.py,sha256=4KVAZvmWSUtJdxKPGY0UJJG6_JVt2OVPV2YvyXgAi0w,217
+octvi/array.py,sha256=SzJ0U79wDZYtq-lE66WwUQK0FTP9sfyvHh1VJw7tHbs,15537
+octvi/command_line.py,sha256=1225NVBAfO99UMZtoycWOsgstIpNP9qhMOU5EINcRPA,2133
+octvi/config.py,sha256=EHZyJ_O8Q4fPfK-QsiT_IQgHx1Ru8KNpLjaqKEvbJcE,1654
+octvi/exceptions.py,sha256=3WkjRzC6nYqrQS3xeLjApifqu71yW-s6UYJgh7zzBsI,1107
+octvi/extract.py,sha256=eX5LSUlVopM65zcxW0KjmWeZk_qZJPYOMNcyn620g4M,19523
+octvi/url.py,sha256=DGMwuzLw06ERxZljlVkx5VXaugmgsQKJKeR3e0BMqjU,11298
+octvi-2.1.0.dist-info/LICENSE,sha256=JIhiBLmQeKNLtPpcdOH9IORkz9jCW96WMBq3yrbb860,1092
+octvi-2.1.0.dist-info/METADATA,sha256=UjDgBs8d-LBnQDG2CszoCAd4v6eCCJqdljLrYNXd1ng,6020
+octvi-2.1.0.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+octvi-2.1.0.dist-info/entry_points.txt,sha256=yiXyDmrq_osvN0fGiO12uwLjckVA1p0kxIhNMQuCSAI,91
+octvi-2.1.0.dist-info/top_level.txt,sha256=0RIFmOroTvkW49Rq1GkxfDej1-y7K1XV6DWzKecz6HQ,6
+octvi-2.1.0.dist-info/RECORD,,
