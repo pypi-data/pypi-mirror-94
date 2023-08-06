@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        syscli=syscli.cli:cli
+    

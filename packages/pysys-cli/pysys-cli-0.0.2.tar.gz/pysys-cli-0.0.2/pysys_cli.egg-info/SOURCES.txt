@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+pysys_cli.egg-info/PKG-INFO
+pysys_cli.egg-info/SOURCES.txt
+pysys_cli.egg-info/dependency_links.txt
+pysys_cli.egg-info/entry_points.txt
+pysys_cli.egg-info/requires.txt
+pysys_cli.egg-info/top_level.txt
+syscli/__init__.py
+syscli/cli.py
