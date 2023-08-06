@@ -1,0 +1,5 @@
+[console_scripts]
+lin2pbn = mdbridge.lin2pbn:main
+mdbridge2html = mdbridge.mdbridge2html:main
+mdbridge2latex = mdbridge.mdbridge2latex:main
+
