@@ -1,0 +1,3 @@
+[flake8.extension]
+SG = flake8_safegraph_crawl:Plugin
+
