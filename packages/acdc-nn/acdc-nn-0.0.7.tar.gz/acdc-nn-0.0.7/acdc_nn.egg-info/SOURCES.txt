@@ -1,0 +1,15 @@
+README.md
+setup.py
+acdc_nn/__init__.py
+acdc_nn/__main__.py
+acdc_nn/cmd.py
+acdc_nn/nn.py
+acdc_nn/util.py
+acdc_nn.egg-info/PKG-INFO
+acdc_nn.egg-info/SOURCES.txt
+acdc_nn.egg-info/dependency_links.txt
+acdc_nn.egg-info/entry_points.txt
+acdc_nn.egg-info/requires.txt
+acdc_nn.egg-info/top_level.txt
+acdc_nn/weights/full_dataset_TL.data-00000-of-00001
+acdc_nn/weights/full_dataset_TL.index

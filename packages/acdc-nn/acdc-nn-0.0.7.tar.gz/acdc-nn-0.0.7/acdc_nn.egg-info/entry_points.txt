@@ -1,0 +1,3 @@
+[console_scripts]
+acdc-nn = acdc_nn.cmd:main
+
