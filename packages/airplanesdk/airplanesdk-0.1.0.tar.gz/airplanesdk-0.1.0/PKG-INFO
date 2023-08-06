@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: airplanesdk
+Version: 0.1.0
+Summary: A Python SDK for writing Airplane tasks
+License: MIT
+Author: Airplane
+Author-email: support@airplane.dev
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
