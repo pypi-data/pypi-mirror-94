@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+dominus/__init__.py
+dominus/dominus_pb2.py
+dominus/dominus_pb2_grpc.py
+dominus_python_sdk.egg-info/PKG-INFO
+dominus_python_sdk.egg-info/SOURCES.txt
+dominus_python_sdk.egg-info/dependency_links.txt
+dominus_python_sdk.egg-info/requires.txt
+dominus_python_sdk.egg-info/top_level.txt
