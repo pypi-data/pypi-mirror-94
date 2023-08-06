@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "streamlit-webrtc"
+version = "0.7.0"
+description = ""
+authors = ["Yuichiro Tsuchiya <t.yic.yt@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/whitphx/streamlit-webrtc"
+include = ["./streamlit_webrtc/frontend/build/**/*"]
+exclude = ["./streamlit_webrtc/frontend/[!build]*"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+streamlit = ">=0.73.0"  # For allow-same-origin. See https://blog.streamlit.io/streamlit-components-security-and-a-five-month-quest-to-ship-a-single-line-of-code/
+aiortc = "1.0.0"
+typing_extensions = { version = "^3.7.4", python = "<3.8" }
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+isort = "^5.7.0"
+flake8 = "^3.8.4"
+opencv-python = "^4.5.1"
+mypy = "^0.800"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | streamlit_webrtc/frontend
+)
+'''
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 88
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
