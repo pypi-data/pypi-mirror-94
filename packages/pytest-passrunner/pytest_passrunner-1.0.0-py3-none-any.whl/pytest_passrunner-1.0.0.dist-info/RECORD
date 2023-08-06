@@ -1,0 +1,10 @@
+pytest_passrunner/__init__.py,sha256=gLGHGNFeCfWG_II4Zu3lozM3fccEuLdlojnVodrYKjE,1301
+pytest_passrunner/__version__.py,sha256=NMugJzyaOpSCBGg_km1DMAGILMNyTXhfZWF9n1i7ks8,222
+pytest_passrunner/tests/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+pytest_passrunner/tests/test_plugin.py,sha256=0OgHKDNXglR1RL70nRn_36WQFt7dNs6nDpo0rTittzI,719
+pytest_passrunner-1.0.0.dist-info/LICENSE,sha256=bW_09F34NfU2wYEG9BcjfnPB_fkJf3AxOG_X94T74Jg,1521
+pytest_passrunner-1.0.0.dist-info/METADATA,sha256=VSVqpVeMLL9FscP94n4QWWzqAUzwn9vO4-fljcyY13c,6355
+pytest_passrunner-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_passrunner-1.0.0.dist-info/entry_points.txt,sha256=k9HOXmr6lzXYYWZzh34EVpR_SeL8o_Y6D1pOlP9qEdU,50
+pytest_passrunner-1.0.0.dist-info/top_level.txt,sha256=eLo9UpOvo5lnpShH1Of2xrxhoRT87jwAvRGWdtvpKfg,18
+pytest_passrunner-1.0.0.dist-info/RECORD,,
