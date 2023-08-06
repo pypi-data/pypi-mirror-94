@@ -1,0 +1,12 @@
+Click
+Deprecated
+humanize
+nibabel
+numpy
+scipy
+torch>=1.1
+tqdm
+SimpleITK<2
+
+[plot]
+matplotlib
