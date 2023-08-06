@@ -1,0 +1,6 @@
+include ssht00ls/lib/*/
+include ssht00ls/lib/*/**
+include ssht00ls/lib/opensc/osx/*.so
+include ssht00ls/lib/opensc/osx/*.dylib
+include ssht00ls/classes/utils/*
+include ssht00ls/classes/utils/*/**
