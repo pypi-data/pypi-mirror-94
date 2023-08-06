@@ -1,0 +1,14 @@
+simplification/util.py,sha256=h0_dV4tvFSQjqps4brM3BUMPeculZzyevWR6CoWP87A,5205
+simplification/cutil.cpython-39-x86_64-linux-gnu.so,sha256=rzWL3MQk2oiBMq9yxr-RytFx_65hxQ-IkPBW_UC7zz4,1346128
+simplification/librdp.so,sha256=YMWlEzHlPH9KHBYA3iaWqVPxcAkTQLa-VDWbCDWJ7aE,309320
+simplification/cutil.c,sha256=PowpMWTYjKZp7wHUjMBA7ye5uyauplm3JGAzfoQ0s_A,879690
+simplification/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplification/test/cprofile_rust_cython.py,sha256=z3SMrOtw4ibUh1X2C45W1bVeNM1SY7ReMIFVW359-2g,288
+simplification/test/cprofile_rust_cython_shapely.py,sha256=m0je_DTnUeMBt4qV_gFYf-H5_ZtPgNGaXpx3487EbVg,401
+simplification/test/test.py,sha256=a6KZLNEK6dtlLbGeUurI-MenFSDeFKvZuNCURtRh_Ek,4214
+simplification/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplification/test/cprofile_rust_cython_complex.py,sha256=2tv7PkTickxtw9UEPOlGJoQkUQj33RHfqYmOXldoXnc,368
+simplification-0.5.10.dist-info/top_level.txt,sha256=lJID9g5MiPOFux6Cv4ykfEGrZoG7aOrKCU27q-bVaXA,15
+simplification-0.5.10.dist-info/RECORD,,
+simplification-0.5.10.dist-info/METADATA,sha256=e4VUUi0e4TlaQqmYFNmOxgAvquZ5ExrFNzdVPBHd9M4,5159
+simplification-0.5.10.dist-info/WHEEL,sha256=ieuC8Vv7a4Lxq8jfQJ-x1beMvjYNP_LKilYokdMTB0U,108
