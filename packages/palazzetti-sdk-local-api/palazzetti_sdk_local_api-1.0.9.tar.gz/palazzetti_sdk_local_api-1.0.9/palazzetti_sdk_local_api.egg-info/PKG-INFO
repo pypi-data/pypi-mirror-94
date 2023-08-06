@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: palazzetti-sdk-local-api
+Version: 1.0.9
+Summary: IoT Device Communication Library
+Home-page: https://github.com/marcopal74/palazzetti_local_api
+Author: Marco Palazzetti
+Author-email: marco.palazzetti@me.com
+License: UNKNOWN
+Description: # Palazzetti SDK - Local API
+        
+        ## Library to interact with Palazzetti product via HTTP API
+        
+        Requires Python 3.6 and uses semver.
+        
+        ```python
+        
+        ```
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
