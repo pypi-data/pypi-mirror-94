@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+GitHub_Action_Python_Example/__init__.py
+GitHub_Action_Python_Example/__version__.py
+GitHub_Action_Python_Example/client.py
+GitHub_Action_Python_Example.egg-info/PKG-INFO
+GitHub_Action_Python_Example.egg-info/SOURCES.txt
+GitHub_Action_Python_Example.egg-info/dependency_links.txt
+GitHub_Action_Python_Example.egg-info/requires.txt
+GitHub_Action_Python_Example.egg-info/top_level.txt
