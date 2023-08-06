@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: symtool
+Version: 0.0.3
+Summary: 
+Author: Lars Kellogg-Stedman
+Author-email: lars@oddbit.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: hexdump (>=3.3,<4.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
