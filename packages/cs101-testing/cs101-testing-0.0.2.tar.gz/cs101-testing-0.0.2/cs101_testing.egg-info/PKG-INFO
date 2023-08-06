@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cs101-testing
+Version: 0.0.2
+Summary: Testing module for cs101 labs
+Home-page: https://github.com/karthiksharma/cs101-testing
+Author: Kartikeya Sharma
+Author-email: ksharma@illinois.edu
+License: UNKNOWN
+Description: # cs101-testing
+        
+        testing module for cs101 labs
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
