@@ -1,0 +1,3 @@
+[console_scripts]
+ratio-dumper = ratio_dumper.cli:cli
+
