@@ -1,0 +1,9 @@
+newpipprojectpkg/README.rst,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+newpipprojectpkg/newpipprojectpkg/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+newpipprojectpkg/newpipprojectpkg/someclass.py,sha256=eo6p1YUbHkEuEG_ix6bBeUyqyemfWyLEYyEwFjRGKcI,135
+newpipprojectpkg/pyproject.toml,sha256=QftBHGisKzM8oY6kzu5oBz4_X5EL1QYOQzh0zfBjsRo,312
+newpipprojectpkg/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+newpipprojectpkg/tests/test_newpipprojectpkg.py,sha256=tNFvY2xZgFuSGleNq2PkciXKF0-O6qCcLWL0-gikBJc,97
+newpipprojectpkg-0.0.4.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+newpipprojectpkg-0.0.4.dist-info/METADATA,sha256=f4N7B1v9Zajw1H3PbGsO25arui_Mi4tWUPvRvsp-cC4,297
+newpipprojectpkg-0.0.4.dist-info/RECORD,,
