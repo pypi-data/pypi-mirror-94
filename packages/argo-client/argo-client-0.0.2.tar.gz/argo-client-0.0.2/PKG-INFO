@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: argo-client
+Version: 0.0.2
+Summary: A JSON RPC client library
+Home-page: https://github.com/GaloisInc/argo/tree/master/python
+Author: Galois Inc.
+Author-email: andrew@galois.com
+License: BSD 3-Clause License
+Description: # Argo Client
+        
+        A python library for client connections to [JSON RPC](https://www.jsonrpc.org/specification) servers, specifically designed with the Haskell [Argo](https://github.com/galoisinc/argo) sister library in mind.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
