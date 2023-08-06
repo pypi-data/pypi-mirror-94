@@ -1,0 +1,3 @@
+[console_scripts]
+pacroller = pacroller.main:main
+
