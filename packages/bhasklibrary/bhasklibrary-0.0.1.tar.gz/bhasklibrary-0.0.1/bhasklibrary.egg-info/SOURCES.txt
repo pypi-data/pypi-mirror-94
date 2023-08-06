@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+bhaskarcalculator/__init__.py
+bhasklibrary.egg-info/PKG-INFO
+bhasklibrary.egg-info/SOURCES.txt
+bhasklibrary.egg-info/dependency_links.txt
+bhasklibrary.egg-info/top_level.txt
