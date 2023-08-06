@@ -1,0 +1,108 @@
+# Colored console
+
+A simple module based on **c++** and **bind with a python** for a colored console.\
+[Main page on github]()
+
+#### NOTES:
+
++ Compiled with gcc.
+
++ Ansi will enable automatically!
+
++ **Not support all consoles!**
+
+# `Docs:`
+
+Simply **import** with:
+
+  ```python
+  import colorcon
+  ```
+
+# `Defaults:`
+
+This module contains some defaults as says:
+
+Colors `in class COLORS`:
+
+1. `'black'` or `COLORS.Black`
+2. `'white'` or `COLORS.White`
+3. `'red'` or `COLORS.Red`
+4. `'yellow'` or `COLORS.Yellow`
+5. `'green'` or `COLORS.Green`
+6. `'blue'` or `COLORS.blue`
+7. `'purple'` or `COLORS.Purple`
+8. `'orange'` or `COLORS.Orange`
+
+Modes `in class MODES`:
+
+1. `'bold'` or `COLORS.Black`
+2. `'light'` or `COLORS.White`
+3. `'italic'` or `COLORS.Red`
+4. `'underline'` or `COLORS.Yellow`
+
+   **Note**: these **aren't supported** on all consoles
+5. `'slowblink'` or `COLORS.Green`
+6. `'rapidblick'` or `COLORS.blue`
+7. `'reverse'` or `COLORS.Purple`
+
+## `Members:`
+
+### `colorcon.colored`
+
+Can customize your texts!
+
+#### Examples:
+
+* For **colored text** use:
+
+    ```python
+    colorcon.colored('im colored(with red bg and white fg)!', 'red', COLORS.White)
+    ```
+  or you can create your custom color:
+    ```python
+    colorcon.colored('im rgb', [1, 2, 3])
+    ```
+
+* You can add **modes** to output:
+   ```python
+   colored.colored("i'm bold and i have undeline", modes=['bold', MODES.Underline])
+   ```
+  or you can simply mix modes like:\
+  ```python
+  mode = MODES.bold | MODES.Underline
+  ```
+
+### `colorcon.set_background`
+
+Can set color for background!
+
+#### NOTES:
+
+* Console will not reset(The color will be available)
+
+#### Examples:
+
+* Set background color to red
+  ```python
+  colorcon.set_background('red')  # set background color red
+  colorcon.set_background([255, 0, 0])  # set background color with rgb
+  ```
+
+  Then print some text that are red
+
+  ```python
+  colorcon.output('iam red')
+  ```
+
+### `colorcon.set_foreground`
+
+Same as `colorcon.set_background` but adjust foreground!
+
+### `colorcon.reset_all`
+
+Will reset console(Colors was set will be reset)
+
+### `colorcon.output`
+
+same as python print, But it always flushes stdout after every print!
