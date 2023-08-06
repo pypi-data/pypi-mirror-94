@@ -1,0 +1,10 @@
+LICENSE
+README.md
+abs_imports.py
+setup.cfg
+setup.py
+abs_imports.egg-info/PKG-INFO
+abs_imports.egg-info/SOURCES.txt
+abs_imports.egg-info/dependency_links.txt
+abs_imports.egg-info/entry_points.txt
+abs_imports.egg-info/top_level.txt
