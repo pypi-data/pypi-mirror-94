@@ -1,0 +1,23 @@
+# utils
+iteration_utilities
+
+
+# eda
+seaborn
+missingno
+dataframe_image
+pandas-profiling[notebook]
+pandas_summary
+
+# nlp
+jieba
+
+# other
+jmespath
+simplejson
+pretty_errors
+cachetools
+thefuck
+geopy
+
+
