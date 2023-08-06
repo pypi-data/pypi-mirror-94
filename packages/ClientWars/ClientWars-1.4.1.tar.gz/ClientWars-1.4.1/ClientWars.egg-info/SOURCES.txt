@@ -1,0 +1,15 @@
+README.md
+setup.py
+ClientWars.egg-info/PKG-INFO
+ClientWars.egg-info/SOURCES.txt
+ClientWars.egg-info/dependency_links.txt
+ClientWars.egg-info/requires.txt
+ClientWars.egg-info/top_level.txt
+client_wars/__init__.py
+client_wars/client.py
+client_wars/config.py
+client_wars/game.py
+client_wars/map.py
+client_wars/player.py
+client_wars/tile.py
+client_wars/websocket_updater.py
