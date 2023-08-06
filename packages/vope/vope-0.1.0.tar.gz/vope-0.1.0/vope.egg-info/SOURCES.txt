@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+vope/__init__.py
+vope/myfunctions.py
+vope.egg-info/PKG-INFO
+vope.egg-info/SOURCES.txt
+vope.egg-info/dependency_links.txt
+vope.egg-info/requires.txt
+vope.egg-info/top_level.txt
