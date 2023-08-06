@@ -1,0 +1,7 @@
+zstandard
+pandas
+xarray
+scipy
+boto3
+orjson
+requests
