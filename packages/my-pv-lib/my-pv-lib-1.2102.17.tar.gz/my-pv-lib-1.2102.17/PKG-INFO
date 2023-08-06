@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: my-pv-lib
+Version: 1.2102.17
+Summary: my-PV python library
+Home-page: https://www.my-pv.com/de/info/downloads
+Author: my-PV GmbH
+Author-email: info@my-pv.com
+License: UNKNOWN
+Description: # Introduction 
+        TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.
+        
+        # Contribute
+        Please report bug, feature requests or your own code to info@my-pv.com 
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
