@@ -1,0 +1,3 @@
+[console_scripts]
+linkedin = linkedin.__main__:main
+
