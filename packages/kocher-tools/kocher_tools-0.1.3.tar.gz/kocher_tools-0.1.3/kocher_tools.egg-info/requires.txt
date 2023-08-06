@@ -1,0 +1,6 @@
+pyyaml
+pandas
+Biopython
+sqlalchemy
+gffutils
+tox
