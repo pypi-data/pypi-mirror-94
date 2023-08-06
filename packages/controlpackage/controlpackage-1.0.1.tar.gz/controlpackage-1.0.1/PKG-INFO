@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: controlpackage
+Version: 1.0.1
+Summary: Control Package to verify PyPI source
+Home-page: https://github.com/danfaizer/controlpackage
+Author: Daniel Beneyto
+Author-email: danfaizer@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
