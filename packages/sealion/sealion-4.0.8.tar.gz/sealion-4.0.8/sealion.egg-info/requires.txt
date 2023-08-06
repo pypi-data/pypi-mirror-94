@@ -1,0 +1,9 @@
+numpy
+joblib
+pandas
+scipy
+tqdm
+multiprocess
+seaborn
+Cython
+setuptools
