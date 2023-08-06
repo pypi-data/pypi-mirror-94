@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pkdgrav2matlab
+Version: 0.0.1
+Summary: A small package for converting pkdgrav binary output to matlab.
+Home-page: https://github.com/cstatz/pkdgrav2matlab
+Author: Christoph Statz
+Author-email: christoph.statz@tu-dresden.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# PKDGrav to MATLAB converter
+Converts pkdgrav binary output (ss) to matlab readable files.
+
+## Install
+ * Install directly from pip or run `pip install .` inside the source directory
+
+## Usage 
+ * Execute in shell: `ss2mat <filename>`
+ * If you add `--si` the data is converted into SI-units (sm-kg, au-m, yr/2pi-s, sm/au^3-g/cm^3).
+ * If you add `--endianess` you can specify the endianess of the input data (depends on the platform of the file creator).
+ * Follow the instructions.
+
+## Notes for developers
+
+### Versioning
+ * Versioning is done using git.
+ * The primary repository is at [github.com](https://github.com/cstatz/pkdgrav2matlab)
+
+### Coding style
+ * We try to adhere to [Python PEP8](https://www.python.org/dev/peps/pep-0008/)
+ * If you use PyCharm: activate the PEP8 compliance check
+
+

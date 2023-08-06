@@ -1,0 +1,3 @@
+[console_scripts]
+ss2mat = pkdgrav2matlab:main
+
