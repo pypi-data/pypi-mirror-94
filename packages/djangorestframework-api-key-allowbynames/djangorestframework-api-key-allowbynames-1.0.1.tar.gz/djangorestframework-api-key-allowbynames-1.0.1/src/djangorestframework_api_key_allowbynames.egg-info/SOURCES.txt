@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/djangorestframework_api_key_allowbynames.egg-info/PKG-INFO
+src/djangorestframework_api_key_allowbynames.egg-info/SOURCES.txt
+src/djangorestframework_api_key_allowbynames.egg-info/dependency_links.txt
+src/djangorestframework_api_key_allowbynames.egg-info/requires.txt
+src/djangorestframework_api_key_allowbynames.egg-info/top_level.txt
+src/rest_framework_api_key_allowbynames/__init__.py
+src/rest_framework_api_key_allowbynames/decorator.py
