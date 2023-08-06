@@ -1,0 +1,9 @@
+candella_sdk/__init__.py,sha256=jIoiE1Vtc5sEHGiJLPhXnTZyODLgLFNn-2qb5FsYCyg,331
+candella_sdk/__main__.py,sha256=XW0AqsBt5wUpea3FyeId3Z6Qm3gA0tGsUhC2O3bSdMU,364
+candella_sdk/cli.py,sha256=Zlf4ZICf3S-oQZX6gDvkUtSiI4dtrs_3X4xuaZQ1xeQ,2781
+candella_sdk/sdk.py,sha256=FweT5dWlvZYqdno-VI9VF3UiQCyS-KqoQCbdJGSwr5E,4615
+candella_sdk-1.0.0a1.dist-info/entry_points.txt,sha256=oKzokCFAfNF0LX4jVlN0RHgFg9C_wPvGNP4_q5Vq5qk,50
+candella_sdk-1.0.0a1.dist-info/LICENSE,sha256=S4nUUYvRNatO4VSnvOciJGtXqYw9fvwaCUCYmBYMK9E,16724
+candella_sdk-1.0.0a1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+candella_sdk-1.0.0a1.dist-info/METADATA,sha256=rKtVCJi94s3QsZNDkUmLG_J8Fr82pwWKLr4hdqXkbec,657
+candella_sdk-1.0.0a1.dist-info/RECORD,,

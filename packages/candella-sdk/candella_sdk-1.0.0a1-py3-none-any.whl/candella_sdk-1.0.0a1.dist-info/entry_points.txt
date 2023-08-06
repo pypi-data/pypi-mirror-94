@@ -1,0 +1,3 @@
+[console_scripts]
+candella-sdk=candella_sdk:main
+
