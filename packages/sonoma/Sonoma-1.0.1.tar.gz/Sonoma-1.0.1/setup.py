@@ -1,0 +1,22 @@
+import setuptools
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="Sonoma",
+    version="1.0.1",
+    author="hostinfodev",
+    author_email="support@host-info.net",
+    description="A tiny, programmable http-server crafting framework that is built with security and simplicity in mind.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/hostinfodev/sonoma",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6',
+)
