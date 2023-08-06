@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: dippy.bot
+Version: 0.1.0a17
+Summary: A Discord bot framework built to simplify the complicated parts of bot development.
+Home-page: https://github.com/ZechCodes/Dippy
+License: MIT
+Keywords: discord,framework,bot
+Author: Zech Zimmerman
+Author-email: hi@zech.codes
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Dist: bevy (>=0.4.1,<0.5.0)
+Requires-Dist: discord.py (>=1.6.0,<2.0.0)
+Requires-Dist: pydantic (>=1.6.1,<2.0.0)
+Requires-Dist: pyyaml (>=5.3.1,<6.0.0)
+Project-URL: Documentation, https://github.com/ZechCodes/Dippy/blob/main/README.md
+Project-URL: Repository, https://github.com/ZechCodes/Dippy
+Description-Content-Type: text/markdown
+
+A Discord bot framework built to simplify the complicated parts of bot development.
+
