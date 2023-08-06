@@ -1,0 +1,124 @@
+Metadata-Version: 1.1
+Name: jupyter-helpers
+Version: 0.2.3
+Summary: A collection of helpers for using IPython in Jupyter(Lab)
+Home-page: https://github.com/krassowski/jupyter-helpers
+Author: Michal Krassowski
+Author-email: krassowski.michal+pypi@gmail.com
+License: MIT
+Description: Jupyter helpers for IPython
+        ===========================
+        
+        |flake8| |pypi-version|
+        
+        This collection of IPython helpers optimized for JupyterLab users will
+        help you to:
+        
+        -  Play a sound once the computations have finished (or failed)
+        -  Integrate the notifications with your OS (ready for GNOME shell)
+        -  Enable auto-completion for rpy2 (great for using ggplot2!) - now also
+           available in
+           `jupyterlab-lsp <https://github.com/krassowski/jupyterlab-lsp>`__
+        -  Summarize dictionaries and other structures in a nice table
+        -  Selectively import from other notebooks
+        -  Scroll to the recently executed cell on error or when opening the
+           notebook
+        -  Use interactive (following) tail for long outputs
+        
+        The examples are available in
+        `demos <https://github.com/krassowski/jupyter-helpers/tree/master/demos>`__
+        directory. Please, see the `Productivity tips for Jupyter
+        (Python) <https://medium.com/@krassowski.michal/productivity-tips-for-jupyter-python-a3614d70c770>`__
+        article for introduction and more code samples. For jump-to-definition
+        feature, please visit
+        `jupyterlab-lsp <https://github.com/krassowski/jupyterlab-lsp>`__.
+        
+        Installation
+        ~~~~~~~~~~~~
+        
+        For basic functionality:
+        
+        .. code:: bash
+        
+            pip3 install jupyter_helpers
+        
+        To include interactive widgets:
+        
+        .. code:: bash
+        
+            pip3 install ipywidgets
+            jupyter labextension install @jupyter-widgets/jupyterlab-manager
+        
+        To use advanced GNOME integration, run ``setup.sh`` script from the
+        installation directory (PRs welcome to propose a better setup
+        procedure).
+        
+        To check if you have required system libraries for the better GNOME
+        integration, see `notify-send.sh
+        repository <https://github.com/vlevit/notify-send.sh>`__.
+        
+        Showcase
+        ~~~~~~~~
+        
+        Notifications
+        ^^^^^^^^^^^^^
+        
+        .. figure:: https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/notifications_integration.gif
+           :alt: Notifications
+        
+           Notifications
+        
+        Tailing outputs
+        ^^^^^^^^^^^^^^^
+        
+        .. figure:: https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/tail.gif
+           :alt: Following tail
+        
+           Following tail
+        
+        Auto-completion in R cells
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        
+        .. figure:: https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/r_autocomplete.gif
+           :alt: R auto-completion
+        
+           R auto-completion
+        
+        Neat namespaces
+        ^^^^^^^^^^^^^^^
+        
+        .. figure:: https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/neat_namespace.png
+           :alt: NeatNamespace
+        
+           NeatNamespace
+        
+        Selective imports
+        ^^^^^^^^^^^^^^^^^
+        
+        .. figure:: https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/selective_import.png
+           :alt: Selective imports
+        
+           Selective imports
+        
+        .. |flake8| image:: https://github.com/krassowski/jupyter-helpers/workflows/Flake8/badge.svg
+           :target: https://github.com/krassowski/jupyter-helpers/actions?query=workflow%3A%22flake8%22
+        .. |pypi-version| image:: https://img.shields.io/pypi/v/jupyter-helpers.svg
+           :target: https://python.org/pypi/jupyter-helpers
+        
+Keywords: ipython,jupyter,jupyterlab,notebook,helpers
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.9
