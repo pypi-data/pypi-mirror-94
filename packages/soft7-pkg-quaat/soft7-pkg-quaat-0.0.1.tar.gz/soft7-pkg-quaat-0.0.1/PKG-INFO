@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: soft7-pkg-quaat
+Version: 0.0.1
+Summary: SOFT7 semantic interoperability framework
+Home-page: https://github.com/quaat/soft7
+Author: Quaat
+Author-email: nims@quaat.com
+License: UNKNOWN
+Description: # SOFT7
+        
+        Coming soon...
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
