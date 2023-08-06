@@ -1,0 +1,7 @@
+lxml>=3.6.4
+PyYaml>=3.12
+future
+PySocks>=1.6.7
+
+[keyring]
+keyring>=13.0.0
