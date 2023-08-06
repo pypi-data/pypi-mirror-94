@@ -1,0 +1,11 @@
+name: ncar-jobqueue-dev
+channels:
+  - conda-forge
+dependencies:
+  - dask-jobqueue
+  - pip
+  - pre-commit
+  - pytest
+  - pytest-cov
+  - pip:
+      - -e ..

@@ -1,0 +1,2 @@
+dask-jobqueue>=0.7.2
+jinja2
