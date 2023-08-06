@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+minecraft_stores/Minecraft_Store.py
+minecraft_stores/__init__.py
+minecraft_stores/data.py
+minecraft_stores.egg-info/PKG-INFO
+minecraft_stores.egg-info/SOURCES.txt
+minecraft_stores.egg-info/dependency_links.txt
+minecraft_stores.egg-info/not-zip-safe
+minecraft_stores.egg-info/requires.txt
+minecraft_stores.egg-info/top_level.txt
