@@ -1,0 +1,7 @@
+botocore>=1.12.54
+
+[:python_version < "3.8"]
+typing-extensions>=3.7
+
+[signals]
+blinker<2.0,>=1.3
