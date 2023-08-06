@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+src/pysoleno.egg-info/PKG-INFO
+src/pysoleno.egg-info/SOURCES.txt
+src/pysoleno.egg-info/dependency_links.txt
+src/pysoleno.egg-info/requires.txt
+src/pysoleno.egg-info/top_level.txt
+tests/Bmod.png
+tests/Save_test_files.m
+tests/matlab_files_handler.py
+tests/plot_pysoleno.py
+tests/test1.field
+tests/test1.inductance
+tests/test1.magnet
+tests/test_pysoleno.py
