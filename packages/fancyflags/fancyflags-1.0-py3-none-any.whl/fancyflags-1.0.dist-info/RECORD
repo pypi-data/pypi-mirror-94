@@ -1,0 +1,16 @@
+fancyflags/__init__.py,sha256=KwAljHay5uemNLsRQtqVx59L5K3Pm8bdUh3HDx-EwNM,1677
+fancyflags/_argument_parsers.py,sha256=Gcxit4WWJYcHJbCYqWBdFUMDrtLZXoVAPMikXGBHyuY,4331
+fancyflags/_argument_parsers_test.py,sha256=-nL_VeN3duxKAlQqCxnp-fncdt-X6GvvX6w4wkWYIrs,4407
+fancyflags/_auto.py,sha256=a9tDIqdRqudHN1JyfYOdSFua5hnH04O6HknFooiHtCE,4203
+fancyflags/_auto_test.py,sha256=zUcC4EaA3gFYBC9vKOGemleneLJVRpJfYjvKJoG1Fkw,5677
+fancyflags/_definitions.py,sha256=-pIOzowfX4v9XIacUaSytujZcoDx9rZ6Us1Ywm_cdSo,14151
+fancyflags/_definitions_test.py,sha256=XxXR5ulEVP2jtP7Eo_S-Qv8WU9_uYJ3yEmtyEaeQIS0,12782
+fancyflags/_flags.py,sha256=hkuhFEtwBaumqsp9JwOCsIgwdZ-0ld935DKde12iRb4,3940
+fancyflags/_flags_test.py,sha256=eD9-5HXamZMuX6AecET_r1iAdlOJfHSLH1X2eP6iLAQ,2620
+fancyflags/_flagsaver_test.py,sha256=v2dZ6bwHGnxCahY6FmX1uEXGFQp1DzY8tLCm-Low11o,4218
+fancyflags/_metadata.py,sha256=UmUdqVN6oqw_PPgUssyxdWuZ3j9rd8eZZcIBUycD2D4,914
+fancyflags-1.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+fancyflags-1.0.dist-info/METADATA,sha256=8hUzuajFS9Fqt9qnlI7lM5DzOMJT-lvtGazpvSbBxnk,781
+fancyflags-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fancyflags-1.0.dist-info/top_level.txt,sha256=M_L3cGa4LFvzYhRyKlKs7C4w6z1eedQ_JuTsRvfnoYI,11
+fancyflags-1.0.dist-info/RECORD,,
