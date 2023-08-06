@@ -1,0 +1,10 @@
+piwaterflow/__init__.py,sha256=Y13V-ngAb_dZeUr4dV-3rOpI41OURRGR7wzGe7GxwvU,78
+piwaterflow/config-template.yml,sha256=Hbyl7aLFS2bpjCLHB4DPlw8trcRbCXulu5KbG5WLiXM,299
+piwaterflow/config.yml,sha256=OTDEjij0ooGYfO7lJ1YBPYAy1RxSzpzsfY06GLXRt6Q,301
+piwaterflow/lastprogram.yml,sha256=VUQ5nCbqjumCxGMHAStNi3knz3UdfGcn6j67dTrTvjM,42
+piwaterflow/waterflow.py,sha256=Aw9g1JXdBYZLlK_m7Sb-CYF_lhl8VLSr9U2UxUkzs2g,10517
+piwaterflow/webservice.py,sha256=PwNVWy3BQPX2FcCQRHW-kLaiW6rj6qo4N7tn-zrvQPQ,5415
+piwaterflow-0.0.13.dist-info/METADATA,sha256=WrkGBesldfv0Fen9iQ5v6MrfpQrZVnUYg_mW7zQ0cn0,1060
+piwaterflow-0.0.13.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+piwaterflow-0.0.13.dist-info/top_level.txt,sha256=WT1jEjQzB50D8s6AqYH6M9h4wtBGAhJlO2CgQH1RaK4,12
+piwaterflow-0.0.13.dist-info/RECORD,,
