@@ -1,0 +1,10 @@
+README.md
+setup.py
+oqi/__init__.py
+oqi/oqi.py
+oqi.egg-info/PKG-INFO
+oqi.egg-info/SOURCES.txt
+oqi.egg-info/dependency_links.txt
+oqi.egg-info/entry_points.txt
+oqi.egg-info/requires.txt
+oqi.egg-info/top_level.txt
