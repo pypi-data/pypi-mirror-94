@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: Gautam-Calculator
+Version: 0.0.1
+Summary: A package offering basic calculator functions such as addition, subtraction, multiplication, division and exponentiation.
+Home-page: UNKNOWN
+Author: Gautam Chaurasia
+Author-email: gautamchaurasia501@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: div,sub,mul,add,exp
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License

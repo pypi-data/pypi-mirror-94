@@ -1,0 +1,1 @@
+ A package offering basic calculator functions such as addition, subtraction, multiplication, division and exponentiation.
