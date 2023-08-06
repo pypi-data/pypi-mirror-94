@@ -1,0 +1,15 @@
+jenkins_job_manager/__init__.py,sha256=6bV_nsPP-4FipN-Be3FLg_091mtybitPVgRGMse9eY4,167
+jenkins_job_manager/cli.py,sha256=OJNa5VONtiw2incVR9TX5TgdI6sUiCsKllLu2DNFPBU,6512
+jenkins_job_manager/connect_config.py,sha256=SB-x0QV4lE4Yf4luW5OlOstJ7aRn_PoMJegCX3nE5jE,5293
+jenkins_job_manager/core.py,sha256=ID2eJqhKTsBb7M0MLLa2_lGm36t_SFWIihkRuwLEDUg,14770
+jenkins_job_manager/j2_templates/default.j2,sha256=aycw-y9oVsAtjpnSa_VMvW43jzcigkKx0PTo0yEXTOM,660
+jenkins_job_manager/j2_templates/json.j2,sha256=6UTKnulKnBvIIped4htf2eXCiMIXVPJXisoYLwqpx_Y,360
+jenkins_job_manager/j2_templates/raw_xml_import.j2,sha256=1jTwQ1nnG-95eYf1HxXJAjLdyxQsIkZyM8Nz2YfXrUI,164
+jenkins_job_manager/j2_templates/yaml.j2,sha256=ldW586G3BJWob4KDi3CFgRMRUUgq14zvGwaTeuVTaRo,439
+jenkins_job_manager/raw_ext.py,sha256=KWEy4gvJ9P1iBReDYBeS564ORymgWABve8a1Rc-5Ubg,2413
+jenkins_job_manager/xml_change.py,sha256=qeaRtFFG7sApuI9T4bnn-neOCfpq3PWAENvB9Ht4ahU,3201
+jenkins_job_manager-0.6.5.dist-info/entry_points.txt,sha256=yP3uXkDXnB4CSSDVGDh137nwlNtLMqE9au6qUcXGt98,51
+jenkins_job_manager-0.6.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+jenkins_job_manager-0.6.5.dist-info/WHEEL,sha256=Q99itqWYDhV793oHzqzi24q7L7Kdiz6cb55YDfTXphE,84
+jenkins_job_manager-0.6.5.dist-info/METADATA,sha256=-7IzDjk-PAOKP5a49oIACAbgniHZ2r2i4agPkEzWZ3E,595
+jenkins_job_manager-0.6.5.dist-info/RECORD,,
