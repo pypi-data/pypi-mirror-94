@@ -1,0 +1,11 @@
+expai/__init__.py,sha256=1e-wLd13twXsupMhkJStn0lWa6nW2ScbKU6E8xhDbWU,44
+expai/expai_model.py,sha256=U9ppEaHG4t0Z2uHtuTtBTslkHWbxNRowa3erkUe-8QU,6880
+expai/expai_project.py,sha256=N27B7tD7EOHp-_JpdpChumAFaFQC1GS_n80sv7vMdt8,15307
+expai/expai_requests.py,sha256=fHUwTpO_vQiYluXoprxZGiXp8Y9V2jn6lAdj4u-Kvvk,6069
+expai/test_main.py,sha256=b4zJ1DsBtvI3nJHuIvXor0STesoN5e1TDWsjoBaaS7Q,1325
+expai/utils.py,sha256=iytazeWnwnZtONzTT83Fq6UAx8AG2kOIORDu3Bg3vag,703
+expai-0.0.8.5.dist-info/LICENSE.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+expai-0.0.8.5.dist-info/METADATA,sha256=_dh-QgsUef90g_KXdSbNS-dA-m9QTuTbaRg_zcCKZMY,453
+expai-0.0.8.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+expai-0.0.8.5.dist-info/top_level.txt,sha256=_1IF6cQBdmUj1G2IlxOts1S0gPzBXQw3cLBGSuIdN2M,6
+expai-0.0.8.5.dist-info/RECORD,,
