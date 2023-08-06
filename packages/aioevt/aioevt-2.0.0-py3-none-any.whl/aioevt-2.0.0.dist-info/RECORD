@@ -1,0 +1,11 @@
+aioevt/__init__.py,sha256=91JP2rS53t31Lu3SVyEhlJmjOdWZlI3ABSz1fTHK3Vo,485
+aioevt/event.py,sha256=oJJAc1Zla5wZX-E9Oct6vgatbhy51A9DrhDvAZqKmcI,605
+aioevt/manager.py,sha256=TwFGp32ui12ulhT7_Xe3Dqa6Rj20omGtgHnt7Y8H4XU,8235
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_event.py,sha256=CnuKe7qu0Xqd-lYHB2mRdvVIQPMey93zMDfIHF-WiVs,1277
+tests/test_manager.py,sha256=dYR6XV9D5egt7VjpCSkeCqC-BMISIfn1QH0A7phszBg,5767
+aioevt-2.0.0.dist-info/LICENSE,sha256=Czg9WmPaZE9ijZnDOXbqZIftiaqlnwsyV5kt6sEXHms,35821
+aioevt-2.0.0.dist-info/METADATA,sha256=lpsoxJN0-Gnm6u0hhBLrwTeM5MEvwNGdlBLjHRSttwc,4622
+aioevt-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aioevt-2.0.0.dist-info/top_level.txt,sha256=iE8NKQP6lcExZP_GmjtQW2SUChcF7uqcad21wxwRQx0,13
+aioevt-2.0.0.dist-info/RECORD,,
