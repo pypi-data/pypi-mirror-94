@@ -1,0 +1,13 @@
+dbsettings/__init__.py,sha256=4HH8JvGa0KGFOQQ8zOSk9nv4pYN6FTEja7XsLahr-Cs,54
+dbsettings/admin.py,sha256=ZKYEl2I-jAMZTlu3dPpdvKvIy6SUdmzEkenotTAlEfM,130
+dbsettings/apps.py,sha256=3KfAe08pFYpMlA4vPyWxLTHWHoohPkDuJ93m0E96VME,134
+dbsettings/functions.py,sha256=GPsBFjSIqfztLf8t6K3uQwq_BAgBCZ-xm8T9NQI1VBE,1619
+dbsettings/models.py,sha256=4TvZoBMKtyh6tpW0dv3wTqKZZDog16ygUeaGoKM5ca8,227
+dbsettings/views.py,sha256=K_V567yeh1Po8n5XLvoOwGn2qpv6TjsUASwVzHWiVEc,35
+dbsettings/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbsettings/templatetags/dbsetting.py,sha256=VhSZle7ECZM2ty7P1PpCSn6mB022g-CacOD4cMy1OXQ,189
+dbsettings-0.9.6.dist-info/LICENSE,sha256=WexSOZIqc78K7Bd8qrhu2E5W68h_u82uGO75kYxQbgU,1282
+dbsettings-0.9.6.dist-info/METADATA,sha256=mBxV4LQU-n6dz0XhlCXFkrHDjTcm_HNERzv2CiU6duA,2158
+dbsettings-0.9.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dbsettings-0.9.6.dist-info/top_level.txt,sha256=FRVAXDvGSLbAKAxcHSGt1JboKu1IJjnp2eBdMjQWdIQ,11
+dbsettings-0.9.6.dist-info/RECORD,,
