@@ -1,0 +1,9 @@
+README.md
+setup.py
+BIDS_stb.egg-info/PKG-INFO
+BIDS_stb.egg-info/SOURCES.txt
+BIDS_stb.egg-info/dependency_links.txt
+BIDS_stb.egg-info/entry_points.txt
+BIDS_stb.egg-info/requires.txt
+BIDS_stb.egg-info/top_level.txt
+bids_stb/__init__.py
