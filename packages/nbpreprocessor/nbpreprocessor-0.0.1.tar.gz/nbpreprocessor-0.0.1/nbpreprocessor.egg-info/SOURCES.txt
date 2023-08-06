@@ -1,0 +1,15 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+nbpreprocessor/__init__.py
+nbpreprocessor/_nbdev.py
+nbpreprocessor/core.py
+nbpreprocessor.egg-info/PKG-INFO
+nbpreprocessor.egg-info/SOURCES.txt
+nbpreprocessor.egg-info/dependency_links.txt
+nbpreprocessor.egg-info/entry_points.txt
+nbpreprocessor.egg-info/not-zip-safe
+nbpreprocessor.egg-info/top_level.txt
