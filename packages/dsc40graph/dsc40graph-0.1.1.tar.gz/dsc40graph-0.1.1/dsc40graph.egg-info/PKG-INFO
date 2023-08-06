@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dsc40graph
+Version: 0.1.1
+Summary: A simple graph library used in DSC 40B @ UCSD.
+Home-page: https://github.com/eldridgejm/dsc40graph
+Author: Justin Eldridge
+Author-email: jeldridge@ucsd.edu
+License: UNKNOWN
+Description: dsc40graph
+        ==========
+        
+        A simple graph library used in DSC 40B at UCSD.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
