@@ -1,0 +1,9 @@
+graphviz
+pynput
+h5py
+pillow
+piexif
+scipy
+tensorflow-probability
+numpy<1.19
+torch>=1.6.0
