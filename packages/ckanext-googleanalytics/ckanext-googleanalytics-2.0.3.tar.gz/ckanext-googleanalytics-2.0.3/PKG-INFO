@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ckanext-googleanalytics
+Version: 2.0.3
+Summary: Add GA tracking and reporting to CKAN instance
+Home-page: UNKNOWN
+Author: Seb Bacon
+Author-email: seb.bacon@gmail.com
+License: UNKNOWN
+Description: 	
+Platform: UNKNOWN
+Provides-Extra: requirements
