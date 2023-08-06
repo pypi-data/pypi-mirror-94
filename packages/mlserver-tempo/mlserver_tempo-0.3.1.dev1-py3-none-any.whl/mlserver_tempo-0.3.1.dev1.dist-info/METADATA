@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: mlserver-tempo
+Version: 0.3.1.dev1
+Summary: MLOps runtime for MLServer
+Home-page: https://github.com/SeldonIO/MLServer.git
+Author: Seldon Technologies Ltd.
+Author-email: hello@seldon.io
+License: Apache 2.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: mlserver
+Requires-Dist: mlops-tempo
+
+# Tempo runtime for MLServer
+
+This package provides a MLServer runtime capable of running `tempo` pipelines.
+
+## Usage
+
+You can install the runtime, alongside `mlserver`, as:
+
+```bash
+pip install mlserver mlserver-tempo
+```
+
+For further information on how to use MLServer with `tempo` pipelines, you can
+check out the [github.com/SeldonIO/MLServer
+repository](https://github.com/SeldonIO/MLServer).
+
+
