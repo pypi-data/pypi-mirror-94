@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: rnupythontools
+Version: 0.1
+Summary: Módulo para exemplificar construção de projetos Python no curso PyTools
+Home-page: https://github.com/rousuy/lib_pythonpro
+Author: Rodrigo Norio
+Author-email: rousuy@gmail.com
+License: GNU AFFERO GENERAL PUBLIC LICENSE
+Description: [![Build Status](https://travis-ci.com/rousuy/lib_pythonpro.svg?branch=main)](https://travis-ci.com/rousuy/lib_pythonpro)
+        [![Python 3](https://pyup.io/repos/github/rousuy/lib_pythonpro/python-3-shield.svg)](https://pyup.io/repos/github/rousuy/lib_pythonpro/)
+        [![Updates](https://pyup.io/repos/github/rousuy/lib_pythonpro/shield.svg)](https://pyup.io/repos/github/rousuy/lib_pythonpro/)
+        
+        # lib_pythonpro
+        
+        Repositório para exemplificar construção de projetos em Python
+        
+        Link do curso: [Python Pro](https://pythonprobr.appspot.com/)
+        
+        Suportada a versão 3 do Python
+        
+        Tópicos a serem abordados:
+          - Requirements
+          - Flake8
+        
+        ### **Requirements**
+        
+        Para Instalar:
+        ###### console:
+        ```
+        pip install -r requirements.txt
+        ``` 
+        
+        ### **Flake8**
+        
+        Para instalar:
+        ###### console:
+        ```
+        $ flake8
+        ```
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Pytest
+Description-Content-Type: text/markdown
