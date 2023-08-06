@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: predicto
+Version: 1.1.0
+Summary: A sequence generator to extract frames uniformly from a video and feed it to a time-distributed layer, without labels.
+Home-page: https://github.com/Atharva-Peshkar/predicto
+Author: Atharva Peshkar and Atharva Khedkar
+Author-email: peshkaratharva@gmail.com
+License: UNKNOWN
+Description: # predicto
+        A frame generator to extract frames uniformly from a video and feed it to a time-distributed layer, without labels. This generator is mainly for feeding data to models for prediction.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

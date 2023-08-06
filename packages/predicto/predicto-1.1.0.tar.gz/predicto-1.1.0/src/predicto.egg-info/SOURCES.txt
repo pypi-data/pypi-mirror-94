@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/predicto.egg-info/PKG-INFO
+src/predicto.egg-info/SOURCES.txt
+src/predicto.egg-info/dependency_links.txt
+src/predicto.egg-info/requires.txt
+src/predicto.egg-info/top_level.txt
+src/predicto_video/__init__.py
+src/predicto_video/generator.py
+src/predicto_video/utils.py
