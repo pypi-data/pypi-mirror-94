@@ -1,0 +1,3 @@
+include *.rst *.py
+recursive-include src/pyramid_fullauth *.py *.yaml
+recursive-include src/pyramid_fullauth/resources *.mako *.pot
