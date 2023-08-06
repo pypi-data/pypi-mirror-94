@@ -1,0 +1,12 @@
+OpenShadingLanguage 1.00
+# Compiled by oslc 1.10.10
+# options: -q -O2 -I/Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders -I/Users/tylergubala/Code/Python/blenderpy/Blender/lib/darwin/osl/shaders -o /Users/tylergubala/Code/Python/blenderpy/build/darwin/intern/cycles/kernel/shaders/node_holdout.oso
+shader node_holdout
+oparam	closure color	Holdout			%read{2147483647,-1} %write{0,0} %initexpr
+const	string	$const1	"holdout"		%read{0,0} %write{2147483647,-1}
+code Holdout
+# /Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_holdout.osl:19
+# shader node_holdout(output closure color Holdout = holdout())
+	closure		Holdout $const1 	%filename{"/Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_holdout.osl"} %line{19} %argrw{"wr"}
+code ___main___
+	end

@@ -1,0 +1,11 @@
+OpenShadingLanguage 1.00
+# Compiled by oslc 1.10.10
+# options: -q -O2 -I/Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders -I/Users/tylergubala/Code/Python/blenderpy/Blender/lib/darwin/osl/shaders -o /Users/tylergubala/Code/Python/blenderpy/build/darwin/intern/cycles/kernel/shaders/node_output_surface.oso
+surface node_output_surface
+param	closure color	Surface			%read{0,0} %write{2147483647,-1}
+global	closure color	Ci	%read{2147483647,-1} %write{0,0}
+code ___main___
+# /Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_output_surface.osl:21
+#   Ci = Surface;
+	assign		Ci Surface 	%filename{"/Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_output_surface.osl"} %line{21} %argrw{"wr"}
+	end

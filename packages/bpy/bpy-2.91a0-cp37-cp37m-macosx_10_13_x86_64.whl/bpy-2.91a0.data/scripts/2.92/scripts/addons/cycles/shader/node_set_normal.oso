@@ -1,0 +1,23 @@
+OpenShadingLanguage 1.00
+# Compiled by oslc 1.10.10
+# options: -q -O2 -I/Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders -I/Users/tylergubala/Code/Python/blenderpy/Blender/lib/darwin/osl/shaders -o /Users/tylergubala/Code/Python/blenderpy/build/darwin/intern/cycles/kernel/shaders/node_set_normal.oso
+surface node_set_normal
+param	normal	Direction	0 0 0		%read{2,3} %write{0,0} %initexpr
+oparam	normal	Normal	0 0 0		%read{2147483647,-1} %write{1,3} %initexpr
+global	normal	N	%read{0,1} %write{2,2}
+code Direction
+# /Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_set_normal.osl:19
+# surface node_set_normal(normal Direction = N, output normal Normal = N)
+	assign		Direction N 	%filename{"/Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_set_normal.osl"} %line{19} %argrw{"wr"}
+code Normal
+# /Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_set_normal.osl:19
+# surface node_set_normal(normal Direction = N, output normal Normal = N)
+	assign		Normal N 	%filename{"/Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_set_normal.osl"} %line{19} %argrw{"wr"}
+code ___main___
+# /Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_set_normal.osl:21
+#   N = Direction;
+	assign		N Direction 	%filename{"/Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_set_normal.osl"} %line{21} %argrw{"wr"}
+# /Users/tylergubala/Code/Python/blenderpy/Blender/blender/intern/cycles/kernel/shaders/node_set_normal.osl:22
+#   Normal = Direction;
+	assign		Normal Direction 	%line{22} %argrw{"wr"}
+	end
