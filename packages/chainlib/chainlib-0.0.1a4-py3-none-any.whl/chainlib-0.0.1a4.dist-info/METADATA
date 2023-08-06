@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: chainlib
+Version: 0.0.1a4
+Summary: Generic blockchain access library and tooling
+Home-page: https://gitlab.com/nolash/chainlib
+Author: Louis Holbrook
+Author-email: dev@holbrook.no
+License: GPL3
+Keywords: cic,cryptocurrency,ethereum,solidarity,mutual_credit
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Internet
+Requires-Python: >=3.6
+Requires-Dist: cryptocurrency-cli-tools (==0.0.4)
+Requires-Dist: faker (==4.17.1)
+Requires-Dist: crypto-dev-signer (~=0.4.13rc2)
+Requires-Dist: pysha3 (==1.0.2)
+Requires-Dist: hexathon (==0.0.1a2)
+Requires-Dist: eth-abi (==2.1.1)
+Requires-Dist: eth-keys (==0.3.3)
+Requires-Dist: websocket-client (==0.57.0)
+Requires-Dist: redis (==3.5.3)
+
+UNKNOWN
+
+
