@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+cleaninsights/__init__.py
+cleaninsights/campaign.py
+cleaninsights/conf.py
+cleaninsights/datapoint.py
+cleaninsights/event.py
+cleaninsights/store.py
+cleaninsights/visit.py
+cleaninsights.egg-info/PKG-INFO
+cleaninsights.egg-info/SOURCES.txt
+cleaninsights.egg-info/dependency_links.txt
+cleaninsights.egg-info/requires.txt
+cleaninsights.egg-info/top_level.txt

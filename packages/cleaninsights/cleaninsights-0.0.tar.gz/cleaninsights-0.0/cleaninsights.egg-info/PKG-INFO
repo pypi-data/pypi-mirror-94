@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: cleaninsights
+Version: 0.0
+Summary: CleanInsights gives developers a safe, sustainable, and secure way to gather insights about their users using cutting edge techniques like differential privacy, onion routing, certificate pinning and more.
+Home-page: https://gitlab.com/cleaninsights/clean-insights-python-sdk/
+Author: Iain Learmonth / Guardian Project
+Author-email: iain@learmonth.me
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.com/keanuapp/clean-insights-python-sdk/-/issues
+Project-URL: Source Code, https://gitlab.com/keanuapp/clean-insights-python-sdk
+Description: Clean Insights Python SDK
+        =========================
+        
+        This document describes how to get started using the Clean Insights SDK for
+        Python. 
+        [CleanInsights](https://cleaninsights.org) gives developers a safe,
+        sustainable, and secure way to gather insights about their users using cutting
+        edge techniques like differential privacy, onion routing, certificate pinning
+        and more.
+        
+Keywords: privacy metrics analytics
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
