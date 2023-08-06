@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: deepNets
+Version: 0.1.5
+Summary: A basic deep learning tool
+Home-page: UNKNOWN
+Author: Deepak Velmurugan
+Author-email: deepazlions@gmail.com
+License: MIT
+Description: 
+        
+        Change Log
+        ==========
+        
+        0.1.4 (8/01/2021)
+        -------------------
+        - Third Release with fully connected layer functionality
+Keywords: deepLearning
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
