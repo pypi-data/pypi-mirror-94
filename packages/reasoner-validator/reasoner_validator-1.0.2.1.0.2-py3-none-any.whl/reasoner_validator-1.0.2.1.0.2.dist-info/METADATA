@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: reasoner-validator
+Version: 1.0.2.1.0.2
+Summary: Validation tools for Reasoner API
+Home-page: https://github.com/NCATSTranslator/reasoner-validator
+Author: Patrick Wang
+Author-email: patrick@covar.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: jsonschema (>=3.0)
+Requires-Dist: pyyaml (>=5.1)
+Requires-Dist: importlib-resources ; python_version < "3.7"
+
+# Reasoner Validator
+
+[![pypi](https://github.com/NCATSTranslator/reasoner-validator/workflows/pypi/badge.svg)](https://pypi.org/project/reasoner-validator/)
+[![readthedocs](https://readthedocs.org/projects/reasoner-validator/badge/)](https://reasoner-validator.readthedocs.io/)
+
+See the [documentation](https://reasoner-validator.readthedocs.io/) and/or [contributor guidelines](https://github.com/NCATSTranslator/reasoner-validator/blob/master/.github/CONTRIBUTING.md).
+
+
