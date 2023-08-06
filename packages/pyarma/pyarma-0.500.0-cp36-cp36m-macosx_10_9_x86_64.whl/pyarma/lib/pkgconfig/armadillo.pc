@@ -1,0 +1,9 @@
+libdir=/private/var/folders/zc/w54y8dpx71z33yjn8gmrlq3w0000gn/T/pip-req-build-r75klfkr/_skbuild/macosx-10.9-x86_64-3.6/cmake-install/src/pyarma/lib
+includedir=/private/var/folders/zc/w54y8dpx71z33yjn8gmrlq3w0000gn/T/pip-req-build-r75klfkr/_skbuild/macosx-10.9-x86_64-3.6/cmake-install/src/pyarma/include
+
+Name: armadillo
+Description: Fast C++ matrix library with syntax similar to MATLAB and Octave
+URL: http://arma.sourceforge.net
+Version: 10.2.1
+Cflags: -I${includedir}
+Libs: -L${libdir} -larmadillo
