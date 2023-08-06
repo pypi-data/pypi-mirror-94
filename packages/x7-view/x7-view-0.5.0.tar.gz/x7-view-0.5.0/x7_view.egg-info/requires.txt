@@ -1,0 +1,8 @@
+x7-geom
+x7-lib
+screeninfo
+
+[tests]
+pytest
+flake8
+mypy
