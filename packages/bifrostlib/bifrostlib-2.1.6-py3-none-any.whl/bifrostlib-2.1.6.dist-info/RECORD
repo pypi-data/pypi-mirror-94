@@ -1,0 +1,10 @@
+bifrostlib/__init__.py,sha256=sBNy1bpDTeS4HD0sVFw4maM5qQ6fX3OtAh4-sYUBOUo,102
+bifrostlib/common.py,sha256=xMyNM04EbnqyW3SEOaarasUTamizskGyKghip9OdSUo,2798
+bifrostlib/database_interface.py,sha256=6sCqMalp5hWmw21zWl66Wcby08EJAs69C_l5ZOyYjtE,8981
+bifrostlib/datahandling.py,sha256=9FYiQzSKssgeaeWN_KGAFUGCmFsPsujwxljyB6u3qbc,42174
+bifrostlib/schemas/bifrost.jsonc,sha256=jUaIlagxwS5bYDyqOvC4-T_kEbgMwFFUJsrg69g_ZkM,60320
+bifrostlib-2.1.6.dist-info/LICENSE,sha256=U4acpRvlGM9pHGE0G_E9OauQ2s5WZ0pW70-D82DeTTQ,1079
+bifrostlib-2.1.6.dist-info/METADATA,sha256=X40ZpWSmnJ355Yajm6QWFvBbcENOE5F-dxLjmHij7Ck,448
+bifrostlib-2.1.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bifrostlib-2.1.6.dist-info/top_level.txt,sha256=XFjIfd7eABc90gG6KqscC8p47nlBj_xJQKarZsWBiQE,11
+bifrostlib-2.1.6.dist-info/RECORD,,
