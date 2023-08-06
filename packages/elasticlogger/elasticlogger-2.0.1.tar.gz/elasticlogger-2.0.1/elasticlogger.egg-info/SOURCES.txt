@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+elasticlogger/__init__.py
+elasticlogger/context.py
+elasticlogger/errors.py
+elasticlogger/json_encoder.py
+elasticlogger/logger.py
+elasticlogger.egg-info/PKG-INFO
+elasticlogger.egg-info/SOURCES.txt
+elasticlogger.egg-info/dependency_links.txt
+elasticlogger.egg-info/requires.txt
+elasticlogger.egg-info/top_level.txt

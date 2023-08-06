@@ -1,0 +1,5 @@
+python_json_logger
+elasticsearch
+urllib3
+certifi
+sentry-sdk
