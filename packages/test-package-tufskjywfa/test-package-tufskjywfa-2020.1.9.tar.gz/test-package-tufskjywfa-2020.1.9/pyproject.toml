@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "test-package-tufskjywfa"
+version = "2020.01.09"
+description = "Small test library."
+authors = ["Abc <nr4809+26fip69foy9ec@sharklasers.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[build-system]
+requires = ["poetry>=1.1.4"]
+build-backend = "poetry.masonry.api"
