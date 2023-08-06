@@ -1,0 +1,9 @@
+README.md
+setup.py
+TakeStringAnalysis/__init__.py
+TakeStringAnalysis/analyzer.py
+TakeStringAnalysis.egg-info/PKG-INFO
+TakeStringAnalysis.egg-info/SOURCES.txt
+TakeStringAnalysis.egg-info/dependency_links.txt
+TakeStringAnalysis.egg-info/requires.txt
+TakeStringAnalysis.egg-info/top_level.txt
