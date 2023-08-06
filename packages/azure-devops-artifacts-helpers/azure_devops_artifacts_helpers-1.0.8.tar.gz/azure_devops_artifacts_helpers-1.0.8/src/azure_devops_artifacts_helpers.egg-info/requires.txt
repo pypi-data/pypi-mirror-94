@@ -1,0 +1,4 @@
+virtualenv<=20.4.2,>=20.0.0
+
+[tox]
+tox
