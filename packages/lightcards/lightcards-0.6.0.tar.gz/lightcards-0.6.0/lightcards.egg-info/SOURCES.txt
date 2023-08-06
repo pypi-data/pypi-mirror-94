@@ -1,0 +1,15 @@
+README.md
+setup.py
+lightcards/__init__.py
+lightcards/deck.py
+lightcards/display.py
+lightcards/parse.py
+lightcards/progress.py
+lightcards/runner.py
+lightcards.egg-info/PKG-INFO
+lightcards.egg-info/SOURCES.txt
+lightcards.egg-info/dependency_links.txt
+lightcards.egg-info/entry_points.txt
+lightcards.egg-info/requires.txt
+lightcards.egg-info/top_level.txt
+man/lightcards.1
