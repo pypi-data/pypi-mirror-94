@@ -1,0 +1,1 @@
+This package contains one function. It takes a list of numbers and gives out the mean! Of course this is a part of tutorial of python packaging.
