@@ -1,0 +1,150 @@
+/* Bootstrap customization */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: rgb(246, 248, 250);
+}
+img {
+    padding: 2px;
+}
+
+.text-primary {
+    color: #006FBA !important;
+}
+
+.bg-custom-blue {
+    background-color: #006FBA;
+}
+.btn-primary {
+    background-color: #006FBA;
+    color: white;
+}
+.btn-outline-primary {
+    border-color: #006FBA;
+    color: #006FBA;
+}
+.btn-secondary {
+    background-color: #006FBA;
+    color: white;
+}
+.btn-default {
+    background-color: #006FBA;
+    color: white;
+}
+
+a.disabled {
+  /* Make the disabled links grayish*/
+  color: gray;
+  opacity: 1;
+  /* And disable the pointer events */
+  pointer-events: none;
+}
+
+.navbar a{
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+
+.jumbotron {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+}
+
+h1{
+  font-size:36px;
+}
+
+h2{
+  font-size:24px;
+}
+
+h3{
+  font-size:20px;
+}
+
+h4{
+  font-size:18px;
+}
+
+h5{
+  font-size:16px;
+}
+
+h6{
+  font-size:14px;
+}
+
+.footnotes {
+  clear: both;
+  list-style: none;
+  padding-left: 2%;
+}
+.footnotes li {
+  margin: 2em 0;
+  padding-top: 1em;
+  display: block;
+  position: relative;
+  counter-increment: inst;
+}
+.footnotes li::before {
+  content: counter(inst);
+
+  background: rgba(255, 150, 0, 0.35);
+  color: #fff;
+
+  font-size: 1em;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 1px 1px rgba(255, 150, 0, 0.5);
+
+  border-radius: 0 0.675em 0.675em 0;
+  font-size: 1.5em;
+  text-align: center;
+
+  padding-top: 0;
+  padding-left: 2.25%;
+  left: -5%;
+  top: -0.65em;
+  height: 1.35em;
+  width: 1.35em;
+  position: absolute;
+
+  transition: all 0.2s ease-in-out;
+
+  z-index: -1;
+}
+@media (min-width: 33em) {
+  .footnotes li:before {
+    border-radius: 50%;
+    font-size: 1.5em;
+    height: 1.35em;
+    margin-left: 2.5%;
+    padding-left: 0;
+    padding-top: 0;
+    top: -0.15em;
+    width: 1.35em;
+    z-index: -1;
+  }
+}
+
+
+/* Sticky footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #006FBA;
+}
+.footer a{
+    color: #FFFFFF;
+}
