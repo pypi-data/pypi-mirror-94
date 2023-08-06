@@ -1,0 +1,6 @@
+PyQt5>=5
+glob2
+mt_UI>=0.0.2
+
+[testing]
+pytest
