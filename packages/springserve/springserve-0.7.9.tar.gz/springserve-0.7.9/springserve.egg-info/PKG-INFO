@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: springserve
+Version: 0.7.9
+Summary: API Library for console.springserve.com
+Home-page: http://www.springserve.com
+Maintainer: dave@springserve.com
+Maintainer-email: 
+License: Apache 2.0
+Description: Springserve is a video adserver, and this library allows you
+        to interface with its api to do read/write and reporting requests 
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
