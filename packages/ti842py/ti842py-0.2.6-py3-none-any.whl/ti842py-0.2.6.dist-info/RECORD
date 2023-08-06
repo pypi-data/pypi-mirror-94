@@ -1,0 +1,16 @@
+ti842py/__init__.py,sha256=96DkTWksNPmzbhJvEzxELGedtTc094MQPQe1u24FNGA,166
+ti842py/__version__.py,sha256=ZFdqfUaW7RUIxDw9nlTJFZQLgvomp_GKODahXsBTK7U,287
+ti842py/main.py,sha256=PTQdzZTPIJktEu_NFTiZa10Klw7WuRPk91fMmb614Y4,2232
+ti842py/tiParser.py,sha256=9kdjwVEloXTRu-o-jbJBnzaFFUVdm_m2geCir2zav0k,12230
+ti842py/utils/clear.py,sha256=PjxyT5Ew7gXghDxMA1cATAaehY_JDvH5SXVtclT3pFI,144
+ti842py/utils/getDateTime.py,sha256=raGb1qhlepHFo9bgnSLKS5eEOtyJx1KjWYRxVP95-0E,187
+ti842py/utils/getKey.py,sha256=Iy-OZXbvnkKxlj2GmXnQ0EWNkjKzFPEbP8rASGRgzaA,1244
+ti842py/utils/goto.py,sha256=POmID6evr6Jz6sfhT8yDBjHSld5EH15cVgLkTFFRUj0,7254
+ti842py/utils/output.py,sha256=jIUJEbijxWtwr5SGFkNPexfL8YcKx8NH3qvjM8oT8qg,115
+ti842py/utils/toNumber.py,sha256=q4hWX-osdl63X8sdIa1evUeZTCUm50topGCX9etIxk4,137
+ti842py-0.2.6.dist-info/LICENSE,sha256=nN3_3T5DOnvgzAAacVa7U1K5gv8VyrY9FDC6MJgi35o,35108
+ti842py-0.2.6.dist-info/METADATA,sha256=4omNRprUZ8qIblTinf-VLFL6yjabi6a8yrO_ZBXhIag,5024
+ti842py-0.2.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ti842py-0.2.6.dist-info/entry_points.txt,sha256=aIbThas4ObLFzGlC7gPkD8civpNNl72g9Fj8Y9JdMIM,47
+ti842py-0.2.6.dist-info/top_level.txt,sha256=5gOWxBvLk0qTDRinQHBJa98ccO3xYQMdrpukk0EVI9s,8
+ti842py-0.2.6.dist-info/RECORD,,
