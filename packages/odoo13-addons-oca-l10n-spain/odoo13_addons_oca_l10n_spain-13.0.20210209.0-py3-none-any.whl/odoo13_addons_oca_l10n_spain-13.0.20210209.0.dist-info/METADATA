@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: odoo13-addons-oca-l10n-spain
+Version: 13.0.20210209.0
+Summary: Meta package for oca-l10n-spain Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo13-addon-account-promissory-note-bankia
+Requires-Dist: odoo13-addon-l10n-es-account-asset
+Requires-Dist: odoo13-addon-l10n-es-account-bank-statement-import-n43
+Requires-Dist: odoo13-addon-l10n-es-account-banking-sepa-fsdd
+Requires-Dist: odoo13-addon-l10n-es-aeat
+Requires-Dist: odoo13-addon-l10n-es-aeat-mod111
+Requires-Dist: odoo13-addon-l10n-es-aeat-mod115
+Requires-Dist: odoo13-addon-l10n-es-aeat-mod123
+Requires-Dist: odoo13-addon-l10n-es-aeat-mod303
+Requires-Dist: odoo13-addon-l10n-es-aeat-mod347
+Requires-Dist: odoo13-addon-l10n-es-aeat-mod349
+Requires-Dist: odoo13-addon-l10n-es-aeat-mod390
+Requires-Dist: odoo13-addon-l10n-es-aeat-sii-oca
+Requires-Dist: odoo13-addon-l10n-es-dua
+Requires-Dist: odoo13-addon-l10n-es-dua-sii
+Requires-Dist: odoo13-addon-l10n-es-facturae
+Requires-Dist: odoo13-addon-l10n-es-mis-report
+Requires-Dist: odoo13-addon-l10n-es-partner
+Requires-Dist: odoo13-addon-l10n-es-partner-mercantil
+Requires-Dist: odoo13-addon-l10n-es-pos
+Requires-Dist: odoo13-addon-l10n-es-toponyms
+Requires-Dist: odoo13-addon-l10n-es-vat-book
+Requires-Dist: odoo13-addon-payment-redsys
+
+UNKNOWN
+
+
