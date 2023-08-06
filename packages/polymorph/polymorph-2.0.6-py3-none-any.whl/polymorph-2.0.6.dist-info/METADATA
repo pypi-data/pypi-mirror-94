@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: polymorph
+Version: 2.0.6
+Summary: A real time network packet manipulation framework
+Home-page: https://github.com/shramos/polymorph
+Author: Santiago Hernandez Ramos
+Author-email: shramos@protonmail.com
+License: MIT
+Keywords: network,packet,modification,real-time,real,time,manipulation,modify,on-the-fly,crafter
+Platform: Linux
+Platform: Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: scapy
+Requires-Dist: pyshark
+Requires-Dist: dill
+Requires-Dist: hexdump
+Requires-Dist: termcolor
+Requires-Dist: construct
+Requires-Dist: netaddr
+Requires-Dist: prompt-toolkit
+Requires-Dist: texttable
+Requires-Dist: dateutils
+Requires-Dist: NetfilterQueue
+
+UNKNOWN
+
+
