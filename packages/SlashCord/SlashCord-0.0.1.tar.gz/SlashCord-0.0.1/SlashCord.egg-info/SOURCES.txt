@@ -1,0 +1,13 @@
+README.md
+setup.py
+SlashCord.egg-info/PKG-INFO
+SlashCord.egg-info/SOURCES.txt
+SlashCord.egg-info/dependency_links.txt
+SlashCord.egg-info/not-zip-safe
+SlashCord.egg-info/requires.txt
+SlashCord.egg-info/top_level.txt
+slashcord/__init__.py
+slashcord/_exceptions.py
+slashcord/_http.py
+slashcord/_settings.py
+slashcord/tests.py

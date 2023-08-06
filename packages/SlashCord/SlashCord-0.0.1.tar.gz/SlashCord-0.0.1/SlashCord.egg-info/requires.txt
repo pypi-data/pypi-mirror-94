@@ -1,0 +1,4 @@
+aiohttp[speedups]
+asynctest
+sphinxcontrib-trio
+sphinx-material
