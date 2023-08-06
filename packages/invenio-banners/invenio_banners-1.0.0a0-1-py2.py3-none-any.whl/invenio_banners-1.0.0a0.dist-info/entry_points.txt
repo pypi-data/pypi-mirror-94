@@ -1,0 +1,21 @@
+[invenio_admin.views]
+invenio_banners = invenio_banners.admin:banners_adminview
+
+[invenio_base.api_apps]
+invenio_banners = invenio_banners:InvenioBanners
+
+[invenio_base.api_blueprints]
+invenio_banners = invenio_banners.views:api_blueprint
+
+[invenio_base.apps]
+invenio_banners = invenio_banners:InvenioBanners
+
+[invenio_base.blueprints]
+invenio_banners = invenio_banners.views:blueprint
+
+[invenio_db.alembic]
+invenio_banners = invenio_banners:alembic
+
+[invenio_db.models]
+invenio_banners = invenio_banners.models
+
