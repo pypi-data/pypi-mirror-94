@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+hangman/__init__.py
+hangman_lk96er.egg-info/PKG-INFO
+hangman_lk96er.egg-info/SOURCES.txt
+hangman_lk96er.egg-info/dependency_links.txt
+hangman_lk96er.egg-info/top_level.txt
