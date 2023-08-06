@@ -1,0 +1,9 @@
+setup.py
+cosimpy/EM_Field.py
+cosimpy/RF_Coil.py
+cosimpy/S_Matrix.py
+cosimpy/__init__.py
+cosimpy.egg-info/PKG-INFO
+cosimpy.egg-info/SOURCES.txt
+cosimpy.egg-info/dependency_links.txt
+cosimpy.egg-info/top_level.txt
