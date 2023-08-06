@@ -1,0 +1,4 @@
+wxPython>=4.1.0
+oead>=0.11.2
+PyMsyt>=0.3.0
+update_check>=0.0.11
