@@ -1,0 +1,12 @@
+Changelog,sha256=J9HRIGxo0X1c5KQmD3HsjkEtrWWKADyCrtch2zXjj5w,1975
+LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+README.md,sha256=-Bpjtuun9XByp3w_VgMFZVMHS-yg45dalBgH-HMrjPo,4687
+uciparse/__init__.py,sha256=MbcfcbWrGZXnfu4CSXP2C3Bl3oH2-5oGDMoqRtfcwss,29
+uciparse/cli.py,sha256=6uum_kYm8A_tsMUq0tHRp7fl7UAWeCLzkZa3QlUv_fE,1869
+uciparse/py.typed,sha256=NE-Kgdd2qmanj4URwlOhZBpAIJ6YHC9AXTHTGOfgqr0,68
+uciparse/uci.py,sha256=AGTlWyIoAyWKHxgYHGhUf1MkQyZ4FC15i5RQnMAoblY,17066
+uciparse-0.1.10.dist-info/entry_points.txt,sha256=KGKbx0IdF5czAJulSgu6TyZugGVxVaEDPUUJtYqM0n4,73
+uciparse-0.1.10.dist-info/LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+uciparse-0.1.10.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+uciparse-0.1.10.dist-info/METADATA,sha256=UdXZ8d5f06gEsAXldwuWu_r6FUPqOrtzoDQNfilKMGo,5277
+uciparse-0.1.10.dist-info/RECORD,,
