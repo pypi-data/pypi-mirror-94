@@ -1,0 +1,464 @@
+# pg_binny
+> Discretize a whole dataframe into ≤N bins, using Top N categories.
+
+
+The `discretize` function handles discrete & continuous columns:
+* Continuous columns are cut into _N_ bins using supplied cutting function (defaults to `qcut` for quantile cuts.
+* Categorical columns: take the Top _N_-1, with the rest tossed into "Other"
+  
+**TODO:** Describe and show the plot helpers too.
+
+## Install
+
+`conda install pg_binny`
+
+-or-
+
+`pip install pg_binny` 
+
+-or (locally)-
+
+`pip install -e .`  (That's "pip install -e **dot**")
+
+
+## How to use
+
+Make a sample dataframe.
+
+```python
+import numpy as np
+import pandas as pd
+
+dataset = 'car_crashes'
+try:
+    import seaborn as sns
+    df = sns.load_dataset(dataset)
+except ModuleNotFoundError:
+    df = pd.read_csv(f'https://raw.githubusercontent.com/mwaskom/seaborn-data/master/{dataset}.csv')
+df.sample(5)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>total</th>
+      <th>speeding</th>
+      <th>alcohol</th>
+      <th>not_distracted</th>
+      <th>no_previous</th>
+      <th>ins_premium</th>
+      <th>ins_losses</th>
+      <th>abbrev</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>12</th>
+      <td>15.3</td>
+      <td>5.508</td>
+      <td>4.437</td>
+      <td>13.005</td>
+      <td>14.994</td>
+      <td>641.96</td>
+      <td>82.75</td>
+      <td>ID</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>13.6</td>
+      <td>4.080</td>
+      <td>4.080</td>
+      <td>13.056</td>
+      <td>12.920</td>
+      <td>716.20</td>
+      <td>109.61</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>18.6</td>
+      <td>6.510</td>
+      <td>5.208</td>
+      <td>15.624</td>
+      <td>17.856</td>
+      <td>899.47</td>
+      <td>110.35</td>
+      <td>AZ</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>10.6</td>
+      <td>4.452</td>
+      <td>3.498</td>
+      <td>8.692</td>
+      <td>9.116</td>
+      <td>890.03</td>
+      <td>111.62</td>
+      <td>WA</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18.1</td>
+      <td>7.421</td>
+      <td>4.525</td>
+      <td>16.290</td>
+      <td>17.014</td>
+      <td>1053.48</td>
+      <td>133.93</td>
+      <td>AK</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Discretize with default bins
+
+```python
+dfd = binny.discretize(df)
+dfd.sample(5)
+```
+
+    total:
+    	(5.899, 11.1]    6
+    	(11.1, 12.3]     5
+    	(12.3, 13.6]     6
+    	(13.6, 14.5]     4
+    	(14.5, 15.6]     5
+    	(15.6, 17.4]     5
+    	(17.4, 18.1]     5
+    	(18.1, 19.4]     6
+    	(19.4, 21.4]     5
+    	(21.4, 23.9]     4
+    speeding:
+    	(1.7910000000000001, 2.413]    6
+    	(2.413, 3.496]                 5
+    	(3.496, 3.948]                 5
+    	(3.948, 4.095]                 5
+    	(4.095, 4.608]                 5
+    	(4.608, 5.032]                 5
+    	(5.032, 6.014]                 5
+    	(6.014, 6.923]                 5
+    	(6.923, 7.76]                  5
+    	(7.76, 9.45]                   5
+    alcohol:
+    	(1.592, 3.328]     6
+    	(3.328, 3.567]     5
+    	(3.567, 3.948]     5
+    	(3.948, 4.272]     5
+    	(4.272, 4.554]     5
+    	(4.554, 4.968]     5
+    	(4.968, 5.456]     5
+    	(5.456, 5.655]     5
+    	(5.655, 6.765]     5
+    	(6.765, 10.038]    5
+    not_distracted:
+    	(1.7590000000000001, 8.576]    6
+    	(8.576, 9.944]                 5
+    	(9.944, 10.92]                 5
+    	(10.92, 13.056]                5
+    	(13.056, 13.857]               5
+    	(13.857, 14.35]                5
+    	(14.35, 15.624]                5
+    	(15.624, 16.692]               5
+    	(16.692, 18.308]               5
+    	(18.308, 23.661]               5
+    no_previous:
+    	(5.899, 8.856]      6
+    	(8.856, 10.848]     5
+    	(10.848, 11.592]    5
+    	(11.592, 12.92]     5
+    	(12.92, 13.775]     5
+    	(13.775, 15.13]     5
+    	(15.13, 16.038]     5
+    	(16.038, 17.014]    5
+    	(17.014, 18.706]    5
+    	(18.706, 21.28]     5
+    ins_premium:
+    	(641.9590000000001, 688.75]    6
+    	(688.75, 732.28]               5
+    	(732.28, 780.45]               5
+    	(780.45, 804.71]               5
+    	(804.71, 858.97]               5
+    	(858.97, 881.51]               5
+    	(881.51, 913.15]               5
+    	(913.15, 1048.78]              5
+    	(1048.78, 1148.99]             5
+    	(1148.99, 1301.52]             5
+    ins_losses:
+    	(82.749, 106.62]    6
+    	(106.62, 110.35]    5
+    	(110.35, 120.21]    5
+    	(120.21, 133.35]    5
+    	(133.35, 136.05]    5
+    	(136.05, 142.39]    5
+    	(142.39, 148.58]    5
+    	(148.58, 153.72]    5
+    	(153.72, 159.85]    5
+    	(159.85, 194.78]    5
+    abbrev:
+    	AL        1
+    	AR        1
+    	GA        1
+    	ID        1
+    	MA        1
+    	NJ        1
+    	NV        1
+    	OR        1
+    	UT        1
+    	VT        1
+    	Other    41
+      DROPPED [] because < 2 vals each.
+
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>total</th>
+      <th>speeding</th>
+      <th>alcohol</th>
+      <th>not_distracted</th>
+      <th>no_previous</th>
+      <th>ins_premium</th>
+      <th>ins_losses</th>
+      <th>abbrev</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>35</th>
+      <td>(13.6, 14.5]</td>
+      <td>(3.496, 3.948]</td>
+      <td>(4.554, 4.968]</td>
+      <td>(13.857, 14.35]</td>
+      <td>(10.848, 11.592]</td>
+      <td>(688.75, 732.28]</td>
+      <td>(133.35, 136.05]</td>
+      <td>Other</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>(14.5, 15.6]</td>
+      <td>(5.032, 6.014]</td>
+      <td>(4.554, 4.968]</td>
+      <td>(13.857, 14.35]</td>
+      <td>(13.775, 15.13]</td>
+      <td>(913.15, 1048.78]</td>
+      <td>(136.05, 142.39]</td>
+      <td>NV</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>(18.1, 19.4]</td>
+      <td>(5.032, 6.014]</td>
+      <td>(5.655, 6.765]</td>
+      <td>(18.308, 23.661]</td>
+      <td>(16.038, 17.014]</td>
+      <td>(641.9590000000001, 688.75]</td>
+      <td>(82.749, 106.62]</td>
+      <td>Other</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>(5.899, 11.1]</td>
+      <td>(4.608, 5.032]</td>
+      <td>(3.567, 3.948]</td>
+      <td>(8.576, 9.944]</td>
+      <td>(5.899, 8.856]</td>
+      <td>(1048.78, 1148.99]</td>
+      <td>(159.85, 194.78]</td>
+      <td>Other</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>(15.6, 17.4]</td>
+      <td>(2.413, 3.496]</td>
+      <td>(3.567, 3.948]</td>
+      <td>(14.35, 15.624]</td>
+      <td>(12.92, 13.775]</td>
+      <td>(641.9590000000001, 688.75]</td>
+      <td>(110.35, 120.21]</td>
+      <td>Other</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+```python
+dfd['speeding'].dtype
+```
+
+
+
+
+    CategoricalDtype(categories=[(1.7910000000000001, 2.413], (2.413, 3.496], (3.496, 3.948], (3.948, 4.095], (4.095, 4.608], (4.608, 5.032], (5.032, 6.014], (6.014, 6.923], (6.923, 7.76], (7.76, 9.45]],
+    , ordered=True)
+
+
+
+```python
+dfd['total'].dtype
+```
+
+
+
+
+    CategoricalDtype(categories=[(5.899, 11.1], (11.1, 12.3], (12.3, 13.6], (13.6, 14.5], (14.5, 15.6], (15.6, 17.4], (17.4, 18.1], (18.1, 19.4], (19.4, 21.4], (21.4, 23.9]],
+    , ordered=True)
+
+
+
+You can set the #bins and the cutting function (defaults to quantile cut, but you may prefer plain-old `cut`, or something else.
+
+```python
+?binny.discretize
+```
+
+
+    [0;31mSignature:[0m
+    [0mbinny[0m[0;34m.[0m[0mdiscretize[0m[0;34m([0m[0;34m[0m
+    [0;34m[0m    [0mdf[0m[0;34m,[0m[0;34m[0m
+    [0;34m[0m    [0mnbins[0m[0;34m=[0m[0;36m10[0m[0;34m,[0m[0;34m[0m
+    [0;34m[0m    [0mcut[0m[0;34m=[0m[0;34m<[0m[0mfunction[0m [0mqcut[0m [0mat[0m [0;36m0x7fae29d843b0[0m[0;34m>[0m[0;34m,[0m[0;34m[0m
+    [0;34m[0m    [0mverbose[0m[0;34m=[0m[0;36m2[0m[0;34m,[0m[0;34m[0m
+    [0;34m[0m    [0mdrop_useless[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m[0;34m[0m
+    [0;34m[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+    [0;31mDocstring:[0m
+    Discretize columns in {df} to have at most {nbins} categories.
+      * Categorical columns: take the Top n-1 plus "Other"
+      * Continuous columns: cut into {nbins} using {cut}.
+    
+    Returns a new discretized dataframe with the same column names.
+    Promotes discrete columns to categories.
+    
+    Parameters
+    -----------
+    df: Dataframe to discretize
+    nbins: Max number of bins to use. May return fewer.
+    cut: Cutting method. Default `pd.qcut`. Consider pd.cut, or write your own.
+    verbose: 0: silent, 1: colnames, 2: (Default) top N for each column
+    drop_useless: Removes columns that have < 2 unique values.
+    
+    Replaces numerical NA values with 'NA'.
+    [0;31mFile:[0m      /Volumes/Peregrine/binny/pg_binny/core.py
+    [0;31mType:[0m      function
+
+
+
+## Other functions
+
+```python
+[x for x in dir(binny) if x[:2] not in ['__', 'pa', 'pd', 'rc']]
+```
+
+
+
+
+    ['autolabel',
+     'clean_category',
+     'discretize',
+     'drop_singletons',
+     'is_numeric',
+     'isnum']
+
+
+
+```python
+?binny.autolabel
+```
+
+
+    [0;31mSignature:[0m [0mbinny[0m[0;34m.[0m[0mautolabel[0m[0;34m([0m[0max[0m[0;34m,[0m [0mborder[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+    [0;31mDocstring:[0m
+    Label bars in a barplot {ax} with their height.
+    Thanks to matplotlib, composition.ai, and jsoma/chart.py.
+    
+    TODO: how to label with their legend labels?
+    [0;31mFile:[0m      /Volumes/Peregrine/binny/pg_binny/core.py
+    [0;31mType:[0m      function
+
+
+
+```python
+?binny.clean_category
+```
+
+
+    [0;31mSignature:[0m [0mbinny[0m[0;34m.[0m[0mclean_category[0m[0;34m([0m[0mdf[0m[0;34m,[0m [0mcol[0m[0;34m:[0m [0mstr[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+    [0;31mDocstring:[0m
+    Remove unused categories from df.col, inplace.
+    If not a category, do nothing.
+    [0;31mFile:[0m      /Volumes/Peregrine/binny/pg_binny/core.py
+    [0;31mType:[0m      function
+
+
+
+```python
+?binny.is_numeric
+```
+
+
+    [0;31mSignature:[0m [0mbinny[0m[0;34m.[0m[0mis_numeric[0m[0;34m([0m[0mcol[0m[0;34m:[0m [0mstr[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+    [0;31mDocstring:[0m
+    Returns True iff already numeric, or can be coerced.
+    Usage: df.apply(is_numeric)
+    Usage: is_numeric(df['colname'])
+    
+    Returns Boolean series.
+    
+    From:
+    https://stackoverflow.com/questions/54426845/how-to-check-if-a-pandas-dataframe-contains-only-numeric-column-wise
+    [0;31mFile:[0m      /Volumes/Peregrine/binny/pg_binny/core.py
+    [0;31mType:[0m      function
+
+
+
+# History
+
+`pg_binny` is an example extracting some frequently copy/pasted routines into a general purpose `nbdev` project. 
+
+Originally called `binny` because it bins things, that was already taken on PyPi (for... a project that bins things).  The prefix `pg` is short for the project we were working on. 
+
+The routines and text are completely general.  
+
+
+
