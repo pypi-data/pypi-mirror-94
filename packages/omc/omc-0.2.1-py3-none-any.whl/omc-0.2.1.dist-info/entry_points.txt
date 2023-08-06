@@ -1,0 +1,3 @@
+[console_scripts]
+omc = omc.main:main
+
