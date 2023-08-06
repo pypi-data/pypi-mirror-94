@@ -1,0 +1,6 @@
+recursive-include NightWindGameLib/Qt *
+recursive-include NightWindGameLib/Pygame *
+recursive-include NightWindGameLib/Chess *
+recursive-include NightWindGameLib/Audio *
+recursive-include NightWindGameLib/Arcade *
+recursive-include NightWindGameLib/Algorithm *
