@@ -1,0 +1,10 @@
+inputs.jboss:
+    instancia1:
+        ip: 127.0.1.1
+        endpoint": http://127.0.1.1:12080/status
+        user": jmxpro
+        version": 5.x
+        javaruntime: /usr/local/jdk1.6.0_45/bin/java
+        passwd: jmxPromonitor2015!
+        home: /soft/jboss-eap-5.1.2/server/aex
+        jmxport: 12099

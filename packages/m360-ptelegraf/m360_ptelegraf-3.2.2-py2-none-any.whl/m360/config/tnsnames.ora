@@ -1,0 +1,13 @@
+#------------------------------------#
+######### BBDD DE DESARROLLO #########
+#------------------------------------#
+
+DESWS =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+          (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.0.107)(PORT = 1523))
+    )
+    (CONNECT_DATA =
+        (SERVICE_NAME =DESWS)
+    )
+  )

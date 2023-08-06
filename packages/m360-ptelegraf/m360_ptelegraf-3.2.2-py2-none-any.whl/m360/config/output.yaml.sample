@@ -1,0 +1,16 @@
+outputs.file:
+    filename: /var/log/telegraf/hola.txt
+    format: custom
+outputs.influxdb:
+    urls: ["https://int.m360.dxc.com"]
+    database: INFRA
+    skip_database_creation: true
+    retention_policy: real-time
+    write_consistency: any
+    timeout: 5s
+    username: telegraf
+    password: metricsmetricsmetricsmetrics
+    insecure_skip_verify: false
+    format: influx
+outputs.stdout:
+    format: influx

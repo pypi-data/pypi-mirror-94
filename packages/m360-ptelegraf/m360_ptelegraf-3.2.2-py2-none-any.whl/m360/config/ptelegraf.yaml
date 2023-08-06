@@ -1,0 +1,25 @@
+ptelegraf:
+  global_tags:
+    env: Test
+    app: M360
+    service: MONITORING
+    group: MONITOR
+  service:
+    interval: 60s
+    round_interval: true
+    metric_batch_size: 1000
+    metric_buffer_limit: 10000
+    collection_jitter: 0s
+    flush_interval: 10s
+    flush_jitter: 0s
+    precision: ns
+    hostname: ""
+    debug: false
+    quiet: false
+    logtarget: file
+    logfile: /var/log/telegraf/ptelegraf.log
+#    logfile_rotation_max_size: 50 #en MB
+    logfile_rotation_interval: 1d
+    logfile_rotation_max_archives: 5
+    omit_hostname: false
+    timeout: 300s

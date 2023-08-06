@@ -1,0 +1,4 @@
+inputs.custom:
+    instancia1:
+      script: /home/enrique/projects/python/agents/custom/demo.py
+      modules: ["helloword"]
