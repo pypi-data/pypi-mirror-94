@@ -1,0 +1,9 @@
+numpy>=1.10
+toolz
+cytoolz
+dask>=0.10
+sidpy>=0.0.2
+pillow>=5.4.0
+pyUSID
+pyNSID
+igor
