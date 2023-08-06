@@ -1,0 +1,11 @@
+setuptools
+scitools-iris>=3
+eccodes-python
+
+[all]
+mo_pack
+
+[test]
+mock
+filelock
+pep8
