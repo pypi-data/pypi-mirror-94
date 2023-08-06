@@ -1,0 +1,18 @@
+[console_scripts]
+alias_generator = osrframework.alias_generator:main
+alias_generator.py = osrframework.alias_generator:main
+checkfy = osrframework.checkfy:main
+checkfy.py = osrframework.checkfy:main
+domainfy = osrframework.domainfy:main
+domainfy.py = osrframework.domainfy:main
+mailfy = osrframework.mailfy:main
+mailfy.py = osrframework.mailfy:main
+osrf = osrframework.launcher:main
+osrframework-cli = osrframework.launcher:main
+phonefy = osrframework.phonefy:main
+phonefy.py = osrframework.phonefy:main
+searchfy = osrframework.searchfy:main
+searchfy.py = osrframework.searchfy:main
+usufy = osrframework.usufy:main
+usufy.py = osrframework.usufy:main
+
