@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: os_android_adb_handler
+Version: 1.01
+Summary: This module aims to provide functional and simple ADB commands to control an Android device from code (externally).
+Home-page: https://github.com/osfunapps/os_android_adb_handler-py
+Author: Oz Shabat
+Author-email: admin@os-apps.com
+License: MIT
+Description: UNKNOWN
+Keywords: python,osfunapps,adb,android,osapps,automation
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.9
