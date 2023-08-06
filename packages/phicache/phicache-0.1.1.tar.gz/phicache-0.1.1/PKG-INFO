@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: phicache
+Version: 0.1.1
+Summary: A cache to store data with metadata and strategies to tailor access
+Home-page: https://github.com/rahungria/phicache
+Author: raphi
+Author-email: rhja93@gmail.com
+License: MIT
+Download-URL: https://github.com/rahungria/phicache/archive/0.1.1.tar.gz
+Description: # phicache
+        Simple cache for storing data with meta data + strategies to access data given the metadata
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
