@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: flaskbp
+Version: 0.1
+Summary: A python package for basic Flask app boilerplate.
+Home-page: https://github.com/frankhart2018/flaskbp
+Author: Siddhartha Dhar Choudhury
+Author-email: sdharchou@gmail.com
+License: GNU General Public License v3
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# flaskbp
+
+A python package for basic Flask app boilerplate.
+
+## Steps to run
+
+1. Install flaskbp
+
+```bash
+user@programmer~:$ pip install flaskbp
+```
+
+2. Run flaskbp
+
+```bash
+user@programmer~:$ flaskbp --dir <some-dir-name>
+```
+
+**Note**: The dir name (if it does not exist) will be created, otherwise will be populated with the files in the existing dir.
+

@@ -1,0 +1,14 @@
+flaskbp/__init__.py,sha256=rqyZtt1djmoU2vxYGslRgV4TaBWrxK8uesP_Xai_8-U,19
+flaskbp/boilerplate.py,sha256=fneV9kA-lPzCAWIU9rJAzqtqrUqa7d5UWjYjbpeN4fc,3078
+flaskbp/generate.py,sha256=YgolGrVrNR_Ui6y9-IXUzAp_M_bVPIDhqcSqjvZ1wXA,346
+flaskbp/files/app.py,sha256=mictGTg4cY3rNy31FXHLEbLWokum_Hod0glgVEoCX1k,379
+flaskbp/files/index.html,sha256=eiA9QlhZPCvv1WiVUU2CR_ANlgtLoV_6NZTCkzJfl3I,553
+flaskbp/files/jquery.min.js,sha256=h0cGsrExGgcZtSZ_fRz4AwV-Nn6Urh_3v3jFRQ0w9dQ,84245
+flaskbp/files/main.js,sha256=p-LgGjME-Wzic47bJ3YwUKUvoPeu9LcnSJSvGlfDkXc,310
+flaskbp/files/styles.css,sha256=YwZsCGRTiiNr_e6Zsu1Y_-Ra9lDII2ZhdVlsotfGkaU,212
+flaskbp/files/sweetalert.min.js,sha256=YKd7eV5SzuZ-9xx4Xm7Ozyu5rtcrcx3AfIRxxbbU21E,67062
+flaskbp-0.1.dist-info/METADATA,sha256=f2O3MO7gxVWvq6m9ebTp1h0kIhiabBkfnwkP7ZRB5j8,1008
+flaskbp-0.1.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+flaskbp-0.1.dist-info/entry_points.txt,sha256=V6WWV6wG2kIIaTj4lCzKqujOAAeDPZ4ry158lO0751g,53
+flaskbp-0.1.dist-info/top_level.txt,sha256=fRjs-G8l2HYt1wiCsNrunycul0pxYtRZSkagc4ggAW8,8
+flaskbp-0.1.dist-info/RECORD,,
