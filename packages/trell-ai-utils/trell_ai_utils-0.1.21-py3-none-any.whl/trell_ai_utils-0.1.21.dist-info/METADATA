@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: trell-ai-utils
+Version: 0.1.21
+Summary: Utility code for trell ai repos
+Home-page: https://gitlab.com/abhay7/trell-ai-util
+Author: Abhay Kumar
+Author-email: abhay@trell.in
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6.9
+Requires-Dist: requests
+Requires-Dist: emoji
+Requires-Dist: json-utils
+Requires-Dist: python-dotenv
+Requires-Dist: pandas-gbq
+Requires-Dist: google-cloud
+Requires-Dist: google-cloud-bigquery
+Requires-Dist: mysql-connector
+Requires-Dist: mysql-replication
+Requires-Dist: subprocess32
+Requires-Dist: psutil
+Requires-Dist: Flask
+Requires-Dist: SQLAlchemy
+Requires-Dist: SQLAlchemy-JSONField
+Requires-Dist: SQLAlchemy-Utils
+Requires-Dist: boto
+Requires-Dist: boto3
+
+Trell AI Pip Package
+
+
