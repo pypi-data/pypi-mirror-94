@@ -1,0 +1,3 @@
+[console_scripts]
+metafinder = metafinder.cli:main
+
