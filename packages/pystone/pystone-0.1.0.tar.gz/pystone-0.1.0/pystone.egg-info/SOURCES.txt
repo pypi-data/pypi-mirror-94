@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pystone/__init__.py
+pystone/__version__.py
+pystone/constants.py
+pystone/deepl.py
+pystone/languages.py
+pystone/reverso.py
+pystone.egg-info/PKG-INFO
+pystone.egg-info/SOURCES.txt
+pystone.egg-info/dependency_links.txt
+pystone.egg-info/entry_points.txt
+pystone.egg-info/requires.txt
+pystone.egg-info/top_level.txt
