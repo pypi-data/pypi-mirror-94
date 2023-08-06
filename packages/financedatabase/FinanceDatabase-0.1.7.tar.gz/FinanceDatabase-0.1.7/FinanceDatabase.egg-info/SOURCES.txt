@@ -1,0 +1,9 @@
+README.md
+setup.py
+FinanceDatabase/__init__.py
+FinanceDatabase/json_options.py
+FinanceDatabase/json_picker.py
+FinanceDatabase.egg-info/PKG-INFO
+FinanceDatabase.egg-info/SOURCES.txt
+FinanceDatabase.egg-info/dependency_links.txt
+FinanceDatabase.egg-info/top_level.txt
