@@ -1,0 +1,34 @@
+Metadata-Version: 1.2
+Name: unitree
+Version: 0.0.1
+Summary: A nice tree.
+Home-page: https://github.com/appletree120th/unitree
+Author: Apple Tree
+Author-email: appletree120th@gmail.com
+License: BSD (3-clause)
+Description: =======
+        unitree
+        =======
+        
+        .. image:: https://img.shields.io/travis/appletree120th/unitree.svg
+                :target: https://travis-ci.org/appletree120th/unitree
+        
+        .. image:: https://img.shields.io/pypi/v/unitree.svg
+                :target: https://pypi.python.org/pypi/unitree
+        
+        
+        A nice tree.
+        
+        * Free software: 3-clause BSD license
+        * Documentation: (COMING SOON!) https://appletree120th.github.io/unitree.
+        
+        Features
+        --------
+        
+        * TODO
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
