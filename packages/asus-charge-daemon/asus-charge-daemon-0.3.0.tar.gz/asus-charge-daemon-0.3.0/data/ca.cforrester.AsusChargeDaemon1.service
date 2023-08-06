@@ -1,0 +1,5 @@
+[D-BUS Service]
+Name=ca.cforrester.AsusChargeDaemon1
+Exec=/usr/bin/asuscharged
+User=root
+SystemdService=asuscharged.service
