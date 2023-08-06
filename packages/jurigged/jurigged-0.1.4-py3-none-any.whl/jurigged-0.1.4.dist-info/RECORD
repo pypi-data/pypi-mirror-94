@@ -1,0 +1,14 @@
+jurigged/__init__.py,sha256=1v3_-zi6zvuj1bbDKVELmbNg3jAm6Fn3We64i5gJk_U,177
+jurigged/__main__.py,sha256=qLSVLzv0vKmVxTMVCz9TsCwdYmDTaC_CQTNJxI4QZ28,60
+jurigged/codefile.py,sha256=3ZWlOyHceyVYbZzDNhvYylqxbQuwEPztTZQEZUoKPxI,25216
+jurigged/goodies.py,sha256=B8bObWuhf0kIcrj8ggHa_byrxR54Mq9fb-XRYT8Dca4,268
+jurigged/live.py,sha256=jrI1t8E1h8lj5JhozK6I7iyUCgKgFjjl7fOvkNL52cA,5071
+jurigged/parse.py,sha256=zm3xlNUGQe36xqw41TsUenb27hYQQxi77VA9ELHR7Mc,1780
+jurigged/recode.py,sha256=7neyo7Mm9Vz01JsiZ3jNVHM8by77n7iV21HbKZBnwF0,4003
+jurigged/register.py,sha256=2zd6wjRDq3X4wPvhr0xhOXkBZjiKrMno7BcI57gJyl0,6055
+jurigged/utils.py,sha256=tupMMKxL3d6i-aKBx6eJpZhDtCo0QpM60JIO_2ae_v0,1237
+jurigged-0.1.4.dist-info/entry_points.txt,sha256=ZN2k92H3i0t4bS1uy1IAKJXy5rV-h7kV3ZHwnyS_2os,46
+jurigged-0.1.4.dist-info/LICENSE,sha256=4tpAFtB0HjDrvf_AKPSPfay1-sTWxlgKWkP3HAmVhRU,1061
+jurigged-0.1.4.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+jurigged-0.1.4.dist-info/METADATA,sha256=1Dd4ofK_wwlIUmVR-JGuHs9nZxvgO-tPbtPY_goIRjs,10743
+jurigged-0.1.4.dist-info/RECORD,,
