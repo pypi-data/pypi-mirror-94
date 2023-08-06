@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: grainy
+Version: 1.7.2
+Summary: granular permissions utility
+Home-page: https://github.com/20c/grainy
+Author: 20C
+Author-email: code@20c.com
+License: LICENSE.txt
+Download-URL: https://github.com/20c/grainy/1.7.2
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9

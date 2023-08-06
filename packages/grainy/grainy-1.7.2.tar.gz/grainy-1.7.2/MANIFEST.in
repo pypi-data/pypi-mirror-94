@@ -1,0 +1,4 @@
+include LICENSE
+recursive-include Ctl *.txt
+recursive-include src/grainy *.py
+include Ctl/VERSION
