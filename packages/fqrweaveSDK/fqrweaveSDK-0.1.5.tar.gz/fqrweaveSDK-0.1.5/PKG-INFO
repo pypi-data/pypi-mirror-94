@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: fqrweaveSDK
+Version: 0.1.5
+Summary: SDK to interact with fQR Weave platform
+Home-page: https://github.com/fQR-Weave/python-sdk
+Author: wojak-frog
+Author-email: fqrweave@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
