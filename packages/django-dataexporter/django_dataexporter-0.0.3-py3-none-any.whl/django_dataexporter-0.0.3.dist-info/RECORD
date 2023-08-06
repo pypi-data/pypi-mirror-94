@@ -1,0 +1,10 @@
+django_dataexporter/__init__.py,sha256=yyLtGsBhynC-sSHdax-rRGvHNjH-gdWxIY68WnPVfDw,22
+django_dataexporter/admin.py,sha256=RdcvSet1X5r_zuiPXIVLlP9rexorvCYUZhP5MFenT2A,699
+django_dataexporter/base.py,sha256=6Hz4UxWjL3ZppG_PXQZxnBBdnJXKMLpJi357o7zUFtw,4467
+django_dataexporter/csv.py,sha256=_ivGMR3tyPWEkmXq1rFSfI56juHNqeAl_tFKnbMygtM,1214
+django_dataexporter/excel.py,sha256=4xEdyRRyFATZQ9paHPSq4ti7n1mIXoaCKJdKciI1ZSY,2521
+django_dataexporter-0.0.3.dist-info/LICENSE.rst,sha256=XjNSvpZ8kUMAdQO20p8UtHcHt4A3Xd4o3j4XOsSjUzA,1071
+django_dataexporter-0.0.3.dist-info/METADATA,sha256=NzFt-HLp52MUdNKzfaU_70p2h8l9py9kQR0w2fP6Bw4,2469
+django_dataexporter-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_dataexporter-0.0.3.dist-info/top_level.txt,sha256=jIUBanmtRaBHOXbO5grQqs5gOlD-TZ2N8nldLOUaiLU,20
+django_dataexporter-0.0.3.dist-info/RECORD,,
