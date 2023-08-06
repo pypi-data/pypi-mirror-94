@@ -1,0 +1,4 @@
+smarts[train]==0.4.6
+setuptools!=50.0,>=41.0.0
+dill
+black==19.10b0
