@@ -1,0 +1,15 @@
+MANIFEST.in
+setup.py
+src/py_deployer.egg-info/PKG-INFO
+src/py_deployer.egg-info/SOURCES.txt
+src/py_deployer.egg-info/dependency_links.txt
+src/py_deployer.egg-info/entry_points.txt
+src/py_deployer.egg-info/requires.txt
+src/py_deployer.egg-info/top_level.txt
+src/pydeployer/pydeploy.py
+src/pydeployer/app/__init__.py
+src/pydeployer/app/arguments.py
+src/pydeployer/app/config.py
+src/pydeployer/app/main.py
+src/pydeployer/app/settings.py
+src/pydeployer/app/ssh_client.py
