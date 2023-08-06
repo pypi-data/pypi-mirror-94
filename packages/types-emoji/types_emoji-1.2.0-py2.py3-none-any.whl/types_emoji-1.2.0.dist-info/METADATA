@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: types-emoji
+Version: 1.2.0
+Summary: Typing stubs for emoji
+Home-page: https://github.com/python/typeshed
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+
+## Typing stubs for emoji
+
+This is an auto-generated PEP 561 type stub package for `emoji` package.
+It can be used by type-checking tools like mypy, PyCharm, pytype etc. to check code
+that uses `emoji`. The source for this package can be found at
+https://github.com/python/typeshed/tree/master/stubs/emoji. All fixes for
+types and metadata should be contributed there.
+
+See https://github.com/python/typeshed/blob/master/README.md for more details.
+This package was generated from typeshed commit `8f7e2216b66b9e8181b119fa2f7d560fca987605`.
+
+

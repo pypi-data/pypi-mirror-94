@@ -1,0 +1,12 @@
+emoji-stubs/METADATA.toml,sha256=9hQ0FOKuZktw-u4qf4AeFHLM7CPqUm1LA07x-jlygFY,31
+emoji-stubs/__init__.pyi,sha256=emnRphemDi1R3412WL1ZcrLQHE6L7vALsf9PnkpOQIA,761
+emoji-stubs/core.pyi,sha256=ivEB0Lx9efLKZdB4g04TflrFvA6nVO_i1n1mdqO1jUg,698
+emoji-stubs/unicode_codes/__init__.pyi,sha256=vOlF3otmymFLKGifx7eFPkPwJF8N1w2Te1QD57T--oE,715
+emoji-stubs/unicode_codes/en.pyi,sha256=tiNbLTwcXtmFqKDLV427bx8k_4SdXwsOpr1I4nwn8hU,203
+emoji-stubs/unicode_codes/es.pyi,sha256=h059OGM1w6dYQp8ls85ewXANKDlFVx5Ad5YX_g4t8lw,111
+emoji-stubs/unicode_codes/it.pyi,sha256=hKkzjRV827DO-8HLDun09U18AfiA42C2VgEBvOIrbIo,111
+emoji-stubs/unicode_codes/pt.pyi,sha256=DXYrLJhHYUfjEfF9hixYzw3X0W-gM0Sg6iJoovmAcuE,117
+types_emoji-1.2.0.dist-info/METADATA,sha256=ynqc7Q7kJDO2hVvEgw42_r-JVj76N2qnn89uHexIoXI,780
+types_emoji-1.2.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+types_emoji-1.2.0.dist-info/top_level.txt,sha256=F12sm0Py01nzzmDkfiynKAyouXo0kEoY1BTteoF50ao,12
+types_emoji-1.2.0.dist-info/RECORD,,
