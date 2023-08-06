@@ -1,0 +1,17 @@
+.gitignore
+.pre-commit-config.yaml
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+tox.ini
+.github/workflows/python.yml
+doctrine/__init__.py
+doctrine/_version.py
+doctrine.egg-info/PKG-INFO
+doctrine.egg-info/SOURCES.txt
+doctrine.egg-info/dependency_links.txt
+doctrine.egg-info/requires.txt
+doctrine.egg-info/top_level.txt
+tests/test_basic_tasks.py
+tests/test_partial.py
