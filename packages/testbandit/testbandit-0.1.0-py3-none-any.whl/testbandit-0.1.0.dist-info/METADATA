@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: testbandit
+Version: 0.1.0
+Summary: Test Bandit: A Python Library for Bayesian A/B and Bandit Testing
+Home-page: UNKNOWN
+Author: Javid Jamae
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
