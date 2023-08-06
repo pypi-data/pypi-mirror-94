@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/cccalendar.py
+src/dateutils.py
+src/run.py
+src/categorical_colour_calendar.egg-info/PKG-INFO
+src/categorical_colour_calendar.egg-info/SOURCES.txt
+src/categorical_colour_calendar.egg-info/dependency_links.txt
+src/categorical_colour_calendar.egg-info/requires.txt
+src/categorical_colour_calendar.egg-info/top_level.txt
+tests/test_cccalendar.py
+tests/test_date_utils.py
