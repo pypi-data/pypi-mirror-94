@@ -1,0 +1,3 @@
+[console_scripts]
+drag = drag.server:main
+
