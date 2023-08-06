@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: famegui
+Version: 0.3
+Summary: Graphical user interface to the FAME modelling framework
+Home-page: https://gitlab.com/fame2/FAME-Gui
+Author: Aurélien Regat-Barrel
+Author-email: pypi@cyberkarma.net
+License: Apache
+Download-URL: https://gitlab.com/fame2/FAME-Gui/-/archive/v0.3/FAME-Gui-v0.3.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9

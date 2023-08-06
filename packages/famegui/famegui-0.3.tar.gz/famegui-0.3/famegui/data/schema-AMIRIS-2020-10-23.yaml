@@ -1,0 +1,273 @@
+Header:
+  Project: AMIRIS
+  GitHash: https://gitlab.dlr.de/amiris/midgard/-/commit/b4018dbb456d31a98fdaf11ec333328fee2be7f8
+  Date: 2020-10-23
+
+AgentTypes:
+  EnergyExchange:
+    Inputs:
+      DistributionMethod:
+        FieldType: enum
+        Mandatory: true
+        Values: [ 'SAME_SHARES' ]
+    Products: [ 'Awards' ]
+
+  SystemOperatorTrader:
+    Products: [ 'Bids', 'Payout', 'DispatchAssignment', 'BidsForecast', 'MeritOrderForecastRequest', 'PriceForecastRequest' ]
+
+  CarbonMarket:
+    Inputs:
+      Co2Prices:
+        FieldType: time_series
+        Mandatory: true
+      OperationMode:
+        FieldType: enum
+        Mandatory: true
+        Values: [ 'FIXED' ]
+    Products: [ 'Co2PriceForecast', 'Co2Price', 'CertificateBill' ]
+
+  FuelsMarket:
+    Inputs:
+      NATURAL_GAS:
+        FieldType: time_series
+        Mandatory: false
+      NUCLEAR:
+        FieldType: time_series
+        Mandatory: false
+      LIGNITE:
+        FieldType: time_series
+        Mandatory: false
+      HARD_COAL:
+        FieldType: time_series
+        Mandatory: false
+      OIL:
+        FieldType: time_series
+        Mandatory: false
+      WASTE:
+        FieldType: time_series
+        Mandatory: false
+      OIL_CF:
+        FieldType: double
+        Mandatory: false
+      HARD_COAL_CF:
+        FieldType: double
+        Mandatory: false
+      LIGNITE_CF:
+        FieldType: double
+        Mandatory: false
+      NUCLEAR_CF:
+        FieldType: double
+        Mandatory: false
+      WASTE_CF:
+        FieldType: double
+        Mandatory: false
+      NATURAL_GAS_CF:
+        FieldType: double
+        Mandatory: false
+    Products: [ 'FuelPriceForecast', 'FuelPrice', 'FuelsBill' ]
+
+  DemandTrader:
+    Inputs:
+      DemandSeries:
+        FieldType: time_series
+        Mandatory: true
+      ValueOfLostLoad:
+        FieldType: double
+        Mandatory: true
+    Products: [ 'Bids', 'Payout', 'DispatchAssignment', 'BidsForecast', 'MeritOrderForecastRequest', 'PriceForecastRequest' ]
+
+  PriceForecaster:
+    Inputs:
+      DistributionMethod:
+        FieldType: enum
+        Mandatory: true
+        Values: [ 'SAME_SHARES' ]
+      ForecastPeriodInHours:
+        FieldType: integer
+        Mandatory: true
+      ForecastRequestOffsetInSeconds:
+        FieldType: integer
+        Mandatory: true
+    Products: [ 'PriceForecast', 'ForecastRequest', 'MeritOrderForecast', 'ForecastRequest2' ]
+
+  StorageTrader:
+    Inputs:
+      DispatchSchedule:
+        FieldType: time_series
+        Mandatory: false
+      ForecastPeriodInHours:
+        FieldType: integer
+        Mandatory: true
+      ForecastRequestOffsetInSeconds:
+        FieldType: integer
+        Mandatory: true
+      PriceForecastErrorInEURPerMWH:
+        FieldType: double
+        Mandatory: true
+      PowerInMW:
+        FieldType: double
+        Mandatory: true
+      EnergyToPowerRatio:
+        FieldType: double
+        Mandatory: true
+      ChargeEfficiency:
+        FieldType: double
+        Mandatory: true
+      DischargeEfficiency:
+        FieldType: double
+        Mandatory: true
+      SelfDischargeRatePerHour:
+        FieldType: double
+        Mandatory: true
+      InitialEnergyLevelInMWH:
+        FieldType: double
+        Mandatory: true
+      ScheduleDurationInHours:
+        FieldType: integer
+        Mandatory: true
+      StrategistType:
+        FieldType: enum
+        Mandatory: true
+        Values: [ 'SINGLE_AGENT_MAX_PROFIT', 'SINGLE_AGENT_MIN_SYSTEM_COST', 'MULTI_AGENT_SIMPLE', 'DISPATCH_FILE' ]
+      PurchaseLeviesAndTaxesInEURperMWH:
+        FieldType: double
+        Mandatory: true
+      ModelledChargingSteps:
+        FieldType: integer
+        Mandatory: true
+      AssessmentFunctionPrefactors:
+        FieldType: double_list
+        Mandatory: false
+    Products: [ 'Bids', 'Payout', 'DispatchAssignment', 'BidsForecast', 'MeritOrderForecastRequest', 'PriceForecastRequest' ]
+
+  ConventionalPlantOperator:
+    Products: [ 'Co2Emissions', 'Co2PriceForecastRequest', 'FuelPriceForecastRequest', 'FuelPriceRequest', 'ConsumedFuel', 'MarginalCost', 'MarginalCostForecast' ]
+
+  PredefinedPlantBuilder:
+    Inputs:
+      InstalledPowerInMW:
+        FieldType: time_series
+        Mandatory: true
+      OpexVarInEURperMWH:
+        FieldType: time_series
+        Mandatory: true
+      PlannedAvailability:
+        FieldType: time_series
+        Mandatory: true
+      MaxEfficiency:
+        FieldType: time_series
+        Mandatory: true
+      MinEfficiency:
+        FieldType: time_series
+        Mandatory: true
+      BlockSizeInMW:
+        FieldType: double
+        Mandatory: true
+      CyclingCostInEURperMW:
+        FieldType: double
+        Mandatory: true
+      SpecificCo2EmissionsInTperMWH:
+        FieldType: double
+        Mandatory: true
+      UnplannedAvailabilityFactor:
+        FieldType: double
+        Mandatory: true
+      FuelType:
+        FieldType: enum
+        Mandatory: true
+        Values: [ 'LIGNITE', 'OIL', 'WASTE', 'NUCLEAR', 'HARD_COAL', 'NATURAL_GAS' ]
+    Products: [ 'PowerPlantPortfolio' ]
+
+  ConventionalTrader:
+    Inputs:
+      minMarkup:
+        FieldType: double
+        Mandatory: true
+      maxMarkup:
+        FieldType: double
+        Mandatory: true
+    Products: [ 'Bids', 'Payout', 'DispatchAssignment', 'BidsForecast', 'MeritOrderForecastRequest', 'PriceForecastRequest' ]
+
+  Photovoltaic:
+    Inputs:
+      InstalledPowerInMW:
+        FieldType: time_series
+        Mandatory: true
+      OpexVarInEURperMWH:
+        FieldType: time_series
+        Mandatory: true
+      YieldProfile:
+        FieldType: time_series
+        Mandatory: true
+      PowerClass:
+        FieldType: integer
+        Mandatory: true
+    Products: [ 'MarginalCost', 'MarginalCostForecast' ]
+
+  WindOn:
+    Inputs:
+      InstalledPowerInMW:
+        FieldType: time_series
+        Mandatory: true
+      OpexVarInEURperMWH:
+        FieldType: time_series
+        Mandatory: true
+      YieldProfile:
+        FieldType: time_series
+        Mandatory: true
+      PowerClass:
+        FieldType: integer
+        Mandatory: true
+    Products: [ 'MarginalCost', 'MarginalCostForecast' ]
+
+  WindOff:
+    Inputs:
+      InstalledPowerInMW:
+        FieldType: time_series
+        Mandatory: true
+      OpexVarInEURperMWH:
+        FieldType: time_series
+        Mandatory: true
+      YieldProfile:
+        FieldType: time_series
+        Mandatory: true
+      PowerClass:
+        FieldType: integer
+        Mandatory: true
+    Products: [ 'MarginalCost', 'MarginalCostForecast' ]
+
+  RunOfRiver:
+    Inputs:
+      InstalledPowerInMW:
+        FieldType: time_series
+        Mandatory: true
+      OpexVarInEURperMWH:
+        FieldType: time_series
+        Mandatory: true
+      YieldProfile:
+        FieldType: time_series
+        Mandatory: true
+      PowerClass:
+        FieldType: integer
+        Mandatory: true
+    Products: [ 'MarginalCost', 'MarginalCostForecast' ]
+
+  Biogas:
+    Inputs:
+      InstalledPowerInMW:
+        FieldType: time_series
+        Mandatory: true
+      OpexVarInEURperMWH:
+        FieldType: time_series
+        Mandatory: true
+      FullLoadHoursPerYear:
+        FieldType: double
+        Mandatory: true
+      OperationMode:
+        FieldType: enum
+        Mandatory: true
+        Values: [ 'CONTINUOUS', 'DAY_NIGHT, FLEX_PREMIUM' ]
+      PowerClass:
+        FieldType: integer
+        Mandatory: true
+    Products: [ 'MarginalCost', 'MarginalCostForecast' ]
