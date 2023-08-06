@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: inplace_restarter
+Version: 0.0.4
+Summary: A Kernel Proxy to restart your kernels in place.
+Home-page: https://pypi.org/project/inplace_restarter/
+Author: Matthias Bussonnier
+Author-email: bussonniermatthias@gmail.com
