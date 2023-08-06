@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: zku
+Version: 1.0.22
+Summary: Zymkey utilities
+Home-page: https://zymbit.com/
+Author: Zymbit, Inc.
+Author-email: code@zymbit.com
+License: LICENSE.txt
+Platform: UNKNOWN
+Requires-Dist: cmdline (>=0.1.8)
+Requires-Dist: sh (>=1.11)
+
+UNKNOWN
+
+
