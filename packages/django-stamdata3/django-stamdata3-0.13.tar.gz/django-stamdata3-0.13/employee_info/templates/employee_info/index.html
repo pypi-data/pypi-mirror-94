@@ -1,0 +1,54 @@
+{% extends 'employee_info/base.html' %}
+
+{% block body %}
+    <h2>Ansatt</h2>
+    {% include 'employee_info/resource_form.html' with error=error_resource %}
+
+    <h2 title="ORGANIZATIONAL_UNIT">Organisasjonsenhet</h2>
+    <form action="{% url 'employee_info_browser:organisation' %}">
+        <label>Firma<br/>
+            <select name="company">
+                {% for company in companies %}
+                    <option value="{{ company.companyCode }}">{{ company }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <br/>
+        <label>Nummer<br/>
+            <input id="org_input" name="value" type="text" size="6">
+        </label>
+        <input type="submit" value="Vis">
+    </form>
+    <span class="error">{{ error_org }}</span>
+    <ul>
+        {% for company in companies %}
+            <li><a href="{% url 'employee_info_browser:organisation' %}?company={{ company.companyCode }}">Vis alle
+                organisasjonsenheter i {{ company }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2 title="COST_CENTER">Ansvar</h2>
+    <form action="{% url 'employee_info_browser:cost_center' %}">
+        <label>Firma<br />
+            <select name="company">
+                {% for company in companies %}
+                    <option value="{{ company.companyCode }}">{{ company }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <br/>
+        <label>
+            Nummer<br/>
+            <input name="value" type="text" size="6">
+        </label>
+        <input type="submit" value="Vis">
+    </form>
+    <span class="error">{{ error_cost_center }}</span>
+    <ul>
+        {% for company in companies %}
+            <li><a href="{% url 'employee_info_browser:cost_center' %}?company={{ company.companyCode }}">Vis alle
+                ansvar i {{ company }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
