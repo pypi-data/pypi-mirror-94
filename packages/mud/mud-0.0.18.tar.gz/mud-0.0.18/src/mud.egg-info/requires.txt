@@ -1,0 +1,8 @@
+numpy
+scipy
+matplotlib
+pyerf
+
+[testing]
+pytest
+pytest-cov
