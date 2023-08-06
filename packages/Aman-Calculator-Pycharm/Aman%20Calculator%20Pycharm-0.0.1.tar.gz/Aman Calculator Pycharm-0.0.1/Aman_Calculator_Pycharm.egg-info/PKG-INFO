@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: Aman-Calculator-Pycharm
+Version: 0.0.1
+Summary: Our package has basic calculator function such as addition, subtraction, multiplication and division.
+Home-page: UNKNOWN
+Author: Aman Singh
+Author-email: r.amansingh241201@gmail.com
+License: MIT
+Description: Our package will give you a basic calculator function such as addition, subtraction, multiplication and division.
+        There are four functions in the package.
+        Each of these functions takes exactly two inputs (preferably numeric values).
+        
+        
+        
+        Change Log
+        =============
+        
+        0.0.1 (09/02/2021)
+        ---------------------
+        First Release
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
