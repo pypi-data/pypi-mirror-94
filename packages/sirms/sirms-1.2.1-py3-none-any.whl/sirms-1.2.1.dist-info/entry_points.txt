@@ -1,0 +1,4 @@
+[console_scripts]
+calc_atomic_properties_chemaxon = sirms.utilities.calc_atomic_properties_chemaxon:main
+sirms = sirms.sirms:main
+

@@ -1,0 +1,15 @@
+sirms/__init__.py,sha256=VvDq5py76uDFeq6tv3EFMgTHX4rtDyt6nw0tPm3Wrkk,21
+sirms/canon.py,sha256=-u_-BQkPiHmD_H0Oc8mD5MV_OZewF6QHyMYLmoQJEOM,8191
+sirms/files.py,sha256=dsbKTiAOir5oKA0F3YgTAHVPuxDF79gRnh_9F0ZShas,8211
+sirms/labels.py,sha256=jC_hMg-fHB0VrhiXevPJsAqghg2Kvt84W894N_nRFUE,5394
+sirms/mols.py,sha256=WcWDkm_ONBUTUZIKgkqS6S10smXnhDTc5wKJxDBHCpw,10316
+sirms/ppgfunctions.py,sha256=Kv_5eJWGycv2nCo7IqmfmPK6FS0DoCpmKA6wni3NaAE,861
+sirms/sdf.py,sha256=D3EMlpsiVsdVSu0R74n3Q1XyLAwjd9z6Yn246EbzjCE,11502
+sirms/sirms.py,sha256=V_CsndFFB3zBnmV4qVFcHDqXDJRafOcvdQ60w1HZFgY,33791
+sirms/sirms_name.py,sha256=zy09LK8xT-2ZoUTd7s4D2crAVYzx8Dl1B8sOwXRUtKY,1118
+sirms-1.2.1.dist-info/LICENSE.txt,sha256=gFd_dNbPgGRLY5a8go3izJz7kWmRjfEqLSFbYxxuyLY,1505
+sirms-1.2.1.dist-info/METADATA,sha256=QZcnIa2bwIZLsPVd846H9dbj_uuS-afzRicMKuWQ7-g,3914
+sirms-1.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sirms-1.2.1.dist-info/entry_points.txt,sha256=ZvbodK_1zCc-N1lBbJYnI5NDLPLWHIlbyy64wJomZRE,131
+sirms-1.2.1.dist-info/top_level.txt,sha256=GlC0v4JSUCkR9E1XXDW75QVQi7hcAunizWRlUFwd1f4,6
+sirms-1.2.1.dist-info/RECORD,,
