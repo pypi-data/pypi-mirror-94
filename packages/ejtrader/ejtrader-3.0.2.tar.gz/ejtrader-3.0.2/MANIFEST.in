@@ -1,0 +1,6 @@
+include README.md
+include ejtrader/invest/resources/*
+include ejtrader/invest/*
+include requirements.txt
+include docs/requirements.txt
+include tests/requirements.txt
