@@ -1,0 +1,2 @@
+recursive-include binp/migrations *
+recursive-include binp/static *
