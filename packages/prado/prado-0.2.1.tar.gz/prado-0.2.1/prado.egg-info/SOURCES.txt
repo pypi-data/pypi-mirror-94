@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+prado/__init__.py
+prado.egg-info/PKG-INFO
+prado.egg-info/SOURCES.txt
+prado.egg-info/dependency_links.txt
+prado.egg-info/not-zip-safe
+prado.egg-info/requires.txt
+prado.egg-info/top_level.txt
