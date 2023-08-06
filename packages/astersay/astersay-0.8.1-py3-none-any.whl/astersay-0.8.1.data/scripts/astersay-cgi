@@ -1,0 +1,47 @@
+#!python
+#
+# Copyright (c) 2020, Grigoriy Kramarenko
+# All rights reserved.
+# This file is distributed under the same license as the current project.
+#
+import getpass
+import os
+import sys
+from datetime import datetime
+from astersay.app import App
+
+user = getpass.getuser()
+pid = os.getpid()
+
+if os.path.exists('/var/log/asterisk/'):
+    logfile = '/var/log/asterisk/astersay-cgi.log'
+else:
+    logfile = ''
+
+
+def log(msg):
+    """Logging to file if it defined."""
+    if logfile:
+        with open(logfile, 'a') as f:
+            now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            print('[%s] pid:%s user:%s -- %s' % (now, pid, user, msg), file=f)
+
+
+log('Started.')
+result = 1
+
+try:
+    app = App()
+except Exception as e:
+    log('The app was not created: %s.' % e)
+else:
+    log('The app is created successfully.')
+    try:
+        result = app.run()
+    except Exception as e:
+        log('The dialog was not executed: %s.' % e)
+    else:
+        log('The dialog is executed successfully.')
+
+log('Finished. Result: %s' % result)
+sys.exit(result)
