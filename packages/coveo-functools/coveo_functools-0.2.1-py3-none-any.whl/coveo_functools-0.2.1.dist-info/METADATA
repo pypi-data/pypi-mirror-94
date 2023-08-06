@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: coveo-functools
+Version: 0.2.1
+Summary: A grab-bag of function-related tools.
+Home-page: https://pypi.dev.cloud.coveo.com/simple
+Author: Jonathan piché
+Author-email: jpiche@coveo.com
+Requires-Python: >=3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: inflection
+Requires-Dist: typing_extensions
+Project-URL: Repository, https://pypi.dev.cloud.coveo.com/simple
