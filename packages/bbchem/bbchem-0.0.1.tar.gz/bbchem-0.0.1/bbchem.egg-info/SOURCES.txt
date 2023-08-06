@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+bbchem/__init__.py
+bbchem.egg-info/PKG-INFO
+bbchem.egg-info/SOURCES.txt
+bbchem.egg-info/dependency_links.txt
+bbchem.egg-info/top_level.txt
