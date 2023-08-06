@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+fastapi_versioning/__init__.py
+fastapi_versioning/routing.py
+fastapi_versioning/versioning.py
+fastapi_versioning.egg-info/PKG-INFO
+fastapi_versioning.egg-info/SOURCES.txt
+fastapi_versioning.egg-info/dependency_links.txt
+fastapi_versioning.egg-info/requires.txt
+fastapi_versioning.egg-info/top_level.txt
