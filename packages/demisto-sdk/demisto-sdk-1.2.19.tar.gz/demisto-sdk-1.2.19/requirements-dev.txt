@@ -1,0 +1,10 @@
+deprecated
+mitmproxy==5.1.0
+mock
+pre-commit
+pytest
+pytest-cov
+pytest-datadir-ng
+pytest-mock
+requests_mock
+tox-pyenv
