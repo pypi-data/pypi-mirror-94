@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+sigplot/__init__.py
+sigplot/correlation.py
+sigplot/sinusoids.py
+sigplot.egg-info/PKG-INFO
+sigplot.egg-info/SOURCES.txt
+sigplot.egg-info/dependency_links.txt
+sigplot.egg-info/requires.txt
+sigplot.egg-info/top_level.txt
