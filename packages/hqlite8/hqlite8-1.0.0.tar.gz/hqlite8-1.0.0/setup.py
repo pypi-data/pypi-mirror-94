@@ -1,0 +1,20 @@
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="hqlite8",
+    version="1.0.0",
+    author="IAmThe2ndHuman",
+    license="MIT",
+    description="epic sqlite3 library wrapper im working on (not done - you probably shouldn't use this yet)",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+    ],
+    python_requires='>=3.7',
+)

@@ -1,0 +1,10 @@
+README.md
+setup.py
+hqlite8/__init__.py
+hqlite8/classes.py
+hqlite8/enums.py
+hqlite8/private_classes.py
+hqlite8.egg-info/PKG-INFO
+hqlite8.egg-info/SOURCES.txt
+hqlite8.egg-info/dependency_links.txt
+hqlite8.egg-info/top_level.txt
