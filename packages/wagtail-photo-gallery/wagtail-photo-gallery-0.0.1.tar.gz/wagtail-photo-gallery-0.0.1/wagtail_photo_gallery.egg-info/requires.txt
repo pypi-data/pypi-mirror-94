@@ -1,0 +1,9 @@
+wagtail
+wagtail-generic-chooser
+django-imagekit
+
+[pillow]
+pillow
+
+[pillow-simd]
+pillow-simd
