@@ -1,0 +1,10 @@
+choixpeau/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+choixpeau/amplitude.py,sha256=6x1aWa6kxav9lWJ83eOBNjGbK8decEMVW5iJ4-HJo6c,934
+choixpeau/choixpeau.py,sha256=Xhz1V7sJ4bzciIxn6FNbyxMxRaig1r7K9zRMKzzjcpI,1413
+choixpeau/decorators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+choixpeau/decorators/fastapi.py,sha256=zHOZKdJrR1mQafL_tTzSRbvO3jMA6E9DLW1ZkoLzv6o,910
+choixpeau-0.0.6.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+choixpeau-0.0.6.dist-info/METADATA,sha256=hdRBObZxXHt6RFaSeQDt-KQHjOgSdzF2VoO2_RmkYoc,2132
+choixpeau-0.0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+choixpeau-0.0.6.dist-info/top_level.txt,sha256=IdAvIn3IgaI1w4ywsvoVD2iVKnY9Wk1logPBiccxeok,10
+choixpeau-0.0.6.dist-info/RECORD,,
