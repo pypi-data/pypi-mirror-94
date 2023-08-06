@@ -1,0 +1,3 @@
+[intake.catalogs]
+met_office = intake_informaticslab:cat
+
