@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: gabyte
+Version: 0.1.5
+Summary: Genetic algorithms with bytes
+Home-page: UNKNOWN
+Author: Francis B. Lavoie
+Author-email: francis.b.lavoie@usherbrooke.ca
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: tqdm
+
+Genetic algorithms with bytes
+
+
