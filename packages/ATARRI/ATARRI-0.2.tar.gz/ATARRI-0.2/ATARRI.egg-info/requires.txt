@@ -1,0 +1,5 @@
+numpy>=1.19
+astropy>=4.2
+lightkurve>=1.11
+astroquery>=0.4
+matplotlib>=3.3
