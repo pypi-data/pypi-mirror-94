@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: SolverByPina
+Version: 0.2
+Summary: 8 task solver
+Home-page: UNKNOWN
+Author: Pinakot
+Author-email: pinakoteka.cs@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
