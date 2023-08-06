@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+igwn_lfn2pfn.py
+requirements.txt
+setup.py
+bin/sft-test.sh
+bin/test_lfn2pfn
+bin/test_lfn2pfn.sh
+bin/test_meta
+igwn_rucio_lfn2pfn.egg-info/PKG-INFO
+igwn_rucio_lfn2pfn.egg-info/SOURCES.txt
+igwn_rucio_lfn2pfn.egg-info/dependency_links.txt
+igwn_rucio_lfn2pfn.egg-info/requires.txt
+igwn_rucio_lfn2pfn.egg-info/top_level.txt

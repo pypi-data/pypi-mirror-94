@@ -1,0 +1,135 @@
+#!/usr/bin/env python
+# Copyright (C) 2020  James Alexander Clark <james.clark@ligo.org>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+"""Verify LFN2PFN algorithms
+"""
+
+import os
+import sys
+import logging
+import argparse
+import argcomplete
+from nose.tools import assert_equal
+import rucio.rse.rsemanager as rsemgr
+from rucio.rse.protocols.protocol import RSEDeterministicTranslation
+import gwrucio.utils
+
+logging.basicConfig(
+    stream=sys.stdout,
+    level='INFO',
+    format='%(asctime)s\t%(process)d\t%(levelname)s\t%(message)s')
+
+
+def parse_inputs():
+    """
+    Command line parser
+    """
+
+    aparser = argparse.ArgumentParser(description=__doc__)
+
+    aparser.add_argument(dest="lfn",
+                         help="""LFN to test""")
+    aparser.add_argument('-p',
+                         "--true-pfn",
+                         type=str,
+                         required=False,
+                         help="""Verify derived PFN matches this""")
+    aparser.add_argument('-s',
+                         "--scope",
+                         type=str,
+                         required=True,
+                         help="""Scope for this DID""")
+    aparser.add_argument('-r',
+                         "--rse",
+                         type=str,
+                         required=True,
+                         help="""RSE whose LFN2PFN algorithm we'll test""")
+    argcomplete.autocomplete(aparser)
+
+    aparser = aparser.parse_args(sys.argv[1:])
+
+    return aparser
+
+
+def get_rse_pfn(path, scope, rse):
+    """
+    Return the PFN at this RSE
+
+    Parameters
+    ----------
+    rse_info : dict
+        Protocol related RSE attributes.  See
+        `rucio/lib/rucio/rse/rsemanager.py`.
+    scope : str
+        Scope for the DID
+    path : str
+        Path to the DID
+    """
+
+    rse_info = rsemgr.get_rse_info(rse)
+    protocol = rse_info['protocols'][0]
+    schema = protocol['scheme']
+    prefix = protocol['prefix']
+    port = protocol['port']
+    rucioserver = protocol['hostname']
+
+    # Determine URI prefix from RSE configuration
+    if schema == 'srm':
+        prefix = protocol['extended_attributes']['web_service_path'] + prefix
+    uri = schema + '://' + rucioserver
+    if port != 0:
+        uri += ':' + str(port)
+
+    # Use the RSE's lfn2pfn
+    lfn2pfn_translator = RSEDeterministicTranslation(rse=rse,
+                                                     rse_attributes=rse_info)
+    filepath = lfn2pfn_translator.path(scope=scope,
+                                       name=os.path.basename(path))
+
+    pfn = uri + os.path.join(prefix, filepath)
+
+    return filepath, pfn
+
+
+def verify_pfn(lfn, true_pfn, scope, rse):
+    """
+    Verfieds that the provided PFN matches the expected value returned by the
+    lfn2pfn algorithm at the RSE
+
+    :param pfn: physical filename at RSE
+    :type pfn: str
+    :param scope: Scope for the corresponding DID
+    :type scope: str
+    :param rse: name of RSE to test
+    """
+
+    derived_pfn, full_pfn = get_rse_pfn(lfn, scope, rse)
+    if true_pfn:
+        logging.info("Checking provided (%s) and derived PFN (%s) match",
+                     true_pfn, derived_pfn)
+        assert_equal(true_pfn, derived_pfn)
+        logging.info("PFN & derived PFN match!")
+    else:
+        logging.info("Checking we can stat %s", full_pfn)
+        gwrucio.utils.gfal_stat(full_pfn)
+    logging.info("LFN2PFN ALGORITHM OK!")
+
+
+if __name__ == "__main__":
+    # Parse input
+    ARGS = parse_inputs()
+    verify_pfn(lfn=ARGS.lfn, true_pfn=ARGS.true_pfn, scope=ARGS.scope,
+               rse=ARGS.rse)

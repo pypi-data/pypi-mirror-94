@@ -1,0 +1,6 @@
+include requirements.txt 
+include *.md 
+include Dockerfile
+include LICENSE
+include VERSION
+include data

@@ -1,0 +1,77 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
+# Authors:
+# - James Alexander Clark, <james.clark@ligo.org>, 2020
+"""
+test_meta
+
+Showcase retrieval of did-level metadata
+"""
+import sys
+import traceback
+import argparse
+import argcomplete
+
+from rucio.client.client import Client
+
+
+def parse_inputs():
+    """
+    Command line parser
+    """
+
+    aparser = argparse.ArgumentParser(description=__doc__)
+
+    aparser.add_argument(dest="did",
+                         help="""DID to test""")
+    aparser.add_argument('-r',
+                         "--rse",
+                         type=str,
+                         required=False,
+                         help="""RSE""")
+    argcomplete.autocomplete(aparser)
+
+    aparser = aparser.parse_args(sys.argv[1:])
+
+    return aparser
+
+
+def print_metadata(did):
+    """
+    Retrieve and print did metadata for this DID
+
+    :param did: DID name, of form <scope>:<lfn>
+    """
+    try:
+        did_scope, did_name = did.split(':')
+    except ValueError:
+        print(traceback.format_exc())
+        print("DID name should be <scope>:<name>")
+        sys.exit(-1)
+
+    client = Client()
+    did_meta = client.get_metadata(scope=did_scope, name=did_name,
+                                   plugin='JSON')
+
+    print(f"DID metadata for {did_scope}:{did_name}:")
+    for key in did_meta.keys():
+        print(f"{key}: {did_meta[key]}")
+
+
+if __name__ == "__main__":
+    # Parse input
+    ARGS = parse_inputs()
+    print_metadata(ARGS.did)
