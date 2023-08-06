@@ -1,0 +1,4 @@
+[console_scripts]
+dock = Phinder.docking.docker:main
+find = Phinder.PharmacoFindWorkplace.POpt2:main
+
