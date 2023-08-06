@@ -1,0 +1,78 @@
+name formula state dhf298 dgf298
+methane_(g) ch4 (g) -74520 -50460
+ethane_(g) c2h6 (g) -83820 -31855
+propane_(g) c3h8 (g) -104680 -24290
+n_butane_(g) c4h10 (g) -125790 -16570
+n_pentane_(g) c5h12 (g) -146760 -8650
+n_hexane_(g) c6h14 (g) -166920 150
+n_heptane_(g) c7h16 (g) -187780 8260
+n_octane_(g) c8h18 (g) -208750 16260
+ethylene_(g) c2h4 (g) 52510 68460
+propylene_(g) c3h6 (g) 19710 62205
+1_butene_(g) c4h8 (g) -540 70340
+1_pentene_(g) c5h10 (g) -21280 78410
+1_hexene_(g) c6h12 (g) -41950 86830
+1_heptene_(g) c7h14 (g) -62760
+acetaldehyde_(g) c2h4o (g) -166190 -128860
+acetic_acid_(l) c2h4o2 (l) -484500 -389900
+acetylene_(g) c2h2 (g) 227480 209970
+benzene_(g) c6h6 (g) 82930 129665
+benzene_(l) c6h6 (l) 49080 124520
+13_butadiene_(g) c4h6 (g) 109240 149795
+cyclohexane_(g) c6h12 (g) -123140 31920
+cyclohexane_(l) c6h12 (l) -156230 26850
+12_ethanediol_(l) c2h6o2 (l) -454800 -323080
+ethanol_(g) c2h6o (g) -235100 -168490
+ethanol_(l) c2h6o (l) -277690 -174780
+ethylbenzene_(g) c8h10 (g) 29920 130890
+ethylene_oxide_(g) c2h4o (g) -52630 -13010
+formaldehyde_(g) ch2o (g) -108570 -102530
+methanol_(g) ch4o (g) -200660 -161960
+methanol_(l) ch4o (l) -238660 -166270
+methylcyclohexane_(g) c7h14 (g) -154770 27480
+methylcyclohexane_(l) c7h14 (l) -190160 20560
+styrene_(g) c8h8 (g) 147360 213900
+toluene_(g) c7h8 (g) 50170 122050
+toluene_(l) c7h8 (l) 12180 113630
+ammonia_(g) nh3 (g) -46110 -16400
+ammonia_(aq) nh3 (aq) -26500
+calcium_carbide_(s) cac2 (s) -59800 -64900
+calcium_carbonate_(s) caco3 (s) -1206920 -1128790
+calcium_chloride_(s) cacl2 (s) -795800 -748100
+calcium_chloride_(aq) cacl2 (aq) -8101900
+calcium_chloride_(s) cacl2*6h2o (s) -2607900
+calcium_hydroxide_(s) ca(oh)2 (s) -986090 -898490
+calcium_hydroxide_(aq) ca(oh)2 (aq) -868070
+calcium_oxide_(s) cao (s) -635090 -604030
+carbon_dioxide_(g) co2 (g) -393509 -394359
+carbon_monoxide_(g) co (g) -110525 -137169
+hydrochloric_acid_(g) hcl (g) -92307 -95299
+hydrogen_cyanide_(g) hcn (g) 135100 124700
+hydrogen_sulfide_(g) h2s (g) -20630 -33560
+iron_oxide_(s) feo (s) -272000
+iron_oxide_(hematite)_(s) fe2o3 (s) -824200 -742200
+iron_oxide_(magnetite)_(s) fe3o4 (s) -1118400 -1015400
+iron_sulfide_(pyrite)_(s) fes2 (s) -178200 -166900
+lithium_chloride_(s) licl (s) -408610
+lithium_chloride_(s) licl*h2o (s) -712580
+lithium_chloride_(s) licl*2h2o (s) -1012650
+lithium_chloride_(s) licl*3h2o (s) -1311300
+nitric_acid_(l) hno3 (l) -174100 -80710
+nitric_acid_(aq) hno3 (aq) -111250
+nitrogen_oxide_(g) no (g) 90250 86550
+no2_33180 (g) 33180 51310
+n2o_82050 (g) 82050 104200
+n2o4_9160 (g) 9160 97540
+sodium_carbonate_(s) na2co3 (s) -1130680 -1044440
+sodium_carbonate_(s) na2co3�10h2o (s) -4081320
+sodium_chloride_(s) nacl (s) -411153 -384138
+sodium_chloride_(aq) nacl (aq) -393133
+sodium_hydroxide_(s) naoh (s) -425609 -379494
+sodium_hydroxide_(aq) naoh (aq) -419150
+sulfur_dioxide_(g) so2 (g) -296830 -300194
+sulfur_trioxide_(g) so3 (g) -395720 -371060
+sulfur_trioxide_(l) so3 (l) -441040
+sulfuric_acid_(l) h2so4 (l) -813989 -690003
+sulfuric_acid_(aq) h2so4 (aq) -744530
+water_(g) h2o (g) -241818 -228572
+water_(l) h2o (l) -285830 -237129

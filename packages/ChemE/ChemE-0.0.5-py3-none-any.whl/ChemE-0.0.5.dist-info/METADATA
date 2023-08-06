@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ChemE
+Version: 0.0.5
+Summary: Various functions and data for Chemical Engineering Students
+Home-page: https://github.com/ConciseVerbosity18/ChemE_CV
+Author: ol-<(
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+
+# ChemE
+This package was birthed to help Chemical Engineers with the massive tables that we typically have to look through. There are also some other features.
+
+
