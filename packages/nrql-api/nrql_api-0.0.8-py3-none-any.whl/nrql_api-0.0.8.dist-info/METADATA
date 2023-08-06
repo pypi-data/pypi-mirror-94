@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: nrql-api
+Version: 0.0.8
+Summary: 
+Requires-Dist: aiohttp (~=3.7.2)
+Provides-Extra: dev
+Requires-Dist: aiohttp (~=3.7.2) ; extra == 'dev'
+Requires-Dist: ipython (==7.19.0) ; extra == 'dev'
+Requires-Dist: python-dotenv (==0.15.0) ; extra == 'dev'
+
+Wrapper for newrelic api for making nrql requests
+
+
+Home-page: https://github.com/p0m1d0rka/nrql_api
+Author: Vladimir Elizarov
+Author-email: vladimirelizarov89@gmail.com
+License: MIT
+Description: # NRQL API
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.8
+Provides-Extra: dev
