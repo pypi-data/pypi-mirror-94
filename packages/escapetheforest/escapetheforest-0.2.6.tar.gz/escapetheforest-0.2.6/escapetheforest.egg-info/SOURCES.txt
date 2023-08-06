@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+escapetheforest/__init__.py
+escapetheforest/__main__.py
+escapetheforest/actions.py
+escapetheforest/enemies.py
+escapetheforest/items.py
+escapetheforest/map.txt
+escapetheforest/player.py
+escapetheforest/tiles.py
+escapetheforest/world.py
+escapetheforest.egg-info/PKG-INFO
+escapetheforest.egg-info/SOURCES.txt
+escapetheforest.egg-info/dependency_links.txt
+escapetheforest.egg-info/top_level.txt
