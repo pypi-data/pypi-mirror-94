@@ -1,0 +1,10 @@
+README.md
+setup.py
+nrql_api/__init__.py
+nrql_api/request.py
+nrql_api/response.py
+nrql_api.egg-info/PKG-INFO
+nrql_api.egg-info/SOURCES.txt
+nrql_api.egg-info/dependency_links.txt
+nrql_api.egg-info/requires.txt
+nrql_api.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+aiohttp~=3.7.2
+
+[dev]
+aiohttp~=3.7.2
+ipython==7.19.0
+python-dotenv==0.15.0
