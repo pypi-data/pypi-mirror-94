@@ -1,0 +1,16 @@
+hpl/__init__.py,sha256=auWNt5JbuyeHRExx-mGMe_B3T77uIwHYAlBRXCCc8kE,113
+hpl/ast.py,sha256=VtSdIr5QmD_zrdOrn7QwJBJQ176pk8uNIWKoY10t4rA,55543
+hpl/exceptions.py,sha256=2BspXn05U1zArtIE6EBZLdppxkZCE1I3wsI_IyuDwyc,1451
+hpl/grammar.py,sha256=YZhisF46O3WIHKsDBaAo8HIg1-GscZRkMaJRxo9h6i4,6190
+hpl/logic.py,sha256=CRJOEXua_U2fRcEtrDR3Atq7IJDndG7Y2ZeNQJaiEgY,9561
+hpl/parser.py,sha256=UuNqzwPU2H673-u0A6GxZWKiWUPsIjN_rhQb2kRGcfE,10319
+hpl/grammars/files.lark,sha256=zNrzlDWqERp2WU2tUV-9fX5gOarHri1Yrphm5vsmvCI,155
+hpl/grammars/predicates.lark,sha256=hxH08IuifwdiyYjR-T_4Y7fX6Z8RUXWxA00Q3hTVaNo,1484
+hpl/grammars/properties.lark,sha256=ylPyhrXoEPsv-nxAtrAGPNUftubuCsJ7ZiqyN7sWUpU,1237
+hpl/grammars/tokens.lark,sha256=H3UYRJ42iexFGJPWPyCXj54DOpXUVUm3EuejLPch5OE,1044
+hpl_specs-0.2.0.data/scripts/build_grammars,sha256=_qBdPY-Yikt2ceYWGOs9o7k2ObBPxQsnMCei9KJ7GE0,1516
+hpl_specs-0.2.0.dist-info/LICENSE,sha256=g9yJPOzPTL7hHwNxeg4Qp813m0QLVAOcMFGF16T_IeA,1070
+hpl_specs-0.2.0.dist-info/METADATA,sha256=n86MV3i4SX2DcXSJqX1jnRpjS2IfoZBlQClHET9WYrU,3371
+hpl_specs-0.2.0.dist-info/WHEEL,sha256=pqI-DBMA-Z6OTNov1nVxs7mwm6Yj2kHZGNp_6krVn1E,92
+hpl_specs-0.2.0.dist-info/top_level.txt,sha256=dfsZv96csd0Jydc1EN1TymaZAmdEFdFVby31Dnk63Gk,4
+hpl_specs-0.2.0.dist-info/RECORD,,
