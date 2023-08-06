@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: coveo-systools
+Version: 0.2.3
+Summary: Grab-bag of system related tools.
+Home-page: https://pypi.dev.cloud.coveo.com/simple
+Author: Jonathan piché
+Author-email: jpiche@coveo.com
+Requires-Python: >=3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: coveo-functools (>=0.2.0,<0.3.0)
+Requires-Dist: typing_extensions
+Project-URL: Repository, https://pypi.dev.cloud.coveo.com/simple
