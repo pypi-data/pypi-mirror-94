@@ -1,0 +1,42 @@
+#!python 
+
+import argparse
+import re
+import sys
+
+from fastaUtils import grammars
+from fastaUtils.fasta import parse_fasta, parse_header, iterate_sequences
+
+def awk(cmd,sequences):
+  # modify the command in order to allow for syntax `... in "filename"` -> `... in [tags]` where tags are read from filename
+  lists=[]
+  list_rules=["in \"(?P<filename>.+)\"","in '(?P<filename>.+)'"]
+  for rule in list_rules:
+    matches=list(re.finditer(rule,cmd))
+    for m in matches:
+      filename=dict(m.groupdict())['filename']
+      cmd=cmd.replace('"'+filename+'"','lists[{}]'.format(len(lists))).replace("'"+filename+"'",'lists[{}]'.format(len(lists)))
+      l=[]
+      with open(filename,'r') as infile:
+        for line in infile:
+          try:
+            l.append(int(line.strip()))
+          except:
+            l.append(line.strip())
+      lists.append(frozenset(l))
+  # parse command
+  awk_parsed=grammars.awk_parser.parse(cmd)
+  awk_cmd=grammars.awk_tree.build(awk_parsed)
+  beg=compile(awk_cmd.get("beginblock",""),"",mode="exec")
+  main=compile(awk_cmd["mainblock"],"",mode="exec")
+  end=compile(awk_cmd.get("endblock",""),"",mode="exec")
+  iterate_sequences(beg,main,end,sequences,lists=lists)
+
+if __name__=="__main__":
+  parser = argparse.ArgumentParser(prog='fst-awk',description="awk-like tool for manipulating fasta sequences. Defined variables: 'db','uid','name','descr','os','ox','gn','pe','sv','seq','seq.seq','seq.header','NR'. In addition `... in \"filename\"` loads a list from \"filename\". Syntax: '[\BEGIN{...}] condition {...} [\END{...}]'. By default condition='if(True)' and the main block is {print(seq)}. Every valid python code that does not contain '{','}' and '\\' can be used. Code lines are separated by ';'. Code between curly brackets will be indented correctly and a ':' will be added to the previous line. So, for example: 'if NR>2 {print(seq.header)}' is valid",formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+  parser.add_argument('cmd', help='Command')
+  parser.add_argument('infile', nargs='?', default=None, help='Input file in fasta format')
+  args=parser.parse_args()
+    
+  seqs=parse_fasta(args.infile)
+  awk(args.cmd,seqs)

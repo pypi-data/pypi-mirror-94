@@ -1,0 +1,30 @@
+#!python
+
+from fastaUtils.fasta import parse_fasta, parse_header, generate_header, seqRecord
+
+import argparse
+if __name__=="__main__":
+  parser = argparse.ArgumentParser(prog='fst-paste',description='Paste multiple fasta files. The number of sequences in output is equal to the minimim number of sequences in each input file. Use - as placeholder for stdin stream',formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+  args,unkargs=parser.parse_known_args()
+  
+  fromstdin=0
+  for i in range(len(unkargs)):
+    if unkargs[i]=='-':
+      unkargs[i]=None
+      fromstdin+=1
+  if fromstdin>1:
+    raise RuntimeError("Cannot parse more than one stream from stdid")
+  infiles=[ parse_fasta(f) for f in unkargs ]
+  while True:
+    try:
+      seqs=[ next(f) for f in infiles ]
+      seq="".join([s.seq for s in seqs])
+      headers=[ parse_header(s.header) for s in seqs ]
+      db="-".join(set([h[0] for h in headers]))
+      uid="-".join(set([h[1] for h in headers]))
+      name="-".join(set([h[2] for h in headers]))
+      header=generate_header(db,uid,name)
+      sequence=seqRecord(header,seq)
+      print(sequence)
+    except StopIteration:
+      break

@@ -1,0 +1,30 @@
+#!python
+
+import argparse
+from fastaUtils.fasta import parse_fasta, parse_header
+
+if __name__=="__main__":
+  parser = argparse.ArgumentParser(prog='fst-split',description="Split fasta file in multiple fasta files",formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+  parser.add_argument('infile', nargs='?', default=None, help='Input file in fasta format')
+  parser.add_argument('outfile', nargs='?', default="records", help='Prefix used as output files')
+  parser.add_argument('-l', dest="nlines", type=int, default=100, help='Split in files containinig at most l records')
+  args=parser.parse_args()
+
+  outseqs=[]
+  N=0
+  for seq in parse_fasta(args.infile):
+    outseqs.append(seq)
+    if len(outseqs)==args.nlines:
+      outfile="{}_{}.fasta".format(args.outfile.split('.')[0],N)
+      N+=1
+      with open(outfile,'w') as outfile:
+        for s in outseqs:
+          outfile.write(str(s))
+          outfile.write("\n")
+      outseqs=[]
+
+  outfile="{}_{}.fasta".format(args.outfile.split('.')[0],N)
+  with open(outfile,'w') as outfile:
+    for s in outseqs:
+      outfile.write(str(s))
+      outfile.write("\n")

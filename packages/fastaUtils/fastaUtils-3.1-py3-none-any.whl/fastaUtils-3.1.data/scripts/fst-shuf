@@ -1,0 +1,45 @@
+#!python
+
+import numpy as np
+import argparse
+from fastaUtils.fasta import seqRecord,parse_fasta
+from fastaUtils.random import shuffle
+import random
+
+def domainType(arg):
+  v=[int(v) for v in arg.split(':')]
+  return v
+
+if __name__=="__main__":
+  parser = argparse.ArgumentParser(prog='Shuf regions of a multiple sequence alignment',formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+  
+  parser.add_argument('infile', nargs='?', default=None,type=str, help='Initial MSA')
+  parser.add_argument('-r','--regions', type=domainType, default=None,help='Shuffle entire regions. E.g. -r 100:130 will shuffle (100-130] and (130,None)')
+  parser.add_argument('-c','--columns', type=int, nargs='+', default=None,help='Shuffle selected columns. First column is 1')
+  parser.add_argument('--seed', dest="seed", type=int, default=None, help='Seed used during random sort')
+  args=parser.parse_args()
+  
+  random.seed(args.seed)
+  
+  if args.regions is not None and args.columns is not None:
+    raise("Error: only one among -r and -c can be used")
+  
+  if args.regions is not None:
+    args.regions=[r-1 for r in args.regions]
+    args.regions.append(None)
+  
+  if args.columns is not None:
+    args.columns=[c-1 for c in args.columns]
+  
+  if args.regions is None and args.columns is None:
+    seqs=[seq for seq in parse_fasta(args.infile)]
+    seqs=shuffle(seqs,args.columns,args.regions)
+    for seq in seqs:
+      print(seq)
+  else:
+    seqs=[seq.seq for seq in parse_fasta(args.infile)]
+    seqs=shuffle(seqs,args.columns,args.regions)
+    for i,seq in enumerate(seqs):
+      s=seqRecord("{}".format(i+1))
+      s.append(seq)
+      print(s)
