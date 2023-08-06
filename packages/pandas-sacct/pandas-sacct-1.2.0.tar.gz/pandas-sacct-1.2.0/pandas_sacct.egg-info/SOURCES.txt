@@ -1,0 +1,11 @@
+README.md
+setup.py
+pandas_sacct.egg-info/PKG-INFO
+pandas_sacct.egg-info/SOURCES.txt
+pandas_sacct.egg-info/dependency_links.txt
+pandas_sacct.egg-info/requires.txt
+pandas_sacct.egg-info/top_level.txt
+sacct/__init__.py
+sacct/sacct.py
+sacct/util.py
+sacct/version.py

@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: pandas-sacct
+Version: 1.2.0
+Summary: Read Slurm sacct as pandas dataframes
+Home-page: https://gitlab.com/NERSC/pandas-sacct
+Author: Brandon Cook
+Author-email: bgcook@lbl.gov
+License: UNKNOWN
+Description: # Pandas sacct
+        
+        Provides an `Sacct` class interface to the [Slurm](https://slurm.schedmd.com).
+        
+        In general options to `sacct` (see `man sacct`) can passed by keyword to `Sacct`.
+        
+        ## Usage
+        
+        *  `Sacct(flag=True)` corresponds to `sacct --flag`.
+        *  `Sacct(key=value)` corresponds to `sacct --key=value`.
+        *  starttime and endtime options support both string and types that
+           support `.isoformat()` such as `pd.Timestamp()`.
+        
+        ## examples
+        
+        ```python
+        import sacct
+        s = sacct.Sacct(starttime="2020-08-30T00:00:00", endtime="2020-08-31T00:00:00", allocations=True)
+        df = s.execute()
+        print(s)
+        print(df.head())
+        ```
+        
+        ```
+        sacct --format=jobidraw,start,end,nodelist --noheader --parsable2 --truncate --allocations --starttime=2020-08-30T00:00:00 --endtime=2020-08-31T00:00:00
+           jobidraw               start                 end    nodelist
+        0  33891896 2020-08-30 03:01:58 2020-08-30 03:15:14  [nid01454]
+        1  33891898 2020-08-30 03:01:58 2020-08-30 03:04:59  [nid01565]
+        2  33891899 2020-08-30 03:07:13 2020-08-30 03:10:10  [nid01163]
+        3  33891900 2020-08-30 03:01:58 2020-08-30 03:15:56  [nid01998]
+        4  33891902 2020-08-30 03:01:58 2020-08-30 03:04:54  [nid01716]
+        ```
+        
+        ```python
+        import sacct
+        import pandas as pd
+        t0 = pd.Timestamp("2020-08-30T00:00:00")
+        t1 = t0 + pd.Timedelta(days=1)
+        s = sacct.Sacct(starttime=t0, endtime=t1, allocations=True, format=['jobidraw', 'jobname'], allusers=True)
+        df = s.execute()
+        print(s)
+        print(df.head())
+        ```
+        
+        ```
+        sacct --format=jobidraw,jobname --noheader --parsable2 --truncate --allocations --starttime=2020-08-30T00:00:00 --endtime=2020-08-31T00:00:00 --allusers
+           jobidraw   jobname
+        0  27731125  JT_D1_16
+        1  27731129  JT_D1_16
+        2  27731131  JT_D1_16
+        3  27731136  JT_D1_16
+        4  27731165  JT_D2_16
+        ```
+        
+        ```python
+        import sacct
+        import pandas as pd
+        t0 = pd.Timestamp("2020-08-30T00:00:00")
+        t1 = t0 + pd.Timedelta(days=1)
+        s = sacct.Sacct(starttime=t0, endtime=t1, format=['jobidraw', 'jobname'], allusers=True)
+        df = s.execute()
+        print(s)
+        print(df.head())
+        ```
+        
+        ```
+        sacct --format=jobidraw,jobname --noheader --parsable2 --truncate --starttime=2020-08-30T00:00:00 --endtime=2020-08-31T00:00:00 --allusers
+           jobidraw    step   jobname
+        0  29056157   batch     batch
+        1  29056157  extern    extern
+        2  29056157       0  lmp_cori
+        3  29056168   batch     batch
+        4  29056168  extern    extern
+        ```
+        
+        Specific `sacct` command (optional):
+        
+        ```
+        s = sacct.Sacct(sacct_cmd="/usr/bin/sacct", starttime="2020-08-30T00:00:00", endtime="2020-08-31T00:00:00", allocations=True)
+        ```
+        
+        ## Copywrite Notice
+        
+        Pandas-sacct Copyright (c) 2020, The Regents of the University of California,
+        through Lawrence Berkeley National Laboratory (subject to receipt of
+        any required approvals from the U.S. Dept. of Energy). All rights reserved.
+        
+        If you have questions about your rights to use or distribute this software,
+        please contact Berkeley Lab's Intellectual Property Office at
+        IPO@lbl.gov.
+        
+        NOTICE.  This Software was developed under funding from the U.S. Department
+        of Energy and the U.S. Government consequently retains certain rights.  As
+        such, the U.S. Government has been granted for itself and others acting on
+        its behalf a paid-up, nonexclusive, irrevocable, worldwide license in the
+        Software to reproduce, distribute copies to the public, prepare derivative 
+        works, and  perform publicly and display publicly, and to permit others to do so.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
