@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: pytket-qiskit
+Version: 0.7.1
+Summary: Extension for pytket, providing translation to and from the Qiskit framework
+Home-page: https://github.com/CQCL/pytket
+Author: Will Simmons
+Author-email: will.simmons@cambridgequantum.com
+License: CQC Software Licence
+Description: # pytket-qiskit
+        
+        [Pytket](https://cqcl.github.io/pytket) is a Python module for interfacing
+        with CQC tket, a set of quantum programming tools.
+        
+        IBM's [Qiskit](https://qiskit.org) is an open-source framework for quantum
+        computation, ranging from high-level algorithms to low-level circuit
+        representations, simulation and access to the [IBM Q
+        Experience](https://www.research.ibm.com/ibm-q/) devices.
+        
+        `pytket-qiskit` is an extension to `pytket` that allows `pytket` circuits to be
+        run on IBM backends and simulators, as well as conversion to and from Qiskit
+        representations.
+        
+        ## Getting started
+        
+        `pytket-qiskit` is available for Python 3.6, 3.7 and 3.8, on Linux, MacOS and Windows. To
+        install, run:
+        
+        ```pip install pytket-qiskit```
+        
+        ## LICENCE
+        
+        Copyright 2019-2021 Cambridge Quantum Computing
+        
+        You may not use this product except in compliance with the Licence. You may view
+        the License [here](https://cqcl.github.io/pytket/build/html/licence.html).
+        
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
