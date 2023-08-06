@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "option"
+version = "1.0.2"
+description = "Rust like Option and Result types in Python"
+authors = ["Peijun Ma <peijun.ma@protonmail.com>"]
+readme = "README.md"
+license = "MIT"
+repository="https://github.com/MaT1g3R/option"
+homepage="https://mat1g3r.github.io/option/"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+]
+
+include = ['option/py.typed', 'option/**/*.py', 'LICENSE']
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+mypy = "*"
+Sphinx = "*"
+pylint = "*"
+pytest-cov = "*"
+bump2version = "^1.0.0"
