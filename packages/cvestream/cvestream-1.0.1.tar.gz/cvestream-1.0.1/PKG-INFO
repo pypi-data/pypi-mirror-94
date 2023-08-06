@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: cvestream
+Version: 1.0.1
+Summary: a small utility to dump NVD information
+Home-page: https://github.com/leonjza/cvestream
+Author: Leon Jacobs
+Author-email: leonja511@gmail.com
+License: GPL v3
+Download-URL: https://github.com/leonjza/cvestream/archive/1.0.1.tar.gz
+Description: UNKNOWN
+Keywords: docker,tool,pentest,framework
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.5

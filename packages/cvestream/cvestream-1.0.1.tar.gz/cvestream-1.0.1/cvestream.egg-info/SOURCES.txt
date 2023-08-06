@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+cvestream/__init__.py
+cvestream/main.py
+cvestream.egg-info/PKG-INFO
+cvestream.egg-info/SOURCES.txt
+cvestream.egg-info/dependency_links.txt
+cvestream.egg-info/entry_points.txt
+cvestream.egg-info/requires.txt
+cvestream.egg-info/top_level.txt
