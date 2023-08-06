@@ -1,0 +1,10 @@
+README.md
+setup.py
+snowchange/__init__.py
+snowchange/cli.py
+snowchange.egg-info/PKG-INFO
+snowchange.egg-info/SOURCES.txt
+snowchange.egg-info/dependency_links.txt
+snowchange.egg-info/entry_points.txt
+snowchange.egg-info/requires.txt
+snowchange.egg-info/top_level.txt
