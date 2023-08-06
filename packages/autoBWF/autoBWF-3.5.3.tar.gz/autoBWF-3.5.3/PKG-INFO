@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: autoBWF
+Version: 3.5.3
+Summary: Alternative opinionated GUI for FADGI BWFMetaEdit
+Home-page: https://github.com/Ukrainian-History/autoBWF
+Author: Michael Andrec/Ukrainian History and Education Center
+Author-email: m.andrec@ukrhec.org
+License: GNU General Public License v3
+Description: The purpose of `autoBWF` is to provide an alternative GUI for embedding internal metadata in WAVE audio files using the [Broadcast Wave](https://en.wikipedia.org/wiki/Broadcast_Wave_Format) standard, FADGI [BWFMetaEdit](https://mediaarea.net/BWFMetaEdit), and [XMP](https://en.wikipedia.org/wiki/Extensible_Metadata_Platform). 
+        
+        Unlike the existing BWFMetaEdit GUI, autoBWF is extremely opinionated and will automatically generate metadata content based on file naming conventions, system metadata, and pre-configured repository defaults. In addition, it can copy metadata fields from a template file to avoid having to enter the same information multiple times for several master or derivative files of the same physical instantiation.
+        
+        
+        Also included are two command line programs to simplify the creation of derivative files. `autolame.py` is a wrapper for the `lame` MP3 encoder that automatically transfers Wave internal metadata to appropriate ID3v2 tags. `autosplice` is a wrapper that generates `sox` commands from an EDL-like text file to splice audio from multiple input files, while also providing means to do basic fade in/out and audio level compression.
+        
+        For full installation, usage, and configuration information, please read the docs on [readthedocs.org](https://autobwf.readthedocs.io/en/release/).
+        
+        
+        # History
+        
+        ### 3.5.3 (2021-02-09)
+        
+        Fix bug that caused GUI crash when copying text.
+        
+        ### 3.5.2 (2020-04-15)
+        
+        Minor fixes and updates, including
+        
+        * adding Creator field to export utilities
+        * additional code comments and minor bug fixes
+        
+        
+        
+        ### 3.5.1 (2020-03-03)
+        
+        * Documentation updates
+        
+        ### 3.5.0 (2020-03-03)
+        
+        * Add XML export capability to the GUI
+        * Warn user about unsaved data
+        * Clear GUI and reload file after save
+        * Add XMP Creator field
+        * bwf2csv can now validate MD5 of data chunk
+        * Other minor improvements and bug fixes
+        
+        ### 3.4.0 (2019-12-14)
+        
+        * Add capability to toggle between existing, tempate, and edited metadata
+        * Add IARL
+        * Add additional XMP MD fields
+        * Add bwf2pbcore and bwf2csv tools
+        
+        
+        ### 3.3.1 (2019-07-22)
+        
+        * Add "--config" argument to autoBWF
+        * Create expanded documentation in Sphinx and host on readthedocs
+        
+        ### 3.3.0 (2019-06-24)
+        
+        * Add "quit" option to completion message box
+        * Add progress indicator screen
+        * Change ``autolame`` usage to allow for multiple inputs and globbing
+        
+        ### 3.2.1 (2019-06-22)
+        
+        * Fixed bug that was resulting in the overwriting of metadata in template files (and other issues).
+        
+        ### 3.2.0 (2019-05-14)
+        
+        * Major rearrangment for packaging purposes.
+        * First release on PyPI.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
