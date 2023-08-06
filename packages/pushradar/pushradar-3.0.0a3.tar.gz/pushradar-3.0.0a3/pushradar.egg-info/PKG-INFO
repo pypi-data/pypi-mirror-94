@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: pushradar
+Version: 3.0.0a3
+Summary: PushRadar's official Python server library.
+Home-page: https://github.com/pushradar/pushradar-server-python
+Author: PushRadar
+Author-email: contact@pushradar.com
+License: MIT
+Description: UNKNOWN
+Keywords: pushradar realtime websockets channels
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 3
