@@ -1,0 +1,9 @@
+README.md
+setup.py
+pianoviewer/__main__.py
+pianoviewer.egg-info/PKG-INFO
+pianoviewer.egg-info/SOURCES.txt
+pianoviewer.egg-info/dependency_links.txt
+pianoviewer.egg-info/entry_points.txt
+pianoviewer.egg-info/requires.txt
+pianoviewer.egg-info/top_level.txt

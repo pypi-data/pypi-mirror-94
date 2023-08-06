@@ -1,0 +1,31 @@
+Metadata-Version: 1.2
+Name: pianoviewer
+Version: 0.0.1
+Summary: Displays key presses from MIDI.
+Home-page: https://git.brokenmouse.studio/ever/pianoviewer
+Author: EV3R4
+License: MIT
+Description: # Piano Viewer
+        ## Displays key presses from MIDI.
+        [Screenshot](https://git.brokenmouse.studio/ever/pianoviewer/raw/branch/master/screenshot.png)
+        
+        ## Installation
+        * Install the package with `pip install pianoviewer`.
+        
+        ## Usage
+        * Get a list of available MIDI devices `pianoviewer -P`.
+        * Run `pianoviewer -p <YOUR MIDI DEVICE ID>` (this time the -p is small).
+        * If you want to adjust the settings, run `pianoviewer -h` to see what options are available.
+        
+Keywords: midi,piano
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Multimedia :: Sound/Audio :: MIDI
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Requires-Python: >=3.8
