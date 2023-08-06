@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<tryton>
+    <data grouped="1" skiptest="1">
+        <record id="website_locale_en" model="nereid.website.locale">
+            <field name="code">en</field>
+            <field ref="ir.lang_en" name="language"/>
+            <field ref="currency.usd" name="currency"/>
+        </record>
+    </data>
+</tryton>
