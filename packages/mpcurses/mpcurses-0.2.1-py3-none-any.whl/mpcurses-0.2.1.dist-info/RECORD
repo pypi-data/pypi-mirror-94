@@ -1,0 +1,11 @@
+mpcurses/__init__.py,sha256=TfiYj-nnpqLSZfioQCHS-gAxFv6f4BIOZHb0dHNGWXk,681
+mpcurses/handler.py,sha256=GKOLLbADPP6Vh24QyrIZwSC_f8HIKeAvYElGFYw8AbE,3036
+mpcurses/mpcurses.py,sha256=TOgp2VWfG4oUWs-1fKrSacbB2GaHf90ESLO_veR5vEE,13114
+mpcurses/process.py,sha256=KLZaMSQQADzt0th_jsD4aDmvUd67xXMf6j_gTVAfrzU,2173
+mpcurses/screen.py,sha256=QcJSs3t0dzcIBr3lGxGMx4G1jIMaLep8wGMb82eWmqU,19465
+mpcurses-0.2.1.dist-info/METADATA,sha256=ls6s2SkuHkBgXfCnOPajFceQEv0Z037nVL8Kd9drcBw,1899
+mpcurses-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mpcurses-0.2.1.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mpcurses-0.2.1.dist-info/top_level.txt,sha256=rd7I1HrJfX0iCyJuDo7Kfs2z9htM7SG-UW_g42vPv6I,9
+mpcurses-0.2.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mpcurses-0.2.1.dist-info/RECORD,,
