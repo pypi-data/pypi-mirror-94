@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: edfi-lms-extractor-lib
+Version: 1.0.0a1
+Summary: Shared functions library for Ed-Fi LMS Extractor projects
+Home-page: https://techdocs.ed-fi.org/display/EDFITOOLS/LMS+Toolkit
+License: Apache-2.0
+Author: Ed-Fi Alliance, LLC, and contributors
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: SQLAlchemy (>=1.3.19,<2.0.0)
+Requires-Dist: pandas (>=1.1.1,<2.0.0)
+Requires-Dist: xxhash (>=2.0.0,<3.0.0)
+Project-URL: Repository, https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-X-Fizz
