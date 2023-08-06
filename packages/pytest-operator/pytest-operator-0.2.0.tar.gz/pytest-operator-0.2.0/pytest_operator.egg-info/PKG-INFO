@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: pytest-operator
+Version: 0.2.0
+Summary: Fixtures for Operators
+Home-page: https://github.com/charmed-kubernetes/pytest-operator
+Author: Adam Stokes
+Author-email: adam.stokes@ubuntu.com
+License: MIT license
+Description: Fixtures for Operators
+Keywords: pytest,py.test,operators,yaml,asyncio
+Platform: UNKNOWN
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
