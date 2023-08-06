@@ -1,0 +1,14 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+fastrl2/__init__.py
+fastrl2.egg-info/PKG-INFO
+fastrl2.egg-info/SOURCES.txt
+fastrl2.egg-info/dependency_links.txt
+fastrl2.egg-info/entry_points.txt
+fastrl2.egg-info/not-zip-safe
+fastrl2.egg-info/requires.txt
+fastrl2.egg-info/top_level.txt
