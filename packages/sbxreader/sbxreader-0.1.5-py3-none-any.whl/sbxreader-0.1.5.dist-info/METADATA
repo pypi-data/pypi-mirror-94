@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: sbxreader
+Version: 0.1.5
+Summary: Python module to read Neurolabware Scanbox files.
+Home-page: https://github.com/jcouto/sbxreader
+Author: Joao Couto
+Author-email: jpcouto@gmail.com
+License: GPL
+Platform: UNKNOWN
+Requires-Dist: scipy
+
+
+
+# sbxreader
+
+Python module to read Neurolabware Scanbox files.
+
+[see instructions here](https://bitbucket.org/jpcouto/labcams)
+
+Check the git repository for [examples](https://github.com/jcouto/sbxreader.git).
+ ``pip install sbxreader``
+
+
+Source code is in [the repository](https://github.com/jcouto/sbxreader.git)
+
+
+
