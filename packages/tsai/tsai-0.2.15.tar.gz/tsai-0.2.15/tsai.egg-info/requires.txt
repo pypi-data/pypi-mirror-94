@@ -1,0 +1,12 @@
+fastai>=2.2.5
+scikit-learn>=0.24.1
+sktime>=0.5.3
+statsmodels>=0.12.2
+pyunpack>=0.2.2
+PyWavelets>=1.1.1
+numba>=0.52.0
+pyts>=0.11.0
+imbalanced-learn>=0.7.0
+dask==2021.2.0
+argparse>=1.4.0
+tsfresh>=0.17.0
