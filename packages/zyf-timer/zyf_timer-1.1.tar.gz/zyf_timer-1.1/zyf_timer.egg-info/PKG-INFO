@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: zyf-timer
+Version: 1.1
+Summary: 函数计时器
+Home-page: UNKNOWN
+Author: zhangyafei
+Author-email: zhangyafeii@foxmail.com
+License: UNKNOWN
+Description: ### 计时器-zyf_timer
+        
+        #### 安装
+        
+        > pip install zyf_timer
+        
+        #### 使用
+        
+        ```python
+        from zyf_timer.timer import timeit
+        
+        @timeit
+        def main():
+            time.sleep(1)
+            ...
+        ```
+        
+        设置保留位数，默认保留两位小数
+        
+        ```python
+        from zyf_timer.timer import timeit_with_digit
+        
+        @timeit_with_digit(digit=4)
+        def main():
+            time.sleep(1)
+            ...
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
