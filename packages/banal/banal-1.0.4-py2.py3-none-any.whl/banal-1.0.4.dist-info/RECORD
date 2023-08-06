@@ -1,0 +1,13 @@
+banal/__init__.py,sha256=9v4HhXL5eSdbrjcwyPsbwtEnzvrnIVMiIaQs3QCv6_A,636
+banal/bools.py,sha256=3i4TAvAzwMclWFLkEv-ImOOti50mCtC8XhdxLT76Srs,361
+banal/cache.py,sha256=0h2CkfMRleAkRjWHFsRIDZzAwFqK32SIy8sDMvjdSy8,1697
+banal/dicts.py,sha256=MMvec0yOzMivnVq_DpaIgffm3rX2BUSuDVgxqKrclLc,1009
+banal/filesystem.py,sha256=L9Gv-Kg1TEWthBYrUHEwDZsIvG3C5CTYMO8WGdoW8wQ,290
+banal/lists.py,sha256=1cwyZVAuJQV5x-kEZ-e4HtokWb-_CBEv9Ux-ObbXs4E,1785
+banal/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+banal-1.0.4.dist-info/LICENSE,sha256=mZ0YbJtyS8g2Lll5an2I9cRZd3_MVFjDRwGtituItlA,1077
+banal-1.0.4.dist-info/METADATA,sha256=rNVR4DIGko0K8yQM9Ndqq6AVU0PTLndWGTbwElLkA7s,1450
+banal-1.0.4.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+banal-1.0.4.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+banal-1.0.4.dist-info/top_level.txt,sha256=wEwJVqjswTNeReTkAfA6WrjnKKaSwUTriyHmQRdERto,6
+banal-1.0.4.dist-info/RECORD,,
