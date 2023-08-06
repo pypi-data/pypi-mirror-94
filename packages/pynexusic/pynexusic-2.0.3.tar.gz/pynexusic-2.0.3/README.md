@@ -1,0 +1,80 @@
+# pynexusic
+```pynexusic``` is a package that allows communication with Wood NEXUS IC tool
+
+#### Prerequisites
+- NEXUS IC V6.6
+- IC-Web V6.6
+
+#### NEXUS IC Documentation
+The NEXUS IC REST API documentation can be found in the below link:
+
+https://docs.nexusic.com/6.6/ic-web.rest.v2.html
+
+*A specific NEXUS IC version can be specified in the above link by changing **6.6** to the desired NEXUS IC version*
+
+#### Python library installation
+``` python
+pip install pynexusic
+```
+#### Examples
+- Example 1: Get system version
+    1) Import ```NEXUSIC_RESTAPI```
+        ```python
+       from pynexusic import NEXUSIC_RESTAPI as api
+        ```
+    2) Initialize ```NEXUSIC_REST``` class
+        ```python
+       NX_REST = api.NEXUSIC_REST(baseURI, api_key=APIKey)
+        ```
+       
+        *where **APIKey** is the user's API Key provided by the system administrator*
+       
+    3) Execute required function
+        ```python
+        result, result_status_code = NX_REST.getVersion()
+        ```
+        Output:
+        ```python
+        result = {'version': 'x.x.xxxxx.x', 'schema': 'x.xxx'}
+        result_code = 200
+        ```
+- Example 2: Run reports and get python object response
+    1) Import ```NEXUSIC_RESTAPI```
+        ```python
+       from pynexusic import NEXUSIC_RESTAPI as api
+        ```
+    2) Initialize ```NEXUSIC_REST``` class
+        ```python
+       NX_REST = api.NEXUSIC_REST(baseURI, api_key=APIKey)
+        ```
+       *where **APIKey** is the user's API Key provided by the system administrator*
+    3) Execute required report
+        ```python
+        result, result_status_code = NX_REST.getDashboard(report_name)
+        ```
+       *where **report_name** is the name of the report to be executed in NEXUS IC*
+       
+        Output:
+        ```python
+        result = {'name': 'xxxxxxxxxxx', 
+                  'elements': [{'type': 'section', 'data': {}}, 
+                               {'type': 'paragraph', 'data': {'text': [{'value': 'xxxxxx'}]}}
+                              ]
+                  }
+        result_code = 200
+       ```
+        
+        *The values of the **elements** key will contain the data configured in the NEXUS IC report template*
+#### Change history
+#####(V2.0.3) Changes: 
+- NEXUSIC_RESTAPI: 
+    1) Added the ability to authenticate using two modes (APIKEY and BASIC)
+        - APIKEY: Requires an API Key to authenticate
+        - BASIC: Requires username and password
+#####(V2.0.2) Changes: 
+- NEXUSIC_RESTAPI: 
+    1) Added the ability to by pass SSL verification
+#####(V2.0.1) Changes: 
+- Initial deployment in pypi.org
+#### License
+This project is licensed under the MIT license.
