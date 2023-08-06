@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+archival/__init__.py
+archival/archiver.py
+archival/core.py
+archival/utils.py
+archival_web_spider_netrules.egg-info/PKG-INFO
+archival_web_spider_netrules.egg-info/SOURCES.txt
+archival_web_spider_netrules.egg-info/dependency_links.txt
+archival_web_spider_netrules.egg-info/top_level.txt
