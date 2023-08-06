@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: expai
+Version: 0.0.8.5
+Summary: User-friendly library to interact with EXPAI
+Home-page: https://expai.io
+Author: EXPAI
+Author-email: info@expai.io
+License: MIT
+Download-URL: https://pypi.org/project/expai/
+Description: # EXPAI
+        
+        Client to interact with EXPAI API.
+        
+        
+Keywords: EXPAI,ExplainableAI,Explainable Artificial Intelligence
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
