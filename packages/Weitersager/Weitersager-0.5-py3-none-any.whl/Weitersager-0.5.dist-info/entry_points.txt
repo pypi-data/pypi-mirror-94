@@ -1,0 +1,4 @@
+[console_scripts]
+weitersager = weitersager.cli:main
+weitersager-token = weitersager.tokencli:main
+
