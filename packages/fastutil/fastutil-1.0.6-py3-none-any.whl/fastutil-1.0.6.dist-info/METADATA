@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: fastutil
+Version: 1.0.6
+Summary: 常用python工具
+Home-page: https://github.com/kylinat2688/fastutil
+Author: kylin
+Author-email: 464840061@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.4.0
+Description-Content-Type: text/markdown
+Requires-Dist: pynvml
+Requires-Dist: yagmail
+Requires-Dist: loguru
+Requires-Dist: setuptools
+Requires-Dist: psutil
+Requires-Dist: tqdm
+Requires-Dist: zhconv
+Requires-Dist: w3lib
+Requires-Dist: zhon
+Requires-Dist: fitlog
+
+# fastutil
+甯哥敤python宸ュ叿
+
+
