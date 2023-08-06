@@ -1,0 +1,13 @@
+phovea_processing_queue/__init__.py,sha256=9Sb_XiHcQcGktA98fsRq22atZtOvhgWnASOh45vPY1c,1258
+phovea_processing_queue/config.json,sha256=Q6LJIPaS4XZ6Mw4hl_w0SdUUgoJ4Gydvhe1vgDvRkLE,268
+phovea_processing_queue/processing.py,sha256=suos0GP4xsW2ocJ8iE4KcmaVUTkncaLt1IcEUPf5LpQ,1225
+phovea_processing_queue/security.py,sha256=wDJ7Y9ArUXsmGW07fjiy8Kqjo_MpTFddChDTssZPnVY,1636
+phovea_processing_queue/server.py,sha256=fDt97J-l34QO_tY30Q8voXMqSMRvL5Ty2zybM4lm_kw,337
+phovea_processing_queue/task_definition.py,sha256=69Rl4pUFWcJiDn4Mz6J5dWHaSTqz2FfQTXLh0uZcicI,4752
+phovea_processing_queue/tasks.py,sha256=-PKi9wLeaqDYYLC7E3wsL8Va0vK_IpffbxDAHWGmq34,253
+phovea_processing_queue-6.0.0.dist-info/LICENSE,sha256=zUOWuB3YdRESNBX1f-SrJQr-aFhEz2TWP35S5DTJXBg,1484
+phovea_processing_queue-6.0.0.dist-info/METADATA,sha256=Kej-mipL5alawIWx0mYeB8VM57ejwN-4xJ9XcDSY_vU,2188
+phovea_processing_queue-6.0.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+phovea_processing_queue-6.0.0.dist-info/entry_points.txt,sha256=Er0uPv4aCqBQr46mD2PKsrKAe_u2tdHIDaF1yYqqcKA,157
+phovea_processing_queue-6.0.0.dist-info/top_level.txt,sha256=rDo_bHYWnmfbrR_-VnIUaZBPQBliCwobhHqf7uNNyXc,24
+phovea_processing_queue-6.0.0.dist-info/RECORD,,
