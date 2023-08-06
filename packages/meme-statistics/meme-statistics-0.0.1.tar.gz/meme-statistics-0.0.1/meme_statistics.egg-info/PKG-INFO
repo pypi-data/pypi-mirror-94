@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: meme-statistics
+Version: 0.0.1
+Summary: A package with all Statistical measures and models from scratch.
+Home-page: https://github.com/HemansAI/meme-statistics
+Author: Himanshu Ramchandani
+Author-email: himanshuramchandani08@gmail.com
+License: UNKNOWN
+Description: # meme-statistics
+        Meme Statistics
+        <br>
+        Statistics concepts build from scratch in python.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
