@@ -1,0 +1,13 @@
+README.md
+setup.py
+datasette_tiles/__init__.py
+datasette_tiles/utils.py
+datasette_tiles.egg-info/PKG-INFO
+datasette_tiles.egg-info/SOURCES.txt
+datasette_tiles.egg-info/dependency_links.txt
+datasette_tiles.egg-info/entry_points.txt
+datasette_tiles.egg-info/requires.txt
+datasette_tiles.egg-info/top_level.txt
+datasette_tiles/templates/tiles_explorer.html
+datasette_tiles/templates/tiles_index.html
+datasette_tiles/templates/tiles_stack_explorer.html

@@ -1,0 +1,7 @@
+datasette
+datasette-leaflet>=0.2.2
+
+[test]
+pytest
+pytest-asyncio
+datasette-basemap>=0.2
