@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+pbzlib/__init__.py
+pbzlib/constants.py
+pbzlib/reader.py
+pbzlib/writer.py
+pbzlib.egg-info/PKG-INFO
+pbzlib.egg-info/SOURCES.txt
+pbzlib.egg-info/dependency_links.txt
+pbzlib.egg-info/requires.txt
+pbzlib.egg-info/top_level.txt
