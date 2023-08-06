@@ -1,0 +1,8 @@
+README.md
+setup.py
+jyx/__init__.py
+jyx/jyx.py
+jyx.egg-info/PKG-INFO
+jyx.egg-info/SOURCES.txt
+jyx.egg-info/dependency_links.txt
+jyx.egg-info/top_level.txt
