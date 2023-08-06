@@ -1,0 +1,9 @@
+reasoner_validator/__init__.py,sha256=wzQu01DorNNEhRZkD9PYNDd6UNiK1ImBrFbxZyP5xHA,2018
+reasoner_validator/util.py,sha256=1r1aNLZe7GaXesrKotK0nKhXqTPayjWxaBnPA4hGGEw,829
+reasoner_validator/data/TranslatorReasonerAPI.yml,sha256=L57I0b-jSwjIZu7qYR2Rp_RJFt5nhXs08FOxN7yGaN0,23438
+reasoner_validator/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reasoner_validator-1.0.3.1.0.1.dist-info/LICENSE,sha256=yINwLnUL08QHG9qYoFEJ74q9HCUZuAGMSH75nb30c58,1069
+reasoner_validator-1.0.3.1.0.1.dist-info/METADATA,sha256=r5LsHqxI6c5YmHBIEAbveiwKKYq7ktlC0eH0RyOsQL0,922
+reasoner_validator-1.0.3.1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+reasoner_validator-1.0.3.1.0.1.dist-info/top_level.txt,sha256=C7w2-WMlo3_bXZTzQ7kIYZUtSRCahemIrUIWSE-vz8E,19
+reasoner_validator-1.0.3.1.0.1.dist-info/RECORD,,
