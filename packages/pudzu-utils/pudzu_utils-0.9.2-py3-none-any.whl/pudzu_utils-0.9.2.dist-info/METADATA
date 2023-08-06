@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pudzu-utils
+Version: 0.9.2
+Summary: Various utility functions and data structures used by the other pudzu packages
+Home-page: https://github.com/Udzu/pudzu-packages/pudzu-utils/
+Author: Uri Granta
+Author-email: uri.granta+python@gmail.com
+License: MIT
+Keywords: pudzu,utilities
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Requires-Dist: toolz
+
+UNKNOWN
+
+
