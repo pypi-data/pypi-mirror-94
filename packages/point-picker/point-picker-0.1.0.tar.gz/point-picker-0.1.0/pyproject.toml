@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "point-picker"
+version = "0.1.0"
+description = ""
+authors = ["Matthew Hartley <mhartley@cantab.net>"]
+
+[tool.poetry.scripts]
+point-picker = "point_picker.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+vispy = "^0.6.6"
+pandas = "^1.2.2"
+imageio = "^2.9.0"
+click = "^7.1.2"
+scikit-image = "^0.18.1"
+PyQt5 = "^5.15.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
