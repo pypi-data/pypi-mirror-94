@@ -1,0 +1,4 @@
+Flask>=1.1
+nidhoggr_core>=0.8
+pydantic>=1.7
+M2Crypto>=0.35
