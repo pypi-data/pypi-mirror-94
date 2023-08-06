@@ -1,0 +1,17 @@
+.gitignore
+.gitlab-ci.yml
+LICENSE.txt
+README.rst
+setup.py
+picos_sphinx_theme/__init__.py
+picos_sphinx_theme/breadcrumbs.html
+picos_sphinx_theme/layout.html
+picos_sphinx_theme/theme.conf
+picos_sphinx_theme.egg-info/PKG-INFO
+picos_sphinx_theme.egg-info/SOURCES.txt
+picos_sphinx_theme.egg-info/dependency_links.txt
+picos_sphinx_theme.egg-info/entry_points.txt
+picos_sphinx_theme.egg-info/not-zip-safe
+picos_sphinx_theme.egg-info/requires.txt
+picos_sphinx_theme.egg-info/top_level.txt
+picos_sphinx_theme/static/css/picos.css

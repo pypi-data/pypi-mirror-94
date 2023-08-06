@@ -1,0 +1,20 @@
+{# ------------------------------------------------------------------------- #)
+   This file was obtained from Faculty Science Limited under the Apache
+   License, Version 2.0, and has been modified by PICOS Developers.
+(# ------------------------------------------------------------------------- #}
+
+{% extends "sphinx_rtd_theme/layout.html" %}
+
+{% set css_files = css_files + [
+    "_static/css/picos.css",
+    "https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto+Mono:400,700&display=swap"
+] %}
+
+{% block document %}
+{{super()}}
+{% if theme_gitlab_ribbon | tobool %}
+  <a href="{{ theme_gitlab_ribbon_url }}" target="_blank" rel="noopener">
+    <span class="gitlab-ribbon">Fork me on GitLab</span>
+  </a>
+{% endif %}
+{% endblock %}

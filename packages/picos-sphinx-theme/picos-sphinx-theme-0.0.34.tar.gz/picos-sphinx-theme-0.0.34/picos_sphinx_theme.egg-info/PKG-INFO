@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: picos-sphinx-theme
+Version: 0.0.34
+Summary: A Sphinx theme for the PICOS documentation.
+Home-page: UNKNOWN
+Author: PICOS Developers
+Author-email: incoming+picos-api/picos@incoming.gitlab.com
+License: Apache License 2.0
+Project-URL: Example, https://picos-api.gitlab.io/picos/
+Project-URL: Source, https://gitlab.com/picos-api/picos-sphinx-theme
+Description: PICOS Sphinx Theme
+        ==================
+        
+        PICOS Sphinx Theme (``picos-sphinx-theme``) is a `Sphinx
+        <https://www.sphinx-doc.org/>`_ theme forked from the `Faculty Sphinx Theme
+        <https://github.com/facultyai/faculty-sphinx-theme>`_ which in turn is based on
+        the `Read the Docs Sphinx Theme <https://sphinx-rtd-theme.readthedocs.io/>`_.
+        
+        You can see the theme in action on the `PICOS Documentation
+        <https://picos-api.gitlab.io/picos/>`_.
+        
+        Installation
+        ------------
+        
+        .. code-block:: bash
+        
+            pip install picos-sphinx-theme
+        
+        Usage
+        -----
+        
+        Load the ``"picos_sphinx_theme"`` extension and set ``html_theme`` to
+        ``"picos"``. Additionally, you can set the following options via
+        ``html_theme_options``:
+        
+        - ``"gitlab_ribbon"``: Whether to add the *Fork me on GitLab* ribbon.
+        - ``"gitlab_ribbon_url"``: GitLab repository URL.
+        
+Platform: UNKNOWN
+Classifier: Framework :: Sphinx :: Theme
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/x-rst

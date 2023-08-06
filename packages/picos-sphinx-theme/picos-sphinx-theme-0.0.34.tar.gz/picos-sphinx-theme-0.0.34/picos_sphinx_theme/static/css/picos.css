@@ -1,0 +1,338 @@
+/* ------------------------------------------------------------------------- *\
+   This file was obtained from Faculty Science Limited under the Apache
+   License, Version 2.0, and has been modified by PICOS Developers.
+\* ------------------------------------------------------------------------- */
+
+/* ----------------------------------- *\
+   Modified CSS from the Faculty Theme
+\* ----------------------------------- */
+
+/* Body defaults */
+body {
+  color: #222; /* Changed for PICOS */
+  background-color: #f9f9f9;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, legend,
+.rst-content .toctree-wrapper p.caption,
+.rst-content .sidebar .sidebar-title,
+.rst-content .topic-title {
+  font-weight: normal;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.rst-content .topic-title {
+  font-size: 24px;
+}
+
+/* PICOS: Reverted default text font to RTD */
+
+/* Code / fixed width text */
+code,
+.rst-content .linenodiv pre,
+.rst-content code,
+.rst-content div[class^='highlight'] pre,
+.rst-content footer span.commit tt,
+.rst-content kbd,
+.rst-content pre,
+.rst-content pre.literal-block,
+.rst-content samp,
+.rst-content tt,
+footer span.commit code,
+footer span.commit .rst-content tt {
+  font-family: "Roboto Mono", monospace;
+  font-size: 13.5px; /* Changed for PICOS */
+}
+
+/* Links */
+.rst-content a, .rst-content a:visited {
+  color: #d35e1a; /* Changed for PICOS */
+}
+
+/* Breadcrumbs */
+.wy-breadcrumbs li.breadcrumb {
+  padding-right: 5px;
+}
+
+/* Definition lists */
+.rst-content dl:not(.docutils) dt {
+  color: #d35e1a; /* Changed for PICOS */
+  border-top: solid 3px #78ae00; /* Changed for PICOS */
+  background: #f0f0f0; /* Changed for PICOS */
+}
+
+/* Page main content */
+.wy-nav-content {
+  background-color: #ffffff;
+  padding: 26px 52px;
+}
+/* PICOS: Reverted .wy-nav-content-wrap to RTD */
+
+/* Navigation bars */
+.wy-nav-side, .wy-nav-top {
+  background: #1c1c1c;
+}
+.wy-side-nav-search {
+  background-color: #2f2f2f; /* Changed for PICOS */
+  padding: 13px;
+  border-bottom: solid 3px #78ae00; /* Changed for PICOS */
+}
+.wy-side-nav-search > a {
+  color: #ffffff;
+}
+.wy-nav-side {
+  padding-bottom: 0px;
+}
+
+/* Navifation menu */
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+  font-size: 17px;
+  font-weight: normal;
+  text-transform: unset;
+  color: #ffffff;
+  padding-left: 23px;
+  padding-right: 23px;
+  margin-bottom: 4px;
+}
+.wy-menu-vertical a {
+  color: #c0c0c0;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+.wy-menu-vertical li.current > a {
+  color: #1c1c1c;
+  background-color: #ffffff;
+}
+.wy-menu-vertical li.toctree-l2 a,
+.wy-menu-vertical li.toctree-l3 a,
+.wy-menu-vertical li.toctree-l4 a {
+  color: #1c1c1c;
+}
+
+/* Logo and project title */
+.wy-side-nav-search > a.heading {
+  width: 300px;
+  margin: -13px -13px 0px;
+  padding: 0px;
+  transition: .3s;
+}
+.wy-side-nav-search > a.heading.heading-extra-margin {
+  margin-bottom: .4em;
+}
+.heading > span {
+  color: #ffffff;
+  font-weight: bold;
+  display: inline-block;
+  padding: 4px 6px;
+  margin-bottom: .4em;
+}
+.wy-side-nav-search > a.heading .logo-box {
+  height: 50px;
+  padding: 5px;
+}
+.wy-side-nav-search > a.heading .logo-box.logo-box-large {
+  padding: 10px;
+  height: 70px;
+}
+.wy-side-nav-search > a.heading .logo-box img.logo {
+  height: 100%;
+  padding: 0px;
+}
+
+/* Navigation bar */
+.platform-navbar {
+  position: fixed;
+  top: 0px;
+  left: 300px;
+  width: calc(100vw - 300px);
+  line-height: 50px;
+  background-color: #1c1c1c;
+}
+.platform-navbar + div {
+  margin-top: 50px;
+}
+
+/* Hide navigation bar on small screens */
+@media (max-width: 768px) {
+  .platform-navbar {
+    display: none;
+  }
+}
+
+/* Lay out navigation bar entries */
+.platform-navbar ul {
+  display: flex;
+  flex: 1;
+  transition: .3s;
+}
+.platform-navbar li {
+  flex: 1;
+  position: relative;
+  transition: .3s;
+  text-align: left;
+  max-width: 12rem;
+}
+.platform-navbar .component > ul {
+  left: 0;
+  top: 100%;
+  display: none;
+  background-color: #1c1c1c;
+}
+
+/* Expand menus on hover */
+.platform-navbar .component:hover > ul {
+  display: block;
+}
+
+/* Links in navigation bar */
+.platform-navbar a {
+  display: block;
+  text-align: center; /* Temporary: Remove once menus filled */
+  /* padding-left: 1rem; Temporary: Restore once menus filled */
+  color: #ffffff;
+}
+
+/* PICOS: Removed hover coloring that didn't work */
+
+/* ----------------------------------- *\
+   Additional CSS for the PICOS Theme
+\* ----------------------------------- */
+
+ /* Color changes */
+.rst-content dl:not(.docutils) dl dt {
+  border-left: solid 3px #78ae00;
+}
+.rst-content tt.literal,
+.rst-content code.literal {
+  color: #222;
+}
+code,
+.rst-content tt,
+.rst-content code,
+.rst-content pre.literal-block,
+.rst-content div[class^="highlight"] {
+  border: solid 1px #e3e3e3;
+}
+
+ /* Navbar header */
+.wy-side-nav-search > a,
+.wy-side-nav-search .wy-dropdown > a {
+  padding: 0px 4px;
+  margin-bottom: 12px;
+}
+.wy-side-nav-search > a:hover,
+.wy-side-nav-search .wy-dropdown > a:hover {
+  background: #4e4a4a;
+}
+.wy-side-nav-search > div.version {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Tables */
+.wy-table-bordered-all td,
+.rst-content table.docutils td {
+  border-left: unset;
+}
+th p,
+.rst-content th .line-block
+{
+  margin-bottom: 0;
+}
+
+/* Allow line breaks in tables */
+.wy-table-responsive table td {
+  white-space: normal;
+}
+
+/* Fix margins for nested lists */
+.rst-content .section ol p,
+.rst-content .section ul p {
+  margin-bottom: 0px;
+}
+
+/* Justify text */
+div.document {
+  text-align: justify;
+}
+table, dt,
+h1, h2, h3, h4, h5, h6 {
+  text-align: initial;
+}
+
+/* Decrease inline code font sizes */
+.rst-content tt.xref,
+a .rst-content tt,
+.rst-content tt.xref,
+.rst-content code.xref,
+a .rst-content tt,
+a .rst-content code {
+  font-size: 12px;
+}
+.rst-content tt.literal,
+.rst-content code.literal {
+  font-size: 13px;
+}
+
+/* GitLab ribbon */
+.gitlab-ribbon {
+  font-family: "Roboto Slab";
+  font-size: 16px;
+  position: fixed;
+  top: 50px;
+  right: -50px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  background-color: #2f2f2f;
+  color: #fafafa;
+  padding: 1px 40px 2px 40px;
+  border-style: solid;
+  border-color: #78ae00;
+  border-width: 3px;
+}
+.gitlab-ribbon:hover {
+  color: #fff;
+  background-color: #4e4a4a;
+}
+
+/* Hide GitLab ribbon on small screens */
+@media screen and (max-width: 1100px) {
+  .gitlab-ribbon {
+    display: none !important;
+  }
+}
+
+/* Hide GitLab ribbon when printing */
+@media print {
+  .gitlab-ribbon {
+    display: none !important;
+  }
+}
+
+/* HACK: Adjust the jinja pigments style
+   TODO: Add a PICOS pigments style */
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo {
+  color: #813010
+}
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss {
+  color: #618c00
+}
+.highlight .go {
+  color: #666;
+}
