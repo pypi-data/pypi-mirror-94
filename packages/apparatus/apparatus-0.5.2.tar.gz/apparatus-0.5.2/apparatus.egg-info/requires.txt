@@ -1,0 +1,4 @@
+miniscule<2,>=0.4.0
+retry<2,>0.9
+pydantic==1.*
+smart-open[s3]==4.*
