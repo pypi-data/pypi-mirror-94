@@ -1,0 +1,16 @@
+pauliopt/__init__.py,sha256=llfOSOGwjwlQdAvAJ2V6NpwoZenTM-uH92qlY366EPo,153
+pauliopt/qasm.py,sha256=qVUdBl5eJB6CybprEhS6wI5FxrZFg0qFKZLrcsEzYh8,33782
+pauliopt/topologies.py,sha256=SlJj_QGhK3-Ty2AI9xOKcXxVlLXTpBCkpSWSl0F5o5c,25024
+pauliopt/utils.py,sha256=AA-Pozr0cLKYVowfuIN9rX-iFT71oFL031fJr-UAtjY,15794
+pauliopt/pauli/__init__.py,sha256=bkXodO03aIa7ucRBU5TUWONHOqyaiy9sajUg76zy6NQ,204
+pauliopt/phase/__init__.py,sha256=034kWS7RoCOqOZerVPsPEMqYE2k5NQtB1mHDWsH_Mn8,474
+pauliopt/phase/circuits.py,sha256=R68LhcOUtJSU_yndvpch5dkqKwKIfV0uEu46Bp1dfVE,54505
+pauliopt/phase/cx_circuits.py,sha256=JFyBEW0a6lNy5BUqXSQMkhfw_FNiv5aQpdwvo8R8__I,24056
+pauliopt/phase/optimized_circuits.py,sha256=_a7oOc3Z1ka7kjckRzl0m6wwZSlPjen1-AAKmoXsj_I,26218
+pauliopt/phase/optimizers.py,sha256=iyXGyL0t4_qu7qJ77j4HcYAkA372RDsS4rYBwNwOMUI,15424
+pauliopt/phase/phase_circuits.py,sha256=jR9GeGkCTwX1B_cCZm8e3D7_2Z2bwTBf2tWw4AIutY0,54741
+pauliopt-0.0.4.post1.dist-info/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+pauliopt-0.0.4.post1.dist-info/METADATA,sha256=aTQg9K29jy669uDl8RPlJac7lFcCUUsCFXpyAynGJWs,523
+pauliopt-0.0.4.post1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+pauliopt-0.0.4.post1.dist-info/top_level.txt,sha256=GspiH5r33vBZejWxWsxQBIqYAPmt4x_CL8sUAg2kwzA,9
+pauliopt-0.0.4.post1.dist-info/RECORD,,
