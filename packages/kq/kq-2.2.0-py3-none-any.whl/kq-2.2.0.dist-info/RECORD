@@ -1,0 +1,12 @@
+kq/__init__.py,sha256=5Is5vs1lmXiA9J1DcvOgKHyjv8-mqBie748WizxqDz4,200
+kq/job.py,sha256=6AGhGsf-10-4q_AY1nAmSxY4BiR5DtI3X8E_s0kcagk,976
+kq/message.py,sha256=ddQWq9DNyjmpRkPCU5ByfUdih0hQY_n10vTicHw0Jig,337
+kq/queue.py,sha256=MM5b7mXsBAijW_7tB_f1mxO3ij67r1bAHVGBdzEDQ8c,12635
+kq/utils.py,sha256=zd0UTE77StcqyYPGeAmlCG6vVF884cEI7-nC05TDDas,1713
+kq/version.py,sha256=uQRa7aBgJ-XwalH6CCTdqDBWvvsxLns-lAGlsJX939E,142
+kq/worker.py,sha256=-zOXWlBbx1Lvz4A1rCBIWcC7xa1Ey-I2mbHyR_Ojgac,9246
+kq-2.2.0.dist-info/LICENSE,sha256=e86a4kkFfMBuoffCn4RLmQGC2LUqNs78i5npEsJ1b5I,1072
+kq-2.2.0.dist-info/METADATA,sha256=Qgzo1AEr-tbXwQmcyHPhqvVbrPRvxrg5ebrim_ixfnQ,4349
+kq-2.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+kq-2.2.0.dist-info/top_level.txt,sha256=k5_bwQiBliiDx6tN-g4CvRz9sbS-TmFcjJsHRVzRCUw,3
+kq-2.2.0.dist-info/RECORD,,
