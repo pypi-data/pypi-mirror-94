@@ -1,0 +1,48 @@
+{
+    "cited": {
+        "api": [
+            "Baehr2016",
+            "Epple2012",
+            "Bswirth2012",
+            "Epple2017"
+        ],
+        "api/tespy.components": [
+            "Tuschy2001",
+            "Zahoransky2019",
+            "Janotte2014",
+            "Quaschning2013",
+            "GasTurb2018"
+        ],
+        "api/tespy.data": [
+            "Traupel2001",
+            "Plis2016"
+        ],
+        "api/tespy.networks": [
+            "Tsatsaronis2007"
+        ],
+        "api/tespy.tools": [
+            "Morosuk2005",
+            "Herning1936",
+            "Nirschl2018"
+        ],
+        "introduction": [
+            "Witte2020"
+        ],
+        "tespy_modules": [
+            "Bell2014"
+        ],
+        "tespy_modules/fluid_properties": [
+            "Bell2014"
+        ],
+        "tutorials_examples": [
+            "Lorenzen2014",
+            "Biscani2020"
+        ],
+        "tutorials_examples/district_heating": [
+            "Lorenzen2014"
+        ],
+        "tutorials_examples/tutorial_pygmo_optimization": [
+            "Biscani2020"
+        ]
+    }
+}
