@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: file-tree
+Version: 0.1.2
+Summary: Describe structure directory for pipeline
+Home-page: https://git.fmrib.ox.ac.uk/ndcn0236/file-tree
+Author: Michiel Cottaar
+Author-email: MichielCottaar@protonmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://open.win.ox.ac.uk/pages/ndcn0236/file-tree/
+Description: New FileTree library (in development)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
