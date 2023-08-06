@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+timer.py.egg-info/PKG-INFO
+timer.py.egg-info/SOURCES.txt
+timer.py.egg-info/dependency_links.txt
+timer.py.egg-info/requires.txt
+timer.py.egg-info/top_level.txt
+timerpy/__init__.py
+timerpy/timer.py
