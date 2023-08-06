@@ -1,0 +1,3 @@
+[console_scripts]
+edgebox = edgebox.command_line:main
+

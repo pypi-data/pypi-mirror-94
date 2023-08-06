@@ -1,0 +1,36 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+
+  deploy_to_main:
+    name: Deploy app to the MobiledgeX main setup
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Check out the repo
+        id: checkout
+        uses: actions/checkout@v2
+
+      - name: Push to Docker Registry
+        id: push
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{start_braces}} secrets.MOBILEDGEX_USERNAME {{end_braces}}
+          password: ${{start_braces}} secrets.MOBILEDGEX_PASSWORD {{end_braces}}
+          registry: {{docker}}
+          repository: {{lower(devorg)}}/images/{{appname}}
+          tag_with_ref: true
+
+      - name: Deploy to MobiledgeX
+        id: deploy
+        uses: mobiledgex/deploy-app-action@v1.1
+        with:
+          setup: {{deployenv}}
+          username: ${{start_braces}} secrets.MOBILEDGEX_USERNAME {{end_braces}}
+          password: ${{start_braces}} secrets.MOBILEDGEX_PASSWORD {{end_braces}}
+
+      - name: Print output
+        run: echo "Image ${{start_braces}} steps.deploy.outputs.image {{end_braces}}, Deployments ${{start_braces}} steps.deploy.outputs.deployments {{end_braces}}"

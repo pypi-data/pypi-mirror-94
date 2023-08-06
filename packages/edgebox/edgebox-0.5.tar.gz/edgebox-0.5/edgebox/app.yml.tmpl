@@ -1,0 +1,12 @@
+region: {{region}}
+app:
+  key:
+    name: {{appname}}
+    version: "1.0"
+    organization: {{devorg}}
+  image_path: {{docker}}/{{lower(devorg)}}/images/{{appname}}
+  image_type: 1
+  deployment: kubernetes
+  default_flavor:
+    name: {{flavor}}
+  access_ports: {{ports}}

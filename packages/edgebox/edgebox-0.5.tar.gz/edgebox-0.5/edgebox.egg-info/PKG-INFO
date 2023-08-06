@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: edgebox
+Version: 0.5
+Summary: Edgebox for MobiledgeX
+Home-page: http://github.com/mobiledgex/edgebox
+Author: Venky Tumkur
+Author-email: venky.tumkur@mobiledgex.com
+License: MIT
+Description: EdgeBox
+        -------
+        
+        Run ``edgebox --help`` for usage help.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6, <4

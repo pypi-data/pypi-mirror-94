@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+edgebox/__init__.py
+edgebox/app.yml.tmpl
+edgebox/appinsts.yml.tmpl
+edgebox/command_line.py
+edgebox/github.py
+edgebox/master_controller.py
+edgebox/workflow.tmpl
+edgebox.egg-info/PKG-INFO
+edgebox.egg-info/SOURCES.txt
+edgebox.egg-info/dependency_links.txt
+edgebox.egg-info/entry_points.txt
+edgebox.egg-info/not-zip-safe
+edgebox.egg-info/requires.txt
+edgebox.egg-info/top_level.txt
