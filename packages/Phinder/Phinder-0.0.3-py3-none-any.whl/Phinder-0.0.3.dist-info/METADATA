@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: Phinder
+Version: 0.0.3
+Summary: UNKNOWN
+Home-page: https://github.com/gnina/phinder
+Author: Dillon Gavlock & Samuel Cho
+Author-email: dcg33@pitt.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+
+# Phinder
+
+This program generates pharmacophore models using GNINA 1.0 docked fragments to cluster into pharmacophore features.
+
+
+## Help
+
+Please contact Dillon Gavlock at dcg33@pitt.edu
+
+
+## Installation
+
+Install goes here
+
+
+## Usage
+
+Usage goes here
+
+## Citation
+
+Please cite us here
+
+## License
+
+phinder is dual licensed under GPL and Apache. The GPL license is necessitated by the use of OpenBabel (which is GPL licensed). In order to use phinder under the Apache license only, all references to OpenBabel must be removed from the source code.
+
+
+
+
