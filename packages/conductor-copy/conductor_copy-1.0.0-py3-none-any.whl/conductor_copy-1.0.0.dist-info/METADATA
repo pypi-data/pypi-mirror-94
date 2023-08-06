@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: conductor-copy
+Version: 1.0.0
+Summary: Conductor python client
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache 2.0
+Keywords: conductor
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Networking
+Requires-Dist: requests
+
+UNKNOWN
+
+
