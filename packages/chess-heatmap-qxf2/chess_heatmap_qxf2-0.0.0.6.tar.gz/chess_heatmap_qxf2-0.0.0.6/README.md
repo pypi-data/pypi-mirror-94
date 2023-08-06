@@ -1,0 +1,4 @@
+A python project which uses dask and coiled to explore parallelism. The project produces a control heatmap for a chess game.
+HeatMap visualization shows which side controls which sqaures for each ply in the chess board. It can be used to analyze important squares, utilization, capture squares. 
+Supply chess games in form of .PGN files. An animated GIF is generated which produces a heatmap for each game in the GIF. Each frame in the GIF corresponds to a ply. Parallelism using dask tasks have been applied for handling different games(that are the input) and for calculation of power of each square in a ply (for all games).
+The tasks are run on a Coiled cluster.
