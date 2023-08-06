@@ -1,0 +1,14 @@
+playsound
+gTTS
+requests
+pyjokes==0.6.0
+pyttsx3
+numpy
+pytemperature
+wikipedia
+textblob
+pymongo
+nltk
+SpeechRecognition
+pyaudio
+python-dotenv
