@@ -1,0 +1,44 @@
+Metadata-Version: 1.2
+Name: distkv-owfs
+Version: 0.6.1
+Summary: A distributed no-master key-value store
+Home-page: https://github.com/smurfix/distowfs
+Author: Matthias Urlichs
+Author-email: matthias@urlichs.de
+License: MIT -or- Apache License 2.0
+Description: ========
+        DistOWFS
+        ========
+        
+        DistOWFS is a link between 1wire and DistKV.
+        
+        It will
+        
+        * add all discovered 1wire devices
+        
+        * poll these devices as specified
+        
+        * write values that it reads from 1wire to some DistKV entry
+        
+        * monitor a DistKV entry and write any updates to 1wire
+        
+        * work with DistKV's runner system, either centrally or distributed
+        
+Keywords: async,key-values,distributed
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: Trio
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Database
+Classifier: Topic :: Home Automation
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.7
