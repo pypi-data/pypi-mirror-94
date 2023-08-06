@@ -1,0 +1,51 @@
+[Authenticator]
+passthrough = ssh_proxy_server.authentication:AuthenticatorPassThrough
+
+[BaseSFTPServerInterface]
+base = ssh_proxy_server.interfaces.sftp:SFTPProxyServerInterface
+
+[BaseServerInterface]
+base = ssh_proxy_server.interfaces.server:ServerInterface
+
+[SCPBaseForwarder]
+base = ssh_proxy_server.forwarders.scp:SCPForwarder
+inject_file = ssh_proxy_server.plugins.scp.inject_file:SCPInjectFile
+replace_file = ssh_proxy_server.plugins.scp.replace_file:SCPReplaceFile
+store_file = ssh_proxy_server.plugins.scp.store_file:SCPStorageForwarder
+
+[SFTPHandlerBasePlugin]
+base = ssh_proxy_server.forwarders.sftp:SFTPHandlerPlugin
+replace_file = ssh_proxy_server.plugins.sftp.replace_file:SFTPProxyReplaceHandler
+store_file = ssh_proxy_server.plugins.sftp.store_file:SFTPHandlerStoragePlugin
+
+[SSHBaseForwarder]
+base = ssh_proxy_server.forwarders.ssh:SSHForwarder
+injectorshell = ssh_proxy_server.plugins.ssh.injectorshell:SSHInjectableForwarder
+mirrorshell = ssh_proxy_server.plugins.ssh.mirrorshell:SSHMirrorForwarder
+noshell = ssh_proxy_server.plugins.ssh.noshell:NoShellForwarder
+sessionlogger = ssh_proxy_server.plugins.ssh.sessionlogger:SSHLogForwarder
+
+[TcpProxyChain]
+forwardchain = tcp_proxy_server.chains:TcpProxyForwardChain
+
+[TcpProxyForwarder]
+echo = tcp_proxy_server.forwarders:EchoForwarder
+simple = tcp_proxy_server.forwarders:SimpleForwarder
+socks5 = tcp_proxy_server.forwarders:Socks5Forwarder
+tproxy = tcp_proxy_server.forwarders:TProxyForwarder
+
+[TcpProxyHandler]
+drop = tcp_proxy_server.handlers:TcpProxyDropHandler
+hexdump = tcp_proxy_server.handlers:TcpProxyHexDump
+save = tcp_proxy_server.handlers:TcpProxySaveHandler
+wait = tcp_proxy_server.handlers:TcpProxyWaitHandler
+
+[TcpProxyManager]
+singleproxy = tcp_proxy_server.proxymanager:SingleProxyManager
+
+[console_scripts]
+ssh-mitm = ssh_proxy_server.cli:main
+ssh-proxy-server = ssh_proxy_server.cli:main
+tcp-cert-pin = tcp_proxy_server.cli:certificate_hash_values
+tcp-proxy-server = tcp_proxy_server.cli:main
+
