@@ -1,0 +1,9 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/geomapviz.py,sha256=55VnEVAxEaCY6rWlh5CTU-QldeM-DkGKSt6pU1I7Ox0,36552
+tests/__init__.py,sha256=rqyZtt1djmoU2vxYGslRgV4TaBWrxK8uesP_Xai_8-U,19
+tests/test_geomapviz.py,sha256=s46rb62dOI2U0kkKktAj5YDCET3KLh-TXg27hAA4kEw,5233
+geomapviz-0.1.dist-info/LICENSE.md,sha256=0I4FH-NIzdwAq2X9BvPcgUEaTMBKaPEUAsKh6lWcJ3g,1091
+geomapviz-0.1.dist-info/METADATA,sha256=nv24xQTMKH-aDGqGJSV0sl3Me2OckZr4bdZwbb9tw9Y,5575
+geomapviz-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+geomapviz-0.1.dist-info/top_level.txt,sha256=KW3xgkz9NLMTcmmzgKvW8RFpCFkRIQ085qzq2diFf68,10
+geomapviz-0.1.dist-info/RECORD,,
