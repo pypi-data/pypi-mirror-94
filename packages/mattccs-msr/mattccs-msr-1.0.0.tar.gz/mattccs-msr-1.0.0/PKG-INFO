@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: mattccs-msr
+Version: 1.0.0
+Summary: Sym 2021 Coding Challenge
+Home-page: https://github.com/MattCCS/mattccs-msr
+Author: Matt Cotton
+Author-email: matthewcotton.cs@gmail.com
+License: UNKNOWN
+Description: msr
+        ===
+        MSR performs various measurements on remote web pages
+        
+        Requirements
+        ------------
+        - Python 3
+        
+        Installation
+        ------------
+        Run ``pip3 install mattccs-msr``
+        
+        How to Use
+        ----------
+        Run ``msr``
+        
+        Dependencies
+        ------------
+        - validators
+        - requests
+        - tabulate
+        - tldextract
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
