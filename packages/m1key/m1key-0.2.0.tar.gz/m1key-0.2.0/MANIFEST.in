@@ -1,0 +1,3 @@
+global-include *.txt *.py
+include m1key/*.xml
+include m1key/*.jpeg
