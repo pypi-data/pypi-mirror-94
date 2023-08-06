@@ -1,0 +1,11 @@
+README.md
+setup.py
+mangadex_downloader/__init__.py
+mangadex_downloader/constants.py
+mangadex_downloader/fetcher.py
+mangadex_downloader/parser.py
+mangadex_downloader.egg-info/PKG-INFO
+mangadex_downloader.egg-info/SOURCES.txt
+mangadex_downloader.egg-info/dependency_links.txt
+mangadex_downloader.egg-info/requires.txt
+mangadex_downloader.egg-info/top_level.txt
