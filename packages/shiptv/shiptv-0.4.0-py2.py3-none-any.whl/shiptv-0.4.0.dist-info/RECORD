@@ -1,0 +1,13 @@
+shiptv/__init__.py,sha256=frpbm8_BR9fxB9J8r-P5HCpXZF-C2yGMyo4zZAi8h6s,208
+shiptv/cli.py,sha256=oEOaMdfKIyNRmYt9Tzt-Was6X9a9EKl4LB-qwhMBdm4,6472
+shiptv/shiptv.py,sha256=biyDvf3pOjVZ7Pg9qMu2ZSUcptrAvF5hZbFA1nNo8dA,10578
+shiptv/variants.py,sha256=Wukz8xiEbdkbzuxO8epd7rq2BApHTWP0Eg2Mvq_9eZA,933
+shiptv/tmpl/phylocanvas.html,sha256=ibjIm4ZLZWm9WKvZfKbCv4RiulJGF1HUQrO_I4VPnrw,21858
+shiptv/tmpl/phylocanvas_metadata_plugin.html,sha256=jNUn9kg7XRNcn3T-8shSNM4UlfWNKbq7qjqYQrDHA-k,60677
+shiptv-0.4.0.dist-info/AUTHORS.rst,sha256=C5_vWXfP6ASr3nR-lEFJM3DJkv-0zyknyWzxUNMFsH0,172
+shiptv-0.4.0.dist-info/LICENSE,sha256=CqcLjKvXIdFyhG94-twlj3Drf71lvRPtue9kKy9ZSFU,590
+shiptv-0.4.0.dist-info/METADATA,sha256=LWgQQg9lcI5h7DjjGxc5IP8Lz3smFk6OxOaKX6Z_Is0,8289
+shiptv-0.4.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+shiptv-0.4.0.dist-info/entry_points.txt,sha256=ofi1zMHigRjPJ6w6-Sy0gTRg2z3td8sXKLUJmMNCOOI,43
+shiptv-0.4.0.dist-info/top_level.txt,sha256=5-JXsPrThzWEcyCyG3MyhQlMRh6nqCetdXkxrfMllNM,7
+shiptv-0.4.0.dist-info/RECORD,,
