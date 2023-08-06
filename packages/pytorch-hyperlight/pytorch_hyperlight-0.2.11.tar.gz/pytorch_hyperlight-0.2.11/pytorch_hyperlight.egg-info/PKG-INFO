@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pytorch-hyperlight
+Version: 0.2.11
+Summary: PyTorch Hyperlight is ML micro-framework built as a thin wrapper around PyTorch-Lightning and Ray Tune frameworks to push the boundaries of simplicity even further.
+Home-page: https://github.com/pgagarinov/pytorch-hyperlight.git
+Author: Peter Gagarinov
+Author-email: Peter Gagarinov <pgagarinov@gmail.com>
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
