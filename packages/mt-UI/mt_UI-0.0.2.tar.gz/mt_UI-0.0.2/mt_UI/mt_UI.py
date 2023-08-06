@@ -1,0 +1,50 @@
+from PyQt5 import QtWidgets, QtCore
+
+
+class ExtendedCombo( QtWidgets.QComboBox ):
+#==============================================================
+    def __init__( self,  parent = None):
+        super( ExtendedCombo, self ).__init__( parent )
+
+        self.setFocusPolicy( QtCore.Qt.StrongFocus )
+        self.setEditable( True )
+        self.completer = QtWidgets.QCompleter( self )
+
+        # always show all completions
+        self.completer.setCompletionMode( QtWidgets.QCompleter.UnfilteredPopupCompletion )
+        self.pFilterModel = QtCore.QSortFilterProxyModel( self )
+        self.pFilterModel.setFilterCaseSensitivity( QtCore.Qt.CaseInsensitive )
+
+        self.completer.setPopup( self.view() )
+
+        self.setCompleter( self.completer )
+
+        self.lineEdit().textEdited[str].connect( self.pFilterModel.setFilterFixedString )
+        self.completer.activated.connect(self.setTextIfCompleterIsClicked)
+#==============================================================
+    def setModel( self, model ):
+        super(ExtendedCombo, self).setModel( model )
+        self.pFilterModel.setSourceModel( model )
+        self.completer.setModel(self.pFilterModel)
+#==============================================================
+    def setModelColumn( self, column ):
+        self.completer.setCompletionColumn( column )
+        self.pFilterModel.setFilterKeyColumn( column )
+        super(ExtendedCombo, self).setModelColumn( column )
+#==============================================================
+    def view( self ):
+        return self.completer.popup()
+#==============================================================
+    def index( self ):
+        return self.currentIndex()
+#==============================================================
+    def setTextIfCompleterIsClicked(self, text):
+      if text:
+        index = self.findText(text)
+        self.setCurrentIndex(index)
+#==============================================================        
+    def currentData(self):
+        if self.index()<0:
+            return ''
+        return self.itemData(self.index())
+#==============================================================        
