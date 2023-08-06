@@ -1,0 +1,14 @@
+README.md
+setup.py
+ae/kivy_sideloading/__init__.py
+ae/kivy_sideloading/img/sideloading_activate.png
+ae/kivy_sideloading/img/light_1/sideloading_activate.png
+ae/kivy_sideloading/loc/de/Msg.txt
+ae/kivy_sideloading/loc/en/Msg.txt
+ae/kivy_sideloading/loc/es/Msg.txt
+ae_kivy_sideloading.egg-info/PKG-INFO
+ae_kivy_sideloading.egg-info/SOURCES.txt
+ae_kivy_sideloading.egg-info/dependency_links.txt
+ae_kivy_sideloading.egg-info/not-zip-safe
+ae_kivy_sideloading.egg-info/requires.txt
+ae_kivy_sideloading.egg-info/top_level.txt
