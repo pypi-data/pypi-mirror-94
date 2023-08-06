@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: fit-ctu-gitlab-exporter
+Version: 1.0.0
+Summary: Tool for exporting projects from FIT CTU GitLab to GitHub
+Home-page: https://github.com/TaIos/exporter
+Author: Martin Šafránek
+Author-email: gismocz@gmail.com
+License: MIT License
+Keywords: github,gitlab,synchronization,git,fit ctu
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: System :: Archiving :: Mirroring
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: Pytest
+Classifier: Framework :: tox
+Classifier: Natural Language :: English
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: GitPython (>=3.1)
+Requires-Dist: click (>=6)
+Requires-Dist: requests (>=2.2)
+Requires-Dist: enlighten
+Provides-Extra: test
+Requires-Dist: pytest (>=6.2) ; extra == 'test'
+Requires-Dist: flexmock ; extra == 'test'
+
+Welcome to exporter's project
+=============================
+
+
+Exporter automates exporting projects from `FIT CTU GitLab <https://gitlab.fit.cvut.cz/>`_ to `GitHub <https://github.com/>`_.
+It allows choosing which projects to export, their renaming, and visibility on GitHub.
+Also, there is an option for exporting all of your GitLab projects at once.
+
+See documentation `HERE <https://fit-ctu-gitlab-exporter.readthedocs.io/en/latest/>`_ for examples of how to use it.
+
+
+.. image:: docs/img/example_run_gif.gif
+
+
