@@ -1,0 +1,72 @@
+sudo: false
+language: python
+python:
+  - "3.7"
+cache: pip
+env:
+  global:
+    - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
+    - SEGFAULT_SIGNALS=all
+matrix:
+  fast_finish: true
+  include:
+    - python: '3.7'
+      dist: xenial
+      env:
+        - TOXENV=py37-cover,report,codecov
+    - python: '3.8'
+      dist: xenial
+      env:
+        - TOXENV=check,docs,py38-cover,report,codecov
+    - python: '3.8-dev'
+      dist: xenial
+      env:
+        - TOXENV=py38-cover,report,codecov
+    - python: 'nightly'
+      dist: xenial
+      env:
+        - TOXENV=py39-cover,report,codecov
+  allow_failures:
+    - python: 3.8-dev
+    - python: nightly
+os:
+- linux
+git:
+  depth: 3
+branches:
+  only:
+  - "/.*/"
+before_install:
+  - python --version
+  - uname -a
+  - lsb_release -a
+install:
+  - pip install --upgrade pip
+  - pip install codecov tox
+  - pip install .[TESTS]
+script:
+  - tox -v
+after_success:
+  - codecov
+after_failure:
+  - more .tox/log/* | cat
+  - more .tox/*/log/* | cat
+before_deploy:
+  - python setup.py sdist bdist_wheel
+deploy:
+  - provider: pypi
+    user: __token__
+    password:
+        secure: RAQqNWFh0BYvlktZFp6GZIFEw2p1rkHCcd1jUTWNXgHeM0Ow/toHBvXWnGmkAsJCZD5mDxJ4VclyH+5vZqArhz2tP8r6VZPCz8rIsQARb+ouo15NZpcAhgdt+Hs6g55Uo+f+KZdzHX7DqijSkAqWu2MnycDxY0nypCEcIzwkR3jZRGeo3dSj/GaySXAvMUymwUNbaeJF+jHQCQL9fN2RetQGFvsqsicHx9rUWjvVjj8gpwvCp5eIl7x7tYJbDbzh2AvPnRoSByo6e/2GIu9mkBmYK9iDVCAXOab1WlzV+3yVpnuuJrtL2BPdhGXtte4Arqc+uB28q/VttnpJQ1f2SXa1mFAZHTjJEdLtSKlHN3xMXln3rTbrgiZ1MPgQOjrwlEI8TMrQnrsGVul0hPVmCez0kX3dZYHGDWBJPpFhaj39kshQXEvU9hnC+CpH4pD9j5GwH+TE7V+n1uL5YQKzrbp3cnTMTQlJ+0HLSJkE/MputobkS2EgqIz3zoJcUiGjDB8KCHHwTgOovzDPQpqwYNHPPNiXVtVXC+k7lIKjzk7eH7wPQt9M2qI8DWarUaERJHnwFMZHf68CeFpIEpTen1PhgXD37KuVoH5jVaePjl2kgpqBqmRtnPl06+jH9WIK3clX3qu0f+xq7JzVu82O2ohHmjJMjiwy7IgDA84QCjk=
+    skip_existing: true
+    distributions: "sdist bdist_wheel"
+    on:
+      tags: true
+      branch: master
+  - provider: releases
+    api_key:
+      secure: YwjaCiwCXx2ieHdzzCWDB9uMGpFUM8hLQfdWYaa+MKZvNQTjsuojw9SxunSyRrxW+8ls0YJUuLEr9nf274MWfv7iffKDcJ689RzLsoRGHMB2VzHg1zXDpfQbNcQ6hvX1NGNVSuf4Qu2HndtpBbwAxFB7I8pGo7NnUvAAW7FrylGpelChGVKp109WFXbG+bWYjwmAPrjLBPCMvHwBgX7i3CCC2GzLnKYuTjewafRWByex89SSqyoFuPp8O1Sc0FGsPZ6aLuR7j8fKl94EWCR846wxR7S7oCTP+hGeraiXAblKOgNyBJRWUXYVQHGtAhl9QKxjvn+qbq04FHaegYWQPJCMFkXvGAoM+Sc0yyZaSH5CAZeJZGTsT+5M7Rf1dqCCkzTq94GeDrocrPmu03tYeAD0KmPN9jYweYPUKBIbE4Ue617ZJ7ezPegxibXgJQ58h6mBtmSjh4d7DMOZQaTMrHQRTNDtgMsSQEAaLeQGVdXJaCWqYzu83gpWxGgN7vookYRqRWjs+soS1ZSQ3xVZOQ3vpFZSdg+F1MzUsDvbXloPzG5880WaG7JEb/TqL7SikFPnW+bIdE0jkwkyyDwNBSLRHex46Ylv5vl+ZIg8hW6QqhSFKuMrQWPZ68iaPDzPeKSUxosvHrp4aSB1d3AZcYDlyXKnlXz8Z4oFORJphtk=
+    file: dist/*
+    skip_cleanup: true
+    on:
+      tags: true

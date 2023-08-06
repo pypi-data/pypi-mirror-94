@@ -1,0 +1,3 @@
+[console_scripts]
+erin = erin.__main__:main
+
