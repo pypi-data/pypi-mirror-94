@@ -1,0 +1,5 @@
+{
+  "load_extensions": {
+    "ibm_quantum_widgets/extension": true
+  }
+}
