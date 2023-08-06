@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+boilerplate/__init__.py
+boilerplate/logger.py
+boilerplate/mongodatabase.py
+boilerplate/logging/__init__.py
+boilerplate/logging/initializer.py
+boilerplate/mongo/__init__.py
+boilerplate/mongo/initializer.py
+ivozzo_pyboilerplate.egg-info/PKG-INFO
+ivozzo_pyboilerplate.egg-info/SOURCES.txt
+ivozzo_pyboilerplate.egg-info/dependency_links.txt
+ivozzo_pyboilerplate.egg-info/top_level.txt
