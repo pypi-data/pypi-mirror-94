@@ -1,0 +1,22 @@
+# Test Code Dependencies
+distributed
+pytz
+cloudpickle
+freezegun
+
+# Test Framework
+hypothesis
+pytest>=4.5.0
+pytest-cov
+pytest-mock
+setuptools-scm
+
+# Formatting / Checking
+pre-commit
+flake8-mutable
+
+# CLI
+ipython
+
+# ASV // Benchmark
+asv
