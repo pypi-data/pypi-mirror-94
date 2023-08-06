@@ -1,0 +1,24 @@
+sources:
+  local_stack:
+    args:
+      fmt_fields:
+        dt:
+        - '20210210'
+        - '20210211'
+      fn_fmt: 'tab_out.nc'
+      hindcast: false
+      urlpath: '{{CATALOG_DIR}}//{dt}.000000/'
+    description: Test Stack Data
+    driver: rompy.intake.NetCDFFCStackSource
+
+  local_hindcast:
+    args:
+      fmt_fields:
+        dt:
+        - '20210210'
+        - '20210211'
+      fn_fmt: 'tab_out.nc'
+      hindcast: true
+      urlpath: '{{CATALOG_DIR}}//{dt}.000000/'
+    description: Test Stack Data
+    driver: rompy.intake.NetCDFFCStackSource
