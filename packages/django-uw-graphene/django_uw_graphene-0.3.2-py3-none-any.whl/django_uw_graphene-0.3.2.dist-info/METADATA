@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: django-uw-graphene
+Version: 0.3.2
+Summary: A Django app that extends the graphene interface and helpers
+Home-page: https://gitlab.com/pmcoelho/django_uw_graphene
+Author: Pedro Maia Coelho
+Author-email: pmcoelho@protonmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Requires-Dist: graphene-django (>="2.10.0")
+Requires-Dist: Django (>="2.2")
+
+# Django UW Graphene
+[![Built with Spacemacs](https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg)](http://spacemacs.org)
+
+## Description
+
+This package extends the [graphene-django](https://github.com/graphql-python/graphene-django) interface for a streamlined query and mutation integration.
+
+## Installation
+
+1. Install: `pip install django-uw-graphene`
+2. add to INSTALLED_APPS:
+```python
+    INSTALLED_APPS = [
+        ...
+        'uw_graphene',
+    ]
+```
+
+## Details
+
+Some API design decisions:
+  * Based on [Relay](https://relay.dev/)
+  * [`totalCount` was implemented as an ExtendedConnection](docs/index.md#queries)
+  * A base interface for CRUD mutations was implemented:
+    * [GlobalId to Instance "auto fetching", including custom resolvers](docs/index.md#globalid-to-instance-auto-fetching)
+    * [Null value handling](docs/index.md#null-value-handling) 
+    * [Custom error handling](docs/index.md#error-handling)
+
+## Documentation
+
+This library is intended to be used on top of [graphene-django](https://github.com/graphql-python/graphene-django), here are some useful links:
+  * [graphene-django](https://docs.graphene-python.org/projects/django/en/latest/)
+  * [graphene](https://docs.graphene-python.org/en/latest/)
+  * [Relay](https://relay.dev/docs/en/graphql-server-specification.html)
+
+A More extensive documentation is available [here](docs/index.md).
+
+## TODO
+  * [ ] Review `test_utils`
+
+
