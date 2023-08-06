@@ -1,0 +1,3 @@
+[console_scripts]
+atesa = atesa.main:run_main
+
