@@ -1,0 +1,4 @@
+boto3==1.17.0
+botocore==1.20.0
+protobuf==3.14.0
+validate-email==1.3
