@@ -1,0 +1,12 @@
+{% extends 'snowebsvg/common/svg.html' %}
+
+{% block svg_class %}{{ block.super }} svg-builder-basic{% endblock %}
+
+{% block svg_content %}
+    <g id="svg-basic-{{ self.key_composer }}-on-start">
+        {% block builder_base %}{% endblock %}
+    </g>
+    <g id="svg-basic-{{ self.key_composer }}-on-hover">
+        {% block builder_hover %}{% endblock %}
+    </g>
+{% endblock %}
