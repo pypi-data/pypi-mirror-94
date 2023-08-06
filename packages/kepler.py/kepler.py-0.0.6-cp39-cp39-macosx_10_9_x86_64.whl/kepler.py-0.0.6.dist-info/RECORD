@@ -1,0 +1,10 @@
+kepler/__init__.py,sha256=udnsg-nrumq8VSNUsy_vUEfZdpkvnyISw8l7uaLYDZk,369
+kepler/core.py,sha256=HjQ_p9LUP_W9z-8ysI6oXU0VjzqGsFYwiOCf4Ff5KbU,1582
+kepler/kepler.cc,sha256=ig5Vo89XtLXurtQOh7w0NbrspXMMdFqJl9933wmCr90,2580
+kepler/kepler.cpython-39-darwin.so,sha256=5RWZuVXhqXB5fi8r_AW4cQMb-h9o6W_TfmJkgNQxEeU,185360
+kepler/kepler_version.py,sha256=QiiYsv0kcJaB8wCWyT-FnI2b6be87HA-CrrIUn8LQhg,22
+kepler.py-0.0.6.dist-info/LICENSE,sha256=yZoywy-UmvTt4-Ix27QcIKP-V4oW7_QSLYda11Ldgbs,1075
+kepler.py-0.0.6.dist-info/METADATA,sha256=c8HpROHar8Q4IxPz-Fsf7F9BL_JMUxWiQb-V853v2D0,1762
+kepler.py-0.0.6.dist-info/WHEEL,sha256=bRe_g_g-vZInZP5wOdewl-4AeWx8E2_UC3Ffr2csPyk,109
+kepler.py-0.0.6.dist-info/top_level.txt,sha256=NBQ5yoSr2FQ5HIu8bXGSyKVc4zaRgzP6BotjvAJS_dI,7
+kepler.py-0.0.6.dist-info/RECORD,,
