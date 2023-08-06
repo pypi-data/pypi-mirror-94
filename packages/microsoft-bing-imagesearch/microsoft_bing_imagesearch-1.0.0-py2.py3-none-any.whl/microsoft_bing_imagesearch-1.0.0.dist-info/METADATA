@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: microsoft-bing-imagesearch
+Version: 1.0.0
+Summary: Microsoft Bing Image Search Client Library for Python
+Home-page: https://github.com/Azure/azure-sdk-for-python
+Author: Microsoft Corporation
+Author-email: v-mariamal@microsoft.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: msrest (>=0.5.0)
+Requires-Dist: msrestazure (<2.0.0,>=0.4.32)
+Requires-Dist: azure-common (~=1.1)
+
+## Microsoft Bing Image Search SDK for Python
+
+This is the Microsoft Bing Image Search Client Library.
+
+This package has been tested with Python 2.7, 3.5, 3.6, 3.7 and 3.8.
+
+
+## Usage
+
+For more, see [Image Search](https://docs.microsoft.com/en-us/bing/search-apis/bing-image-search/overview)
+on docs.microsoft.com.
+
+## Provide Feedback
+
+If you encounter any bugs or have suggestions, please file an issue in
+the [Issues](https://github.com/microsoft/bing-search-sdk-for-python/issues)
+section of the project.
+
+
+
+
+
