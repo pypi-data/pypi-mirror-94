@@ -1,0 +1,3 @@
+[console_scripts]
+prospector-html = prospector2html.__main__:main
+
