@@ -1,0 +1,14 @@
+dr_import/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dr_import/analyze_gps.py,sha256=mb15XceY3zIVL8mnt6tcSHJMUE6WaIf0fNMv7tLYNHo,2464
+dr_import/clone_trip.py,sha256=EISu6jv_2E-iOrd4o6xeL9S-GVSYwxBgVZjYP9adf54,4637
+dr_import/clone_trip2.py,sha256=DwMuEBgSyQBo4bVoR1dJwPpK4GfhY2E4Wu2p9IBpLPw,18990
+dr_import/import_gps.py,sha256=t4DMsAT302ZQnby5nxpwKt7Bbh_calmHXikxOxfUHRk,6792
+dr_import/import_media.py,sha256=78ZybLmnZOViw4c5I3IVlszEOhx4ffnLDarASCle7q0,9262
+dr_import/legacy_import.py,sha256=rMIUaMTRDu88AUTZmiPKFOA0va7ebRnOe0MymAcfAbE,7025
+dr_import/make_trip.py,sha256=fKSDVc5kFUfETF6z-PkJjeL249rlEXTHJ8-xbKQrNfE,6066
+dr_import/trip_summary.png,sha256=3syHLe2mkdih3UK5iwAMxE2T5-NdAKspuoTP8uZl9dg,51441
+dr_import/update_media.py,sha256=eqzotuwooQ2I90OHprX7iF-Cu2MlpB1uFNVL1IA9fNk,4082
+dr_import-0.1.13.dist-info/METADATA,sha256=RF4FktaCXMP9yvMUrXOo_g8uHH6cmdG1pLVLZV0JBks,405
+dr_import-0.1.13.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dr_import-0.1.13.dist-info/top_level.txt,sha256=LQ21Hy3KJ3iQ1Z3-DH-HQk93yklm20zDjY8giTxswJ0,10
+dr_import-0.1.13.dist-info/RECORD,,
