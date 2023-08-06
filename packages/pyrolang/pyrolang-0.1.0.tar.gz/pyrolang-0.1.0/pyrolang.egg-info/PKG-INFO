@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: pyrolang
+Version: 0.1.0
+Summary: An experimental programming language.
+Home-page: https://github.com/dmulholl/pyro
+Author: Darren Mulholland
+License: Public Domain
+Description: 
+        An experimental programming language.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: Public Domain
+Requires-Python: >=3.8
