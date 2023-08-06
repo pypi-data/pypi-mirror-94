@@ -1,0 +1,3 @@
+[console_scripts]
+qavifiserver = qavifiserver.__init__:run_server
+
