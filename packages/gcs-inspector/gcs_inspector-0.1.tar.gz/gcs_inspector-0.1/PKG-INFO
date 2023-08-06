@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: gcs_inspector
+Version: 0.1
+Summary: A small library used for monitoring public instances of Google Cloud Storage using Google Service Account
+Home-page: https://github.com/waristea/gcs-inspector
+Author: William Aristea Tantiono
+Author-email: waristea@gmail.com
+License: MIT
+Download-URL: https://github.com/waristea/gcs-inspector/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: GCS,Google Cloud Storage,InspectorGCS Inspector,Google Cloud Storage Inspector,Cloud Storage Inspector,Storage Inspector,Cloud InspectorMonitoring,GCS Monitoring,Google Cloud Storage Monitoring,Cloud Storage Monitoring,Storage Monitoring,Cloud Monitoring
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
