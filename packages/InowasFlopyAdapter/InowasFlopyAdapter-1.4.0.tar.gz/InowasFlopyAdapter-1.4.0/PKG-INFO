@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: InowasFlopyAdapter
+Version: 1.4.0
+Summary: A FLOPY wrapper for the INOWAS-platform
+Home-page: https://github.com/inowas/InowasFlopyAdapter
+Author: Ralf Junghanns
+Author-email: ralf.junghanns@gmail.com
+License: UNKNOWN
+Description: # InowasFlopyAdapter
+        
+        This library is used as a Flopy-Wrapper on the INOWAS-Platform.
+        
+        More information will follow shortly.
+        
+        ## For developers
+        
+        1. clone this
+        2. create a new environment
+        3. run `pip install .` to get all packages installed
+        
+        
+        ## Run tests
+        
+        There is a makefile provided to run the tests
+        
+        
+          
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
