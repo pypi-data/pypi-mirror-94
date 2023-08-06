@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cloudgoat"
+version = "v0.1.8"
+description = ""
+authors = ["Ryan Gerstenkorn <ryan.gerstenkorn@rhinosecuritylabs.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+flake8 = "^3.8.4"
+mypy = "^0.800"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
