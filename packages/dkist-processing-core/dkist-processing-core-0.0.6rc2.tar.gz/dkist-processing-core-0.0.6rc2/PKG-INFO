@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dkist-processing-core
+Version: 0.0.6rc2
+Summary: Code that is used by the DKIST Science Data Processing Airflow pipelines to process DKIST data.
+Home-page: https://bitbucket.org/dkistdc/dkist_processing_core/src/master/
+Author: NSO / AURA
+Author-email: "fwatson@nso.edu"
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Provides-Extra: test

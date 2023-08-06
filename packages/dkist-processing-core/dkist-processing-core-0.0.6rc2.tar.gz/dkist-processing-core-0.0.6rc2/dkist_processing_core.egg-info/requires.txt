@@ -1,0 +1,11 @@
+apache-airflow[postgres]>=2.0.0
+elastic-apm
+hashids
+requests
+talus
+
+[test]
+pytest
+pytest-cov
+hypothesis
+jinja2
