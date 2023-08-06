@@ -1,0 +1,16 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+calculatoranand.egg-info/PKG-INFO
+calculatoranand.egg-info/SOURCES.txt
+calculatoranand.egg-info/dependency_links.txt
+calculatoranand.egg-info/top_level.txt
+joshbasiccalculator.egg-info/SOURCES.txt
+joshbasiccalculator.egg-info/dependency_links.txt
+joshbasiccalculator.egg-info/top_level.txt
+joshbasiccalculatoran/__init__.py
+joshbasiccalculatoran.egg-info/SOURCES.txt
+joshbasiccalculatoran.egg-info/dependency_links.txt
+joshbasiccalculatoran.egg-info/top_level.txt
