@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: gdg
+Version: 0.0.2
+Summary: gdg - generation data groups with python
+Home-page: https://github.com/cjoakim/gdg-py
+Author: Christopher Joakim
+Author-email: christopher.joakim@gmail.com
+License: MIT
+Description: gdg - generation data groups with python
+        ========================================
+        
+        Features
+        --------
+        
+        - TODO
+        
+        Quick start
+        -----------
+        
+        Installation:
+        
+        .. code-block:: console
+        
+            $ pip install gdg
+        
+        Use:
+        
+        .. code-block:: pycon
+        
+            >>> import gdg
+        
+            >>> g = gdg.Gdg()
+        
+        
+        Source Code
+        ===========
+        
+        
+        Changelog
+        =========
+        
+        Version 0.0.0
+        -------------
+        
+        -  2021/02/02. Pre-Alpha
+        
+Keywords: generation data groups (gdg) with python
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: dev
+Provides-Extra: test
