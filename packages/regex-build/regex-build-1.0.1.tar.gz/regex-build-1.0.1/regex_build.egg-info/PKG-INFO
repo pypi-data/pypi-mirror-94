@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: regex-build
+Version: 1.0.1
+Summary: Build complex one-line regex strings.
+Home-page: https://github.com/huntfx/regex-build
+Author: Peter Hunt
+Author-email: peter@huntfx.uk
+License: MIT
+Download-URL: https://github.com/huntfx/regex-build/archive/1.0.1.tar.gz
+Project-URL: Documentation, https://github.com/huntfx/regex-build/wiki
+Project-URL: Source, https://github.com/huntfx/regex-build
+Project-URL: Issues, https://github.com/huntfx/regex-build/issues
+Description: # regex-build
+        Build complex one-line regex strings.
+        
+        The preferred way of building is using a one line chain of calls on the `RegexBuild` instance.
+        For anything more complex, using it as a context manager will allow for multiple calls to be made on the same instance.
+        
+        Instances of `RegexBuild` may be used interchangeably with strings, allowing for multiple nested instances to be used.
+        
+        ```python
+        >>> original_regex = r'.*\\Roaming\\(Microsoft|NVIDIA|Adobe\\.*(Asset|Native)Cache)\\'
+        
+        # Complex example
+        >>> with RegexBuild(r'.*\\Roaming\\') as build_regex:
+        ...     build_regex(
+        ...         'Microsoft', 'NVIDIA', RegexBuild(r'Adobe\\.*')('Asset', 'Native')('Cache'),
+        ...     )(r'\\')
+        
+        >>> original_regex == str(build_regex)
+        True
+        
+        # Different ways to build the same regex
+        >>> with RegexBuild('(?i)', exit='$') as case_insensitive:
+        ...     # As one line
+        ...     case_insensitive('prefix1_')('word1', 'word2')('_suffix1')
+        ...
+        ...     # As context managers
+        ...     with case_insensitive('prefix2_') as prefix:
+        ...         with prefix('word2', 'word3') as words:
+        ...             words('_suffix2')
+        ...
+        ...     # As context manager using the "end" parameter
+        ...     with case_insensitive('prefix3_', end='_suffix3') as prefix:
+        ...         prefix('word4')
+        ...         prefix('word5')
+        ...
+        
+        >>> case_insensitive
+        '(?i)(prefix1_(word1|word2)_suffix1|prefix2_(word3|word4)_suffix2|prefix3_(word5|word6)_suffix3)$'
+        ```
+        
+Keywords: regex,build,generate,re,auto,create
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
