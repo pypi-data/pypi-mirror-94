@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+scriptify/__init__.py
+scriptify/scriptify.py
+scriptify.egg-info/PKG-INFO
+scriptify.egg-info/SOURCES.txt
+scriptify.egg-info/dependency_links.txt
+scriptify.egg-info/top_level.txt
