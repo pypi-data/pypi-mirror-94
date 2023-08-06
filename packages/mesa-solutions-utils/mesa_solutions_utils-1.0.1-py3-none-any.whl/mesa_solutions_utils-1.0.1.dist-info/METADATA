@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mesa-solutions-utils
+Version: 1.0.1
+Summary: Various utilities functions and classes
+Home-page: https://dev.azure.com/mesa-ngs/_git/mesa-solutions-utils
+Author: Mesa Natural Gas Solutions, LLC
+Author-email: support@mesangs.com
+License: MIT
+Download-URL: https://dev.azure.com/mesa-ngs/_git/mesa-solutions-utils
+Keywords: Microsoft Dynamics NAV,SOAP
+Platform: UNKNOWN
+Requires-Dist: zeep
+
+UNKNOWN
+
+
