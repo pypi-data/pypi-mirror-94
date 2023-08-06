@@ -1,0 +1,16 @@
+thetagang/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+thetagang/config.py,sha256=6toPbUSOr_Ad754XPJCag6P4MbzYU95zAmnid01KMik,4026
+thetagang/config_defaults.py,sha256=chmad6CPMbGdWxD_AWGU99pWUHfciQ_2zy5d0ZPgVGc,57
+thetagang/entry.py,sha256=qDiCHvYCQ9-XKx39M-2IVU5N2O-VvD5EpIsDyr4PxU8,59
+thetagang/main.py,sha256=1egf9Hul_2lGdbHpcoCnb2iGFLpZEw51rsTdNgYSXn8,803
+thetagang/options.py,sha256=vzcQ8pyIK2-Z7vvL3KrERAqmjqdpdWYAYGHPXcl4hso,376
+thetagang/portfolio_manager.py,sha256=ixkfATo8TAX-4rG9AxPq8PT7qJRE_BoK38j8q_Z8Hxk,24056
+thetagang/test_util.py,sha256=lelxjhHCKTy8M7SZqZh6ODTYZdoBLPPfQq6hLncQPyI,2616
+thetagang/thetagang.py,sha256=wH7NMEPDUsXy_unXEvzv7XTUVNRwD_5OzilTKi6WmKA,3599
+thetagang/util.py,sha256=xR2IyjPr22zCoXh1Qh6cUPlHVc2kZVIcJNVFI6PaQ7o,1910
+thetagang-0.1.13.dist-info/entry_points.txt,sha256=4l79rp9l8bFYpSCuuyRqZSEgWoAYofFpEOreX3Iu4QU,70
+thetagang-0.1.13.dist-info/COPYING,sha256=WCB-vCsmLF3Hy67r9J1hdwRURexqvg_RpOFfLb87oZU,696
+thetagang-0.1.13.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+thetagang-0.1.13.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+thetagang-0.1.13.dist-info/METADATA,sha256=TsxtTbEOx_s-us_GMfsP9T8uBY4Okmp--Zg0JDXy7f8,10843
+thetagang-0.1.13.dist-info/RECORD,,
