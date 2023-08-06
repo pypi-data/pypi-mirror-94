@@ -1,0 +1,18 @@
+@media all {
+    .aasrp-form-label {
+        width: 100%;
+        font-weight: normal;
+    }
+
+    .aasrp-form-field-errors {
+        margin-top: 0.5rem;
+    }
+
+    .field-required > span {
+        font-weight: bold;
+    }
+
+    .field-required .aasrp-form-label-text::after {
+        content: " *";
+    }
+}
