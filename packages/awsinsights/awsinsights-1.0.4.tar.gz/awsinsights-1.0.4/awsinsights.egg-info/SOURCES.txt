@@ -1,0 +1,11 @@
+README.md
+setup.py
+awsinsights/__init__.py
+awsinsights/__main__.py
+awsinsights/awsinsights.py
+awsinsights.egg-info/PKG-INFO
+awsinsights.egg-info/SOURCES.txt
+awsinsights.egg-info/dependency_links.txt
+awsinsights.egg-info/entry_points.txt
+awsinsights.egg-info/requires.txt
+awsinsights.egg-info/top_level.txt
