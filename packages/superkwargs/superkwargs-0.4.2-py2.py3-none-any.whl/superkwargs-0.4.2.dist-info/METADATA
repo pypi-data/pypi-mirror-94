@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: superkwargs
+Version: 0.4.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Mihir Singh (@citruspi)
+Author-email: pypi.service@mihirsingh.com
+License: UNKNOWN
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: Public Domain
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: dev
+Requires-Dist: nose ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+
+UNKNOWN
+
+
