@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gramup
+Version: 0.0.5
+Summary: A utility to use Telegram as a backup solution.
+Home-page: https://github.com/rohittp0/GramUp
+Author: Rohit T P
+Author-email: tprohit9@gmail.com
+License: UNKNOWN
+Description: # GramUp
+        README loading...
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
