@@ -1,0 +1,17 @@
+orthogram/__init__.py,sha256=P_RE69udqFAZNaoxEEZDcWE55TH77yfEcQeMPB9ZvZ4,151
+orthogram/__main__.py,sha256=XhLhFhg2TU1d41QUJM1PVMM-FF0aXlnPoJxBJuGGL6g,200
+orthogram/attributes.py,sha256=MKYuuMPFZtDC06jvGZQkobfM-aBzVP_5sCO86fr7fzY,19449
+orthogram/build.py,sha256=t3EgSvdzS9DNpQEMvFNTU3KtvIu22BR_X97Nr4cayFA,14861
+orthogram/debug.py,sha256=HK0SAjdwARUnI37s5tufpizSUpRABxiVxgzZ2yhVi7g,363
+orthogram/diagram.py,sha256=3UrZ44yFgsAqqXI-ktdNdFlUttvW1WuNMRB3aj-b7K0,26647
+orthogram/draw.py,sha256=TwMJEUe745hhcD2wEsjDjfZLt6QJ2YnwIJ7Vu0PuroY,49431
+orthogram/functions.py,sha256=2czNhp_eVZdUDHxxKhN3ZBKEYdfYJW1LnpPpv9pNgsI,2648
+orthogram/geometry.py,sha256=A4z8L-fig7oKjU8fUvNo2J8z_H5ouXZjW5sYVDwpyfU,11362
+orthogram/layout.py,sha256=ebBxiFgl-uNivhPXOrbndCfg38GRbAmh0PG17-i3iCU,1530
+orthogram/refine.py,sha256=gHU8leT24UpdrWDLPu0VWgIeniJAE5wq-kHKmYsRWNg,36639
+orthogram/route.py,sha256=ypw_vsbzMCwgiB1RCMSAAePwaMzV-x3vhVl4eU1dAW0,18653
+orthogram/util.py,sha256=6-L-ziOBAm0j6Vjq33v1GxvpCdeOX86R_OkJl96dBqU,546
+orthogram-0.4.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+orthogram-0.4.3.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+orthogram-0.4.3.dist-info/METADATA,sha256=_A1hVrbKiFZcH38F5pByTeaVGB_n1FnTO2VcWtHW7sU,2229
+orthogram-0.4.3.dist-info/RECORD,,

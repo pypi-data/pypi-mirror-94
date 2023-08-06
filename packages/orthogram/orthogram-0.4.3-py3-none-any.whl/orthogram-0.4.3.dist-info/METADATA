@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: orthogram
+Version: 0.4.3
+Summary: Draw block diagrams.
+Home-page: https://github.com/yorgath/orthogram
+License: GPL-3.0-or-later
+Keywords: block,diagram,graph
+Author: Georgios Athanasiou
+Author-email: yorgath@gmail.com
+Maintainer: Georgios Athanasiou
+Maintainer-email: yorgath@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
+Requires-Dist: Shapely (>=1.7.1,<2.0.0)
+Requires-Dist: networkx (>=2.5,<3.0)
+Requires-Dist: svgwrite (>=1.4.1,<2.0.0)
+Project-URL: Documentation, https://readthedocs.org/projects/orthogram/
+Project-URL: Repository, https://github.com/yorgath/orthogram
+Description-Content-Type: text/x-rst
+
+Orthogram
+=========
+
+Orthogram is a command line program and Python library that lets you
+draw block diagrams.  It reads the definition of a diagram from a YAML
+file and produces a SVG file like this one:
+
+.. image:: examples/showoff.svg
+   :width: 100%
+   :alt: (Showing off the capabilities)
+
+Target audience
+---------------
+
+This project might be of interest to you if:
+
+* You do not want to use a GUI.  You prefer your diagrams defined in
+  plain text files.
+* You know where your blocks should be, but you would rather have the
+  computer maintain the connections for you.
+* You tried to force `Graphviz`_ or `PlantUML`_ to output the layout
+  you want, but to no avail.
+
+.. _Graphviz: https://graphviz.org/
+.. _PlantUML: https://plantuml.com/
+
+Installation and usage
+----------------------
+
+Install from PyPI:
+
+.. code::
+   
+   pip install orthogram
+
+Assuming there is a diagram definition file named ``diagram.yaml`` in
+your current directory, run the following command to produce a SVG
+file:
+
+.. code::
+   
+   python -m orthogram diagram.yaml
+
+Please read the full online `documentation`_ for more.
+
+.. _documentation: https://orthogram.readthedocs.org
+
