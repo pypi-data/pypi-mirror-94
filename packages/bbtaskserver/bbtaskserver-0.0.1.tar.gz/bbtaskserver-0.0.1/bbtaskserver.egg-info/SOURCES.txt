@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+bbtaskserver/__init__.py
+bbtaskserver.egg-info/PKG-INFO
+bbtaskserver.egg-info/SOURCES.txt
+bbtaskserver.egg-info/dependency_links.txt
+bbtaskserver.egg-info/top_level.txt
