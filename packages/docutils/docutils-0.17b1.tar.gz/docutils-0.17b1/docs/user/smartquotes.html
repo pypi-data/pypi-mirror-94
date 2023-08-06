@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.17b.dev: http://docutils.sourceforge.net/" />
+<title>Smart Quotes for Docutils</title>
+<meta name="author" content="Günter Milde, based on SmartyPants by John Gruber, Brad Choate, and Chad Miller" />
+<meta name="date" content="2019-10-29" />
+<link rel="stylesheet" href="../../docutils/writers/html4css1/html4css1.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="smart-quotes-for-docutils">
+<h1 class="title">Smart Quotes for Docutils</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Author:</th>
+<td>Günter Milde,
+based on SmartyPants by John Gruber, Brad Choate, and Chad Miller</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:docutils-develop&#64;lists.sourceforge.net">docutils-develop&#64;lists.sourceforge.net</a></td></tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>8405</td></tr>
+<tr><th class="docinfo-name">Date:</th>
+<td>2019-10-29</td></tr>
+<tr class="license field"><th class="docinfo-name">License:</th><td class="field-body">Released under the terms of the <a class="reference external" href="http://www.spdx.org/licenses/BSD-2-Clause">2-Clause BSD license</a></td>
+</tr>
+</tbody>
+</table>
+<div class="abstract topic">
+<p class="topic-title">Abstract</p>
+<p>This document describes the Docutils <cite>smartquotes</cite> module.</p>
+</div>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#description" id="id4">Description</a></li>
+<li><a class="reference internal" href="#escaping" id="id5">Escaping</a></li>
+<li><a class="reference internal" href="#localization" id="id6">Localization</a></li>
+<li><a class="reference internal" href="#caveats" id="id7">Caveats</a><ul>
+<li><a class="reference internal" href="#why-you-might-not-want-to-use-smart-quotes-in-your-documents" id="id8">Why You Might Not Want to Use &quot;Smart&quot; Quotes in Your Documents</a></li>
+<li><a class="reference internal" href="#algorithmic-shortcomings" id="id9">Algorithmic Shortcomings</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#history" id="id10">History</a></li>
+</ul>
+</div>
+<div class="section" id="description">
+<h1><a class="toc-backref" href="#id4">Description</a></h1>
+<p>The <a class="reference external" href="config.html#smart-quotes">&quot;smart_quotes&quot; configuration setting</a> triggers the SmartQuotes
+transformation on Text nodes that includes the following steps:</p>
+<ul class="simple">
+<li>Straight quotes (<tt class="docutils literal">&quot;</tt> and <tt class="docutils literal">'</tt>) into &quot;curly&quot; quote characters</li>
+<li>dashes (<tt class="docutils literal"><span class="pre">--</span></tt> and <tt class="docutils literal"><span class="pre">---</span></tt>) into en- and em-dash entities</li>
+<li>three consecutive dots (<tt class="docutils literal">...</tt> or <tt class="docutils literal">. . .</tt>) into an ellipsis entity.</li>
+</ul>
+<p>This means you can write, edit, and save your documents using plain old
+ASCII -- straight quotes, plain dashes, and plain dots -- while Docutils
+generates documents with typographical quotes, dashes, and ellipses.</p>
+<p>Advantages:</p>
+<ul class="simple">
+<li>Typing speed (especially when blind-typing).</li>
+<li>The possibility to change the quoting style of the
+complete document with just one configuration option.</li>
+<li>Typographical quotes with just 7-bit ASCII characters in the source.</li>
+</ul>
+<p>However, there are <a class="reference internal" href="#algorithmic-shortcomings">algorithmic shortcomings</a> for 2 reasons:</p>
+<ul class="simple">
+<li>Dual use of the &quot;ASCII-apostrophe&quot; (') as single quote and apostrophe.</li>
+<li>Languages that do not use whitespace around words.</li>
+</ul>
+<p>So, please consider also
+<a class="reference internal" href="#why-you-might-not-want-to-use-smart-quotes-in-your-documents">Why You Might Not Want to Use &quot;Smart&quot; Quotes in Your Documents</a>.</p>
+</div>
+<div class="section" id="escaping">
+<h1><a class="toc-backref" href="#id5">Escaping</a></h1>
+<p>The <cite>SmartQuotes</cite> transform does not modify characters in literal text
+such as source code, maths, or literal blocks.</p>
+<p>If you need literal straight quotes (or plain hyphens and periods) in normal
+text, you can <a class="reference external" href="../ref/rst/restructuredtext.html#escaping-mechanism">backslash escape</a> the characters to preserve
+ASCII-punctuation.</p>
+<table border="1" class="booktabs docutils">
+<colgroup>
+<col width="24%" />
+<col width="24%" />
+<col width="5%" />
+<col width="21%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Input</th>
+<th class="head">Output</th>
+<th class="head">&nbsp;</th>
+<th class="head">Input</th>
+<th class="head">Output</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="docutils literal">\\</tt></td>
+<td>\</td>
+<td>&nbsp;</td>
+<td><tt class="docutils literal"><span class="pre">\...</span></tt></td>
+<td>...</td>
+</tr>
+<tr><td><tt class="docutils literal">\&quot;</tt></td>
+<td>&quot;</td>
+<td>&nbsp;</td>
+<td><tt class="docutils literal"><span class="pre">\--</span></tt></td>
+<td>--</td>
+</tr>
+<tr><td><tt class="docutils literal">\'</tt></td>
+<td>'</td>
+<td>&nbsp;</td>
+<td><tt class="docutils literal">\`</tt></td>
+<td>`</td>
+</tr>
+</tbody>
+</table>
+<p>This is useful, for example, when you want to use straight quotes as
+foot and inch marks:</p>
+<blockquote>
+6'2&quot; tall; a 17&quot; monitor.</blockquote>
+</div>
+<div class="section" id="localization">
+<h1><a class="toc-backref" href="#id6">Localization</a></h1>
+<p>Quotation marks have a <a class="reference external" href="https://en.wikipedia.org/wiki/Quotation_mark#Summary_table">variety of forms</a> in different languages and
+media.</p>
+<p><cite>SmartQuotes</cite> inserts quotation marks depending on the language of the
+current block element and the value of the <a class="reference external" href="config.html#smart-quotes">&quot;smart_quotes&quot; setting</a>.<a class="footnote-reference" href="#x-altquot" id="id2">[1]</a>
+There is built-in support for the following languages:<a class="footnote-reference" href="#smartquotes-locales" id="id3">[2]</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">af:</th><td class="field-body"><p class="first last" lang="af">&quot;'Afrikaans' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">af-x-altquot:</th><td class="field-body"><p class="first last" lang="af-x-altquot">&quot;'Afrikaans' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">ca:</th><td class="field-body"><p class="first last" lang="ca">&quot;'Catalan' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">ca-x-altquot:</th><td class="field-body"><p class="first last" lang="ca-x-altquot">&quot;'Catalan' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">cs:</th><td class="field-body"><p class="first last" lang="cs">&quot;'Czech' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">cs-x-altquot:</th><td class="field-body"><p class="first last" lang="cs-x-altquot">&quot;'Czech' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">da:</th><td class="field-body"><p class="first last" lang="da">&quot;'Danish' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">da-x-altquot:</th><td class="field-body"><p class="first last" lang="da-x-altquot">&quot;'Danish' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">de:</th><td class="field-body"><p class="first last" lang="de">&quot;'German' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">de-x-altquot:</th><td class="field-body"><p class="first last" lang="de-x-altquot">&quot;'German' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">de-ch:</th><td class="field-body"><p class="first last" lang="de-ch">&quot;'Swiss-German' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">el:</th><td class="field-body"><p class="first last" lang="el">&quot;'Greek' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">en:</th><td class="field-body"><p class="first last" lang="en">&quot;'English' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">en-uk-x-altquot:</th><td class="field-body"><p class="first last" lang="en-uk-x-altquot">&quot;'British' alternative quotes&quot;
+(swaps single and double quotes: <tt class="docutils literal">&quot;</tt> → ‘ and <tt class="docutils literal">'</tt> → “)</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">eo:</th><td class="field-body"><p class="first last" lang="eo">&quot;'Esperanto' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">es:</th><td class="field-body"><p class="first last" lang="es">&quot;'Spanish' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">es-x-altquot:</th><td class="field-body"><p class="first last" lang="es-x-altquot">&quot;'Spanish' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">et:</th><td class="field-body"><p class="first last" lang="et">&quot;'Estonian' quotes&quot; (no secondary quote listed in Wikipedia)</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">et-x-altquot:</th><td class="field-body"><p class="first last" lang="et-x-altquot">&quot;'Estonian' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">eu:</th><td class="field-body"><p class="first last" lang="eu">&quot;'Basque' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">fi:</th><td class="field-body"><p class="first last" lang="fi">&quot;'Finnish' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">fi-x-altquot:</th><td class="field-body"><p class="first last" lang="fi-x-altquot">&quot;'Finnish' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">fr:</th><td class="field-body"><p class="first last" lang="fr">&quot;'French' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">fr-x-altquot:</th><td class="field-body"><p class="first last" lang="fr-x-altquot">&quot;'French' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">fr-ch:</th><td class="field-body"><p class="first last" lang="fr-ch">&quot;'Swiss-French' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">fr-ch-x-altquot:</th><td class="field-body"><p class="first last" lang="fr-ch-x-altquot">&quot;'Swiss-French' alternative quotes&quot; (narrow no-break space, see
+<a class="reference external" href="http://typoguide.ch/">http://typoguide.ch/</a>)</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">gl:</th><td class="field-body"><p class="first last" lang="gl">&quot;'Galician' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">he:</th><td class="field-body"><p class="first last" lang="he">&quot;'Hebrew' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">he-x-altquot:</th><td class="field-body"><p class="first last" lang="he-x-altquot">&quot;'Hebrew' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">hr:</th><td class="field-body"><p class="first last" lang="hr">&quot;'Croatian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">hr-x-altquot:</th><td class="field-body"><p class="first last" lang="hr-x-altquot">&quot;'Croatian' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">hsb:</th><td class="field-body"><p class="first last" lang="hsb">&quot;'Upper Sorbian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">hsb-x-altquot:</th><td class="field-body"><p class="first last" lang="hsb-x-altquot">&quot;'Upper Sorbian' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">hu:</th><td class="field-body"><p class="first last" lang="hu">&quot;'Hungarian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">is:</th><td class="field-body"><p class="first last" lang="is">&quot;'Icelandic' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">it:</th><td class="field-body"><p class="first last" lang="it">&quot;'Italian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">it-ch:</th><td class="field-body"><p class="first last" lang="it-ch">&quot;'Swiss-Italian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">it-x-altquot:</th><td class="field-body"><p class="first last" lang="it-x-altquot">&quot;'Italian' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">ja:</th><td class="field-body"><p class="first last" lang="ja">&quot;'Japanese' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">lt:</th><td class="field-body"><p class="first last" lang="lt">&quot;'Lithuanian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">lv:</th><td class="field-body"><p class="first last" lang="lv">&quot;'Latvian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">nl:</th><td class="field-body"><p class="first last" lang="nl">&quot;'Dutch' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">nl-x-altquot:</th><td class="field-body"><p class="first last" lang="nl-x-altquot">&quot;'Dutch' alternative quotes&quot;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- # 'nl-x-altquot2': u'””’’', -->
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">pl:</th><td class="field-body"><p class="first last" lang="pl">&quot;'Polish' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">pl-x-altquot:</th><td class="field-body"><p class="first last" lang="pl-x-altquot">&quot;'Polish' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">pt:</th><td class="field-body"><p class="first last" lang="pt">&quot;'Portuguese' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">pt-br:</th><td class="field-body"><p class="first last" lang="pt-br">&quot;'Portuguese (Brazil)' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">ro:</th><td class="field-body"><p class="first last" lang="ro">&quot;'Romanian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">ru:</th><td class="field-body"><p class="first last" lang="ru">&quot;'Russian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">sh:</th><td class="field-body"><p class="first last" lang="sh">&quot;'Serbo-Croatian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">sh-x-altquot:</th><td class="field-body"><p class="first last" lang="sh-x-altquot">&quot;'Serbo-Croatian' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">sk:</th><td class="field-body"><p class="first last" lang="sk">&quot;'Slovak' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">sk-x-altquot:</th><td class="field-body"><p class="first last" lang="sk-x-altquot">&quot;'Slovak' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">sl:</th><td class="field-body"><p class="first last" lang="sl">&quot;'Slovenian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">sl-x-altquot:</th><td class="field-body"><p class="first last" lang="sl-x-altquot">&quot;'Slovenian' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">sr:</th><td class="field-body"><p class="first last" lang="sr">&quot;'Serbian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">sr-x-altquot:</th><td class="field-body"><p class="first last" lang="sr-x-altquot">&quot;'Serbian' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">sv:</th><td class="field-body"><p class="first last" lang="sv">&quot;'Swedish' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">sv-x-altquot:</th><td class="field-body"><p class="first last" lang="sv-x-altquot">&quot;'Swedish' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">tr:</th><td class="field-body"><p class="first last" lang="tr">&quot;'Turkish' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">tr-x-altquot:</th><td class="field-body"><p class="first last" lang="tr-x-altquot">&quot;'Turkish' alternative quotes&quot;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- 'tr-x-altquot2': u'“„‘‚', # antiquated? -->
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">uk:</th><td class="field-body"><p class="first last" lang="uk">&quot;'Ukrainian' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">uk-x-altquot:</th><td class="field-body"><p class="first last" lang="uk-x-altquot">&quot;'Ukrainian' alternative quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">zh-cn:</th><td class="field-body"><p class="first last" lang="zh-cn">&quot;'Chinese (China)' quotes&quot;</p>
+</td>
+</tr>
+<tr class="field"><th class="field-name">zh-tw:</th><td class="field-body"><p class="first last" lang="zh-tw">&quot;'Chinese (Taiwan)' quotes&quot;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Quotes in text blocks in a non-configured language are kept as plain quotes:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">undefined:</th><td class="field-body"><p class="first last" lang="undefined-example">&quot;'Undefined' quotes&quot;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="x-altquot" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td>Tags with the non-standard extension <tt class="docutils literal"><span class="pre">-x-altquot</span></tt> define
+the quote set used with the <a class="reference external" href="config.html#smart-quotes">&quot;smart_quotes&quot; setting</a> value <tt class="docutils literal">&quot;alt&quot;</tt>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="smartquotes-locales" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td><p class="first">The definitions for language-dependend
+typographical quotes can be extended or overwritten using the
+<a class="reference external" href="config.html#smartquotes-locales">&quot;smartquotes_locales&quot; setting</a>.</p>
+<p>The following example ensures a correct leading apostrophe in <tt class="docutils literal">'s
+Gravenhage</tt> (at the cost of incorrect leading single quotes) in Dutch
+and sets French quotes to double and single guillemets with inner
+spacing:</p>
+<pre class="last literal-block">
+smartquote-locales: nl: „”’’
+                    fr: «&nbsp;:&nbsp;»:‹&nbsp;:&nbsp;›
+</pre>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="caveats">
+<h1><a class="toc-backref" href="#id7">Caveats</a></h1>
+<div class="section" id="why-you-might-not-want-to-use-smart-quotes-in-your-documents">
+<h2><a class="toc-backref" href="#id8">Why You Might Not Want to Use &quot;Smart&quot; Quotes in Your Documents</a></h2>
+<p>For one thing, you might not care.</p>
+<p>Most normal, mentally stable individuals do not take notice of proper
+typographic punctuation. Many design and typography nerds, however, break
+out in a nasty rash when they encounter, say, a restaurant sign that uses
+a straight apostrophe to spell &quot;Joe's&quot;.</p>
+<p>If you're the sort of person who just doesn't care, you might well want to
+continue not caring. Using straight quotes -- and sticking to the 7-bit
+ASCII character set in general -- is certainly a simpler way to live.</p>
+<p>Even if you <em>do</em> care about accurate typography, you still might want to
+think twice before &quot;auto-educating&quot; the quote characters in your documents.
+As there is always a chance that the algorithm gets it wrong, you may
+instead prefer to use the compose key or some other means to insert the
+correct Unicode characters into the source.</p>
+</div>
+<div class="section" id="algorithmic-shortcomings">
+<h2><a class="toc-backref" href="#id9">Algorithmic Shortcomings</a></h2>
+<p>The ASCII character (u0027 APOSTROPHE) is used for apostrophe and single
+quotes. If used inside a word, it is converted into an apostrophe:</p>
+<blockquote>
+<p lang="fr">Il dit : &quot;C'est 'super' !&quot;</p>
+</blockquote>
+<p>At the beginning or end of a word, it cannot be distinguished from a single
+quote by the algorithm.</p>
+<p>The <a class="reference external" href="http://www.fileformat.info/info/unicode/char/2019/index.htm">right single quotation mark</a> character -- used to close a secondary
+(inner) quote in English -- is also &quot;the preferred character to use for
+apostrophe&quot; (<a class="reference external" href="http://www.unicode.org/charts/PDF/U2000.pdf">Unicode</a>). Therefore, &quot;educating&quot; works as expected for
+apostrophes at the end of a word, e.g.,</p>
+<blockquote>
+Mr. Hastings' pen; three days' leave; my two cents' worth.</blockquote>
+<p>However, when apostrophes are used at the start of leading contractions,
+&quot;educating&quot; will turn the apostrophe into an <em>opening</em> secondary quote. In
+English, this is <em>not</em> the apostrophe character, e.g., <tt class="docutils literal">'Twas brillig</tt>
+is &quot;miseducated&quot; to</p>
+<blockquote>
+'Twas brillig.</blockquote>
+<p>In other locales (French, Italian, German, ...), secondary closing quotes
+differ from the apostrophe. A text like:</p>
+<pre class="literal-block">
+.. class:: language-de-CH
+
+&quot;Er sagt: 'Ich fass' es nicht.'&quot;
+</pre>
+<p>becomes</p>
+<blockquote>
+«Er sagt: ‹Ich fass› es nicht.›»</blockquote>
+<p>with a single closing guillemet in place of the apostrophe.</p>
+<p>In such cases, it's best to use the recommended apostrophe character (’) in
+the source:</p>
+<blockquote>
+<div class="line-block">
+<div class="line">’Twas brillig, and the slithy toves</div>
+<div class="line">Did gyre and gimble in the wabe;</div>
+<div class="line">All mimsy were the borogoves,</div>
+<div class="line">And the mome raths outgrabe.</div>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="section" id="history">
+<h1><a class="toc-backref" href="#id10">History</a></h1>
+<p>The smartquotes module is an adaption of &quot;<a class="reference external" href="http://daringfireball.net/projects/smartypants/">SmartyPants</a>&quot; to Docutils.</p>
+<p><a class="reference external" href="http://daringfireball.net/">John Gruber</a> did all of the hard work of writing this software in Perl for
+<a class="reference external" href="http://www.movabletype.org/">Movable Type</a> and almost all of this useful documentation.  <a class="reference external" href="http://web.chad.org/">Chad Miller</a>
+ported it to Python to use with <a class="reference external" href="http://pyblosxom.bluesock.org/">Pyblosxom</a>.</p>
+<p>Portions of the SmartyPants original work are based on Brad Choate's nifty
+MTRegex plug-in.  <a class="reference external" href="http://bradchoate.com/">Brad Choate</a> also contributed a few bits of source code to
+this plug-in.  Brad Choate is a fine hacker indeed.
+<a class="reference external" href="http://antipixel.com/">Jeremy Hedley</a> and <a class="reference external" href="http://playbacktime.com/">Charles Wiltgen</a> deserve mention for exemplary beta
+testing of the original SmartyPants.</p>
+<p>Internationalization and adaption to Docutils by Günter Milde.</p>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+<a class="reference external" href="smartquotes.txt">View document source</a>.
+Generated on: 2020-08-28 10:16 UTC.
+Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+
+</div>
+</body>
+</html>

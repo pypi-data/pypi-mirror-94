@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.17b.dev: http://docutils.sourceforge.net/" />
+<title>Emacs Support for reStructuredText</title>
+<meta name="authors" content="Stefan Merten &lt;stefan&#64;merten-home.de&gt;  Martin Blais &lt;blais&#64;furius.ca&gt;" />
+<link rel="stylesheet" href="../../docutils/writers/html4css1/html4css1.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="emacs-support-for-restructuredtext">
+<h1 class="title">Emacs Support for reStructuredText</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Authors:</th>
+<td>Stefan Merten &lt;stefan&#64;merten-home.de&gt;
+<br />Martin Blais
+&lt;blais&#64;furius.ca&gt;</td></tr>
+<tr><th class="docinfo-name">Version:</th>
+<td><tt class="first docutils literal">rst.el</tt> V1.4.1</td></tr>
+</tbody>
+</table>
+<div class="abstract topic">
+<p class="topic-title">Abstract</p>
+<p>High-level description of the existing <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> support for editing
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> text documents. Suggested setup code and usage
+instructions are provided.</p>
+</div>
+<!-- -*- coding: utf-8 -*- -->
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#introduction" id="id1">Introduction</a></li>
+<li><a class="reference internal" href="#installation" id="id2">Installation</a><ul>
+<li><a class="reference internal" href="#checking-situation" id="id3">Checking situation</a></li>
+<li><a class="reference internal" href="#local-installation" id="id4">Local installation</a></li>
+<li><a class="reference internal" href="#switching-rst-mode-on" id="id5">Switching <tt class="docutils literal"><span class="pre">rst-mode</span></tt> on</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#key-bindings" id="id6">Key bindings</a></li>
+<li><a class="reference internal" href="#section-adornments" id="id7">Section Adornments</a><ul>
+<li><a class="reference internal" href="#adjusting-a-section-title" id="id8">Adjusting a Section Title</a></li>
+<li><a class="reference internal" href="#promoting-and-demoting-many-sections" id="id9">Promoting and Demoting Many Sections</a></li>
+<li><a class="reference internal" href="#redoing-all-the-adornments-to-your-taste" id="id10">Redoing All the Adornments to Your Taste</a></li>
+<li><a class="reference internal" href="#customizations-for-adornments" id="id11">Customizations for Adornments</a></li>
+<li><a class="reference internal" href="#viewing-the-hierarchy-of-section-adornments" id="id12">Viewing the Hierarchy of Section Adornments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#movement-and-selection" id="id13">Movement and Selection</a><ul>
+<li><a class="reference internal" href="#movement-and-selection-for-sections" id="id14">Movement and Selection for Sections</a></li>
+<li><a class="reference internal" href="#movements-and-selection-for-text-blocks" id="id15">Movements and Selection for Text Blocks</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indenting-and-filling" id="id16">Indenting and Filling</a><ul>
+<li><a class="reference internal" href="#indenting-text-blocks" id="id17">Indenting Text Blocks</a></li>
+<li><a class="reference internal" href="#indenting-lines-while-typing" id="id18">Indenting Lines While Typing</a></li>
+<li><a class="reference internal" href="#filling" id="id19">Filling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operating-on-lists" id="id20">Operating on Lists</a><ul>
+<li><a class="reference internal" href="#bulleted-and-enumerated-lists" id="id21">Bulleted and Enumerated Lists</a></li>
+<li><a class="reference internal" href="#straightening-existing-bullet-list-hierarchies" id="id22">Straightening Existing Bullet List Hierarchies</a></li>
+<li><a class="reference internal" href="#inserting-a-list-item" id="id23">Inserting a List Item</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operating-on-other-text-blocks" id="id24">Operating on Other Text Blocks</a><ul>
+<li><a class="reference internal" href="#creating-and-removing-line-blocks" id="id25">Creating and Removing Line Blocks</a></li>
+<li><a class="reference internal" href="#commenting-a-region-of-text" id="id26">Commenting a Region of Text</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#converting-documents-from-emacs" id="id27">Converting Documents from Emacs</a></li>
+<li><a class="reference internal" href="#imenu-support" id="id28">Imenu Support</a><ul>
+<li><a class="reference internal" href="#using-imenu" id="id29">Using Imenu</a></li>
+<li><a class="reference internal" href="#using-which-function" id="id30">Using which function</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-the-table-of-contents" id="id31">Using the Table of Contents</a><ul>
+<li><a class="reference internal" href="#navigating-using-the-table-of-contents" id="id32">Navigating Using the Table of Contents</a></li>
+<li><a class="reference internal" href="#inserting-a-table-of-contents" id="id33">Inserting a Table of Contents</a></li>
+<li><a class="reference internal" href="#maintaining-the-table-of-contents-up-to-date" id="id34">Maintaining the Table of Contents Up-to-date</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#syntax-highlighting-via-font-lock" id="id35">Syntax Highlighting via Font-Lock</a></li>
+<li><a class="reference internal" href="#customization" id="id36">Customization</a><ul>
+<li><a class="reference internal" href="#customizing-section-title-formatting" id="id37">Customizing Section Title Formatting</a></li>
+<li><a class="reference internal" href="#customizing-indentation" id="id38">Customizing Indentation</a></li>
+<li><a class="reference internal" href="#customizing-faces" id="id39">Customizing Faces</a></li>
+<li><a class="reference internal" href="#customizing-conversion" id="id40">Customizing Conversion</a></li>
+<li><a class="reference internal" href="#other-customizations" id="id41">Other Customizations</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#related-aspects" id="id42">Related aspects</a><ul>
+<li><a class="reference internal" href="#text-mode-settings" id="id43"><tt class="docutils literal"><span class="pre">text-mode</span></tt> Settings</a></li>
+<li><a class="reference internal" href="#editing-tables-emacs-table-mode" id="id44">Editing Tables: Emacs table mode</a></li>
+<li><a class="reference internal" href="#character-processing" id="id45">Character Processing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#credits" id="id46">Credits</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h1><a class="toc-backref" href="#id1">Introduction</a></h1>
+<p><a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> is a syntax for simple text files that allows a
+tool set - <a class="reference external" href="http://docutils.sf.net/">docutils</a> - to extract generic document structure. For
+people who use <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a>, there is a package that adds a major mode that
+supports editing the syntax of <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>: <tt class="docutils literal">rst.el</tt>. This
+document describes the features it provides, and how to setup your
+<a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> to use them and how to invoke them.</p>
+</div>
+<div class="section" id="installation">
+<h1><a class="toc-backref" href="#id2">Installation</a></h1>
+<p><a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> support for <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> is implemented as an <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> major
+mode (<tt class="docutils literal"><span class="pre">rst-mode</span></tt>) provided by the <tt class="docutils literal">rst.el</tt> <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> package.</p>
+<p><a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> distributions contain <tt class="docutils literal">rst.el</tt> since version V23.1. However,
+a significantly updated version of <tt class="docutils literal">rst.el</tt> is contained in <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a>
+V24.3. This document describes the version of <tt class="docutils literal">rst.el</tt> contained in
+<a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> V24.3 and later versions. This version of <tt class="docutils literal">rst.el</tt> has the
+internal version V1.4.1.</p>
+<p>If you have <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> V24.3 or later you do not need to install anything
+to get reST support. If you have an <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> between V23.1 and V24.2 you
+may use the version of <tt class="docutils literal">rst.el</tt> installed with <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> or install a
+more recent one <a class="reference internal" href="#locally">locally</a> (recommended). In other cases you need to
+install <tt class="docutils literal">rst.el</tt> <a class="reference internal" href="#locally">locally</a> to get reST support.</p>
+<div class="section" id="checking-situation">
+<h2><a class="toc-backref" href="#id3">Checking situation</a></h2>
+<p>Here are some steps to check your situation:</p>
+<ol class="arabic">
+<li><p class="first">In <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> switch to an empty buffer and try</p>
+<pre class="literal-block">
+M-x rst-mode
+</pre>
+<p>If this works you have <tt class="docutils literal">rst.el</tt> installed somewhere. You can see
+that it works if you find a string <tt class="docutils literal">ReST</tt> in Emacs' modeline of
+the current buffer. If this doesn't work you need to install
+<tt class="docutils literal">rst.el</tt> yourself <a class="reference internal" href="#locally">locally</a>.</p>
+</li>
+<li><p class="first">In the buffer you just switched to <tt class="docutils literal"><span class="pre">rst-mode</span></tt> try</p>
+<pre class="literal-block">
+C-h v rst-version
+</pre>
+<p>If this fails you have a version of <tt class="docutils literal">rst.el</tt> older than
+V1.1.0. Either you have an old <tt class="docutils literal">rst.el</tt> locally or you are using
+an <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> between V23.1 and V24.2. In this case it is recommended
+that you install a more recent version of <tt class="docutils literal">rst.el</tt> <a class="reference internal" href="#locally">locally</a>.</p>
+<p>You may also try</p>
+<pre class="literal-block">
+C-h v emacs-version
+</pre>
+<p>to find out your <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> version.</p>
+</li>
+<li><p class="first">Check the version of <tt class="docutils literal">rst.el</tt></p>
+<p>The content of <tt class="docutils literal"><span class="pre">rst-version</span></tt> gives you the internal version of
+<tt class="docutils literal">rst.el</tt>. The version contained in <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> V24.3 and described here
+is V1.4.0. If you have an older version you may or may not install
+a more recent version of <tt class="docutils literal">rst.el</tt> <a class="reference internal" href="#locally">locally</a>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="local-installation">
+<span id="locally"></span><h2><a class="toc-backref" href="#id4">Local installation</a></h2>
+<p>If you decided to install locally please follow these steps.</p>
+<ol class="arabic">
+<li><p class="first">Download <tt class="docutils literal">rst.el</tt></p>
+<p>Download the most recent published version of <tt class="docutils literal">rst.el</tt> from
+<a class="reference external" href="http://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/tools/editors/emacs/rst.el">http://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/tools/editors/emacs/rst.el</a></p>
+</li>
+<li><p class="first">Put <tt class="docutils literal">rst.el</tt> to a directory in <tt class="docutils literal"><span class="pre">load-path</span></tt></p>
+<p>Use</p>
+<pre class="literal-block">
+C-h v load-path
+</pre>
+<p>If in the resulting list you find a directory in your home
+directory put <tt class="docutils literal">rst.el</tt> in this directory.</p>
+<p>Make sure the directory is one of the first entries in
+<tt class="docutils literal"><span class="pre">load-path</span></tt>. Otherwise a version of <tt class="docutils literal">rst.el</tt> which came with
+<a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> may be found before your local version.</p>
+<p>In <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> see the info node <tt class="docutils literal">Init File Examples</tt> for more
+information on how to set up your <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> initialization
+machinery. Try</p>
+<pre class="literal-block">
+C-h i
+mEmacs&lt;Return&gt;
+sInit File Examples&lt;Return&gt;
+</pre>
+</li>
+<li><p class="first">Enable <tt class="docutils literal"><span class="pre">rst-mode</span></tt></p>
+<p>Add the following to your <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> initialization setup</p>
+<pre class="literal-block">
+(require 'rst)
+</pre>
+<p>After you restarted <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> <tt class="docutils literal">rst.el</tt> is loaded and ready to be
+used.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="switching-rst-mode-on">
+<h2><a class="toc-backref" href="#id5">Switching <tt class="docutils literal"><span class="pre">rst-mode</span></tt> on</a></h2>
+<p>By default <tt class="docutils literal"><span class="pre">rst-mode</span></tt> is switched on for files ending in <tt class="docutils literal">.rst</tt> or
+<tt class="docutils literal">.rest</tt>. If in a buffer you want to switch <tt class="docutils literal"><span class="pre">rst-mode</span></tt> on manually
+use</p>
+<pre class="literal-block">
+M-x rst-mode
+</pre>
+<p>If you want to use <tt class="docutils literal"><span class="pre">rst-mode</span></tt> in files with other extensions modify
+<tt class="docutils literal"><span class="pre">auto-mode-alist</span></tt> to automatically turn it on whenever you visit
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> documents:</p>
+<pre class="literal-block">
+(setq auto-mode-alist
+      (append '((&quot;\\.txt\\'&quot; . rst-mode)
+                (&quot;\\.rst\\'&quot; . rst-mode)
+                (&quot;\\.rest\\'&quot; . rst-mode)) auto-mode-alist))
+</pre>
+<p>Put the extensions you want in the correct place in the example
+above. Add more lines if needed.</p>
+<p>If have local variables enabled (try <tt class="docutils literal"><span class="pre">C-h</span> v <span class="pre">enable-local-variables</span></tt>
+to find out), you can also add the following at the top of your
+documents to trigger rst-mode:</p>
+<pre class="literal-block">
+.. -*- mode: rst -*-
+</pre>
+<p>Or this at the end of your documents:</p>
+<pre class="literal-block">
+..
+   Local Variables:
+   mode: rst
+   End:
+</pre>
+</div>
+</div>
+<div class="section" id="key-bindings">
+<h1><a class="toc-backref" href="#id6">Key bindings</a></h1>
+<p><tt class="docutils literal"><span class="pre">rst-mode</span></tt> automatically binds several keys for invoking special
+functions for editing <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>. Since <tt class="docutils literal"><span class="pre">rst-mode</span></tt> contains a
+lot of functionality most key bindings consist of three
+keystrokes.</p>
+<p>Following the <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> conventions for major modes the key bindings of
+<tt class="docutils literal"><span class="pre">rst-mode</span></tt> start with <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-&lt;letter&gt;</span></tt>. The second key stroke
+selects a group of key bindings:</p>
+<dl class="docutils">
+<dt>C-c C-a</dt>
+<dd>Commands to adjust the section headers and work with the hierarchy
+they build.</dd>
+<dt>C-c C-c</dt>
+<dd>Commands to compile the current <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> document to
+various output formats.</dd>
+<dt>C-c C-l</dt>
+<dd>Commands to work with lists of various kinds.</dd>
+<dt>C-c C-r</dt>
+<dd>Commands to manipulate the current region.</dd>
+<dt>C-c C-t</dt>
+<dd>Commands to create and manipulate a table of contents.</dd>
+</dl>
+<p>At any stage of typing you may use <tt class="docutils literal"><span class="pre">C-h</span></tt> to get help on the
+available key bindings. I.e. <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-h</span></tt> gives you help on all key
+bindings while <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-r</span> <span class="pre">C-h</span></tt> gives you help on the commands for
+regions. This is handy if you forgot a certain key binding.</p>
+<p>Additional key bindings which have a certain meaning in other <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a>
+modes are reused in <tt class="docutils literal"><span class="pre">rst-mode</span></tt> so you don't have to learn a
+different set of key bindings for editing <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>.</p>
+<p>In <tt class="docutils literal"><span class="pre">rst-mode</span></tt> try</p>
+<pre class="literal-block">
+C-h m
+</pre>
+<p>to list all mode specific key bindings. Most of the key bindings are
+described in this tutorial.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The key bindings have been completely revamped in <tt class="docutils literal">rst.el</tt>
+V1.0.0. This was necessary to make room for new
+functionality. Some of the old bindings still work but give
+a warning to use the new binding. In the output of <tt class="docutils literal"><span class="pre">C-h</span> m</tt>
+these bindings show up as <tt class="docutils literal"><span class="pre">rst-deprecated-...</span></tt>. The old
+bindings will be removed completely in a later version.</p>
+</div>
+</div>
+<div class="section" id="section-adornments">
+<h1><a class="toc-backref" href="#id7">Section Adornments</a></h1>
+<p><tt class="docutils literal"><span class="pre">rst-mode</span></tt> recognizes the section adornments building the section
+hierarchy of the document. Section adornments are the underlines or
+under- and overlines used to mark a section title. There are a couple
+of commands to work with section adornments. These commands are bound
+to key bindings starting with <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-a</span></tt>.</p>
+<div class="section" id="adjusting-a-section-title">
+<h2><a class="toc-backref" href="#id8">Adjusting a Section Title</a></h2>
+<p>There is a function that helps a great deal to maintain these
+adornments: <tt class="docutils literal"><span class="pre">rst-adjust</span></tt> (bound to <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-a</span> <span class="pre">C-a</span></tt>, <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-=</span></tt>, and
+<tt class="docutils literal"><span class="pre">C-=</span></tt>). This function is a Swiss army knife that can be invoked
+repeatedly and whose behavior depends on context:</p>
+<ol class="arabic">
+<li><p class="first">If there is an incomplete adornment, e.g.</p>
+<pre class="literal-block">
+My Section Title
+==
+</pre>
+<p>invocation will complete the adornment. It can also be used to
+adjust the length of the existing adornment when you need to edit
+the title.</p>
+</li>
+<li><p class="first">If there is no section adornment at all, by default an adornment of
+the same level as the last encountered section level is added. You
+can simply enter a few characters of the title and invoke the
+function to create the section adornment.</p>
+<p>The variable <tt class="docutils literal"><span class="pre">rst-new-adornment-down</span></tt> can be customized to create
+one level lower adornments than the previous section title instead
+of keeping the level.</p>
+</li>
+<li><p class="first">If there is already a section adornment, it is promoted one level
+up. You can invoke it like this repeatedly to cycle the title
+through the hierarchy of existing adornments.</p>
+</li>
+</ol>
+<p>Invoking the function with a negative prefix argument, e.g. <tt class="docutils literal"><span class="pre">C--</span>
+<span class="pre">C-=</span></tt>, will effectively reverse the direction of adornment cycling.
+To alternate between underline-only and over-and-under styles, you can
+use a regular prefix argument, e.g. <tt class="docutils literal"><span class="pre">C-u</span> <span class="pre">C-=</span></tt>. See the
+documentation of <tt class="docutils literal"><span class="pre">rst-adjust</span></tt> for more description of the prefix
+arguments to alter the behavior of the function.</p>
+</div>
+<div class="section" id="promoting-and-demoting-many-sections">
+<h2><a class="toc-backref" href="#id9">Promoting and Demoting Many Sections</a></h2>
+<p>When you are re-organizing the structure of a document, it can be
+useful to change the level of a number of section titles. The same
+key binding can be used to do that: if the region is active when the
+binding is invoked, all the section titles that are within the region
+are promoted accordingly (or demoted, with negative prefix argument).</p>
+</div>
+<div class="section" id="redoing-all-the-adornments-to-your-taste">
+<h2><a class="toc-backref" href="#id10">Redoing All the Adornments to Your Taste</a></h2>
+<p>If you open someone else's file and the adornments it contains are
+unfamiliar, you may want to readjust them to fit your own preferred
+hierarchy of adornments. This can be difficult to perform by hand.
+However, you can do this easily by invoking
+<tt class="docutils literal"><span class="pre">rst-straighten-adornments</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-a</span> <span class="pre">C-s</span></tt>), which operates on the
+entire buffer.</p>
+</div>
+<div class="section" id="customizations-for-adornments">
+<h2><a class="toc-backref" href="#id11">Customizations for Adornments</a></h2>
+<p>You can customize the variable <tt class="docutils literal"><span class="pre">rst-preferred-adornments</span></tt> to a list
+of the adornments that you like to use for documents.</p>
+<p>If you prefer adornments according to
+<a class="reference external" href="http://sphinx-doc.org/rest.html#sections">http://sphinx-doc.org/rest.html#sections</a> you may customize it to end
+up with a value like this:</p>
+<pre class="literal-block">
+((35 over-and-under 0) ; ?#
+ (42 over-and-under 0) ; ?*
+ (61 simple 0) ; ?=
+ (45 simple 0) ; ?-
+ (94 simple 0) ; ?^
+ (34 simple 0)) ; ?&quot;
+</pre>
+<p>This will become the default in a later version of <tt class="docutils literal">rst.el</tt>.</p>
+<p>If you set <tt class="docutils literal"><span class="pre">rst-preferred-adornments</span></tt> to nil resembling the empty
+list only the section adornment found in the buffer will be used.</p>
+</div>
+<div class="section" id="viewing-the-hierarchy-of-section-adornments">
+<h2><a class="toc-backref" href="#id12">Viewing the Hierarchy of Section Adornments</a></h2>
+<p>You can visualize the hierarchy of the section adornments in the
+current buffer by invoking <tt class="docutils literal"><span class="pre">rst-display-adornments-hierarchy</span></tt>, bound
+on <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-a</span> <span class="pre">C-d</span></tt>. A temporary buffer will appear with fake section
+titles rendered in the style of the current document. This can be
+useful when editing other people's documents to find out which section
+adornments correspond to which levels.</p>
+</div>
+</div>
+<div class="section" id="movement-and-selection">
+<h1><a class="toc-backref" href="#id13">Movement and Selection</a></h1>
+<div class="section" id="movement-and-selection-for-sections">
+<h2><a class="toc-backref" href="#id14">Movement and Selection for Sections</a></h2>
+<p>You can move the cursor between the different section titles by using
+the <tt class="docutils literal"><span class="pre">rst-backward-section</span></tt> (<tt class="docutils literal"><span class="pre">C-M-a</span></tt>) and <tt class="docutils literal"><span class="pre">rst-forward-section</span></tt>
+(<tt class="docutils literal"><span class="pre">C-M-e</span></tt>). To mark the section that cursor lies in, use
+<tt class="docutils literal"><span class="pre">rst-mark-section</span></tt> (<tt class="docutils literal"><span class="pre">C-M-h</span></tt>).</p>
+<p>The key bindings are modeled after other modes with similar
+functionality.</p>
+</div>
+<div class="section" id="movements-and-selection-for-text-blocks">
+<h2><a class="toc-backref" href="#id15">Movements and Selection for Text Blocks</a></h2>
+<p>The understanding of <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> of <tt class="docutils literal"><span class="pre">rst-mode</span></tt> is used to set
+all the variables influencing Emacs' understanding of paragraphs. Thus
+all operations on paragraphs work as usual. For instance
+<tt class="docutils literal"><span class="pre">forward-paragraph</span></tt> (<tt class="docutils literal"><span class="pre">M-}</span></tt>) works as usual.</p>
+</div>
+</div>
+<div class="section" id="indenting-and-filling">
+<h1><a class="toc-backref" href="#id16">Indenting and Filling</a></h1>
+<p>Indentation of text plays a major role in the syntax of
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>. It is tedious to maintain the indentation
+manually. <tt class="docutils literal"><span class="pre">rst-mode</span></tt> understands most of the structure of
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> allowing for sophisticated indentation and filling
+support described in this section.</p>
+<div class="section" id="indenting-text-blocks">
+<h2><a class="toc-backref" href="#id17">Indenting Text Blocks</a></h2>
+<p><tt class="docutils literal"><span class="pre">rst-mode</span></tt> supports indentation of text blocks by the command
+<tt class="docutils literal"><span class="pre">rst-shift-region</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-r</span> TAB</tt>). Mark a region and use <tt class="docutils literal"><span class="pre">C-c</span>
+<span class="pre">C-r</span> TAB</tt> to indent all blocks one tab to the right. Use <tt class="docutils literal"><span class="pre">M--</span> <span class="pre">C-c</span> <span class="pre">C-r</span>
+TAB</tt> to indent the region one tab to the left.</p>
+<p>You may use arbitrary prefix arguments such as <tt class="docutils literal"><span class="pre">M-2</span></tt> or <tt class="docutils literal"><span class="pre">M--</span> 2</tt> to
+determine the number of tabs you want to indent. A prefix of <tt class="docutils literal"><span class="pre">M-0</span></tt>
+removes all indentation in the active region.</p>
+<p>A tab is an indentation making sense for the block at hand in
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> syntax. In some cases the exact indentation depends
+on personal taste. You may customize a couple of variables <tt class="docutils literal"><span class="pre">M-x</span>
+<span class="pre">customize-group&lt;RET&gt;</span> <span class="pre">rst-indent&lt;RET&gt;</span></tt> to match your taste.</p>
+</div>
+<div class="section" id="indenting-lines-while-typing">
+<h2><a class="toc-backref" href="#id18">Indenting Lines While Typing</a></h2>
+<p>In <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> the <tt class="docutils literal">TAB</tt> key is often used for indenting the current
+line. <tt class="docutils literal"><span class="pre">rst-mode</span></tt> implements this for the sophisticated indentation
+rules of <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>. Pressing <tt class="docutils literal">TAB</tt> cycles through the
+possible tabs for the current line. In the same manner
+<tt class="docutils literal"><span class="pre">newline-and-indent</span></tt> (<tt class="docutils literal"><span class="pre">C-j</span></tt>) indents the new line properly.</p>
+<p>This is very handy while writing lists. Consider this
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> bullet list with the cursor at <tt class="docutils literal">&#64;</tt>:</p>
+<pre class="literal-block">
+* Level 1
+
+  * Level 2&#64;
+</pre>
+<p>Type <tt class="docutils literal"><span class="pre">C-j</span></tt> twice to get this:</p>
+<pre class="literal-block">
+* Level 1
+
+  * Level 2
+
+    &#64;
+</pre>
+<p>Now you an enter text at this level, or start a new list item by
+typing another <tt class="docutils literal">*</tt>. Or you may type <tt class="docutils literal">TAB</tt> to reduce the
+indentation once:</p>
+<pre class="literal-block">
+* Level 1
+
+  * Level 2
+
+  &#64;
+</pre>
+<p>Typing another <tt class="docutils literal">TAB</tt> gets you to the first level:</p>
+<pre class="literal-block">
+* Level 1
+
+  * Level 2
+
+&#64;
+</pre>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Since <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> V24.4 <tt class="docutils literal"><span class="pre">electric-indent-mode</span></tt> is globally on.
+This breaks indentation in <tt class="docutils literal"><span class="pre">rst-mode</span></tt> and renders
+<tt class="docutils literal"><span class="pre">rst-mode</span></tt> mostly useless. This is fixed in V1.4.1 of
+<tt class="docutils literal"><span class="pre">rst-mode</span></tt>.</p>
+<p>A quick fix for older versions of <tt class="docutils literal">rst.el</tt> is to add the
+following line at the end of the <tt class="docutils literal"><span class="pre">(define-derived-mode</span>
+<span class="pre">rst-mode</span> ...</tt> block in your copy of <tt class="docutils literal">rst.el</tt>:</p>
+<pre class="literal-block">
+(setq electric-indent-inhibit t)
+</pre>
+<p class="last">You may also install V1.4.1 or newer <a class="reference internal" href="#locally">locally</a>.</p>
+</div>
+</div>
+<div class="section" id="filling">
+<h2><a class="toc-backref" href="#id19">Filling</a></h2>
+<p><tt class="docutils literal"><span class="pre">rst-mode</span></tt> understanding the indentation rules of <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>
+also supports filling paragraphs. Just use <tt class="docutils literal"><span class="pre">fill-paragraph</span></tt>
+(<tt class="docutils literal"><span class="pre">M-q</span></tt>) as you do in other modes.</p>
+</div>
+</div>
+<div class="section" id="operating-on-lists">
+<h1><a class="toc-backref" href="#id20">Operating on Lists</a></h1>
+<p>Lists are supported in various flavors in <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>.
+<tt class="docutils literal"><span class="pre">rst-mode</span></tt> understands <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> lists and offers some
+support for operating on lists. Key bindings for commands for
+operating on lists start with <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-l</span></tt>.</p>
+<p>Please note that so far definition lists are not explicitly supported
+by <tt class="docutils literal"><span class="pre">rst-mode</span></tt>.</p>
+<div class="section" id="bulleted-and-enumerated-lists">
+<h2><a class="toc-backref" href="#id21">Bulleted and Enumerated Lists</a></h2>
+<p>If you have a couple of plain lines you want to turn into an
+enumerated list you can invoke <tt class="docutils literal"><span class="pre">rst-enumerate-region</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-l</span>
+<span class="pre">C-e</span></tt>). For example, the following region</p>
+<pre class="literal-block">
+Apples
+
+Oranges
+
+Bananas
+</pre>
+<p>becomes</p>
+<pre class="literal-block">
+1. Apples
+
+2. Oranges
+
+3. Bananas
+</pre>
+<p><tt class="docutils literal"><span class="pre">rst-bullet-list-region</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-l</span> <span class="pre">C-b</span></tt>) does the same, but
+results in a bullet list</p>
+<pre class="literal-block">
+* Apples
+
+* Oranges
+
+* Bananas
+</pre>
+<p>By default, each paragraph starting on the leftmost line in the
+highlighted region will be taken to be a single list or enumeration
+item, for example, enumerating the following:</p>
+<pre class="literal-block">
+An apple a day
+keeps the doctor away.
+
+But oranges
+are tastier than apples.
+
+If you preferred bananas
+you may be
+a monkey.
+</pre>
+<p>Will result in:</p>
+<pre class="literal-block">
+1. An apple a day
+   keeps the doctor away.
+
+2. But oranges
+   are tastier than apples.
+
+3. If you preferred bananas
+   you may be
+   a monkey.
+</pre>
+<p>If you would like to enumerate each of the lines, use a prefix
+argument on the preceding commands, e.g.:</p>
+<pre class="literal-block">
+Apples
+Oranges
+Bananas
+</pre>
+<p>becomes:</p>
+<pre class="literal-block">
+* Apples
+* Oranges
+* Bananas
+</pre>
+</div>
+<div class="section" id="straightening-existing-bullet-list-hierarchies">
+<h2><a class="toc-backref" href="#id22">Straightening Existing Bullet List Hierarchies</a></h2>
+<p>If you invoke <tt class="docutils literal"><span class="pre">rst-straighten-bullets-region</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-l</span> <span class="pre">C-s</span></tt>), the
+existing bullets in the active region will be replaced to reflect
+their respective level. This does not make a difference in the
+document structure that <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> defines, but looks better
+in, for example, if all of the top-level bullet items use the
+character <tt class="docutils literal">-</tt>, and all of the 2nd level items use <tt class="docutils literal">*</tt>, etc.</p>
+</div>
+<div class="section" id="inserting-a-list-item">
+<h2><a class="toc-backref" href="#id23">Inserting a List Item</a></h2>
+<p>To start a new list you may invoke <tt class="docutils literal"><span class="pre">rst-insert-list</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-l</span>
+<span class="pre">C-i</span></tt>). You may choose from an item style supported by
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>.</p>
+<p>You may also invoke <tt class="docutils literal"><span class="pre">rst-insert-list</span></tt> at the end of a list item. In
+this case it inserts a new line containing the markup for the a list
+item on the same level.</p>
+</div>
+</div>
+<div class="section" id="operating-on-other-text-blocks">
+<h1><a class="toc-backref" href="#id24">Operating on Other Text Blocks</a></h1>
+<div class="section" id="creating-and-removing-line-blocks">
+<h2><a class="toc-backref" href="#id25">Creating and Removing Line Blocks</a></h2>
+<p>To create line blocks, first select the region to convert and invoke
+<tt class="docutils literal"><span class="pre">rst-line-block-region</span></tt> <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-r</span> <span class="pre">C-l</span></tt>. For example, the following</p>
+<pre class="literal-block">
+Apples
+Oranges
+Bananas
+</pre>
+<p>becomes</p>
+<pre class="literal-block">
+| Apples
+| Oranges
+| Bananas
+</pre>
+<p>This works even if the region is indented. To remove line blocks,
+select a region and invoke with a prefix argument.</p>
+</div>
+<div class="section" id="commenting-a-region-of-text">
+<h2><a class="toc-backref" href="#id26">Commenting a Region of Text</a></h2>
+<p><tt class="docutils literal"><span class="pre">rst-mode</span></tt> understands <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> comments. Use
+<tt class="docutils literal"><span class="pre">comment-dwim</span></tt> (<tt class="docutils literal"><span class="pre">M-;</span></tt>) to work on comments as usual:</p>
+<pre class="literal-block">
+Apples
+Oranges
+Bananas
+</pre>
+<p>becomes:</p>
+<pre class="literal-block">
+..
+   Apples
+   Oranges
+   Bananas
+</pre>
+<p>To remove a comment you have to tell this to <tt class="docutils literal"><span class="pre">comment-dwim</span></tt>
+explicitly by using a prefix argument (<tt class="docutils literal"><span class="pre">C-u</span> <span class="pre">M-;</span></tt>).</p>
+<p>Please note that only indented comments are supported properly by the
+parts of <tt class="docutils literal"><span class="pre">comment-dwim</span></tt> working on regions.</p>
+</div>
+</div>
+<div class="section" id="converting-documents-from-emacs">
+<span id="conversion"></span><h1><a class="toc-backref" href="#id27">Converting Documents from Emacs</a></h1>
+<p><tt class="docutils literal"><span class="pre">rst-mode</span></tt> provides a number of functions for running documents
+being edited through the docutils tools. The key bindings for these
+commands start with <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-c</span></tt>.</p>
+<p>The main generic function is <tt class="docutils literal"><span class="pre">rst-compile</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-c</span> <span class="pre">C-c</span></tt>). It
+invokes a compilation command with the correct output name for the
+current buffer and then invokes Emacs' compile function. It also looks
+for the presence of a <tt class="docutils literal">docutils.conf</tt> configuration file in the
+parent directories and adds it to the command line options. There is also
+<tt class="docutils literal"><span class="pre">rst-compile-alt-toolset</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-c</span> <span class="pre">C-a</span></tt>) in case you often need
+run your document in a second toolset.</p>
+<p>You can customize the commands being used by setting
+<tt class="docutils literal"><span class="pre">rst-compile-primary-toolset</span></tt> and <tt class="docutils literal"><span class="pre">rst-compile-secondary-toolset</span></tt>.</p>
+<p>Other commands are available for other formats:</p>
+<ul>
+<li><p class="first"><tt class="docutils literal"><span class="pre">rst-compile-pseudo-region</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-c</span> <span class="pre">C-x</span></tt>)</p>
+<p>When crafting documents, it is often convenient to view which data
+structures docutils will parse them into. You can use to run the
+active region through <tt class="docutils literal">rst2pseudoxml.py</tt> and have the output
+automatically be displayed in a new buffer.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">rst-compile-pdf-preview</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-c</span> <span class="pre">C-p</span></tt>)</p>
+<p>Convert the current document to PDF and launch a viewer on the
+results.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">rst-compile-slides-preview</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-c</span> <span class="pre">C-s</span></tt>): Convert the
+current document to S5 slides and view in a web browser.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="imenu-support">
+<h1><a class="toc-backref" href="#id28">Imenu Support</a></h1>
+<div class="section" id="using-imenu">
+<h2><a class="toc-backref" href="#id29">Using Imenu</a></h2>
+<p><a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> has a package called <tt class="docutils literal">imenu</tt>. <tt class="docutils literal"><span class="pre">rst-mode</span></tt> supports Imenu by
+adding a function to convert the structure of a <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>
+buffer to an Imenu index. Thus you can use invoke <tt class="docutils literal">imenu</tt> (<tt class="docutils literal"><span class="pre">M-x</span>
+imenu</tt>) to navigate through the section index or invoke
+<tt class="docutils literal"><span class="pre">imenu-add-to-menubar</span></tt> (<tt class="docutils literal"><span class="pre">M-x</span> <span class="pre">imenu-add-to-menubar</span></tt>) to add an
+Imenu menu entry to Emacs' menu bar.</p>
+</div>
+<div class="section" id="using-which-function">
+<h2><a class="toc-backref" href="#id30">Using which function</a></h2>
+<p>As a side effect of Imenu support the <tt class="docutils literal"><span class="pre">which-func</span></tt> package is also
+supported. Invoke <tt class="docutils literal"><span class="pre">which-function-mode</span></tt> (<tt class="docutils literal"><span class="pre">M-x</span>
+<span class="pre">which-function-mode</span></tt>) to add the name of the current section to the
+mode line. This is especially useful if you navigate through documents
+with long sections which do not fit on a single screen.</p>
+</div>
+</div>
+<div class="section" id="using-the-table-of-contents">
+<h1><a class="toc-backref" href="#id31">Using the Table of Contents</a></h1>
+<p>The sections in a <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> document can be used to form a
+table of contents. <tt class="docutils literal"><span class="pre">rst-mode</span></tt> can work with such a table of contents
+in various forms. Key bindings for these commands start with <tt class="docutils literal"><span class="pre">C-c</span>
+<span class="pre">C-t</span></tt>.</p>
+<div class="section" id="navigating-using-the-table-of-contents">
+<h2><a class="toc-backref" href="#id32">Navigating Using the Table of Contents</a></h2>
+<p>When you are editing long documents, it can be a bit difficult to
+orient yourself in the structure of your text. To that effect, a
+function is provided that presents a hierarchically indented table of
+contents of the document in a temporary buffer, in which you can
+navigate and press <tt class="docutils literal">Return</tt> to go to a specific section.</p>
+<p>Invoke <tt class="docutils literal"><span class="pre">rst-toc</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-t</span> <span class="pre">C-t</span></tt>). It presents a temporary buffer
+that looks something like this:</p>
+<pre class="literal-block">
+Table of Contents:
+Debugging Meta-Techniques
+  Introduction
+  Debugging Solution Patterns
+    Recognize That a Bug Exists
+    Subdivide and Isolate
+    Identify and Verify Assumptions
+    Use a Tool for Introspection
+    Change one thing at a time
+    Learn about the System
+  Understanding a bug
+  The Basic Steps in Debugging
+  Attitude
+    Bad Feelings
+    Good Feelings
+  References
+</pre>
+<p>When you move the cursor to a section title and press <tt class="docutils literal">RET</tt> or <tt class="docutils literal">f</tt>
+or click with <tt class="docutils literal">button1</tt> on a section title, the temporary buffer
+disappears and you are left with the cursor positioned at the chosen
+section. Clicking with <tt class="docutils literal">button2</tt> jumps to the respective section but
+keeps the toc buffer. You can use this to look at the various section
+headers quickly. Use <tt class="docutils literal">q</tt> in this buffer to just quit it without
+moving the cursor in the original document. Use <tt class="docutils literal">z</tt> to zap the
+buffer altogether.</p>
+</div>
+<div class="section" id="inserting-a-table-of-contents">
+<h2><a class="toc-backref" href="#id33">Inserting a Table of Contents</a></h2>
+<p>Oftentimes in long text documents that are meant to be read directly,
+a table of contents is inserted at the beginning of the text. In
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> documents, since the table of contents is
+automatically generated by the parser with the <tt class="docutils literal">.. contents::</tt>
+directive, people generally have not been adding an explicit table of
+contents to their source documents, and partly because it is too much
+trouble to edit and maintain.</p>
+<p>The <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> support for <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> provides a function to insert
+such a table of contents in your document. Since it is not meant to
+be part of the document text, you should place such a table of
+contents within a comment, so that it is ignored by the parser. This
+is the favored usage:</p>
+<pre class="literal-block">
+.. contents::
+..
+    1  Introduction
+    2  Debugging Solution Patterns
+      2.1  Recognize That a Bug Exists
+      2.2  Subdivide and Isolate
+      2.3  Identify and Verify Assumptions
+      2.4  Use a Tool for Introspection
+      2.5  Change one thing at a time
+      2.6  Learn about the System
+    3  Understanding a bug
+    4  The Basic Steps in Debugging
+    5  Attitude
+      5.1  Bad Feelings
+      5.2  Good Feelings
+    6  References
+</pre>
+<p>Just place the cursor at the top-left corner where you want to insert
+the TOC and invoke the function <tt class="docutils literal"><span class="pre">rst-toc-insert</span></tt> with <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-t</span>
+<span class="pre">C-i</span></tt>. The table of contents will display all the section titles that
+are under the location where the insertion occurs. This way you can
+insert local table of contents by placing them in the appropriate
+location.</p>
+<p>You can use a numeric prefix argument to limit the depth of rendering
+of the TOC.</p>
+<p>You can customize the look of the TOC by setting the values of the
+following variables: <tt class="docutils literal"><span class="pre">rst-toc-indent</span></tt>, <tt class="docutils literal"><span class="pre">rst-toc-insert-style</span></tt>,
+<tt class="docutils literal"><span class="pre">rst-toc-insert-max-level</span></tt>.</p>
+</div>
+<div class="section" id="maintaining-the-table-of-contents-up-to-date">
+<h2><a class="toc-backref" href="#id34">Maintaining the Table of Contents Up-to-date</a></h2>
+<p>One issue is that you will probably want to maintain the inserted
+table of contents up-to-date. <tt class="docutils literal"><span class="pre">rst-toc-update</span></tt> (<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-t</span> <span class="pre">C-u</span></tt>)
+will automatically update an inserted table of contents following a
+<tt class="docutils literal">.. contents::</tt> directive laid out like the example above.</p>
+</div>
+</div>
+<div class="section" id="syntax-highlighting-via-font-lock">
+<h1><a class="toc-backref" href="#id35">Syntax Highlighting via Font-Lock</a></h1>
+<p><tt class="docutils literal"><span class="pre">rst-mode</span></tt> provides syntax highlighting for nearly all to
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> constructs.</p>
+<p>Use <tt class="docutils literal"><span class="pre">customize-group</span> <span class="pre">rst-faces</span></tt> to customize the faces used for
+font-locking.</p>
+</div>
+<div class="section" id="customization">
+<h1><a class="toc-backref" href="#id36">Customization</a></h1>
+<p>Some aspects of <tt class="docutils literal"><span class="pre">rst-mode</span></tt> can be configured through the
+customization feature of <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a>. Try</p>
+<pre class="literal-block">
+M-x customize-group&lt;RETURN&gt;rst
+</pre>
+<p>for all customizations or use the respective menu entry. Those
+customizations which are useful for many people are described in this
+section.</p>
+<div class="section" id="customizing-section-title-formatting">
+<h2><a class="toc-backref" href="#id37">Customizing Section Title Formatting</a></h2>
+<p>For a couple of things the <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> syntax offers a choice of
+options on how to do things exactly. Some of these choices influence
+the operation of <tt class="docutils literal">rst.el</tt> and thus can be configured. The
+customizations are contained in the <tt class="docutils literal"><span class="pre">rst-adjust</span></tt> group.</p>
+<p>Among these things is the exact layout of section adornments. In fact
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> prescribes only the characters and how these
+characters must be used but the exact use of concrete adornments may
+be different in every source file. Using the customization option
+<tt class="docutils literal"><span class="pre">rst-preferred-adornments</span></tt> you can tell <tt class="docutils literal"><span class="pre">rst-mode</span></tt> on the exact
+sequence of adornments you prefer to markup the different levels of
+sections headers.</p>
+<p>Finally the title text of over-and-under adornments may be indented in
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>. <tt class="docutils literal"><span class="pre">rst-default-indent</span></tt> tells <tt class="docutils literal"><span class="pre">rst-mode</span></tt> how many
+positions a over-and-under adornment should be indented when toggling
+from simple adornment and in case a consistent indentation throughout
+the whole buffer for such adornment is needed.</p>
+</div>
+<div class="section" id="customizing-indentation">
+<h2><a class="toc-backref" href="#id38">Customizing Indentation</a></h2>
+<p><a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> uses indentation a lot to signify a certain meaning.
+In some cases the exact amount of indentation is prescribed by the
+syntax while in some cases the exact indentation is not fixed. The
+customization group <tt class="docutils literal"><span class="pre">rst-indent</span></tt> allows to customize the amount of
+indentation in these cases.</p>
+<p>In field lists the content of a field needs to be indented relative to
+the field label. <tt class="docutils literal"><span class="pre">rst-indent-field</span></tt> tells <tt class="docutils literal"><span class="pre">rst-mode</span></tt> the amount of
+indentation to use for field content. A value of zero always indents
+according to the content after the field label.</p>
+<p>The indentation of literal blocks is controlled by
+<tt class="docutils literal"><span class="pre">rst-indent-literal-normal</span></tt> and <tt class="docutils literal"><span class="pre">rst-indent-literal-minimized</span></tt>.
+The first is used when the leading literal tag (<tt class="docutils literal">::</tt>) appears alone
+on a line. The second is used when the minimized style is used where
+the literal tag follows some text.</p>
+<p>The indentation of comments is controlled by <tt class="docutils literal"><span class="pre">rst-indent-comment</span></tt>.
+Of course this makes only sense for the indented comments of
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>.</p>
+<p>Customization option <tt class="docutils literal"><span class="pre">rst-indent-width</span></tt> gives the default
+indentation when there are no other hints on what amount of
+indentation to use.</p>
+</div>
+<div class="section" id="customizing-faces">
+<h2><a class="toc-backref" href="#id39">Customizing Faces</a></h2>
+<p>The faces used for font-locking can be defined in the <tt class="docutils literal"><span class="pre">rst-faces</span></tt>
+customization group. The customization options ending in <tt class="docutils literal"><span class="pre">-face</span></tt> are
+only there for backward compatibility so please leave them as they
+are.</p>
+<p><a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> sets no limit on the nesting of sections. By default
+there are six levels of fontification defined. Section titles deeper
+than six level have no special fontification - only the adornments are
+fontified. The exact mapping from a level to a face is done by by
+<tt class="docutils literal"><span class="pre">rst-adornment-faces-alist</span></tt>, however. So if you need fontification
+deeper than six levels you may want to customize this option. You may
+also want to customize it if you like the general idea of section
+title fontification in <tt class="docutils literal"><span class="pre">rst-mode</span></tt> but for instance prefer a reversed
+order.</p>
+</div>
+<div class="section" id="customizing-conversion">
+<h2><a class="toc-backref" href="#id40">Customizing Conversion</a></h2>
+<p><a class="reference internal" href="#conversion">Conversion</a> can be customized by the customization options in the
+customization group <tt class="docutils literal"><span class="pre">rst-compile</span></tt>.</p>
+<p>If some conversion does not work as expected please check
+the variable <tt class="docutils literal"><span class="pre">rst-compile-toolsets</span></tt></p>
+<pre class="literal-block">
+M-x customize-option&lt;RETURN&gt;rst-compile-toolsets
+</pre>
+<p>This variable defines the commands and other details used for
+conversion. In case of problems please check that the commands are
+either available or customize them to what is available in your
+environment.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are some options in V1.4.1 of <tt class="docutils literal">rst.el</tt> which should
+be customization options but are not yet. Customization
+support will be added in a later version.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that there is a package <tt class="docutils literal">rst2pdf</tt> based on the
+ReportLab library. Please note that the command of this
+package requires an additional <tt class="docutils literal"><span class="pre">-o</span></tt> for naming the output
+file. This breaks the usual conventions employed by Docutils
+tools. <tt class="docutils literal"><span class="pre">rst-mode</span></tt> V1.4.1 does not support this directly.</p>
+</div>
+</div>
+<div class="section" id="other-customizations">
+<h2><a class="toc-backref" href="#id41">Other Customizations</a></h2>
+<p><tt class="docutils literal"><span class="pre">rst-preferred-bullets</span></tt> can be customized to hold your preferred set
+of bullets to use for bulleted lists.</p>
+<p><tt class="docutils literal"><span class="pre">rst-mode-hook</span></tt> is a normal major mode hook which may be customized.
+It is run if you enter <tt class="docutils literal"><span class="pre">rst-mode</span></tt>.</p>
+</div>
+</div>
+<div class="section" id="related-aspects">
+<h1><a class="toc-backref" href="#id42">Related aspects</a></h1>
+<p>This section covers some general aspects using <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> for editing
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> source. They are not directly related to
+<tt class="docutils literal"><span class="pre">rst-mode</span></tt> but may enhance your experience.</p>
+<div class="section" id="text-mode-settings">
+<h2><a class="toc-backref" href="#id43"><tt class="docutils literal"><span class="pre">text-mode</span></tt> Settings</a></h2>
+<p>Consult the <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> manual for more <tt class="docutils literal"><span class="pre">text-mode</span></tt> customizations. In
+particular, you may be interested in setting the following variables,
+functions and modes that pertain somewhat to <tt class="docutils literal"><span class="pre">text-mode</span></tt>:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">indent-tabs-mode</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">colon-double-space</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">sentence-end-double-space</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">auto-fill-mode</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">auto-mode-alist</span></tt></li>
+</ul>
+</div>
+<div class="section" id="editing-tables-emacs-table-mode">
+<h2><a class="toc-backref" href="#id44">Editing Tables: Emacs table mode</a></h2>
+<p>You may want to check out <a class="reference external" href="http://table.sourceforge.net/">Emacs table mode</a> to create an edit
+tables, it allows creating ASCII tables compatible with
+<a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a>.</p>
+</div>
+<div class="section" id="character-processing">
+<h2><a class="toc-backref" href="#id45">Character Processing</a></h2>
+<p>Since reStructuredText punts on the issue of character processing,
+here are some useful resources for <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> users in the Unicode world:</p>
+<ul>
+<li><p class="first"><a class="reference external" href="http://nwalsh.com/emacs/xmlchars/index.html">xmlunicode.el and unichars.el from Norman Walsh</a></p>
+</li>
+<li><p class="first"><a class="reference external" href="http://www.tbray.org/ongoing/When/200x/2003/09/27/UniEmacs">An essay by Tim Bray, with example code</a></p>
+</li>
+<li><p class="first">For <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> users on Mac OS X, here are some useful useful additions
+to your .emacs file.</p>
+<ul>
+<li><p class="first">To get direct keyboard input of non-ASCII characters (like
+&quot;option-e e&quot; resulting in &quot;é&quot; [eacute]), first enable the option
+key by setting the command key as your meta key:</p>
+<pre class="literal-block">
+(setq mac-command-key-is-meta t) ;; nil for option key
+</pre>
+<p>Next, use one of these lines:</p>
+<pre class="literal-block">
+(set-keyboard-coding-system 'mac-roman)
+(setq mac-keyboard-text-encoding kTextEncodingISOLatin1)
+</pre>
+<p>I prefer the first line, because it enables non-Latin-1 characters
+as well (em-dash, curly quotes, etc.).</p>
+</li>
+<li><p class="first">To enable the display of all characters in the Mac-Roman charset,
+first create a fontset listing the fonts to use for each range of
+characters using charsets that <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a> understands:</p>
+<pre class="literal-block">
+(create-fontset-from-fontset-spec
+ &quot;-apple-monaco-medium-r-normal--10-*-*-*-*-*-fontset-monaco,
+  ascii:-apple-monaco-medium-r-normal--10-100-75-75-m-100-mac-roman,
+  latin-iso8859-1:-apple-monaco-medium-r-normal--10-100-75-75-m-100-mac-roman,
+  mule-unicode-0100-24ff:-apple-monaco-medium-r-normal--10-100-75-75-m-100-mac-roman&quot;)
+</pre>
+<p>Latin-1 doesn't cover characters like em-dash and curly quotes, so
+&quot;mule-unicode-0100-24ff&quot; is needed.</p>
+<p>Next, use that fontset:</p>
+<pre class="literal-block">
+(set-frame-font &quot;fontset-monaco&quot;)
+</pre>
+</li>
+<li><p class="first">To enable cooperation between the system clipboard and the <a class="reference external" href="http://www.gnu.org/software/emacs/emacs.html">Emacs</a>
+kill ring, add this line:</p>
+<pre class="literal-block">
+(set-clipboard-coding-system 'mac-roman)
+</pre>
+</li>
+</ul>
+<p>Other useful resources are in <a class="reference external" href="http://members.shaw.ca/akochoi-emacs/stories/faq.html">Andrew Choi's Emacs 21 for Mac OS X
+FAQ</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="credits">
+<h1><a class="toc-backref" href="#id46">Credits</a></h1>
+<p>Part of the original code of <tt class="docutils literal">rst.el</tt> has been written by Martin
+Blais and David Goodger and Wei-Wei Guo. The font-locking came from
+Stefan Merten.</p>
+<p>Most of the code has been modified, enhanced and extended by Stefan
+Merten who also is the current maintainer of <tt class="docutils literal">rst.el</tt>.</p>
+<!-- LocalWords:  reST utf Merten Blais rst el docutils modeline emacs -->
+<!-- LocalWords:  Init mEmacs sInit alist setq txt overlines RET nd py -->
+<!-- LocalWords:  dwim conf toolset pseudoxml pdf Imenu imenu menubar -->
+<!-- LocalWords:  func toc xmlunicode unichars eacute charset fontset -->
+<!-- LocalWords:  kTextEncodingISOLatin charsets monaco ascii latin -->
+<!-- LocalWords:  iso unicode Choi's Goodger Guo -->
+<!-- Local Variables:
+mode: rst
+indent-tabs-mode: nil
+fill-column: 70
+End: -->
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+<a class="reference external" href="emacs.txt">View document source</a>.
+Generated on: 2020-08-28 10:16 UTC.
+Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+
+</div>
+</body>
+</html>

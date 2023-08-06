@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.17b.dev: http://docutils.sourceforge.net/" />
+<title>Docutils Release Procedure</title>
+<meta name="authors" content="David Goodger  Lea Wiemann  open to all Docutils developers" />
+<meta name="date" content="2020-02-06" />
+<meta name="copyright" content="This document has been placed in the public domain." />
+<link rel="stylesheet" href="../../docutils/writers/html4css1/html4css1.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="docutils-release-procedure">
+<h1 class="title"><a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> Release Procedure</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Authors:</th>
+<td>David Goodger
+<br />Lea Wiemann
+<br />open to all Docutils developers</td></tr>
+<tr><th class="docinfo-name">Contact:</th>
+<td><a class="first last reference external" href="mailto:docutils-develop&#64;lists.sourceforge.net">docutils-develop&#64;lists.sourceforge.net</a></td></tr>
+<tr><th class="docinfo-name">Date:</th>
+<td>2020-02-06</td></tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>8489</td></tr>
+<tr><th class="docinfo-name">Copyright:</th>
+<td>This document has been placed in the public domain.</td></tr>
+</tbody>
+</table>
+<div class="section" id="releasing">
+<h1>Releasing</h1>
+<div class="section" id="version-identifier">
+<h2>Version identifier</h2>
+<p>For details, see <a class="reference external" href="policies.html#version-numbering">Version Numbering in Docutils Project Policies</a>.</p>
+<div class="section" id="how-to-change-the-version-identifier">
+<h3>How to change the version identifier</h3>
+<p>The <em>version identifier</em> <tt class="docutils literal">docutils.__version__</tt> is defined in
+<tt class="docutils literal">docutils/docutils/__init__.py</tt> and used in in the following files:</p>
+<pre class="literal-block">
+docutils/setup.py
+docutils/test/functional/expected/* (&quot;Generator: Docutils X.Y[.Z]&quot;)
+docutils/README.txt
+web/index.txt
+</pre>
+<p>You can use the script <tt class="docutils literal">set_version.sh</tt> to change the version
+identifier:</p>
+<ol class="arabic">
+<li><p class="first"><tt class="docutils literal">cd</tt> to the &quot;docutils&quot; subdirectory in the repository checkout,</p>
+</li>
+<li><p class="first">call</p>
+<pre class="literal-block">
+../sandbox/infrastructure/set_release.sh &lt;new_version&gt;
+</pre>
+<p>where <tt class="docutils literal">&lt;new_version&gt;</tt> is major.minor[.micro][&lt;pre&gt;][.dev].</p>
+<p>This also changes <tt class="docutils literal">__version_info__</tt> in
+<tt class="docutils literal">docutils/docutils/__init__.py</tt>.</p>
+</li>
+</ol>
+<p>Run the test suite after changing the codebase version to ensure
+accuracy and consistency.</p>
+</div>
+</div>
+<div class="section" id="release-steps">
+<h2>Release steps</h2>
+<p>REWORK FOR SOURCEFORGE REPO</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Steps in boldface text are <em>not</em> covered by the release script
+at sandbox/infrastructure/release.sh.  &quot;Not covered&quot; means that you
+aren't even reminded of them.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This document does not cover branching and tagging, but the
+release script does.</p>
+</div>
+<ul>
+<li><p class="first"><strong>Announce</strong></p>
+<p>On the Docutils-develop mailing list, announce that the release is
+going to be made, update the release notes (consult HISTORY.TXT for
+important changes) and ask for additions.</p>
+<p>Announce the upcoming release at the Sphinx-devel mailing list
+and ask for testing with Sphinx.
+(This step can be skipped for bugfix releases and pre-releases.)</p>
+<p>Announce the date of the feature freeze – at least a week ahead!</p>
+</li>
+<li><p class="first"><strong>Feature freeze</strong> From now on, only bug-fix commits are allowed.</p>
+<p>Update the <cite>pre-release segment</cite> of the <a class="reference internal" href="#version-identifier">version identifier</a>
+(<tt class="docutils literal">b</tt>, <tt class="docutils literal">rcN</tt> or empty) to match the level of the upcoming release
+(beta, candidate or final). Ensure <tt class="docutils literal">docutils.__version_info__</tt> matches
+the version identifier. (See also <a class="reference internal" href="#how-to-change-the-version-identifier">How to change the version
+identifier</a>.)</p>
+</li>
+<li><p class="first"><strong>Announce</strong> the check-in freeze date on Docutils-develop – at least a
+week ahead.</p>
+</li>
+<li><p class="first"><strong>Check-in freeze</strong></p>
+<p>for example it was 0.14b.dev and is changed to 0.15</p>
+<p><strong>Update the version identifier</strong>:
+Remove the <cite>development release segment</cite> (<tt class="docutils literal">.dev</tt>) from the <a class="reference internal" href="#version-identifier">version
+identifier</a> and set <tt class="docutils literal">docutils.__version_info__.release</tt> to True.</p>
+<p>Check the <cite>version identifier</cite> in the following files (should be
+already correct if set according to <a class="reference internal" href="#how-to-change-the-version-identifier">How to change the version
+identifier</a>):</p>
+<ul class="simple">
+<li>docutils/setup.py</li>
+<li>docutils/docutils/__init__.py</li>
+<li>docutils/test/functional/expected/* (&quot;Generator: Docutils X.Y[.Z]&quot;)</li>
+<li>docutils/README.txt</li>
+<li>web/index.txt</li>
+</ul>
+</li>
+<li><p class="first">See what <tt class="docutils literal">sandbox/infrastructure/release.sh</tt> can aid</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>BUG</em> test tarball requires root password, but it is possible to
+skip this stage interactively, and testing should be done before
+release.</p>
+</div>
+</li>
+<li><p class="first">Close the &quot;Changes Since ...&quot; section in docutils/HISTORY.txt.</p>
+</li>
+<li><p class="first">Clear/unset the PYTHONPATH environment variable.</p>
+</li>
+<li><p class="first">Create the release tarball:</p>
+<ol class="loweralpha">
+<li><p class="first">Create a new empty directory and <tt class="docutils literal">cd</tt> into it.</p>
+</li>
+<li><p class="first">Get a clean snapshot of the main tree:</p>
+<pre class="literal-block">
+svn export svn://svn.code.sf.net/p/docutils/code/trunk/docutils
+</pre>
+<p>or via the [Download Snapshot] button at
+<a class="reference external" href="http://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/">http://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/</a></p>
+</li>
+<li><p class="first">Use <cite>setuptools</cite> to create the release tarball:</p>
+<pre class="literal-block">
+cd docutils
+python setup.py sdist
+</pre>
+</li>
+</ol>
+</li>
+<li><p class="first">Expand and <span class="target" id="install">install</span> the release tarball in isolation:</p>
+<ol class="loweralpha">
+<li><p class="first">Expand the tarball in a new location, not over any existing
+files.</p>
+</li>
+<li><p class="first">Remove the old installation from site-packages (including
+roman.py, and optparse.py, textwrap.py).</p>
+<p>&quot;remove&quot; might fail, see <span class="target" id="assumptions-and-their-failure">Assumptions and their failure</span></p>
+<p>Install from expanded directory:</p>
+<pre class="literal-block">
+cd docutils-X.Y.Z
+python setup.py install
+</pre>
+<p>The &quot;install&quot; command may require root permissions.</p>
+</li>
+<li><p class="first">Repeat step b) for all supported Python versions.</p>
+</li>
+</ol>
+</li>
+<li><p class="first">Run the <span class="target" id="test-suite">test suite</span> from the expanded archive directory with all
+supported Python versions on all available platforms (GNU/Linux, Mac
+OS X, Windows):</p>
+<pre class="literal-block">
+cd test ; python -u alltests.py
+</pre>
+</li>
+<li><p class="first">Add a directory X.Y.Z (where X.Y.Z is the current version number
+of Docutils) in the webroot (i.e. the <tt class="docutils literal">htdocs/</tt> directory).
+Put all documentation files into it:</p>
+<pre class="literal-block">
+cd docutils-X.Y.Z
+rm -rf build
+cd tools/
+./buildhtml.py ..
+cd ..
+find -name test -type d -prune -o -name \*.css -print0 \
+    -o -name \*.html -print0 -o -name \*.txt -print0 \
+    | tar -cjvf docutils-docs.tar.bz2 -T - --null
+scp docutils-docs.tar.bz2 &lt;username&gt;&#64;shell.sourceforge.net:
+</pre>
+<p>Now log in to shell.sourceforge.net and:</p>
+<pre class="literal-block">
+cd /home/groups/d/do/docutils/htdocs/
+mkdir -m g+rwxs X.Y.Z
+cd X.Y.Z
+tar -xjvf ~/docutils-docs.tar.bz2
+rm ~/docutils-docs.tar.bz2
+</pre>
+</li>
+<li><p class="first">Upload the release tarball, release.sh tries with scp.</p>
+</li>
+<li><p class="first">Access the <span class="target" id="file-release-system">file release system</span> on SourceForge (Admin
+interface).</p>
+<p><tt class="docutils literal"><span class="pre">https://sourceforge.net/projects/docutils/files/docutils/</span></tt></p>
+<ul class="simple">
+<li>change into the released version's directory</li>
+<li>click <tt class="docutils literal">(i)</tt> button of the tar.gz-file</li>
+<li>select as default download for all operating systems.</li>
+</ul>
+</li>
+<li><p class="first">Submit a notification on project news.</p>
+</li>
+<li><p class="first">For verifying the integrity of the release, download the release
+tarball (you may need to wait up to 30 minutes), <a class="reference internal" href="#install">install</a> it, and
+re-run the <a class="reference internal" href="#test-suite">test suite</a>.</p>
+</li>
+<li><p class="first">Register with PyPI (<tt class="docutils literal">python setup.py register</tt>).</p>
+<p>(2019-07-21 still ?) Set the download-url so eggs can access older releases.</p>
+</li>
+<li><p class="first"><strong>build wheels</strong>:</p>
+<pre class="literal-block">
+python setup.py bdist_wheel
+</pre>
+<p>This builds <a class="reference external" href="https://packaging.python.org/en/latest/distributing.html#wheels">wheels</a> by downloading the new release from pypi.</p>
+<p>Upload the wheels to PyPI:</p>
+<pre class="literal-block">
+twine upload dist/*
+</pre>
+</li>
+<li><p class="first"><strong>Lift the freeze</strong></p>
+<p>Set the <a class="reference internal" href="#version-identifier">version identifier</a> and <tt class="docutils literal">__version_info__.releaselevel</tt> in
+docutils/docutils/__init__.py to mark the repository version as
+&quot;in development&quot;, usually <tt class="docutils literal"><span class="pre">&lt;major&gt;.&lt;minor+1&gt;b.dev</span></tt> (cf. <a class="reference internal" href="#how-to-change-the-version-identifier">How to change
+the version identifier</a>).</p>
+</li>
+<li><p class="first">After a final release, add a new empty section &quot;Changes Since ...&quot; in
+HISTORY.txt.</p>
+</li>
+<li><p class="first">Update the web page (web/index.txt):</p>
+<pre class="literal-block">
+cd sandbox/infrastructure/
+./docutils-update.local
+</pre>
+<p>Running on sf-server no longer works.</p>
+</li>
+<li><p class="first">set svn version e.g. 0.16b.dev</p>
+</li>
+<li><p class="first"><strong>Run alltests.py with svn version</strong></p>
+</li>
+<li><p class="first"><strong>Send announcement email to:</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="mailto:docutils-develop&#64;lists.sourceforge.net">docutils-develop&#64;lists.sourceforge.net</a> (also announcing the end of
+the check-in freeze)</li>
+<li><a class="reference external" href="mailto:docutils-users&#64;lists.sourceforge.net">docutils-users&#64;lists.sourceforge.net</a></li>
+<li><a class="reference external" href="mailto:doc-sig&#64;python.org">doc-sig&#64;python.org</a></li>
+<li><a class="reference external" href="mailto:python-announce&#64;python.org">python-announce&#64;python.org</a></li>
+</ul>
+</li>
+<li><p class="first"><strong>Add a</strong> <a class="reference external" href="https://sourceforge.net/p/docutils/news">SourceForge News item</a>, <strong>with title &quot;Docutils X.Y.Z released&quot;</strong></p>
+<p><strong>Mark as default download for all platforms.</strong></p>
+</li>
+</ul>
+<!-- Local Variables:
+mode: indented-text
+indent-tabs-mode: nil
+sentence-end-double-space: t
+fill-column: 70
+End: -->
+</div>
+</div>
+</div>
+<div class="footer">
+<hr class="footer" />
+<a class="reference external" href="release.txt">View document source</a>.
+Generated on: 2020-08-28 10:16 UTC.
+Generated by <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> from <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> source.
+
+</div>
+</body>
+</html>
