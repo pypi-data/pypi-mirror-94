@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: etna-dulcinea
+Version: 2.1.1
+Summary: Script to test Quixote moulinettes locally
+Home-page: https://github.com/etna-alternance/dulcinea
+Author: Clément Doumergue
+Author-email: clement.doumergue@etna.io
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: etna-quixote (==2.*,>=2.0.0)
+Requires-Dist: etna-panza (==3.*,>=3.0.0)
+
+Dulcinea
+========
+
+Script to manually load and execute jobs based on Quixote blueprints.
+
+## Install
+```
+pip install -r requirements.txt
+```
+
+## How to use dulcinea
+
+In most cases, the script can be used as follows:
+```
+$ dulcinea path/to/moulinette/ --override-deliveries /path/to/deliveries/ --auto-info
+```
+
+For an extensive tutorial on how Dulcinea can be used to test moulinettes, see [the relevant documentation](https://etna-alternance.github.io/quixote/testing_moulinettes_locally.html).
+
+
