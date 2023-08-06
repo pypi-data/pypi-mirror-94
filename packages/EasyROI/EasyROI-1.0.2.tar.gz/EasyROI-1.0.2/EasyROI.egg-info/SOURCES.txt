@@ -1,0 +1,10 @@
+README.md
+setup.py
+EasyROI/__init__.py
+EasyROI/easyROI.py
+EasyROI/utils.py
+EasyROI.egg-info/PKG-INFO
+EasyROI.egg-info/SOURCES.txt
+EasyROI.egg-info/dependency_links.txt
+EasyROI.egg-info/requires.txt
+EasyROI.egg-info/top_level.txt
