@@ -1,0 +1,3 @@
+[console_scripts]
+dock-r=dock_r.cli:_main
+
