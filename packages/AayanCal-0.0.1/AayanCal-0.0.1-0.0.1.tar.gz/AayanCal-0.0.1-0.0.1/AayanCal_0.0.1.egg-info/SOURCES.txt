@@ -1,0 +1,8 @@
+MANIFEST.in
+README.txt
+setup.py
+AayanCal_0.0.1.egg-info/PKG-INFO
+AayanCal_0.0.1.egg-info/SOURCES.txt
+AayanCal_0.0.1.egg-info/dependency_links.txt
+AayanCal_0.0.1.egg-info/top_level.txt
+Inside package/__init__.py

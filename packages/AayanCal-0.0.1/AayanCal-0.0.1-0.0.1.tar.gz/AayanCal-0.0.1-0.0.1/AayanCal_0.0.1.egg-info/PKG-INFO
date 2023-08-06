@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: AayanCal-0.0.1
+Version: 0.0.1
+Summary: Our package will give u a basic calculator function such as add, sub, multiply and divide.
+Home-page: UNKNOWN
+Author: Aayan Khan
+Author-email: aayan107@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
