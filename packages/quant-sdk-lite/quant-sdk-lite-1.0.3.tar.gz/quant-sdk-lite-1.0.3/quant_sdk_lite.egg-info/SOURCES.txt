@@ -1,0 +1,9 @@
+README.md
+setup.py
+quant_sdk_lite/__init__.py
+quant_sdk_lite/quantsdklite.py
+quant_sdk_lite.egg-info/PKG-INFO
+quant_sdk_lite.egg-info/SOURCES.txt
+quant_sdk_lite.egg-info/dependency_links.txt
+quant_sdk_lite.egg-info/requires.txt
+quant_sdk_lite.egg-info/top_level.txt
