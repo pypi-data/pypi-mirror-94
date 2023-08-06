@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: mosaik.HDF5-Storage
+Version: 0.1.0rc20210212151321
+Summary: Store any simulator metric into a HDF5 database using a common scheme.
+Home-page: UNKNOWN
+Author: Bengt Lüers
+Author-email: bengt.lueers@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: h5py (>=3.1.0)
+
+# Mosaik.HDF5-Storage
+
+Store any simulator metric into a HDF5 database using a common scheme.
+
+
