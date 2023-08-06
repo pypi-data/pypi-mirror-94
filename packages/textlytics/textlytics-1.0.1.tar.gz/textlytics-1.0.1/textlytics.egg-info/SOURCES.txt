@@ -1,0 +1,8 @@
+README.rst
+setup.py
+textlytics/__init__.py
+textlytics.egg-info/PKG-INFO
+textlytics.egg-info/SOURCES.txt
+textlytics.egg-info/dependency_links.txt
+textlytics.egg-info/requires.txt
+textlytics.egg-info/top_level.txt
