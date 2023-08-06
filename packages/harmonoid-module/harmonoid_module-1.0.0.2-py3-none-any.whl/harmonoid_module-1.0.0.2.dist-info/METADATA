@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: harmonoid-module
+Version: 1.0.0.2
+Summary: Harmonoid-service wrapper
+Home-page: https://github.com/harmonoid/harmonoid-module
+Author: harmonoid Team
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: ytmusicapi
+Requires-Dist: pytube
+Requires-Dist: mutagen
+Requires-Dist: aiofiles
+Requires-Dist: httpx
+
+# harmonoid-module
+A Python wrapper around harmonoid-service server code published to PyPI
+
+Install it from PyPI using `pip install harmonoid-module`
+
+It is perfect for usage in ASGI (asynchronous) applications & is fully asynchronous
+
+## Download song
+```
+import harmonoidmodule as hm
+import asyncio
+
+async def trackDownload(trackName):
+    return await hm.trackDownload(trackName=trackName)
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(trackDownload("save your tears"))
+loop.close()
+```
+
+
