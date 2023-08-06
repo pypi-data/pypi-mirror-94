@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: pudzu-charts
+Version: 0.9.2
+Summary: Pillow-based charting tools
+Home-page: https://github.com/Udzu/pudzu-packages/pudzu-charts/
+Author: Uri Granta
+Author-email: uri.granta+python@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: pudzu,charts,pillow
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
