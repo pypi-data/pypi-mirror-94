@@ -1,0 +1,13 @@
+kernreg/__init__.py,sha256=H7DgHtAlPswYvnjZj0heDrYxUdkTpa3sZx3F3RI8jbA,769
+kernreg/bandwidth_selection.py,sha256=6npzyaI12S3arddQFvLj1R-vxQMaZjUUpd2AR6ajvDE,7225
+kernreg/config.py,sha256=OrN7D1Zzpi1r8IHPTMEvCptkc77QBeSXWNfLJwzp7tU,424
+kernreg/example_data/motorcycle.dta,sha256=cDlCiL44T0UDj7UHkKW_j-4QyGyUVt9Q2BzIXISS2AE,2940
+kernreg/funcs_to_jit.py,sha256=1fEo_E7xPVEy_ZWIYPEFDb3tba9IVnkF__ho3NmLUak,4152
+kernreg/linear_binning.py,sha256=Xd-v-UiCT0ltuOx1frCSi1pdHOc-3vvLzeFiRBiW38Q,3294
+kernreg/smooth.py,sha256=5g5GXbPB78fFgbqOd2DnOp1AYHOxMQXYhIXgnjJcvfE,8681
+kernreg/utils.py,sha256=1__7X4vl5hq1GwzGOjFz3j46LMe4J4eeIsrX9QZV2dE,1520
+kernreg/visualize.py,sha256=22qU8reRYQzCyBvPO9JHy_VtrOoRnVbFm63o6fyR4Tg,1642
+kernreg-0.0.7.dist-info/LICENSE,sha256=Z_288LfxngQIWnnoCB1V9PzXQ6hGQcmRJgnxFQhWekw,1072
+kernreg-0.0.7.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+kernreg-0.0.7.dist-info/METADATA,sha256=fEreTOnGCOLXsvUHQ6TtaVUoZsxF5KKnUcAJsirYB5k,5220
+kernreg-0.0.7.dist-info/RECORD,,
