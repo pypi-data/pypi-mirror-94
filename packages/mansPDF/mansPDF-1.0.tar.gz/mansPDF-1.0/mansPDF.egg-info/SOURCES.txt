@@ -1,0 +1,9 @@
+README.md
+setup.py
+PDF/__init__.py
+PDF/pdf2image.py
+PDF/pdf2text.py
+mansPDF.egg-info/PKG-INFO
+mansPDF.egg-info/SOURCES.txt
+mansPDF.egg-info/dependency_links.txt
+mansPDF.egg-info/top_level.txt
