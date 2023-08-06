@@ -1,0 +1,15 @@
+README.md
+setup.py
+crinita/__init__.py
+crinita/article.py
+crinita/config.py
+crinita/entity.py
+crinita/list_of_articles.py
+crinita/page.py
+crinita/sites.py
+crinita/utils.py
+crinita.egg-info/PKG-INFO
+crinita.egg-info/SOURCES.txt
+crinita.egg-info/dependency_links.txt
+crinita.egg-info/requires.txt
+crinita.egg-info/top_level.txt
