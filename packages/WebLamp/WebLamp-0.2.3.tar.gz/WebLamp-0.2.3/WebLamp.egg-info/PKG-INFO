@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: WebLamp
+Version: 0.2.3
+Summary: Webserver (with some utilities) made in sockets!
+Home-page: https://github.com/coverosu/lamp
+Author: coverosu
+Author-email: coverosu@gmail.com
+License: UNKNOWN
+Description: # Lamp
+        
+        An asynchronous webserver made with sockets! (Not Finished)
+        
+        Examples of using Lamp:
+        
+        ```py
+        from WebLamp import Lamp, Connection
+        
+        server = Lamp()
+        
+        @server.route(path = '/', method = ['GET'])
+        async def home(conn: Connection) -> tuple:
+        
+            return 200, b'Hello World!'
+        
+        server.run(("127.0.0.1", 5000))
+        ```
+        
+        1 unique thing about this webserver is you can use a regex in your route and domain!
+        
+        ```py
+        from WebLamp import Lamp, Connection
+        import re
+        
+        server = Lamp()
+        
+        @server.route(path = re.compile(r'^/u/(?P<userid>[0-9]*)$'), method = ['GET'])
+        async def home(conn: Connection) -> tuple:
+        
+            userid = conn.args['userid'] # this came from the regex that was provided
+            
+            return 200, userid.encode()
+        
+        server.run(("127.0.0.1", 5000))
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
