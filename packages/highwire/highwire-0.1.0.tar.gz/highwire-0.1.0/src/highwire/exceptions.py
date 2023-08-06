@@ -1,0 +1,2 @@
+class WireException(Exception):
+    pass
