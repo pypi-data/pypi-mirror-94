@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+pywechatpay/__init__.py
+pywechatpay/core.py
+pywechatpay/exceptions.py
+pywechatpay.egg-info/PKG-INFO
+pywechatpay.egg-info/SOURCES.txt
+pywechatpay.egg-info/dependency_links.txt
+pywechatpay.egg-info/requires.txt
+pywechatpay.egg-info/top_level.txt
