@@ -1,0 +1,6 @@
+matplotlib
+traitlets
+ipython
+
+[testing]
+flake8

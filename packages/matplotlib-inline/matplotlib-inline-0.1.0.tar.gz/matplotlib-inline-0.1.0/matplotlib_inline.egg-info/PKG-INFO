@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: matplotlib-inline
+Version: 0.1.0
+Summary: Inline Matplotlib backend for Jupyter
+Home-page: https://github.com/martinRenou/matplotlib-inline
+Author: IPython Development Team
+Author-email: ipython-dev@scipy.org
+Maintainer: IPython Development Team
+License: BSD 3-Clause
+Description: UNKNOWN
+Keywords: python ipython matplotlib jupyter
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5
+Provides-Extra: testing
