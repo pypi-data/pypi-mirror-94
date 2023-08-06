@@ -1,0 +1,9 @@
+README.md
+setup.py
+24p.egg-info/PKG-INFO
+24p.egg-info/SOURCES.txt
+24p.egg-info/dependency_links.txt
+24p.egg-info/entry_points.txt
+24p.egg-info/top_level.txt
+p24/__init__.py
+p24/p24.py
