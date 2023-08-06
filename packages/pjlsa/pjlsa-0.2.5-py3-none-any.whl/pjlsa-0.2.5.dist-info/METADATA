@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pjlsa
+Version: 0.2.5
+Summary: A Python wrapping of Java LSA API
+Home-page: https://gitlab.cern.ch/scripting-tools/pjlsa
+Author: LSA / InCA team
+Author-email: inca-support@cern.ch
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: cmmnbuild-dep-manager (<3.*,>=2.5.0)
+Requires-Dist: jpype1 (<2.*,>=1.0.2)
+Requires-Dist: numpy
+Provides-Extra: all
+Requires-Dist: cmmnbuild-dep-manager (<3.*,>=2.5.0) ; extra == 'all'
+Requires-Dist: jpype1 (<2.*,>=1.0.2) ; extra == 'all'
+Requires-Dist: numpy ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Provides-Extra: core
+Requires-Dist: cmmnbuild-dep-manager (<3.*,>=2.5.0) ; extra == 'core'
+Requires-Dist: jpype1 (<2.*,>=1.0.2) ; extra == 'core'
+Requires-Dist: numpy ; extra == 'core'
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+UNKNOWN
+
+
