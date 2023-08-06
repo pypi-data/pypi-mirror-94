@@ -1,0 +1,3 @@
+[console_scripts]
+justic = justic.__main__:main
+
