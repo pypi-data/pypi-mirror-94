@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup
+
+packages = \
+['slack_primitive_cli',
+ 'slack_primitive_cli.command',
+ 'slack_primitive_cli.common']
+
+package_data = \
+{'': ['*']}
+
+install_requires = \
+['backoff', 'click-option-group', 'click>=7,<8', 'slackclient>=2.6,<3.0']
+
+entry_points = \
+{'console_scripts': ['slackcli = slack_primitive_cli.__main__:cli']}
+
+setup_kwargs = {
+    'name': 'slack-primitive-cli',
+    'version': '0.1.3',
+    'description': 'Primitive Slack CLI',
+    'long_description': '# slack-primitive-cli\n[![Build Status](https://travis-ci.org/yuji38kwmt/slack-primitive-cli.svg?branch=master)](https://travis-ci.org/yuji38kwmt/slack-primitive-cli)\n[![PyPI version](https://badge.fury.io/py/slack-primitive-cli.svg)](https://badge.fury.io/py/slack-primitive-cli)\n[![Python Versions](https://img.shields.io/pypi/pyversions/slack-primitive-cli.svg)](https://pypi.org/project/slack-primitive-cli/)\n\n`slack-primitive-cli` can execute [Slack web api methods](https://api.slack.com/methods) from command line.\nCommand line argument is correspont to web api arguments, so `slack-primitive-cli` is **primitive**.\n\n\n# Requirements\n* Python 3.6+\n\n# Install\n\n```\n$ pip install slack-primitive-cli\n```\n\nhttps://pypi.org/project/slack-primitive-cli/\n\n\n# Usage\n\n## Sending a message\n\n```\n$ slackcli chat.postMessage --token xoxb-XXXXXXX --channel "#random" --text hello\n\n$ export SLACK_API_TOKEN=xoxb-XXXXXXX\n$ slackcli chat.postMessage  --channel "#random" --text hello\n```\n\n\n```\n$ slackcli chat.postMessage --help\n\nUsage: slackcli chat.postMessage [OPTIONS]\n\n  Sends a message to a channel. See\n  https://api.slack.com/methods/chat.postMessage\n\nOptions:\n  --token TEXT               Authentication token. If not specified, refer\n                             `SLACK_API_TOKEN` environment variable.\n                             [required]\n\n  --channel TEXT             Channel, private group, or IM channel to send\n                             message to. Can be an encoded ID, or a name. See\n                             below for more details.  [required]\n\n  --text TEXT                How this field works and whether it is required\n                             depends on other fields you use in your API call.\n                             [required]\n\n  --as_user BOOLEAN          Pass true to post the message as the authed user,\n                             instead of as a bot.\n\n  --attachments TEXT         A JSON-based array of structured attachments,\n                             presented as a URL-encoded string.\n\n  --blocks TEXT              A JSON-based array of structured blocks,\n                             presented as a URL-encoded string.\n\n  --icon_emoji TEXT          Emoji to use as the icon for this message.\n                             Overrides icon_url. Must be used in conjunction\n                             with as_user set to false, otherwise ignored. See\n                             authorship below.\n\n  --icon_url TEXT            URL to an image to use as the icon for this\n                             message. Must be used in conjunction with as_user\n                             set to false, otherwise ignored. See authorship\n                             below.\n\n  --link_names BOOLEAN       Find and link channel names and usernames.\n  --mrkdwn BOOLEAN           Disable Slack markup parsing by setting to false.\n  --parse BOOLEAN            Change how messages are treated.\n  --reply_broadcast BOOLEAN  Used in conjunction with thread_ts and indicates\n                             whether reply should be made visible to everyone\n                             in the channel or conversation.\n\n  --thread_ts TEXT           Provide another message\'s ts value to make this\n                             message a reply. Avoid using a reply\'s ts value;\n                             use its parent instead.\n\n  --unfurl_links BOOLEAN     Pass true to enable unfurling of primarily text-\n                             based content.\n\n  --unfurl_media BOOLEAN     Pass false to disable unfurling of media content.\n  --username TEXT            Set your bot\'s user name. Must be used in\n                             conjunction with as_user set to false, otherwise\n                             ignored.\n\n  --help                     Show this message and exit.\n\n```\n## Uploading files\n\n```\n$ slackcli files.upload --channels "#random" --file foo.txt\n```\n\n```\n$ slackcli files.upload  --help\nUsage: slackcli files.upload [OPTIONS]\n\n  Uploads or creates a file. See https://api.slack.com/methods/files.upload\n\nOptions:\n  --token TEXT                    Authentication token. If not specified,\n                                  refer `SLACK_API_TOKEN` environment\n                                  variable.  [required]\n\n  --channels TEXT                 Comma-separated list of channel names or IDs\n                                  where the file will be shared.  [required]\n\n  File contents: [mutually_exclusive, required]\n    --file TEXT                   File contents via multipart/form-data. If\n                                  omitting this parameter, you must submit\n                                  content.\n\n    --content TEXT                File contents via a POST variable. If\n                                  omitting this parameter, you must provide a\n                                  file.\n\n  --filename TEXT                 Filename of file.\n  --filetype TEXT                 A file type identifier. See also\n                                  https://api.slack.com/types/file#file_types\n                                  .\n\n  --initial_comment TEXT          The message text introducing the file in\n                                  specified channels.\n\n  --thread_ts TEXT                Provide another message\'s ts value to upload\n                                  this file as a reply.\n\n  --title TEXT                    Title of file.\n\n```\n\n# Supported web api methods.\n`slack-primitive-cli` supports a few web api methods.\n\n* [chat.delete](https://api.slack.com/methods/chat.delete)\n* [chat.postMessage](https://api.slack.com/methods/chat.postMessage)\n* [files.delete](https://api.slack.com/methods/files.delete)\n* [files.upload](https://api.slack.com/methods/files.upload)\n\n# Additional\n\n## Shell Completion\n`slack-primitive-cli` depends on [click](https://click.palletsprojects.com/en/7.x/), so `slack-primitive-cli` can provide tab completion.\nBash, Zsh, and Fish are supported\n\nIn order to activate shell completion, you need to execute the following script.\n\n```\n$ eval "$(_SLACKCLI_COMPLETE=source slackcli)"\n```\n\n\nSee [here](https://click.palletsprojects.com/en/7.x/bashcomplete/) for details.\n\n',
+    'author': 'yuji38kwmt',
+    'author_email': 'yuji38kwmt@gmail.com',
+    'maintainer': 'yuji38kwmt',
+    'maintainer_email': 'yuji38kwmt@gmail.com',
+    'url': 'https://github.com/yuji38kwmt/slack-primitive-cli',
+    'packages': packages,
+    'package_data': package_data,
+    'install_requires': install_requires,
+    'entry_points': entry_points,
+    'python_requires': '>=3.6,<4.0',
+}
+
+
+setup(**setup_kwargs)
