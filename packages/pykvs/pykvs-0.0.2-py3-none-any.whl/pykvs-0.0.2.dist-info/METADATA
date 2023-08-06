@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pykvs
+Version: 0.0.2
+Summary: Python simple key-value store.
+Home-page: https://github.com/yutayamazaki/pykvs
+Author: Yuta Yamazaki
+Author-email: yu.yamazakii@gmail.com
+Maintainer: Yuta Yamazaki
+Maintainer-email: yu.yamazakii@gmail.com
+License: MIT
+Keywords: python
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# pykvs
+
+PyKVS is key-value store for Python. keys must be string and values must be picklable object.
+
+## Installation
+
+```python
+git clone https://github.com/yutayamazaki/pykvs.git
+python setup.py install
+```
+
+## Example
+
+```python
+import pykvs
+
+kvs = pykvs.PyKVS('./kvs')
+kvs['some-key'] = 'some-value'
+```
+
+
