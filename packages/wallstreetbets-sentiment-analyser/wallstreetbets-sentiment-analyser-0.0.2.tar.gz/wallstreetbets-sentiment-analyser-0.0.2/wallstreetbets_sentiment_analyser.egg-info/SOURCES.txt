@@ -1,0 +1,13 @@
+MANIFEST.in
+README.txt
+__init__.py
+changelog.txt
+license.txt
+requirements.txt
+setup.py
+models/tickers.py
+wallstreetbets_sentiment_analyser.egg-info/PKG-INFO
+wallstreetbets_sentiment_analyser.egg-info/SOURCES.txt
+wallstreetbets_sentiment_analyser.egg-info/dependency_links.txt
+wallstreetbets_sentiment_analyser.egg-info/requires.txt
+wallstreetbets_sentiment_analyser.egg-info/top_level.txt
