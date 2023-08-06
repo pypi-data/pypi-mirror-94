@@ -1,0 +1,9 @@
+download last version in pypi account and extract tar.gaz archive, online, to get the code
+install setuptools, twine and wheel pip modules if not installed
+delete 'dis' folder
+delete '.egg-info' folder
+change version in setup.py and other details like those in read me
+enter command_prompt_terminal
+cd deskop ardianmaliqaj
+run command >> python setup.py sdist
+run command >> twine upload -u <username> -p <password> dist/*

@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: ardianmaliqaj
+Version: 20210208140341338400
+Summary: building first pip
+Home-page: UNKNOWN
+Author: Ardian Maliqaj
+Author-email: ardianmaliqaj0@gmail.com
+License: MIT
+Description: This code return a number 2
+        
+        Change Log
+        ==========
+        
+        0.0.1 (19/04/2020)
+        -------------------
+        - First Release
+        
+Keywords: pip installable module
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

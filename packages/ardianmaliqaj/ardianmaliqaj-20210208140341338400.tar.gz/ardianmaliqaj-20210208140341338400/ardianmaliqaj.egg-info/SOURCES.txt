@@ -1,0 +1,12 @@
+CHANGELOG.txt
+How to Upload to PyPI.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+ardianmaliqaj/__init__.py
+ardianmaliqaj.egg-info/PKG-INFO
+ardianmaliqaj.egg-info/SOURCES.txt
+ardianmaliqaj.egg-info/dependency_links.txt
+ardianmaliqaj.egg-info/top_level.txt
