@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: Dhiraj
+Version: 0.0.1
+Summary: package will give you a basic calculator function such as addition, substraction, multiplication and division.
+Home-page: UNKNOWN
+Author: Dhiraj Jha
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education 
+Classifier: Operating System :: Microsoft :: Windows :: Windows 7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
