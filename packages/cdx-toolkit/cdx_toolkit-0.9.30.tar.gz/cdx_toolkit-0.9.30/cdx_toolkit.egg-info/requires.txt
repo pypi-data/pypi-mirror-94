@@ -1,0 +1,7 @@
+requests
+warcio
+
+[test]
+pytest
+pytest-cov
+coverage
