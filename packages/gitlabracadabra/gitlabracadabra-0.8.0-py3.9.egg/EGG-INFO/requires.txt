@@ -1,0 +1,4 @@
+PyYAML
+jsonschema>=2.6.0
+pygit2
+python-gitlab>=1.6.0
