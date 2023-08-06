@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: acequia
+Version: 0.0.2
+Summary: Python package for reading, writing and analyzinggroundwater head time series.
+Home-page: https://github.com/acequia-package/Acequia.git
+Author: T.J. de Meij
+Author-email: thomasdemeij@gmail.com
+License: MIT
+Platform: Windows
+Platform: Mac OS-X
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy (>=1.15)
+Requires-Dist: matplotlib (>=2.0)
+Requires-Dist: pandas (>=0.23)
+Requires-Dist: scipy (>=1.1)
+
+ACEQUIA
+=======
+
+Acequia is a python package to facilitate data conversions of 
+groundwater head measurements. It's primary aim is to provide 
+tools to easily read and write common file formats and calculate 
+descriptive statistics from groundwater head time series. 
+
+Acequia is written from the perspective of Dutch groundwater 
+practitioners who deal with files from Dinoloket, Menyanthes,
+and KNMI for hydrological time series analysis.
+
+Currently supported functionality:
+* Import groundwater head measurements from DINOloket csv files
+and Menyanthes hydromonitor csv export files.
+
+
+
+
