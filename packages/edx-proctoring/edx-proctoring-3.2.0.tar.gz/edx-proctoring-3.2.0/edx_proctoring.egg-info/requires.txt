@@ -1,0 +1,17 @@
+edx-rest-api-client>=1.9.2
+django-webpack-loader>=0.6.0
+event-tracking>=0.2.5
+edx-opaque-keys>=0.4
+pycryptodomex>=3.4.7
+jsonfield2
+djangorestframework
+Django>=2.2
+pytz>=2018
+django-ipware>=1.1.0
+python-dateutil>=2.1
+django-model-utils
+django-waffle
+edx-drf-extensions
+rules
+django-crum
+edx-when>=0.1.3
