@@ -1,0 +1,11 @@
+pips3/__init__.py,sha256=J9eZxULz8Wisc8CoE1xREcjuPjPICY5W0Z4cwNnnMos,273
+pips3/_version.py,sha256=5WNghp40kyW4Q6ghB2zTyhKRMrr9HUzlAHdEzbbU-HA,502
+pips3/base.py,sha256=9WFUMi1ihad1EzhW2cqPuy9Bzh9PRyacYehcyd9dMiY,9190
+pips3/cli.py,sha256=3aufX57T1dUxFJVpf72uyxacYg4iKIyySt2J-XbbcSo,1382
+pips3/exceptions.py,sha256=JuOA8VCULIWNfQCVIlSOmEQ2aXFSemMBFO9iAzeupLQ,204
+pips3-0.4.1.dev1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pips3-0.4.1.dev1.dist-info/METADATA,sha256=_Np0moqisYn36jQ1snYDVSrq8yrM_R9hYlhBbkKhGEk,1036
+pips3-0.4.1.dev1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+pips3-0.4.1.dev1.dist-info/entry_points.txt,sha256=icWnKgQNrUetU1gp7DH5QemK7YviYTOmbyavJBLUTNU,42
+pips3-0.4.1.dev1.dist-info/top_level.txt,sha256=qzxMx_mre1xxUb902MH1qqcRC0Rn3gPgYV5_sDsh16g,6
+pips3-0.4.1.dev1.dist-info/RECORD,,
