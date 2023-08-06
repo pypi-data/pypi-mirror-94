@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: cadspy
+Version: 0.0.0
+Summary: Stub package
+Home-page: UNKNOWN
+Maintainer: Jake TM Pearce
+Maintainer-email: 
+License: Copyright 2020
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 7 - Inactive
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: Other/Proprietary License
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
