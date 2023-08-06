@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+mcoauth/__init__.py
+mcoauth/mcoauth.py
+mcoauth.egg-info/PKG-INFO
+mcoauth.egg-info/SOURCES.txt
+mcoauth.egg-info/dependency_links.txt
+mcoauth.egg-info/top_level.txt
