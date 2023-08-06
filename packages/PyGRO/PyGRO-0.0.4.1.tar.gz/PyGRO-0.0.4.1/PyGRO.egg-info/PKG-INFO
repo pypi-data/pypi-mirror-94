@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: PyGRO
+Version: 0.0.4.1
+Summary: A Python Integrator for General Relativistic Orbits
+Home-page: UNKNOWN
+Author: Riccardo Della Monica
+Author-email: dellamonicariccardo@gmail.com
+License: LICENSE.txt
+Description: ## PIGRO
+        ### A Python Integrator for General Relativistic Orbits
+        
+        [PIGRO](https://github.com/rdellamonica/pigro/tree/master) is a Python library that provides methods and functions to perform the numerical integration of the geodesic equations describing a particle or photon orbit in any metric theory of gravity, given an alaytic expression of the metric tensor.
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
