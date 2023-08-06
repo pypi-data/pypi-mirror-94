@@ -1,0 +1,3 @@
+[pymodaq.plugins]
+thorlabs = pymodaq_plugins_thorlabs
+
