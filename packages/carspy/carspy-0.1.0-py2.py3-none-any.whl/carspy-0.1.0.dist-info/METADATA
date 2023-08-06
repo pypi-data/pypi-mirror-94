@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: carspy
+Version: 0.1.0
+Summary: Synthesizing and fitting coherent anti-Stokes Raman spectra (CARS) in Python
+Home-page: https://github.com/chuckedfromspace/carspy
+Author: Zhiyao Yin
+Author-email: zhiyao.yin@dlr.de
+License: BSD license
+Keywords: carspy
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: numpy
+
+UNKNOWN
+
+
