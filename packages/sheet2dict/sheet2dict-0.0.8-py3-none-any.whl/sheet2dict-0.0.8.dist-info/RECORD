@@ -1,0 +1,12 @@
+sheet2dict/__init__.py,sha256=8D5a8oKgqd6WA1RUkiKCn4l_PVemtyuckxQut0vDHXM,20
+sheet2dict/main.py,sha256=UCvV8JtZDVNiHDiPIR44tDanhBxQkryNuuljFzUR0jQ,2127
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=LHhqjE_x4ftS59oAJIJ0zGN0GQxAMpss_bNeOWk17rU,209
+tests/test_1_xlsx.py,sha256=ggYB7ZBrVcZq9SxrOGFZAaHCTnCcgVJFI2QOB6CG7oM,1928
+tests/test_2_csv.py,sha256=-8PnJiXVnQwyJW79cISsb0rLO5NTLZ6_QnZr9mUDoWo,1645
+tests/x-custom_tests.py,sha256=mReKnmK27vf2r-rhnnq-mihxw0srczH5a-K4ckoFiC0,681
+sheet2dict-0.0.8.dist-info/LICENSE,sha256=AbWdkQgjKhMmeteK980ocHTPz_keWY7cBrVa93P-x-I,1069
+sheet2dict-0.0.8.dist-info/METADATA,sha256=-lMo2g5hSd7xdKD23Unbg-_S9X6HCm0VMI6rBPQ-V5M,4092
+sheet2dict-0.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sheet2dict-0.0.8.dist-info/top_level.txt,sha256=ZVDKj0n5hlsySZ_wH3pFzI1eAhrZaNeT2YNAfEA-UB8,17
+sheet2dict-0.0.8.dist-info/RECORD,,
