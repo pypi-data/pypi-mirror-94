@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: ctags-ue4cli
+Version: 0.0.4
+Summary: ctags plugin for ue4cli
+Home-page: http://github.com/drichardson/ctags-ue4cli
+Author: Doug Richardson
+Author-email: doug@rekt.email
+License: UNKNOWN
+Keywords: epic unreal engine ctags
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Environment :: Console
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: ue4cli (>=0.0.51)
+
+# ctags plugin for ue4cli
+
+The ctags-ue4cli Python package is a plugin for
+[ue4cli](https://github.com/adamrehn/ue4cli) that provides functionality for
+building ctags for Unreal Engine projects and plugins using the [Universal
+Ctags](https://github.com/universal-ctags/ctags).
+
+## Installation
+
+    pip3 install ctags-ue4cli
+
+
+
