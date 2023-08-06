@@ -1,0 +1,11 @@
+setup.py
+gym_platformer/__init__.py
+gym_platformer/sprite.py
+gym_platformer.egg-info/PKG-INFO
+gym_platformer.egg-info/SOURCES.txt
+gym_platformer.egg-info/dependency_links.txt
+gym_platformer.egg-info/requires.txt
+gym_platformer.egg-info/top_level.txt
+gym_platformer/envs/__init__.py
+gym_platformer/envs/platformer.py
+gym_platformer/envs/platformer_env.py
