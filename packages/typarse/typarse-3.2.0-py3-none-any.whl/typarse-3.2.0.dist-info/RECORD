@@ -1,0 +1,12 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/sum.py,sha256=bvCvVWLRvcHKP4jI9Vhd0sj97lTqvD4OM3FVRl9hcQ4,491
+tests/test_config.py,sha256=1Lo3qLqYatLTdpD4QAwX_PPGNUa4tOnVXJdQjimcW_8,2250
+tests/test_parsing.py,sha256=KFzL1_WSPRE54OLUsY7FEajQrGrMFOsiBbKyo20WdWw,944
+typarse/__init__.py,sha256=cSPVewRLktpTxEUqcpKEeWhriD_yk9dW0PU4simGDVA,76
+typarse/config.py,sha256=4aAORA0A9S8GzSfHn-UTtJyd9hn_pztTzOYRoMN5MWw,2085
+typarse/parsing.py,sha256=sbUxiDLvnIgxM_BWUcKVFIbjSSE8sYHzVFva5FeBdWE,1954
+typarse-3.2.0.dist-info/LICENSE.txt,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+typarse-3.2.0.dist-info/METADATA,sha256=CwHNEz9y0koExcNk972x1G11xl3bZDObyyBRu6ZXRXo,2694
+typarse-3.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+typarse-3.2.0.dist-info/top_level.txt,sha256=nlNUm0tENpw4uvs848vkK2t0qvG6YNMbXtVPASwLISo,14
+typarse-3.2.0.dist-info/RECORD,,
