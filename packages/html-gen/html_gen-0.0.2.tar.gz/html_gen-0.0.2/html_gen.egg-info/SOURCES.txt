@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+html_gen/__init__.py
+html_gen.egg-info/PKG-INFO
+html_gen.egg-info/SOURCES.txt
+html_gen.egg-info/dependency_links.txt
+html_gen.egg-info/top_level.txt

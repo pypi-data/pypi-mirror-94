@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: html_gen
+Version: 0.0.2
+Summary: A package to generate HTML from your code.
+Home-page: https://github.com/regmicmahesh/hgen_python
+Author: Mahesh C. Regmi
+Author-email: regmicmahesh@gmail.com
+License: UNKNOWN
+Description: # Hgen Python
+        
+        This is a simple fun experimental project I wrote in python to write HTML tags
+        in python and render it as html.
+        
+        
+        
+        # Installation
+        
+        This package is uploaded in pypi, so you can install it with pip.
+        
+        ```bash
+        pip install html-gen
+        ```
+        
+        # Usage
+        
+        Using it is quite simple.
+        
+        
+        ```python
+        import html_gen
+        #or if you wanna import everything
+        from html_gen import *
+        ```
+        
+        # Documentation
+        
+        In progress.
+        
+        # Contribution
+        
+        Every major / minor contribution is welcomed and highly appreciated.
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
