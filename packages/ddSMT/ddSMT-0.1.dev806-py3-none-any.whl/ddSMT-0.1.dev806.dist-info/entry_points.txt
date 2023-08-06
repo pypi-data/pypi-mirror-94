@@ -1,0 +1,4 @@
+[console_scripts]
+ddsmt = ddsmt:__main__.main
+ddsmt-profile = ddsmt:__main__.main_profile
+
