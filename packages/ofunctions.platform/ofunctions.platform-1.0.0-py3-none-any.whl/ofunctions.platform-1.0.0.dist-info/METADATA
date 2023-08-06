@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: ofunctions.platform
+Version: 1.0.0
+Summary: Very basic platform identification
+Home-page: https://github.com/netinvent/ofunctions
+Author: NetInvent - Orsiris de Jong
+Author-email: contact@netinvent.fr
+License: UNKNOWN
+Keywords: network,bisection,logging
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: Topic :: System
+Classifier: Topic :: System :: Operating System
+Classifier: Topic :: System :: Shells
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Operating System :: POSIX :: BSD :: NetBSD
+Classifier: Operating System :: POSIX :: BSD :: OpenBSD
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# ofunctions
+## Collection of useful python functions
+
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/netinvent/ofunctions.svg)](http://isitmaintained.com/project/netinvent/ofunctions "Percentage of issues still open")
+![Linux Build Status](https://github.com/netinvent/ofunctions/workflows/ofunctions-linux-tests/badge.svg)
+[![GitHub Release](https://img.shields.io/github/release/netinvent/ofunctions.svg?label=Latest)](https://github.com/netinvent/ofunctions/releases/latest)
+
+ofunctions is a set of various recurrent functions amongst
+
+- bisection: bisection algorithm for *any* function with *any* number of arguments, works LtoR and RtoL
+- checksums: various SHA256 tools for checking and creating checksum files
+- delayed_keyboardinterrupt: Just a nifty tool to catch CTRL+C signals
+- file_utils:
+- json_sanitize: make sure json does not contain unsupported chars, yes I look at you Windows eventlog
+- logger_utils: basic no brain console + file log creation
+- mailer: send emails regardless of ssl/tls protocols, in batch or as single mail, with attachments
+- network: various tools like ping, internet check, MTU probing and public IP discovery
+- platform: nothing special here, just check what arch we are running on
+- process: simple kill-them-all function to terminate subprocesses
+- pw_gen: basic password generator
+- service_control: control Windows / Linux service start / stop / status
+- string_handling: Remove accents / special chars from strings
+
+## Setup
+
+```
+pip install ofunctions.<subpackage>
+
+```
+
