@@ -1,0 +1,45 @@
+[
+  {
+    "uuid": "1",
+    "login": "Twilight",
+    "email": "twilight_sparkle@ponyville.eq",
+    "password": "12345",
+    "access": "92a9381ab6bc11e886e754a05055891d",
+    "client": "a63d9312b6bc11e886e754a05055891d",
+    "properties": [
+      {
+        "name": "loves",
+        "value": "books"
+      }
+    ],
+    "textures": {
+      "SKIN": "https://server/feather.png"
+    }
+  },
+  {
+    "uuid": "2",
+    "login": "Luna",
+    "email": "luna@canterlot.eq",
+    "password": "night",
+    "client": "39bc74b8b6c311e886e754a05055891d",
+    "textures": {
+      "SKIN": "https://server/knight.png"
+    }
+  },
+  {
+    "uuid": "3",
+    "login": "CarrotTop",
+    "email": "carrot@ponymail.eq",
+    "password": "first_pie",
+    "properties": [
+      {
+        "name": "age",
+        "value": "26"
+      },
+      {
+        "name": "verified",
+        "value": "true"
+      }
+    ]
+  }
+]
