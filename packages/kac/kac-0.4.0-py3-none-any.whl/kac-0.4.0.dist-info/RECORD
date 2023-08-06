@@ -1,0 +1,12 @@
+kac/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kac/changelog/__init__.py,sha256=bXgjSBD4wehwtehR2Tdg0WA2fgYooBFtgPAms6eaXkQ,74
+kac/changelog/changelog.py,sha256=mNeBw7XaTfIVSdgIXLunzrCgW6I1miJJXsT6BlGfXko,6630
+kac/changelog/release.py,sha256=JBIwKKXiZ80Q-irESucVAPhNqEDm3teW3RP5rrPajgs,3599
+kac/changelog/util.py,sha256=7lH9EAwQ74GF85o1WHrbeewlLWCz6MSDrW9LMF5GEc8,377
+kac/kac.py,sha256=oOaIvdovbHjn-yWJdN1cgZG8jScxYbh0qGLo1lvKSMo,4341
+kac/templates/CHANGELOG.md,sha256=gKmnrS4efWkBdZyJ1ozYLTZaLDrtbwteDjqtR6nN3Dc,429
+kac-0.4.0.dist-info/entry_points.txt,sha256=5yVLFGjOdAIQy6KVNiSFUqKWUWlE7l1xCe96nKgcFZI,35
+kac-0.4.0.dist-info/LICENSE,sha256=_thvsXK0uVZvlciFuCJcYFy8h5Esmhms87Q2ItYCzaw,1066
+kac-0.4.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+kac-0.4.0.dist-info/METADATA,sha256=KWRCFfvTO4Pb9hsZhYNv9iR2eesVWp_g5Kl_rnPIOxs,1830
+kac-0.4.0.dist-info/RECORD,,

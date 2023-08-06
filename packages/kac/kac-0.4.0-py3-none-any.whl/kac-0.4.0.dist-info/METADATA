@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: kac
+Version: 0.4.0
+Summary: A command line tool for CHANGELOG files that follow the Keep-a-Changelog standard.
+Home-page: https://github.com/atwalsh/kac
+License: MIT
+Author: Adam Walsh
+Author-email: adam@atw.me
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.1.1,<8.0.0)
+Requires-Dist: gitpython (>=3.1.7,<4.0.0)
+Requires-Dist: jinja2 (>=2.11.1,<3.0.0)
+Requires-Dist: pyperclip (>=1.8.0,<2.0.0)
+Requires-Dist: questionary (>=1.5.1,<2.0.0)
+Requires-Dist: semver (>=2.10.2,<3.0.0)
+Project-URL: Repository, https://github.com/atwalsh/kac
+Description-Content-Type: text/markdown
+
+![kac](https://atw.me/img/kac.svg)
+
+<hr>
+
+A command line tool for CHANGELOG files that follow the [Keep A Changelog][1] standard.
+
+![Tests](https://github.com/atwalsh/kac/workflows/Tests/badge.svg)
+
+### Usage
+
+Run `kac` in the same directory as your Changelog. By default, `kac` looks for a file called `CHANGELOG.md`
+(case-insensitive).
+
+```
+Usage: kac [OPTIONS] COMMAND [ARGS]...
+
+  A CLI tool for CHANGELOG files that follow the Keep-a-Changelog standard.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  bump  Bump the latest version of a CHANGELOG file.
+  copy  Copy the latest release's changelog text.
+  init  Create an empty CHANGELOG file.
+  
+```
+
+## Limitations
+
+- Must be run in the same directory as your CHANGELOG file
+- Only works for semver
+- `kac bump` can "format" (ex: remove extra empty lines) CHANGELOG files, this could be unfavorable for users
+
+[1]: https://keepachangelog.com/en/1.0.0/
