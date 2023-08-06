@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: MihirCalculator
+Version: 0.0.1
+Summary: Our package will be doing a function of a simple calculator like addition,subtraction,multiplication and division.
+Home-page: UNKNOWN
+Author: Mihir Gharat
+Author-email: gharatmihirmohan@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

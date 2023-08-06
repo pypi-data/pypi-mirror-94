@@ -1,0 +1,10 @@
+CHANGELOG.txt
+License.txt
+MANIFEST.in
+README.txt
+_init_.py
+setup.py
+MihirCalculator.egg-info/PKG-INFO
+MihirCalculator.egg-info/SOURCES.txt
+MihirCalculator.egg-info/dependency_links.txt
+MihirCalculator.egg-info/top_level.txt

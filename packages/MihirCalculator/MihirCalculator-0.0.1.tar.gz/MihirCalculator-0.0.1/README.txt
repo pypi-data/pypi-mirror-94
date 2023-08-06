@@ -1,0 +1,1 @@
+Our package will be doing a function of a simple calculator like addition,subtraction,multiplication and division.
