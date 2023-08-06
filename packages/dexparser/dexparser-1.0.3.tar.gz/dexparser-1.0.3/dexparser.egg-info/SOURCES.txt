@@ -1,0 +1,13 @@
+README.md
+setup.py
+dexparser/__init__.py
+dexparser/disassembler.py
+dexparser/errors.py
+dexparser/utils.py
+dexparser.egg-info/PKG-INFO
+dexparser.egg-info/SOURCES.txt
+dexparser.egg-info/dependency_links.txt
+dexparser.egg-info/top_level.txt
+tests/__init__.py
+tests/test_load_dex.py
+tests/test_parse_single_dex.py
