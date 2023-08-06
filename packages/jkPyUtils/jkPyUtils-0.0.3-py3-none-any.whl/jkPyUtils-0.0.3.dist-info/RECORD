@@ -1,0 +1,11 @@
+jkPyUtils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jkPyUtils/__version__.py,sha256=GGnxxwBgG3u7tA3G7IoxQS5KO1x6zSTaMw0bK_ha6eo,302
+jkPyUtils/fetch.py,sha256=REIdwIAAGJ4DAvEoisc422cs-Q60sTIj3mC2AZ6bL6w,1622
+jkPyUtils/icache.py,sha256=k2iAv0ZjQZiASeXvilo-xs-FtnswvYnnJFL1rnXOj0o,1180
+jkPyUtils/requests2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jkPyUtils/requests2/fetch.py,sha256=REIdwIAAGJ4DAvEoisc422cs-Q60sTIj3mC2AZ6bL6w,1622
+jkPyUtils-0.0.3.dist-info/LICENSE,sha256=Njnd1O1K2G-Daki18LTWqEwvM84CmOfc4VifGjtF9lg,1068
+jkPyUtils-0.0.3.dist-info/METADATA,sha256=1JTWDW_hFiMgAMWeTR7yYUmlyECqGPGfYfDhyIKa3D0,879
+jkPyUtils-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+jkPyUtils-0.0.3.dist-info/top_level.txt,sha256=tqnJZ9VzZv-OYSemQW7jTyzdSzLhRAEX9qYUpNUaeYw,10
+jkPyUtils-0.0.3.dist-info/RECORD,,
