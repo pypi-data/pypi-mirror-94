@@ -1,0 +1,1 @@
+"""Actions for bronotes CLI."""
