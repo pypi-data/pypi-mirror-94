@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: pychesscom
+Version: 0.1.3
+Summary: An asynchronous Python client for Chess.com's API
+Home-page: https://github.com/vopani/pychesscom
+Author: Rohan Rao
+Author-email: rohanrao88@gmail.com
+License: Apache License, Version 2.0
+Project-URL: Documentation, https://pychesscom.readthedocs.io/
+Project-URL: Source, https://github.com/vopani/pychesscom
+Project-URL: Tracker, https://github.com/vopani/pychesscom/issues
+Keywords: api,async,chess,client
+Platform: any
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# pychesscom
+
+An asynchronous Python client for Chess.com's API
+
+## Installation
+**Python 3.7 or higher is required**
+
+To install stable version from PyPI (recommended):
+
+```python
+pip install pychesscom
+```
+
+To install development version:
+
+```bash
+$ git clone https://github.com/vopani/pychesscom
+$ cd pychesscom
+$ python3 -m pip install -r requirements.txt
+```
+
+## Usage
+##### Jupyter Notebook
+```python
+from pychesscom import ChessComClient
+
+client = ChessComClient()
+response = await client.player.get_details('erik')
+print(response)
+```
+
+##### Python Console
+```python
+import asyncio
+from pychesscom import ChessComClient
+
+async def main():
+	client = ChessComClient()
+	response = await client.player.get_details('erik')
+	print(response)
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(main())
+```
+
+## Documentation
+[https://pychesscom.readthedocs.io/](https://pychesscom.readthedocs.io/)
+
+## License
+
+This project is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for more information.
+
+## Credits
+Chess.com API: [https://www.chess.com/news/view/published-data-api](https://www.chess.com/news/view/published-data-api)   
+Lichess Python client: [https://github.com/amasend/lichess\_python\_SDK](https://github.com/amasend/lichess_python_SDK)
+
+
