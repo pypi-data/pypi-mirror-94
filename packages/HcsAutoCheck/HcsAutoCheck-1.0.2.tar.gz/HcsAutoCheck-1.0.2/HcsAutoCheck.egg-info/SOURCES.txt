@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+HcsAutoCheck/__init__.py
+HcsAutoCheck/data.py
+HcsAutoCheck/encrypt.py
+HcsAutoCheck/hcs.py
+HcsAutoCheck.egg-info/PKG-INFO
+HcsAutoCheck.egg-info/SOURCES.txt
+HcsAutoCheck.egg-info/dependency_links.txt
+HcsAutoCheck.egg-info/requires.txt
+HcsAutoCheck.egg-info/top_level.txt

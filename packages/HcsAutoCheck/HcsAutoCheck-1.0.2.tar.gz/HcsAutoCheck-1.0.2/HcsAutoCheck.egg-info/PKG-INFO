@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: HcsAutoCheck
+Version: 1.0.2
+Summary: 파이썬 교육청 자가진단 자동화
+Home-page: https://github.com/Beta5051/HcsAutoCheck
+Author: Beta5051
+Author-email: beta5051@gmail.com
+License: MIT
+Download-URL: https://github.com/Beta5051/HcsAutoCheck/archive/master.tar.gz
+Description: # HcsAutoCheck
+        파이썬 자가진단 자동화
+        
+        ## Install
+        ```shell
+        pip install HcsAutoCheck
+        ```
+        
+        ## Example
+        ```python
+        import HcsAutoCheck
+        
+        hcs = HcsAutoCheck.Hcs('이름', '생년월일', '지역', '학교', '학교종류', '비밀번호')
+        result = hcs.run()
+        
+        if result['type'] == 'error':
+            print('Error: ' + result['message'])
+        else:
+            print('Time: ' + result['message'])
+        ```
+Keywords: covid,self-check,hcs
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
