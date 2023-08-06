@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: micropython-eydam-prototyping-config
+Version: 0.0.2
+Summary: Some wifi functions for MicroPython
+Home-page: https://github.com/eydam-prototyping/tutorials_de/blob/master/micropython/packages/ep_config
+Author: Tobias Eydam
+Author-email: eydam-prototyping@outlook.com
+License: UNKNOWN
+Description: long_description
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: Implementation :: MicroPython
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
