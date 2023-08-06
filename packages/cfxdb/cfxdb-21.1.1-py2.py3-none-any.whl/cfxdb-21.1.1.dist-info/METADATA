@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: cfxdb
+Version: 21.1.1
+Summary: Crossbar.io database schemata, based on zLMDB
+Home-page: https://crossbario.com
+Author: Crossbar.io Technologies GmbH
+Author-email: support@crossbario.com
+License: proprietary
+Platform: Any
+Classifier: License :: Other/Proprietary License
+Requires-Python: >=3.6
+Requires-Dist: zlmdb (>=20.12.1)
+
+Crossbar.io FX Database
+=======================
+
+| |Version| |Build| |Deploy| |Docs|
+
+**cfxdb** is a CrossbarFX Python support package with core database access classes
+written in native Python. The package allows direct in-memory data access from
+Python programs (including Jupyter notebooks) to CrossbarFX edge node data:
+
+* persisted WAMP event history
+* persisted router tracing data
+* XBR market maker transactions database
+* XBR network backend database
+* WAMP session cache
+* custom user, embedded object databases
+
+--------------
+
+*Copyright (C) Crossbar.io Technologies GmbH. All rights reserved.
+WAMP, Crossbar.io and XBR are trademarks of Crossbar.io Technologies GmbH.*
+
+.. |Version| image:: https://img.shields.io/pypi/v/cfxdb.svg
+   :target: https://pypi.python.org/pypi/cfxdb
+   :alt: Version
+
+.. |Build| image:: https://github.com/crossbario/cfxdb/workflows/main/badge.svg
+   :target: https://github.com/crossbario/cfxdb/actions?query=workflow%3Amain
+   :alt: Build
+
+.. |Deploy| image:: https://github.com/crossbario/cfxdb/workflows/deploy/badge.svg
+   :target: https://github.com/crossbario/cfxdb/actions?query=workflow%3Adeploy
+   :alt: Deploy
+
+.. |Docs| image:: https://img.shields.io/badge/docs-brightgreen.svg?style=flat
+   :target: https://crossbario.com/docs/cfxdb/index.html
+   :alt: Docs
+
+
