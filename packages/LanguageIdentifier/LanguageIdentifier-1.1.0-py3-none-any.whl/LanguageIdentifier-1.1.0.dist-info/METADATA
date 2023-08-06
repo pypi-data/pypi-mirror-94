@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: LanguageIdentifier
+Version: 1.1.0
+Summary: Language identifier based on an LSTM model
+Home-page: https://dummyUrl.com
+Author: Mads Toftrup, Søren Asger Sørensen, Manuel R.Ciosici, Ira Assent
+Author-email: mabeto5p@live.dk
+License: MIT
+Download-URL: https://pypi.org/project/LanguageIdentifier/
+Keywords: Lid,LSTM,Language identifier,Language
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+
+Test readme
+
+
