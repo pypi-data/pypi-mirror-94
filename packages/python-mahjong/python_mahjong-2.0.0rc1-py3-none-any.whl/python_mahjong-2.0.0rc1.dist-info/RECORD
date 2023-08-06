@@ -1,0 +1,11 @@
+mahjong/__init__.py,sha256=nZ-EFDedUmjiuhNaZl10oro3UQ449mVRJ3ibvT0R_BQ,990
+mahjong/__main__.py,sha256=op4uVFeG68HwIDL03Dm_GoSXohffwbpJdp_Y2wlzGY4,5573
+mahjong/game.py,sha256=DnAJPJQMckSLz2CJ9PG3DvAG2Lomr0cwJogehrcIn1E,24539
+mahjong/melds.py,sha256=HHah_t1vRJIlTsmvu5M2d6pixNjkfbUlLHBCDYkmC7s,21147
+mahjong/players.py,sha256=fsqdNdWfCVsH_oHBrLLqJswh2mcRRsEurveqP1jGXUQ,2663
+mahjong/tiles.py,sha256=bEIysSkezSQhHOyO9gNpZjy898K9sZwyoayd2MCQKo8,3823
+python_mahjong-2.0.0rc1.dist-info/LICENSE.txt,sha256=-DHn7tV3SBaHqbwLSAJOXkC29lX83gc-3pZLUL5dVdk,7815
+python_mahjong-2.0.0rc1.dist-info/METADATA,sha256=y5Or5XbhyTut-AD54sgmk1SNOWirKmB7Af83gkx9Eik,1011
+python_mahjong-2.0.0rc1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+python_mahjong-2.0.0rc1.dist-info/top_level.txt,sha256=C3dzltca7ULbRObeyalwH0VHu_KS53UH8MKUXToqhFU,8
+python_mahjong-2.0.0rc1.dist-info/RECORD,,
