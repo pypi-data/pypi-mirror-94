@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+conductor/ConductorWorker.py
+conductor/__init__.py
+conductor/conductor.py
+conductor_copy.egg-info/PKG-INFO
+conductor_copy.egg-info/SOURCES.txt
+conductor_copy.egg-info/dependency_links.txt
+conductor_copy.egg-info/requires.txt
+conductor_copy.egg-info/top_level.txt
