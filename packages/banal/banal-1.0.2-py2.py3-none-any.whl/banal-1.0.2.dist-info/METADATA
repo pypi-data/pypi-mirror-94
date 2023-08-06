@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: banal
+Version: 1.0.2
+Summary: Commons of banal micro-functions for Python.
+Home-page: http://github.com/pudo/banal
+Author: Friedrich Lindenberg
+Author-email: friedrich@pudo.org
+License: MIT
+Keywords: utilities commons functions
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: dev
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+
+UNKNOWN
+
+
