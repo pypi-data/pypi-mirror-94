@@ -1,0 +1,7 @@
+Django==2.2.18
+mysqlclient==2.0.3
+django-debug-toolbar==2.2
+Pillow==8.1.0
+singleton-decorator==1.0.0
+pydantic==1.7.3
+nidhoggr_core>=0.10
