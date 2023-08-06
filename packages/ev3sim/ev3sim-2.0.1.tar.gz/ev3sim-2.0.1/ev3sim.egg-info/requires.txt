@@ -1,0 +1,8 @@
+numpy==1.19.3
+pygame>=2.0.1
+PyYAML>=5.3.1
+pymunk>=6.0.0
+python-ev3dev2>=2.1.0.post1
+opensimplex>=0.3
+luddite>=1.0.1
+pygame-gui>=0.5.7
