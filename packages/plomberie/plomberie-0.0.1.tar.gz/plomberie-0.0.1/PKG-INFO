@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: plomberie
+Version: 0.0.1
+Summary: Create simple pipelines by defining task dependencies in code
+Home-page: https://github.com/amamparo/plomberie
+Author: Aaron Mamparo
+Author-email: aaronmamparo@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >= 3.8
+Description-Content-Type: text/markdown
