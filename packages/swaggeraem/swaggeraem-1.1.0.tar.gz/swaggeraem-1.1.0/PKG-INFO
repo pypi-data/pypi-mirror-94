@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: swaggeraem
+Version: 1.1.0
+Summary: Adobe Experience Manager (AEM) API
+Home-page: https://github.com/shinesolutions/swagger-aem/tree/master/python
+Author: Shine Solutions
+Author-email: opensource@shinesolutions.com
+License: UNKNOWN
+Description:     Swagger AEM is an OpenAPI specification for Adobe Experience Manager (AEM) API  # noqa: E501
+            
+Keywords: OpenAPI,OpenAPI-Generator,Adobe Experience Manager (AEM) API
+Platform: UNKNOWN
+Requires-Python: >=3.6
