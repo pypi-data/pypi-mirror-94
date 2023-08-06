@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7e6fa13f-eb5e-482e-a2ac-b5c6a1b9da2d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="ProjectId" id="1nxnAp5nEmIwfy7IyGK2L1TE59z" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="django3-helpdesk" type="Python.DjangoServer" factoryName="Django server">
+      <module name="helpdesk" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="COLORTERM" value="truecolor" />
+        <env name="DBUS_SESSION_BUS_ADDRESS" value="unix:path\=/run/user/1000/bus,guid\=4c749929371213cd2b3c534b601a3b5b" />
+        <env name="DBUS_STARTER_ADDRESS" value="unix:path\=/run/user/1000/bus,guid\=4c749929371213cd2b3c534b601a3b5b" />
+        <env name="DBUS_STARTER_BUS_TYPE" value="session" />
+        <env name="DEFAULTS_PATH" value="/usr/share/gconf/ubuntu.default.path" />
+        <env name="DESKTOP_SESSION" value="ubuntu" />
+        <env name="DISPLAY" value=":1" />
+        <env name="GDMSESSION" value="ubuntu" />
+        <env name="GNOME_DESKTOP_SESSION_ID" value="this-is-deprecated" />
+        <env name="GNOME_SHELL_SESSION_MODE" value="ubuntu" />
+        <env name="GNOME_TERMINAL_SCREEN" value="/org/gnome/Terminal/screen/d7ab2645_fc1a_4401_84a2_a7d506e0285f" />
+        <env name="GNOME_TERMINAL_SERVICE" value=":1.146" />
+        <env name="GPG_AGENT_INFO" value="/run/user/1000/gnupg/S.gpg-agent:0:1" />
+        <env name="GTK_MODULES" value="gail:atk-bridge" />
+        <env name="HOME" value="$PROJECT_DIR$/.." />
+        <env name="IM_CONFIG_PHASE" value="1" />
+        <env name="INVOCATION_ID" value="e783e77b830744088231bfadb199d7ae" />
+        <env name="JOURNAL_STREAM" value="8:55686" />
+        <env name="LANG" value="en_US.UTF-8" />
+        <env name="LC_ADDRESS" value="az_IR" />
+        <env name="LC_IDENTIFICATION" value="az_IR" />
+        <env name="LC_MEASUREMENT" value="az_IR" />
+        <env name="LC_MONETARY" value="az_IR" />
+        <env name="LC_NAME" value="az_IR" />
+        <env name="LC_NUMERIC" value="az_IR" />
+        <env name="LC_PAPER" value="az_IR" />
+        <env name="LC_TELEPHONE" value="az_IR" />
+        <env name="LC_TIME" value="az_IR" />
+        <env name="LESSCLOSE" value="/usr/bin/lesspipe %s %s" />
+        <env name="LESSOPEN" value="| /usr/bin/lesspipe %s" />
+        <env name="LOGNAME" value="alireza" />
+        <env name="LS_COLORS" value="rs\=0:di\=01;34:ln\=01;36:mh\=00:pi\=40;33:so\=01;35:do\=01;35:bd\=40;33;01:cd\=40;33;01:or\=40;31;01:mi\=00:su\=37;41:sg\=30;43:ca\=30;41:tw\=30;42:ow\=34;42:st\=37;44:ex\=01;32:*.tar\=01;31:*.tgz\=01;31:*.arc\=01;31:*.arj\=01;31:*.taz\=01;31:*.lha\=01;31:*.lz4\=01;31:*.lzh\=01;31:*.lzma\=01;31:*.tlz\=01;31:*.txz\=01;31:*.tzo\=01;31:*.t7z\=01;31:*.zip\=01;31:*.z\=01;31:*.dz\=01;31:*.gz\=01;31:*.lrz\=01;31:*.lz\=01;31:*.lzo\=01;31:*.xz\=01;31:*.zst\=01;31:*.tzst\=01;31:*.bz2\=01;31:*.bz\=01;31:*.tbz\=01;31:*.tbz2\=01;31:*.tz\=01;31:*.deb\=01;31:*.rpm\=01;31:*.jar\=01;31:*.war\=01;31:*.ear\=01;31:*.sar\=01;31:*.rar\=01;31:*.alz\=01;31:*.ace\=01;31:*.zoo\=01;31:*.cpio\=01;31:*.7z\=01;31:*.rz\=01;31:*.cab\=01;31:*.wim\=01;31:*.swm\=01;31:*.dwm\=01;31:*.esd\=01;31:*.jpg\=01;35:*.jpeg\=01;35:*.mjpg\=01;35:*.mjpeg\=01;35:*.gif\=01;35:*.bmp\=01;35:*.pbm\=01;35:*.pgm\=01;35:*.ppm\=01;35:*.tga\=01;35:*.xbm\=01;35:*.xpm\=01;35:*.tif\=01;35:*.tiff\=01;35:*.png\=01;35:*.svg\=01;35:*.svgz\=01;35:*.mng\=01;35:*.pcx\=01;35:*.mov\=01;35:*.mpg\=01;35:*.mpeg\=01;35:*.m2v\=01;35:*.mkv\=01;35:*.webm\=01;35:*.ogm\=01;35:*.mp4\=01;35:*.m4v\=01;35:*.mp4v\=01;35:*.vob\=01;35:*.qt\=01;35:*.nuv\=01;35:*.wmv\=01;35:*.asf\=01;35:*.rm\=01;35:*.rmvb\=01;35:*.flc\=01;35:*.avi\=01;35:*.fli\=01;35:*.flv\=01;35:*.gl\=01;35:*.dl\=01;35:*.xcf\=01;35:*.xwd\=01;35:*.yuv\=01;35:*.cgm\=01;35:*.emf\=01;35:*.ogv\=01;35:*.ogx\=01;35:*.aac\=00;36:*.au\=00;36:*.flac\=00;36:*.m4a\=00;36:*.mid\=00;36:*.midi\=00;36:*.mka\=00;36:*.mp3\=00;36:*.mpc\=00;36:*.ogg\=00;36:*.ra\=00;36:*.wav\=00;36:*.oga\=00;36:*.opus\=00;36:*.spx\=00;36:*.xspf\=00;36:" />
+        <env name="MANAGERPID" value="2925" />
+        <env name="MANDATORY_PATH" value="/usr/share/gconf/ubuntu.mandatory.path" />
+        <env name="OLDPWD" value="$APPLICATION_HOME_DIR$/bin" />
+        <env name="PATH" value="$PROJECT_DIR$/../.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin" />
+        <env name="PWD" value="$APPLICATION_HOME_DIR$/bin" />
+        <env name="QT_ACCESSIBILITY" value="1" />
+        <env name="QT_IM_MODULE" value="ibus" />
+        <env name="SESSION_MANAGER" value="local/alireza:@/tmp/.ICE-unix/3138,unix/alireza:/tmp/.ICE-unix/3138" />
+        <env name="SHELL" value="/bin/bash" />
+        <env name="SHLVL" value="1" />
+        <env name="SSH_AGENT_PID" value="3103" />
+        <env name="SSH_AUTH_SOCK" value="/run/user/1000/keyring/ssh" />
+        <env name="TERM" value="xterm-256color" />
+        <env name="USER" value="alireza" />
+        <env name="USERNAME" value="alireza" />
+        <env name="VTE_VERSION" value="6003" />
+        <env name="WINDOWPATH" value="2" />
+        <env name="XAUTHORITY" value="/run/user/1000/gdm/Xauthority" />
+        <env name="XDG_CONFIG_DIRS" value="/etc/xdg/xdg-ubuntu:/etc/xdg" />
+        <env name="XDG_CURRENT_DESKTOP" value="ubuntu:GNOME" />
+        <env name="XDG_DATA_DIRS" value="/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop" />
+        <env name="XDG_MENU_PREFIX" value="gnome-" />
+        <env name="XDG_RUNTIME_DIR" value="/run/user/1000" />
+        <env name="XDG_SESSION_CLASS" value="user" />
+        <env name="XDG_SESSION_DESKTOP" value="ubuntu" />
+        <env name="XDG_SESSION_TYPE" value="x11" />
+        <env name="XMODIFIERS" value="@im\=ibus" />
+        <env name="_" value="./pycharm.sh" />
+        <env name="DJANGO_SETTINGS_MODULE" value="helpdesk.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../Workspace/django3-helpdesk/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8586" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e6fa13f-eb5e-482e-a2ac-b5c6a1b9da2d" name="Default Changelist" comment="" />
+      <created>1612340469306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612340469306</updated>
+      <workItem from="1612340470497" duration="10702000" />
+      <workItem from="1612453631255" duration="3000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
