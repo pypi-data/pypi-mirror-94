@@ -1,0 +1,3 @@
+[console_scripts]
+dry=drytoml.app:main
+
