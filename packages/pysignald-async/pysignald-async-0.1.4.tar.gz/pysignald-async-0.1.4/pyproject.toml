@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pysignald-async"
+version = "0.1.4"
+description = "Python bindings for signald"
+authors = ["Nicolas Cedilnik <nicoco@nicoco.fr>"]
+readme = "README.md"
+homepage = "https://gitlab.com/nicocool84/pysignald-async"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4"
+pytest-asyncio = "*"
+black = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
