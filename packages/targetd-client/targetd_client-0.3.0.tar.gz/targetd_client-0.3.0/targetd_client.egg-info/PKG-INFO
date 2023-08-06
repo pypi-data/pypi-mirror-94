@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: targetd-client
+Version: 0.3.0
+Summary: A client library for targetd
+Home-page: https://gitlab.com/Arcaik/targetd_client
+Author: Johan Fleury
+Author-email: jfleury@arcaik.net
+License: OSI Approved :: Apache Software License
+Description: # targetd-client
+        
+        targetd-client is a client library for the targetd API.
+        
+        ## Usage
+        
+        Using this library is pretty simple:
+        
+        ```
+        from targetd_client import TargetdClient
+        
+        targetd = TargetdClient("https://example.com:18700", "username", "password")
+        print(targetd.vol_list())
+        ```
+        
+        ## Contributing
+        
+        This library is [Free Software](LICENCE) and every contributions are welcome.
+        
+        Please note that this project is released with a [Contributor Code of
+        Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to
+        abide by its terms.
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System
+Classifier: Topic :: System :: Filesystems
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: cli

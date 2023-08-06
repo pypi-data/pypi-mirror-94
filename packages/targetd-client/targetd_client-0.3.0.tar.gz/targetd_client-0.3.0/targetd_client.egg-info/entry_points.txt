@@ -1,0 +1,3 @@
+[console_scripts]
+targetdctl = targetd_client.cli:main [cli]
+
