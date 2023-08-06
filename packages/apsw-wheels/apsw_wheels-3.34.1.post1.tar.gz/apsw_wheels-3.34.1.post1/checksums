@@ -1,0 +1,33 @@
+# This file contains checksums/hashes of SQLite so that we can verify
+# downloads using fetch command to setup.py have not been
+# tampered with.  See https://rogerbinns.github.io/apsw/build.html#additional-setup-py-flags
+# for information on setup.py flags.
+
+# Format is URL length SHA1 MD5 all on one line.  Yes SHA1 and MD5 are
+# considered weakened, but it would take a fairly incredible feat to
+# come up with something that has the same length and SHA1 and MD5
+# hashes.  This extra checking mechanism is to give you a little bit
+# more peace of mind because the SQLite releases are not signed in any
+# way.
+
+https://sqlite.org/2020/sqlite-amalgamation-3310100.zip    2389909 a58e91a39b7b4ab720dbc843c201fb6a18eaf32b 2b7bfcdd97dc281903a9aee966213fe4
+https://sqlite.org/2020/sqlite-autoconf-3310100.tar.gz 2887243 0c30f5b22152a8166aa3bebb0f4bc1f3e9cc508b 2d0a553534c521504e3ac3ad3b90f125
+https://sqlite.org/2020/sqlite-amalgamation-3310000.zip    2389710 d31831b4ac9f31e9c77aa52156dc4ff48a48a966 94373c4a03332d97bdd7ffb47abed395
+https://sqlite.org/2020/sqlite-autoconf-3310000.tar.gz 2887038 8488afaa1cb452a1ac7ee4db1505eaef60341ab2 192fa6d1b1bed70c1d0c7fa571ae6c9f
+
+https://sqlite.org/2020/sqlite-amalgamation-3320100.zip    2405989 e0b965d2db1b957935b2d6b4e82d4726fc05e8ff 9ce1caa8272dbe042c28d6b4cb9eb0ed
+https://sqlite.org/2020/sqlite-autoconf-3320100.tar.gz 2903022 3d34d86ef726b66edeb0b93b2a4c0d036ea8dcf3 bc7afc06f1e30b09ac930957af68d723
+https://sqlite.org/2020/sqlite-amalgamation-3320000.zip    2405468 b55939b50d277aa1146f91a76bf9de200942f5d3 c624c1e42b0136f4cd242fe752c5363f
+https://sqlite.org/2020/sqlite-autoconf-3320000.tar.gz 2902505 3fe480c40c83a911ab4174625f14c434936d0b6c 33a6a4fbca3d71fd78d5be016c759116
+https://sqlite.org/2020/sqlite-amalgamation-3320200.zip   2406011 3a9cd8b17c4724be61bc05f3c5e81bcdd78db0fe 1eccea18d248eb34c7378b2b3f63f1db
+https://sqlite.org/2020/sqlite-autoconf-3320200.tar.gz 2903050 429e3f2d0b16a95ad1025a97b2a328d0b4037575 eb498918a33159cdf8104997aad29e83
+https://sqlite.org/2020/sqlite-amalgamation-3320300.zip 2407456 0c805bea134712a903290a26b2a61c3a8a3bd8cc e65c66ca4180ca2681cc31a8fcc2ff9e
+https://sqlite.org/2020/sqlite-autoconf-3320300.tar.gz 2904404 ea14ef2dc4cc7fcbc5ebbb018d3a03faa3a41cb4 2e3911a3c15e85c2f2d040154bbe5ce3
+
+https://sqlite.org/2020/sqlite-amalgamation-3330000.zip 2417079 5b0a95fc6090499c0cdf7f15fcec9c132f8e021e 944829c3d88a958be935480b8e56b1fb
+https://sqlite.org/2020/sqlite-autoconf-3330000.tar.gz 2913759 d63f3ce52cb295d62d09fc2ad8f2d29c35e1645f 842a8a100d7b01b09e543deb2b7951dd
+
+https://sqlite.org/2020/sqlite-amalgamation-3340000.zip 2433596 0b664afaea760e5f4e675ac2afc80c1e65090af2 d7cb416edf7ad932b14436e68f4c639e
+https://sqlite.org/2020/sqlite-autoconf-3340000.tar.gz 2930085 1544957cf4bcc9606aef541054b1cb59480a4b4e 7f33c9db7b713957fcb9271fe9049fef
+https://sqlite.org/2021/sqlite-amalgamation-3340100.zip 2433624 adf5f5f2b859a9fcbf5fdf6f87b2cd42949c267c fc92d9275d9baa483c7199f44b86d4ae
+https://sqlite.org/2021/sqlite-autoconf-3340100.tar.gz 2930089 c20286e11fe5c2e3712ce74890e1692417de6890 14dca9d44fb6a57f6521c1ace4be5a68
