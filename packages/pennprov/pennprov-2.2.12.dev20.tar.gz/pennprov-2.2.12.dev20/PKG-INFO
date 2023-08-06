@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: pennprov
+Version: 2.2.12.dev20
+Summary: Habitat repository and authorization API
+Home-page: https://bitbucket.org/penndb/pennprov
+Author: UNKNOWN
+Author-email: zives@seas.upenn.edu
+License: UNKNOWN
+Description:     Habitat API  # noqa: E501
+            
+Keywords: Swagger,Habitat repository and authorization API
+Platform: UNKNOWN
