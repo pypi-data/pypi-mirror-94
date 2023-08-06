@@ -1,0 +1,8 @@
+smart_open
+pyyaml
+
+[test]
+boto3
+moto[s3]
+pytest
+pytest-cov
