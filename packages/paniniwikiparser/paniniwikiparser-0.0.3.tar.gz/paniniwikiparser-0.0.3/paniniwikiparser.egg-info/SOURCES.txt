@@ -1,0 +1,16 @@
+README.md
+setup.py
+paniniwikiparser/__init__.py
+paniniwikiparser.egg-info/PKG-INFO
+paniniwikiparser.egg-info/SOURCES.txt
+paniniwikiparser.egg-info/dependency_links.txt
+paniniwikiparser.egg-info/requires.txt
+paniniwikiparser.egg-info/top_level.txt
+paniniwikiparser/common/__init__.py
+paniniwikiparser/common/preprocesstext.py
+paniniwikiparser/wiki/__init__.py
+paniniwikiparser/wiki/data/__init__.py
+paniniwikiparser/wiki/data/extractor.py
+paniniwikiparser/wiki/db/__init__.py
+paniniwikiparser/wiki/db/db_config.py
+paniniwikiparser/wiki/db/dbinsertion.py
