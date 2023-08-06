@@ -1,0 +1,3 @@
+[console_scripts]
+hypermodern-python-course=hypermodern_python_course.console:main
+
