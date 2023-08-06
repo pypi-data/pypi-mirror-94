@@ -1,0 +1,89 @@
+- model: lavender.player
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$150000$LwVawqypT6vQ$yp0Ix6EJaz9bGK+cwNIZdYjCRyuMm3wv95PmWTpiDts=
+    last_login: 2019-06-25 00:27:43.781438+00:00
+    is_superuser: true
+    username: admin
+    first_name: ''
+    last_name: ''
+    email: admin@example.com
+    is_staff: true
+    is_active: true
+    date_joined: 2019-06-24 20:38:47+00:00
+    groups: []
+    user_permissions: []
+    packages:
+    - 1
+- model: lavender.player
+  pk: 2
+  fields:
+    password: pbkdf2_sha256$150000$ecUA3TkyyOsx$dqC+GlRSDFYhejCql2dXSj0lIUk7VpZkvQ8y0VogpSk=
+    last_login: 2019-06-25 00:27:25.144537+00:00
+    is_superuser: false
+    username: user
+    first_name: ''
+    last_name: ''
+    email: user@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2019-06-25 00:27:24.365738+00:00
+    groups: []
+    user_permissions: []
+    packages:
+    - 1
+- model: lavender.loghistory
+  pk: 1
+  fields:
+    player: 1
+    date: 2019-06-24 23:50:59.029372+00:00
+    source: site
+- model: lavender.loghistory
+  pk: 2
+  fields:
+    player: 2
+    date: 2019-06-25 00:27:25.121134+00:00
+    source: site
+- model: lavender.loghistory
+  pk: 3
+  fields:
+    player: 1
+    date: 2019-06-25 00:27:43.775183+00:00
+    source: site
+- model: lavender.token
+  pk: 1
+  fields:
+    player: 1
+    access: '1'
+    client: '1'
+    created: 2019-06-25 00:31:21.656000+00:00
+- model: lavender.token
+  pk: 2
+  fields:
+    player: 2
+    access: '2'
+    client: '2'
+    created: 2019-06-25 00:31:37.512000+00:00
+- model: lavender.gamelog
+  pk: 1
+  fields:
+    player: 1
+    date: 2019-06-25 00:11:07+00:00
+    log_type: test
+    url: https://paste.mc4ep.org/podinuzowa
+- model: lavender.package
+  pk: 1
+  fields:
+    name: altiore
+    version: '1.0'
+    title: MC4EP 1.12.2
+    location: https://packages.mc4ep.org/altiore/index.json
+    is_default: true
+- model: lavender.package
+  pk: 2
+  fields:
+    name: somnium
+    version: '1.0'
+    title: MC 1.7.10
+    location: https://packages.mc4ep.org/somnium/index.json
+    is_default: false
