@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: notesave
+Version: 1.0.6
+Summary:  A CLI for saving note locally and online
+Home-page: https://github.com/ninjamar/NoteSave
+Author: ninjamar
+Author-email: example@example.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
