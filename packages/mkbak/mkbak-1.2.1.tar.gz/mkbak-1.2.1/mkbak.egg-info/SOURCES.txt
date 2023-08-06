@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mkbak/__init__.py
+mkbak/__main__.py
+mkbak.egg-info/PKG-INFO
+mkbak.egg-info/SOURCES.txt
+mkbak.egg-info/dependency_links.txt
+mkbak.egg-info/entry_points.txt
+mkbak.egg-info/requires.txt
+mkbak.egg-info/top_level.txt

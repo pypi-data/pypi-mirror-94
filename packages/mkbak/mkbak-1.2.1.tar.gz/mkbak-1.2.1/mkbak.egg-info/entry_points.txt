@@ -1,0 +1,3 @@
+[console_scripts]
+mkbak = mkbak.__main__:main
+
