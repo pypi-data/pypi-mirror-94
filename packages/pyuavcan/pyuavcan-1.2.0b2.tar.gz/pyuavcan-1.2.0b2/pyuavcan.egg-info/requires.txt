@@ -1,0 +1,12 @@
+nunavut~=1.0
+numpy<1.20,~=1.17
+
+[transport_can_pythoncan]
+python-can[serial]~=3.3
+
+[transport_serial]
+pyserial~=3.4
+cobs~=1.1.4
+
+[transport_udp]
+libpcap<2.0.0,>=1.10.0b15
