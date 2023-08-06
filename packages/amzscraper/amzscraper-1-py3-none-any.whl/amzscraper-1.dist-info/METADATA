@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: amzscraper
+Version: 1
+Summary: Some very basic codes with very limited uses. AMZ EXTRACTER
+Home-page: UNKNOWN
+Author: ROHIT_PRO_04
+Author-email: proboy440@gmail.com
+License: MIT
+Keywords: SCRAPER
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+Change Log
+
+
+==========
+
+1.0.0 (10-02-2021)
+
+-----------------
+
+-First Release
+
+
+
