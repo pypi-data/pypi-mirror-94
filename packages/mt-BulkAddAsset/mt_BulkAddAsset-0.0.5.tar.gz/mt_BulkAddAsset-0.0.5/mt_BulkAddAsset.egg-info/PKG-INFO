@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mt-BulkAddAsset
+Version: 0.0.5
+Summary: A package for adding assets to Met/Track
+Home-page: UNKNOWN
+Author: mole1000
+Author-email: mole1000@protonmail.com
+License: UNKNOWN
+Description: #mt_ODBC
+        
+        This is a package for the ODBC wrapper for MaxTrack.
+        [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+        to write content.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: testing
