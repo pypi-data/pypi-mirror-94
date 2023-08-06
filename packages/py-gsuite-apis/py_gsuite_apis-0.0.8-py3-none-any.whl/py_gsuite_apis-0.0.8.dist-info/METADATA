@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: py-gsuite-apis
+Version: 0.0.8
+Summary: Standarize and simplify requests to various GSuite APIs
+Home-page: https://github.com/jastor11/py-gsuite-apis
+Author: Jeff Astor
+Author-email: jeff@astor.io
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic[dotenv] (==1.7.3)
+Requires-Dist: pandas (==1.2.1)
+Requires-Dist: google-api-python-client (==1.12.8)
+Requires-Dist: google-auth-oauthlib (==0.4.0)
+Requires-Dist: google-auth-httplib2 (==0.0.4)
+Requires-Dist: google-auth (==1.24.0)
+Requires-Dist: typing-extensions (==3.7.4.3)
+
+# Py-GSuite-APIs
+
+This package is meant to standardize and simplify working with Google Sheets, Slides, and Drive APIs through utility classes and functions. It also seeks to provide an interactive environment to inspect and valdiate the shape/structure of requests by using Pydantic models that mirror the Classes implemented by Google APIs.
+
+## NOTE:
+
+- This repo is under active development and is not yet intended for production.
+- Python >=3.7 required
+
+## Development
+
+Create a new conda environment:
+
+```bash
+conda env create -f environment.yml && conda activate pyGsuiteApis
+```
+
+And install the appropriate packages:
+
+```bash
+python setup.py develop
+```
+
+## Upload
+
+Build wheels using `setup.py` and python.
+
+```bash
+python3 setup.py sdist bdist_wheel
+```
+
+Then upload it with twine.
+
+```bash
+python3 -m twine upload --skip-existing dist/*
+```
+
+
