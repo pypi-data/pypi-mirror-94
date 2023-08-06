@@ -1,0 +1,10 @@
+numpy
+torch
+bpemb
+fasttext
+requests
+pymagnitude-light
+poutyne
+
+[colorama]
+colorama>=0.4.3
