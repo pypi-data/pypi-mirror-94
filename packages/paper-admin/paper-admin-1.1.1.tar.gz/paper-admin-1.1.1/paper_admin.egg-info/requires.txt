@@ -1,0 +1,7 @@
+Django>=2.0
+Pillow
+django-logentry-admin>=1.0
+
+[full]
+django-solo>1.1
+django-mptt>0.9
