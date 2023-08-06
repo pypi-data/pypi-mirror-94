@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: toppy
+Version: 0.1.3
+Summary: Graphical system resources monitor in python
+Home-page: https://github.com/gabay/toppy
+Author: Roi Gabay
+Author-email: roigby@gmail.com
+License: MIT
+Description: # TOPPY - Graphical system resources monitor in python
+        
+        Toppy is a graphical system resource monitor that uses matplotlib for plotting.
+        
+        Currently, displays 5 graphs:
+        - CPU utilization
+        - GPU utilization
+        - Memory usage
+        - Device IO
+        - Network IO
+        
+        ## Installation
+        
+        `pip install toppy`
+        
+        ## Execution
+        
+        `python -m toppy`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
