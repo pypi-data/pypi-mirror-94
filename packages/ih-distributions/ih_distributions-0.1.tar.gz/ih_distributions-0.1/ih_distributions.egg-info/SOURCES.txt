@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+ih_distributions/Binomialdistribution.py
+ih_distributions/Gaussiandistribution.py
+ih_distributions/Generaldistribution.py
+ih_distributions/__init__.py
+ih_distributions.egg-info/PKG-INFO
+ih_distributions.egg-info/SOURCES.txt
+ih_distributions.egg-info/dependency_links.txt
+ih_distributions.egg-info/not-zip-safe
+ih_distributions.egg-info/top_level.txt
