@@ -1,0 +1,12 @@
+dupecheck/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dupecheck/chunks.py,sha256=0cNhb1u_nLRGuOh8yXQUjEdbl1KLnMPoUQXjxsjoCJo,2189
+dupecheck/contractions_list.py,sha256=aXNtVbF_rVsxMBBmdJZoIXu8US-796ogZN6KXtlnbD4,2836
+dupecheck/preprocess.py,sha256=GWmmJu3F7FZeYQoMLmzmPnsCrnmWsCsGfoGwVJuF2NY,9085
+dupecheck/sliding_window.py,sha256=jTkITIqOUJIOpudl_4plW95wfng472MJPIR8BbAgwrI,1637
+dupecheck/sliding_window2.py,sha256=3A41rptpYZa4Plkz_D3xRkzB6wrWAn0_Qi3DeHVkirw,2159
+dupecheck/utils.py,sha256=69csAzTm4bxc5HyKrr4oMOcDZusD7a6sMjev_UYOmqI,51
+dupecheck-0.7.1.dist-info/LICENSE.md,sha256=EllF2LLuY1jMmf2JrBlrgTOnYLo_dy-oVF0YlWGhdDs,1075
+dupecheck-0.7.1.dist-info/METADATA,sha256=pAalZGlMnwUCdTysE2kkwBANEd6GiBi3Iz1tgbFk3UA,2863
+dupecheck-0.7.1.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+dupecheck-0.7.1.dist-info/top_level.txt,sha256=6aLptQVcYcPedPotW_AeaoWyGabP6SuQok1l5lpkzeg,10
+dupecheck-0.7.1.dist-info/RECORD,,
