@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "drf-kit"
+version = "1.2.3"
+description = "DRF Toolkit"
+authors = ["eduK <pd@eduk.com>"]
+packages = [
+    { include = "drf_kit" },
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^3"
+djangorestframework = "^3"
+django-filter = "^2"
+django-ordered-model = "^3"
+drf-extensions = "^0"
+
+
+[tool.poetry.dev-dependencies]
+pylint = "*"
+nose = "^1"
+coverage = "*"
+
+
+[build-system]
+requires = ["poetry^1"]
+build-backend = "poetry.masonry.api"
