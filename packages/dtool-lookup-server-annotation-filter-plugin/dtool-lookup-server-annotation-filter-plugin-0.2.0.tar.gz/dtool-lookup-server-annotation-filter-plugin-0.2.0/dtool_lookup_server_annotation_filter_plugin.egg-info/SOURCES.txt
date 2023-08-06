@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+dtool_lookup_server_annotation_filter_plugin/__init__.py
+dtool_lookup_server_annotation_filter_plugin/utils.py
+dtool_lookup_server_annotation_filter_plugin.egg-info/PKG-INFO
+dtool_lookup_server_annotation_filter_plugin.egg-info/SOURCES.txt
+dtool_lookup_server_annotation_filter_plugin.egg-info/dependency_links.txt
+dtool_lookup_server_annotation_filter_plugin.egg-info/entry_points.txt
+dtool_lookup_server_annotation_filter_plugin.egg-info/requires.txt
+dtool_lookup_server_annotation_filter_plugin.egg-info/top_level.txt
