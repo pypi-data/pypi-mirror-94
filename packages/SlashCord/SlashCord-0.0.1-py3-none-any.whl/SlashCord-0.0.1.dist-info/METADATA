@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: SlashCord
+Version: 0.0.1
+Summary: Discord
+Home-page: https://slashcord.readthedocs.io/en/latest/
+Author: WardPearce
+Author-email: wardpearce@protonmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp[speedups]
+Requires-Dist: asynctest
+Requires-Dist: sphinxcontrib-trio
+Requires-Dist: sphinx-material
+
+# Wrapper
+Async &amp; Sync wrapper for Discord
+
+
