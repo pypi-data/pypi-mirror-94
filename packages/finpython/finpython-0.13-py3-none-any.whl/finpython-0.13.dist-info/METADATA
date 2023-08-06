@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: finpython
+Version: 0.13
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Jamiel Sheikh
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: datetime
+Requires-Dist: requests
+
+UNKNOWN
+
+
