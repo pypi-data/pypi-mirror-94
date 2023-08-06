@@ -1,0 +1,4 @@
+[console_scripts]
+daijin = Mikado.daijin.__main__:main
+mikado = Mikado.__main__:main
+
