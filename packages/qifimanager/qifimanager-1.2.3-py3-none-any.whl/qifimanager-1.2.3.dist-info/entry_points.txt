@@ -1,0 +1,3 @@
+[console_scripts]
+qifi_manager = qifimanager.__init__:run_server
+
