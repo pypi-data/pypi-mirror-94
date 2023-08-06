@@ -1,0 +1,12 @@
+README.md
+setup.py
+verkada_py/__init__.py
+verkada_py/camera.py
+verkada_py/organization.py
+verkada_py/shared.py
+verkada_py.egg-info/PKG-INFO
+verkada_py.egg-info/SOURCES.txt
+verkada_py.egg-info/dependency_links.txt
+verkada_py.egg-info/not-zip-safe
+verkada_py.egg-info/requires.txt
+verkada_py.egg-info/top_level.txt
