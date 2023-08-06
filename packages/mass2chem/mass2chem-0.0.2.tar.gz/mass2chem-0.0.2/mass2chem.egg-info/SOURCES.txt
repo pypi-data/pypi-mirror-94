@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+mass2chem/__init__.py
+mass2chem/adducts.py
+mass2chem/annotate.py
+mass2chem/contaminants.py
+mass2chem/formula2mass.py
+mass2chem/reaction_diff.py
+mass2chem.egg-info/PKG-INFO
+mass2chem.egg-info/SOURCES.txt
+mass2chem.egg-info/dependency_links.txt
+mass2chem.egg-info/requires.txt
+mass2chem.egg-info/top_level.txt
+mass2chem/identifiers/__init__.py

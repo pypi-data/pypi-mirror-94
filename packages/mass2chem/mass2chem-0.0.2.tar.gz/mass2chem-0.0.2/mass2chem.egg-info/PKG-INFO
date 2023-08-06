@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: mass2chem
+Version: 0.0.2
+Summary: Common utilities for interpreting mass spectrometry data
+Home-page: https://github.com/shuzhao-li/mass2chem
+Author: Shuzhao Li
+Author-email: shuzhao.li@gmail.com
+License: BSD
+Description: # mass2chem - common utilities in interpreting mass spectrometry data
+        
+        Annotation and Inferrence
+        
+        ## to include
+        
+        * Handling chemical formula via pychemy (which needs update to high res data)
+        
+        * A list of common mass values, including contaminants
+        
+        * A list of common adducts, rules, while they are more directly ready in future Azimuth
+        
+        * Chemical similary computing
+        
+        * Reaction inference, including mass diff corresponding to common reactions
+        
+        * Annotation via in-house libraries 
+        
+        * hook/adaptor to other tools
+        
+        
+        ## Added basic formula based calculations
+        
+        Note: RE based formula parsing is still limited.
+        
+        Pychemy isn't good fit, as 
+        1) high-resolution calculation needs update
+        2) Open babel binding is not worthy the trouble
+        
+        Included as stripped version in "mass2chem.chem" for now.
+        
+        
+        ## Related
+        
+        https://github.com/shuzhao-li/pychemy
+        
+        https://github.com/opencobra/cobrapy/blob/devel/cobra/core/formula.py (they are using average molecular weight, not mass spec oriented)
+        
+        https://github.com/shuzhao-li/Azimuth (Private)
+        
+        
+Keywords: chemistry,bioinformatics,mass spectrometry
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3
+Description-Content-Type: text/markdown
