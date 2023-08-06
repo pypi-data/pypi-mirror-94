@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: datavita-python-sdk
+Version: 0.0.3
+Summary: DataVita Python SDK
+Home-page: https://www.datavita.com.cn
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: crcmod (>=1.7)
+Requires-Dist: urllib3 (>=1.26.2pycryptodome>=3.4.7)
+Requires-Dist: pandas (>=1.2.1)
+Requires-Dist: six
+
+华创证券VitaX Python工具套件
+
+
