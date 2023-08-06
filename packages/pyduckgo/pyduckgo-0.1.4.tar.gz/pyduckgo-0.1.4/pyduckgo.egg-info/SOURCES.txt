@@ -1,0 +1,9 @@
+README.md
+setup.py
+pyduckgo/__init__.py
+pyduckgo/core.py
+pyduckgo.egg-info/PKG-INFO
+pyduckgo.egg-info/SOURCES.txt
+pyduckgo.egg-info/dependency_links.txt
+pyduckgo.egg-info/requires.txt
+pyduckgo.egg-info/top_level.txt
