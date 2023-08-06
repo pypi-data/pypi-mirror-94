@@ -1,0 +1,12 @@
+README.md
+setup.py
+aioevt/__init__.py
+aioevt/event.py
+aioevt/manager.py
+aioevt.egg-info/PKG-INFO
+aioevt.egg-info/SOURCES.txt
+aioevt.egg-info/dependency_links.txt
+aioevt.egg-info/top_level.txt
+tests/__init__.py
+tests/test_event.py
+tests/test_manager.py
