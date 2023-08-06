@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+pyfuck/Brainfuck.py
+pyfuck/__init__.py
+pyfuck/fuck.py
+pyfuck.egg-info/PKG-INFO
+pyfuck.egg-info/SOURCES.txt
+pyfuck.egg-info/dependency_links.txt
+pyfuck.egg-info/requires.txt
+pyfuck.egg-info/top_level.txt
