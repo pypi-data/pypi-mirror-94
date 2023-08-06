@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+ParlPy.egg-info/PKG-INFO
+ParlPy.egg-info/SOURCES.txt
+ParlPy.egg-info/dependency_links.txt
+ParlPy.egg-info/top_level.txt
+parlpy/__init__.py
+parlpy/bills/__init__.py
+parlpy/bills/bill_list_fetcher.py
+parlpy/utils/__init__.py
