@@ -1,0 +1,9 @@
+README.md
+setup.py
+sensortransformer/__init__.py
+sensortransformer/set_network.py
+sensortransformer.egg-info/PKG-INFO
+sensortransformer.egg-info/SOURCES.txt
+sensortransformer.egg-info/dependency_links.txt
+sensortransformer.egg-info/requires.txt
+sensortransformer.egg-info/top_level.txt

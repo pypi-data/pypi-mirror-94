@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: sensortransformer
+Version: 0.1.6
+Summary: Transformer Network for Time-Series and Wearable Sensor Data
+Home-page: https://github.com/aqibsaeed/Sensor-Transformer
+Author: Aaqib Saeed
+Author-email: aqibsaeed@protonmail.com
+License: MIT
+Download-URL: https://pypi.org/project/sensor_transformer/
+Description: ## Sensor Transformer (SeT)
+        Adaptation of <a href="https://arxiv.org/pdf/2010.11929.pdf">Vision Transformer (ViT)</a> for Time-Series and Sensor Data in Tensorflow. 
+        
+        #### Usage
+        
+        ```python
+        import argparse
+        import tensorflow as tf
+        import sensortransformer import set_network
+        
+        parser = argparse.ArgumentParser()
+        parser.add_argument("--signal-length", type=int)
+        parser.add_argument("--segment-size", type=int)
+        parser.add_argument("--num_channels", type=int)
+        parser.add_argument("--num_classes", type=int)
+        args = parser.parse_args()
+        
+        """
+        TF-Data objects. Instances must be of shape 
+          x = (batch, signal_length, num_channels), y = (batch, num_classes)
+        """
+        ds_train, ds_test = ...
+        
+        model = set_network.SensorTransformer(
+                signal_length=args.signal_length,
+                segment_size=args.segment_size,
+                channels=args.num_channels,
+                num_classes=args.num_classes,
+                num_layers=4,
+                d_model=64,
+                num_heads=4,
+                mlp_dim=64,
+                dropout=0.1,
+        )
+        model.compile(
+            loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
+              optimizer=tf.keras.optimizers.Adam(),
+              metrics=[tf.keras.metrics.CategoricalAccuracy()],
+        )
+        model.fit(ds_train, epochs=50, verbose=1)
+        model.evaluate(ds_test)
+        ```
+        
+        
+        
+        
+Keywords: Transformer,Attention-Mechanism,Neural Network,Time-Series,Sensors
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
