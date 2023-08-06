@@ -1,0 +1,15 @@
+nsc/__init__.py,sha256=dn1-UxJjcXaljhbFvnUXtc85AID9M77coG72IXs4V0I,981
+nsc/__version__.py,sha256=pWD6J2i1kM80r8rCW5m-vkDacUsHasZVFDwVIuh1aAk,553
+nsc/distributions/__init__.py,sha256=3a8scdQ551gf-ARiAGV3GVL3ZJ4Va-Rj2cej7jl44o8,132
+nsc/distributions/coupled_distribution.py,sha256=pAklsyARXV6_T9ORet6LyvL9tZqCVWgty-eMXiITdMM,48924
+nsc/distributions/coupled_expotential.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsc/distributions/coupled_kullback_leibler.py,sha256=FHaUv__InwfOR7AZX71Wm7ze6IGGNpg3qnrZA-bqcqY,10325
+nsc/distributions/coupled_normal.py,sha256=x0dlK8l-476g4v_nZ3hZJYFnVva5VoRHdfGzxl8Io1Y,6152
+nsc/distributions/multivariate_coupled_normal.py,sha256=wV_IwnP2_PPd2MCNkX5F8RXeRRnZOm4sLEAjnrbh6hs,5428
+nsc/util/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+nsc/util/function.py,sha256=6E0Y3KhCN6R64xpOXMsLQ55_sxPR7jlsfEy8fIfGPIM,16309
+nsc-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+nsc-0.0.3.dist-info/METADATA,sha256=6nLcUyIVwvIakYZeLGfjH_AlSNMGhW16CNaZb_fMUlk,3577
+nsc-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+nsc-0.0.3.dist-info/top_level.txt,sha256=0CJM41czPqZ-JeE1Q_3MblHHoMnXh8tNxYmB22F6vEM,4
+nsc-0.0.3.dist-info/RECORD,,
