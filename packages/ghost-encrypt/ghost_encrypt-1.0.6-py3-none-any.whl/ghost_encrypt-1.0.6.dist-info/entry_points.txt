@@ -1,0 +1,3 @@
+[console_scripts]
+ghost = ghost.__main__:main
+
