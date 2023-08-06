@@ -1,0 +1,11 @@
+scapy
+pyshark
+dill
+hexdump
+termcolor
+construct
+netaddr
+prompt-toolkit
+texttable
+dateutils
+NetfilterQueue
