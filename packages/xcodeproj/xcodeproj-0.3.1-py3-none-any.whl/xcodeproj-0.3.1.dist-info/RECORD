@@ -1,0 +1,14 @@
+xcodeproj/__init__.py,sha256=WFHwLRy4uALLgnJZ41UJ3VCkSK4vYG71S4JOYs4oRxs,5421
+xcodeproj/buildphases.py,sha256=wyu6bGm2BOf0iLk1Bx1IFPkRMh03GbQ94ZM5Us5zEMw,3387
+xcodeproj/buildrules.py,sha256=fLhEfJ7g9r8ziPhq4CrBeTKCOyGqR2sBKvqXXz7PfPc,466
+xcodeproj/files.py,sha256=CnGwCCnIjdXO3n6InzMlwOYlkmFle-Qw0tBoua5PcQ4,848
+xcodeproj/other.py,sha256=PbZo4xf8hcpTVWnwaw-JspQ4BX0NmZxHmjKMIQA13Tw,905
+xcodeproj/pathobjects.py,sha256=nMXv4-IaQK1gizQTRaFMBzqY_uhlUtn4J5BK6e-rXDE,6747
+xcodeproj/pbxobject.py,sha256=N6o6V8-haP_WBYau_h_9TzAy7pNp_mnsQA1B3I3mmbg,1497
+xcodeproj/pbxproject.py,sha256=p_Pf3DgwhigFOqIC-kOts49BBqO6Sp6NWSKOsUSzrb4,1578
+xcodeproj/targets.py,sha256=BgTOL_stkroNZS6uhY3LaTYTm1A2XHyF5f6gRxrYpYI,3479
+xcodeproj/xcobjects.py,sha256=UoxG7eO__k8k4gLnZEOjH_-5JL1AolzBQny2q8c1KtM,2059
+xcodeproj-0.3.1.dist-info/LICENSE,sha256=ws_MuBL-SCEBqPBFl9_FqZkaaydIJmxHrJG2parhU4M,1141
+xcodeproj-0.3.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+xcodeproj-0.3.1.dist-info/METADATA,sha256=vvbO9fcWFTNS6eORKqMs0L4A6TCukdg0gSi0wL10iaU,4274
+xcodeproj-0.3.1.dist-info/RECORD,,
