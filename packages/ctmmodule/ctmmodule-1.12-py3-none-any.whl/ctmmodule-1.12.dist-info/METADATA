@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ctmmodule
+Version: 1.12
+Summary: Module to compute the power spectrum and two-point correlation function using the CTM
+Home-page: https://ctm-module.readthedocs.io
+Author: Fran Lane
+Author-email: ctmcodehelp@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: mcfit
+Requires-Dist: classylss
+Requires-Dist: scipy
+
+UNKNOWN
+
+
