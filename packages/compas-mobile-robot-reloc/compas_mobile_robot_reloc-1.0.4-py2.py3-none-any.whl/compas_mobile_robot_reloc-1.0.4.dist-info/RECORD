@@ -1,0 +1,12 @@
+compas_mobile_robot_reloc/__init__.py,sha256=9eQNeHlGcYLX2bbJ7zncvRRe5ox69LhhnFgvCv2o89M,1937
+compas_mobile_robot_reloc/_version.py,sha256=d7RrRiXi0iKTua7Qbz5_Yq8hCKPHWwd6WxDLlHWfQJ4,142
+compas_mobile_robot_reloc/arbitrary_pts_localization.py,sha256=bvdWjTsthNoLOxFayLr-xy2r-IkfEc5-XLd2ZRQy5DE,9318
+compas_mobile_robot_reloc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+compas_mobile_robot_reloc/three_pts_localization.py,sha256=lj5MRi1dFjoHqR7PqHoWvSBdIIc_YEAsq_0Yqn5io9g,1563
+compas_mobile_robot_reloc/utils.py,sha256=Mr4d-TWUaulZry73sEhzgfPQKNkMzcdx7IhlmtOMeCQ,4637
+compas_mobile_robot_reloc/xforms.py,sha256=bQyxCM-r714yZVO4HW5kdJTgABDsVYFsRmkv6bHfQ8M,3042
+compas_mobile_robot_reloc-1.0.4.dist-info/LICENSE,sha256=D_PRqFgX0Hd_Q_hfboZ6J3UZcut8VFDxt7tHlHuzl-M,1081
+compas_mobile_robot_reloc-1.0.4.dist-info/METADATA,sha256=YsWWTJrGEmAO0leueJvTG2Dj19IgGHeX2ZJ7fOyLBdU,6244
+compas_mobile_robot_reloc-1.0.4.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+compas_mobile_robot_reloc-1.0.4.dist-info/top_level.txt,sha256=KPRxv8gg-ig1CVZlXjwbDEjp-DvrmsyhI2Rh9y4LymQ,26
+compas_mobile_robot_reloc-1.0.4.dist-info/RECORD,,
