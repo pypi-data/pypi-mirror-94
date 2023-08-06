@@ -1,0 +1,7 @@
+include COPYING
+include README
+include build-ansible.sh
+include CHANGELOG-v3.rst
+include porting_guide_3.rst
+include debian/*
+recursive-include ansible_collections/ **
