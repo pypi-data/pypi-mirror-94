@@ -1,0 +1,349 @@
+# Suluoya
+
+### This is a package written by Suluoya not just for fun!
+
+pip error
+
+```python
+pip3 install --ignore-installed olefile
+
+pip3 install --ignore-installed llvmlite
+
+pip3 install --ignore-installed filelock
+```
+
+------
+
+## 1. Upgrade Suluoya
+
+```python
+import Suluoya as sly
+sly.upgrade()
+```
+
+## 2. Welcome
+
+```python
+import Suluoya as sly
+sly.welcome()
+```
+
+## 3. Print
+
+### (1)If you wanna print error prettier...
+
+```python
+import Suluoya as sly
+sly.error()
+print(1 / 0)
+```
+
+## 4. Text
+
+### (1)If you wanna get text from your clipboard...
+
+```python
+import Suluoya as sly
+sly.get_clipboard(show=True)
+a = sly.get_clipboard()
+print(a)
+```
+
+### (2)If you wanna get content from a file...
+
+Currently support 'doc','docx','ppt','pptx','txt'
+
+```python
+import Suluoya as sly
+content = sly.get_content(file=r'c:\lalala\1.docx')
+print(content)
+```
+
+### (3)get all combination from a list
+
+```python
+import Suluoya as sly
+comb=sly.combine(lists=['A', 'B', 'C'])
+```
+
+### (4)translate both English and Chinese into each other
+
+if "show=False",return instead of print
+
+```python
+import Suluoya as sly
+sly.translate(text='Welcome to use Suluoya!', show=True)
+```
+
+### (5)compare the texts
+
+accurate=True --> accurate match mode
+
+accurate=False --> fuzzy match mode
+
+show=False --> return ratio instead of print
+
+```python
+import Suluoya as sly
+sly.text_compare(text1='Suluoya', text2='suluoya', accurate=True, show=True)
+```
+
+### (6)word frequency
+
+count the number of times words appear
+
+```python
+import Suluoya as sly
+sly.word_frequency(key='Suluoya', text='Welcome to use Suluoya!', show=True)
+```
+
+## 5. Analyse
+
+### (1)If you wanna analyse your dataframe...
+
+```python
+import Suluoya as sly
+import pandas as pd
+df = pd.read_csv('https://sakai.unc.edu/access/content/group/3d1eb92e-7848-4f55-90c3-7c72a54e7e43/public/data/bycatch.csv')
+sly.report(df)
+#This will make a html,just look for and open it!
+```
+
+### (2)sentiment analysis
+
+language='C'-->Chinese
+
+language='E'-->English
+
+To download the necessary data,simply run "python -m textblob.download_corpora" before using it,if something goes wrong,then click https://zhuanlan.zhihu.com/p/272181552 or https://www.cnblogs.com/liweikuan/p/14052001.html，https://mp.weixin.qq.com/s?__biz=MzI1NzczMDIwNw==&mid=2247483777&idx=1&sn=cd985f3f7fe0472df9560de94753d86d&chksm=ea13b271dd643b67a591485d249ca9f64aaa380db3ff16c462c0d2def5ccce114e3c938b955e&token=445308227&lang=zh_CN#rd
+
+```python
+import Suluoya as sly
+sly.sentiment_analysis(text='',language='C',show=True)
+```
+
+### (3)guess gender 
+
+name should be a Chinese name!
+
+show=False --> return instead of print
+
+```python
+import Suluoya as sly
+sly.gender_guess(name='Suluoya',show=True)
+```
+
+## 6. Import
+
+If you wanna auto import some packages...
+
+use"import Suluoya.Import as SI" instead of "import pandas as pd,import numpy as np"...
+
+```python
+#pass
+import pandas as pd
+import numpy as np
+...
+df = pd.Dataframe()
+#now
+import Suluoya.Import as SI
+df = pd.Dataframe() # directly
+SI.check() # just to check your import by using SI,can be omitted
+# ps. go and see a file named "auto_imports.py"!
+```
+
+## 7. Crawl
+
+```python
+from Suluoya.crwal import slycrawl as sc
+sc=sc(url='',headers={},params={},cookies={},timeout=5)
+print(sc.url)
+print(sc.response)
+print(sc.html)
+print(sc.headers)
+print(sc.params)
+print(sc.cookies)
+'''parsel.css'''
+print(sc.selector)
+'''BeautifulSoup'''
+print(sc.soup)
+'''it will return a **dic** which contain title,text,description,keywords,tags,image,infomation and the raw_html'''
+print(sc.text)
+'''it will return a dictionary which contain text,title,html,author,image,movies,keywords and summary.'''
+print(sc.news)
+'''url links'''
+print(sc.links)
+'''pandas.read_html'''
+print(sc.tables)
+```
+
+### get proxies
+
+```python
+from Suluoya.crwal import GetProxy as gp
+proxies=gp(number=1)
+print(proxies)
+```
+
+## 8. Download
+
+```python
+from Suluoya.crwal import slydownload as sd
+sd=sd(url='')
+```
+
+### (1)download music
+
+```python
+sd.download_music(path='d:\\')
+```
+
+### (2)download video
+
+```python
+sly.download_video()
+```
+
+### (3)download anything you want with an URL
+
+```python
+sly.download()
+```
+
+### (4)download a big file
+
+```python
+sly.download_big_file()
+```
+
+## 9. QRcode...
+
+```python
+import Suluoya as sly
+```
+
+### (1)make a QRcode
+
+fill in an url or some strings in content
+
+fill in the name of the png in name
+
+```python
+sly.QRcode(content='', name='')
+```
+
+### (2)contact
+
+If you wanna contact Suluoya...
+
+```python
+sly.contact(mode='wechat')
+sly.contact(mode='qq')
+```
+
+## 9. Fun
+
+```python
+import Suluoya as sly
+```
+
+### (1)draw a heart
+
+```python
+#draw a Suluoya heart
+sly.draw_a_heart()
+#draw any hearts you want
+sly.draw_a_heart(name='any name you like')
+```
+
+### (2)xkcd
+
+```python
+#you do know what I mean!
+sly.xkcd()
+```
+
+### (3)standard time
+
+get standard time
+
+show=False --> return instead of print
+
+```python
+sly.standard_time(show=True)
+```
+
+### (4)voice synthesis
+
+really make a sound
+
+```python
+sly.voice_synthesis(text='Welcome to use Suluoya!')
+```
+
+## 10. Stock
+
+### (1)initialize
+
+```python
+import Suluoya.slystock as sk
+sk=sk()
+```
+
+### (2)correlation
+
+calculate the correlation of two lists of numbers
+
+```python
+correlation=sk.correlation(x,y)
+#x and y could not only be list but series,dataframe and array 
+```
+
+### (3)combine
+
+get all combination from a list
+
+```python
+df_combine=sk.combine(lists=['A','B','C'])
+#return a dataframe
+```
+
+### (4)stock data
+
+reference: http://baostock.com/baostock/index.php/Python_API%E6%96%87%E6%A1%A3
+
+```python
+#adjustflag：复权类型，默认不复权：3；1：后复权；2：前复权。已支持分钟线、日线、周线、月线前后复权。
+
+#frequency：数据类型，默认为d，日k线；d=日k线、w=周、m=月、5=5分钟、15=15分钟、30=30分钟、60=60分钟k线数据，不区分大小写；指数没有分钟线数据；周线每周最后一个交易日才可以获取，月线每月最后一个交易日才可以获取
+df_data = sk.get_stock(code="sh.600000", start_date='2020-07-01', end_date='2020-12-31',
+                    frequency='d', adjustflag="3",
+                    targets='date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,pctChg,isST')
+```
+
+
+
+### (5)stock infomation
+
+```python
+#If name or code or date is empty,df_info will contain all the information
+df_info=sk.get_code(name='', code='', date='')
+```
+
+### (6)calculate sharp ratio
+
+```python
+#df_sharp contains weights,risk,rate of return and sharp ratio
+#df should contains all the return data of the stock
+df_sharp = sk.sharp(df, no_risk_rate=0.45/5200)
+```
+
+### (7)investment portfolio
+
+```python
+#'save=True' means save df_result as a csv file 
+#'number=500' means generate 500 random number for each combination 
+names=['隆基股份','五粮液',...]
+df_result=sk.Markowit(names, number=500, start_date='2018-11-01', end_date='2020-12-31', frequency='w', save=True)
+```
+
