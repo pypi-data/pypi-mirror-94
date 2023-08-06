@@ -1,0 +1,28 @@
+geometry.planet = Mercury
+geometry.taa = 1.2884563838062777
+
+sticking_info.stickcoef = 0.
+sticking_info.emitfn = maxwellian
+sticking_info.accom_factor = 0
+
+SpatialDist.type = surface
+SpatialDist.longitude0 = 3.1415
+SpatialDist.longitude1 = 0
+
+SpeedDist.type = gaussian
+SpeedDist.vprob = 3.
+SpeedDist.sigma = 1.
+
+AngularDist.type = isotropic
+
+options.lifetime = 0.
+options.endtime = 36000
+options.atom = Na
+options.fullsystem = 0
+options.outeredge = 15
+options.trackloss = 1
+options.at_once = 1
+options.streamlines = 1
+options.nsteps = 1201
+options.resolution = 1e-3
+
