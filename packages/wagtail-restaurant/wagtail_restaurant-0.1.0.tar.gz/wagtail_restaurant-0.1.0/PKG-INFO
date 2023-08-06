@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: wagtail_restaurant
+Version: 0.1.0
+Summary: Wagtail CMS packages for restaurants
+Home-page: https://github.com/Zetasis/wagtail_restaurant_standart_modules
+Author: ZETASIS
+Author-email: usezeta@gmail.com
+License: BSD
+Description: # Zetasis
+        Wagtail CMS page type for creating food menus of small and medium-sized restaurants.
+        
+        ## Installation
+        ```pip install wagtail-restaurant```
+        
+        ## License
+        
+        © 2020 Zetasis
+        This repository is licensed under the MIT license. See LICENSE for details.
+Keywords: wagtail restaurant menu,wagtail restaurant,restaurant
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
