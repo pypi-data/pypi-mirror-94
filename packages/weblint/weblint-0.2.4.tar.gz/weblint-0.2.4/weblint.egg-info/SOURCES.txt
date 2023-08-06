@@ -1,0 +1,16 @@
+.gitignore
+.pre-commit-config.yaml
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+tox.ini
+.github/workflows/python.yml
+weblint/__init__.py
+weblint/_version.py
+weblint.egg-info/PKG-INFO
+weblint.egg-info/SOURCES.txt
+weblint.egg-info/dependency_links.txt
+weblint.egg-info/entry_points.txt
+weblint.egg-info/requires.txt
+weblint.egg-info/top_level.txt
