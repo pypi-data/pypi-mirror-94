@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: faust-streaming-rocksdb
+Version: 0.8.0
+Summary: Python bindings for RocksDB
+Home-page: https://github.com/twmht/python-rocksdb
+Author: Ming Hsuan Tu
+Author-email: qrnnis2623891@gmail.com
+License: BSD License
+Description: UNKNOWN
+Keywords: rocksdb
+Platform: UNKNOWN
+Provides-Extra: doc
+Provides-Extra: test
