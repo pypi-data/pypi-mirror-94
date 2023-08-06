@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pdfer/__init__.py
+pdfer/pdf.py
+pdfer.egg-info/PKG-INFO
+pdfer.egg-info/SOURCES.txt
+pdfer.egg-info/dependency_links.txt
+pdfer.egg-info/requires.txt
+pdfer.egg-info/top_level.txt
