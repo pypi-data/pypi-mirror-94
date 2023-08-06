@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: poppy
+Version: 1.0
+Summary: Physical optics propagation (wavefront diffraction) for optical simulations, particularly of telescopes.
+Home-page: https://poppy-optics.readthedocs.io/
+Author: Marshall Perrin
+Author-email: mperrin@stsci.edu
+License: BSD
+Description: (this placeholder string will be replaced automatically with poppy's top-level docstring.)
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Provides-Extra: test
+Provides-Extra: docs
