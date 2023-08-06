@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+__pkginfo__.py
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+flake8_encodings/__init__.py
+flake8_encodings/py.typed
+flake8_encodings.egg-info/PKG-INFO
+flake8_encodings.egg-info/SOURCES.txt
+flake8_encodings.egg-info/dependency_links.txt
+flake8_encodings.egg-info/entry_points.txt
+flake8_encodings.egg-info/not-zip-safe
+flake8_encodings.egg-info/requires.txt
+flake8_encodings.egg-info/top_level.txt
