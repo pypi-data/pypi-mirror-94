@@ -1,0 +1,35 @@
+- project:
+    templates:
+      - check-requirements
+      - tempest-plugin-jobs
+    check:
+      jobs:
+        - keystone-dsvm-py3-functional
+        - keystone-dsvm-py3-functional-federation-opensuse15:
+            voting: false
+        - keystone-dsvm-py3-functional-federation-opensuse15-k2k
+        - keystone-dsvm-py3-functional-ussuri
+        - keystone-dsvm-py3-functional-train
+        - keystone-dsvm-py3-functional-stein
+    gate:
+      jobs:
+        - keystone-dsvm-py3-functional
+        - keystone-dsvm-py3-functional-federation-opensuse15-k2k
+
+- job:
+    name: keystone-dsvm-py3-functional-ussuri
+    parent: keystone-dsvm-py3-functional
+    nodeset: openstack-single-node-bionic
+    override-checkout: stable/ussuri
+
+- job:
+    name: keystone-dsvm-py3-functional-train
+    parent: keystone-dsvm-py3-functional
+    nodeset: openstack-single-node-bionic
+    override-checkout: stable/train
+
+- job:
+    name: keystone-dsvm-py3-functional-stein
+    parent: keystone-dsvm-py3-functional
+    nodeset: openstack-single-node-bionic
+    override-checkout: stable/stein
