@@ -1,0 +1,1 @@
+/wix_npm_parallel_tests_runner
