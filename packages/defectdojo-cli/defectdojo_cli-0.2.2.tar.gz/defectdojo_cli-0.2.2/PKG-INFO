@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: defectdojo_cli
+Version: 0.2.2
+Summary: CLI Wrapper for DefectDojo using APIv2
+Home-page: https://github.com/adiffpirate/defectdojo-cli
+Author: Luiz Paulo Souto Monteiro
+Author-email: lpsmonteiro2@gmail.com
+License: UNKNOWN
+Description: ## DefectDojo CLI
+        [![License](https://img.shields.io/badge/license-MIT-_red.svg)](https://opensource.org/licenses/MIT)
+        
+        A CLI wrapper for [DefectDojo](https://github.com/DefectDojo/django-DefectDojo)
+        
+        ## Installation
+        
+        Simply run:
+        ```
+        $ python3 -m pip install defectdojo_cli
+        ```
+        
+        ## Usage
+        
+        ```
+        $ defectdojo --help
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
