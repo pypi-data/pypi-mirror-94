@@ -1,0 +1,9 @@
+README.md
+setup.py
+easy_host.egg-info/PKG-INFO
+easy_host.egg-info/SOURCES.txt
+easy_host.egg-info/dependency_links.txt
+easy_host.egg-info/not-zip-safe
+easy_host.egg-info/top_level.txt
+resources/qa-demo.zip
+src/__init__.py
