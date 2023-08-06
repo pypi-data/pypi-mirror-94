@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: cuhnsw
+Version: 0.0.5
+Summary: cuhnsw
+Home-page: https://github.com/js1010/cuhnsw
+Maintainer: Jisang Yoon
+Maintainer-email: vjs10101v@gmail.com
+License: Apac2
+Download-URL: https://github.com/js1010/cuhnsw/releases
+Description: UNKNOWN
+Platform: Linux
+Platform: Mac OSX
+Platform: Unix
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
