@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+licenses/LICENSE-nwa-stdlib
+src/more_ds/__init__.py
+src/more_ds.egg-info/PKG-INFO
+src/more_ds.egg-info/SOURCES.txt
+src/more_ds.egg-info/dependency_links.txt
+src/more_ds.egg-info/requires.txt
+src/more_ds.egg-info/top_level.txt
+src/more_ds/network/__init__.py
+src/more_ds/network/url.py
