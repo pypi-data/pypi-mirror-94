@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: defectdojo-cli
+Version: 0.2
+Summary: CLI Wrapper for DefectDojo using APIv2
+Home-page: https://github.com/adiffpirate/defectdojo-cli
+Author: Luiz Paulo Souto Monteiro
+Author-email: lpsmonteiro2@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
