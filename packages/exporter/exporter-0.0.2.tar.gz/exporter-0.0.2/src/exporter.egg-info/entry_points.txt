@@ -1,0 +1,3 @@
+[console_scripts]
+exporter = exporter.console_script:run_export_console_script
+
