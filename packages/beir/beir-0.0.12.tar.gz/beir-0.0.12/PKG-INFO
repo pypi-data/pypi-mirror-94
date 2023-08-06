@@ -1,0 +1,249 @@
+Metadata-Version: 2.1
+Name: beir
+Version: 0.0.12
+Summary: A Heterogeneous Benchmark for Information Retrieval
+Home-page: https://github.com/beir-nlp/beir
+Author: Nandan Thakur
+Author-email: nandant@gmail.com
+License: Apache License 2.0
+Download-URL: https://github.com/beir-nlp/beir/archive/v0.0.12.zip
+Description: 
+        <!-- <h1>
+        <img style="vertical-align:middle" width="120" height="120" src="https://raw.githubusercontent.com/benchmarkir/beir/main/images/color_logo.png" />
+        BeIR: A Heterogeneous Benchmark for IR
+        </h1> -->
+        
+        <!-- <h1 text-align= "center">
+            <img width="300" height="120" src="https://raw.githubusercontent.com/benchmarkir/beir/main/images/color_logo_transparent_cropped.png" style="vertical-align: middle;"/>
+        </h1> -->
+        
+        <h1 style="text-align:center">
+        <img style="vertical-align:middle" width="450" height="180" src="https://raw.githubusercontent.com/benchmarkir/beir/main/images/color_logo_transparent_cropped.png" />
+        </h1>
+        
+        <!-- <h3 align="center">
+        BEIR: A heterogeneous benchmark for Information Retrieval
+        </h3> -->
+        
+        
+        ![PyPI](https://img.shields.io/pypi/v/beir)
+        [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg?color=purple)](https://www.python.org/)
+        [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Nthakur20/StrapDown.js/graphs/commit-activity)
+        [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/benchmarkir/beir/blob/main/examples/retrieval/Retrieval_Example.ipynb)
+        [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/benchmarkir/beir/)
+        
+        ## What is it?
+        
+        **BEIR** consists a **heterogeneous benchmark** for diverse sentence or passage IR level tasks. It also provides a **common and easy framework** for evaluation of your NLP models on them.
+        
+        The package takes care of the downloading, hosting, preprocessing datasets and providing you in a single easy to understand dataset zip folders. We take care of transforming the dataset and provide 15 diverse datasets used for IR in the both academia and industry, with more to add. Further the package provides an easy framework to evalaute your models against some competitive benchmarks including Sentence-Transformers (SBERT), Dense Passage Retrieval (DPR), Universal Sentence Encoder (USE-QA) and Elastic Search.
+        
+        ### Worried about your dataset or model not present in the benchmark?
+        
+        Worry not! You can easily add your dataset into the benchmark by following this data format (here) and also you are free to evaluate your own model and required to return a dictionary with mappings (here) and you can evaluate your IR model using our easy plugin code.
+        
+        Want us to add a new dataset or a new model? feel free to post an issue here or make a pull request!
+        
+        ## Installation
+        
+        Install via pip:
+        
+        ```python
+        pip install beir
+        ```
+        
+        If you want to build from source, use:
+        
+        ```python
+        $ git clone https://github.com/benchmarkir/beir.git
+        $ pip install -e .
+        ```
+        
+        Tested with python versions 3.6 and 3.7
+        
+        ## Getting Started
+        
+        Click here to view [**15+ Datasets**](https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/) available in BEIR.
+        
+        Try it out live with our [Google Colab Example](https://colab.research.google.com/github/benchmarkir/beir/blob/main/examples/retrieval/Retrieval_Example.ipynb).
+        
+        ### 1. Data Downloading and Loading
+        
+        First download and unzip a dataset. Load the dataset with our data loader.
+        
+        ```python
+        from beir import util
+        from beir.datasets.data_loader import GenericDataLoader
+        
+        url = "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/trec-covid.zip"
+        out_dir = "datasets"
+        data_path = util.download_and_unzip(url, out_dir)
+        
+        #### Provide the data_path where trec-covid has been downloaded and unzipped
+        corpus, queries, qrels = GenericDataLoader(data_path).load(split="test")
+        ```
+        
+        ### 2. Model Loading
+        
+        Now, you can use either Sentence-transformers, DPR or USE-QA as your dense retriever model.
+        
+        ```python
+        from beir.retrieval import models
+        from beir.retrieval.search.dense import DenseRetrievalExactSearch as DRES
+        
+        model = DRES(models.SentenceBERT("distilroberta-base-msmarco-v2"))
+        
+        # model = DRES(EvaluateRetrieval(models.DPR(
+        #     'facebook/dpr-question_encoder-single-nq-base',
+        #     'facebook/dpr-ctx_encoder-single-nq-base' )))
+        
+        # model = DRES(models.UseQA("https://tfhub.dev/google/universal-sentence-encoder-qa/3"))
+        ```
+        
+        Or if you wish to use lexical retrieval, we provide support with Elasticsearch.
+        ```python
+        from beir.retrieval.search.lexical import BM25Search as BM25
+        
+        #### Provide parameters for elastic-search
+        hostname = "your-es-hostname-here" # localhost for default
+        index_name = "your-index-name-here"
+        model = BM25(index_name=index_name, hostname=hostname)
+        ```
+        ### 3. Retriever Search and Evaluation
+        
+        Format of ``results`` is identical to that of ``qrels``. You can evaluate your IR performance using ``qrels`` and ``results``.
+        We find ``NDCG@10`` score for all datasets, for more details on why check our upcoming paper.
+        
+        ```python
+        from beir.retrieval.evaluation import EvaluateRetrieval
+        
+        retriever = EvaluateRetrieval(model)
+        results = retriever.retrieve(corpus, queries)
+        
+        #### Evaluate your retrieval using NDCG@k, MAP@K ...
+        ndcg, _map, recall, precision = retriever.evaluate(qrels, results, retriever.k_values)
+        ```
+        
+        ## Examples
+        
+        For all examples, see below:
+        
+        ### All in One
+        - [Google Colab Example](https://colab.research.google.com/github/benchmarkir/beir/blob/main/examples/retrieval/Retrieval_Example.ipynb)
+        
+        ### Retrieval
+        - [BM25 Retrieval using Elasticsearch](https://github.com/benchmarkir/beir/blob/main/examples/retrieval/evaluate_bm25.py)
+        - [Exact Search Retrieval using Dense Model](https://github.com/benchmarkir/beir/blob/main/examples/retrieval/evaluate_dense.py)
+        - [Faiss Search Retrieval using Dense Model](https://github.com/benchmarkir/beir/blob/main/examples/retrieval/evaluate_faiss_dense.py)
+        - [Training Dense Retrieval Model](https://github.com/benchmarkir/beir/blob/main/examples/retrieval/train_dense.py)
+        
+        ### Generation
+        - [Query Generation using T5/BART](https://github.com/benchmarkir/beir/blob/main/examples/generation/query_generator.py)
+        
+        ## Datasets
+        
+        Available datasets include:
+        
+        - [TREC-COVID](https://ir.nist.gov/covidSubmit/index.html)
+        - [NFCorpus](https://www.cl.uni-heidelberg.de/statnlpgroup/nfcorpus/)
+        - [NQ](https://ai.google.com/research/NaturalQuestions)
+        - [HotpotQA](https://hotpotqa.github.io/)
+        - [NewsQA](https://www.microsoft.com/en-us/research/project/newsqa-dataset/)
+        - [FiQA](https://sites.google.com/view/fiqa/home)
+        - [ArguAna](http://argumentation.bplaced.net/arguana/data)
+        - [Touche-2020](https://webis.de/events/touche-20/)
+        - [CQaDupstack](http://nlp.cis.unimelb.edu.au/resources/cqadupstack/)
+        - [Quora](https://www.quora.com/q/quoradata/First-Quora-Dataset-Release-Question-Pairs)
+        - [DBPedia-v2](https://iai-group.github.io/DBpedia-Entity/)
+        - [SCIDOCS](https://allenai.org/data/scidocs)
+        - [FEVER](https://fever.ai/)
+        - [Climate-FEVER](https://www.sustainablefinance.uzh.ch/en/research/climate-fever.html)
+        - [Signal-1M](https://research.signal-ai.com/datasets/signal1m-tweetir.html) (Optional)
+        - [BioASQ](http://bioasq.org/) (Optional)
+        
+        ## Data Formats
+        
+        ```python
+        from beir.datasets.data_loader import GenericDataLoader
+        
+        data_path = "datasets/trec-covid/"
+        corpus, queries, qrels = GenericDataLoader(data_path).load(split="test")
+        
+        # Corpus
+        for doc_id, doc_metadata in corpus.items():
+            print(doc_id, doc_metadata)
+        # ug7v899j  {"title": "Clinical features of culture-proven Mycoplasma...", "text": "This retrospective chart review describes the epidemiology..."}
+        # 02tnwd4m  {"title": "Nitric oxide: a pro-inflammatory mediator in lung disease?, "text": "Inflammatory diseases of the respiratory tract are commonly associated..."}
+        # ...
+        
+        # Queries
+        for query_id, query_text in query.items():
+            print(query_id, query_text)
+        # 1     what is the origin of COVID-19?
+        # 2     how does the coronavirus respond to changes in the weather?
+        # ...
+        
+        # Query Relevance Judgements (Qrels)
+        for query_id, metadata in qrels.items():
+            for doc_id, gold_score in metadata.items():
+                print(query_id, doc_id, gold_score)
+        # 1     005b2j4b    2
+        # 1     00fmeepz    1
+        # ...
+        ```
+        
+        ## Benchmarking
+        
+        The Table shows the NDCG@10 scores.
+        
+        | Domain     |Dataset       | BM25    | SBERT   | USE-QA  | DPR     |
+        | :---------:|------------: |:------: |:------: |:------: |:------: |
+        |            | TREC-COVID   | 0.616   | 0.461   |         |         |
+        | Bio-Medical| BioASQ       |         |         |         |         |
+        |            | NFCorpus     | 0.294   | 0.233   |         |         |
+        |            |              |         |         |         |         |
+        | Question   | NQ           | 0.481   | 0.530   |         |         |
+        | Answering  | HotpotQA     | 0.601   | 0.419   |         |         |
+        |            |              |         |         |         |         |
+        | News       | NewsQA       | 0.457   | 0.263   |         |         |
+        |            |              |         |         |         |         |
+        | Twitter    | Signal-1M    |  0.477  | 0.272   |         |         |
+        |            |              |         |         |         |         |
+        | Finance    | FiQA-2018    |         |  0.223  |         |         |
+        | Argument   | ArguAna      |  0.441  |  0.415  |         |         |
+        |            | Touche-2020  |  0.605  |         |         |         |
+        |            |              |         |         |         |         |
+        | Duplicate  | CQaDupstack  |  0.069  |  0.061  |         |         |
+        | Question   | Quora        |         |         |         |         |
+        |            |              |         |         |         |         |
+        |  Entity    | DBPedia-v2   |  0.285  |  0.261  |         |         |
+        |            |              |         |         |         |         |
+        | Scientific | SCIDOCS      |         |         |         |         |
+        |            |              |         |         |         |         |
+        | Claim      | FEVER        |  0.649  |  0.601  |         |         |
+        |Verification|Climate-FEVER |  0.179  |  0.192  |         |         |
+        
+        
+        ## Citing & Authors
+        
+        The main contributors of this repository are:
+        - [Nandan Thakur](https://github.com/Nthakur20) 
+        
+        Contact person: Nandan Thakur, [nandant@gmail.com](mailto:nandant@gmail.com)
+        
+        [https://www.ukp.tu-darmstadt.de/](https://www.ukp.tu-darmstadt.de/)
+        
+        Don't hesitate to send us an e-mail or report an issue, if something is broken (and it shouldn't be) or if you have further questions.
+        
+        > This repository contains experimental software and is published for the sole purpose of giving additional background details on the respective publication.
+        
+        
+Keywords: Information Retrieval Transformer Networks BERT PyTorch IR NLP deep learning
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
