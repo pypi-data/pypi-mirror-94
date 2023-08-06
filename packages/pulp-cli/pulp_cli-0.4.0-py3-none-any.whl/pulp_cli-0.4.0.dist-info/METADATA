@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: pulp-cli
+Version: 0.4.0
+Summary: Command line interface to talk to pulpcore's REST API.
+Home-page: UNKNOWN
+License: GPLv2+
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Software Distribution
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Requires-Dist: click
+Requires-Dist: packaging
+Requires-Dist: PyYAML
+Requires-Dist: requests
+Requires-Dist: toml
+Provides-Extra: pygments
+Requires-Dist: pygments ; extra == 'pygments'
+
+# Pulp command line interface
+
+This is a command line interface for Pulp 3.
+
+This software is in beta and future releases may include backwards incompatible changes.
+
+## General command syntax
+
+`pulp [<global_options>] <plugin> <resource_class> [--type <resource_type>] <action> [<action_options>]`
+
+Global options include:
+
+  * `--base-url`
+  * `--user`
+  * `--password`
+  * `--config`
+  * `--format`
+  * `-v`/`-vv`/`-vvv`
+
+## Quick start
+
+To install and use the CLI, run these commands:
+
+```
+pip install pulp-cli[pygments]
+pulp config create -e
+```
+
+Read [the installation and configuration doc](docs/install.md) for more information.
+
+## Known issues
+
+  * Redirecting from `http` to `https`, as done by a typical Pulp installation,
+    does not work properly with `POST` and `PUT` requests.
+    Please use `https://` in the base url.
+    Note that the attempt to use `http` leaks sensitive data over an unencrypted connection.
+
+## Example commands
+
+`pulp status`
+
+`pulp file repository list`
+
+`pulp file repository create --name file_repo1`
+
+`pulp file repository update --name file_repo1 --description "Contains plain files"`
+
+`pulp file repository destroy --name file_repo1`
+
+## Shell Completion
+
+The CLI uses the click package which supports shell completion.
+To configure this, check out [click's
+documentation](https://click.palletsprojects.com/en/7.x/bashcomplete/).
+As an example, here is what to add to your `~/.bashrc` file if you're using bash:
+
+```bash
+eval "$(_PULP_COMPLETE=source_bash pulp)"
+```
+
+
+
