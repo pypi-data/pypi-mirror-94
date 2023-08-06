@@ -1,0 +1,5 @@
+requests
+aiohttp
+pytz
+python-dateutil
+unidecode

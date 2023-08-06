@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+marys/__init__.py
+marys.egg-info/PKG-INFO
+marys.egg-info/SOURCES.txt
+marys.egg-info/dependency_links.txt
+marys.egg-info/requires.txt
+marys.egg-info/top_level.txt
