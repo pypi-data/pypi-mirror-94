@@ -1,0 +1,15 @@
+LICENCE
+MANIFEST.in
+README.rst
+setup.py
+django_any_js/__init__.py
+django_any_js/apps.py
+django_any_js.egg-info/PKG-INFO
+django_any_js.egg-info/SOURCES.txt
+django_any_js.egg-info/dependency_links.txt
+django_any_js.egg-info/requires.txt
+django_any_js.egg-info/top_level.txt
+django_any_js/templates/django_any_js/css.html
+django_any_js/templates/django_any_js/js.html
+django_any_js/templatetags/__init__.py
+django_any_js/templatetags/any_js.py

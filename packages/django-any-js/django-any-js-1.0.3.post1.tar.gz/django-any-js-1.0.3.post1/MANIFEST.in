@@ -1,0 +1,2 @@
+include LICENCE
+recursive-include django_any_js/templates *
