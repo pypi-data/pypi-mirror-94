@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -ev
+PACKAGES_DIR=${1:-`python -m site --user-site`}
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+# Use a manual list instead of file listing in case we have a required order
+# Generated to avoid including tests using:
+#   git diff HEAD~1 --no-prefix -- cinderlib/objects.py > filename.patch
+declare -a PATCHES=()
+
+for patch_file in "${PATCHES[@]}"; do
+   PATCH_FILE="$SCRIPT_DIR/$patch_file"
+   echo "Checking if $patch_file is already present in $PACKAGES_DIR"
+   if ! patch -R -p0 -s -f --dry-run -d $PACKAGES_DIR >/dev/null <$PATCH_FILE; then
+     echo -e "\tPatch not present, applying it"
+     patch -p0 -N --silent -d $PACKAGES_DIR <$PATCH_FILE
+   else
+     echo -e "\tPatch already applied, skipping"
+   fi
+done
+echo "Done Applying Patches"
