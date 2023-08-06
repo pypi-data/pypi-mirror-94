@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: types-protobuf
+Version: 0.1.2
+Summary: Typing stubs for protobuf
+Home-page: https://github.com/python/typeshed
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+Requires-Dist: types-futures
+Requires-Dist: types-typing-extensions
+
+## Typing stubs for protobuf
+
+This is an auto-generated PEP 561 type stub package for `protobuf` package.
+It can be used by type-checking tools like mypy, PyCharm, pytype etc. to check code
+that uses `protobuf`. The source for this package can be found at
+https://github.com/python/typeshed/tree/master/stubs/protobuf. All fixes for
+types and metadata should be contributed there.
+
+See https://github.com/python/typeshed/blob/master/README.md for more details.
+This package was generated from typeshed commit `0b1cd5989669544866213807afa833a88f649ee7`.
+
+
