@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: packutil
+Version: 0.0.3
+Summary: utility elements for packaging
+Home-page: https://github.com/AleCandido/packutil
+Author: Alessandro Candido
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pygit2
+Requires-Dist: semver
+
+# Packaging Utils for Python
+
+My own stuff I use all the time to deal with python packages
+
+
