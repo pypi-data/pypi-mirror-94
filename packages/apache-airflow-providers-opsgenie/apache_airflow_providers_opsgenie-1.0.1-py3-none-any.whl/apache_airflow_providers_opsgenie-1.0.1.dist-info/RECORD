@@ -1,0 +1,13 @@
+airflow/providers/opsgenie/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/opsgenie/get_provider_info.py,sha256=_4NAchVkc5vvGNinwANVFaFy9ij3CaWpFWR4yHrZvVo,1265
+airflow/providers/opsgenie/hooks/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/opsgenie/hooks/opsgenie_alert.py,sha256=Pr2-9G-Mzh5Bmp3XiePSddMg1X4lD2b0a2hAlimEShE,3220
+airflow/providers/opsgenie/operators/__init__.py,sha256=mlJxuZLkd5x-iq2SBwD3mvRQpt3YR7wjz_nceyF1IaI,787
+airflow/providers/opsgenie/operators/opsgenie_alert.py,sha256=uiea4jk-_WmFEPUmBP5wR4RkBzOrArsXtsaqqifhzgU,5260
+apache_airflow_providers_opsgenie-1.0.1.dist-info/LICENSE,sha256=gXPVwptPlW1TJ4HSuG5OMPg-a3h43OGMkZRR1rpwfJA,10850
+apache_airflow_providers_opsgenie-1.0.1.dist-info/METADATA,sha256=nhMIkbpomvMw07701gQPtOXHMUDgivw2B78cEXry-8A,4110
+apache_airflow_providers_opsgenie-1.0.1.dist-info/NOTICE,sha256=irN1W_XwjRh8XRlHEhVpRCSY7NZfQgGdnEfjFvGrxK4,240
+apache_airflow_providers_opsgenie-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+apache_airflow_providers_opsgenie-1.0.1.dist-info/entry_points.txt,sha256=P8Ol-6qa_Azp4OGcIdmsobWlQ78mAlc_mDiy89OfM9E,106
+apache_airflow_providers_opsgenie-1.0.1.dist-info/top_level.txt,sha256=OeMVH5md7fr2QQWpnZoOWWxWO-0WH1IP70lpTVwopPg,8
+apache_airflow_providers_opsgenie-1.0.1.dist-info/RECORD,,
