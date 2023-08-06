@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+ip_area/__init__.py
+ip_area/api.py
+ip_area/ip_area.py
+ip_area/tools.py
+ip_area/version.py
+ip_area/wrap_api.py
+ip_area.egg-info/PKG-INFO
+ip_area.egg-info/SOURCES.txt
+ip_area.egg-info/dependency_links.txt
+ip_area.egg-info/requires.txt
+ip_area.egg-info/top_level.txt
+ip_area.egg-info/zip-safe
