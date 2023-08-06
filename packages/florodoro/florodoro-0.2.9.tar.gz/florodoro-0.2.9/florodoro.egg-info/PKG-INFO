@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: florodoro
+Version: 0.2.9
+Summary: A pomodoro timer that grows procedurally generated trees and flowers while you're studying.
+Home-page: https://github.com/xiaoxiae/Florodoro
+Author: Tomáš Sláma
+Author-email: tomas@slama.dev
+License: UNKNOWN
+Description: ![](https://raw.githubusercontent.com/xiaoxiae/Florodoro/master/florodoro/images/logo.svg)
+        
+        ---
+        
+        A pomodoro timer that grows procedurally generated trees and flowers while you're studying.
+        
+        ![](https://raw.githubusercontent.com/xiaoxiae/Florodoro/master/florodoro/images/preview.svg)
+        
+        ## Running Florodoro
+        First, install the app by running `pip install florodoro`.
+        Then you can simply run the `florodoro` command from a terminal of your choice.
+        
+Keywords: education pyqt5 plants pomodoro
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.1
+Description-Content-Type: text/markdown
