@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/diglet.egg-info/PKG-INFO
+src/diglet.egg-info/SOURCES.txt
+src/diglet.egg-info/dependency_links.txt
+src/diglet.egg-info/top_level.txt
