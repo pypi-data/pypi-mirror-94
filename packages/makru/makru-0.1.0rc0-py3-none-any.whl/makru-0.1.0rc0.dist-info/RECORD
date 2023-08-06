@@ -1,0 +1,17 @@
+makru/__init__.py,sha256=Ywiz8sy719l2kRMxo05NWdeKVX720obvv-SpRAIvhTg,44
+makru/helpers.py,sha256=8HtVo5Fwg4NJ2e1kuqRjsGu-pQDu4xHO7NhFiGHY3Bs,4949
+makru/main.py,sha256=sArCXsG1MO6kpZCvC11TJJc5pFwi_NCuePUGXbcEzdo,217
+makru/makru.py,sha256=_18-h6jNo6usBAP4RSOaMBKt6_pRlkSZ-IF0j2IRml0,21099
+makru/plug.py,sha256=qcMct9bRgJC0rUZwzXoQq_F8bwLGD8osHjiOeee9qh4,891
+makru/store.py,sha256=CE7PysNazwokLL0osVBOOqN5teEgnTy9CguyELAxclw,1304
+makru/test_helpers.py,sha256=4Z6ynnPhLBdFQavRtot5wne8YJhHymhxZovj43Ijga0,3626
+makru/test_makru.py,sha256=LjuXymuD2S32kgpQiLFqgPWg-ANPv7OuX6cHlzp8L6s,580
+makru/test_plug.py,sha256=4eGVC2pVHHmDKEZcLgM5ufyn9X19v7dQwmu18ntTJrs,590
+makru/test_store.py,sha256=XlPmim7sa1BbUrAgtt-8ayDin2C4YqeZmebgW3UMJKg,1464
+makru/yamlh.py,sha256=2WYayejEVdrAXf3SjBDej-BNJie2w2r9kqXOsNOT_BE,272
+makru-0.1.0rc0.dist-info/LICENSE,sha256=BwE4v_OjvB8ScB4LyZgLtRXsooaLpktRKo2---5EOCc,1079
+makru-0.1.0rc0.dist-info/METADATA,sha256=cIwBD5ZPhYHFoj-gSNPo6K8M1ul6jifJDaCH97W4fdk,371
+makru-0.1.0rc0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+makru-0.1.0rc0.dist-info/entry_points.txt,sha256=P-iMNpzp_dZlhDVbdHQUkoCVPggvogAaJSDqsUUjLkE,55
+makru-0.1.0rc0.dist-info/top_level.txt,sha256=qiUcFWJv13GwIP9y6yDEMbKydUPkN-LPv9MVhkuFG6E,6
+makru-0.1.0rc0.dist-info/RECORD,,
