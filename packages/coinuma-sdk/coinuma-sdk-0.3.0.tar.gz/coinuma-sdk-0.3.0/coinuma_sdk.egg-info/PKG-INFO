@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: coinuma-sdk
+Version: 0.3.0
+Summary: A python SDK for the Coinuma Exchange API
+Home-page: https://github.com/Coinuma/coinuma-sdk-python.git
+Author-email: info@coinuma.com
+License: UNKNOWN
+Download-URL: https://github.com/Coinuma/coinuma-sdk-python.git
+Description: 
+        # Welcome to the Coinuma API SDK
+        Through our cryptocurrency exchange we offer a wide selection of currencies for you to trade. For a complete API request and response reference please check out our [API documentation](https://coinuma.com/developers/docs). If you need additional help in using the API, please visit the [Coinuma website](https://coinuma.com) and reach our support center. 
+        #### Happy trading!
+        
+Keywords: Coinuma,Coinuma API,Coinuma Exchange,Coinuma Exchange API SDK
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
