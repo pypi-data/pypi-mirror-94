@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: queenbee-local
+Version: 0.3.3
+Summary: Queenbee local provides a helper module for running queenbee recipes on desktop
+Home-page: UNKNOWN
+Author: Ladybug Tools
+Author-email: info@ladybug.tools
+License: AGPL-3.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: queenbee (==1.22.16)
+Requires-Dist: luigi (==3.0.2)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: click-plugins (==1.1.1)
+
+# queenbee-local
+Queenbee task provides a helper module for running queenbee recipes on a local machine
+
+## Installation
+```console
+pip install queenbee-local
+```
+
+## QuickStart
+```python
+import queenbee_local
+
+```
+
+
