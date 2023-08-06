@@ -1,0 +1,5 @@
+[console_scripts]
+pontos-release=pontos.release.release:main
+pontos-update-header=pontos.updateheader:main
+pontos-version=pontos.version:main
+
