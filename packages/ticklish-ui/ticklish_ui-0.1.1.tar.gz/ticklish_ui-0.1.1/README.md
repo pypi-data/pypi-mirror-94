@@ -1,0 +1,403 @@
+
+# Table of Contents
+
+1.  [Ticklish - Declarative style GUI programming in Python](#org76e3e1e)
+    1.  [Getting Started](#org0882401)
+        1.  [Next Steps](#org82ebdfc)
+    2.  [Features](#org287b6aa)
+        1.  [Widgets](#orgc54b3c4)
+        2.  [Streams](#org0aab2f0)
+    3.  [Future Development](#org72dcc3a)
+    4.  [Contributing](#org4abfacf)
+    5.  [License](#orgec7f627)
+
+
+
+<a id="org76e3e1e"></a>
+
+# Ticklish - Declarative style GUI programming in Python
+
+The `ticklish_ui` package is a wrapper around the tkinter and
+tkinter.ttk widgets which aims to simplify GUI creation by allowing
+users to specify the layout declaratively while decoupling GUI
+creation from event binding.
+
+Ticklish works by wrapping the underlying widgets in factory objects
+deferring actual widget creation until the entire layout has been
+specified. Layouts are specified as rows of widgets which are laid
+out from left to right. Once created, event streams are used to bind
+actions to specific widgets.
+
+The following simple example creates a window which accepts some
+input, prints it to the console when the OK button is clicked, and
+closes the application when the Quit button is clicked.
+
+    from ticklish_ui import *
+    
+    # Define the layout.  An application can have any number of rows and
+    # rows can contain any number of widgets.
+    app = Application(
+        'ticklish_ui_example',
+        
+        # .row1
+        [Label('Enter some text below')],
+        
+        # .row2
+        [Entry().options(name='entry')],
+    
+        # .row3
+        [Button('OK').options(name='ok'), CloseButton('Quit')]
+    )
+    
+    def print_input(event):
+        entry = app.nametowidget('.row2.entry')
+        print(entry.get())
+    
+    # click captures all click events anywhere in the application.
+    click = app.get_event_stream('<ButtonRelease-1>')
+    
+    # An event stream can then be filtered and bound to some action(s)
+    (click
+     # Here we filter by the name of the widget clicked.
+     .by_name('ok') 
+    
+     # And then map/bind an action to that event.
+     .map(print_input)
+    )
+    
+    app.mainloop()
+
+![img](https://github.com/jasondelaat/ticklish_ui/raw/release/screenshots/readme_simple_ui.png)
+
+The use of event streams is optional. Users can retrieve widgets and
+bind events and commands in a more traditional way if they
+prefer. The following would also have worked in the above example.
+
+    def print_input():
+        entry = app.nametowidget('.row2.entry')
+        print(entry.get())
+    
+    ok_button = app.nametowidget('.row3.ok')
+    ok_button['command'] = print_input
+    
+    # Or you can bind events.
+    #ok_button.bind('<ButtonRelease-1>', do_something)
+
+Most ticklish widgets are just straight wrappers for the underlying
+widgets but additions have been made for convenience. For instance,
+CloseButton in the above example is a button which automatically
+calls the destory() method on the toplevel window that contains it.
+Similarly, there are RadioGroup and CheckGroup widgets which allow
+you to lay out whole sets of the corresponding buttons easily.
+
+The goal of ticklish is to simplify the creation and implementation
+of GUIs without abstracting away any of their power.
+
+
+<a id="org0882401"></a>
+
+## Getting Started
+
+To start using `ticklish_ui` install it from the Python Package Index
+with pip:
+
+    pip3 install ticklish_ui
+
+Check that the install worked by running the following code either
+from a file or the python interactive interpreter.
+
+    import ticklish_ui as tui
+    
+    tui.Application('MyApp').mainloop()
+
+You should get something that looks like this:
+
+![img](https://github.com/jasondelaat/ticklish_ui/raw/release/screenshots/readme_minimal_ui.png)
+
+
+<a id="org82ebdfc"></a>
+
+### Next Steps
+
+1.  Themes
+
+    Ticklish is set up to use the ttk default theme out-of-the-box
+    which probably won't look that great. Once created, you can use
+    the application's `style` property to change the theme.
+    
+        app = Application(
+            'MyApp',
+            # Rows...
+        )
+        app.style.theme_use('aqua') # Or whatever theme you're using
+        app.mainloop()
+    
+    The `aqua` theme is used in the above screenshots but may not be
+    available on all systems.
+    
+    You can use the [theme viewer](https://github.com/jasondelaat/ticklish_ui/blob/release/examples/theme_viewer.py) example to see the themes available
+    on your system and then set one as above.
+    
+    ![img](https://github.com/jasondelaat/ticklish_ui/raw/release/screenshots/readme_themes.png)
+
+2.  Documentation
+
+    An attempt has been made to make the `ticklish_ui` module
+    documentation as comprehensive as possible. It can be viewed in a
+    number of ways.
+    
+    With pydoc from the commandline:
+    
+        pydoc3 ticklish_ui.widgets.application
+    
+    With `help()` from the python interactive interpreter:
+    
+        >>> import ticklish_ui
+        >>> help(ticklish_ui.events.EventStream)
+    
+    Or just by browsing the [source code](https://github.com/jasondelaat/ticklish_ui) on github.
+    
+    The github repository also includes a number of [examples](https://github.com/jasondelaat/ticklish_ui/tree/release/examples).
+
+
+<a id="org287b6aa"></a>
+
+## Features
+
+
+<a id="orgc54b3c4"></a>
+
+### Widgets
+
+The following widgets are currently implemented. Widgets which are
+marked as `ticklish_ui` additions are not part of the standard
+tkinter/tkinter.ttk widgets sets and *may* have additional attributes
+and behaviours in addition to those provided by the base widget.
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">`ticklish_ui` name</th>
+<th scope="col" class="org-left">Base widget</th>
+<th scope="col" class="org-left">`ticklish_ui` addition</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">Application</td>
+<td class="org-left">tkinter.Tk</td>
+<td class="org-left">yes</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Button</td>
+<td class="org-left">tkinter.ttk.Button</td>
+<td class="org-left">no</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Canvas</td>
+<td class="org-left">tkinter.Canvas</td>
+<td class="org-left">no</td>
+</tr>
+
+
+<tr>
+<td class="org-left">CheckGroup</td>
+<td class="org-left">tkinter.ttk.Frame</td>
+<td class="org-left">yes</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Checkbutton</td>
+<td class="org-left">tkinter.ttk.Checkbutton</td>
+<td class="org-left">no</td>
+</tr>
+
+
+<tr>
+<td class="org-left">CloseButton</td>
+<td class="org-left">tkinter.ttk.Button</td>
+<td class="org-left">yes</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Combobox</td>
+<td class="org-left">tkinter.ttk.Combobox</td>
+<td class="org-left">no</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Dropdown</td>
+<td class="org-left">tkinter.ttk.Combobox</td>
+<td class="org-left">yes\*</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Entry</td>
+<td class="org-left">tkinter.ttk.Entry</td>
+<td class="org-left">no</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Frame</td>
+<td class="org-left">tkinter.ttk.Frame</td>
+<td class="org-left">no</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Label</td>
+<td class="org-left">tkinter.ttk.Label</td>
+<td class="org-left">no</td>
+</tr>
+
+
+<tr>
+<td class="org-left">LabelFrame</td>
+<td class="org-left">tkinter.ttk.LabelFrame</td>
+<td class="org-left">no</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Listbox</td>
+<td class="org-left">tkinter.ttk.Treeview</td>
+<td class="org-left">yes\*</td>
+</tr>
+
+
+<tr>
+<td class="org-left">RadioGroup</td>
+<td class="org-left">tkinter.ttk.Frame</td>
+<td class="org-left">yes</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Radiobutton</td>
+<td class="org-left">tkinter.ttk.Radiobutton</td>
+<td class="org-left">no</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Toplevel</td>
+<td class="org-left">tkinter.Toplevel</td>
+<td class="org-left">no</td>
+</tr>
+</tbody>
+</table>
+
+\*These widgets are additions in the sense that they use specific
+settings to get a particular default behaviour but are otherwise
+just wrappers around the base widget.
+
+Eventually ticklish will provide wrappers out-of-the-box for all
+tkinter and tkinter.ttk widgets. Users can implement or wrap
+additional widgets by subclassing the WidgetFactory or
+ContainerFactory classes as needed.
+
+
+<a id="org0aab2f0"></a>
+
+### Streams
+
+Ticklish provides a very simple Stream construct. Data can be
+inserted into a stream and will be acted on automatically before
+being passed to any child streams if they exist. Child streams are
+created by filtering and mapping existing streams. Filtering
+determines what data is allowed into the stream; mapping, how the
+data is handled and/or transformed.
+
+Here's a quick example:
+
+    from ticklish_ui.events import Stream
+    
+    base = Stream()
+    
+    odd_stream = base.filter(lambda n: n % 2 == 1).map(lambda n: print(f'odd: {n}'))
+    even_stream = base.filter(lambda n: n % 2 == 0).map(lambda n: print(f'even: {n}'))
+    
+    base.insert(1)
+    base.insert(2)
+    base.insert(3)
+    base.insert(4)
+    base.insert(5)
+    base.insert(6)
+    base.insert(7)
+    base.insert(8)
+    base.insert(9)
+    base.insert(10)
+
+RESULTS:
+
+    odd: 1
+    even: 2
+    odd: 3
+    even: 4
+    odd: 5
+    even: 6
+    odd: 7
+    even: 8
+    odd: 9
+    even: 10
+
+Note that, although data is being inserted into the `base` stream,
+it's the child streams &#x2014; `odd_stream` and `even_stream` &#x2014;
+which are doing the actual work. If either of the mapped functions
+returned a value then further filtering and mapping could be done
+creating a whole pipeline of actions to be carried out
+automatically any time a value is inserted into the base stream.
+
+The EventStream class provides default filters for dealing
+specifically with tkinter events &#x2014; filtering by the name of the
+widget involved, for instance &#x2014; but is otherwise just a regular
+stream.
+
+Streams allow program authors to handle normal data and user
+generated events in similar ways but are entirely optional.
+
+
+<a id="org72dcc3a"></a>
+
+## Future Development
+
+On the todo list in no particular order:
+
+-   Allow merging streams
+-   Implement the rest of the tkinter and tkinter.ttk widgets
+-   Add a way to declaratively define grid layouts
+
+
+<a id="org4abfacf"></a>
+
+## Contributing
+
+For detailed information on contributing to `ticklish_ui` see
+[CONTRIBUTING.org](https://github.com/jasondelaat/ticklish_ui/blob/release/CONTRIBUTING.org) on github.
+
+
+<a id="orgec7f627"></a>
+
+## License
+
+`ticklish_ui` is free software licensed under the [BSD-3-Clause License](https://github.com/jasondelaat/ticklish_ui/blob/release/LICENSE).
+
