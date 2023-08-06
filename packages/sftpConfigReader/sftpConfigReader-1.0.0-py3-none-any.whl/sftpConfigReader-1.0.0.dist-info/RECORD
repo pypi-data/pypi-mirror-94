@@ -1,0 +1,9 @@
+sftpConfigReader/__init__.py,sha256=WFrXfYNsDzBBu2ZdObwe8P370N8s412Yqrv5CfAoUsw,36
+sftpConfigReader/reader.py,sha256=6latrL1bo2xEmlC17FbPeVJsItRJ2wI9ztQsSmtnbrg,1139
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_sftp_config.py,sha256=PJrpDP3DewX06S_5maoF728tduLu7yZ4MukSuT_3dIM,2533
+sftpConfigReader-1.0.0.dist-info/LICENSE,sha256=L0BDb1gK_W1dHPzeV1iKS-fSk-pndFuQG5EjYjHSSrk,1091
+sftpConfigReader-1.0.0.dist-info/METADATA,sha256=Y1Tz8FzbmlEbtngcAUkP5BwipbEZswP30mY0Yf_Ip3A,1571
+sftpConfigReader-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sftpConfigReader-1.0.0.dist-info/top_level.txt,sha256=s7LEHXKpOnw1l4nGmk13tK6XNQ4hfYSOgdEL7KubPx0,23
+sftpConfigReader-1.0.0.dist-info/RECORD,,
