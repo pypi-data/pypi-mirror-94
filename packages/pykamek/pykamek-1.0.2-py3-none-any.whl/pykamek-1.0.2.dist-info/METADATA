@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pykamek
+Version: 1.0.2
+Summary: Simple python library for extracting and rebuilding ISOs
+Home-page: https://github.com/JoshuaMKW/pykamek
+Author: JoshuaMK
+Author-email: joshuamkw2002@gmail.com
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: dolreader
+
+# pykamek
+A Python 3 port of Kamek, a code injection engine for the Wii/GC
+
+
