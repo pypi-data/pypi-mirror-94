@@ -1,0 +1,2 @@
+from . import launch
+launch()
