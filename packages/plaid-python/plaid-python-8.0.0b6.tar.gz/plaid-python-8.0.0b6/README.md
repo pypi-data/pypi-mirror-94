@@ -1,0 +1,318 @@
+plaid-python  [![Circle CI](https://circleci.com/gh/plaid/plaid-python.svg?style=svg&circle-token=02afb22cf19d78230650df63f9b62c1ba3aa0d93)](https://circleci.com/gh/plaid/plaid-python) [![PyPI version](https://badge.fury.io/py/plaid-python.svg)](https://badge.fury.io/py/plaid-python)
+============
+
+The official python client library for the [Plaid API][1].
+
+## Table of Contents
+
+- [plaid-python](#plaid-python)
+  * [Install](#install)
+  * [Documentation](#documentation)
+  * [Getting Started](#getting-started)
+    + [Calling Endpoints](#calling-endpoints)
+    + [Errors](#errors)
+  * [Examples](#examples)
+  * [Known Issues](#known-issues)
+  * [Contributing](#contributing)
+  * [Legacy API](#legacy-api)
+  * [License](#license)
+
+## Install
+
+```console
+$ pip install plaid-python
+```
+
+## Documentation
+
+The module supports all Plaid API endpoints.  For complete information about
+the API, head to the [docs][2].
+
+## Getting Started
+
+### Calling Endpoints
+
+To call an endpoint you must create a `PlaidApi` object.
+
+```python
+import plaid
+from plaid.api import plaid_api
+
+# Available environments are
+# '0 - production'
+# '1 - development'
+# '2 - sandbox'
+configuration = plaid.Configuration(
+    server_index=2,
+    api_key={
+        'clientId': client_id,
+        'secret': secret,
+        'plaidVersion': '2020-09-14'
+    }
+)
+
+api_client = plaid.ApiClient(configuration)
+client = plaid_api.PlaidApi(api_client)
+```
+
+Each endpoint returns a dictionary which contains the parsed JSON from the
+HTTP response.
+
+### Versioning
+
+You can specify the Plaid API version you wish to use when initializing `plaid`.
+
+```python
+import plaid
+from plaid.api import plaid_api
+
+configuration = plaid.Configuration(
+    server_index=0,
+    api_key={
+        'clientId': client_id,
+        'secret': secret,
+        'plaidVersion': '2020-09-14' # This version and forward only, supported by 8.0.0+
+    }
+)
+
+api_client = plaid.ApiClient(configuration)
+client = plaid_api.PlaidApi(api_client)
+```
+
+For information about what has changed between versions and how to update your integration, head to the [API upgrade guide][api-upgrades].
+
+### Errors
+
+All non-200 responses will throw a `plaid.ApiException`.
+
+```python
+import plaid
+from plaid.api import plaid_api
+from plaid.model.asset_report_get_request import AssetReportGetRequest
+
+configuration = plaid.Configuration(
+    api_key={
+        'clientId': ***,
+        'secret': ***,
+        'plaidVersion': '2020-09-14'
+    }
+)
+
+api_client = plaid.ApiClient(configuration)
+client = plaid_api.PlaidApi(api_client)
+
+try:
+    request = AssetReportGetRequest(
+        asset_report_token=asset_report_token,
+    )
+    return client.asset_report_get(request)
+except plaid.ApiException as e:
+    response = json.loads(e.body)
+    # check the code attribute of the error to determine the specific error
+    if response['error_code'] == 'ITEM_LOGIN_REQUIRED':
+        # the users' login information has changed, generate a public_token
+        # for the user and initialize Link in update mode to
+        # restore access to this user's data
+        # see https://plaid.com/docs/api/#updating-items-via-link
+    else:
+        ...
+```
+
+For more information on Plaid response codes, head to the [docs][3].
+
+## Examples
+
+### Create an Item using Link
+Exchange a `public_token` from [Plaid Link][4] for a Plaid access token:
+```python
+import plaid
+from plaid.api import plaid_api
+from plaid.model.item_public_token_exchange_request import ItemPublicTokenExchangeRequest
+
+configuration = plaid.Configuration(
+    api_key={
+        'clientId': ***,
+        'secret': ***,
+        'plaidVersion': '2020-09-14'
+    }
+)
+
+api_client = plaid.ApiClient(configuration)
+client = plaid_api.PlaidApi(api_client)
+
+# the public token is received from Plaid Link
+exchange_request = ItemPublicTokenExchangeRequest(
+    public_token=pt_response['public_token']
+)
+exchange_response = client.item_public_token_exchange(exchange_request)
+access_token = exchange_response['access_token']
+```
+
+### Create a Stripe bank account token
+Exchange a Plaid Link `public_token` for an API `access_token`.  Then exchange
+that `access_token` and the Plaid Link `account_id` (received along with the
+`public_token`) for a Stripe `bank_account_token`:
+
+```python
+import plaid
+from plaid.api import plaid_api
+from plaid.model.item_public_token_exchange_request import ItemPublicTokenExchangeRequest
+from plaid.model.processor_stripe_bank_account_token_create_request import ProcessorStripeBankAccountTokenCreateRequest
+
+configuration = plaid.Configuration(
+    api_key={
+        'clientId': ***,
+        'secret': ***,
+        'plaidVersion': '2020-09-14'
+    }
+)
+
+api_client = plaid.ApiClient(configuration)
+client = plaid_api.PlaidApi(api_client)
+
+exchange_request = ItemPublicTokenExchangeRequest(
+    public_token=pt_response['public_token']
+)
+exchange_response = client.item_public_token_exchange(exchange_request)
+access_token = exchange_response['access_token']
+
+request = ProcessorStripeBankAccountTokenCreateRequest(
+    access_token=access_token,
+    account_id='[Account ID]',
+)
+stripe_response = client.processor_stripe_bank_account_token_create(request)
+bank_account_token = stripe_response['stripe_bank_account_token']
+```
+
+### Remove Item
+```python
+import plaid
+from plaid.api import plaid_api
+from plaid.model.item_remove_request import ItemRemoveRequest
+
+configuration = plaid.Configuration(
+    api_key={
+        'clientId': ***,
+        'secret': ***,
+        'plaidVersion': '2020-09-14'
+    }
+)
+
+api_client = plaid.ApiClient(configuration)
+client = plaid_api.PlaidApi(api_client)
+
+# Provide the access token for the Item you want to remove
+request = ItemRemoveRequest(
+    access_token=accessToken
+)
+response = client.item_remove(request)
+```
+
+### Retrieve Transactions
+```python
+import plaid
+from plaid.api import plaid_api
+from plaid.model.transactions_get_request_options import TransactionsGetRequestOptions
+from plaid.model.transactions_get_request import TransactionsGetRequest
+
+configuration = plaid.Configuration(
+    api_key={
+        'clientId': ***,
+        'secret': ***,
+        'plaidVersion': '2020-09-14'
+    }
+)
+
+api_client = plaid.ApiClient(configuration)
+client = plaid_api.PlaidApi(api_client)
+
+request = TransactionsGetRequest(
+    access_token=access_token,
+    start_date=datetime.strptime('2020-01-01', '%Y-%m-%d').date(),
+    end_date=datetime.strptime('2021-01-01', '%Y-%m-%d').date(),
+)
+response = client.transactions_get(request)
+transactions = response['transactions']
+
+# the transactions in the response are paginated, so make multiple calls while increasing the offset to
+# retrieve all transactions
+while len(transactions) < response['total_transactions']:
+    options = TransactionsGetRequestOptions()
+    options.offset = len(transactions)
+
+    request = TransactionsGetRequest(
+        access_token=access_token,
+        start_date=datetime.strptime('2020-01-01', '%Y-%m-%d').date(),
+        end_date=datetime.strptime('2021-01-01', '%Y-%m-%d').date(),
+        options=options
+    )
+    response = client.transactions_get(request)
+```
+
+### Retrieve Other Data
+Most other item data can be retrieved by following this pattern:
+```python
+import plaid
+from plaid.api import plaid_api
+from plaid.model.auth_get_request import AuthGetRequest
+
+configuration = plaid.Configuration(
+    api_key={
+        'clientId': ***,
+        'secret': ***,
+        'plaidVersion': '2020-09-14'
+    }
+)
+
+api_client = plaid.ApiClient(configuration)
+client = plaid_api.PlaidApi(api_client)
+
+response = client.Auth.get(access_token)
+numbers = response['numbers']
+```
+
+### Authentication
+
+Public endpoints (category information) require no authentication and can be
+accessed as follows:
+
+```python
+import plaid
+from plaid.api import plaid_api
+
+configuration = plaid.Configuration(
+    # 2 - sandbox, 1 - development, 0 - production
+    server_index=2,
+    api_key={
+        'plaidVersion': '2020-09-14'
+    }
+)
+api_client = plaid.ApiClient(configuration)
+client = plaid_api.PlaidApi(api_client)
+
+categories = client.categories_get({})
+```
+
+Authenticated endpoints require a `(client_id, secret)` pair.
+You do not need to pass in authentication to
+individual endpoints once you have set it on the `plaid.Configuration` object.
+
+## Contributing
+
+Please see [Contributing](CONTRIBUTING.md) for guidelines and instructions
+for local development.
+
+## License
+[MIT][6]
+
+[1]: https://plaid.com
+[2]: https://plaid.com/docs/api
+[3]: https://plaid.com/docs/api#errors
+[4]: https://github.com/plaid/link
+[5]: https://github.com/plaid/plaid-python/issues/new
+[6]: https://github.com/plaid/plaid-python/blob/master/LICENSE
+[7]: https://plaid.github.io/plaid-python/contents.html
+[8]: https://cloud.google.com/appengine/docs/python/issue-requests
+[9]: https://blog.plaid.com/improving-our-api/
+[10]: https://github.com/plaid/plaid-python-legacy
+[api-upgrades]: https://plaid.com/docs/api-upgrades/
