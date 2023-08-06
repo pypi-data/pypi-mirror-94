@@ -1,0 +1,12 @@
+examplecurves/__init__.py,sha256=GVwSVDWsKlSbW323wruhD-oIlKa7S2VkOgvus-KGoAo,121
+examplecurves/main.py,sha256=bb3tKTQV7oWEKCUzzDhn6XUbuAdSznp_iAqGLPh9spI,29190
+examplecurves/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examplecurves/resources/linear_curves.json,sha256=oige7VqqjgpBbHPO2JI6ZzzkL-rNIck0gp9zZRspg6s,9109
+tests/__init__.py,sha256=UKoh4y8WhJIL8oHluYYpR2drIsxtEUI88ft6UWliU0A,113
+tests/load_test.py,sha256=5aC1T8QyuxdQGm1T-wKRiSq-qUGogXhx_rEqqMNknQI,815
+tests/plot_test.py,sha256=lJj4xQ--Oe-3b_8yXjpeyw7GEeE-hT3bSlhsKmXGCuc,361
+examplecurves-1.0.0.dist-info/LICENSE,sha256=BRWSY-Jazy6aBueKK07EPlDJmUy1tFlJJUUKl1QuwQo,35757
+examplecurves-1.0.0.dist-info/METADATA,sha256=XB0KwI_IYb6osCxM-7YqThzntuVtL1RlklhZ0rXpKA8,5759
+examplecurves-1.0.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+examplecurves-1.0.0.dist-info/top_level.txt,sha256=Ya5qklmcpB8HraPBSWIL8qvMQaiBkbRcdCEIzluNi1M,20
+examplecurves-1.0.0.dist-info/RECORD,,
