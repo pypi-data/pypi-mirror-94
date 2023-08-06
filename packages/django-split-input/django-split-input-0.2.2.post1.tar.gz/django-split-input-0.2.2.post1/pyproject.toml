@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "django-split-input"
+version = "0.2.2.post1"
+description = "A widget to have a django text input split into multiple HTML inputs."
+authors = ["Julian Leucker <leuckerj@gmail.com>"]
+readme = "README.md"
+repository = "https://edugit.org/AlekSIS/libs/django-split-input"
+keywords = ["django", "widget"]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django :: 2.0",
+    "Framework :: Django :: 2.1",
+    "Framework :: Django :: 2.2",
+    "Framework :: Django :: 3.0",
+    "Framework :: Django :: 3.1",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Typing :: Typed",
+]
+license = "Apache-2.0"
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Django = ">=2.0,<4.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
