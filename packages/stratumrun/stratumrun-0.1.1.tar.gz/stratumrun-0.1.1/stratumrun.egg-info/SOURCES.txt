@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+stratumrun/StratumRun.py
+stratumrun/__init__.py
+stratumrun.egg-info/PKG-INFO
+stratumrun.egg-info/SOURCES.txt
+stratumrun.egg-info/dependency_links.txt
+stratumrun.egg-info/requires.txt
+stratumrun.egg-info/top_level.txt
