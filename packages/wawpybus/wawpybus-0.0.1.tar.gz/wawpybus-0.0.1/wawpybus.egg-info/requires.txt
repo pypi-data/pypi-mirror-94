@@ -1,0 +1,5 @@
+requests
+geopy
+pandas
+numba
+pytest
