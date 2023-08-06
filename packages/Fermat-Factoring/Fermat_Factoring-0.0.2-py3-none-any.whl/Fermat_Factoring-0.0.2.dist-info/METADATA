@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Fermat-Factoring
+Version: 0.0.2
+Summary: Factorising integers based on Fermat's technique
+Home-page: https://github.com/mihirgit/Fermat_Factoring
+Author: Mihir Goyenka
+Author-email: mihirgoyenka@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# This package is based on **Fermat's technique** to _factorize_ integers
+Additionally, this package has the following methods :
+1. prime_check: Check if an integer is prime or not by utilising Fermat's Factorising method
+2. primes_in_range: Return a list of prime numbers within a specified range given by user input
+
