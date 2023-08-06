@@ -1,0 +1,8 @@
+aws_solutions_constructs/aws_sns_sqs/__init__.py,sha256=ji0cN_yOlbpx255pyvoQSBGWT8OUCY0uZ1_0JUVCVFM,20001
+aws_solutions_constructs/aws_sns_sqs/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_solutions_constructs/aws_sns_sqs/_jsii/__init__.py,sha256=4u98-M4kDaU5wxSBQEqhYqU57cY3QZw4FWQQomAV4m0,603
+aws_solutions_constructs/aws_sns_sqs/_jsii/aws-sns-sqs@1.87.0.jsii.tgz,sha256=XvHG6vmhXpF1YY4XdGDUXaJwI5SOtZWzRLZMc4W8OoY,197846
+aws_solutions_constructs.aws_sns_sqs-1.87.0.dist-info/METADATA,sha256=xj6QGGLiTamnK5gXaq2BbxIewtSKwCDNDG8pOOE78CU,7291
+aws_solutions_constructs.aws_sns_sqs-1.87.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aws_solutions_constructs.aws_sns_sqs-1.87.0.dist-info/top_level.txt,sha256=hi3us_KW7V1ocfOqVsNq1o3w552jCEgu_KsCckqYWsg,25
+aws_solutions_constructs.aws_sns_sqs-1.87.0.dist-info/RECORD,,
