@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+requirements.txt
+setup.py
+topaiza/__init__.py
+topaiza.egg-info/PKG-INFO
+topaiza.egg-info/SOURCES.txt
+topaiza.egg-info/dependency_links.txt
+topaiza.egg-info/top_level.txt

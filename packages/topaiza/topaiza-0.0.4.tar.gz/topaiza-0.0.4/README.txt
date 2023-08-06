@@ -1,0 +1,1 @@
+A package that helps you make complex requests easier to call and handles all decoding and parsing for you using user provided flags.

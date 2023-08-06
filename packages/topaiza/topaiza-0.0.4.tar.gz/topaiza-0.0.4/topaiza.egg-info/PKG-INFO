@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: topaiza
+Version: 0.0.4
+Summary: Helper package that handles requests and parsing jargain
+Home-page: UNKNOWN
+Author: firaskoussa
+Author-email: firaskoussa@gmail.com
+License: MIT
+Description: A package that helps you make complex requests easier to call and handles all decoding and parsing for you using user provided flags.
+        
+        Change Log
+        ==========
+        
+        0.0.1 (02/11/2021)
+        ------------------
+        - First Release
+Keywords: requests
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
