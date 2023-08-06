@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/maidenhead/__init__.py
+src/maidenhead/__main__.py
+src/maidenhead/to_location.py
+src/maidenhead/to_maiden.py
+src/maidenhead.egg-info/PKG-INFO
+src/maidenhead.egg-info/SOURCES.txt
+src/maidenhead.egg-info/dependency_links.txt
+src/maidenhead.egg-info/entry_points.txt
+src/maidenhead.egg-info/requires.txt
+src/maidenhead.egg-info/top_level.txt

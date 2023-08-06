@@ -1,0 +1,3 @@
+[console_scripts]
+maidenhead = maidenhead.__main__:cli
+
