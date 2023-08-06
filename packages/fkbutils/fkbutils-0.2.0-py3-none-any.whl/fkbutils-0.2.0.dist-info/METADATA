@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: fkbutils
+Version: 0.2.0
+Summary: Utility functions that I need often across multiple projects!
+Home-page: UNKNOWN
+Author: Felix Kleine Bösing
+Author-email: felix.boesing@t-online.de
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pandas (>=1.1.4)
+Requires-Dist: numpy (>=1.18.5)
+Requires-Dist: redis
+Requires-Dist: psycopg2
+Requires-Dist: pymongo
+Requires-Dist: python-dotenv
+
+UNKNOWN
+
+
