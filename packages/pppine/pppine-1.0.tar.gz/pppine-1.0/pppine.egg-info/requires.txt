@@ -1,0 +1,6 @@
+setuptools>=42
+wheel
+python-magic
+pytz
+shortuuid
+phonenumbers
