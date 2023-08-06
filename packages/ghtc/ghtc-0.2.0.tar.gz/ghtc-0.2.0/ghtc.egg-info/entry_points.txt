@@ -1,0 +1,3 @@
+[console_scripts]
+ghtc = ghtc.cli:main
+
