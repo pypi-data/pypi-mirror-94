@@ -1,0 +1,5 @@
+global-include asedftk/**/*.jl
+global-include asedftk/**/Project.toml
+global-include asedftk/**/*.py
+include LICENSE
+include README.md
