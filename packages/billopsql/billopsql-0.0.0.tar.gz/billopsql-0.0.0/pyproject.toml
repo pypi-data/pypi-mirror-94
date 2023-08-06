@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "billopsql"
+version = "0.0.0"
+description = "internal use"
+authors = ["Billogram <platform@billogram.com>"]
+homepage = "https://github.com/billogram"
+repository = "https://github.com/billogram"
+keywords = []
+readme = "README.md"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python"
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.black]
+line-length = 120
+target_version = ["py36", "py37", "py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip = ".mypy_cache,__pycache__"
