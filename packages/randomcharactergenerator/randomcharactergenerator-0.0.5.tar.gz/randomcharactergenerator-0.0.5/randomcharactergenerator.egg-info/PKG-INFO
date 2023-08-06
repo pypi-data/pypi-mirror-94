@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: randomcharactergenerator
+Version: 0.0.5
+Summary: A library which generates random character codes using the random module
+Home-page: https://github.com/SupremeCoder1707/randomcharactergenerator
+Author: HighlyIntelligentBeing
+Author-email: highlyintelligentbeing1707@gmail.com
+License: UNKNOWN
+Description: # Random Character Generator
+        
+        ## About the Package
+        The random character generator is a library used to generate strings with random letters/numbers
+        
+        Current version: 0.0.5
+        
+        ## Installation
+        
+        You can install this module using [PyPI](https://pypi.org)
+        
+        `pip install randomcharactergenerator`
+        
+        or 
+        
+        `python3 -m pip install -U randomcharactergenerator`
+        
+        ## Usage
+        
+        ```python
+        # For a random string consisting of both numbers and alphabets
+        import randomcharactergenerator
+        string = randomcharactergenerator.rand_code()
+        print(string)
+        ```
+        
+        ```python
+        # For a random string consisting of alphabets only
+        import randomcharactergenerator
+        string = randomcharactergenerator.alphabet_code()
+        print(string)
+        ```
+        
+        ```python
+        # For a random string consisting of numbers only
+        import randomcharactergenerator
+        string = randomcharactergenerator.number_code()
+        print(string)
+        ```
+        
+        ```python
+        # You can also choose to specify the number of characters
+        import randomcharactergenerator
+        string = randomcharactergenerator.rand_code(7)
+        print(string)
+        
+        # Notes: Default number of characters is 5. 
+        # Warning: The 'characters' parameter must be an int only.
+        ```
+        
+        For more help, use the module_help() function
+        
+        ```python
+        import randomcharactergenerator
+        randomcharactergenerator.module_help()
+        ```
+        
+        ## GitHub
+        
+        https://github.com/SupremeCoder1707/randomcharactergenerator
+        
+        ## Credits
+        
+        Author: HighlyIntelligentBeing
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
