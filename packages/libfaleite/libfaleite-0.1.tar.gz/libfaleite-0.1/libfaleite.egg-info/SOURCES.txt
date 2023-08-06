@@ -1,0 +1,10 @@
+README.md
+setup.py
+libfaleite.egg-info/PKG-INFO
+libfaleite.egg-info/SOURCES.txt
+libfaleite.egg-info/dependency_links.txt
+libfaleite.egg-info/not-zip-safe
+libfaleite.egg-info/requires.txt
+libfaleite.egg-info/top_level.txt
+libpython/__init__.py
+libpython/github_api.py
