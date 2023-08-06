@@ -1,0 +1,2 @@
+from allennlp_datalawyer.data.dataset_readers.json_relations_reader import RelationsDatasetReader
+from allennlp_datalawyer.data.dataset_readers.json_entities_reader import EntitiesDatasetReader

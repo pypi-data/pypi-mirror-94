@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: allennlp-datalawyer
+Version: 0.2.15
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Datalawyer
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: split-datalawyer
+Requires-Dist: tqdm
+Requires-Dist: fire
+Requires-Dist: requests
+Requires-Dist: transformers
+Requires-Dist: elasticsearch
+Requires-Dist: opt-einsum
+Requires-Dist: sacremoses
+Requires-Dist: streamlit
+Requires-Dist: pylint (==1.8.1)
+
+UNKNOWN
+
+
