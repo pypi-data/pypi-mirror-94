@@ -1,0 +1,8 @@
+decorator>=3.3.2
+requests>=2.6.0
+
+[:python_version < "3.0"]
+configparser<5
+
+[:python_version < "3.5"]
+typing
