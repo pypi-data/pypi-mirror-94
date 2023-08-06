@@ -1,0 +1,11 @@
+cached_property<2.0,>=1.5
+dragonmapper<0.3,>=0.2
+prettytable<2.0,>=1.0
+loguru<0.6,>=0.5
+
+[LetterFrequency]
+requests_html
+requests
+
+[UnicodeDataBackport]
+unicodedata2
