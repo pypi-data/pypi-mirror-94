@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: worker
+metadata:
+  name: metalmetrics
+spec:
+  - cpu
+  - disk
+  - io
+  - ip
+  - kernel
+  - mac
+  - network
+  - os
+  - ram
+  - system
