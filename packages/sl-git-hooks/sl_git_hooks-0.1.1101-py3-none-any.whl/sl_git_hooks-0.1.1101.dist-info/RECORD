@@ -1,0 +1,15 @@
+sl-git-hooks/.gitignore,sha256=lvif_bZIed_gjpCCttFeqmSWsOFAuytpcgLzAYqLmHc,4057
+sl-git-hooks/__init__.py,sha256=m1QZAdvsO-1XSa-yfu2FQHk5MeXXpMW3_nzvkOWV4Jo,1239
+sl-git-hooks/__main__.py,sha256=CvNzFepgCoingJCoI__8EArulpnfKTCYWWjxCTPSi9s,67
+sl-git-hooks/config.py,sha256=U2613NKwMwpiIpZkPEzXap_hk4tgayiBiz4VqyLuIYU,2227
+sl-git-hooks/configs/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sl-git-hooks/configs/0db4748fd0a3f8892619b247a0d98c9ca58ea698.ini,sha256=VJVn6eO_LqNi6sJOmJHjNAGVGqSbkXvPgPErYtL_M4A,179
+sl-git-hooks/hooks/__init__.py,sha256=80gqGIWZnxSixF01ZvTPVooP2pt9CEV8h4BAyhSqsB8,26
+sl-git-hooks/hooks/pre_commit.py,sha256=xkV7VDDv5XIxqnHcYTw20dCY5UC018VXawisEFEhIBM,852
+sl-git-hooks/poetry.lock,sha256=zQA-cSTNmsl4mTnymP8tZaxgbeoG9M_KXc-r5CkgBMo,9016
+sl-git-hooks/templates/pre-commit.sh,sha256=sHWhQ2AzRunoIFxjr0prC30uCk-LX-8DyliF-EmiGbY,45
+sl-git-hooks/utils.py,sha256=3bKADzUO4OT_m05fheiJA2u9jDuGOXfCE6nfEAUk_u4,361
+sl_git_hooks-0.1.1101.dist-info/entry_points.txt,sha256=_nfmTVxXsA9O_1uXebw0AP8_yhNr7HZ7GS12HGUXUqs,50
+sl_git_hooks-0.1.1101.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+sl_git_hooks-0.1.1101.dist-info/METADATA,sha256=wRVUgKmwgLZ7EFUcUZE5djrWSJN2uXq6MgCsLMClAV8,445
+sl_git_hooks-0.1.1101.dist-info/RECORD,,
