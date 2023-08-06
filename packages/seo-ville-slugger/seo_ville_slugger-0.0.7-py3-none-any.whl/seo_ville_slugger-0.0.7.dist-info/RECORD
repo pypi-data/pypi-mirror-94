@@ -1,0 +1,12 @@
+seo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seo/settings.py,sha256=Su1MaODqJPfQ6hacmGRVzXvIDuYysHOCpdvamzgRtS0,262
+seo/storage.py,sha256=IrVtluZGgoJNsFhmFRqquZ795Fe9nrW9Kz_jJiKbOQE,503
+seo/utils.py,sha256=WJMkjM2g_MtnYkQTWrpdcuRgrtD8JmNi0yTnliy7YhU,930
+seo/ville/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seo/ville/slugger.py,sha256=mtcevyO7o9UbfKTzaUMbGG6Mx7mZDMnP7csFuWP6M2k,1969
+seo/ville/sorl.py,sha256=kAQe6YfBL9ff99demu6kpPlVlTuGny2-eYngBtKnuJQ,2531
+seo_ville_slugger-0.0.7.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+seo_ville_slugger-0.0.7.dist-info/METADATA,sha256=ZC1yuBPikEC_x-u69Y4vJI2iFcNqFSbUoheGl_wZ-eg,2745
+seo_ville_slugger-0.0.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+seo_ville_slugger-0.0.7.dist-info/top_level.txt,sha256=5WsA3DhwhBGXTOKiKgDtiTUjXlpLk4oeUvrSKrtRFoQ,4
+seo_ville_slugger-0.0.7.dist-info/RECORD,,
