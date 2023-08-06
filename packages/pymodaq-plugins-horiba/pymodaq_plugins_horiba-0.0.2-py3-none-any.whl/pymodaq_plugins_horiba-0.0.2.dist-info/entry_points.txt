@@ -1,0 +1,3 @@
+[pymodaq.plugins]
+horiba = pymodaq_plugins_horiba
+
