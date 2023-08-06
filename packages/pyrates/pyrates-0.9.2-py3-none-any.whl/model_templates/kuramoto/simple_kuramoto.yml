@@ -1,0 +1,93 @@
+%YAML 1.2
+---
+
+Op_noise:
+  base: OperatorTemplate
+  equations:
+    - "t_old = t_new"
+    - "t_new = t"
+    - "d/dt * theta = omega + xi*sqrt(t_new-t_old) + K*net_in"
+  variables:
+    theta:
+      default: output
+    omega:
+      default: 10.0
+    K:
+      default: 1.0
+    t_old:
+      default: 0.0
+    t_new:
+      default: 0.0
+    xi:
+      default: input
+    net_in:
+      default: input
+
+Op_base:
+  base: OperatorTemplate
+  equations:
+    - "d/dt * theta = omega + K*net_in"
+  variables:
+    theta:
+      default: output
+    omega:
+      default: 10.0
+    K:
+      default: 1.0
+    net_in:
+      default: input
+
+Op_coupling:
+  base: OperatorTemplate
+  equations:
+    - "k = sin(theta_s-theta_t)"
+  variables:
+    theta_s:
+      default: input
+    theta_t:
+      default: input
+    k:
+      default: output
+
+Sin_edge:
+  base: EdgeTemplate
+  operators:
+    - Op_coupling
+
+KM:
+  base: NodeTemplate
+  operators:
+    - Op_base
+
+KM_noise:
+  base: NodeTemplate
+  operators:
+    - Op_noise
+
+KM_single:
+  base: CircuitTemplate
+  nodes:
+    p1: KM
+
+KM_single_noise:
+  base: CircuitTemplate
+  nodes:
+    p1: KM_noise
+
+KMN:
+  base: CircuitTemplate
+  nodes:
+    p1: KM
+    p2: KM
+  edges:
+    - [{p1: {Op_base/theta: theta_s}, p2: {Op_base/theta: theta_t}}, p2/Op_base/net_in, Sin_edge, {weight: 2.0}]
+    - [{p2: {Op_base/theta: theta_s}, p1: {Op_base/theta: theta_t}}, p1/Op_base/net_in, Sin_edge, {weight: -2.0}]
+
+KMN_noise:
+  base: CircuitTemplate
+  nodes:
+    p1: KM_noise
+    p2: KM_noise
+  edges:
+    - [{p1: {Op_noise/theta: theta_s}, p2: {Op_noise/theta: theta_t}}, p2/Op_noise/net_in, Sin_edge, {weight: 4.0}]
+    - [{p2: {Op_noise/theta: theta_s}, p1: {Op_noise/theta: theta_t}}, p1/Op_noise/net_in, Sin_edge, {weight: -4.0}]
