@@ -1,0 +1,18 @@
+-r requirements.txt
+cairosvg
+codecov
+corner
+coverage
+dill
+emcee>=3.0.0
+jupyter_sphinx>=0.2.4
+matplotlib
+numdifftools
+pandas
+Pillow
+pre-commit
+pytest
+Sphinx
+sphinx-gallery>=0.8
+sphinxcontrib-svg2pdfconverter
+sympy
