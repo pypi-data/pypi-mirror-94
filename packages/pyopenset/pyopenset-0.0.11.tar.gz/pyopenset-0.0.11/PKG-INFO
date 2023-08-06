@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyopenset
+Version: 0.0.11
+Summary: Infering novel classes for classification problems
+Home-page: https://github.com/R-S-P-MODELS/pyopenset/
+Author: Rafael S. Pereira
+Author-email: r.s.p.models@gmail.com
+License: UNKNOWN
+Description: # pyopenset
+        
+        Pyopenset is a package that implements the meyhodology described in the paper:
+        
+        It allows a easy and intuitive way to add novel classes to a pretrained model without requiring further optimization, New classes will always be added after the last.
+        
+        So for example if your model has 10 neurons each for a single class ,the new class would be associated with neuron 11.
+        
+        Note that current implementation only supports softmax activation functions on the last layer.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
