@@ -1,0 +1,5 @@
+click
+sqlite-utils>=3.0
+
+[test]
+pytest
