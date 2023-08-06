@@ -1,0 +1,8 @@
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+weather_dc.egg-info/PKG-INFO
+weather_dc.egg-info/SOURCES.txt
+weather_dc.egg-info/dependency_links.txt
+weather_dc.egg-info/top_level.txt
