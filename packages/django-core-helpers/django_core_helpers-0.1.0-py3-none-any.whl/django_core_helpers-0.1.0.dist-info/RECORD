@@ -1,0 +1,13 @@
+core_helpers/__init__.py,sha256=CpXi3jGlx23RvRyU7iytOMZrnspdWw4yofS8lpP1AJU,18
+core_helpers/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_helpers/api/filters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_helpers/api/serializers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_helpers/api/views/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_helpers/managers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_helpers/managers/core.py,sha256=oWoYWbdjdwJlJQmtc1tdyyBTUX7gq90zXcVsis--0jg,1689
+core_helpers/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core_helpers/models/core.py,sha256=kkwvG5ZCcYsYdFea9IoKS9nGhFBmIUjI37JXXneAec8,2098
+django_core_helpers-0.1.0.dist-info/LICENSE,sha256=d33uyaiAD6i2hH_zRGRJB1qLrwUzVB3FY5skDypEJqs,1066
+django_core_helpers-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+django_core_helpers-0.1.0.dist-info/METADATA,sha256=BFmpY4-4hws8OpTAT7_DTBaIrI2xrhgIz2A0FsTDxXY,3028
+django_core_helpers-0.1.0.dist-info/RECORD,,
