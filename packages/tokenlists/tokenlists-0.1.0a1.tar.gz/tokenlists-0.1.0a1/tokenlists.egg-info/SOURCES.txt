@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+tokenlists/__init__.py
+tokenlists/config.py
+tokenlists/manager.py
+tokenlists/typing.py
+tokenlists.egg-info/PKG-INFO
+tokenlists.egg-info/SOURCES.txt
+tokenlists.egg-info/dependency_links.txt
+tokenlists.egg-info/requires.txt
+tokenlists.egg-info/top_level.txt
