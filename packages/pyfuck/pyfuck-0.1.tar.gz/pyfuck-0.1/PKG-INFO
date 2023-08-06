@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: pyfuck
+Version: 0.1
+Summary: Python Brainfuck Implementation to Execute as well as Convert Brainfuck Code
+Home-page: https://github.com/Jaysmito101/Brainfuck/tree/main/Python/pyfuck
+Author: Jaysmito Mukherjee
+Author-email: jaysmito101@gmail.com
+License: MIT
+Download-URL: https://github.com/Jaysmito101/PyFuck/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: brainfuck,interpreter,code-converter
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
