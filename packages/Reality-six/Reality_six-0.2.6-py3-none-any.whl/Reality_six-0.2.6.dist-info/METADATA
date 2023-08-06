@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: Reality-six
+Version: 0.2.6
+Summary: A simple package that tells you reality.
+Home-page: https://github.com/Hillo232/Reality/tree/main
+Author: pkg_uploaders
+Author-email: example@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# RealitySix
+
+Get you platform:
+
+```py
+import RealitySix
+
+print(RealitySix.platform())
+```
+
+Get timestamp:
+
+```py
+import RealitySix as r
+
+print(str(r.timestamp()))
+```
+
+
+
+[Documentation](https://reality-six-docs.herokuapp.com/Docs/index.html)
+
