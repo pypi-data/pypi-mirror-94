@@ -1,0 +1,21 @@
+site_name: aws-gate
+site_description: AWS SSM Session manager CLI client
+theme:
+    name: material
+    highlightjs: true
+    hljs_languages:
+        - yaml
+    icon:
+      repo: fontawesome/brands/github
+
+repo_url: https://github.com/xen0l/aws-gate
+
+nav:
+  - Introduction:
+      - aws-gate: index.md
+      - License: license.md
+      - Changelog: changelog.md
+  - Quickstart: quickstart.md
+  - Configuration: configuration.md
+  - Command Line: command-line.md
+  - Development: development.md
