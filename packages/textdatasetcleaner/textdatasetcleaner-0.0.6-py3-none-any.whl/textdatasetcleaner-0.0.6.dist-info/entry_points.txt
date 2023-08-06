@@ -1,0 +1,3 @@
+[console_scripts]
+tdc = textdatasetcleaner.cli:run
+
