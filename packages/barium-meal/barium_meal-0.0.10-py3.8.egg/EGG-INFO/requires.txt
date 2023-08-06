@@ -1,0 +1,7 @@
+pytest
+flask
+opentelemetry-exporter-jaeger
+opentelemetry-api
+opentelemetry-instrumentation-requests
+opentelemetry-instrumentation-boto
+opentelemetry-instrumentation-flask
