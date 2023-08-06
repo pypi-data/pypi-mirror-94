@@ -1,0 +1,3 @@
+[console_scripts]
+bikesanity-run = bikesanity.run:run
+
