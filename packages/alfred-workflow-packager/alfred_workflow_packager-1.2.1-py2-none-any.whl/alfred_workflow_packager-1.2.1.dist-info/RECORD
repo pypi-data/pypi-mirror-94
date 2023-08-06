@@ -1,0 +1,11 @@
+awp/__init__.py,sha256=nNM1C82iyTlJBZXSOB9CFgT1kA9k2ZkPVChomm-SRNA,37
+awp/main.py,sha256=5NhtDA74sB2UA4w8LeGd3qU7giUQGbQ6zolGwgh2rCs,1188
+awp/packager.py,sha256=43hEgUaysd2b6b0-Zo41rnhuD42XKg0oZFNqcxUkxQM,7975
+awp/validator.py,sha256=4yv8HcN1iUC-arAMV0dybCo4ANlH5eTENVcuAzAYyWg,398
+awp/data/config-schema.json,sha256=lAcyZbbp27X7VSTvuP17fLgMNVlG9UISd8ESgunOspQ,843
+alfred_workflow_packager-1.2.1.dist-info/LICENSE.txt,sha256=tKQESwr2z7zYOiezQHhDc-4ZUFqwcR9wVgAG6BjO_pc,1083
+alfred_workflow_packager-1.2.1.dist-info/METADATA,sha256=rgKKcI0_IOApcVBVwfbQP3ExUqSP632z8g4BZq-bDD4,5163
+alfred_workflow_packager-1.2.1.dist-info/WHEEL,sha256=bK8TJl-oUKFDa18qkB68zwTZhIBCifqi4qjS_NS4aFQ,92
+alfred_workflow_packager-1.2.1.dist-info/entry_points.txt,sha256=1PwEslnX6kuJRHfjeyYRVCUMXjx9BLlP5S-mgFifGXE,39
+alfred_workflow_packager-1.2.1.dist-info/top_level.txt,sha256=GkE-_4SfDsg5bA0dPENdX3-dKrfBfcaBu-EsGa0XFj0,4
+alfred_workflow_packager-1.2.1.dist-info/RECORD,,
