@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: spdlog
+Version: 2.0.4
+Summary: python wrapper around C++ spdlog logging library (https://github.com/bodgergely/spdlog-python)
+Home-page: UNKNOWN
+Author: Gergely Bod
+Author-email: bodgergely@hotmail.com
+License: MIT
+Description: python wrapper (https://github.com/bodgergely/spdlog-python) around C++ spdlog (http://github.com/gabime/spdlog.git) logging library.
+Platform: UNKNOWN
