@@ -1,0 +1,11 @@
+aiosmtpd>=1.2.4
+cryptography
+pytest
+python-dotenv
+
+[dev]
+flake8
+isort
+pytest-asyncio
+pytest-cov
+pytest-timeout
