@@ -1,0 +1,15 @@
+google-api-python-client>=1.12.5
+PyYAML>=3.0
+bs4
+pydrive
+markdownify
+argparse
+lxml
+
+[tests]
+pytest>=4.6.0
+timeout-decorator
+funcy>=1.14
+flake8
+flake8-docstrings
+black==19.10b0

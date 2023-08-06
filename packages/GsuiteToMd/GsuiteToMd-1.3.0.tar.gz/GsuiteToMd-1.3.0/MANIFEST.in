@@ -1,0 +1,9 @@
+include RELEASE-VERSION
+include version.py
+include AUTHORS
+include CHANGES
+include LICENSE
+include MANIFEST.in
+include README.rst
+recursive-include docs *
+recursive-exclude * *.py[co]
