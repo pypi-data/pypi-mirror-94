@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: gesang
+Version: 1.0.0
+Summary: A restful api framework with starlette.
+Home-page: UNKNOWN
+Author: Dong Zhang
+Author-email: 785576549@qq.com
+License: UNKNOWN
+Description: # gesang (格桑花)
+        
+        一款基于starlette和uvicorn的restful风格的框架，[点击进入详细文档](https://gitee.com/flamingo-apps/flamingo-core/wikis/%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D?sort_id=3554319)
+        
+        ## 安装
+        
+        ```
+        $ pip install gesang
+        ```
+        
+        ## 命令
+        ### runserver
+        启动一个server服务
+        
+        - --host 启动主机地址，默认是127.0.0.1
+        - --port 启动端口，默认是8888
+        - --enable-log-color 是否启用带有颜色格式的日期，默认是false，设置位true则输出带有颜色的文字（只在console中适用）
+        - --enable-reload 是否启用重新加载，默认是false，启用后当修改保存文件会触发重启server服务，一般调试时使用
+        - --factory 是否启用工厂模式启用
+        
+        ### startproject
+        创建一个新的工程
+        
+        - name 工程名称
+        - directory 将工程文件夹创建到指定文件夹中，默认是当前文件夹
+        
+        ### startapp
+        创建一个新的应用
+        
+        - name 应用名称
+        - directory 将应用文件夹创建到指定文件夹中，默认是当前文件夹
+        
+        更新日志
+        
+        - 2021-02-09 安装包名称修改成为gesang
+        - 2021-02-08 修改只能允许GET方法的问题，修改版本
+        - 2021-02-08 修改去除fastapi基于starlette，添加view类参数验证功能，修改版本
+        - 2021-02-05 解决startproject和startapp 没有反应的问题
+        - 2021-02-04 首次上传
+        
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
