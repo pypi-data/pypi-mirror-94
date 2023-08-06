@@ -1,0 +1,13 @@
+README.md
+setup.py
+fastpip/__init__.py
+fastpip/__pyinfo.py
+fastpip/__syspath.py
+fastpip/errors.py
+fastpip/fastpip.py
+fastpip/findpypath.py
+fastpip.egg-info/PKG-INFO
+fastpip.egg-info/SOURCES.txt
+fastpip.egg-info/dependency_links.txt
+fastpip.egg-info/requires.txt
+fastpip.egg-info/top_level.txt
