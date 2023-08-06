@@ -1,0 +1,17 @@
+code_video/__init__.py,sha256=j-wN5ujUodHPu8Lg6rLpE7jmm2uwR8NAdbLlzZwreso,398
+code_video/autoscale.py,sha256=FUN_PWnNKe5ueSyLb-J-CyZunhwRkDTeGaafZABhZRc,5788
+code_video/code_walkthrough.py,sha256=fRQyvkGeZV1205qh8dDm6ISz6jTFQfGp9eRrfIYJP94,3512
+code_video/comment_parser.py,sha256=pRWSpmLXvhgixUsKtLQBaQlMou6mN8sU5srLtvEU1tU,1699
+code_video/layout.py,sha256=O5KzZo3RBA2k1uhiLmEZ1djsTOy4uokVMCP7hI34wpI,1144
+code_video/music.py,sha256=FjKsvl4Z4e8YhOvpUxbtbWxLxIPeGja9S3qYiZMBzwg,1353
+code_video/player.py,sha256=eygd371djgQULhA8HaVI3RAVHPa6O1Wg1gl5t1ni_g8,3447
+code_video/scene.py,sha256=vxXaiCRG6MBAZXSN9TdyHhZn5zO_o68eYlNNJKGGKSI,9284
+code_video/sequence.py,sha256=55b2xpF4d1XYXP4Dm533A29hGvz3VNzxzPM6qP9-eYY,8845
+code_video/widgets.py,sha256=NQ_Tr8HsQeFF5Us4vKQUri4_L7knE6zpTfFgHWT8Ous,6003
+code_video_cli/__init__.py,sha256=VUtQUvSncmTqwtvskDc01WQCfLFrVKly9Bn8nt8lSzY,1356
+code_video_generator-0.4.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+code_video_generator-0.4.0.dist-info/METADATA,sha256=DkaG8JSuOIAxBgt8BQJjvwV4ERl1d0UIyB0KkT_ZtLc,1483
+code_video_generator-0.4.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+code_video_generator-0.4.0.dist-info/entry_points.txt,sha256=J1usGw2iauX88mr_6yOstaJcK0LQ6nCLrwbDdw-n94A,52
+code_video_generator-0.4.0.dist-info/top_level.txt,sha256=WdeKp-AG1_7YKPsShmWmp6jy7SMHllYFPnxp96gSdgc,26
+code_video_generator-0.4.0.dist-info/RECORD,,
