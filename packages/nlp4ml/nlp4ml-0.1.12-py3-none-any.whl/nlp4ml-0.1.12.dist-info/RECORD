@@ -1,0 +1,17 @@
+nlp4ml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nlp4ml/encoder.py,sha256=GK1AKV0v7F3ab4p3Bv9pKNMOSGVx-Doz3t9f0kjBrsY,7667
+nlp4ml/ensembler.py,sha256=9KwPxEqZ_KDcDNcpy3v1d_ROUW54DXskNNak9GWa2gs,4117
+nlp4ml/hypothesis.py,sha256=OYWIUeAYO2wpVJli_Euiudx0F1aNMKsJot2XrCuitZM,2352
+nlp4ml/main.py,sha256=rwUmcTFxbv-dpItGR3rY5-MyMgo-yKcflEAgpq6JW3E,1285
+nlp4ml/preprocessing.py,sha256=JZnfHsFJDQxi72cKQYzbgclz7vHGRaLf9XgI3p77Q_c,10311
+nlp4ml/search.py,sha256=3m4r4JKkoH3Bly2sJT92F_nNHGMpa40k9O9icz8-NBc,1494
+nlp4ml/semantics.py,sha256=fuJ-Rcl7aPKoi4aPcBI0zj4K75ETJ7UAcvYfsZw9PiA,2468
+nlp4ml/statistics.py,sha256=3tMy-HUahAnUiGB_TSwnZajSz7zBZ6JUCnPaphJnTTU,2906
+nlp4ml/utils.py,sha256=s_Jg4IHj-_klqbEZLChvaxqjI0sFaYEqMnezk7urxvY,3136
+nlp4ml/vectoriser.py,sha256=xHm9zAIpksqMjO2Z5IqMfKPGTgqdeFjsbD0hMxmv5Fo,9501
+nlp4ml/visualiser.py,sha256=G-sCtXQv5RwiVCQ_rgRSWUDERbLyXuqgpYWws6rqU8g,688
+nlp4ml-0.1.12.dist-info/LICENSE.txt,sha256=Ml5sLwxCrECR2tz_LlIBe1en4-OMBosarnn4bsaxtX4,1073
+nlp4ml-0.1.12.dist-info/METADATA,sha256=6b6CeRRbAC_hB2X6r-pCioLF0U8YEG-Q5vBwxEJsU7A,690
+nlp4ml-0.1.12.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+nlp4ml-0.1.12.dist-info/top_level.txt,sha256=NcdSZklfQClViTdR_ajMuB2Zoy6zUMK5Ein72gTfmKM,7
+nlp4ml-0.1.12.dist-info/RECORD,,
