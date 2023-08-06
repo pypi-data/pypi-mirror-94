@@ -1,0 +1,179 @@
+# Areix IO (Alpha Test)
+
+## Installation
+Create a virtual environment 
+```
+virtualenv venv --python=python3
+```
+Activate the virtual environment 
+```python
+# Macbook / Linus
+source venv/bin/activate 
+
+# Windows
+venv/Scripts/activate
+```
+Deactivate
+```
+deactivate
+```
+Install Areix-IO package
+```
+pip install Areix-IO
+```
+
+
+## Usage
+```python
+import areix_io as aio
+from areix_io.utils import create_report_folder, SideType
+
+class MyStrategy(aio.Strategy):
+    def initialize(self):
+        self.info('initialize')
+        for k,df in self.ctx.feed.items():
+            df['ma5'] = df.close.rolling(5).mean()
+            df['ma10'] = df.close.rolling(10).mean()
+            df['ma20'] = df.close.rolling(20).mean()
+    
+    def before_trade(self, order):
+        return True
+
+    def on_order_ok(self, order):
+        # self.info(f'submit order successfully: {order}')
+        pass
+
+    def on_market_start(self):
+        # self.info('on_market_start')
+        pass
+
+    def on_market_close(self):
+        # self.info('on_market_close')
+        pass
+
+    def on_order_timeout(self, order):
+        # self.info(f'on_order_timeout. Order: {order}')
+        pass
+
+    def finish(self):
+        self.info('finish')
+
+    def on_bar(self, tick):
+        bar_data = self.ctx.bar_data # The bar data at the tick
+        hist_data = self.ctx.hist_data # The historical bar data until the tick
+
+        for code, hist in bar_data.items():
+
+            if hist['ma5'] > 1.03 * hist['ma20']:
+                self.order_lotsize(code, lots=1, side=SideType.BUY, ioc=True)
+                self.info(f"BUY created {bar_data[code]['lot_size']} {code} @ {bar_data[code]['close']} at {tick}")
+
+            if hist['ma5'] < 0.98 * hist['ma20'] and code in self.ctx.position:
+                self.order_lotsize(code, lots=1, side=SideType.SELL, ioc=True)
+                self.info(f"SELL created {bar_data[code]['lot_size']} {code} @ {bar_data[code]['close']} at {tick}")
+
+```
+Run your strategy:
+```python
+aio.set_token('xxxxxx') # Only need to run once
+base = create_report_folder()
+start_date = '2019-10-13'
+end_date = '2021-02-03'
+
+sdf = aio.StockDataFeed(
+    symbols=['0700.HK', '0005.HK', '^HSI'], 
+    start_date=start_date, 
+    end_date=end_date,  
+    # period= '1y', 
+    interval='1d', 
+    order_ascending=True, 
+    store_path=base,
+)
+feed, idx = sdf.fetch_data()
+benchmark = feed.pop('^HSI')
+
+mytest = aio.BackTest(
+    feed, 
+    MyStrategy, 
+    commission_rate=0.0017, 
+    min_commission=40, 
+    trade_at='close', 
+    benchmark=benchmark, 
+    cash=1000000, 
+    tradedays=idx, 
+    store_path=base,
+    slippage=0.0,
+    allow_ss=False
+)
+
+mytest.start()
+```
+Retrieve statistic results:
+```python
+prefix = ''
+
+mytest.export_json(f'{prefix}trade_records.json', mytest.ctx.trade_records)
+mytest.export_csv(f'{prefix}trade_records.csv', mytest.ctx.trade_records)
+mytest.export_csv(f'{prefix}order_records.csv', mytest.ctx.order_records)
+mytest.export_csv(f'{prefix}closed_trade_records.csv', mytest.ctx.closed_trade_records)
+mytest.export_json(f'{prefix}pnls.json', mytest.ctx.pnls)
+mytest.export_csv(f'{prefix}pnls.csv', mytest.ctx.pnls)
+
+print('-----------'*10)
+stats = mytest.ctx.statistic.stats(pprint=True, annualization=252, risk_free=0.0442)
+print(stats)
+mytest.export_csv(f'{prefix}result.csv', stats, index=True)
+
+df= mytest.ctx.statistic.df
+mytest.export_csv(f'{prefix}statistic.csv', df, index=True)
+
+mytest.plot(f'{base}/{prefix}report.png', interactive=False)
+mytest.plot(f'{base}/{prefix}report.html', interactive=True)
+```
+```
+start                                               2019-10-14 00:00:00
+end                                                 2021-02-03 00:00:00
+duration                                              478 days 00:00:00
+beginning_balance                                               1000000
+ending_balance                                           1634230.874058
+total_net_profit                                          634230.874058
+gross_profit                                             3046941.081667
+gross_loss                                              -2412710.207609
+profit_factor                                                  1.262871
+return_on_initial_capital                                      0.634231
+annualized_return                                              0.463524
+total_return                                                   0.634231
+max_return                                                     0.701701
+min_return                                                    -0.116135
+number_trades                                                        99
+number_winning_trades                                                21
+number_losing_trades                                                 17
+win_ratio                                                      0.212121
+loss_ratio                                                     0.171717
+avg_profit_per_trade                                        3032.923087
+trading_period                                 1 years 3 months 20 days
+avg_daily_pnl                                               1957.502698
+avg_daily_pnl(%)                                               0.001729
+avg_weekly_pnl                                              9326.924619
+avg_weekly_pnl(%)                                              0.007731
+avg_monthly_pnl                                            39639.429629
+avg_monthly_pnl(%)                                             0.033727
+avg_quarterly_pnl                                         126993.756593
+avg_quarterly_pnl(%)                                           0.111005
+avg_annualy_pnl                                           317484.391481
+avg_annualy_pnl(%)                                             0.279107
+sharpe_ratio                                                   1.197033
+sortino_ratio                                                  2.014487
+annualized_volatility                                          0.327517
+information_ratio                                              0.077989
+omega_ratio                                                    0.009424
+downside_risk                                                  0.216255
+beta                                                           0.852260
+alpha                                                         -0.727623
+calmar_ratio                                                   2.754151
+tail_ratio                                                     1.144190
+stability_of_timeseries                                        0.781261
+max_drawdown                                                   0.168300
+max_drawdown_period          (2020-11-05 00:00:00, 2020-12-28 00:00:00)
+max_drawdown_duration                                  53 days 00:00:00
+```

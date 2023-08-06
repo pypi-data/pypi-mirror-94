@@ -1,0 +1,10 @@
+xlrd==1.2.0
+requests
+numpy
+pandas
+matplotlib
+bokeh
+pyjwt
+yfinance
+ccxt
+scipy
