@@ -1,0 +1,8 @@
+/build/
+/dist/
+# Do not track extracted contents of lib-src/file-x.xx.tar.gz
+*/file*/*
+/tmp/
+*.egg-info
+*.so
+*.mgc
