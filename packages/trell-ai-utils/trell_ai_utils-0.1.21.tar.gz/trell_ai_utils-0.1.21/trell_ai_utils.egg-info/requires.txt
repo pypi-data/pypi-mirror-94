@@ -1,0 +1,17 @@
+requests
+emoji
+json-utils
+python-dotenv
+pandas_gbq
+google-cloud
+google-cloud-bigquery
+mysql-connector
+mysql-replication
+subprocess32
+psutil
+Flask
+SQLAlchemy
+SQLAlchemy-JSONField
+SQLAlchemy-Utils
+boto
+boto3
