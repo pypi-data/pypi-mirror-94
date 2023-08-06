@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: tensorflow-modules
+Version: 0.0.5
+Summary: tensorflow layers, models
+Home-page: https://github.com/otsuka-kentaro/tensorflow-modules
+Author: OtsukaKentaro
+Author-email: otsuka.kenchan@gmail.com
+License: UNKNOWN
+Description: # tensorflow-modules
+        tensorflow layers, models
+        
+        # Requirements
+        * python >= 3.8.6
+        
+        # Setup
+        
+        ## create venv
+        
+        ```shell
+        $ python -m venv $(pwd)
+        ```
+        
+        ## activate venv
+        
+        ```shell
+        $ source bin/activate
+        $ pip install -r requirements.txt
+        ```
+        
+        ## deactivate venv
+        
+        ```shell
+        $ deactivate
+        ```
+        
+        # test
+        ```shell
+        $ python -m unittest discover tensorflow_modules
+        ```
+        
+        # package release
+        
+        * release
+        
+        ```shell
+        $ rm -rf tensorflow_modules.egg-info/* dist/*
+        $ python setup.py sdist bdist_wheel
+        $ twine upload --repository pypi dist/*
+        ```
+        
+        * check
+        
+        ```shell
+        $ open https://pypi.org/project/tensorflow-modules
+        $ pip --no-cache-dir install --upgrade tensorflow-modules
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
