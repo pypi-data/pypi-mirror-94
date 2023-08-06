@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: binx-og-image-generator
+Version: 0.2.9
+Summary: generates og image for the binx.io blog
+Home-page: https://github.com/binxio/og-image-generator
+Author: Mark van Holsteijn
+Author-email: mark@binx.io
+License: restricted
+Description: # binx.io og image generator
+        
+        utility to generate the binx.io social image for a blog.
+        
+        ```
+        Usage: binx-og-image-generator [OPTIONS] IMAGE
+        
+          generate an og image for blog
+        
+        Options:
+          --title TEXT     of the blog  [required]
+          --subtitle TEXT  of the blog  [required]
+          --author TEXT    of the blog  [required]
+          --output TEXT    filename of the image  [required]
+          --help           Show this message and exit.
+        ```
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
