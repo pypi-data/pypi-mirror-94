@@ -1,0 +1,66 @@
+#!/usr/bin/env python
+
+#executing script creating disordered sequence variants from command line.
+
+#import stuff for making CLI
+import os
+import sys
+import argparse
+
+#import csv
+import csv
+
+from pipit.shuffle import seq as shuffle_seq
+
+parser = argparse.ArgumentParser(description='Create specific shuffled sequences.')
+parser.add_argument('sequence', type=str, help='The protein sequence to shuffle.')
+parser.add_argument('start', type=int,
+                    help='The starting amino acid number to define your region to either shuffle or keep constant')
+parser.add_argument('end', type=int,
+                    help='The ending amino acid number to define your region to either shuffle or keep constant')
+parser.add_argument('-n', '--number', type=int, default=1, metavar='number_blocks',
+                    help='The number of blocks to divide the sequence to be shuffled into')
+parser.add_argument('-i', '--inverse', action='store_true', 
+                    help='If this flag is used, the region defined will be kept constant and regions outside of that will be shuffled.')
+parser.add_argument('-s', '--save', action='store_true', 
+                    help='If this flag is used, the sequences will be saved to a .csv file. Otherwise, will print to terminal.')
+parser.add_argument('-name', '--file_name', type=str, default="", 
+                    help='The name of the output .csv file. If no name is given, the file will be saved as pipit_NNNNNNNNNN.csv, where the 10 Ns after pipit_ are replaced by 10 random alphanumeric characters')
+parser.add_argument('-path', '--output_path', type=str, default="",
+                    help='The path to where to save the .csv file. Default will save to the current directory.')
+parser.add_argument('-names', '--seq_names', action='store_true',
+                    help = 'Use this flag to include arbitrary names for generated variants in output .csv file.')
+
+
+
+# parse the args
+args = parser.parse_args()
+
+# store whether inverse is true or not
+if args.inverse:
+    inverse=True
+else:
+    inverse=False
+
+# store whether to save or not
+if args.save:
+    save=True
+else:
+    save=False
+
+if args.seq_names:
+    names=True
+else:
+    names=False
+
+# execute shuffle_seq
+if save==False:
+    print(shuffle_seq(args.sequence, start=args.start, end=args.end, number_blocks=args.number, inverse=inverse))
+else:
+    shuffle_seq(args.sequence, start=args.start, end=args.end, number_blocks=args.number, inverse=inverse, save=True,output_name = args.file_name, output_path = args.output_path, seq_names=names)
+
+
+
+
+
+
