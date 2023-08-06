@@ -1,0 +1,10 @@
+numpy
+
+[:python_version == "2.7"]
+pdfmerge
+matplotlib==2.2.5
+astropy==2.0.16
+
+[:python_version >= "3.0"]
+matplotlib
+astropy
