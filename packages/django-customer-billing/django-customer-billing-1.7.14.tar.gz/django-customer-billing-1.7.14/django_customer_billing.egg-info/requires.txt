@@ -1,0 +1,8 @@
+Django>=2.2
+django-money
+django-fsm
+djangorestframework
+django-import-export
+structlog
+typing
+progressbar2
