@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: lio
+Version: 0.2.1
+Summary: Learning from Indirect Observations
+Home-page: https://github.com/YivanZhang/lio
+Author: Yivan Zhang
+Author-email: yivanzhang@ms.k.u-tokyo.ac.jp
+License: MIT
+Description: # LIO: Learning from Indirect Observations
+        
+        ### A package for weakly supervised learning research based on PyTorch
+        
+        <a href="https://github.com/YivanZhang/lio/blob/master/LICENSE">
+          <img alt="license" src="https://img.shields.io/github/license/YivanZhang/lio">
+        </a>
+        <a href="https://pypi.org/project/lio/">
+          <img alt="pypi" src="https://badge.fury.io/py/lio.svg" alt="PyPI version">
+        </a>
+        
+        ## Installation
+        
+        ```sh
+        pip install lio
+        ```
+        or
+        ```sh
+        git clone https://github.com/YivanZhang/lio.git
+        pip install -e .
+        ```
+        
+        Most of the modules are designed as small (higher-order) functions.  
+        Feel free to copy-paste only what you need for your existing workflow to reduce dependencies.
+        
+        ## References
+        
+        - **Learning from Indirect Observations**  
+          Yivan Zhang, Nontawat Charoenphakdee, and Masashi Sugiyama  
+          [[arXiv]](https://arxiv.org/abs/1910.04394)
+        
+        - **Learning from Aggregate Observations**  
+          Yivan Zhang, Nontawat Charoenphakdee, Zhenguo Wu, and Masashi Sugiyama  
+          [[arXiv]](https://arxiv.org/abs/2004.06316)
+          [[NeurIPS'20]](https://proceedings.neurips.cc/paper/2020/hash/5b0fa0e4c041548bb6289e15d865a696-Abstract.html)
+        
+        
+        - **Learning Noise Transition Matrix from Only Noisy Labels**  
+          **via Total Variation Regularization**  
+          Yivan Zhang, Gang Niu, and Masashi Sugiyama  
+          [[arXiv]](https://arxiv.org/abs/2102.02414)
+          [[code]](/ex/transition-matrix)  
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
