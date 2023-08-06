@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+qlikconnect/__init__.py
+qlikconnect/qlikconnect.py
+qlikconnect.egg-info/PKG-INFO
+qlikconnect.egg-info/SOURCES.txt
+qlikconnect.egg-info/dependency_links.txt
+qlikconnect.egg-info/top_level.txt
