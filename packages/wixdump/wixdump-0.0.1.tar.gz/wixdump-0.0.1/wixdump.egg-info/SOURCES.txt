@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+wixdump.egg-info/PKG-INFO
+wixdump.egg-info/SOURCES.txt
+wixdump.egg-info/dependency_links.txt
+wixdump.egg-info/top_level.txt
