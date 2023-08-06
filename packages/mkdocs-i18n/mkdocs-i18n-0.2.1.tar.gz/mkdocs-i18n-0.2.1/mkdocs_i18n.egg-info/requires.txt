@@ -1,0 +1,15 @@
+mkdocs>=1.1
+mkdocs-material
+
+[test]
+isort
+black
+bandit
+flake8
+pylint
+mamba
+bs4
+lxml
+expects
+coverage
+pypi-version-check
