@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pycarus
+Version: 0.1.4
+Summary: Utilities for computer vision and 3D geometry
+Author: Luca De Luigi
+Author-email: lucadeluigi91@gmail.com
+Requires-Python: >=3.6.2,<3.9.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: einops (>=0.3.0,<0.4.0)
+Requires-Dist: open3d (>=0.12.0,<0.13.0)
+Requires-Dist: pytorch3d (>=0.3.0,<0.4.0)
+Requires-Dist: torch (>=1.7.1,<2.0.0)
