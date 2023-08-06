@@ -1,0 +1,9 @@
+tests/templates/template.py
+tests/data.json
+tests/test_result.py
+
+__pycache__/
+*.pyc
+.env/
+scripts/
+dist/
