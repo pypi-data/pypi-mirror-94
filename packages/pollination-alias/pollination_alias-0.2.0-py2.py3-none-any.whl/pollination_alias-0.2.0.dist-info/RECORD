@@ -1,0 +1,15 @@
+pollination/alias/__init__.py,sha256=_zcIRo5B7lrLi376anJ7QJGjlfaip31VqllYRu9GBtY,70
+pollination/alias/inputs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pollination/alias/inputs/bool_options.py,sha256=vHWczEAOyBD_FI26JsEok2yHQjVGoqfwIOwBJfEyPE0,1643
+pollination/alias/inputs/ddy.py,sha256=8dOKyVG2ikxo9HacHnrmsI-TCMBBcVySED5-U7qsUAY,546
+pollination/alias/inputs/model.py,sha256=AuCz3TvRixl_aHYayZoXg3YB2TewV4-p4GwBdgI0V9w,1619
+pollination/alias/inputs/simulation.py,sha256=UzGZCxUrrWID29lKqQigPKxvKUrZJGCMfgEp78Rr0Nk,679
+pollination/alias/inputs/wea.py,sha256=CV5fbCPKbaIo9_5E7bHC8muRYzCbmS-fSn0d15-c6GA,546
+pollination/alias/outputs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pollination/alias/outputs/daylight.py,sha256=XpuDfufm0JIxHZeThojmbQZUBsZkX68n-_X4rwz42ek,1107
+pollination/alias/outputs/eui.py,sha256=fzCSdUBc2Avt_dB1O5KimJvCIb6gmHW5FPDq3uwLAW4,587
+pollination_alias-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pollination_alias-0.2.0.dist-info/METADATA,sha256=WTzrPrF7WMYv9UsNLuALFC4ULqAsuo-51s2svgoByA4,779
+pollination_alias-0.2.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+pollination_alias-0.2.0.dist-info/top_level.txt,sha256=XqhRsBTtFfrCqv7O3outMqm3JZeMavDRExrfL0uUs74,12
+pollination_alias-0.2.0.dist-info/RECORD,,
