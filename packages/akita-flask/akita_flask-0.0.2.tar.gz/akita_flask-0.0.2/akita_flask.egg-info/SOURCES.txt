@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+akita_flask/__init__.py
+akita_flask/testing.py
+akita_flask.egg-info/PKG-INFO
+akita_flask.egg-info/SOURCES.txt
+akita_flask.egg-info/dependency_links.txt
+akita_flask.egg-info/requires.txt
+akita_flask.egg-info/top_level.txt
