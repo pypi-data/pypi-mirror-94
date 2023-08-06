@@ -1,0 +1,3 @@
+[console_scripts]
+pilapse = pilapse:__main__.run
+
