@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pycaw-rf
+Version: 20210213
+Summary: 
+Author: Julia Patrin
+Author-email: papercrane@reversefold.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: comtypes (>=1.1.8,<2.0.0)
+Requires-Dist: future (>=0.18.2,<0.19.0)
+Requires-Dist: psutil (>=5.8.0,<6.0.0)
