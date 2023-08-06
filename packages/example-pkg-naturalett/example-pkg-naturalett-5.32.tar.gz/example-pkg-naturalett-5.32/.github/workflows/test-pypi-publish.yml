@@ -1,0 +1,44 @@
+name: Publishing Python packages on TestPyPi
+
+on:
+  workflow_run:
+    workflows: ["Example unittest"]
+    branches: ['master']
+    types: 
+      - completed
+# on:
+#   push:
+#     branches-ignore:
+#       - '**'
+
+jobs:
+  publish-package:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    name: Publish package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set env
+        run: |
+          echo "LIMINAL_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+          echo "TEST_PYPI_PUBLISH=True" >> $GITHUB_ENV
+        env:
+          TEST_PYPI_PUBLISH: True
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.6'
+      - name: Install dependencies for setup
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel twine GitPython
+      - name: Project versioning
+        run: ./version/version.py
+      - name: Package project
+        run: python setup.py sdist bdist_wheel
+      - name: Upload distributions
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_PASSWORD }}
+          TWINE_REPOSITORY_URL: https://test.pypi.org/legacy/
+        run: twine upload dist/*

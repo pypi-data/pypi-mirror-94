@@ -1,0 +1,43 @@
+name: Publishing Python packages on PyPi
+
+# on:
+#   push:
+#     branches:
+#       - master
+
+on:
+  push:
+    tags:
+      - '**'
+  workflow_run:
+    workflows: ["Example unittest"]
+    types: 
+      - completed
+
+jobs:
+  publish-package:
+    if: startsWith(github.ref, 'refs/tags/') && success()
+    name: Publish package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set env
+        run: echo "LIMINAL_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.6'
+      - name: Install dependencies for setup
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel twine GitPython
+      - name: Project versioning
+        run: ./version/version.py
+      - name: Package project
+        run: python setup.py sdist bdist_wheel
+      - name: Upload distributions
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+          TWINE_REPOSITORY_URL: https://upload.pypi.org/legacy/
+        run: twine upload dist/*

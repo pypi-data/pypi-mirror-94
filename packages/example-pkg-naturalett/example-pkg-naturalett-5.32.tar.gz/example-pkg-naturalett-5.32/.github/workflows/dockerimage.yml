@@ -1,0 +1,46 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches-ignore:
+      - '**'
+
+jobs:
+  docker:
+    name: Docker build and push
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Login to DockerHub Registry
+      uses: azure/docker-login@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Set properties file with release tag
+      if: success() && startsWith(github.ref, 'refs/tags/')
+      run: |
+        echo git-sha=${GITHUB_SHA::6} >> properties.yml
+        echo release-tag=${GITHUB_REF/refs\/tags\//} >> properties.yml
+    - name: Get Previous tag
+      id: previoustag
+      if: success() && (github.ref == 'refs/heads/master')
+      uses: "WyriHaximus/github-action-get-previous-tag@master"
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+    - name: Get Previous tag2
+      id: previoustag2
+      if: success() && (github.ref == 'refs/heads/master')
+      run: echo "::set-output name=tag3::$(git describe --abbrev=0 --tags)"
+    - name: Print result tag2
+      run: echo ${{ steps.previoustag2.outputs.tag3 }}
+    - name: Set properties file with previous release tag3
+      if: success() && (github.ref == 'refs/heads/master')
+      run: |
+        echo git-sha=${GITHUB_SHA::6} >> properties.yml
+        echo release-tag=${{ steps.previoustag2.outputs.tag3 }}-${GITHUB_SHA::6} >> properties.yml
+    - name: Docker build & push
+      run: |
+        DOCKER_BUILDKIT=1 docker build --no-cache -f Dockerfile -t ${{ secrets.IMAGE_NAME }} .
+        docker tag ${{ secrets.IMAGE_NAME }}:latest ${{ secrets.IMAGE_NAME }}:${GITHUB_SHA::6}
+        docker push ${{ secrets.IMAGE_NAME }}:${GITHUB_SHA::6}
+        docker push ${{ secrets.IMAGE_NAME }}:latest
