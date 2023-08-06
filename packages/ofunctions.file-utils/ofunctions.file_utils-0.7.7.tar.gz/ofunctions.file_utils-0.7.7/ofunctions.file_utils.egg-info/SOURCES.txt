@@ -1,0 +1,10 @@
+README.md
+setup.py
+ofunctions.file_utils.egg-info/PKG-INFO
+ofunctions.file_utils.egg-info/SOURCES.txt
+ofunctions.file_utils.egg-info/dependency_links.txt
+ofunctions.file_utils.egg-info/namespace_packages.txt
+ofunctions.file_utils.egg-info/not-zip-safe
+ofunctions.file_utils.egg-info/requires.txt
+ofunctions.file_utils.egg-info/top_level.txt
+ofunctions/file_utils/__init__.py
