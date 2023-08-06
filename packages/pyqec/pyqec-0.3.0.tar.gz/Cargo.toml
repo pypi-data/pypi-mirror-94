@@ -1,0 +1,16 @@
+[package]
+name = "pyqec"
+version = "0.3.0"
+authors = ["maxtremblay <matrem@protonmail.com>"]
+edition = "2018"
+license = "MIT"
+
+[lib]
+name = "pyqec"
+crate-type = ["cdylib"]
+
+[dependencies]
+ldpc = "0.3.0"
+pyo3 = { version = "0.12.4", features = ["extension-module"] }
+rand = "0.7.3"
+rand_xoshiro = "0.4.0"

@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>pyqec.pyqec API documentation</title>
+<meta name="description" content="A toolbox for classical (and soon quantum) error correction." />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>pyqec.pyqec</code></h1>
+</header>
+<section id="section-intro">
+<p>A toolbox for classical (and soon quantum) error correction.</p>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="pyqec.pyqec.BinarySymmetricChannel"><code class="flex name class">
+<span>class <span class="ident">BinarySymmetricChannel</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>An implementation of a binary symmetric channel.</p>
+<p>A binary symmetric channel flips the value
+of each bits according to a given error probability.</p></div>
+<h3>Static methods</h3>
+<dl>
+<dt id="pyqec.pyqec.BinarySymmetricChannel.with_probability"><code class="name flex">
+<span>def <span class="ident">with_probability</span></span>(<span>probability)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="pyqec.pyqec.BinarySymmetricChannel.with_probability_and_random_seed"><code class="name flex">
+<span>def <span class="ident">with_probability_and_random_seed</span></span>(<span>probability)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="pyqec.pyqec.BinarySymmetricChannel.sample_error_of_length"><code class="name flex">
+<span>def <span class="ident">sample_error_of_length</span></span>(<span>self, length)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="pyqec.pyqec.LinearCode"><code class="flex name class">
+<span>class <span class="ident">LinearCode</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>An implementation of linear codes optimized for LDPC codes.</p>
+<p>A code can be defined from either a parity check matrix <code>H</code>
+or a generator matrix <code>G</code>.
+These matrices have the property that <code>H G^T = 0</code>.</p>
+<h2 id="example">Example</h2>
+<p>This example shows 2 way to define the Hamming code.</p>
+<p>From a parity check matrix</p>
+<pre><code>code_from_checks = LinearCode.from_checks(
+    7,
+    [[0, 1, 2, 4], [0, 1, 3, 5], [0, 2, 3, 6]]
+)
+</code></pre>
+<p>From a generator matrix</p>
+<pre><code>code_from_generators = LinearCode.from_generators(
+    7,
+    [[0, 4, 5, 6], [1, 4, 5], [2, 4, 6], [3, 5, 6]]
+)
+</code></pre>
+<h2 id="comparison">Comparison</h2>
+<p>Use the <code>==</code> if you want to know if 2 codes
+have exactly the same parity check matrix and
+generator matrix.
+However, since there is freedom in the choice of
+parity check matrix and generator matrix for the same code,
+use <code>has_same_codespace_as</code> method
+if you want to know if 2 codes define the same codespace even
+if they may have different parity check matrix or generator matrix.</p>
+<pre><code>&gt;&gt;&gt; code_from_checks == code_from_generators
+False
+&gt;&gt;&gt; code_from_checks.has_same_codespace_as(code_from_generators)
+True
+</code></pre></div>
+<h3>Static methods</h3>
+<dl>
+<dt id="pyqec.pyqec.LinearCode.from_checks"><code class="name flex">
+<span>def <span class="ident">from_checks</span></span>(<span>block_size, checks)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Constructs a LinearCode from a parity check matrix.
+A parity check matrix <code>H</code> has the property that
+<code>Hx = 0</code> for all codeword x.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>block_size</code></strong> :&ensp;<code>int</code></dt>
+<dd>The number of bits in the code.</dd>
+<dt><strong><code>checks</code></strong> :&ensp;<code>list</code> of <code>list</code> of <code>int</code></dt>
+<dd>A list of checks where each check is
+represented by the list of positions where this check has value 1.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="pyqec.pyqec.LinearCode" href="#pyqec.pyqec.LinearCode">LinearCode</a></code></dt>
+<dd>The linear code with the given checks.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>If a check has a position greater
+or equal to the block size.</dd>
+</dl>
+<h2 id="example">Example</h2>
+<p>A 3 bits repetition code.</p>
+<pre><code>code = LinearCode.from_checks(3, [[0, 1], [1, 2]])
+</code></pre></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.from_generators"><code class="name flex">
+<span>def <span class="ident">from_generators</span></span>(<span>block_size, generators)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Constructs a LinearCode from a generator matrix.
+A generator matrix <code>G</code> has the property that
+for any codeword <code>x</code> we have <code>x = G^T y</code>
+where <code>y</code> is the unencoded bitstring.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>block_size</code></strong> :&ensp;<code>int</code></dt>
+<dd>The number of bits in the code.</dd>
+<dt><strong><code>generators</code></strong> :&ensp;<code>list</code> of <code>list</code> of <code>int</code></dt>
+<dd>A list of codeword generators
+where each generator is represented by the
+list of positions where this generator has value 1.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="pyqec.pyqec.LinearCode" href="#pyqec.pyqec.LinearCode">LinearCode</a></code></dt>
+<dd>The linear code with the given codeword generators.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>If a generator has a position greater
+or equal to the block size.</dd>
+</dl>
+<h2 id="example">Example</h2>
+<p>A 3 bits repetition code.</p>
+<pre><code>code = LinearCode.from_generators(3, [[0, 1, 2]])
+</code></pre></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.random_regular_code"><code class="name flex">
+<span>def <span class="ident">random_regular_code</span></span>(<span>block_size, number_of_checks, bit_degree, check_degree, random_seed)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Samples a random regular codes.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>block_size</code></strong> :&ensp;<code>int</code>, default <code>= 4</code></dt>
+<dd>The number of bits in the code.</dd>
+<dt><strong><code>number_of_checks</code></strong> :&ensp;<code>int</code>, default <code>= 3</code></dt>
+<dd>The number of checks in the code.</dd>
+<dt><strong><code>bit_degree</code></strong> :&ensp;<code>int</code>, default <code>= 3</code></dt>
+<dd>The number of checks connected to each bit.</dd>
+<dt><strong><code>check_degree</code></strong> :&ensp;<code>int</code>, default <code>= 4</code></dt>
+<dd>The number of bits connected to each check.</dd>
+<dt><strong><code>random_seed</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>A seed to feed the random number generator.
+By default, the rng is initialize from entropy.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code><a title="pyqec.pyqec.LinearCode" href="#pyqec.pyqec.LinearCode">LinearCode</a></code></dt>
+<dd>A random linear code with the given parameters.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>If <code>block_size * bit_degree != number_of_checks * check_degree</code>.</dd>
+</dl></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="pyqec.pyqec.LinearCode.block_size"><code class="name flex">
+<span>def <span class="ident">block_size</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The number of bits in the code.</p></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.dimension"><code class="name flex">
+<span>def <span class="ident">dimension</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The number of encoded qubits.</p></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.generator_matrix"><code class="name flex">
+<span>def <span class="ident">generator_matrix</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The generator matrix of the code.</p></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.has_codeword"><code class="name flex">
+<span>def <span class="ident">has_codeword</span></span>(<span>self, message)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if the given message is a codeword of the code.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>message</code></strong> :&ensp;<code>list</code> of <code>int</code></dt>
+<dd>The positions with value 1 in the message.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>True if the message has a zero syndrome and False otherwise.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>If a position in the message is greater or equal to the block size
+of the code.</dd>
+</dl></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.has_same_codespace_as"><code class="name flex">
+<span>def <span class="ident">has_same_codespace_as</span></span>(<span>self, other)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Checks if the other code defined the same codespace
+as this code.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>other</code></strong> :&ensp;<code><a title="pyqec.pyqec.LinearCode" href="#pyqec.pyqec.LinearCode">LinearCode</a></code></dt>
+<dd>The code to compare.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>bool</code></dt>
+<dd>True if other codewords are exactly the same
+as this code codewords.</dd>
+</dl></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.minimal_distance"><code class="name flex">
+<span>def <span class="ident">minimal_distance</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The weight of the small non trivial codeword.</p>
+<h2 id="returns">Returns</h2>
+<pre><code>The minimal distance of the code if
+the dimension is at least 1 or -1
+if the dimension is 0.
+</code></pre>
+<h2 id="notes">Notes</h2>
+<pre><code>This function execution time scale exponentially
+with the dimension of the code.
+Use at your own risk!
+</code></pre></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.number_of_checks"><code class="name flex">
+<span>def <span class="ident">number_of_checks</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The number of checks in the code.</p></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.number_of_generators"><code class="name flex">
+<span>def <span class="ident">number_of_generators</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The number of codeword generators in the code.</p></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.parity_check_matrix"><code class="name flex">
+<span>def <span class="ident">parity_check_matrix</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The parity check matrix of the code.</p></div>
+</dd>
+<dt id="pyqec.pyqec.LinearCode.syndrome_of"><code class="name flex">
+<span>def <span class="ident">syndrome_of</span></span>(<span>self, message)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The syndrome of a given message.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>message</code></strong> :&ensp;<code>list</code> of <code>int</code></dt>
+<dd>The positions with value 1 in the message.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code> of <code>int</code></dt>
+<dd>The positions where <code>H y</code> is 1 where <code>H</code> is
+the parity check matrix of the code and <code>y</code>
+the input message.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>If a position in the message is greater or equal to the block size
+of the code.</dd>
+</dl></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="pyqec" href="index.html">pyqec</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="pyqec.pyqec.BinarySymmetricChannel" href="#pyqec.pyqec.BinarySymmetricChannel">BinarySymmetricChannel</a></code></h4>
+<ul class="">
+<li><code><a title="pyqec.pyqec.BinarySymmetricChannel.sample_error_of_length" href="#pyqec.pyqec.BinarySymmetricChannel.sample_error_of_length">sample_error_of_length</a></code></li>
+<li><code><a title="pyqec.pyqec.BinarySymmetricChannel.with_probability" href="#pyqec.pyqec.BinarySymmetricChannel.with_probability">with_probability</a></code></li>
+<li><code><a title="pyqec.pyqec.BinarySymmetricChannel.with_probability_and_random_seed" href="#pyqec.pyqec.BinarySymmetricChannel.with_probability_and_random_seed">with_probability_and_random_seed</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="pyqec.pyqec.LinearCode" href="#pyqec.pyqec.LinearCode">LinearCode</a></code></h4>
+<ul class="">
+<li><code><a title="pyqec.pyqec.LinearCode.block_size" href="#pyqec.pyqec.LinearCode.block_size">block_size</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.dimension" href="#pyqec.pyqec.LinearCode.dimension">dimension</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.from_checks" href="#pyqec.pyqec.LinearCode.from_checks">from_checks</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.from_generators" href="#pyqec.pyqec.LinearCode.from_generators">from_generators</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.generator_matrix" href="#pyqec.pyqec.LinearCode.generator_matrix">generator_matrix</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.has_codeword" href="#pyqec.pyqec.LinearCode.has_codeword">has_codeword</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.has_same_codespace_as" href="#pyqec.pyqec.LinearCode.has_same_codespace_as">has_same_codespace_as</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.minimal_distance" href="#pyqec.pyqec.LinearCode.minimal_distance">minimal_distance</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.number_of_checks" href="#pyqec.pyqec.LinearCode.number_of_checks">number_of_checks</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.number_of_generators" href="#pyqec.pyqec.LinearCode.number_of_generators">number_of_generators</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.parity_check_matrix" href="#pyqec.pyqec.LinearCode.parity_check_matrix">parity_check_matrix</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.random_regular_code" href="#pyqec.pyqec.LinearCode.random_regular_code">random_regular_code</a></code></li>
+<li><code><a title="pyqec.pyqec.LinearCode.syndrome_of" href="#pyqec.pyqec.LinearCode.syndrome_of">syndrome_of</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>
