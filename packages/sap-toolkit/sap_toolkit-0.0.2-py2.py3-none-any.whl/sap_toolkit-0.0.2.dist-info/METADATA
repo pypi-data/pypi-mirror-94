@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: sap-toolkit
+Version: 0.0.2
+Summary: Toolkit to benchmark and evaluate streaming perception algorithms
+Home-page: https://github.com/karthiksharma/sap-toolkit
+Author: Kartikeya Sharma
+Author-email: ksharma@illinois.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# sap_toolkit
+
+This toolkit is provided as part of the Streaming Perception Challenge 2021. It includes an evaluation server module that takes care of reading frames from disk, streaming them to your application and receiving results from your application. It also generates the `.json` file required by the challenge evaluation server, and can perform local evaluation if annotations are provided in the COCO format.
+
+## Installation
+
+You can install the toolkit by using pip:
+
+```
+pip install sap_toolkit
+```
+
+## Usage:
+
+The sap_toolkit comes with two main features:
+
+*  A server module to stream frames, receive results and generate output.
+*  A client object to communicate with the server module.
+
+### Server:
+
+The evaluation server can be launched using the following syntax:
+
+```
+python -m sap_toolkit.server \
+	--data-root <path-to-data> \ 
+	--annot-path <path-to-annotations> \
+	--overwrite <overwrite-flag> \
+	--out-dir <path-to-output-directory> \
+	--eval-config <config-file> 
+```
+
+### Client/Application:
+
+The sap_toolkit provides an EvalClient class that can be used to communicate with the evaluation server.
+
+The API consists of 4 calls:
+
+1. `sap_toolkit.EvalClient(config, state=None, verbose=True)`: Constructor for the EvalClient object. Can optionally accept a state object to initialize with a given state, which can be obtained by calling the `get_state()` method of another EvalClient object (useful in multiprocessing applications). 
+2. `EvalClient.request_stream(seq)`: Requests the server to stream a particular sequence.
+3. `EvalClient.get_frame(fid=None)`: If fid is None, returns the latest available (fid, frame) tuple. If fid is provided, returns the frame corresponding to that fid, if available.
+4. `EvalClient.stop_stream()`: Requests server to processing current stream.
+5. `EvalClient.close(filename='results.json')`: Closes the evaluation client object and generates the `results.json` output file.
+6. `EvalClient.get_state()`: Returns the state of the current evaluation client object (which stores info such as currently processing stream and so on). Useful for multiprocessing applications.
+
+For example applications using the sap_toolkit, check out the illustrative examples [here](https://github.com/karthiksharma98/sap-starterkit).
+
+
