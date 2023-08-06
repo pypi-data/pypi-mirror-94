@@ -1,0 +1,6 @@
+importlib_metadata
+numpy
+numba
+
+[full]
+matplotlib
