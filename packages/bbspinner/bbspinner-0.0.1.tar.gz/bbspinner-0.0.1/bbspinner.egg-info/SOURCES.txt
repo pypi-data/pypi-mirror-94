@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+bbspinner/__init__.py
+bbspinner.egg-info/PKG-INFO
+bbspinner.egg-info/SOURCES.txt
+bbspinner.egg-info/dependency_links.txt
+bbspinner.egg-info/top_level.txt
