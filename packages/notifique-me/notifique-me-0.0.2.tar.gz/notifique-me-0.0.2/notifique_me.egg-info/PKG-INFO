@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: notifique-me
+Version: 0.0.2
+Summary: Pacote para enviar mensagem no WhatsApp e SMS, de graça para desenvolvedores
+Home-page: https://notifique-me.com
+Author: Marcos Rafael Rodrigues
+Author-email: rafaeljacuri@gmail.com
+License: MIT License
+Description: # pacotepypi
+        Este pacote ajuda desenvolvedores usar os serviÃ§os de noficaÃ§Ã£o via whatsApp e sms, para desenvolvedor a ferramenta Ã© gratuita.
+        
+        ## Getting Started
+        #### Dependencies
+        You need Python 2.7 or later to use **notifique-me**. You can find it at [python.org](https://www.python.org/).
+        
+        You also need setuptools, wheel and twine packages, which is available from [PyPI](https://pypi.org). If you have pip, just run:
+        ```
+        pip install setuptools
+        pip install wheel
+        pip install twine
+        ```
+        #### Installation
+        
+        
+        ## Features
+        - File structure for PyPI packages
+        - Setup with package informations
+        - License example
+        
+Keywords: Pacote
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
