@@ -1,0 +1,6 @@
+aiohttp
+yarl
+
+[dev]
+pytest
+pytest-asyncio
