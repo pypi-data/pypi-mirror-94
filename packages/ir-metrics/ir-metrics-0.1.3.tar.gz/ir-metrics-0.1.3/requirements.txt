@@ -1,0 +1,15 @@
+setuptools
+pandas
+numpy
+pytest
+pytest-cov
+pytest-flake8
+sphinx
+pallets-sphinx-themes
+sphinxcontrib-log-cabinet
+sphinx-issues
+sphinx-tabs
+numpydoc
+tox
+check-manifest
+pyspark
