@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+forkaren.egg-info/PKG-INFO
+forkaren.egg-info/SOURCES.txt
+forkaren.egg-info/dependency_links.txt
+forkaren.egg-info/top_level.txt
