@@ -1,0 +1,3 @@
+[console_scripts]
+save-cb-image = jaraco.imaging:save_clipboard_image
+
