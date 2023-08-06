@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: chrisapp
+Version: 2.4.0
+Summary: Superclass for Chris plugin apps
+Home-page: https://github.com/FNNDSC/chrisapp
+Author: FNNDSC
+Author-email: dev@babymri.org
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: importlib-metadata ; python_version < "3.7"
+
+########
+chrisapp
+########
+
+The base module for Chris' plugin apps.
+
+.. image:: https://badge.fury.io/py/chrisapp.svg
+    :target: https://badge.fury.io/py/chrisapp
+
+.. image:: https://travis-ci.org/FNNDSC/chrisapp.svg?branch=master
+    :target: https://travis-ci.org/FNNDSC/chrisapp
+
+
