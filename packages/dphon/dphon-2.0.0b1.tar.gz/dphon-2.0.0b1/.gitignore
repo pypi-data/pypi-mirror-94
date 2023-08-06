@@ -1,0 +1,13 @@
+venv/
+env/
+htmlcov/
+build/
+dist/
+docs/
+tmp/
+.vscode
+.coverage
+.mypy_cache
+.DS_Store
+__pycache__
+*.egg-info

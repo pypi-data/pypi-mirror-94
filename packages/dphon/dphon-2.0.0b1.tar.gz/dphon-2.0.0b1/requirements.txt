@@ -1,0 +1,6 @@
+docopt
+spacy>=3
+python-levenshtein
+lingpy
+rich
+jsonlines
