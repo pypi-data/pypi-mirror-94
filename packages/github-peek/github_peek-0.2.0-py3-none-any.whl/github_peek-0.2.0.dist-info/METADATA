@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: github-peek
+Version: 0.2.0
+Summary: A command line tool to peek a remote repo locally.
+License: MIT
+Author: unrahul
+Author-email: rahulunair@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: aiofiles (>=0.6.0,<0.7.0)
+Requires-Dist: aiohttp[speedups] (>=3.7.3,<4.0.0)
+Requires-Dist: loguru (>=0.5.3,<0.6.0)
+Requires-Dist: sh (>=1.14.1,<2.0.0)
+Requires-Dist: shellingham (>=1.4.0,<2.0.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)
+Project-URL: Documentation, https://github.com/rahulunair/github-peek
+Description-Content-Type: text/markdown
+
+## github-peek
+
+A command line tool to peek a remote repo locally. The tool creates 2 files and a directory,
+a config file `~/.githubkeep.conf`, a log file `~/.githubkeep.log` and a directory `~/.githubkeep`.
+Github-peek downloads the tar:gz of the repo, extracts it and saves it to `~/.githubkeep`. There is
+a naive caching mechanism, where the tool deletes all repos after 5 times of using the app.
+
+### install github-peek
+
+```bash
+pip install github-peek
+```
+
+### usage:
+
+github-peek only has only subcommand `peek`, which takes a repo as the argument.
+
+
+command usage:
+
+```bash
+ghub peek <repo>
+```
+
+example:
+
+```bash
+ghub peek rahulunair/github-peek
+```
+
+### todo
+
+- enable for gitlab
+
+
+
