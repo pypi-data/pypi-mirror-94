@@ -1,0 +1,3 @@
+docopt
+requests
+slackclient==1.3.2

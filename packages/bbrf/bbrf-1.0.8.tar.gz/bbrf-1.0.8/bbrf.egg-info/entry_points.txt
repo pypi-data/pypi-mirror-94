@@ -1,0 +1,3 @@
+[console_scripts]
+bbrf = bbrf.bbrf:main
+
