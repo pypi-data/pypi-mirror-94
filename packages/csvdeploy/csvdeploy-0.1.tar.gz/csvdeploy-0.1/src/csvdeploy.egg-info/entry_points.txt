@@ -1,0 +1,3 @@
+[console_scripts]
+csvdeploy = csvdeploy.__main__:main
+
