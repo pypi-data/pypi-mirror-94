@@ -1,0 +1,83 @@
+Metadata-Version: 1.2
+Name: autosegl3
+Version: 0.11.0
+Summary: Tool for automatically segmenting muscle and fat tissue in CT images acquired at the 
+    3rd vertebral level
+Home-page: https://github.com/rbrecheisen/autosegl3
+Author: Ralph Brecheisen
+Author-email: ralph.brecheisen@gmail.com
+License: UNKNOWN
+Description: =========================
+        L3 Auto-segmentation Tool
+        =========================
+        
+        
+        
+        
+        
+        
+        Tool for automatically segmenting muscle and fat tissue in CT images acquired at the 3rd vertebral level
+        
+        The AutoSegL3 tool allows a data manager to train a deep learning model that automatically segments
+        muscle and fat tissue in CT images taken at the 3rd vertebral (L3) level. To train the deep learning model
+        the tool needs a collection of L3 images and corresponding TAG files that contain the labels of each tissue
+        to be segmented. To run the trained model on previously unseen CT images the tool only needs a collection of
+        L3 images. The tool will then produce a mask for each L3 image that outlines the location of the muscle and
+        fat regions.
+        
+        For training, if default parameters are used, all the data manager has to do is point the tool to a directory
+        containing L3 images and corresponding TAG files. From this directory, an HDF5 file will be generated. During
+        this process the images and TAG files will be checked for certain characteristics like a common dimension of
+        512 by 512 pixels, pixels containing normalized Hounsfield units, etc. Any images that do pass this initial
+        quality check will be reported in a text file.
+        
+        For testing the training procedure, the tool also has to be pointed to a directory containing both L3 images
+        and TAG files. However, only the L3 images will be used for generating segmentations. The TAG files will be used
+        to evaluate the quality of the segmentations. This step will also produce a summary report containing some
+        performance metrics, e.g., Dice scores. Note that the testing phase is only meant to obtain realistic performance
+        metrics. To use the model for prediction, train it on all data you have (see next section).
+        
+        For model preparation, train it on all data you have. Generate a CSV database containing certain clinical scores
+        for each L3 image, e.g., SMRA, muscle index, SAT index and VAT index (what other scores can we think of?). This
+        database can then be used to visualize the spread of scores across all images in the training data. When a new
+        image is predicted you can also highlight its position within the spread of the training scores.
+        
+        For prediction, the tool has to be pointed to a directory containing only L3 images.
+        
+        
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2021-02-04)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: autosegl3
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
