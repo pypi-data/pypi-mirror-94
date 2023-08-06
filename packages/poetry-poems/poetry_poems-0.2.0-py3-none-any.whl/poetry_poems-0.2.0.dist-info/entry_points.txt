@@ -1,0 +1,3 @@
+[console_scripts]
+poems=poetry_poems.cli:poems
+

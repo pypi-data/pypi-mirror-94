@@ -1,0 +1,17 @@
+LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+license-poetry-poems,sha256=cTy7gltmTMdJr50IJM1G1-i7qKULo_gV38G50jtU69c,773
+poetry_poems/__init__.py,sha256=6-PRDkDOSpuwnF6rz7sXwPqkpbz7zuFsYPUhlPhiS6Y,47
+poetry_poems/cli.py,sha256=deynkZA0YUwwX7HCKdoXTS2pGA-GJGQ4rgZV0tSaR04,7589
+poetry_poems/core.py,sha256=Y8fj8dxLL0GB6v8fpwDpXnFPhXnnqPODhAnIlSgFjD8,3877
+poetry_poems/environment.py,sha256=jZ-xDHTN1VzmW75AfpPTkMvV0kOKnSlDoEEyp68yS0g,1446
+poetry_poems/picker/__init__.py,sha256=decEu2vvRjp6klpJYMnCqDQ3f3Lemuld9fvZZjIv9M0,6790
+poetry_poems/picker/colors.py,sha256=M46PsN2RdWNP9Kws_Isxo1FMY7BLv1ArfEUT5TCzh1c,1116
+poetry_poems/picker/elements.py,sha256=E-Y7CqYloJIHLkEpeXoapokVVfHFOMSZ98gP3kg1s0Y,1507
+poetry_poems/picker/keys.py,sha256=NTfG3f_JE6cQnLLFVvXAvjp-i752wLj6uZFd1zKSaIU,573
+poetry_poems/poetry.py,sha256=aHxAFafNz0G_TeXdiSXbhI78iIuMLKbEKdZRSyMSKd0,2418
+poetry_poems/utils.py,sha256=QXwVZa5IMQ2dQBD0OCxK30NcVzAQ-PrrqW6OJDQDovU,974
+poetry_poems-0.2.0.dist-info/entry_points.txt,sha256=u9Q6jVwyGZ4pDyE7MWHy_047V78PKccslWyrE9qyrMU,48
+poetry_poems-0.2.0.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+poetry_poems-0.2.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+poetry_poems-0.2.0.dist-info/METADATA,sha256=6lScc8my_PfH6SFw9mCapkzEqx8PlP_LULqMzmWcYF0,3830
+poetry_poems-0.2.0.dist-info/RECORD,,
