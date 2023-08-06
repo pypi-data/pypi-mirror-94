@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: nnio
+Version: 0.2.2
+Summary: Simple neural network inference on devices
+Home-page: https://github.com/FastSense/nnio
+Author: FastSense
+Author-email: ruslan.baynazarov@fastsense.tech
+License: UNKNOWN
+Description: 
+            See more details at the project's homepage: https://github.com/FastSense/nnio
+            
+Platform: UNKNOWN
