@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: minecraft-learns
+Version: 0.0.1
+Summary: Machine Learning library for Minecraft Education AI interactions
+Home-page: https://github.com/Nathan-Nesbitt/Minecraft_Learns
+Author: Carlos Rueda Carrasco, Kathryn Lecha, Nathan Nesbitt, Adrian Morillo Quiroga
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+# Minecraft_Learns
+Minecraft_Learns is an AI Library used to execute AI commands in Minecraft Education.
+It is used to act as a sandbox for students to explore AI within Minecraft Education.
+
+## Installation
+The easiest way to install the `minecraft_learns` library, install it via PIP:
+```shell
+pip install -U minecraft-learn
+```
+
+
