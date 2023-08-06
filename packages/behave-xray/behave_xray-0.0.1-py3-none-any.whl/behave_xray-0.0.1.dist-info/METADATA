@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: behave-xray
+Version: 0.0.1
+Summary: Behave JIRA XRAY results uploader
+Home-page: https://github.com/fundakol/behave-xray
+Author: Lukasz Fundakowski
+Author-email: fundakol@yahoo.com
+License: UNKNOWN
+Keywords: behave JIRA XRAY
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: behave
+Requires-Dist: requests
+
+# behave-xray
+
+### Installation
+
+
+```commandline
+pip install -U behave-xray
+```
+
+or 
+
+```commandline
+python setup.py install
+```
+### Usage 
+
+Add JIRA tags to Gherkin scenario:
+
+```gherkin
+# --FILE: tutorial.feature 
+@jira.test_plan('JIRA-3')
+Feature: showing off behave
+
+  @jira.testcase('JIRA-1')
+  Scenario: run a simple test
+     Given we have behave installed
+      When we implement a test
+      Then behave will test it for us!
+```
+
+Set system environments:
+```commandline
+export XRAY_API_BASE_URL=<jira URL>
+export XRAY_API_USER=<jria username>
+export XRAY_API_PASSWORD=<user password>
+```
+
+Run tests:
+
+```commandline
+behave . -f behave_xray.formatter:XrayFormatter
+```
+
+
