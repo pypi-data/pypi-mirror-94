@@ -1,0 +1,14 @@
+README.md
+setup.py
+hieroskopia/__init__.py
+hieroskopia/date_analyser.py
+hieroskopia/numeric_analyser.py
+hieroskopia.egg-info/PKG-INFO
+hieroskopia.egg-info/SOURCES.txt
+hieroskopia.egg-info/dependency_links.txt
+hieroskopia.egg-info/top_level.txt
+hieroskopia/tests/__init__.py
+hieroskopia/tests/test_date_analyser.py
+hieroskopia/tests/test_numeric_analyser.py
+hieroskopia/utils/__init__.py
+hieroskopia/utils/evaluator.py
