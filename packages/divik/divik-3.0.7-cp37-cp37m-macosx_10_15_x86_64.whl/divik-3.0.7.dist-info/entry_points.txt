@@ -1,0 +1,3 @@
+[console_scripts]
+fit-clusters=divik._cli.fit_clusters:main
+
