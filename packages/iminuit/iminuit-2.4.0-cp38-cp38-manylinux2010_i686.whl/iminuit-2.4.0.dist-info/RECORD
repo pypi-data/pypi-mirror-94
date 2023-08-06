@@ -1,0 +1,17 @@
+iminuit-2.4.0.dist-info/LICENSE,sha256=ZuAVMq9jPqtQlPN33pGos-7WXMpUSLB5MNMtlPUP6Ug,1533
+iminuit-2.4.0.dist-info/METADATA,sha256=uzP4tmGm_7UtvFKfJwu-YY--6rBoBmu4pEtxSkep-zw,3298
+iminuit-2.4.0.dist-info/WHEEL,sha256=NQ46lJmNp-_xwXu8_Oti6rW9yl7WcToKW6bPH5tS9tY,109
+iminuit-2.4.0.dist-info/top_level.txt,sha256=MlcGU2ICuVp32ffzVzn0UkUG3Q8pCLpMmXSsWsXRPk0,8
+iminuit-2.4.0.dist-info/RECORD,,
+iminuit/_repr_text.py,sha256=hoqT8YbVdtBuB3DGdioncxeOzt_8Vm_lKdHdvRlYnDU,6186
+iminuit/minuit.py,sha256=w-AkPfyAe8-9xHPayXW97652Z4p_Zkah5lmIESGJclY,54762
+iminuit/version.py,sha256=4b1RwGfNN4n8xeQjTMbQZ6aHZm1UF28XzyOk07Ardm0,661
+iminuit/cost.py,sha256=7k9BjI07BtdmCfGa_CXu-uMp4EGClRK6qnEv2_XjyAY,22422
+iminuit/_repr_html.py,sha256=t05FydNyk9VrKvLGU62q8FULumTMEUfeKkoWgoXj9OI,9084
+iminuit/_core.cpython-38-i386-linux-gnu.so,sha256=Jj_bMt6-RRdkGigngSZNA4ozaB1w29RtsNT68wTMriw,621104
+iminuit/__init__.py,sha256=UfTjMjSgcizvByfeHsN1vrNN4Bkm8B3hcPjOKrDvwvk,707
+iminuit/testing.py,sha256=7oQdIjYjM4dzvdmgExKz_KWTOep888w32t_2XLqrBWU,1635
+iminuit/pdg_format.py,sha256=V1_3-gAht30QKKDhzWOF8w93NDvmmEFSPlk2wn4WlvI,10207
+iminuit/minimize.py,sha256=qcL8XZagxwIdSwNxhXANghpVfpxPL5HFrlgGEkRlZXs,4467
+iminuit/util.py,sha256=Jq9A3g9lt16c4DPVi3GnNLyXJJzXTNmSh6HFe-xrizc,29081
+iminuit/_deprecated.py,sha256=-8koBKAZe7Zr3TRl38u68GLAhfgI2R3Ij7_oXYraFz8,539
