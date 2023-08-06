@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: CalculatorCalci
+Version: 0.0.1
+Summary: Our package will give u a basic calculator function such as add, sub, multiply and divide.
+Home-page: UNKNOWN
+Author: Shreyas Jadhav
+Author-email: jshreyas12@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
