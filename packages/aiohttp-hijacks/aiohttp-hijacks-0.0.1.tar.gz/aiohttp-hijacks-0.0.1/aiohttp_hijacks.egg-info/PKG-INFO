@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: aiohttp-hijacks
+Version: 0.0.1
+Summary: Re-route aiohttp session requests. Usefull for testing.
+Home-page: https://gitlab.com/cdlr75/aiohttp-hijacks
+Author: cdlr75
+Author-email: cdlr75@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://gitlab.com/cdlr75/aiohttp-hijacks/issues
+Project-URL: Source, https://gitlab.com/cdlr75/aiohttp-hijacks/
+Description: aiohttp-hijacks
+        ===
+        
+        Hijack aiohttp session to re-route the requests.
+        
+        ```py
+        from aiohttp_hijacks import FakeServer, FakeSession, route
+        
+        
+        class Server(FakeServer):
+            """ Application that will respond to the client. """
+            @route('/')
+            async def get_abc(self, request):
+                self.calls += 1
+                return self.json_response({"status": "ok"})
+        
+        
+        # Reroute google.com → 127.0.0.1
+        async with Server() as server:  # instantiate Server handling '127.0.0.1:{server.port}/abc'
+            async with FakeSession(reroute={'google.com': server.port}) as session:
+                # redirecting calls to http(s)://google.com to 127.0.0.1:{server.port}
+                resp = await session.get("https://google.com")
+                data = await resp.json()
+                assert data == {"status": "ok"}
+        ```
+Keywords: aiohttp testing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Provides-Extra: test

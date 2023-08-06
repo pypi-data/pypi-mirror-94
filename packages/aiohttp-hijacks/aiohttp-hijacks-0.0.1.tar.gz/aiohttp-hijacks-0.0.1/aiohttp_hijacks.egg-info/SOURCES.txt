@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+aiohttp_hijacks/__init__.py
+aiohttp_hijacks/_version.py
+aiohttp_hijacks/server.py
+aiohttp_hijacks.egg-info/PKG-INFO
+aiohttp_hijacks.egg-info/SOURCES.txt
+aiohttp_hijacks.egg-info/dependency_links.txt
+aiohttp_hijacks.egg-info/requires.txt
+aiohttp_hijacks.egg-info/top_level.txt

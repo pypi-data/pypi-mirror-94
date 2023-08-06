@@ -1,0 +1,2 @@
+include versioneer.py
+include aiohttp_hijacks/_version.py
