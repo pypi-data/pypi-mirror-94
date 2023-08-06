@@ -1,0 +1,17 @@
+README.md
+setup.py
+sam2lca/__init__.py
+sam2lca/cli.py
+sam2lca/config.py
+sam2lca/main.py
+sam2lca/mapfiles.py
+sam2lca/ncbi_to_taxid.py
+sam2lca/sam_ete.py
+sam2lca/sam_pysam.py
+sam2lca/utils.py
+sam2lca.egg-info/PKG-INFO
+sam2lca.egg-info/SOURCES.txt
+sam2lca.egg-info/dependency_links.txt
+sam2lca.egg-info/entry_points.txt
+sam2lca.egg-info/requires.txt
+sam2lca.egg-info/top_level.txt
