@@ -1,0 +1,4 @@
+[console_scripts]
+eznoc = ezno_convert.cli:main
+eznoc-gui = ezno_convert.gui:main [gui]
+
