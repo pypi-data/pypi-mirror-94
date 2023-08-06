@@ -1,0 +1,3 @@
+[console_scripts]
+imagehide = imagehide.__main__:main
+
