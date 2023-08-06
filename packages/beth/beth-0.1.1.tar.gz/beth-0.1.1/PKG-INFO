@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: beth
+Version: 0.1.1
+Summary: Open source chess AI engine
+Home-page: https://github.com/theolvs/beth
+License: MIT
+Author: Theo Alves Da Costa
+Author-email: theo.alves.da.costa@gmail.com
+Requires-Python: >=3.7.8,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: chess (>=1.4.0,<2.0.0)
+Requires-Dist: comet-ml (>=3.3.3,<4.0.0)
+Requires-Dist: ipykernel (>=5.4.3,<6.0.0)
+Requires-Dist: ipython (>=7.20.0,<8.0.0)
+Requires-Dist: ipywidgets (>=7.6.3,<8.0.0)
+Requires-Dist: jupyter (>=1.0.0,<2.0.0)
+Requires-Dist: matplotlib (>=3.3.4,<4.0.0)
+Requires-Dist: numpy (>=1.20.1,<2.0.0)
+Requires-Dist: pandas (>=1.2.2,<2.0.0)
+Requires-Dist: python-dotenv (>=0.15.0,<0.16.0)
+Requires-Dist: torch (>=1.7.1,<2.0.0)
+Requires-Dist: tqdm (>=4.56.2,<5.0.0)
+Project-URL: Documentation, https://github.com/theolvs/beth
+Project-URL: Repository, https://github.com/theolvs/beth
+Description-Content-Type: text/markdown
+
+# beth
+![](https://images.chesscomfiles.com/uploads/v1/article/22924.4e040c11.668x375o.d12a4478e7d3@2x.jpeg)
+Experimenting with Game AI applied to chess
+
+## Idea
+In this repo will be experiments around AI & chess. In particular Machine Learning applied to the chess game. <br>
+The goal is to create: 
+
+- Algorithms to play chess using Machine Learning, Reinforcement Learning & NLP
+- Auto-guide to help human learn and improve at playing chess
+- Adaptive AI to match the player ELO and make him improve
+
+> This repo is **under active development**
+
+
+## Features
+### Environment
+
+- [x] Experimenting with the [python chess](https://python-chess.readthedocs.io/en) library
+- [x] Implementing ``Game`` framework
+- [x] ``HumanPlayer`` to play chess in Jupyter notebook
+- [x] ``RandomPlayer`` the most simple bot to easily test out new ideas and debug
+- [ ] Read PGN files and load into ML algorithms
+- [ ] Measure ELO of an algorithm/AI, or any consistant metric of performance
+- [ ] Saving game as gif or video
+
+### Model utils
+- [x] Monitor algorithm performance using Comet.ml / tensorboard
+- [x] Saving algorithm weights to be reused
+- [x] Visualize probabilities to see best moves and if training worked
+- [ ] Transform game object into 3D tensor (2D dimension + one hot encoding of pieces positions)
+- [ ] Install, test, and integrate CodeCarbon
+- [ ] Train on Google Colab
+
+### Algorithms & approaches
+- [ ] AlphaGo approach: value function and policy function evaluation using Reinforcement Learning & MCTS
+- [ ] AlphaZero approach: self play competition
+- [ ] NLP approach: predicting next move using NLP techniques (LSTM, Transformers)
+  - [ ] LSTM / RNN / GRU
+  - [ ] Transformers
+  - [ ] Directly using Hugging Face ``transformers`` [library](https://huggingface.co/transformers/task_summary.html) 
+- [ ] Hybrid techniques with both NLP-like + modeling the game as 3D tensor 
+- [ ] GameAI techniques (minimax, rules-based)
+  - [ ] Super simple approach where at each step Random Play from a PGN file or list of moves. 
+- [ ] Test connection to Game engines like stockfish
+
+## References
+- https://python-chess.readthedocs.io/en
+- https://lichess.org/
+- https://www.chess.com/games/
+
+### Sequential Deep Learning
+- https://pytorch.org/tutorials/beginner/transformer_tutorial.html
+
+### Game Databases
+- https://www.chess.com/games/
+- https://www.kaggle.com/datasnaek/chess
+
+### State of the art approaches
+- https://ai.facebook.com/blog/rebel-a-general-game-playing-ai-bot-that-excels-at-poker-and-more/
+  
+
+### Libraries
+- Deep Learning ``jax, trax, rlax, haiku and pytorch-lightning``
+- Monitoring (comet.ml, [livelossplot](https://github.com/stared/livelossplot), [tensorboard](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html))
+
+
+
