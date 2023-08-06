@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+madgrad/__init__.py
+madgrad/fairseq_madgrad.py
+madgrad/madgrad.py
+madgrad.egg-info/PKG-INFO
+madgrad.egg-info/SOURCES.txt
+madgrad.egg-info/dependency_links.txt
+madgrad.egg-info/top_level.txt
