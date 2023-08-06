@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pudzu-pillar
+Version: 0.9.2
+Summary: Various imaging utilities, monkey-patched onto Pillow
+Home-page: https://github.com/Udzu/pudzu-packages/pudzu-pillar/
+Author: Uri Granta
+Author-email: uri.granta+python@gmail.com
+License: MIT
+Keywords: pudzu,imaging,pillow
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Requires-Dist: pudzu-utils
+Requires-Dist: Pillow
+Requires-Dist: numpy
+
+UNKNOWN
+
+
