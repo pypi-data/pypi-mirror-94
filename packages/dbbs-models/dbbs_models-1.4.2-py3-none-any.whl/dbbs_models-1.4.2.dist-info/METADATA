@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: dbbs-models
+Version: 1.4.2
+Summary: Collection of neuron models for the NEURON simulator
+Home-page: https://github.com/dbbs-lab/models
+Author: Martina Rizza, Stefano Masoli, Robin De Schepper, Egidio D'Angelo
+Author-email: robingilbert.deschepper@unipv.it
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: arborize (>=2.0.0b4)
+Requires-Dist: nrn-glia (>=0.3.8)
+Requires-Dist: dbbs-mod-collection (>=2.0.0)
+Requires-Dist: nrn-patch (>=3.0.0b0)
+Provides-Extra: dev
+Requires-Dist: efel ; extra == 'dev'
+Requires-Dist: ndsb (>=2.0.0) ; extra == 'dev'
+Requires-Dist: plotly (>=4.11.0) ; extra == 'dev'
+Requires-Dist: kaleido ; extra == 'dev'
+Requires-Dist: pygithub ; extra == 'dev'
+Requires-Dist: h5py ; extra == 'dev'
+
+# dbbs-models
+Collection of neuron models for the NEURON simulator.
+
+
