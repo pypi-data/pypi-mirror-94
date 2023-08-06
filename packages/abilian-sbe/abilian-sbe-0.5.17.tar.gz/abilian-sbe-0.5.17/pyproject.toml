@@ -1,0 +1,105 @@
+[tool.poetry]
+name = "abilian-sbe"
+version = "0.5.17"
+description = "Social Business platform, including: document management, wiki, forum, enterprise social networking, and more"
+authors = ["Abilian SAS"]
+license = "LGPL-2.0-or-later"
+readme = "README.rst"
+repository = "https://github.com/abilian/abilian-sbe"
+packages = [{ include = "abilian" }]
+include = ["abilian/*", "abilian/**/*"]
+
+
+[tool.poetry.dependencies]
+python = ">=3.6.1,<4"
+
+# Abilian Core
+# abilian-core = { git = "https://github.com/abilian/abilian-core.git", branch = "master" }
+abilian-core = ">=0.11"
+
+# Pinned temporarily
+wtforms = "<2.2"
+werkzeug = "<1"
+flask-babel = "<2"
+
+# Email validation (when sending digests)
+validate_email = "*"
+
+# Language and charset detection
+langid = ">=1.1"
+chardet = "*"
+
+# Markdown support for Wiki
+markdown = "^3"
+
+# needed by folder: export to xls
+xlwt = "*"
+openpyxl = "^2.3.0"
+
+# Better FP library than itertools IMHO.
+toolz = "*"
+html2text = "^2020.1.16"
+
+[tool.poetry.dev-dependencies]
+# Debug
+flask-debugtoolbar = "*"
+
+# Our favorite test runner with some plugins and CI builder
+pytest = "*"
+pytest-xdist = "*"
+pytest-flask = "^1.0.0"
+
+# Coverage
+coverage = ">=4.1"
+pytest-cov = "*"
+typeguard = "*"
+
+# Python clone of Foreman, useful to test Heroku config locally
+honcho = "*"
+
+# Documentation generator
+Sphinx = "*"
+
+# Lint .rst files
+restructuredtext-lint = "*"
+
+# Standard theme for readthedocs.com
+sphinx-rtd-theme = "*"
+
+# Used to check links in the application
+Flask-LinkTester = "*"
+
+# Static code analysis
+flake8 = "*"
+flake8-assertive = "*"
+flake8-blind-except = "*"
+flake8-bugbear = "*"
+flake8-comprehensions = "*"
+flake8-isort = "*"
+flake8-logging-format = "*"
+flake8-mutable = "*"
+flake8-pytest = "*"
+flake8-super-call = "*"
+flake8-tidy-imports = "*"
+mastool = "*"
+mypy = "*"
+
+# More tools
+pyannotate = "^1.0"
+gitchangelog = "^3.0"
+mccabe = "*"
+pre-commit = "*"
+devtools = "^*"
+
+# Formatters
+isort = "*"
+black = { version = "*", allow-prereleases = true }
+
+# Pinned because poetry issue
+docutils = "*"
+safety = "^1.9.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools"]
+build-backend = "poetry.core.masonry.api"
