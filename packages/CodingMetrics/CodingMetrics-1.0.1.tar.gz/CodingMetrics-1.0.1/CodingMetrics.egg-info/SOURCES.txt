@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+CodingMetrics.egg-info/PKG-INFO
+CodingMetrics.egg-info/SOURCES.txt
+CodingMetrics.egg-info/dependency_links.txt
+CodingMetrics.egg-info/entry_points.txt
+CodingMetrics.egg-info/not-zip-safe
+CodingMetrics.egg-info/requires.txt
+CodingMetrics.egg-info/top_level.txt
+commands/API.txt
+commands/CodingGoals.py
+commands/__init__.py
+commands/allTimeSinceToday.py
+commands/languageData.py
+commands/main.py
+commands/projects.py

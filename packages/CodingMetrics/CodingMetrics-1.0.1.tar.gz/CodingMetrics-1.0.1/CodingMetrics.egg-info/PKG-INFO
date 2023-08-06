@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: CodingMetrics
+Version: 1.0.1
+Summary: Your coding activity tracker
+Home-page: https://github.com/premalrupnur/CodingCLI
+Author: Premal Rupnur
+Author-email: premalrupnur2001@gmail.com
+License: MIT
+Description: This is a command line tool that helps you track your daily coding activities,using wakatime API 
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
