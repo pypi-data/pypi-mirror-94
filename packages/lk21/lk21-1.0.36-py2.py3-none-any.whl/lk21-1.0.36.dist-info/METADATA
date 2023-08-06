@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lk21
+Version: 1.0.36
+Summary: cari film dan anime lewat terminal
+Home-page: https://github.com/zevtyardt
+License: MIT
+Author: Val
+Author-email: apklover76@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: PyInquirer
+Requires-Dist: bs4
+Requires-Dist: requests

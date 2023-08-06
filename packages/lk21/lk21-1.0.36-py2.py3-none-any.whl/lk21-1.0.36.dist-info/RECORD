@@ -1,0 +1,10 @@
+lk21/__init__.py,sha256=cEr_l4fRBgIiTPXcVyaZRb4vQwYiYECPSnf3gW57P10,90
+lk21/lk21.py,sha256=jijd5A4gL4DrtVbij2Enpe32ANKouO4fl-I_rLpdkfI,8883
+lk21/extractors/__init__.py,sha256=tVZajWX5XC-TLOyHrKtAQmi7tn3_6Sp8exYhD02Io80,2784
+lk21/extractors/kusonime.py,sha256=jjafzIvHpA4OzE_3GeLOnZz8Gxd-TtmxV5IIjHMYCIw,1388
+lk21/extractors/oploverz.py,sha256=Wj-gFn1Hu8zAyjZc8shU-c_LKycc6_BEWy5MZuIy6xM,1632
+lk21/extractors/otakudesu.py,sha256=ho3F0Qe_9e0xlSkudoI0SFnuhy2R59Afga1fiO2BOyg,1628
+lk21-1.0.36.dist-info/entry_points.txt,sha256=UVBOmIPv1pfsFt0POZSOKmCGqTE-sIDDGTYkuErZ3uM,34
+lk21-1.0.36.dist-info/WHEEL,sha256=NLqmsx-ZFZ6gDavYgh2oH0ZSN-KRmpcdEXIZDnYy9Pg,99
+lk21-1.0.36.dist-info/METADATA,sha256=rUW-UveuJDrSf8IpG6isw2c-U8icja1l74s6Ar-4LD4,313
+lk21-1.0.36.dist-info/RECORD,,
