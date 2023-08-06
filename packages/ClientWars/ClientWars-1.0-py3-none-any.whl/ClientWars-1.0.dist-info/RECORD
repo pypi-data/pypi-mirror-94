@@ -1,0 +1,13 @@
+client_wars/__init__.py,sha256=YQ7WkjWixirCJuQz87dgfeVsCJz2GRj2hzZvN9qvbwM,42
+client_wars/client.py,sha256=3hniXJTcTd1NTgaHWC_IhPXNsMUEeNS9TY14UfHZYW0,2156
+client_wars/config.py,sha256=hS5nZe6lVQ8OehP00mM8dqHNWzkBBKHGPwuOYba3DIs,115
+client_wars/game.py,sha256=Pgqw-tnDxjOXMd50nL1gw0k-qcj9r6W--kPnVOHi7NU,3035
+client_wars/map.py,sha256=5UV4B9dnpuEtdKG3PZBWK7ylo8rUxHD74wlNgr5RUCA,1790
+client_wars/player.py,sha256=qZwWuE0DmErpl-nVe6zv0OSi1uj2Iown-2I3Y4-lRfQ,523
+client_wars/tile.py,sha256=37O-W0tkPeRKMoMRU0NgOBJUNLXKSMWdNG8vo5DV7MA,1622
+client_wars/websocket_updater.py,sha256=qKemYaDQiPXqmb35f3r8-WtANbl35eQAAF2fcUOvXCw,1376
+ClientWars-1.0.dist-info/LICENSE,sha256=f8MCOsauRo3aQ7TplbT018OfrY755380bWSQvjrhnpI,1063
+ClientWars-1.0.dist-info/METADATA,sha256=NrbNRrIJKUiqIAlfgPq-igh89NZaKBeU1gZcIcL3VpY,1606
+ClientWars-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ClientWars-1.0.dist-info/top_level.txt,sha256=06mEVo60RELXx6BHYeyuJivyIYRGUO2toRH1iNn-zgg,12
+ClientWars-1.0.dist-info/RECORD,,
