@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: yoursql
+Version: 0.1.1
+Summary: An ORM for SQL backends
+License: MIT
+Author: trumanpurnell
+Author-email: truman.purnell@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
