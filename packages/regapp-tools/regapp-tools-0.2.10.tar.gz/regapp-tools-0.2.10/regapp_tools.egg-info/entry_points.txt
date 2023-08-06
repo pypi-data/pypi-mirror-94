@@ -1,0 +1,5 @@
+[console_scripts]
+regapp-tool = regapp_tools.regapp_tool:main
+ssh-key-retriever = regapp_tools.ssh_key_retriever:main
+subiss-to-unix = regapp_tools.subiss_to_unix:main
+
