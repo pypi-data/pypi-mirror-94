@@ -1,0 +1,122 @@
+CHANGES
+=======
+
+0.2.19
+------
+
+* change metric struct (#49)
+
+0.2.18
+------
+
+* Messaging to socket (#48)
+
+0.2.17
+------
+
+* Lazy argparse (#44)
+* Fix exceptions in rds (#45)
+* Move rds backup library from customer-service-monitoring (#40)
+
+0.2.16
+------
+
+* LB load new util (#42)
+* Add linters (#43)
+* Fix release configuration (#37)
+* Replace github workflow with zuul (#36)
+* Get rid of pypoetry (#35)
+
+v0.2.14
+-------
+
+* Fix subprocess call (#34)
+
+v0.2.13
+-------
+
+* clearing folder via subprocess (#32)
+* Fixed description (#31)
+* handle error if file not exist (#30)
+
+v0.2.12
+-------
+
+* more broaden exception for lb (#29)
+
+v0.2.11
+-------
+
+* Updated version (#28)
+* Fix token issue (#27)
+
+v0.2.10
+-------
+
+* Up version (#26)
+* RDS backup montoring (#25)
+
+v0.2.9
+------
+
+* write metric only once per sec (#24)
+
+v0.2.8
+------
+
+* updated version (#23)
+* Feature/dns (#22)
+
+v0.2.7
+------
+
+* Feature/nfs (#21)
+
+v0.2.6
+------
+
+* Chages in as\_load for error handling (#20)
+
+v0.2.5
+------
+
+* Client support in loadbalancer monitoring script (#18)
+
+v0.2.4
+------
+
+* Autoscaling loadbalancer (#16)
+* Update LICENSE (#15)
+* Secondary route/Run server in thread
+
+v0.2.3
+------
+
+* Feature/autoscaling report (#12)
+
+v0.2.2
+------
+
+* Moved from twine to poetry in publish workflow
+* Removed strict lib requirements (#9)
+* Create pythonpublish.yml (#10)
+* Fix invalid test name
+* Add continuous entities operations test (\`ent\_monitor\` action)
+* Add \`prog=...\` to base\_parser
+* Update README.md
+* Update README.md
+* Add repo link to package description
+* Fix base parser description
+* Add monitoring and rebalance tests
+
+v0.1
+----
+
+* Add usage for load balancer test
+* Fix nil pointer error
+* Minor changes and fixes
+* Update README.md
+* Add equally balancing (err 102) and multiple nodes (err 101) checks
+* Create LICENSE
+* Create README.md
+* Initial commit
