@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: paniniwikiparser
+Version: 0.0.8
+Summary: Parses wiki xml
+Home-page: https://o365exchange.visualstudio.com/O365%20Sandbox/_git/IPMLExp?path=%2Fsrc%2FPanini2%2FSyntheticDataGenerator&version=GBmaster
+Author: Anil Vemula
+Author-email: v-anvemu@microsoft.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: six
+Requires-Dist: nltk
+Requires-Dist: python-dateutil
+Requires-Dist: nameparser
+Requires-Dist: PyMySQL
+Requires-Dist: mwparserfromhell
+
+# PANINI WIKI PARSER
+
+To parse the wiki xml and store the data
+

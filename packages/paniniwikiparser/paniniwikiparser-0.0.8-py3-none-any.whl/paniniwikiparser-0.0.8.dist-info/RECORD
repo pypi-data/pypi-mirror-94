@@ -1,0 +1,16 @@
+paniniwikiparser/__init__.py,sha256=aoEAsEsoIsXlWRzKoIsSuE2uQzIVYB7b7fntimYpozU,104
+paniniwikiparser/__main__.py,sha256=wo5ZXfZ_lieZSXXW5ndq0_GMsGUqDV0Ux04y0wZobM0,1056
+paniniwikiparser/wiki/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+paniniwikiparser/wiki/common/__init__.py,sha256=yEJyZuUmeVF8NbF01AeLA9CWAry_EwZIrFDk7yA1Lv4,44
+paniniwikiparser/wiki/common/error_log.py,sha256=rY7OsTbTGCaxSCaudB1T8wqMT3bUT35Cz8jLmUXhJqg,513
+paniniwikiparser/wiki/common/preprocesstext.py,sha256=tELsXUpWmek5adM9QYR9Xi18ITpkV4xBIU-sPJHfSrw,1474
+paniniwikiparser/wiki/data/__init__.py,sha256=Ohib7fKIzzTGiIwLiLO1QkL-QAPgthpMyf07vgj31_c,27
+paniniwikiparser/wiki/data/extractor.py,sha256=Mz6agjax-9NGgjv-jSSQuK883X83CsYeSgGWTtL-25Y,13315
+paniniwikiparser/wiki/db/__init__.py,sha256=ikoTsXVTxExPYRDBvCsydg0OX1n8-55rbVX3Q6JSaAI,56
+paniniwikiparser/wiki/db/db_config.py,sha256=kTYrIPlc9XfoZrRDe074VCFylz-dOM6Pj6vgK5o90-M,96
+paniniwikiparser/wiki/db/dbinsertion.py,sha256=Mk7vWnxV9lNUgNQ9AzxXntPv66_mSaLP7AmEQUsu7jE,4941
+paniniwikiparser-0.0.8.dist-info/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+paniniwikiparser-0.0.8.dist-info/METADATA,sha256=ZwwdKbe8-6YHzlctVmEMHJ6J40NVpXArPRm31romCxc,743
+paniniwikiparser-0.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+paniniwikiparser-0.0.8.dist-info/top_level.txt,sha256=qK0RYIVzsrUFU7LOaUB-ED7v88sU40Ssp01din0ZOJ8,17
+paniniwikiparser-0.0.8.dist-info/RECORD,,
