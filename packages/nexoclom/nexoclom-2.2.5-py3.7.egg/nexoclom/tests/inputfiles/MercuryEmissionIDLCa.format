@@ -1,0 +1,13 @@
+format.type = image
+format.quantity = intensity
+emission.mechanism = resscat
+emission.line = 4227
+geometry.origin = Mercury
+geometry.dims = 501,501
+geometry.center = 0,0
+geometry.width = 8,8
+geometry.subobslongitude = 4.71238898038469
+geometry.subobslatitude = 0.
+geometry.polarangle = 0
+
+

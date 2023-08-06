@@ -1,0 +1,19 @@
+geometry.planet = Mercury
+geometry.taa = 1.2884563838062777
+
+SurfaceInteraction.sticktype = temperature dependent
+SurfaceInteraction.accomfactor = 0
+SurfaceInteraction.A = 1.57014, -0.006262, 0.1614157
+
+SpatialDist.type = uniform
+SpatialDist.longitude = 3.1415, 0
+
+SpeedDist.type = gaussian
+SpeedDist.vprob = 3.
+SpeedDist.sigma = 1.
+
+options.lifetime = 0.
+options.endtime = 36000
+options.species = Na
+options.outeredge = 15
+options.step_size = 30
