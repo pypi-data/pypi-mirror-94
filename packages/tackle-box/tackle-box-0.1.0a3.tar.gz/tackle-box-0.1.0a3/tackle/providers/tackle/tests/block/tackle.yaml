@@ -1,0 +1,13 @@
+stuff: things
+
+blocker:
+  type: block
+  merge: true
+  items:
+    stuff:
+      type: print
+      statement: here
+    things:
+      type: print
+      statement: "{{ stuff }}"
+      when: "{{ stuff == 'here' }}"

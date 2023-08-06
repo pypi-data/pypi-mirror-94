@@ -1,0 +1,10 @@
+
+confirm:
+  type: var
+  input: this
+  confirm: This?
+
+confirm_dict:
+  type: var
+  input: this
+  confirm: This?

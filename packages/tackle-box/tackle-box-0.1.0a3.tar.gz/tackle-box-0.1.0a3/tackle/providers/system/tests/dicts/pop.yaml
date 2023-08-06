@@ -1,0 +1,32 @@
+a_list:
+  type: var
+  input:
+    - stuff
+    - foo
+
+a_map:
+  type: var
+  input:
+    stuff: bing
+    things: blu
+    foo: bar
+    baz: grrr
+
+pop_map:
+  type: pop
+  src: "{{ pop.a_map }}"
+  item: stuff
+
+pop_maps:
+  type: pop
+  src: "{{ pop.a_map }}"
+  item:
+    - stuff
+    - things
+
+
+
+#output:
+#  type: yaml
+#  path: output-pop.yaml
+#  contents: "{{ pop }}"

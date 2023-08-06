@@ -1,0 +1,14 @@
+#trues: true
+
+blah:
+  type: var
+  input:
+    - blah
+    - foo
+    - bar
+    - things
+
+things:
+  type: var
+  input: "{{ item }}"
+  loop: "{{ blah }}"

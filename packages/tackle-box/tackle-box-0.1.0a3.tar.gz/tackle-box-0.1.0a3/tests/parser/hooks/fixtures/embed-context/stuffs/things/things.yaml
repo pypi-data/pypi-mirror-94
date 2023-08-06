@@ -1,0 +1,20 @@
+---
+
+things: yes please
+debug:
+  type: print
+  statement: "{{ this }}"
+
+before:
+  type: yaml
+  path: before.yaml
+  contents: "{{ this }}"
+
+#ok:
+#  type: confirm
+#  message: chill winston
+
+#after:
+#  type: yaml
+#  path: after.yaml
+#  contents: "{{ things }}"
