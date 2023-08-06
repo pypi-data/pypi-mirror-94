@@ -1,0 +1,3 @@
+[console_scripts]
+imbi = imbi.server:run
+
