@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "pycarus"
+version = "0.1.4"
+description = "Utilities for computer vision and 3D geometry"
+authors = ["Luca De Luigi <lucadeluigi91@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.6.2,<3.9.0"
+torch = "^1.7.1"
+open3d = "^0.12.0"
+einops = "^0.3.0"
+pytorch3d = "^0.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+black = "*"
+mypy = "*"
+flake8 = "*"
+isort = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+exclude = '''
+(
+/(
+    .git
+    | .mypy_cache
+    | .venv
+    | build
+    | dist
+)
+)
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 9
