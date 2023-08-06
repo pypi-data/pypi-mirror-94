@@ -1,0 +1,5 @@
+django-waffle
+django-crum
+edx-django-utils
+code-annotations
+Django>=2.2
