@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: svgis
+Version: 0.5.1
+Summary: Create SVG drawings from vector geodata files (SHP, geoJSON, etc).
+Home-page: https://github.com/fitnr/svgis
+Author: Neil Freeman
+Author-email: contact@fakeisthenewreal.org
