@@ -1,0 +1,13 @@
+LabelFusion/__init__.py,sha256=FwnbqI6ID63UQ_41aLn0wmtoAkrCfn7AejZJCKSOfxw,83
+LabelFusion/fusion_wrappers.py,sha256=-xZg68lDy5BHCmxbLWbrCFAtWt1J7VaI8vY2Q0zi9no,1200
+LabelFusion/itkUtils.py,sha256=7wWAqTaW5OKUqdSQCHyI48sm5jGc5mQK_BiYC-m0tcA,1318
+LabelFusion/majority_voting.py,sha256=lZXHGmt78u1rZt7sbR9X9gAkG7hMojLCqs982N_b1HE,482
+LabelFusion/simple.py,sha256=a6kivns0RyOKF9WHgF-O2QVTiEEmGt1fLlIHxmg67aA,1758
+LabelFusion/utils.py,sha256=zk1L69ALKl2nVei_bhaOksf59p-TuSxiDCwBrrKMeuk,1312
+LabelFusion/wrapper.py,sha256=TOTD2ZasziNP2-SrovAb4pFxPwQvqSj-j-pzUMg-Otk,1112
+LabelFusion-1.0.5.data/scripts/fusion_run,sha256=09hYj1iyDCsRUZyTyzgcNDLA-0RoExpf3DUSRV-EHrQ,2156
+LabelFusion-1.0.5.dist-info/LICENSE,sha256=MTN_wJK1UKM9YN13bWCe-jgpWqs8zJHOKFtWMGNCTB4,277
+LabelFusion-1.0.5.dist-info/METADATA,sha256=6MrLFEmDXWfxY-7da2p1BdKwTuUKmVulwMMTprl0m3A,4409
+LabelFusion-1.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+LabelFusion-1.0.5.dist-info/top_level.txt,sha256=AH8aSLDYyjRPa0tiJlp4ptYIYsWNx9lBw3LMe-reWRE,12
+LabelFusion-1.0.5.dist-info/RECORD,,
