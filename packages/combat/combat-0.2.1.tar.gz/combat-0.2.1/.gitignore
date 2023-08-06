@@ -1,0 +1,41 @@
+# Python cache files
+*.pyc
+
+# misc.
+*.DS_Store
+*.vscode
+*.bash_history
+misc/
+.coverage
+
+# data files
+/data/*.csv
+*.csv
+/data/*.pickle
+*.pickle
+!GSE18520.pickle
+!GSE66957.pickle
+!GSE69428.pickle
+/data/*.pkl
+*.pkl
+
+# manual
+*.pdf
+!pyComBat_manual.pdf
+
+# latex files
+*.bst
+*.bib
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.gz
+*.toc
+
+# build files
+build/
+pyComBat_test.egg-info/
+ComBat.egg-info/
+dist/
