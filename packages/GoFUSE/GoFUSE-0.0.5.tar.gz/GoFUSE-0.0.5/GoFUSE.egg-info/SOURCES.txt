@@ -1,0 +1,13 @@
+Changes.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+GoFUSE/__init__.py
+GoFUSE/client.py
+GoFUSE/server.py
+GoFUSE.egg-info/PKG-INFO
+GoFUSE.egg-info/SOURCES.txt
+GoFUSE.egg-info/dependency_links.txt
+GoFUSE.egg-info/requires.txt
+GoFUSE.egg-info/top_level.txt
