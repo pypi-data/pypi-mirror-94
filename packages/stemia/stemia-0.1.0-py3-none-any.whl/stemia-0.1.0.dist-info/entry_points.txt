@@ -1,0 +1,3 @@
+[console_scripts]
+center_filament = stemia.center_filament:main
+
