@@ -1,0 +1,9 @@
+CHANGELOG.md
+MANIFEST.in
+README.md
+setup.py
+Zapurl/__init__.py
+Zapurl.egg-info/PKG-INFO
+Zapurl.egg-info/SOURCES.txt
+Zapurl.egg-info/dependency_links.txt
+Zapurl.egg-info/top_level.txt
