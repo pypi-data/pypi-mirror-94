@@ -1,0 +1,8 @@
+setup.py
+supersltools/Utils.py
+supersltools/__init__.py
+supersltools.egg-info/PKG-INFO
+supersltools.egg-info/SOURCES.txt
+supersltools.egg-info/dependency_links.txt
+supersltools.egg-info/requires.txt
+supersltools.egg-info/top_level.txt
