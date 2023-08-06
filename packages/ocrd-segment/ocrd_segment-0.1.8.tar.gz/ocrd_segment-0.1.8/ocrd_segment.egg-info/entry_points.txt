@@ -1,0 +1,13 @@
+[console_scripts]
+ocrd-segment-evaluate = ocrd_segment.cli:ocrd_segment_evaluate
+ocrd-segment-extract-glyphs = ocrd_segment.cli:ocrd_segment_extract_glyphs
+ocrd-segment-extract-lines = ocrd_segment.cli:ocrd_segment_extract_lines
+ocrd-segment-extract-pages = ocrd_segment.cli:ocrd_segment_extract_pages
+ocrd-segment-extract-regions = ocrd_segment.cli:ocrd_segment_extract_regions
+ocrd-segment-extract-words = ocrd_segment.cli:ocrd_segment_extract_words
+ocrd-segment-from-coco = ocrd_segment.cli:ocrd_segment_from_coco
+ocrd-segment-from-masks = ocrd_segment.cli:ocrd_segment_from_masks
+ocrd-segment-repair = ocrd_segment.cli:ocrd_segment_repair
+ocrd-segment-replace-original = ocrd_segment.cli:ocrd_segment_replace_original
+ocrd-segment-replace-page = ocrd_segment.cli:ocrd_segment_replace_page
+
