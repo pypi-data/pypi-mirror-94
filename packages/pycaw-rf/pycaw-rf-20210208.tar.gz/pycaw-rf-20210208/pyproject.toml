@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pycaw"
+version = "20210208"
+description = ""
+authors = ["Julia Patrin <papercrane@reversefold.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+comtypes = "^1.1.8"
+psutil = "^5.8.0"
+future = "^0.18.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
