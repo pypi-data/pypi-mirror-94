@@ -1,0 +1,16 @@
+pytorch-lightning==1.1.*,>=1.1.5
+tabulate
+hyperopt
+tqdm
+pandas
+wandb
+transformers>=4.1.1
+ray[tune]>=1.1.0
+requests
+torchvision
+pillow
+matplotlib
+validators
+boto3
+torch
+torchvision
