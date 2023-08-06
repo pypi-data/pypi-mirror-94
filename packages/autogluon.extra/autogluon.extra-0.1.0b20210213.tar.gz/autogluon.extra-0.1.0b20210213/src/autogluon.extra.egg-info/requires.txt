@@ -1,0 +1,10 @@
+numpy==1.19.5
+gluoncv<1.0,>=0.9.2
+scipy==1.5.4
+graphviz<0.9.0,>=0.8.1
+bokeh
+pandas<2.0,>=1.0.0
+scikit-learn<0.24,>=0.22.0
+autogluon.core==0.1.0b20210213
+pytest
+openml
