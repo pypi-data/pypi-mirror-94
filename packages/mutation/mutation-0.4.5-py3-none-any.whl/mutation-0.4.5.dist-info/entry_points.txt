@@ -1,0 +1,6 @@
+[console_scripts]
+mutation=mutation:main
+
+[pytest11]
+mutation=mutation
+
