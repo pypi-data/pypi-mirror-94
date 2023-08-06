@@ -1,0 +1,15 @@
+polyomino/.gitignore,sha256=MtrjBS8zHuNNYo71NXCbMBJZpF33x1IsTTXc9Jhz8As,13
+polyomino/__init__.py,sha256=w5Ii-nmzXexgF8Q6VX_u-gIuu9TX5qls59NR2lnO3Io,35
+polyomino/board.py,sha256=1D-qWXCuGuHvg5fkcxOmJ-PnYwZDCwQkiJg8cMJfKrw,7876
+polyomino/constant.py,sha256=7zay2CPUl8La58s7QMEKn9ASmsN_NV6-0Gwx_8U2l8k,1357
+polyomino/error.py,sha256=x62Wh7lWaR5e7S3mAhFn7mnKe3yaUZHKcX8_Q8RoMqM,549
+polyomino/piece.py,sha256=6MD3r2Pz7UA6pVfrLYFLpsCLFE0OTTAcR_UCAn_OWww,125
+polyomino/problem.py,sha256=PPf2EsUv1GJQHxJQUvDFTRKte9cLM-9ZyGF8wiyQLsc,1874
+polyomino/solution.py,sha256=sNgUxII6By1Gp-uAsJ-Mvu0UY2IRK_TX1enTE-581vA,344
+polyomino/tileset.py,sha256=Rw6qvkT3TIzIteQPicEeBCXlrEL_htqg5p-bjHjg2YM,2618
+polyomino/transform.py,sha256=dTNjx6REtLSHss_RqHEtWKKCs8LmjHP7Cxwdtbee9gA,1114
+polyomino/utils.py,sha256=EDo3XXKRcNWijT4RDd17f3Lyc1YnMQvpsI272RLCmtQ,129
+polyomino-0.4.3a1.dist-info/entry_points.txt,sha256=8yvYZ2uFI7e3xjl020yy0WqMUk0tcCkwZEshR3_5qH8,75
+polyomino-0.4.3a1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+polyomino-0.4.3a1.dist-info/METADATA,sha256=ME9m8-ve4LTMa-TKgmOY4CEWjzS1ysCGdTgpF6Paf6Q,3815
+polyomino-0.4.3a1.dist-info/RECORD,,
