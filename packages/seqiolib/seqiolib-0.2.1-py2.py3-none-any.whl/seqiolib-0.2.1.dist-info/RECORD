@@ -1,0 +1,13 @@
+seqiolib/__init__.py,sha256=YkzWB0IJdHdfm9P7OypnTaRc8mICRZJNJkdP62DO6Ns,306
+seqiolib/encoder.py,sha256=FZxqePyb73QEnITCxgsZiYecaDdF7XdbHuSS65hNKms,2554
+seqiolib/seqiolib.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+seqiolib/sequence.py,sha256=WG1L1BBecySn2FAZ2wDnQd8X4gIfaOIhEWvt5QLJcEY,8904
+seqiolib/utils/__init__.py,sha256=ZBB49mHrNF3MD8o22xwEVF3laOtUHK6J2KZelnVbY8M,565
+seqiolib/utils/io.py,sha256=Mc0XrNF7K2RS179HwVbSWVWvzCdmLph8I-OnJJp7DOM,5164
+seqiolib/utils/utils.py,sha256=hUkef52nJslpbfZWas0SeqHo2cLL_B59vHwz_piLhl4,655
+seqiolib-0.2.1.dist-info/AUTHORS.rst,sha256=-XIGYRaElwYkM63XfcadBbqr8-WwYkz5tPZb82Kt97w,162
+seqiolib-0.2.1.dist-info/LICENSE,sha256=boO5gFJLmSpaYR53u6UKc_RRb4CJl0Bw9nD3aeMggaw,1071
+seqiolib-0.2.1.dist-info/METADATA,sha256=4APz5UhqGx-j9bY0q3kMXpiwDYDaaIt1jpP--1AW8i4,2179
+seqiolib-0.2.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+seqiolib-0.2.1.dist-info/top_level.txt,sha256=a-Bce-aF6c_siOGUoVTs-RMQpN1iOaiOhMZTBj-OjQU,9
+seqiolib-0.2.1.dist-info/RECORD,,
