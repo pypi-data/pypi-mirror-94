@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+artifactory_client.egg-info/PKG-INFO
+artifactory_client.egg-info/SOURCES.txt
+artifactory_client.egg-info/dependency_links.txt
+artifactory_client.egg-info/top_level.txt
