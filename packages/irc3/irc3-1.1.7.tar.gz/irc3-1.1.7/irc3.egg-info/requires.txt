@@ -1,0 +1,17 @@
+venusian>=3.0
+docopt
+
+[test]
+pytest-asyncio
+pytest-aiohttp
+feedparser
+requests
+pysocks
+twitter
+aiocron
+redis
+pytest
+irc3-plugins-test
+
+[web]
+aiohttp
