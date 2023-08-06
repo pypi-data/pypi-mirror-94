@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+dtweb/__init__.py
+dtweb/client.py
+dtweb.egg-info/PKG-INFO
+dtweb.egg-info/SOURCES.txt
+dtweb.egg-info/dependency_links.txt
+dtweb.egg-info/requires.txt
+dtweb.egg-info/top_level.txt
