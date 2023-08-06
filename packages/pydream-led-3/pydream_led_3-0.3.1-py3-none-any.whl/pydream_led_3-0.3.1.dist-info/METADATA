@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pydream-led-3
+Version: 0.3.1
+Summary: PyDream3 - driver for Dream Cheeky 21x7 LED display (VendorId: 0x1d34 DeviceId: 0x001)
+Home-page: https://github.com/programmer2514/pydream-led-3
+Author: Benjamin Pryor
+Author-email: programmer2514@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyusb
+
+UNKNOWN
+
+
