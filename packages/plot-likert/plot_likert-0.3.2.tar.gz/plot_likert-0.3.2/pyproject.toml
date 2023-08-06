@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "plot_likert"
+version = "0.3.0"
+description = "Library to visualize results from Likert scale survey questions"
+authors = ["nmalkin"]
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+
+[tool.poetry.dev-dependencies]
+pylint = "*"
+mypy = "*"
+black = "*"
+rope = "*"
+jupyterlab = "*"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
