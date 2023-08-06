@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: blistpy
+Version: 0.1.2
+Summary: Python API wrapper for the Blist Discord bot list
+Home-page: https://github.com/BlistBotList/blist.py
+Author: A Discord User & A Trash Coder
+License: UNKNOWN
+Project-URL: Source, https://github.com/BlistBotList/blist.py
+Project-URL: Documentation, https://github.com/BlistBotList/blist.py/blob/master/README.md
+Project-URL: Issue tracker, https://github.com/BlistBotList/blist.py/issues
+Keywords: discord discordapp bot blist botlist list blistpy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5.3
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: python-dateutil
+
+# Blist API Wrapper for Python
+
+This is the official API wrapper for the [Blist](https://blist.xyz) Discord bot list. You can find the complete documentation [here](https://github.com/joshuapatel/blist-wrapper/blob/master/README.md).
+
