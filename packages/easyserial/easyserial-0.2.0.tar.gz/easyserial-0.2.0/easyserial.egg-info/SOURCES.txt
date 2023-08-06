@@ -1,0 +1,13 @@
+README.md
+setup.py
+easyserial/__init__.py
+easyserial/easyserial.py
+easyserial/errors.py
+easyserial.egg-info/PKG-INFO
+easyserial.egg-info/SOURCES.txt
+easyserial.egg-info/dependency_links.txt
+easyserial.egg-info/entry_points.txt
+easyserial.egg-info/requires.txt
+easyserial.egg-info/top_level.txt
+easyserial/scripts/__init__.py
+easyserial/scripts/logger.py
