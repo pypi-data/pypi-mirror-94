@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: hesburgh-utilities
+Version: 3.0.3
+Summary: Hesburgh Libraries Utility Modules
+Home-page: https://github.com/ndlib/hesburgh_utilities
+Author: Harrison Beachey
+Author-email: hbeachey@nd.edu
+License: Apache Software License
+Keywords: Logging Testing
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: boto3 (<1.17,>=1.16)
+Requires-Dist: PyYAML (<5.4,>=3.10)
+Requires-Dist: paramiko
+Requires-Dist: raven
+
+UNKNOWN
+
+
