@@ -1,0 +1,2 @@
+aiomysql>=0.0.20
+aiosqlite>=0.12.0
