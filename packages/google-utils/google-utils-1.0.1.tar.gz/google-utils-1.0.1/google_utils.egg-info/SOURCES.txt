@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+google_utils/__init__.py
+google_utils/core.py
+google_utils/error.py
+google_utils/result.py
+google_utils.egg-info/PKG-INFO
+google_utils.egg-info/SOURCES.txt
+google_utils.egg-info/dependency_links.txt
+google_utils.egg-info/requires.txt
+google_utils.egg-info/top_level.txt

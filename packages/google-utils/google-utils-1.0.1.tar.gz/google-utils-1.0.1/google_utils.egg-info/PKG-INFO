@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: google-utils
+Version: 1.0.1
+Summary: A utility package to interact with google.com
+Home-page: https://github.com/medjedqt/google-utils
+Author: medjed
+Author-email: imoshugi01@gmail.com
+License: UNKNOWN
+Description: # google-utils
+        
+        Use google from the convenience of a python script!
+        
+        ## Installation
+        
+        Install from pip:
+        
+        ```bash
+        pip install google-utils
+        ```
+        
+        ## Usage
+        
+        Fetching links:
+        
+        ```py
+        from google_utils import Google
+        
+        results = Google.search("Minecraft")
+        for result in results:
+            print(result.link)
+        ```
+        
+        Calculator:
+        
+        ```py
+        from google_utils import Google
+        
+        response = Google.calculate("64 to the power of six")
+        print(f"{response.question}\n{response.answer}")
+        ```
+        
+        Weather checking:
+        
+        ```py
+        from google_utils import Google
+        
+        response = Google.weather("san francisco in celcius")
+        print(f"{response.weather} {response.temperature}")
+        ```
+        
+        Definition:
+        
+        ```py
+        from google_utils import Google
+        
+        response = Google.define("splendid")
+        print(f"{response.phrase}, {response.type}\n{response.pronunciation}\n{response.meaning}")
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
