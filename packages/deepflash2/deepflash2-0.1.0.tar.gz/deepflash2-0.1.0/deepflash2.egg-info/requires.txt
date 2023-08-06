@@ -1,0 +1,4 @@
+fastai>=2.1.7
+scikit-image
+imageio
+ipywidgets
