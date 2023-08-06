@@ -1,0 +1,33 @@
+==========================
+Joyous 1.1.0 release notes
+==========================
+
+.. contents::
+    :local:
+    :depth: 3
+
+
+What's new
+==========
+
+Translations
+~~~~~~~~~~~~
+ * Thanks to Yuki Kikuchi for the new Japanese translation.
+ * Thanks to Pandevmonium for the new Italian translation.
+
+iCal
+~~~~
+ * Import whole zip files containing iCal files
+
+Other features
+~~~~~~~~~~~~~~
+ * Provide defaults for otherwise undefined template variables
+
+Bug fixes
+~~~~~~~~~
+ * Return a 404 for invalid day dates
+ * Fix removeContentPanels to work with postponements
+ * Handle duplicate UIDs in a iCal import
+ * Include Cancellations (or Postponements) with the cancellation_title filled in in the RSS feed
+
+
