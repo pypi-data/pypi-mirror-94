@@ -1,0 +1,18 @@
+[project]
+name = "pilapse"
+version = "0.0.12"
+description = "Raspberry Pi time-lapse service"
+authors = ["Alex McGunn <mcgunn@oo2.be>"]
+
+license = "Apache 2.0"
+
+readme = "README.md"
+
+homepage = "https://github.com/yix/pilapse"
+repository = "https://github.com/yix/pilapse"
+
+dependencies = ["Pillow"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
