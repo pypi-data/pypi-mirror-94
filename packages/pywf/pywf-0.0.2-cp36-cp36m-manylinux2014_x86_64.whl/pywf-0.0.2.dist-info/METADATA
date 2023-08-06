@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pywf
+Version: 0.0.2
+Summary: A C++ Workflow Wrapper for Python
+Home-page: https://github.com/sogou/pyworkflow
+Author: sogou
+Author-email: liukaidx@sogou-inc.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/plain
+
+A C++ Workflow Wrapper for Python
+
+
