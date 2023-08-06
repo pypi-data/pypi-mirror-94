@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sigplot
+Version: 0.0.5
+Summary: Graphical library for signal processing
+Home-page: UNKNOWN
+Author: Hari
+Author-email: harikalyanraman@gmail.com
+License: MIT
+Keywords: signals,systems,convolution,fourier
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: numpy
+Requires-Dist: tk
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
