@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: cloudsync_gdrive
+Version: 2.0.0a1
+Summary: Provider "gdrive", exports GDriveProvider
+Home-page: https://github.com/atakamallc/cloudsync-gdrive
+Author: Atakama, LLC
+Author-email: dev-support@atakama.com
