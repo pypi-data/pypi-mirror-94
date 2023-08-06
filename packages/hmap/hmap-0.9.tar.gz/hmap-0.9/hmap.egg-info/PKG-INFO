@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: hmap
+Version: 0.9
+Summary: A python package for heatmap clustering and plotting
+Home-page: https://github.com/HiDiHlabs/heatpy
+Author: Matthias Bieg
+Author-email: matthias.bieg@gmail.com
+License: UNKNOWN
+Description: # hmap: Python Heatmap Package
+        
+        This package implements a convenient heatmap plotting package in python.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
