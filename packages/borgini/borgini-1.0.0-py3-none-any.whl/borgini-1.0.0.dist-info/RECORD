@@ -1,0 +1,12 @@
+borgini/__init__.py,sha256=TUZwVrGKuI-W3U_axEMSIl8cudpkQmCbYs89ZVVT_Dk,2977
+borgini/__main__.py,sha256=xXAM2m1afrjcJP3ryzFyDbjgXuLnpP8kWyfGoeIKofs,87
+borgini/src/__init__.py,sha256=JgL_Hpwg_F3a0WtVvXN5sh5AIlY7mBtT72RmfI4hkGU,8779
+borgini/src/config.py,sha256=7d2Z25sARbNytMZ9jdqStjqtbL9arKTuZkM5C_V6VHA,8314
+borgini/src/funcs.py,sha256=zGQZwBlMJpkct_GbwOrEGp-tVre8f4fmRIj0Kssk_-E,10272
+borgini/src/parser.py,sha256=mGww7P_8houlwMeWdqpj6U3IUIHsSFRDvrLtPcflwF0,6186
+borgini-1.0.0.dist-info/LICENSE,sha256=cN_OcuKbHE55m67wADlLPKWkcJDVe2t0yhQPKSj7tjA,1073
+borgini-1.0.0.dist-info/METADATA,sha256=S0axChZhvoG7KIRTk9ymlFcvZcQS2iDhhO_roL97lk4,4345
+borgini-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+borgini-1.0.0.dist-info/entry_points.txt,sha256=wySrBaZu_fYOGAyR2ViQjM8WzrBJ7gRROXZvRiND2CI,42
+borgini-1.0.0.dist-info/top_level.txt,sha256=Et-E-IVxocRLPLOn26tL0k826cIOZMAxHutfl9BvIQw,8
+borgini-1.0.0.dist-info/RECORD,,
