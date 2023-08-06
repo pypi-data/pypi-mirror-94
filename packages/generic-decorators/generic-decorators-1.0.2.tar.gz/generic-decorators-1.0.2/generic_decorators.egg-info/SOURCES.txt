@@ -1,0 +1,9 @@
+README.md
+setup.py
+generic_decorators/__init__.py
+generic_decorators/generic_decorators.py
+generic_decorators.egg-info/PKG-INFO
+generic_decorators.egg-info/SOURCES.txt
+generic_decorators.egg-info/dependency_links.txt
+generic_decorators.egg-info/requires.txt
+generic_decorators.egg-info/top_level.txt
