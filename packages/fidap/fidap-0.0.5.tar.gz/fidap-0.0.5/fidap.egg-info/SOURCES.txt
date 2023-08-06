@@ -1,0 +1,10 @@
+README.md
+setup.py
+fidap/__init__.py
+fidap/fidap.py
+fidap/settings.py
+fidap.egg-info/PKG-INFO
+fidap.egg-info/SOURCES.txt
+fidap.egg-info/dependency_links.txt
+fidap.egg-info/requires.txt
+fidap.egg-info/top_level.txt
