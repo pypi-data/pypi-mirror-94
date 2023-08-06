@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: caosdb
+Version: 0.4.1
+Summary: Python Interface for CaosDB
+Home-page: UNKNOWN
+Author: Timm Fitschen
+Author-email: t.fitschen@indiscale.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: lxml (>=3.6.4)
+Requires-Dist: PyYaml (>=3.12)
+Requires-Dist: future
+Requires-Dist: PySocks (>=1.6.7)
+Provides-Extra: keyring
+Requires-Dist: keyring (>=13.0.0) ; extra == 'keyring'
+
+# Welcome
+
+This is the **CaosDB Python Client Library** repository and a part of the
+CaosDB project.
+
+# Setup
+
+Please read the [README_SETUP.md](README_SETUP.md) for instructions on how to
+setup this code.
+
+
+# Further Reading
+
+Please refer to the [official gitlab repository of the CaosDB
+project](https://gitlab.com/caosdb/caosdb) for more information.
+
+# License
+
+Copyright (C) 2018 Research Group Biomedical Physics, Max Planck Institute for
+Dynamics and Self-Organization Göttingen.
+Copyright (C) 2020 Indiscale GmbH <info@indiscale.com>
+
+All files in this repository are licensed under a [GNU Affero General Public
+License](LICENCE.md) (version 3 or later).
+
+
+
