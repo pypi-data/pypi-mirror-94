@@ -1,0 +1,8 @@
+setup.py
+smfscraper/__init__.py
+smfscraper/smf.py
+smfscraper.egg-info/PKG-INFO
+smfscraper.egg-info/SOURCES.txt
+smfscraper.egg-info/dependency_links.txt
+smfscraper.egg-info/requires.txt
+smfscraper.egg-info/top_level.txt
