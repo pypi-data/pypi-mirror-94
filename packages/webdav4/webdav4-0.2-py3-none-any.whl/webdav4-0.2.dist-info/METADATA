@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: webdav4
+Version: 0.2
+Summary: UNKNOWN
+Home-page: https://github.com/skshetry/webdav4
+Maintainer: Saugat Pachhai
+Maintainer-email: suagatchhetri@outlook.com
+License: MIT
+Project-URL: Documentation, https://skshetry.github.io/webdav4
+Keywords: webdav,webdav-client
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: httpx (~=0.16.1)
+Requires-Dist: python-dateutil (~=2.8.1)
+Provides-Extra: all
+Requires-Dist: fsspec (~=0.8.5) ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: fsspec (~=0.8.5) ; extra == 'dev'
+Requires-Dist: pylint-pytest ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: typing-extensions ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: cheroot ; extra == 'dev'
+Requires-Dist: wsgidav ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-copybutton ; extra == 'dev'
+Requires-Dist: myst-parser ; extra == 'dev'
+Requires-Dist: furo ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-copybutton ; extra == 'docs'
+Requires-Dist: myst-parser ; extra == 'docs'
+Requires-Dist: furo ; extra == 'docs'
+Provides-Extra: fsspec
+Requires-Dist: fsspec (~=0.8.5) ; extra == 'fsspec'
+Provides-Extra: qa
+Requires-Dist: pylint-pytest ; extra == 'qa'
+Requires-Dist: pylint ; extra == 'qa'
+Requires-Dist: mypy ; extra == 'qa'
+Provides-Extra: tests
+Requires-Dist: typing-extensions ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: cheroot ; extra == 'tests'
+Requires-Dist: wsgidav ; extra == 'tests'
+
+# webdav4
+
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+![ci](https://github.com/skshetry/webdav4/workflows/CI/badge.svg)
+[![codecov](https://codecov.io/gh/skshetry/webdav4/branch/main/graph/badge.svg)](https://codecov.io/gh/skshetry/webdav4)
+
+Webdav API with an (optional) fsspec implementation
+
+## Installation
+
+```console
+$ pip install webdav4
+```
+
+
