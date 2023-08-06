@@ -1,0 +1,3 @@
+[kedro.hooks]
+kedro_local_notify=kedro_local_notify.hook:hooks
+
