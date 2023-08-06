@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: hellopippkg
+Version: 0.0.1
+Summary: Simply display HELLO PIP!!
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+**# Hello Pip <br />**
+**# A sample pip package that simply displays the text - HELLO PIP!!**<br />
+
+**# install with pip <br />**
+pip install hellopippkg<br />
+
+**# import in your python file <br />**
+from hellopippkg import hellopip<br />
+
+
