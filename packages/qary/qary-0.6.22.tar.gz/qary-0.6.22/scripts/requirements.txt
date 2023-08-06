@@ -1,0 +1,62 @@
+# not possible with conda nor setup.cfg:
+en_core_web_md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-2.2.5/en_core_web_md-2.2.5.tar.gz
+
+# setup.cfg "setup_requires ="
+setuptools
+pyscaffold>=3.1a0,<3.2a0
+
+# conda environment.yml "dependencies:"
+ConfigArgParse==1.2.2
+html5lib
+pip
+pre_commit==2.3.0
+pytest-cov
+watchdog
+
+# setup.cfg "install_requires ="
+boto3==1.13.19
+botocore==1.16.19
+beautifulsoup4>=4.9.3,<5.0.0
+ConfigArgParse==1.2.2
+docutils==0.15.2
+django==3.0.7
+editdistance==0.5.3
+elasticsearch>=7.6.0,<8.0.0
+environment==1.0.0
+# en_core_web_md==2.2.5
+# en_core_web_md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-2.2.5/en_core_web_md-2.2.5.tar.gz
+gitpython==3.1.1
+# **lxml** - BeautifulSoup(markup, "lxml")
+#   Advantages: fast, lenient; Disadvantages: External C dependency
+# **html5lib** - BeautifulSoup(markup, "html5lib")
+#   Advantages: extremely lenient like browser, valid HTML5 output; slow, python dependency
+html5lib==1.1
+jupyter>=1.0.0
+# jedi>=0.18 crashes the kernal in ipython or jupyter during tab completion
+jedi>=0.17.2,<0.18.0
+lxml==4.5.0
+m2r==0.2.1
+nltk==3.5
+pandas==1.0.3
+pre_commit==2.3.0
+python-dotenv>=0.13.0,<0.14.0
+python-slugify==4.0.0
+rapidfuzz==0.9.1
+recommonmark==0.6.0
+regex==2020.4.4
+seaborn==0.10.0
+spacy==2.2.4
+scikit-image>=0.17.2,<1.0.0
+scikit-learn==0.22.2
+scipy==1.4.1
+Sphinx==3.0.3
+torch>=1.5.0,<2.0.0
+# torchvision>=0.6.0,<1.0.0
+tqdm>=4.38.0
+transformers>=3.5.1,<4.0
+wikipedia-api==0.5.4
+yake==0.3.7
+# `conda install psutil`
+# otherwise `pip install psutil` requires `apt install gcc` or `conda install gcc_linux-64`
+# psutil
+

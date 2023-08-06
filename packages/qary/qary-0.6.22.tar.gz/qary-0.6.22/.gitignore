@@ -1,0 +1,91 @@
+# Temporary and binary files
+*~
+*.py[cod]
+*.so
+*.cfg
+!.isort.cfg
+!setup.cfg
+*.orig
+*.log
+*.pot
+.pytest_cache/*
+__pycache__/*
+.DS_*
+.cache/*
+.*.swp
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.coverage*
+cache_dir/
+**/qary/data/history.*
+**/qary/data/doctest*
+
+# Project files
+.ropeproject
+.project
+.pydevproject
+.settings
+.idea
+.vscode
+tags
+*.code-workspace
+*.sublime-workspace
+
+# Package files
+*.egg
+*.eggs/
+.installed.cfg
+*.egg-info
+
+# Unittest and coverage
+htmlcov/*
+.coverage
+.tox
+junit.xml
+coverage.xml
+.pytest_cache/
+pytest-results*
+
+# Build and docs folder/files
+build/*
+dist/*
+sdist/*
+docs/api/*
+docs/_rst/*
+docs/_build/*
+cover/*
+runs/*
+MANIFEST
+
+# Mac
+__MACOSX
+
+# KDE
+.directory
+
+# BigData and Models
+db.sqlite3
+*.bz2
+*.zip
+*.pkl
+*.npy
+**/data/qa-models/*
+**/data/predictions*
+**/data/squad/*
+**/data/testsets/accuracy_report*
+**/albert-large*
+**/data/corpora/wikipedia/wikipedia-titles*
+
+# Per-project virtualenvs
+.venv*/
+
+# docs html
+docs/**/*.html
+
+# secrets
+.bash_env
+**/*secret*
+**/*private*
+**/simple-transformers
+**/albert-large-*
+**/wikipedia/articles_with_keywords.pkl

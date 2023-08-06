@@ -1,0 +1,39 @@
+# Travis configuration file using the build matrix feature
+# Read more under http://docs.travis-ci.com/user/build-configuration/
+# THIS SCRIPT IS SUPPOSED TO BE AN EXAMPLE. MODIFY IT ACCORDING TO YOUR NEEDS!
+
+sudo: false
+language: python
+#virtualenv:
+#  system_site_packages: true
+
+matrix:
+  include:
+    - python: 3.7
+      env: DISTRIB="conda" PYTHON_VERSION="3.7" COVERAGE="false"
+      # env: DISTRIB="ubuntu" TOX_PYTHON_VERSION="py36" COVERAGE="true"
+      # $ source ~/virtualenv/python3.6_with_system_site_packages/bin/activate
+      # /home/travis/.travis/functions: line 104: /home/travis/virtualenv/python3.6_with_system_site_packages/bin/activate: No such file or directory
+
+install:
+  - source tests/install.sh
+
+before_script:
+  - git config --global user.email "qary@totalgood.com"
+  - git config --global user.name "Travis Admin User for qary"
+
+script:
+  - export spacy_lang=en_core_web_sm
+  - python setup.py test
+  # - spacy_lang=en_core_web_sm pytest
+
+after_success:
+  - if [[ "$COVERAGE" == "true" ]]; then coveralls || echo "failed"; fi
+
+after_script:
+  - travis-cleanup
+
+cache:
+  pip: true
+  directories:
+    - $HOME/miniconda

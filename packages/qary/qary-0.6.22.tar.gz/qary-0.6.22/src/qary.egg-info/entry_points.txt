@@ -1,0 +1,4 @@
+[console_scripts]
+ircbot = qary.ircbot:run
+qary = qary.clibot:main
+

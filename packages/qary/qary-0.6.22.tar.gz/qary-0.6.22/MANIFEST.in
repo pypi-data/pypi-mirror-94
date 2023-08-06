@@ -1,0 +1,13 @@
+include requirements.txt
+include src/qary/data/doctest-save-hashes.uint64.npy.gz
+recursive-include src/qary/data **
+recursive-include src/qary/data *.csv
+recursive-include src/qary/data/constants *
+recursive-include src/qary/data/unittests *
+recursive-include src/qary/data/testsets *
+recursive-exclude src/qary/data *.tar.gz
+recursive-exclude src/qary/data *.bin
+recursive-exclude src/qary/data/qa-models **
+recursive-exclude src/qary/data/corpora/wikipedia *
+exclude src/qary/data/corpora/wikipedia/wikipedia-titles-alphaonly-hashed.uint64.npy.gz
+exclude src/qary/data/qa-models/albert-large-v2-0.2.0/pytorch_model.bin

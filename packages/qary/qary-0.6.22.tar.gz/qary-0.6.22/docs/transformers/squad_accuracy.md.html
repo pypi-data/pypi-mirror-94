@@ -1,0 +1,256 @@
+<h1 id="accuracy-benchmarking-of-transformers-models">Accuracy benchmarking of transformers models</h1>
+<p>Making an intelligent chatbot has never been easier, thanks to the abundance of open source natural language processing libraries, curated datasets and the power of transfer learning. Building a basic question-answering functionality with Transformers library can be as simple as this:</p>
+<h4 id="input-1-load-pretrained-transformer-qa-model"><em><code>Input 1: Load Pretrained Transformer QA Model</code></em></h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> transformers <span class="im">import</span> pipeline</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># Context: a snippet from a Wikipedia article about Stan Lee</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>context <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="st">    Stan Lee[1] (born Stanley Martin Lieber /ˈliːbər/; December 28, 1922 - November 12, 2018) was an American comic book </span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="st">    writer, editor, publisher, and producer. He rose through the ranks of a family-run business to become Marvel Comics&#39; </span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="st">    primary creative leader for two decades, leading its expansion from a small division of a publishing house to</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="st">    multimedia corporation that dominated the comics industry.</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="st">    &quot;&quot;&quot;</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a>nlp <span class="op">=</span> pipeline(<span class="st">&#39;question-answering&#39;</span>)</span>
+<span id="cb1-12"><a href="#cb1-12"></a>result <span class="op">=</span> nlp(context<span class="op">=</span>context, question<span class="op">=</span><span class="st">&quot;Who is Stan Lee?&quot;</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co">&quot;&quot;&quot;</span></span></code></pre></div>
+<h4 id="output-1-report-for-default-transformer-qa-model"><em><code>Output 1: Report for Default Transformer QA Model</code></em></h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>{<span class="st">&#39;score&#39;</span>: <span class="fl">0.2854291316652837</span>,</span>
+<span id="cb2-2"><a href="#cb2-2"></a> <span class="st">&#39;start&#39;</span>: <span class="dv">95</span>,</span>
+<span id="cb2-3"><a href="#cb2-3"></a> <span class="st">&#39;end&#39;</span>: <span class="dv">159</span>,</span>
+<span id="cb2-4"><a href="#cb2-4"></a> <span class="st">&#39;answer&#39;</span>: <span class="st">&#39;an American comic book writer, editor, publisher, and producer.&#39;</span>}</span></code></pre></div>
+<p>BOOM! It works! That low confidence score is a little worrisome, though. You’ll see how that comes into play later, when we talk about BERT’s ability to detect impossible questions and irrelevant contexts.</p>
+<p>However, taking some time to choose the right model for your task will ensure that you are getting the best possible out of the box performance from your conversational agent. Your choice of both language models and a benchmarking dataset will make or break the performance of your chatbot.</p>
+<p>BERT (Bidirectional Encoding Representations for Transformers) models perform very well on complex information extraction tasks. They can capture not only meaning of words, but also the context. Before choosing model (or settling for the default option) you probably want to evaluate your candidate model for accuracy and resources (RAM and CPU cycles) to make sure that it actually meets your expectations. In this article you will see how we benchmarked our qa model using <a href="https://rajpurkar.github.io/SQuAD-explorer/">Stanford Question Answering Dataset (SQuAD)</a>. There are many other good question-answering datasets you might want to use, including Microsoft’s <a href="https://www.microsoft.com/en-us/research/project/newsqa-dataset/">NewsQA</a>, <a href="https://www.tau-nlp.org/commonsenseqa">CommonsenseQA</a>, <a href="https://www.tau-nlp.org/compwebq">ComplexWebQA</a>, and many others. To maximize accuracy for your application you’ll want to choose a benchmarking dataset representative of the questions, answers, and contexts you expect in your application.</p>
+<p><a href="https://github.com/huggingface/transformers">Huggingface Transformers library</a> has a large catalogue of pretrained models for a variety of tasks: sentiment analysis, text summarization, paraphrasing, and, of course, question answering. We chose a few candidate question-answering models from the repository of available <a href="https://huggingface.co/models?filter=question-answering">models</a>. Lo and behold, many of them have already been fine-tuned on the SQuAD dataset. Awesome! Here are a few SQuAD fine-tuned models we are going to evaluate:</p>
+<ul>
+<li>distilbert-base-cased-distilled-squad</li>
+<li>bert-large-uncased-whole-word-masking-finetuned-squad</li>
+<li>ktrapeznikov/albert-xlarge-v2-squad-v2</li>
+<li>mrm8488/bert-tiny-5-finetuned-squadv2</li>
+<li>twmkn9/albert-base-v2-squad2</li>
+</ul>
+<p>We ran predictions with our selected models on both versions of SQuAD (version 1 and version 2). The difference between them is that SQuAD-v1 contains only answerable questions, while SQuAD-v2 contains unanswerable questions as well. To illustrate this, let us look at the below example from the SQuAD-v2 dataset. An answer to Question 2 is impossible to derive from the given context from Wikipedia:</p>
+<blockquote>
+<p><strong>Question 1:</strong> “In what country is Normandy located?”</p>
+<p><strong>Question 2:</strong> “Who gave their name to Normandy in the 1000’s and 1100’s”</p>
+<p><strong>Context:</strong> “The Normans (Norman: Nourmands; French: Normands; Latin: Normanni) were the people who in the 10th and 11th centuries gave their name to Normandy, a region in France. They were descended from Norse ("Norman" comes from "Norseman") raiders and pirates from Denmark, Iceland and Norway who, under their leader Rollo, agreed to swear fealty to King Charles III of West Francia. Through generations of assimilation and mixing with the native Frankish and Roman-Gaulish populations, their descendants would gradually merge with the Carolingian-based cultures of West Francia. The distinct cultural and ethnic identity of the Normans emerged initially in the first half of the 10th century, and it continued to evolve over the succeeding centuries.”</p>
+</blockquote>
+<p>Our ideal model should be able to understand that context well enough to compose an answer.</p>
+<p>Let us get started!</p>
+<p>To define a model and a tokenizer in Transformers, we can use AutoClasses. In most cases Automodels can derive the settings automatically from the model name. We need only a few lines of code to set it up:</p>
+<h4 id="input-2-load-large-uncased-bert-transformer-pretuned-for-squad"><em><code>Input 2: Load Large Uncased BERT Transformer Pretuned for SQuAD</code></em></h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">from</span> tqdm <span class="im">import</span> tqdm</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="im">from</span> transformers <span class="im">import</span> AutoTokenizer, AutoModelForQuestionAnswering</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>modelname <span class="op">=</span> <span class="st">&#39;bert-large-uncased-whole-word-masking-finetuned-squad&#39;</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a>tokenizer <span class="op">=</span> AutoTokenizer.from_pretrained(modelname)</span>
+<span id="cb3-7"><a href="#cb3-7"></a>model <span class="op">=</span> AutoModelForQuestionAnswering.from_pretrained(modelname)</span></code></pre></div>
+<p>We will use the human level performance as our target for accuracy. SQuAD leaderboard provides human level performance for this task, which is 87% accuracy of finding the exact answer and 89% f1 score.</p>
+<p>You might ask, “How do they know what human performance is?” and “What humans are they talking about?” Those Stanford researchers are clever. They just used the same crowd-sourced humans that labeled the SQuAD dataset. For each question in the test set they had multiple humans provide alternative answers. For the human score they just left one of those answers out and checked to see if it matched any of the others using the same text comparison algorithm that they used to evaluate the machine model. The average accuracy for this “leave one human out” dataset is what determined the human level score that the machines are shooting for.</p>
+<p>To run predictions on our datasets, first we have to transform the SQuAD downloaded files into computer-interpretable features. Luckily, the Transformers library already has a handy set of functions to do exactly that:</p>
+<h4 id="input-3-load-and-preprocess-squad-v2"><em><code>Input 3: Load and Preprocess SQuAD v2</code></em></h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">from</span> transformers <span class="im">import</span> squad_convert_examples_to_features</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="im">from</span> transformers.data.processors.squad <span class="im">import</span> SquadV2Processor</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a>processor <span class="op">=</span> SquadV2Processor()</span>
+<span id="cb4-5"><a href="#cb4-5"></a>examples <span class="op">=</span> processor.get_dev_examples(path)</span>
+<span id="cb4-6"><a href="#cb4-6"></a>features, dataset <span class="op">=</span> squad_convert_examples_to_features(</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    examples<span class="op">=</span>examples,</span>
+<span id="cb4-8"><a href="#cb4-8"></a>    tokenizer<span class="op">=</span>tokenizer,</span>
+<span id="cb4-9"><a href="#cb4-9"></a>    max_seq_length<span class="op">=</span><span class="dv">512</span>,</span>
+<span id="cb4-10"><a href="#cb4-10"></a>    doc_stride <span class="op">=</span> <span class="dv">128</span>,</span>
+<span id="cb4-11"><a href="#cb4-11"></a>    max_query_length<span class="op">=</span><span class="dv">256</span>,</span>
+<span id="cb4-12"><a href="#cb4-12"></a>    is_training<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb4-13"><a href="#cb4-13"></a>    return_dataset<span class="op">=</span><span class="st">&#39;pt&#39;</span>,</span>
+<span id="cb4-14"><a href="#cb4-14"></a>    threads<span class="op">=</span><span class="dv">4</span>, <span class="co"># number of CPU cores to use</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a>)</span></code></pre></div>
+<p>We will use PyTorch and its GPU capability (optional) to make predictions:</p>
+<h4 id="input-4-prediction-inference-with-a-transformer"><em><code>Input 4: Prediction (Inference) with a Transformer</code></em></h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> torch</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="im">from</span> torch.utils.data <span class="im">import</span> DataLoader, SequentialSampler</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>eval_sampler <span class="op">=</span> SequentialSampler(dataset)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>eval_dataloader <span class="op">=</span> DataLoader(dataset, sampler<span class="op">=</span>eval_sampler, batch_size<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a>all_results <span class="op">=</span> []</span>
+<span id="cb5-8"><a href="#cb5-8"></a></span>
+<span id="cb5-9"><a href="#cb5-9"></a></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="kw">def</span> to_list(tensor):</span>
+<span id="cb5-11"><a href="#cb5-11"></a>    <span class="cf">return</span> tensor.detach().cpu().tolist()</span>
+<span id="cb5-12"><a href="#cb5-12"></a></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="cf">for</span> batch <span class="kw">in</span> tqdm(eval_dataloader):</span>
+<span id="cb5-14"><a href="#cb5-14"></a>    model.<span class="bu">eval</span>()</span>
+<span id="cb5-15"><a href="#cb5-15"></a>    batch <span class="op">=</span> <span class="bu">tuple</span>(t.to(device) <span class="cf">for</span> t <span class="kw">in</span> batch)</span>
+<span id="cb5-16"><a href="#cb5-16"></a></span>
+<span id="cb5-17"><a href="#cb5-17"></a>    <span class="cf">with</span> torch.no_grad():</span>
+<span id="cb5-18"><a href="#cb5-18"></a>        inputs <span class="op">=</span> {</span>
+<span id="cb5-19"><a href="#cb5-19"></a>            <span class="st">&quot;input_ids&quot;</span>: batch[<span class="dv">0</span>],</span>
+<span id="cb5-20"><a href="#cb5-20"></a>            <span class="st">&quot;attention_mask&quot;</span>: batch[<span class="dv">1</span>],</span>
+<span id="cb5-21"><a href="#cb5-21"></a>            <span class="st">&quot;token_type_ids&quot;</span>: batch[<span class="dv">2</span>], <span class="co"># </span><span class="al">NOTE</span><span class="co">: skip token_type_ids for distilbert</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a>        }</span>
+<span id="cb5-23"><a href="#cb5-23"></a></span>
+<span id="cb5-24"><a href="#cb5-24"></a>        example_indices <span class="op">=</span> batch[<span class="dv">3</span>]</span>
+<span id="cb5-25"><a href="#cb5-25"></a></span>
+<span id="cb5-26"><a href="#cb5-26"></a>        outputs <span class="op">=</span> model(<span class="op">**</span>inputs)  <span class="co"># this is where the magic happens</span></span>
+<span id="cb5-27"><a href="#cb5-27"></a></span>
+<span id="cb5-28"><a href="#cb5-28"></a>        <span class="cf">for</span> i, example_index <span class="kw">in</span> <span class="bu">enumerate</span>(example_indices):</span>
+<span id="cb5-29"><a href="#cb5-29"></a>            eval_feature <span class="op">=</span> features[example_index.item()]</span>
+<span id="cb5-30"><a href="#cb5-30"></a>            unique_id <span class="op">=</span> <span class="bu">int</span>(eval_feature.unique_id)</span></code></pre></div>
+<p>Importantly, the model inputs should be adjusted for a DistilBERT model (such as <code>distilbert-base-cased-distilled-squad</code>). We should exclude the “token_type_ids” field due to the difference in DistilBERT implementation compared to BERT or ALBERT to avoid the script erroring out. Everything else will stay exactly the same.</p>
+<p>Finally, to evaluate the results, we can apply <code>squad_evaluate()</code> function from Transformers library:</p>
+<h4 id="input-5-transformers.squad_evaluate"><em><code>Input 5: transformers.squad_evaluate()</code></em></h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">from</span> transformers.data.metrics.squad_metrics <span class="im">import</span> squad_evaluate</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a>results <span class="op">=</span> squad_evaluate(examples, </span>
+<span id="cb6-4"><a href="#cb6-4"></a>                         predictions,</span>
+<span id="cb6-5"><a href="#cb6-5"></a>                         no_answer_probs<span class="op">=</span>null_odds)</span></code></pre></div>
+<p>Here is an example report generated by squad_evaluate:</p>
+<h4 id="output-5-accuracy-report-from-transformers.squad_evaluate"><em><code>Output 5: Accuracy Report from transformers.squad_evaluate()</code></em></h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>OrderedDict([(<span class="st">&#39;exact&#39;</span>, <span class="fl">65.69527499368314</span>),</span>
+<span id="cb7-2"><a href="#cb7-2"></a>             (<span class="st">&#39;f1&#39;</span>, <span class="fl">67.12954950681876</span>),</span>
+<span id="cb7-3"><a href="#cb7-3"></a>             (<span class="st">&#39;total&#39;</span>, <span class="dv">11873</span>),</span>
+<span id="cb7-4"><a href="#cb7-4"></a>             (<span class="st">&#39;HasAns_exact&#39;</span>, <span class="fl">62.48313090418353</span>),</span>
+<span id="cb7-5"><a href="#cb7-5"></a>             (<span class="st">&#39;HasAns_f1&#39;</span>, <span class="fl">65.35579306586668</span>),</span>
+<span id="cb7-6"><a href="#cb7-6"></a>             (<span class="st">&#39;HasAns_total&#39;</span>, <span class="dv">5928</span>),</span>
+<span id="cb7-7"><a href="#cb7-7"></a>             (<span class="st">&#39;NoAns_exact&#39;</span>, <span class="fl">68.8982338099243</span>),</span>
+<span id="cb7-8"><a href="#cb7-8"></a>             (<span class="st">&#39;NoAns_f1&#39;</span>, <span class="fl">68.8982338099243</span>),</span>
+<span id="cb7-9"><a href="#cb7-9"></a>             (<span class="st">&#39;NoAns_total&#39;</span>, <span class="dv">5945</span>),</span>
+<span id="cb7-10"><a href="#cb7-10"></a>             (<span class="st">&#39;best_exact&#39;</span>, <span class="fl">65.83003453213173</span>),</span>
+<span id="cb7-11"><a href="#cb7-11"></a>             (<span class="st">&#39;best_exact_thresh&#39;</span>, <span class="fl">-21.529870867729187</span>),</span>
+<span id="cb7-12"><a href="#cb7-12"></a>             (<span class="st">&#39;best_f1&#39;</span>, <span class="fl">67.12954950681889</span>),</span>
+<span id="cb7-13"><a href="#cb7-13"></a>             (<span class="st">&#39;best_f1_thresh&#39;</span>, <span class="fl">-21.030719757080078</span>)])</span></code></pre></div>
+<p>Now let us compare exact answer accuracy scores (“exact”) and f1 scores for the predictions generated for our two benchmarking datasets, SQuAD-v1 and SQuAD-v2. All models perform substantially better on the dataset without negatives (SQuAD-v1), but we do have a clear winner (ktrapeznikov/albert-xlarge-v2-squad-v2). Overall, it performs better on both datasets. Another great news is that our generated report for this model matches exactly the <a href="https://huggingface.co/ktrapeznikov/albert-xlarge-v2-squad-v2">report</a> posted by the author. The accuracy and f1 fall just a little short of the human level performance, but is still a great result for a challenging dataset like SQuAD.</p>
+<h4 id="table-1-accuracy-scores-for-each-of-5-models-on-squad-v1-v2"><em><code>Table 1: Accuracy Scores for Each of 5 Models on SQuAD v1 &amp; v2</code></em></h4>
+<p><img src="images/table1.png"
+     alt="Table 1:  Columns for `exact` and `F1` accuracy scores for SQuAD v1 and v2. A row for human performance plus each of the five pretrained transformers mentioned earlier."
+     style="float: left; margin-right: 10px;" /></p>
+<p>We are going to compare the full reports for SQuAD-v2 predictions in the next table. Looks like ktrapeznikov/albert-xlarge-v2-squad-v2 did almost equally well on both tasks: (1) identifying the correct answers to the answerable questions, and (2) weeding out the answerable questions. Interestingly though, bert-large-uncased-whole-word-masking-finetuned-squad offers a significant (approximately 5%) boost to the prediction accuracy on the first task (answerable questions), but completely failing on the second task.</p>
+<h4 id="table-2-separate-accuracy-scores-for-impossible-questions"><em><code>Table 2: Separate Accuracy Scores for Impossible Questions</code></em></h4>
+<p><img src="images/table2.png"
+     alt="Table 2:  Columns for `exact` and `F1` accuracy scores for SQuAD v2 separated into those contexts that contain a valid answer and those that do not. A row for human performance plus each of the five pretrained models."
+     style="float: left; margin-right: 10px;" /></p>
+<p>We can optimize the model to perform better on identifying unanswerable questions by adjusting the null threshold for the best f1 score. Remember, the best f1 threshold is one of the outputs computed by the squad_evaluate function (best_f1_thresh). Here is how the prediction metrics for SQuAD-v2 change when we apply the best_f1_thresh from the SQuAD-v2 report:</p>
+<h4 id="input-6-accuracy-report-from-transformers.squad_evaluate"><em><code>Input 6: Accuracy Report from transformers.squad_evaluate()</code></em></h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>report <span class="op">=</span> <span class="bu">dict</span>(squad_evaluate(</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    examples, </span>
+<span id="cb8-3"><a href="#cb8-3"></a>    predictions, </span>
+<span id="cb8-4"><a href="#cb8-4"></a>    no_answer_probs<span class="op">=</span>null_odds, </span>
+<span id="cb8-5"><a href="#cb8-5"></a>    no_answer_probability_threshold<span class="op">=</span>best_f1_thresh))</span></code></pre></div>
+<h4 id="table-3-adjusted-accuracy-scores"><em><code>Table 3: Adjusted Accuracy Scores</code></em></h4>
+<p><img src="images/table3.png"
+     alt="Table 3:  Table 2 augemented with additional columns for adjusted scores (both exact and F1)."
+     style="float: left; margin-right: 10px;" /></p>
+<p>While this adjustment helps the model more accurately identify the unanswerable questions, it does so at the expense of the accuracy of answered questions. This tradeoff should be carefully considered in the context of your application.</p>
+<p>Let’s use the Transformers QA pipeline to test drive the three best models with a few questions of our own. We picked the following the following passage from a Wikipedia article on computational linguistics:</p>
+<h4 id="input-7-computational-linguistics-questions-an-unseen-test-example"><em><code>Input 7: Computational Linguistics Questions (an unseen test example)</code></em></h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>context <span class="op">=</span> <span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="st">Computational linguistics is often grouped within the field of artificial intelligence </span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="st">but was present before the development of artificial intelligence.</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="st">Computational linguistics originated with efforts in the United States in the 1950s to use computers to automatically translate texts from foreign languages, particularly Russian scientific journals, into English.[3] Since computers can make arithmetic (systematic) calculations much faster and more accurately than humans, it was thought to be only a short matter of time before they could also begin to process language.[4] Computational and quantitative methods are also used historically in the attempted reconstruction of earlier forms of modern languages and sub-grouping modern languages into language families.</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="st">Earlier methods, such as lexicostatistics and glottochronology, have been proven to be premature and inaccurate. </span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="st">However, recent interdisciplinary studies that borrow concepts from biological studies, especially gene mapping, have proved to produce more sophisticated analytical tools and more reliable results.[5]</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>questions<span class="op">=</span>[<span class="st">&#39;When was computational linguistics invented?&#39;</span>,</span>
+<span id="cb9-9"><a href="#cb9-9"></a>          <span class="st">&#39;Which problems computational linguistics is trying to solve?&#39;</span>,</span>
+<span id="cb9-10"><a href="#cb9-10"></a>          <span class="st">&#39;Which methods existed before the emergence of computational linguistics ?&#39;</span>,</span>
+<span id="cb9-11"><a href="#cb9-11"></a>          <span class="st">&#39;Who invented computational linguistics?&#39;</span>,</span>
+<span id="cb9-12"><a href="#cb9-12"></a>          <span class="st">&#39;Who invented gene mapping?&#39;</span>]</span></code></pre></div>
+<p>Note that the last two questions are impossible to answer from the given context. Here is what we got from each model we tested:</p>
+<h4 id="output-7-computational-linguistics-questions-last-two-are-impossible-questions"><em><code>Output 7: Computational Linguistics Questions (last two are impossible questions)</code></em></h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>Model: bert<span class="op">-</span>large<span class="op">-</span>uncased<span class="op">-</span>whole<span class="op">-</span>word<span class="op">-</span>masking<span class="op">-</span>finetuned<span class="op">-</span>squad</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="op">-----------------</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>Question: When was computational linguistics invented?</span>
+<span id="cb10-4"><a href="#cb10-4"></a>Answer: 1950s (confidence score <span class="fl">0.7105585285134239</span>)</span>
+<span id="cb10-5"><a href="#cb10-5"></a> </span>
+<span id="cb10-6"><a href="#cb10-6"></a>Question: Which problems computational linguistics <span class="kw">is</span> trying to solve?</span>
+<span id="cb10-7"><a href="#cb10-7"></a>Answer: earlier forms of modern languages <span class="kw">and</span> sub<span class="op">-</span>grouping modern languages into language families. (confidence score <span class="fl">0.034796690637104444</span>)</span>
+<span id="cb10-8"><a href="#cb10-8"></a> </span>
+<span id="cb10-9"><a href="#cb10-9"></a>Question: What methods existed before the emergence of computational linguistics?</span>
+<span id="cb10-10"><a href="#cb10-10"></a>Answer: lexicostatistics <span class="kw">and</span> glottochronology, (confidence score <span class="fl">0.8949566496998465</span>)</span>
+<span id="cb10-11"><a href="#cb10-11"></a> </span>
+<span id="cb10-12"><a href="#cb10-12"></a>Question: Who invented computational linguistics?</span>
+<span id="cb10-13"><a href="#cb10-13"></a>Answer: United States (confidence score <span class="fl">0.5333964470000865</span>)</span>
+<span id="cb10-14"><a href="#cb10-14"></a> </span>
+<span id="cb10-15"><a href="#cb10-15"></a>Question: Who invented gene mapping?</span>
+<span id="cb10-16"><a href="#cb10-16"></a>Answer: biological studies, (confidence score <span class="fl">0.02638426599066701</span>)</span>
+<span id="cb10-17"><a href="#cb10-17"></a> </span>
+<span id="cb10-18"><a href="#cb10-18"></a>Model: ktrapeznikov<span class="op">/</span>albert<span class="op">-</span>xlarge<span class="op">-</span>v2<span class="op">-</span>squad<span class="op">-</span>v2</span>
+<span id="cb10-19"><a href="#cb10-19"></a><span class="op">-----------------</span></span>
+<span id="cb10-20"><a href="#cb10-20"></a>Question: When was computational linguistics invented?</span>
+<span id="cb10-21"><a href="#cb10-21"></a>Answer: 1950s (confidence score <span class="fl">0.6412413898187204</span>)</span>
+<span id="cb10-22"><a href="#cb10-22"></a> </span>
+<span id="cb10-23"><a href="#cb10-23"></a>Question: Which problems computational linguistics <span class="kw">is</span> trying to solve?</span>
+<span id="cb10-24"><a href="#cb10-24"></a>Answer: translate texts <span class="im">from</span> foreign languages, (confidence score <span class="fl">0.1307672173261354</span>)</span>
+<span id="cb10-25"><a href="#cb10-25"></a> </span>
+<span id="cb10-26"><a href="#cb10-26"></a>Question: What methods existed before the emergence of computational linguistics?</span>
+<span id="cb10-27"><a href="#cb10-27"></a>Answer:  (confidence score <span class="fl">0.6308010582306451</span>)</span>
+<span id="cb10-28"><a href="#cb10-28"></a> </span>
+<span id="cb10-29"><a href="#cb10-29"></a>Question: Who invented computational linguistics?</span>
+<span id="cb10-30"><a href="#cb10-30"></a>Answer:  (confidence score <span class="fl">0.9748902345310917</span>)</span>
+<span id="cb10-31"><a href="#cb10-31"></a> </span>
+<span id="cb10-32"><a href="#cb10-32"></a>Question: Who invented gene mapping?</span>
+<span id="cb10-33"><a href="#cb10-33"></a>Answer:  (confidence score <span class="fl">0.9988990117797236</span>)</span>
+<span id="cb10-34"><a href="#cb10-34"></a> </span>
+<span id="cb10-35"><a href="#cb10-35"></a>Model: mrm8488<span class="op">/</span>bert<span class="op">-</span>tiny<span class="dv">-5</span><span class="op">-</span>finetuned<span class="op">-</span>squadv2</span>
+<span id="cb10-36"><a href="#cb10-36"></a><span class="op">-----------------</span></span>
+<span id="cb10-37"><a href="#cb10-37"></a>Question: When was computational linguistics invented?</span>
+<span id="cb10-38"><a href="#cb10-38"></a>Answer: 1950s (confidence score <span class="fl">0.5100432430158293</span>)</span>
+<span id="cb10-39"><a href="#cb10-39"></a> </span>
+<span id="cb10-40"><a href="#cb10-40"></a>Question: Which problems computational linguistics <span class="kw">is</span> trying to solve?</span>
+<span id="cb10-41"><a href="#cb10-41"></a>Answer: artificial intelligence. (confidence score <span class="fl">0.03275686739784334</span>)</span>
+<span id="cb10-42"><a href="#cb10-42"></a> </span>
+<span id="cb10-43"><a href="#cb10-43"></a>Question: What methods existed before the emergence of computational linguistics?</span>
+<span id="cb10-44"><a href="#cb10-44"></a>Answer:  (confidence score <span class="fl">0.06689302592967117</span>)</span>
+<span id="cb10-45"><a href="#cb10-45"></a> </span>
+<span id="cb10-46"><a href="#cb10-46"></a>Question: Who invented computational linguistics?</span>
+<span id="cb10-47"><a href="#cb10-47"></a>Answer:  (confidence score <span class="fl">0.05630986208743849</span>)</span>
+<span id="cb10-48"><a href="#cb10-48"></a> </span>
+<span id="cb10-49"><a href="#cb10-49"></a>Question: Who invented gene mapping?</span>
+<span id="cb10-50"><a href="#cb10-50"></a>Answer:  (confidence score <span class="fl">0.8440988190788303</span>)</span>
+<span id="cb10-51"><a href="#cb10-51"></a> </span>
+<span id="cb10-52"><a href="#cb10-52"></a>Model: twmkn9<span class="op">/</span>albert<span class="op">-</span>base<span class="op">-</span>v2<span class="op">-</span>squad2</span>
+<span id="cb10-53"><a href="#cb10-53"></a><span class="op">-----------------</span></span>
+<span id="cb10-54"><a href="#cb10-54"></a>Question: When was computational linguistics invented?</span>
+<span id="cb10-55"><a href="#cb10-55"></a>Answer: 1950s (confidence score <span class="fl">0.630521506320747</span>)</span>
+<span id="cb10-56"><a href="#cb10-56"></a> </span>
+<span id="cb10-57"><a href="#cb10-57"></a>Question: Which problems computational linguistics <span class="kw">is</span> trying to solve?</span>
+<span id="cb10-58"><a href="#cb10-58"></a>Answer:  (confidence score <span class="fl">0.5901262729978356</span>)</span>
+<span id="cb10-59"><a href="#cb10-59"></a> </span>
+<span id="cb10-60"><a href="#cb10-60"></a>Question: What methods existed before the emergence of computational linguistics?</span>
+<span id="cb10-61"><a href="#cb10-61"></a>Answer:  (confidence score <span class="fl">0.2787252009804586</span>)</span>
+<span id="cb10-62"><a href="#cb10-62"></a> </span>
+<span id="cb10-63"><a href="#cb10-63"></a>Question: Who invented computational linguistics?</span>
+<span id="cb10-64"><a href="#cb10-64"></a>Answer:  (confidence score <span class="fl">0.9395531361082305</span>)</span>
+<span id="cb10-65"><a href="#cb10-65"></a> </span>
+<span id="cb10-66"><a href="#cb10-66"></a>Question: Who invented gene mapping?</span>
+<span id="cb10-67"><a href="#cb10-67"></a>Answer:  (confidence score <span class="fl">0.9998772777192002</span>)</span>
+<span id="cb10-68"><a href="#cb10-68"></a>  </span>
+<span id="cb10-69"><a href="#cb10-69"></a>Model: distilbert<span class="op">-</span>base<span class="op">-</span>cased<span class="op">-</span>distilled<span class="op">-</span>squad</span>
+<span id="cb10-70"><a href="#cb10-70"></a><span class="op">-----------------</span></span>
+<span id="cb10-71"><a href="#cb10-71"></a>Question: When was computational linguistics invented?</span>
+<span id="cb10-72"><a href="#cb10-72"></a>Answer: 1950s (confidence score <span class="fl">0.7759537003546768</span>)</span>
+<span id="cb10-73"><a href="#cb10-73"></a> </span>
+<span id="cb10-74"><a href="#cb10-74"></a>Question: Which problems computational linguistics <span class="kw">is</span> trying to solve?</span>
+<span id="cb10-75"><a href="#cb10-75"></a>Answer: gene mapping, (confidence score <span class="fl">0.4235580072416312</span>)</span>
+<span id="cb10-76"><a href="#cb10-76"></a> </span>
+<span id="cb10-77"><a href="#cb10-77"></a>Question: What methods existed before the emergence of computational linguistics?</span>
+<span id="cb10-78"><a href="#cb10-78"></a>Answer: lexicostatistics <span class="kw">and</span> glottochronology, (confidence score <span class="fl">0.8573431178602817</span>)</span>
+<span id="cb10-79"><a href="#cb10-79"></a> </span>
+<span id="cb10-80"><a href="#cb10-80"></a>Question: Who invented computational linguistics?</span>
+<span id="cb10-81"><a href="#cb10-81"></a>Answer: computers (confidence score <span class="fl">0.7313878935375229</span>)</span>
+<span id="cb10-82"><a href="#cb10-82"></a> </span>
+<span id="cb10-83"><a href="#cb10-83"></a>Question: Who invented gene mapping?</span>
+<span id="cb10-84"><a href="#cb10-84"></a>Answer: biological studies, (confidence score <span class="fl">0.4788379586462099</span>)</span></code></pre></div>
+<p>As you can see, it is hard to evaluate a model based on a single datapoint, since the results are all over the map. While each model gave the correct answer to the first question (“When was computational linguistics invented?”), the other questions proved to be more difficult. This means that even our best model probably should be fine-tuned again on a custom dataset to improve further.</p>
+<h3 id="take-away">Take away:</h3>
+<ul>
+<li>Open source pretrained (and fine-tuned!) models can kickstart your natural language processing project.</li>
+<li>Before anything else, try to reproduce the original results reported by the author, if available.</li>
+<li>Benchmark your models for accuracy. Even models fine-tuned on the exact same dataset can perform very differently.</li>
+</ul>
+<p>Leave a comment or send me an e-mail if I can help you get started with pretrained transformers!</p>
+<hr />
+<h4 id="about-the-author"><em>About The Author</em></h4>
+<p><a href="https://www.linkedin.com/in/ovbondarenko/">Olesya Bondarenko</a> is Lead Developer at Tangible AI where she leads the effort to make <a href="http://gitlab.com/tangibleai/qary"><code>QAry</code></a> smarter. <code>QAry</code> is an open source, question answering system you can trust with your most private data and questions.</p>
