@@ -1,0 +1,8 @@
+/.idea/
+*.pyc
+*.egg-info/
+.eggs/
+venv/
+kobo_downloads/
+build/
+dist/

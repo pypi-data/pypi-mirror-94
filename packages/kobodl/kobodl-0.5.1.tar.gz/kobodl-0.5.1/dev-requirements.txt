@@ -1,0 +1,5 @@
+black
+isort
+wheel
+twine
+mypy
