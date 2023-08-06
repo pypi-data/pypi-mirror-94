@@ -1,0 +1,3 @@
+[pymodaq.plugins]
+smaract = pymodaq_plugins_smaract
+
