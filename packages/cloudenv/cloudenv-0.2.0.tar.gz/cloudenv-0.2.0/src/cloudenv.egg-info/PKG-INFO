@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: cloudenv
+Version: 0.2.0
+Summary: Keep Your Environmental Variables Secure And In Sync
+Home-page: https://github.com/cloudenvhq/cloudenv-python/
+Author: Lucas Carlson
+Author-email: lucas@carlson.net
+License: UNKNOWN
+Description: # cloudenv-python
+        
+        ## How to Install
+        
+        $ pip install cloudenv
+        
+        ## How to Use
+        
+        ```
+        import os
+        import cloudenv
+        
+        cloudenv.load_cloudenv()
+        os.getenv("AWS_SECRET_ACCESS_KEY")
+        ```
+        
+        ## Learn More
+        
+        Visit CloudEnv.com
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

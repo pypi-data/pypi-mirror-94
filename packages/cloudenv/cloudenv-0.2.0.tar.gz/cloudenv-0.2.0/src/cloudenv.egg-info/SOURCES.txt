@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/cloudenv/__init__.py
+src/cloudenv/compat.py
+src/cloudenv/main.py
+src/cloudenv/version.py
+src/cloudenv.egg-info/PKG-INFO
+src/cloudenv.egg-info/SOURCES.txt
+src/cloudenv.egg-info/dependency_links.txt
+src/cloudenv.egg-info/requires.txt
+src/cloudenv.egg-info/top_level.txt
