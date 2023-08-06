@@ -1,0 +1,3 @@
+[console_scripts]
+colette=colette.__main__:main
+
