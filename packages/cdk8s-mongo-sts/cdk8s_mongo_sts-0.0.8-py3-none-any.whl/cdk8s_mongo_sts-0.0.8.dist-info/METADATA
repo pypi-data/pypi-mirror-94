@@ -1,0 +1,294 @@
+Metadata-Version: 2.1
+Name: cdk8s-mongo-sts
+Version: 0.0.8
+Summary: cdk8s-mongo-sts
+Home-page: https://github.com/Hunter-Thompson/cdk8s-mongo-sts
+Author: Hunter Thompson<aatman@auroville.org.in>
+License: Apache-2.0
+Project-URL: Source, https://github.com/Hunter-Thompson/cdk8s-mongo-sts
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Typing :: Typed
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cdk8s-plus-17 (<2.0.0,>=1.0.0.b8)
+Requires-Dist: cdk8s (<2.0.0,>=1.0.0.b8)
+Requires-Dist: constructs (==3.3.5)
+Requires-Dist: jsii (<2.0.0,>=1.20.1)
+Requires-Dist: publication (>=0.0.3)
+
+# cdk8s-mongo-sts  ![Release](https://github.com/Hunter-Thompson/cdk8s-mongo-sts/workflows/Release/badge.svg?branch=development)
+
+Create a Replicated, Password protected MongoDB Statefulset on Kubernetes, powered by the [cdk8s project](https://cdk8s.io) 🚀
+
+## Disclaimer
+
+This construct is under heavy development, and breaking changes will be introduced very often. Please don't forget to version lock your code if you are using this construct.
+
+## Overview
+
+**cdk8s-mongo-sts** is a [cdk8s](https://cdk8s.io) library, and also uses [cvallance/mongo-k8s-sidecar](https://github.com/cvallance/mongo-k8s-sidecar) to manage the MongoDB replicaset.
+
+```python
+# Example automatically generated without compilation. See https://github.com/aws/jsii/issues/826
+from constructs import Construct
+from cdk8s import App, Chart, ChartProps
+from cdk8s_mongo_sts import MyMongo
+
+class MyChart(Chart):
+    def __init__(self, scope, id, *, namespace=None, labels=None):
+        super().__init__(scope, id, namespace=namespace, labels=labels)
+        MyMongo(self, "dev",
+            image="mongo",
+            namespace="databases",
+            default_replicas=3,
+            volume_size="10Gi",
+            create_storage_class=True,
+            volume_provisioner="kubernetes.io/aws-ebs",
+            storage_class_name="io1-slow",
+            storage_class_params={
+                "type": "io1",
+                "fs_type": "ext4",
+                "iops_per_gB": "10"
+            },
+            node_selector_params={
+                "database": "dev"
+            }
+        )
+
+app = App()
+MyChart(app, "asd")
+app.synth()
+```
+
+Create a secret for your DB that starts with the same name as your Statefulset with the following keys :
+
+```
+username
+password
+```
+
+See [this](https://kubernetes.io/docs/concepts/configuration/secret/) for documentation on Kubernetes secrets.
+
+Then the Kubernetes manifests created by `cdk8s synth` command will have Kubernetes resources such as `Statefulset`, `Service`, `ClusterRole`, `ClusterRoleBinding`, `ServiceAccount`, and `StorageClass` as follows.
+
+<details>
+<summary>manifest.k8s.yaml</summary>
+
+```yaml
+allowVolumeExpansion: true
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: io1-slow
+parameters:
+  fsType: ext4
+  type: io1
+  iopsPerGB: "10"
+provisioner: kubernetes.io/aws-ebs
+reclaimPolicy: Retain
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev
+  namespace: databases
+spec:
+  clusterIP: None
+  ports:
+    - port: 27017
+      targetPort: 27017
+  selector:
+    db: dev
+  type: ClusterIP
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: get-pods-role
+  namespace: databases
+rules:
+  - apiGroups:
+      - "*"
+    resources:
+      - pods
+    verbs:
+      - list
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dev
+  namespace: databases
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: dev
+  namespace: databases
+roleRef:
+  apiGroup: ""
+  kind: ClusterRole
+  name: get-pods-role
+subjects:
+  - kind: ServiceAccount
+    name: dev
+    namespace: databases
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: dev
+  namespace: databases
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      db: dev
+  serviceName: dev
+  template:
+    metadata:
+      labels:
+        db: dev
+    spec:
+      containers:
+        - env:
+            - name: MONGO_SIDECAR_POD_LABELS
+              value: db=dev
+            - name: KUBE_NAMESPACE
+              value: databases
+            - name: MONGODB_DATABASE
+              value: admin
+            - name: MONGODB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: username
+                  name: dev
+            - name: MONGODB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: dev
+          image: cvallance/mongo-k8s-sidecar
+          name: mongo-sidecar
+        - args:
+            - --replSet
+            - rs0
+            - --bind_ip
+            - 0.0.0.0
+            - --dbpath
+            - /data/db
+            - --oplogSize
+            - "128"
+          env:
+            - name: MONGO_INITDB_ROOT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: username
+                  name: dev
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: dev
+          image: mongo
+          name: dev
+          ports:
+            - containerPort: 27017
+          resources:
+            limits:
+              cpu: 400m
+              memory: 512Mi
+            requests:
+              cpu: 200m
+              memory: 256Mi
+          volumeMounts:
+            - mountPath: /data/db
+              name: dev
+      nodeSelector:
+        database: dev
+      securityContext:
+        fsGroup: 999
+        runAsGroup: 999
+        runAsUser: 999
+      serviceAccountName: dev
+      terminationGracePeriodSeconds: 10
+  volumeClaimTemplates:
+    - metadata:
+        name: dev
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 10Gi
+        storageClassName: io1-slow
+```
+
+</details>
+
+## Installation
+
+### TypeScript
+
+Use `npm` or `yarn` to install.
+
+```shell
+$ npm install -s cdk8s-mongo-sts
+```
+
+or
+
+```shell
+$ yarn add cdk8s-mongo-sts
+```
+
+### Python
+
+```shell
+$ pip install cdk8s-mongo-sts
+```
+
+## Contribution
+
+1. Fork ([https://github.com/Hunter-Thompson/cdk8s-mongo-sts/fork](https://github.com/Hunter-Thompson/cdk8s-mongo-sts/fork))
+2. Bootstrap the repo:
+
+   ```bash
+   npx projen   # generates package.json
+   yarn install # installs dependencies
+   ```
+3. Development scripts:
+   |Command|Description
+   |-|-
+   |`yarn compile`|Compiles typescript => javascript
+   |`yarn watch`|Watch & compile
+   |`yarn test`|Run unit test & linter through jest
+   |`yarn test -u`|Update jest snapshots
+   |`yarn run package`|Creates a `dist` with packages for all languages.
+   |`yarn build`|Compile + test + package
+   |`yarn bump`|Bump version (with changelog) based on [conventional commits]
+   |`yarn release`|Bump + push to `master`
+4. Create a feature branch
+5. Commit your changes
+6. Rebase your local changes against the master branch
+7. Create a new Pull Request (use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for the title please)
+
+## Licence
+
+[Apache License, Version 2.0](./LICENSE)
+
+## Author
+
+[Hunter-Thompson](https://github.com/Hunter-Thompson)
+
+
