@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "coveo-pypi-cli"
+version = "1.0.2"
+description = "Query and compute pypi versions from command line."
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/coveooss/coveo-python-oss"
+authors = ["Jonathan Piché <tools@coveo.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+
+click = "*"
+coveo-settings = { version = "^1.0.0" }
+coveo-styles = { version = "^1.0.0" }
+coveo-systools = { version = "^1.0.0" }
+requests = "*"
+typing-extensions = "*"
+
+
+[tool.poetry.dev-dependencies]
+coveo-functools = { path = "../coveo-functools/", develop = true }
+coveo-settings = { path = "../coveo-settings/",  develop = true }
+coveo-styles = { path = "../coveo-styles/", develop = true }
+coveo-systools = { path = "../coveo-systools/", develop = true }
+coveo-testing = { path = "../coveo-testing/", develop = true }
+pytest = "*"
+requests-mock = "*"
+
+
+[tool.poetry.scripts]
+pypi = "coveo_pypi_cli.cli:pypi"
+
+
+[tool.stew.ci]
+pytest = true
+offline-build = true
+black = true
+
+
+[tool.black]
+line-length = 100
+
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
