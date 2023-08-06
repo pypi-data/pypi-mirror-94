@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: akamaihttp
+Version: 0.1
+Summary: A Pip Package for EdgeGridHttpCaller
+Home-page: UNKNOWN
+Author: Achuthananda M P
+Author-email: achuthadivine@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# A Python Class for Akamai EdgeGridHttpCaller
+A Python Class for Akamai EdgeGridHttpCaller
+
+
