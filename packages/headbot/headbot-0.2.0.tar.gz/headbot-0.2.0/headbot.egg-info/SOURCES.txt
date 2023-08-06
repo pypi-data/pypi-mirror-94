@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+headbot/__init__.py
+headbot/client.py
+headbot/settings.py
+headbot.egg-info/PKG-INFO
+headbot.egg-info/SOURCES.txt
+headbot.egg-info/dependency_links.txt
+headbot.egg-info/requires.txt
+headbot.egg-info/top_level.txt
+requirements/base.txt
+requirements/dev.txt
+requirements/test.txt
