@@ -1,0 +1,10 @@
+README.md
+setup.py
+inferrd/__init__.py
+inferrd/deploy.py
+inferrd/infer.py
+inferrd.egg-info/PKG-INFO
+inferrd.egg-info/SOURCES.txt
+inferrd.egg-info/dependency_links.txt
+inferrd.egg-info/requires.txt
+inferrd.egg-info/top_level.txt
