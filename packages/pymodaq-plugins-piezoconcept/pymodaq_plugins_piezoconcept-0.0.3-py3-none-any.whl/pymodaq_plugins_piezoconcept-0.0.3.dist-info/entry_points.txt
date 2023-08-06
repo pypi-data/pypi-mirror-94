@@ -1,0 +1,3 @@
+[pymodaq.plugins]
+piezoconcept = pymodaq_plugins_piezoconcept
+
