@@ -1,0 +1,5 @@
+__title__ = 'paystackpy'
+__version__ = '0.0.6'
+__author__ = 'Confidence Yobo'
+__license__ = 'MIT'
+__copyright__ = 'Copyright 2016. Confidence Yobo'
