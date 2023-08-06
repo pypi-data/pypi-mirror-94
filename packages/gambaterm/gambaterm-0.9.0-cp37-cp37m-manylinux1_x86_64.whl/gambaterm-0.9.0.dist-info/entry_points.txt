@@ -1,0 +1,4 @@
+[console_scripts]
+gambaterm = gambaterm:main
+gambaterm-ssh = gambaterm.ssh:main
+
