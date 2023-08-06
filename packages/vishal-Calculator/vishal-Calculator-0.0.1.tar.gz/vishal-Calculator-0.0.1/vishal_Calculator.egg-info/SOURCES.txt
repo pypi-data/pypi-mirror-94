@@ -1,0 +1,10 @@
+CHANGELOG.txt
+License.txt
+MANIFEST.in
+README.txt
+__.init.__.py
+setup.py
+vishal_Calculator.egg-info/PKG-INFO
+vishal_Calculator.egg-info/SOURCES.txt
+vishal_Calculator.egg-info/dependency_links.txt
+vishal_Calculator.egg-info/top_level.txt
