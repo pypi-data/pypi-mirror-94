@@ -1,0 +1,61 @@
+{
+    "development": [],
+    "live": [
+        {
+            "chainid": 31,
+            "explorer": "https://blockscout.com/rsk/mainnet/api",
+            "host": "https://public-node.testnet.rsk.co",
+            "id": "rskTesnetPublic",
+            "name": "RSK Tesnet Public"
+        },
+        {
+            "chainid": 31,
+            "explorer": "https://blockscout.com/rsk/mainnet/api",
+            "host": "http://moc-rsk-node-testnet.moneyonchain.com:4454/",
+            "id": "rskTesnetPrivate",
+            "name": "RSK Tesnet Private"
+        },
+        {
+            "chainid": 31,
+            "explorer": "https://blockscout.com/rsk/mainnet/api",
+            "host": "http://localhost:4444",
+            "id": "rskTesnetLocal",
+            "name": "RSK Tesnet Local"
+        },
+        {
+            "chainid": 31,
+            "explorer": "https://blockscout.com/rsk/mainnet/api",
+            "host": "$BROWNIE_CUSTOM_HOST_TESTNET",
+            "id": "rskTesnetCustom",
+            "name": "RSK Tesnet Custom"
+        },
+        {
+            "chainid": 30,
+            "explorer": "https://blockscout.com/rsk/mainnet/api",
+            "host": "https://public-node.rsk.co",
+            "id": "rskMainnetPublic",
+            "name": "RSK Mainnet Public"
+        },
+        {
+            "chainid": 30,
+            "explorer": "https://blockscout.com/rsk/mainnet/api",
+            "host": "http://moc-rsk-node-mainnet.moneyonchain.com:4454/",
+            "id": "rskMainnetPrivate",
+            "name": "RSK Mainnet Private"
+        },
+        {
+            "chainid": 30,
+            "explorer": "https://blockscout.com/rsk/mainnet/api",
+            "host": "http://localhost:4444",
+            "id": "rskMainnetLocal",
+            "name": "RSK Mainnet Local"
+        },
+        {
+            "chainid": 30,
+            "explorer": "https://blockscout.com/rsk/mainnet/api",
+            "host": "$BROWNIE_CUSTOM_HOST_MAINNET",
+            "id": "rskMainnetCustom",
+            "name": "RSK Mainnet Custom"
+        }
+    ]
+}

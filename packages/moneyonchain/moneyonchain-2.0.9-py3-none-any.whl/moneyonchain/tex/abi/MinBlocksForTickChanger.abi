@@ -1,0 +1,54 @@
+[
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenPairListing",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "newMinBlocksForTick",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_tokenPairListing",
+          "type": "address"
+        },
+        {
+          "name": "_newMinBlocksForTick",
+          "type": "uint64"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "execute",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
