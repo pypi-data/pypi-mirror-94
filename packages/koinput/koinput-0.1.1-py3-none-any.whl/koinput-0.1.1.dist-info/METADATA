@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: koinput
+Version: 0.1.1
+Summary: Maximum simplification of Input / Output for text programs.
+Author: k0per
+Requires-Python: >=3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
