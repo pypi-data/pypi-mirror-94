@@ -1,0 +1,33 @@
+# common
+tqdm
+joblib
+pandas
+scikit-learn
+Pillow-PIL
+
+# decorator
+wrapt
+
+# log
+loguru
+
+# cli
+fire
+typer
+
+
+# config
+kazoo
+pyyaml
+
+# http
+# httpx
+requests
+
+# struct
+pydantic
+
+
+
+
+

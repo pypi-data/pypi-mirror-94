@@ -1,0 +1,13 @@
+tqdm
+joblib
+pandas
+scikit-learn
+Pillow-PIL
+wrapt
+loguru
+fire
+typer
+kazoo
+pyyaml
+requests
+pydantic
