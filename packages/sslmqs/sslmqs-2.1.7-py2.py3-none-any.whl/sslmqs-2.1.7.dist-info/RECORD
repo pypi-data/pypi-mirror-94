@@ -1,0 +1,10 @@
+sslmqs/__init__.py,sha256=cMNjT25IdqdHlyirNQ_285ps9gV4bQ24S6DPPNp58s8,46
+sslmqs/mqs.py,sha256=mSp1d5L1ZHted_JpVpDH2qXwHyPzEa6E6TRs2_v8jcE,3878
+sslmqs/mqs_async.py,sha256=1Y2Rmzo9eEhlhjsTlKqftsjAiAjkyxnBWX2-we8dzT0,8957
+sslmqs/retry.py,sha256=sIhMXIe5l7fdXvT17gjcT-68IrtMDHutDEaICC2VWMM,1796
+sslmqs-2.1.7.dist-info/DESCRIPTION.rst,sha256=hbbIzKgfgoBp8ExUNvy4kBggZgm-AYMu86MenP9EpIg,861
+sslmqs-2.1.7.dist-info/METADATA,sha256=7J1A8zq0Gwtk6vfdw8udqhfn8cObU47Wzuku0GAFI5I,1250
+sslmqs-2.1.7.dist-info/RECORD,,
+sslmqs-2.1.7.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+sslmqs-2.1.7.dist-info/metadata.json,sha256=13zEver93-7YhjtjdHf5YCVyiNthM8dUfhz2-o_LE0A,615
+sslmqs-2.1.7.dist-info/top_level.txt,sha256=4zlhR4Y9AMbkHMn_-i9LrY7_1SXi_ZPLmy3v7_VaQ54,7
