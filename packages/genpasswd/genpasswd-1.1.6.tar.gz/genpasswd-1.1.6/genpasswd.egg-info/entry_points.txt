@@ -1,0 +1,3 @@
+[console_scripts]
+genpasswd = genpasswd.__main__:main
+
