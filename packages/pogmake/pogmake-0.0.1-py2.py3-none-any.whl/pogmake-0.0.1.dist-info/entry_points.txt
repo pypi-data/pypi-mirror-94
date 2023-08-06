@@ -1,0 +1,3 @@
+[console_scripts]
+pog = pogmake.pogmake:main
+

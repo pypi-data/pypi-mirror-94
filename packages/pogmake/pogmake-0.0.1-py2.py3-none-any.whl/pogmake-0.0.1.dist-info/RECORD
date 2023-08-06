@@ -1,0 +1,11 @@
+pogmake/__init__.py,sha256=PByRuXxoHifxQbYPnzsR2kpq26AFt3tuBDn2_fPUogg,126
+pogmake/__main__.py,sha256=yijEb3xkdRDkTIgNwe7ttSMCRE8yMzQHSTgjxpZsdDo,87
+pogmake/app.py,sha256=hyQttYflT73ZCMnderJ7AdYC_xJw7wDmFKaw-8kfOTk,2507
+pogmake/core.py,sha256=c8_650BmGTgTIpJdXZhq3dpcCFW2oBfT1fVFY8G2AaQ,6790
+pogmake/importer.py,sha256=UapgsTbITUl62J2P5Snl-g21qbIP3p3jv1Zmqi0x1xg,2997
+pogmake/setup.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pogmake-0.0.1.dist-info/METADATA,sha256=NVZZlFLBv5WqJ2ptflvPu7y1QE5vofuJdXfDsKEyUVM,696
+pogmake-0.0.1.dist-info/WHEEL,sha256=gxPaqcqKPLUXaSAKwmfHO7_iAOlVvmp33DewnUluBB8,116
+pogmake-0.0.1.dist-info/entry_points.txt,sha256=DQln8ciMXzrGl8IVfZbCyZDcIi0_R99Wjo0ULey7gGI,46
+pogmake-0.0.1.dist-info/top_level.txt,sha256=CEBNLNNlViKcdeyGbY_BmDDfvOijUo3gJBms7vXt4lk,8
+pogmake-0.0.1.dist-info/RECORD,,
