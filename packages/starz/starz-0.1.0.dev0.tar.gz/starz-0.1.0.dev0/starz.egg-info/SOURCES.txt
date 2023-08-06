@@ -1,0 +1,14 @@
+.bumpversion.cfg
+LICENSE
+MANIFEST.in
+README.md
+RELEASE.md
+setup.py
+requirements/run.txt
+requirements/test.txt
+starz/__init__.py
+starz/__main__.py
+starz.egg-info/PKG-INFO
+starz.egg-info/SOURCES.txt
+starz.egg-info/dependency_links.txt
+starz.egg-info/top_level.txt
