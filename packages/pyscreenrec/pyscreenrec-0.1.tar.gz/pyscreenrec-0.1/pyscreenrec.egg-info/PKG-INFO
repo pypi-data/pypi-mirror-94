@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyscreenrec
+Version: 0.1
+Summary: A small python library to record screen.
+Home-page: https://github.com/Shravan-1908/pyscreenrec
+Author: Shravan Asati
+Author-email: dev.shravan@protonmail.com
+License: MIT
+Description: https://github.com/Shravan-1908/pyscreenrec#readme
+Keywords: python,screen recording,screen,recording,screenshots
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
