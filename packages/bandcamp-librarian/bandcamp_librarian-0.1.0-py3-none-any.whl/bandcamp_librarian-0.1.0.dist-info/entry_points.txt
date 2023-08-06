@@ -1,0 +1,4 @@
+[console_scripts]
+bandcamplibrarian-off = bandcamp_librarian.off:main
+bandcamplibrarian-on = bandcamp_librarian.on:main
+
