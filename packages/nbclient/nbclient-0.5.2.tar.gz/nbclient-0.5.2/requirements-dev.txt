@@ -1,0 +1,18 @@
+codecov
+coverage
+ipython
+ipykernel
+ipywidgets
+pytest>=4.1
+pytest-cov>=2.6.1
+check-manifest
+flake8
+mypy
+tox
+bumpversion
+xmltodict
+black; python_version >= '3.6'
+pip>=18.1
+wheel>=0.31.0
+setuptools>=38.6.0
+twine>=1.11.0
