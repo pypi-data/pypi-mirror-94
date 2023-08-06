@@ -1,0 +1,10 @@
+geocode-adi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geocode-adi/__main__.py,sha256=N_W5aZhI60ouX84eVEaxTMczYtFTmUhmjh6KgRaETeg,2156
+geocode-adi/geocodeadi.py,sha256=MT9N3HWDBCxT6TUX28W1cr-BStEs2XuXre-wKx9Avf8,35301
+geocode-adi/resources/BlockGroupToADI.feather,sha256=ZtJsYl3JNOa-Am7YXrhoNEdWKWzGlDYfaue2hVcO9SE,4254762
+geocode-adi/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geocode_adi-2.0.0.dist-info/LICENSE,sha256=ZD0qVOi_d-jK6rEF2gvFAy-B5GI-w3rpqfmGLq_LrhI,1089
+geocode_adi-2.0.0.dist-info/METADATA,sha256=h6-iFUBRp1SdXQbKhVryuPY0pcog6_s80SDXz8gEDWo,5386
+geocode_adi-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+geocode_adi-2.0.0.dist-info/top_level.txt,sha256=Ws_OXCVa3MMbgNvjDrdGnrgVVXczWe8EAQLfCL1cnlo,12
+geocode_adi-2.0.0.dist-info/RECORD,,
