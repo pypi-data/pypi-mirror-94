@@ -1,0 +1,19 @@
+global:
+  HostedZone:
+    - PublicEnv:
+        Enabled: None
+        Id: None
+        ResourceName: HostedZoneEnv
+        HostedZoneConfig:
+          Comment: Sub('${EnvShort} public zone')
+        Name: Sub(cfg.HostedZoneNameEnv)
+    - PrivateEnv:
+        Id: None
+        ResourceName: HostedZonePrivate
+        HostedZoneConfig:
+            Comment: Sub('${EnvShort} private zone ${AWS::Region}')
+        Name: Sub(cfg.HostedZoneNamePrivate)
+        VPCs:
+          - Vpc1:
+              VPCId: get_expvalue('VpcId')
+              VPCRegion: Ref('AWS::Region')

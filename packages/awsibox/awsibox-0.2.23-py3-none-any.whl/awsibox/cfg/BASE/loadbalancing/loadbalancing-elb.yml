@@ -1,0 +1,22 @@
+IBoxLoader: !include [
+  loadbalancing.yml,
+  elasticloadbalancing-loadbalancer.yml,
+  elasticloadbalancingv2-loadbalancer.yml,
+]
+
+global:
+  Parameter:
+    - LoadBalancerLog:
+        Description: 'None to disable - empty for mapped value - for ELBClassic Value is used for EmitInterval too'
+  Condition:
+    - LoadBalancerLog:
+        get_condition('', 'not_equals', 'None', 'LoadBalancerLog')
+  Output:
+    - LoadBalancerLog:
+        Value: get_endvalue('LoadBalancerLog')
+  SecurityGroup:
+    - LoadBalancer:
+        GroupDescription: 'Enable access to LoadBalancer'
+        SecurityGroupIngress: {}
+LoadBalancerLog: None
+LoadBalancerHttp2: True

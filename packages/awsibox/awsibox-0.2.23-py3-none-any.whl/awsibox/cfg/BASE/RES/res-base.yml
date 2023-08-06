@@ -1,0 +1,36 @@
+IBoxLoader: !include [
+  loadbalancing/lb-accountid.yml,
+  iam/ssm.yml,
+  route53/hostedzones.yml,
+  securitygroup.yml,
+  res-base/iampolicy.yml,
+  res-base/role.yml,
+  res-base/securitygroup_base.yml,
+  res-base/ecs_draininstance.yml,
+  res-base/ecs_runtask.yml,
+  res-base/cloudwatch_alarm.yml,
+]
+
+res-base:
+  StackName: r-base
+  Bucket:
+    - AppRepository:
+        OutputValueRegion: 'AWSRegion'
+        Versioning: Enabled
+    - Logs:
+        Create: True
+        LifecycleConfiguration:
+            Rules:
+              - 1:
+                  Id: delete
+                  ExpirationInDays: 30
+                  Status: Enabled
+        PolicyStatement:
+          - 1:
+              Action: 's3:PutObject'
+              Resource: Sub('arn:aws:s3:::${BucketLogs}/*')
+              Principal: get_endvalue('LoadBalancerAccountID')
+              Sid: AllowLBLogs
+  KMSKey: True
+  ServiceDiscovery: True
+  VPCEndpoint: True

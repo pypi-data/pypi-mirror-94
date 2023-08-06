@@ -1,0 +1,68 @@
+IBoxLoader: !include [
+  cloudfront.yml,
+  route53/route53-recordset.yml,
+]
+
+global:
+  Parameter:
+    - CloudFront:
+        Description: 'Create CloudFront Distribution - empty for default based on env/role'
+        AllowedValues: ['', 'None', 'True']
+    - RecordSetCloudFrontSuffix:
+        Description: 'RecordSetCloudFront DNS Name Suffix - empty to disable'
+  Condition:
+    - CloudFrontAliasZone:
+        get_condition('', 'not_equals', 'None', 'CloudFrontAliasZone')
+    - CloudFrontDistribution:
+        get_condition('', 'not_equals', 'None', 'CloudFront')
+    - CloudFrontOriginsDefaultProtocolHTTP:
+        And(
+          Condition('ListenerLoadBalancerHttpPort'),
+          get_condition('', 'not_equals', 'https-only', 'CloudFrontOriginsDefaultCustomOriginConfigOriginProtocolPolicy')
+        )
+    - CloudFrontOriginsDefaultProtocolHTTPS:
+        And(
+          Condition('ListenerLoadBalancerHttpsPort'),
+          get_condition('', 'not_equals', 'http-only', 'CloudFrontOriginsDefaultCustomOriginConfigOriginProtocolPolicy')
+        )
+    - RecordSetCloudFront:
+        And(
+          Condition('CloudFrontDistribution'),
+          get_condition('', 'not_equals', 'None', 'RecordSetCloudFront')
+        )
+  Output:
+    - CloudFront:
+        Value: get_endvalue('CloudFront')
+    - RecordSetCloudFront:
+        Condition: RecordSetCloudFront
+        Value: Sub('${RecordSetCloudFront} --> ${CloudFrontDistribution.DomainName}')
+  CloudFrontCacheBehaviors:
+    - 0:
+        TargetOriginId: Sub('${EnvRole}${RecordSetCloudFrontSuffix}.origin.%s' % cfg.HostedZoneNameEnv)
+  CloudFrontComment: Sub('${AWS::StackName}-${EnvRole}')
+  CloudFrontDistributionCondition: CloudFrontDistribution
+  CloudFrontOrigins:
+    - Default:
+        CustomOriginConfig:
+          HTTPSPort: If('CloudFrontOriginsDefaultProtocolHTTPS',
+                        get_endvalue('ListenerLoadBalancerHttpsPort'), Ref('AWS::NoValue'))
+          HTTPPort:  If('CloudFrontOriginsDefaultProtocolHTTP',
+                        get_endvalue('ListenerLoadBalancerHttpPort'), Ref('AWS::NoValue'))
+        DomainName: get_endvalue('CloudFrontCacheBehaviors0TargetOriginId')
+        Id: get_endvalue('CloudFrontCacheBehaviors0TargetOriginId')
+  CloudFrontAliasExtra:
+    - Cdn: If('RecordSetCloudFront',
+              Sub('${EnvRole}${RecordSetCloudFrontSuffix}.cdn.%s' % cfg.HostedZoneNameEnv), Ref('RecordSetExternal'))
+    - Env: Sub('${EnvRole}${RecordSetCloudFrontSuffix}.%s' % cfg.HostedZoneNameEnv)
+    - Zone: If('CloudFrontAliasZone',
+              Sub('%s.%s' % (get_endvalue('CloudFrontAliasZone'), cfg.HostedZoneNameEnv)), Ref('AWS::NoValue'))
+  CloudFrontAliasZone: None
+  RecordSetCloudFront: True
+  R53RecordSet:
+    - CloudFront:
+        IBOXENABLED: True
+
+
+IBoxLoaderAfter: !include [
+  #cloudfront-adhoc.yml,
+]

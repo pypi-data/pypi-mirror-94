@@ -1,0 +1,103 @@
+IBoxLoader: 
+  - !include [
+      autoscaling/imageid-ecs.yml,
+    ]
+  - !exclude [
+      cloudfront/cloudfront-ios.yml,
+      loadbalancing/loadbalancing-elb.yml,
+    ]
+
+ecs-cluster:
+  StackName: ecs
+  Parameter:
+    - LaunchTemplateDataImageIdLatest:
+        Description: 'Latest ecs ami available from SSM'
+        Default: '/aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id'
+        AllowedValues:
+          - '/aws/service/ecs/optimized-ami/amazon-linux/recommended/image_id'
+          - '/aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id'
+        Type: 'AWS::SSM::Parameter::Value<String>'
+    - ASGLifecycleHookECSDrainInstanceHeartbeatTimeout:
+        Description: 'ECSDrainInstance ASGLifecycleHook and Lambda HeartbeatTimeout - empty for default based on env/role'
+    - GPUInstance:
+        Description: 'Install Coda and nvidia-docker2'
+        AllowedValues: ['True', 'None']
+        Default: 'None'
+  Condition:
+    - GPUInstance:
+        Equals(Ref('GPUInstance'), 'True')
+  Output:
+    - Cluster:
+        Value: Ref('Cluster')
+        Export: Export(Sub('Cluster-${AWS::StackName}'))
+  Alarm:
+    - CPUHigh:
+        IBOXENABLED: False
+    - CPULow:
+        IBOXENABLED: False
+  ASGLifecycleHook:
+    - ECSDrainInstance:
+        AutoScalingGroupName: Ref('AutoScalingGroup')
+        DefaultResult: 'ABANDON'
+        HeartbeatTimeout: 3600
+        LifecycleTransition: 'autoscaling:EC2_INSTANCE_TERMINATING'
+        NotificationTargetARN: get_expvalue('SNSTopicECSDrainInstance')
+        RoleARN: get_expvalue('RoleASGLifecycleHookECSDrainInstance') 
+  Apps: []
+  Cluster: True
+  Listeners: []
+  RecordSet: []
+  SecurityGroupIngress:
+    - ContainerInstanceExternal:
+        FromPort: 32768
+        GroupId: GetAtt('SecurityGroupInstancesRules', 'GroupId')
+        SourceSecurityGroupId: get_expvalue('SecurityGroupLoadBalancerApplicationExternal')
+        ToPort: 60999
+    - ContainerInstanceInternal:
+        FromPort: 32768
+        GroupId: GetAtt('SecurityGroupInstancesRules', 'GroupId')
+        SourceSecurityGroupId: get_expvalue('SecurityGroupLoadBalancerApplicationInternal')
+        ToPort: 60999
+  Role:
+    - Instance:
+        ManagedPolicyArns:
+          - IBOXADDTOLIST
+          - get_expvalue('IAMPolicyEcs')
+  AutoScalingScalingPolicy:
+    - Custom:
+        IBOXENABLED: True
+        EstimatedInstanceWarmup: 60
+        TargetTrackingConfiguration:
+          CustomizedMetricSpecification:
+            MetricName: CPUUtilization
+            Statistic: Maximum
+            Unit: Percent
+          TargetValue: 60
+    - Down:
+        IBOXENABLED: False
+    - Up:
+        IBOXENABLED: False
+  ScheduledAction:
+    - Rotate:
+        DesiredSize: CapacityDesired
+        MaxSize: CapacityMax
+        MinSize: CapacityMin
+        Recurrence: '45 5 * * *'
+  LaunchTemplateData:
+    BlockDeviceMappingsXvdaEbsVolumeSize: 100
+
+dev: &cfg_dev
+  CapacityMax: 3
+  ASGLifecycleHook:
+    - ECSDrainInstance:
+        HeartbeatTimeout: 900
+  LaunchTemplateData:
+    ImageId: latest
+    InstanceType: t3.large
+
+stg: *cfg_dev
+
+prd:
+  LaunchTemplateData:
+    InstanceType: c5.xlarge
+    BlockDeviceMappingsXvdaEbsVolumeSize: 50
