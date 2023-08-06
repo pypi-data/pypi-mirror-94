@@ -1,0 +1,4 @@
+
+[test]
+flake8~=3.8.4
+pycodestyle~=2.6.0
