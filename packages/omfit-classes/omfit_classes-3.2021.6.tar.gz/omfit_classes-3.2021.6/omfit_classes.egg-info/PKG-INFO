@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: omfit-classes
+Version: 3.2021.6
+Summary: Classes of OMFIT (One Modeling Framework For Integrated Tasks)
+Home-page: https://omfit.io
+Author: OMFIT developers
+Author-email: meneghini@fusion.gat.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: integrated modeling plasma framework
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent

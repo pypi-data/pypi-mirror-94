@@ -1,0 +1,354 @@
+{
+ "modules/BOUT++/GUIS/Save.py": [
+  "remotes/origin/BOUTdev" // POSTPR #3021
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DEMOS/Er_calculation.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DEMOS/Er_plot.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DEMOS/SXR_D3D.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/GUIS/DV_scans_subgui.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/GUIS/particleDandVgui.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/LIB/OMFITlib_tglf.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/PLOTS/plotDandV.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/PLOTS/plot_DV_scan.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/PLOTS/plot_resp_matrix.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/SCRIPTS/DVscan.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/SCRIPTS/particleDandVprofile.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/SCRIPTS/particleDandVscan.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/SCRIPTS/reloadDVscan.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/SCRIPTS/resetTGLF_scan.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/SCRIPTS/resp_matrix.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "modules/TGLF_scan/SCRIPTS/runGrowthRateScans.py": [
+  "remotes/origin/ExBcalculation" // NOPR #?
+ ],
+ "omfit/classes/OMFITx.py": [
+  "remotes/origin/ExBcalculation", // NOPR #?
+  "remotes/origin/gpec_generalfusion" // POSTPR #3404
+ ],
+ "modules/FASTRAN/SCRIPTS/fetch_output.py": [
+  "remotes/origin/FASTRAN" // POSTPR #3571
+ ],
+ "modules/FASTRAN/SCRIPTS/generateDakota.py": [
+  "remotes/origin/FASTRAN" // POSTPR #3571
+ ],
+ "modules/FASTRAN/SCRIPTS/runIPS.py": [
+  "remotes/origin/FASTRAN" // POSTPR #3571
+ ],
+ "modules/FIDASIM/GUIS/FIDASIMgui.py": [
+  "remotes/origin/FIDASIM", // POSTPR #855
+  "remotes/origin/FIDASIM_fixes" // POSTPR #659
+ ],
+ "modules/FIDASIM/PLOTS/plot_gaussians.py": [
+  "remotes/origin/FIDASIM", // POSTPR #855
+  "remotes/origin/FIDASIM_fixes" // POSTPR #659
+ ],
+ "modules/FIDASIM/PLOTS/plot_profiles.py": [
+  "remotes/origin/FIDASIM", // POSTPR #855
+  "remotes/origin/FIDASIM_fixes" // POSTPR #659
+ ],
+ "modules/FIDASIM/SCRIPTS/fidasim_lib.py": [
+  "remotes/origin/FIDASIM", // POSTPR #855
+  "remotes/origin/FIDASIM_fixes" // POSTPR #659
+ ],
+ "modules/FIDASIM/SCRIPTS/run_multiple_times.py": [
+  "remotes/origin/FIDASIM", // POSTPR #855
+  "remotes/origin/FIDASIM_fixes" // POSTPR #659
+ ],
+ "modules/FIDASIM/PLOTS/geometry.py": [
+  "remotes/origin/FIDASIM_fixes" // POSTPR #659
+ ],
+ "modules/FIDASIM/PLOTS/output_geometry.py": [
+  "remotes/origin/FIDASIM_fixes" // POSTPR #659
+ ],
+ "modules/FIDASIM/PLOTS/plot_chord_locations.py": [
+  "remotes/origin/FIDASIM_fixes" // POSTPR #659
+ ],
+ "modules/FIDASIM/SCRIPTS/replace_f90fidasim_setup.py": [
+  "remotes/origin/FIDASIM_fixes" // POSTPR #659
+ ],
+ "modules/FIDASIM/SCRIPTS/runFIDASIM.py": [
+  "remotes/origin/FIDASIM_fixes" // POSTPR #659
+ ],
+ "modules/STRAHL/PLOTS/decay_time.py": [
+  "remotes/origin/OMFITprofilesCER" // POSTPR #3225
+ ],
+ "modules/EFIT/GUIS/SNAPgui.py": [
+  "remotes/origin/gpec_generalfusion" // POSTPR #3404
+ ],
+ "modules/GPEC/GUIS/GENERALFUSION/post_proc_gui.py": [
+  "remotes/origin/gpec_generalfusion" // POSTPR #3404
+ ],
+ "modules/GPEC/GUIS/GENERALFUSION/workflow_gui.py": [
+  "remotes/origin/gpec_generalfusion" // POSTPR #3404
+ ],
+ "modules/GPEC/GUIS/gpec_gui.py": [
+  "remotes/origin/gpec_generalfusion" // POSTPR #3404
+ ],
+ "modules/GPEC/SCRIPTS/WORKFLOWS/load_and_run_gpec.py": [
+  "remotes/origin/gpec_generalfusion" // POSTPR #3404
+ ],
+ "omfit/utils_tk.py": [
+  "remotes/origin/jedi_dict_comp" // NOPR #?
+ ],
+ "omfit/classes/omfit_tglf.py": [
+  "remotes/origin/jlchen2015-DT_Recognition_in_OMFITtglf", // NOPR #?
+  "remotes/origin/tglf_unweighted" // NOPR #?
+ ],
+ "install/generate_install_files.py": [
+  "remotes/origin/macports_trim" // POSTPR #3450
+ ],
+ "modules/magnetics/GUIS/magnetics_gui.py": [
+  "remotes/origin/slcontour" // POSTPR #3308
+ ],
+ "modules/magnetics/GUIS/slcontour_gui.py": [
+  "remotes/origin/slcontour" // POSTPR #3308
+ ],
+ "modules/magnetics/PLOTS/plot_slcontour_fit.py": [
+  "remotes/origin/slcontour" // POSTPR #3308
+ ],
+ "modules/magnetics/SCRIPTS/slcontour.py": [
+  "remotes/origin/slcontour" // POSTPR #3308
+ ],
+ "modules/FIDASIM_V1.0/GUIS/cluster.py": [
+  "remotes/origin/srh_FIDASIM_reg_test" // NOPR #?
+ ],
+ "modules/FIDASIM_V1.0/GUIS/profiles.py": [
+  "remotes/origin/srh_FIDASIM_reg_test" // NOPR #?
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/runFIDASIM_V1-0.py": [
+  "remotes/origin/srh_FIDASIM_reg_test" // NOPR #?
+ ],
+ "regression/test_FIDASIM.py": [
+  "remotes/origin/srh_FIDASIM_reg_test" // NOPR #?
+ ],
+ "modules/ELMremoval/GUIS/plot_gui.py": [
+  "remotes/origin/srh_elm_var_thresh" // NOPR #?
+ ],
+ "modules/ELMremoval/SCRIPTS/plot_elms.py": [
+  "remotes/origin/srh_elm_var_thresh" // NOPR #?
+ ],
+ "modules/ELMremoval/SCRIPTS/write.py": [
+  "remotes/origin/srh_elm_var_thresh" // NOPR #?
+ ],
+ "modules/XGC0/GUIS/xgc0_gui.py": [
+  "remotes/origin/srh_xgc" // NOPR #?
+ ],
+ "modules/XGC0/GUIS/xgc0_heat_gui.py": [
+  "remotes/origin/srh_xgc" // NOPR #?
+ ],
+ "modules/XGC0/GUIS/xgc0_plot_gui.py": [
+  "remotes/origin/srh_xgc" // NOPR #?
+ ],
+ "modules/XGC0/PLOTS/synthetic_diagnostics.py": [
+  "remotes/origin/srh_xgc" // NOPR #?
+ ],
+ "modules/XGC0/SCRIPTS/calc_diag_flow.py": [
+  "remotes/origin/srh_xgc" // NOPR #?
+ ],
+ "modules/XGC0/SCRIPTS/fetch_devon_plots.py": [
+  "remotes/origin/srh_xgc" // NOPR #?
+ ],
+ "modules/XGC0/SCRIPTS/fetch_results.py": [
+  "remotes/origin/srh_xgc" // NOPR #?
+ ],
+ "modules/XGC0/SCRIPTS/generate_idl_profiles_sav_DB_plots.py": [
+  "remotes/origin/srh_xgc" // NOPR #?
+ ],
+ "modules/XGC0/SCRIPTS/xgc0_lib.py": [
+  "remotes/origin/srh_xgc" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/analytic_nete.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/atomdat.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/experimental_nete.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/input.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/ion_species.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/recycling.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/run.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/source.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/strahl.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/strahl_plot.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/GUIS/transport.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/LIB/OMFITlib_general.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/LIB/OMFITlib_minimizer.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/MINIMIZE/DEMO/strahl_minimizer_demo1.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/MINIMIZE/GUIS/min_method.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/MINIMIZE/GUIS/observations.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/MINIMIZE/PLOTS/observations_fit.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/MINIMIZE/PLOTS/plot_DV_uncertainty.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/MINIMIZE/PLOTS/strahl_minimizer_convergence.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/MINIMIZE/SCRIPTS/prepare_run.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/MINIMIZE/SCRIPTS/reload_strahl.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/MINIMIZE/SCRIPTS/save_strahl.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/MINIMIZE/SCRIPTS/strahl_minimizer.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/PLOTS/charge_state_dist.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/PLOTS/plot_1d.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/PLOTS/plot_2d.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/PLOTS/plot_atomdata.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/PLOTS/profile_preview.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/PLOTS/transport.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/STRAHL_to_OMFITprofiles.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/atomdat.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/control.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/elms.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/grid.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/mds_gEQDSK.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/nete.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/prepare.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/reset.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/run.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/source.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/STRAHL/SCRIPTS/write_params.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "regression/test_STRAHL.py": [
+  "remotes/origin/strahl_sxr" // NOPR #?
+ ],
+ "modules/TGYRO_GACODE/SCRIPTS/D_and_v.py": [
+  "remotes/origin/tgyro_impurities" // NOPR #?
+ ],
+ "omfit/classes/omfit_gacode.py": [
+  "remotes/origin/tgyro_impurities" // NOPR #?
+ ],
+ "modules/TIMCON/GUIS/TIMCON.py": [
+  "remotes/origin/timcon" // POSTPR #1650
+ ],
+ "modules/TIMCON/PLOTS/plot_timcon_outputs.py": [
+  "remotes/origin/timcon" // POSTPR #1650
+ ],
+ "modules/TIMCON/PLOTS/plot_timcon_scaling.py": [
+  "remotes/origin/timcon" // POSTPR #1650
+ ],
+ "modules/TIMCON/SCRIPTS/add_timpowers.py": [
+  "remotes/origin/timcon" // POSTPR #1650
+ ],
+ "modules/TRANSP/GUIS/TRANSPnamelistGUI.py": [
+  "remotes/origin/transp_cmu" // NOPR #?
+ ],
+ "modules/TRANSP/TEMPLATES/make_nml.py": [
+  "remotes/origin/transp_cmu" // NOPR #?
+ ],
+ "omfit/classes/omfit_eqdsk.py": [
+  "remotes/origin/transp_ic_to_omas-rho_tor" // NOPR #?
+ ],
+ "omfit/classes/omfit_omas.py": [
+  "remotes/origin/transp_ic_to_omas-rho_tor" // NOPR #?
+ ],
+ "modules/BOUT++/GUIS/BOUT++_Analysis.py": [
+  "remotes/origin/wpqh_bout" // NOPR #?
+ ],
+ "modules/BOUT++/GUIS/BOUT++_ModeStructure.py": [
+  "remotes/origin/wpqh_bout" // NOPR #?
+ ],
+ "modules/BOUT++/GUIS/BOUT++_RadialStructure.py": [
+  "remotes/origin/wpqh_bout" // NOPR #?
+ ]
+}

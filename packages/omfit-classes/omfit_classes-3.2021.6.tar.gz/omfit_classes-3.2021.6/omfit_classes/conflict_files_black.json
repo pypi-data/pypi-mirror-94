@@ -1,0 +1,929 @@
+{
+ "modules/BES/GUIS/velocimetry_GUI.py": [
+  "remotes/origin/BES" // POSTPR #4010
+ ],
+ "modules/BES/SCRIPTS/make_turbulence_images.py": [
+  "remotes/origin/BES" // POSTPR #4010
+ ],
+ "modules/BES/SCRIPTS/run_velocimetry.py": [
+  "remotes/origin/BES" // POSTPR #4010
+ ],
+ "modules/BES/SCRIPTS/turbulence_animation.py": [
+  "remotes/origin/BES" // POSTPR #4010
+ ],
+ "modules/FBM/GUIS/fbm.py": [
+  "remotes/origin/FBM_updates", // NOPR #?
+  "remotes/origin/crocker_development_master" // NOPR #?
+ ],
+ "modules/FBM/PLOTS/avg_fbm_pitch.py": [
+  "remotes/origin/FBM_updates", // NOPR #?
+  "remotes/origin/crocker_development_master" // NOPR #?
+ ],
+ "modules/FBM/PLOTS/plot_fbm.py": [
+  "remotes/origin/FBM_updates", // NOPR #?
+  "remotes/origin/crocker_development_master" // NOPR #?
+ ],
+ "modules/FBM/SCRIPTS/get_fbm.py": [
+  "remotes/origin/FBM_updates", // NOPR #?
+  "remotes/origin/crocker_development_master" // NOPR #?
+ ],
+ "omfit/classes/fluxSurface.py": [
+  "remotes/origin/GRE_module" // OPEN #4398
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/POSTFIT/SPRED_nZ.py": [
+  "remotes/origin/OMFITprofiles_spred", // NOPR #?
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/SEGWAY/GUIS/gui_init.py": [
+  "remotes/origin/SEGWAY_updates" // NOPR #?
+ ],
+ "modules/SEGWAY/GUIS/gui_mod.py": [
+  "remotes/origin/SEGWAY_updates" // NOPR #?
+ ],
+ "modules/SEGWAY/LIB/OMFITlib_startup.py": [
+  "remotes/origin/SEGWAY_updates" // NOPR #?
+ ],
+ "modules/SEGWAY/SCRIPTS/SEGWAY_EPEDNN.py": [
+  "remotes/origin/SEGWAY_updates" // NOPR #?
+ ],
+ "modules/SEGWAY/SCRIPTS/SEGWAY_PJ_shape.py": [
+  "remotes/origin/SEGWAY_updates" // NOPR #?
+ ],
+ "modules/SEGWAY/SCRIPTS/SEGWAY_generate.py": [
+  "remotes/origin/SEGWAY_updates" // NOPR #?
+ ],
+ "modules/BALOO/PLOTS/plot.py": [
+  "remotes/origin/STEP_EPED" // NOPR #?
+ ],
+ "modules/ELITE/GUIS/ELITEgui.py": [
+  "remotes/origin/STEP_EPED" // NOPR #?
+ ],
+ "modules/ELITE/SCRIPTS/runELITEbase.py": [
+  "remotes/origin/STEP_EPED" // NOPR #?
+ ],
+ "modules/EPED/GUIS/EPEDgui.py": [
+  "remotes/origin/STEP_EPED" // NOPR #?
+ ],
+ "modules/EPED/SCRIPTS/setupEPED.py": [
+  "remotes/origin/STEP_EPED" // NOPR #?
+ ],
+ "modules/HELENA/SCRIPTS/runHELENA.py": [
+  "remotes/origin/STEP_EPED" // NOPR #?
+ ],
+ "modules/HELENA/SCRIPTS/write_to_pfile.py": [
+  "remotes/origin/STEP_EPED" // NOPR #?
+ ],
+ "modules/STEP/STEPS/EPED_step.py": [
+  "remotes/origin/STEP_EPED" // NOPR #?
+ ],
+ "omfit/classes/omfit_elite.py": [
+  "remotes/origin/STEP_EPED" // NOPR #?
+ ],
+ "omfit/classes/omfit_helena.py": [
+  "remotes/origin/STEP_EPED" // NOPR #?
+ ],
+ "modules/CHEF/SCRIPTS/setandrunRABBIT.py": [
+  "remotes/origin/STEP_PROcreate_h98_tomdb" // NOPR #?
+ ],
+ "modules/CHEF/SCRIPTS/setandrunSources.py": [
+  "remotes/origin/STEP_PROcreate_h98_tomdb" // NOPR #?
+ ],
+ "modules/STEP/GUIS/gui_items.py": [
+  "remotes/origin/STEP_PROcreate_h98_tomdb" // NOPR #?
+ ],
+ "modules/STEP/GUIS/preset_workflows.py": [
+  "remotes/origin/STEP_PROcreate_h98_tomdb" // NOPR #?
+ ],
+ "modules/STEP/STEPS/ONETWO_step.py": [
+  "remotes/origin/STEP_PROcreate_h98_tomdb", // NOPR #?
+  "remotes/origin/step_onetwo_densities" // OPEN #5007
+ ],
+ "modules/STEP/WORKFLOWS/h98_from_PRO_create.py": [
+  "remotes/origin/STEP_PROcreate_h98_tomdb" // NOPR #?
+ ],
+ "modules/STEP/WORKFLOWS/run_StandardSTEP_tomdb.py": [
+  "remotes/origin/STEP_PROcreate_h98_tomdb" // NOPR #?
+ ],
+ "modules/STEP/WORKFLOWS/upgrade_evaluation_DIII-D.py": [
+  "remotes/origin/STEP_PROcreate_h98_tomdb" // NOPR #?
+ ],
+ "bin/verify_build.py": [
+  "remotes/origin/SULI_Zeff" // OPEN #2883
+ ],
+ "modules/OMFITprofiles/GUIS/7_fit_GUI.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/GUIS/FIT/VBpolyfitGUI.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/GUIS/channels_GUI.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/GUIS/plot_GUI.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/LIB/OMFITlib_general.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/OMFITprofiles/PLOTS/DIAGNOSTICS/plot_SXR.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/PLOTS/DIAGNOSTICS/plot_VB.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/PLOTS/DIAGNOSTICS/plot_VB_proj.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/PLOTS/plot_fit.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/3_channels.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/7_fit.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/FETCH/CER_fetcher/raw_CER.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/FETCH/raw_VB.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/FIT/7_fit_VB.py": [
+  "remotes/origin/SULI_Zeff" // OPEN #2883
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/POSTDERIVED/SXR.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/POSTDERIVED/VB.py": [
+  "remotes/origin/SULI_Zeff", // OPEN #2883
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "regression/test_OMFITprofiles.py": [
+  "remotes/origin/SULI_Zeff" // OPEN #2883
+ ],
+ "regression/test_RABBIT.py": [
+  "remotes/origin/SULI_Zeff" // OPEN #2883
+ ],
+ "modules/TRANSP/LIB/OMFITlib_general.py": [
+  "remotes/origin/TRANSP_D3D_repository" // NOPR #?
+ ],
+ "modules/TRANSP/SCRIPTS/getCDF.py": [
+  "remotes/origin/TRANSP_D3D_repository" // NOPR #?
+ ],
+ "modules/TRANSP/SCRIPTS/tr_fetch.py": [
+  "remotes/origin/TRANSP_D3D_repository" // NOPR #?
+ ],
+ "modules/TRANSP/SCRIPTS/tr_send.py": [
+  "remotes/origin/TRANSP_D3D_repository" // NOPR #?
+ ],
+ "modules/TRANSP/SCRIPTS/tr_start.py": [
+  "remotes/origin/TRANSP_D3D_repository" // NOPR #?
+ ],
+ "bin/verify_OMFITsave_contents.py": [
+  "remotes/origin/alpha" // OPEN #3567
+ ],
+ "omfit/classes/namelist.py": [
+  "remotes/origin/alpha" // OPEN #3567
+ ],
+ "omfit/classes/omfit_ascii.py": [
+  "remotes/origin/alpha", // OPEN #3567
+  "remotes/origin/omfit_windows3" // OPEN #4956
+ ],
+ "modules/CAKE/LIB/OMFITlib_basic_fits.py": [
+  "remotes/origin/cake_baker", // NOPR #?
+  "remotes/origin/cake_fitting_update", // OPEN #4495
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "modules/CAKE/LIB/OMFITlib_lmfit_handler.py": [
+  "remotes/origin/cake_baker", // NOPR #?
+  "remotes/origin/cake_fitting_update", // OPEN #4495
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "modules/CAKE/LIB/OMFITlib_startup.py": [
+  "remotes/origin/cake_baker", // NOPR #?
+  "remotes/origin/cake_fitting_update", // OPEN #4495
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "modules/CAKE/SCRIPTS/2_profile_fitting/fit_master.py": [
+  "remotes/origin/cake_baker", // NOPR #?
+  "remotes/origin/cake_fitting_update", // OPEN #4495
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "modules/CAKE/SCRIPTS/4_make_kfiles/setup_basic_kfiles.py": [
+  "remotes/origin/cake_baker", // NOPR #?
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "modules/CAKE/SCRIPTS/between_shot_autorun.py": [
+  "remotes/origin/cake_baker", // NOPR #?
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "modules/CAKE/SCRIPTS/run_case_list_remotely.py": [
+  "remotes/origin/cake_baker", // NOPR #?
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "modules/CAKE/SCRIPTS/1_the_gathering/initialize_the_package.py": [
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "modules/CAKE/SCRIPTS/5_run_EFIT/to_OMAS.py": [
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "omfit/classes/omfit_elm.py": [
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "omfit/classes/omfit_profiles.py": [
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "omfit/classes/sortedDict.py": [
+  "remotes/origin/cake_ods" // POSTPR #4964
+ ],
+ "modules/_Detachment_Indicator/GUIS/Detachment_Indicator_GUI.py": [
+  "remotes/origin/cms_dibugfix_20200318" // NOPR #?
+ ],
+ "modules/_Detachment_Indicator/PLOTS/bespoke.py": [
+  "remotes/origin/cms_dibugfix_20200318" // NOPR #?
+ ],
+ "modules/DIII-D_BEAMS/LIB/OMFITlib_utilities.py": [
+  "remotes/origin/d3d_beams" // OPEN #4796
+ ],
+ "modules/OMFITprofiles/GUIS/FETCH/DIII-D_fetch.py": [
+  "remotes/origin/disable_VB", // OPEN #4916
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/OMFITprofiles/GUIS/fetch_selector_GUI.py": [
+  "remotes/origin/disable_VB" // OPEN #4916
+ ],
+ "omfit/classes/OMFITx.py": [
+  "remotes/origin/disable_VB", // OPEN #4916
+  "remotes/origin/omfit_windows3", // OPEN #4956
+  "remotes/origin/use_scp" // NOPR #?
+ ],
+ "regression/test_kineticEFITtime.py": [
+  "remotes/origin/efit_bt", // NOPR #?
+  "remotes/origin/fix_kEFITtime_regression", // NOPR #?
+  "remotes/origin/iterdb_omfitprofiles" // OPEN #2286
+ ],
+ "omfit/classes/omfit_efit.py": [
+  "remotes/origin/efitpp_plots" // NOPR #?
+ ],
+ "modules/OMFITprofiles/GUIS/1_fetch_GUI.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/GUIS/5_slice_GUI.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/GUIS/FETCH/KSTAR_fetch.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/GUIS/OMFITprofilesGUI.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/GUIS/POSTFIT/KSTAR_postfit.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/GUIS/conditionals_gui.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/GUIS/export_GUI.py": [
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/mds_tracking" // OPEN #3053
+ ],
+ "modules/OMFITprofiles/PLOTS/carbonDensityQuick.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/2_timings.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/4_map.py": [
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/mapOMFITprofiles3D" // OPEN #3304
+ ],
+ "modules/OMFITprofiles/SCRIPTS/5_slice.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DEMOS/Er_calculation.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DEMOS/Er_plot.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DEMOS/SXR_D3D.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/FETCH/raw_Bolo.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/FETCH/raw_SXR.py": [
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/omfitprofiles_sxr" // OPEN #4848
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/FETCH/raw_TS.py": [
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/mapOMFITprofiles3D", // OPEN #3304
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/FIT/7_fit_prad.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/POSTFIT/apply_sep_CER_constraints.py": [
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/POSTFIT/apply_sep_Te_constraints.py": [
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/OMFITprofiles/SCRIPTS/DIII-D/POSTFIT/compute_sep_omegaE_constraints.py": [
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/OMFITprofiles/SCRIPTS/EXPORT/RAW_to_omas.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/EXPORT/setup_model_trees.py": [
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/mds_tracking" // OPEN #3053
+ ],
+ "modules/OMFITprofiles/SCRIPTS/EXPORT/write2MDS+.py": [
+  "remotes/origin/eventSyncProfiles", // OPEN #4825
+  "remotes/origin/mds_tracking" // OPEN #3053
+ ],
+ "modules/OMFITprofiles/SCRIPTS/JET/FETCH/raw_TS.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/KSTAR/FETCH/raw_CO2interf.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/KSTAR/FETCH/raw_REFL.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/KSTAR/FETCH/raw_TS.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/KSTAR/POSTFIT/compare_TCI.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/fit_raw.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/parallel_slice.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/split_system.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/OMFITprofiles/SCRIPTS/trimRAWdata.py": [
+  "remotes/origin/eventSyncProfiles" // OPEN #4825
+ ],
+ "modules/DIII-D_BEAMS/GUIS/ShotGUI.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI", // OPEN #4413
+  "remotes/origin/srh_beams" // OPEN #4799
+ ],
+ "modules/DIII-D_BEAMS/PLOTS/plotDB.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/DIII-D_BEAMS/SCRIPTS/compare_mds_rdb.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/DIII-D_BEAMS/SCRIPTS/getPower.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/DIII-D_BEAMS/SCRIPTS/queryDB.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI", // OPEN #4413
+  "remotes/origin/srh_beams" // OPEN #4799
+ ],
+ "modules/EFITtime/GUIS/constraintsGUI.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/EFITtime/PLOTS/chisquares.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/DEMOS/manual_spectrum.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/DEMOS/plot_htpd.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/DEMOS/test_gaussian_sum.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/GUIS/DIII-D/neutral_beams.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/GUIS/FIDASIMgui.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/GUIS/FIDASIMsettings.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/GUIS/cluster.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/GUIS/iteration.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/GUIS/neutral_beams.py": [
+  "remotes/origin/fidasim_fs" // NOPR #?
+ ],
+ "modules/FIDASIM_V1.0/GUIS/other.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/GUIS/plot_results.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/GUIS/profiles.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/GUIS/scan_parameter.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/PLOTS/geometry.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/PLOTS/output_geometry.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/PLOTS/plot_BE_comparison.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/PLOTS/plot_FIDASIM_eq_input.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/PLOTS/plot_chord_locations.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/PLOTS/plot_convergence.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/PLOTS/plot_fida_profiles.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/PLOTS/plot_fida_spectra.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/PLOTS/plot_gaussians.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/PLOTS/plot_profiles.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/DIIID_miCER/put_data_OMFITprofiles.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/d3d_beams.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/dispatch_runs.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/f90fidasim_setup_V1-0.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/f90fidasim_setup_py.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/fidasim_lib.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/get_dalpha_data.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/iterate_fit.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/nf_calculation.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/prefida.py": [
+  "remotes/origin/fidasim_fs" // NOPR #?
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/read_nubeam.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/runFIDASIM_V1-0.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/run_multiple_times.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/run_multiple_times_iterations.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/FIDASIM_V1.0/SCRIPTS/run_two_simultaneous.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/DEMOS/test_neon_lamp.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/GUIS/MainIonGUI.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/lmfit_mainion", // OPEN #4885
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/PLOTS/compare_fit_iterations.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/PLOTS/plot_beams.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/PLOTS/plot_single_fit_profile.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/PLOTS/plot_tssub.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/PLOTS/plots_fits_C_fitter.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/compare_CERREAL_RT.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/fetch_data.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/fitting/run_C_fits.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/lmfit_mainion", // OPEN #4885
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/fitting/test_MICEFIT.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/fitting/write_driver_files.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/lmfit_mainion", // OPEN #4885
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/fitting/write_to_mdsplus.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/get_fida_spectra.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/imp_cer_settings.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/interface_w_CER_routines.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/library.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/perform_tssub.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/setup_OMFITprofiles.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/setup_fida.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/setup_kineticEFITtime.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/TRANSP/SCRIPTS/3_profiles.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/TRANSP/SCRIPTS/DEMOS/tr_fetch_demo.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/kineticEFITtime/GUIS/kineticEFITtimeGUI.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/kineticEFITtime/PLOTS/plotMultiplexer.py": [
+  "remotes/origin/fidasim_fs", // NOPR #?
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/GAprofilestime/SCRIPTS/load_existing.py": [
+  "remotes/origin/gaprof_cer" // NOPR #?
+ ],
+ "modules/GPEC/GUIS/coil_gui.py": [
+  "remotes/origin/gpec_coil" // OPEN #4821
+ ],
+ "modules/GPEC/PLOTS/plot_control_1d.py": [
+  "remotes/origin/gpec_coil" // OPEN #4821
+ ],
+ "omfit/classes/omfit_gpec.py": [
+  "remotes/origin/gpec_coil" // OPEN #4821
+ ],
+ "modules/GYRO_GACODE/GUIS/gyroGUI.py": [
+  "remotes/origin/gyro_improvements" // OPEN #4875
+ ],
+ "modules/GYRO_GACODE/SCRIPTS/checkCGYROrun.py": [
+  "remotes/origin/gyro_improvements" // OPEN #4875
+ ],
+ "modules/GYRO_GACODE/SCRIPTS/loadGYROfromDir.py": [
+  "remotes/origin/gyro_improvements" // OPEN #4875
+ ],
+ "modules/GYRO_scan/GUIS/GYRO_scanGUI.py": [
+  "remotes/origin/gyro_improvements" // OPEN #4875
+ ],
+ "modules/GYRO_scan/PLOTS/compareGYROballoon.py": [
+  "remotes/origin/gyro_improvements" // OPEN #4875
+ ],
+ "modules/GYRO_scan/PLOTS/compareGYROfreq.py": [
+  "remotes/origin/gyro_improvements" // OPEN #4875
+ ],
+ "omfit/classes/adaptors.py": [
+  "remotes/origin/iterdb_omfitprofiles" // OPEN #2286
+ ],
+ "omfit/omfit_tree.py": [
+  "remotes/origin/iterdb_omfitprofiles", // OPEN #2286
+  "remotes/origin/omfit_windows3" // OPEN #4956
+ ],
+ "modules/NIMROD/PLOTS/plotAllkpraden.py": [
+  "remotes/origin/izzo_nimrod_fixes" // POSTPR #4583
+ ],
+ "modules/NIMROD/PLOTS/plotNimfl.py": [
+  "remotes/origin/izzo_nimrod_fixes" // POSTPR #4583
+ ],
+ "modules/NIMROD/RUNAWAYS/RUNELEC.py": [
+  "remotes/origin/izzo_nimrod_fixes" // POSTPR #4583
+ ],
+ "modules/NIMROD/RUNAWAYS/reHist.py": [
+  "remotes/origin/izzo_nimrod_fixes" // POSTPR #4583
+ ],
+ "modules/NIMROD/RUNAWAYS/reSlices.py": [
+  "remotes/origin/izzo_nimrod_fixes" // POSTPR #4583
+ ],
+ "modules/NIMROD/RUNAWAYS/reStartFile.py": [
+  "remotes/origin/izzo_nimrod_fixes" // POSTPR #4583
+ ],
+ "modules/NIMROD/SCRIPTS/fetch_nimrod.py": [
+  "remotes/origin/izzo_nimrod_fixes" // POSTPR #4583
+ ],
+ "modules/NIMROD/SCRIPTS/run_nimrod_base.py": [
+  "remotes/origin/izzo_nimrod_fixes" // POSTPR #4583
+ ],
+ "omfit/classes/omfit_nimrod.py": [
+  "remotes/origin/izzo_nimrod_fixes" // POSTPR #4583
+ ],
+ "modules/TRANSP/SCRIPTS/KSTAR/HEATING/nubeam_KSTR.py": [
+  "remotes/origin/kstar_heating" // NOPR #?
+ ],
+ "omfit/classes/omfit_omas.py": [
+  "remotes/origin/kstar_imas_PR" // POSTPR #3988
+ ],
+ "modules/kineticEFITtime/SCRIPTS/to_omas.py": [
+  "remotes/origin/kstar_omas" // NOPR #?
+ ],
+ "omfit/classes/omfit_base.py": [
+  "remotes/origin/lazyload_on" // NOPR #?
+ ],
+ "regression/test_save_project.py": [
+  "remotes/origin/lazyload_on" // NOPR #?
+ ],
+ "modules/MainIonData/SCRIPTS/calibrations/calibration_library.py": [
+  "remotes/origin/lmfit_mainion" // OPEN #4885
+ ],
+ "regression/test_MDS.py": [
+  "remotes/origin/mds_exception", // NOPR #?
+  "remotes/origin/mds_tracking" // OPEN #3053
+ ],
+ "omfit/classes/omfit_mds.py": [
+  "remotes/origin/mds_tracking" // OPEN #3053
+ ],
+ "omfit/omfit_gui.py": [
+  "remotes/origin/ods_gui_fixes", // NOPR #?
+  "remotes/origin/omfit_windows3" // OPEN #4956
+ ],
+ "omfit/classes/omfit_formatter.py": [
+  "remotes/origin/omfit_windows3" // OPEN #4956
+ ],
+ "omfit/classes/omfit_rdb.py": [
+  "remotes/origin/omfit_windows3" // OPEN #4956
+ ],
+ "omfit/classes/utils_base.py": [
+  "remotes/origin/omfit_windows3", // OPEN #4956
+  "remotes/origin/use_scp" // NOPR #?
+ ],
+ "modules/OMFITprofiles/SCRIPTS/AUG/FETCH/raw_CX.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/OMFITprofiles/SCRIPTS/AUG/FETCH/raw_EQ_eqm.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/OMFITprofiles/SCRIPTS/AUG/FETCH/raw_TS_core.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/OMFITprofiles/SCRIPTS/AUG/FETCH/raw_TS_edge.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/PYTOMO/SCRIPTS/fetch_tomo.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/PYTOMO/SCRIPTS/start_pytomo.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/QUICKFIT/GUIS/quickfit.py": [
+  "remotes/origin/omfitprofiles_aug", // OPEN #4987
+  "remotes/origin/quickfit_cmod" // NOPR #?
+ ],
+ "modules/QUICKFIT/SCRIPTS/save2OMFIT.py": [
+  "remotes/origin/omfitprofiles_aug", // OPEN #4987
+  "remotes/origin/quickfit_cmod", // NOPR #?
+  "remotes/origin/quickfit_sepx" // NOPR #?
+ ],
+ "modules/QUICKFIT/SCRIPTS/sep_nimp_constrain.py": [
+  "remotes/origin/omfitprofiles_aug", // OPEN #4987
+  "remotes/origin/quickfit_sep", // NOPR #?
+  "remotes/origin/quickfit_sepx" // NOPR #?
+ ],
+ "modules/STRAHL/DIAGNOSTICS/DIII-D/SPRED/SPRED.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/DIAGNOSTICS/DIII-D/SPRED_CX/SPRED_CX.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/DIAGNOSTICS/DIII-D/VB/load_VB_data.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/GUIS/equilibrium.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/GUIS/experimental_nete.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/GUIS/source.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/GUIS/strahl_plot.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/LIB/OMFITlib_adas.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/LIB/OMFITlib_legacy.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/LIB/OMFITlib_pystrahl.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/LIB/OMFITlib_strahl.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/MINIMIZE/DEMO/strahl_minimizer_demo1.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/MINIMIZE/GUIS/Interactive_fit.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/MINIMIZE/GUIS/min_method.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/MINIMIZE/PLOTS/plot_DV_uncertainty.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/MINIMIZE/SCRIPTS/Interactive_fit.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/MINIMIZE/SCRIPTS/remote_lmfit.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/MINIMIZE/SCRIPTS/strahl_minimizer.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/PLOTS/plot_1d.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/PLOTS/plot_atomdata.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/PLOTS/transport_preview.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/SCRIPTS/device_defaults.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/SCRIPTS/nbi_cxr.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/SCRIPTS/nete.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "modules/STRAHL/SCRIPTS/write_params.py": [
+  "remotes/origin/omfitprofiles_aug" // OPEN #4987
+ ],
+ "scripts/AOT.py": [
+  "remotes/origin/ops" // POSTPR #4877
+ ],
+ "modules/SCOPE/GUIS/pubfigGUI.py": [
+  "remotes/origin/pubfig_ket" // OPEN #4561
+ ],
+ "modules/MainIonData/SCRIPTS/artificial_spectra_isotope.py": [
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/MainIonData/SCRIPTS/fitting/fetch_C_fits.py": [
+  "remotes/origin/srh_MI" // OPEN #4413
+ ],
+ "modules/DIII-D_BEAMS/GUIS/NUBEAMGUI.py": [
+  "remotes/origin/srh_beams" // OPEN #4799
+ ],
+ "modules/TRANSP/PLOTS/plot_nubeam.py": [
+  "remotes/origin/srh_beams" // OPEN #4799
+ ],
+ "modules/TGLF_scan/PLOTS/plotGrowthRateScans.py": [
+  "remotes/origin/tglf_new_scans" // NOPR #?
+ ],
+ "modules/TGYRO_GACODE/GUIS/Rungui.py": [
+  "remotes/origin/tgyro_nn_fix" // NOPR #?
+ ],
+ "modules/TRANSP/GUIS/PLOTgui.py": [
+  "remotes/origin/transp_ppphi" // OPEN #2376
+ ],
+ "modules/TRANSP/PLOTS/rplot.py": [
+  "remotes/origin/transp_ppphi" // OPEN #2376
+ ],
+ "omfit/classes/omfit_transp.py": [
+  "remotes/origin/transp_to_omas" // NOPR #?
+ ],
+ "omfit/classes/omfit_toksearch.py": [
+  "remotes/origin/use_scp" // NOPR #?
+ ]
+}
