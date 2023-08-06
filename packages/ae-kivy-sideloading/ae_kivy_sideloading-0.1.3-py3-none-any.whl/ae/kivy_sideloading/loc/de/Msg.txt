@@ -1,0 +1,29 @@
+{
+"help_flow#open_file_chooser": """\
+tippe um das datei-auswahl-
+fenster zu öffnen.""",
+"help_flow#open_iterable_displayer": """\
+tippe um die details
+anzuzeigen.""",
+"help_flow#open_qr_displayer": """\
+tippe um den QR-
+code anzuzeigen.""",
+"help_flow#open_sideloading_menu": """\
+tippe um das sideloading
+menü anzuzeigen.""",
+"help_flow#start_sideloading_server": """\
+tippe um den sideloading-
+server zu starten.""",
+"help_flow#stop_sideloading_server": """\
+tippe um den sideloading-
+server anzuhalten.""",
+#==================================
+"display QR code for browser/QR-code-reader": "QR code für browser/QR code leser anzeigen",
+"folders can't be send via sideloading": "verzeichnisse können nicht fürs sideloading ausgewählt werden",
+"select file for sideloading": "datei fürs sideloading auswählen",
+"select single file": "einzelne datei wählen",
+"sideloading file info": "info zur aktuellen sideloading datei",
+"sideloading url": "sideloading url/adresse",
+"start sideloading server": "sideloading server starten",
+"stop sideloading server": "sideloading server anhalten",
+}
