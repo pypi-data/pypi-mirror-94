@@ -1,0 +1,3 @@
+[console_scripts]
+taxoniq = taxoniq.cli:cli
+
