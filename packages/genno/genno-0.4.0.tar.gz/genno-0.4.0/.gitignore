@@ -1,0 +1,19 @@
+# Python and packaging files
+*.egg-info
+__pycache__
+build
+dist
+
+# pytest, pytest-benchmark, pytest-cov
+.benchmarks
+.coverage*
+.pytest_cache
+htmlcov
+
+# mypy
+.mypy_cache
+
+# Sphinx and related generated files
+doc/*.svg
+doc/.ipynb_checkpoints
+doc/_build
