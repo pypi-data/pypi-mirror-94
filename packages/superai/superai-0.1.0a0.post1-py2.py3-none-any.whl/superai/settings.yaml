@@ -1,0 +1,75 @@
+default:
+  name: "default"
+  agent:
+    file: None
+    host: "@jinja https://bapi{{this.suffix | lower}}.super.ai"
+    websocket: "@jinja wss://bapi{{this.suffix | lower}}.super.ai/agent"
+  backend: "ws"
+  base_url: "@jinja https://api{{this.suffix | lower}}.super.ai/v1"
+  build_manifest: "build_manifest.yml"
+  cognito:
+    client_id: "41t3in8ao7fesog76qtskpkkev"
+    region: "us-east-1"
+    userpool_id: "us-east-1_I7r6GCG5K"
+  dependency_version: "sandbox"
+  hatchery_build_folder: ".hatchery"
+  log:
+    level: 20 #INFO=20, DEBUG=10
+    console: true
+    format: "%(asctime)s - %(levelname)s - %(filename)s - %(threadName)s - [%(name)s:%(funcName)s:%(lineno)s] - %(message)s"
+  memo_bucket: "memoization"
+  project_root: "@jinja {{this.current_env | dirname | abspath}}"
+  s3_bucket: "superai-dataprogrammer-us-west-1"
+  suffix: "<<<default>>>"
+
+local:
+  name: "local"
+  agent:
+    host: "http://127.0.0.1:5001"
+    websocket: "wss:////127.0.0.1:5002"
+  dependency_version: "dev"
+  base_url: "http://127.0.0.1:5000/v1"
+  suffix: "-dev"
+
+dev:
+  name: "dev"
+  cognito:
+    client_id: "41t3in8ao7fesog76qtskpkkev"
+    region: "us-east-1"
+    userpool_id: "us-east-1_I7r6GCG5K"
+  dependency_version: "dev"
+  log:
+    level: 10 #INFO=20, DEBUG=10
+    console: true
+  suffix: "-dev"
+
+testing:
+  name: "test"
+  suffix: "-test"
+  user:
+    api_key: "FAKE_API_KEY"
+
+sandbox:
+  name: "sandbox"
+  cognito:
+    client_id: "2569ain8phd454q0lmos9rppdb"
+    region: "us-east-1"
+    userpool_id: "us-east-1_DN7c2e5gq"
+  dependency_version: "sandbox"
+  log:
+    level: 20 #INFO=20, DEBUG=10
+    console: true
+  suffix: "-sandbox"
+
+prod:
+  name: "prod"
+  cognito:
+    client_id: "6vt1a0uflonucrknj6sl0q3vc2"
+    region: "us-east-1"
+    userpool_id: "us-east-1_hwjZuxqbI"
+  log:
+    level: 20 #INFO=20, DEBUG=10
+    console: true
+    filename: null
+    format: "%(asctime)s - %(levelname)s - %(filename)s - %(threadName)s - [%(name)s:%(funcName)s] - %(message)s"
+  suffix: ""
