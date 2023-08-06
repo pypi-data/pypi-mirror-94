@@ -1,0 +1,10 @@
+coopui/IAtomicUserInteraction.py,sha256=gAahNjsN8uJey123m7qZ-6ZmIG7n6H9Ye6BBJOkyVSQ,1411
+coopui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coopui/cli/CliAtomicUserInteraction.py,sha256=HzdaD--LsQeqlfYza5pUt7ze3nIl18yoQo4XHylzZEo,14016
+coopui/cli/CliMenu.py,sha256=ADGWzjnK8UZJ4-7tuOYpqpiayNeuLT6Dhb9jeT_shEk,1523
+coopui/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coopui-0.4.dist-info/LICENSE,sha256=5JvF1niEOoMkiP9a4-VAl-wIuIlZQxwf-sPyuJxceqk,1089
+coopui-0.4.dist-info/METADATA,sha256=F6riMILdnE3159ahCRtXNr4WT3QokNojWGX1sK4KEj0,4084
+coopui-0.4.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+coopui-0.4.dist-info/top_level.txt,sha256=UoUNZ_ZoPlCSR79saasnuqAxEus-7_T-YOs9TZF46u4,7
+coopui-0.4.dist-info/RECORD,,
