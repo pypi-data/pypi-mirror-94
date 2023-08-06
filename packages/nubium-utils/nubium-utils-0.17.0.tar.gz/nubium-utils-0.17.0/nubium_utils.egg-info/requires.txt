@@ -1,0 +1,8 @@
+faust[rocksdb]==1.10.4
+prometheus_client
+python-schema-registry-client[faust]==1.2.1
+requests
+
+[dev]
+nose
+twine
