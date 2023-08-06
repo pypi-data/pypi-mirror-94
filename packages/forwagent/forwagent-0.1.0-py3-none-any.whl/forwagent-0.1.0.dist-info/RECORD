@@ -1,0 +1,10 @@
+forwagent/agent.py,sha256=LnIZIRK2yTZjtZCNVnlJRXtF3od0R_46kGLgQG6Nzc8,1759
+forwagent/cli.py,sha256=JZnmRxjM4kN9gX6dsI4Z9kWgvhnnPTE0-AeH-Q8cRyw,2681
+forwagent/common.py,sha256=pEk2NS1iwL_RHukSOj9j4e7gtybiWN6vA2GOAdF1GPk,754
+forwagent/config.py,sha256=njP6LsJHHDaOfwK9swTLIOFsijusaxmhR4j-0ACC0xc,1970
+forwagent/server.py,sha256=Pr8OgX482OqNTqiTE8CRETU5kcAo55SUNrLcWWiv8hI,2236
+forwagent-0.1.0.dist-info/entry_points.txt,sha256=popMMdvotd03YQqmjdgsx8dtQLUjjSu_0pzmmVoeL4E,48
+forwagent-0.1.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+forwagent-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+forwagent-0.1.0.dist-info/METADATA,sha256=btT0NduTm5tdsBL-HquI_FtrHbz9OlTGP5hOi_bAayU,663
+forwagent-0.1.0.dist-info/RECORD,,

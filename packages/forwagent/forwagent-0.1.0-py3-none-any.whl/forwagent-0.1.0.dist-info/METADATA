@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: forwagent
+Version: 0.1.0
+Summary: GPG/SSH agent forwarder.
+License: Apache-2.0
+Author: Dain Nilsson
+Author-email: dain@yubico.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: init
+Provides-Extra: server
+Requires-Dist: cryptography (>=3.3.1,<4.0.0); extra == "init"
+Requires-Dist: paramiko (>=2.7.2,<3.0.0); extra == "server"
