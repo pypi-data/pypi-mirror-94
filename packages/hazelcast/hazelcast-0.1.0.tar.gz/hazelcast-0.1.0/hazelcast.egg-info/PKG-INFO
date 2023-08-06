@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: hazelcast
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Hazecast Engineering
+Author-email: 
+License: UNKNOWN
+Description: # Hazelcast
+        
+        See [Hazecast Python Client](https://pypi.org/project/hazelcast-python-client/)
+        
+        ## Install
+        
+        ```
+        pip install hazelcast-python-client
+        ```
+        
+        
+Keywords: hazelcast
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

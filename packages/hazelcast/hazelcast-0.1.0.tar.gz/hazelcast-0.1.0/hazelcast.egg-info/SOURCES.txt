@@ -1,0 +1,7 @@
+README.md
+setup.py
+hazelcast/__init__.py
+hazelcast.egg-info/PKG-INFO
+hazelcast.egg-info/SOURCES.txt
+hazelcast.egg-info/dependency_links.txt
+hazelcast.egg-info/top_level.txt
