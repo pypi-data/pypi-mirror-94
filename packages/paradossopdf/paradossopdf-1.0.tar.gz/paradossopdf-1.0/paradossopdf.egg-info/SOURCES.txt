@@ -1,0 +1,9 @@
+README.md
+setup.py
+paradossopdf/__init__.py
+paradossopdf/pdf2image.py
+paradossopdf/pdf2text.py
+paradossopdf.egg-info/PKG-INFO
+paradossopdf.egg-info/SOURCES.txt
+paradossopdf.egg-info/dependency_links.txt
+paradossopdf.egg-info/top_level.txt
