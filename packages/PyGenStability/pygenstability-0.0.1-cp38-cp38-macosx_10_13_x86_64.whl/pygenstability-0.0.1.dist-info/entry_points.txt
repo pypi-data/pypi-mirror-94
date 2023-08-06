@@ -1,0 +1,3 @@
+[console_scripts]
+pygenstability = pygenstability.app:cli
+
