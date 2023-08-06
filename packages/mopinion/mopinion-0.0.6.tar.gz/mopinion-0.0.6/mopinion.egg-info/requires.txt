@@ -1,0 +1,12 @@
+requests
+
+[:python_version < "3.7.0"]
+dataclasses
+
+[test]
+requests
+pytest
+mock
+
+[test:python_version < "3.7.0"]
+dataclasses

@@ -1,0 +1,17 @@
+CHANGES.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+mopinion/__init__.py
+mopinion/client.py
+mopinion/dataclasses.py
+mopinion/settings.py
+mopinion.egg-info/PKG-INFO
+mopinion.egg-info/SOURCES.txt
+mopinion.egg-info/dependency_links.txt
+mopinion.egg-info/entry_points.txt
+mopinion.egg-info/not-zip-safe
+mopinion.egg-info/requires.txt
+mopinion.egg-info/top_level.txt
