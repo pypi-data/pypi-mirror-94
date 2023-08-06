@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: humpday
+Version: 0.1.0
+Summary: Taking the pain out of choosing a Python global optimizer
+Home-page: https://github.com/microprediction/humpday
+Author: microprediction
+Author-email: pcotton@intechinvestments.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: wheel
+Requires-Dist: pathlib
+Requires-Dist: numpy (>=1.19.5)
+Requires-Dist: importlib-metadata (>=1.7.0)
+Requires-Dist: microconventions (>0.5.0)
+Requires-Dist: getjson
+Requires-Dist: hyperopt
+Requires-Dist: scipy
+Requires-Dist: scikit-optimize
+Requires-Dist: poap
+Requires-Dist: pySOT
+Requires-Dist: funcy
+Requires-Dist: optuna
+Requires-Dist: deap
+Requires-Dist: ax-platform
+Requires-Dist: platypus-opt
+Requires-Dist: pymoo
+Requires-Dist: nevergrad
+Requires-Dist: swarmlib
+Requires-Dist: landscapes
+
+# humpday
+
+Taking the pain out of choosing a Python global optimizer
+
