@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: fepydas
+Version: 0.0.16
+Summary: felix' python data analysis suite
+Home-page: https://bitbucket.org/_felix_/fepydas
+Author: Felix Nippert
+Author-email: felix@physik.tu-berlin.de
+License: UNKNOWN
+Description: A python3 tool for data analysis and fitting.
+        
+        Install from https://pypi.org/project/fepydas/ with "pip install fepydas".
+        View repository at https://gitlab.tubit.tu-berlin.de/nippert/fepydas
+        Find usage examples at https://gitlab.tubit.tu-berlin.de/nippert/fepydas/src/default/examples/
+        
+        Requirements:
+        Python3
+        numpy
+        scipy
+        matplotlib
+        lmfit
+        scikit-learn
+        pyamg
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Description-Content-Type: text/markdown
