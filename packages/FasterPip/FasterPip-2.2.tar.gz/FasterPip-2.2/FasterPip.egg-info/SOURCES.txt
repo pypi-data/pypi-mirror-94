@@ -1,0 +1,10 @@
+README.md
+setup.py
+FasterPip/FasterPip.py
+FasterPip/__init__.py
+FasterPip/en_us.py
+FasterPip/zh_cn.py
+FasterPip.egg-info/PKG-INFO
+FasterPip.egg-info/SOURCES.txt
+FasterPip.egg-info/dependency_links.txt
+FasterPip.egg-info/top_level.txt
