@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+Friendly_Iter.egg-info/PKG-INFO
+Friendly_Iter.egg-info/SOURCES.txt
+Friendly_Iter.egg-info/dependency_links.txt
+Friendly_Iter.egg-info/top_level.txt
+friendly_iter/__init__.py
+friendly_iter/iterator_modifiers.py
+friendly_iter/iters.py

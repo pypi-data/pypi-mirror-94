@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: Friendly-Iter
+Version: 0.0.1
+Summary: Friendly iterator composition with support for easy fork/join multiprocessing.
+Home-page: https://github.com/mbillingr/friendly-iter
+Author: Martin Billinger-Finke
+License: LICENSE
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
