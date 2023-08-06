@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.nicotine_plus.Nicotine</id>
+  <launchable type="desktop-id">org.nicotine_plus.Nicotine.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <translation type="gettext">nicotine</translation>
+  <name>Nicotine+</name>
+  <name xml:lang="sv">Nicotine+</name>
+  <name xml:lang="sk">Nicotine+</name>
+  <name xml:lang="nl">Nicotine+</name>
+  <name xml:lang="it">Nicotine+</name>
+  <name xml:lang="hu">Nicotine+</name>
+  <name xml:lang="fi">Nicotine+</name>
+  <name xml:lang="eu">Nicotine+</name>
+  <name xml:lang="es">Nicotine+</name>
+  <name xml:lang="de">Nicotine+</name>
+  <name xml:lang="da">Nicotine+</name>
+  <summary>Graphical client for the Soulseek file sharing network</summary>
+  <summary xml:lang="pl">Graficzny klient sieci Soulseek</summary>
+  <summary xml:lang="it">Un client grafico per la rete di condivisione file Soulseek</summary>
+  <description>
+    <p>
+      Nicotine+ is a graphical client for the Soulseek peer-to-peer file
+      sharing network.
+    </p>
+    <p xml:lang="pl">Nicotine+ jest graficznym klientem sieci P2P Soulseek.</p>
+    <p xml:lang="it">Nicotine+ è un client grafico per la rete di condivisione di file peer-to-peer Soulseek.</p>
+    <p xml:lang="fr">Nicotine+ est un client graphique pour le réseau d'échange de fichiers P2P Soulseek.</p>
+    <p>
+      Nicotine+ aims to be a pleasant, Free and Open Source (FOSS)
+      alternative to the official Soulseek client, providing additional
+      functionality while keeping current with the Soulseek protocol.
+    </p>
+    <p xml:lang="it">Nicotine+ mira ad essere un'alternativa piacevole, Free e Open Source (FOSS) al client ufficiale Soulseek, fornendo funzionalità aggiuntive e mantenendosi al passo con il protocollo Soulseek.</p>
+  </description>
+  <categories>
+    <category>FileSharing</category>
+    <category>GTK</category>
+    <category>P2P</category>
+    <category>Network</category>
+  </categories>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/Nicotine-Plus/nicotine-plus/master/files/screenshots/screenshot1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/Nicotine-Plus/nicotine-plus/master/files/screenshots/screenshot2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/Nicotine-Plus/nicotine-plus/master/files/screenshots/screenshot3.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/Nicotine-Plus/nicotine-plus/master/files/screenshots/screenshot4.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://nicotine-plus.org/</url>
+  <url type="bugtracker">https://github.com/Nicotine-Plus/nicotine-plus/issues</url>
+  <developer_name>Nicotine+ Team</developer_name>
+  <developer_name xml:lang="it">Squadra di Nicotine+</developer_name>
+  <content_rating type="oars-1.0">
+    <content_attribute id="social-chat">intense</content_attribute>
+    <content_attribute id="social-info">mild</content_attribute>
+  </content_rating>
+  <releases>
+    <release version="3.0.0" date="2021-02-12"/>
+    <release version="2.2.2" date="2020-12-15"/>
+    <release version="2.2.1" date="2020-12-14"/>
+    <release version="2.2.0" date="2020-12-04"/>
+    <release version="2.1.2" date="2020-10-12"/>
+    <release version="2.1.1" date="2020-09-26"/>
+    <release version="2.1.0" date="2020-09-12"/>
+    <release version="2.0.1" date="2020-07-16"/>
+    <release version="2.0.0" date="2020-07-14"/>
+  </releases>
+</component>
