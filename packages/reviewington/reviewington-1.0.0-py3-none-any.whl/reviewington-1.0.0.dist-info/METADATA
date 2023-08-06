@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: reviewington
+Version: 1.0.0
+Summary: Reviewington gives you wings when reviewing code
+Home-page: https://github.com/HomeXLabs/reviewington
+Author: HomeX
+Author-email: reviewington@homex.com
+License: MIT
+Download-URL: https://github.com/HomeXLabs/reviewington
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Requires-Dist: flask (>=1.1)
+Requires-Dist: Markdown (>=3.3.3)
+Requires-Dist: PyGithub (>=1.54.1)
+Requires-Dist: Pygments (>=2.7.4)
+
+UNKNOWN
+
+
