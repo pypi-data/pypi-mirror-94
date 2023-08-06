@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+example_pkg/__init__.py
+firestorm_cli.egg-info/PKG-INFO
+firestorm_cli.egg-info/SOURCES.txt
+firestorm_cli.egg-info/dependency_links.txt
+firestorm_cli.egg-info/top_level.txt
