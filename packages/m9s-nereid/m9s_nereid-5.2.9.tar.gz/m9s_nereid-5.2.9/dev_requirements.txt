@@ -1,0 +1,13 @@
+# These are requirements for developing on nereid
+-r requirements.txt
+
+# Testing
+tox
+pycountry
+
+# Quality check
+flake8
+coverage
+
+# Documentation
+sphinx

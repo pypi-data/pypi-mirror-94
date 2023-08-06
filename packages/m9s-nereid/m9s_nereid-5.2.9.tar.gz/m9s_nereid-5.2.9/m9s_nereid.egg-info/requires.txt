@@ -1,0 +1,11 @@
+Flask-Babel
+Flask-Login
+blinker
+cachelib
+flask
+flask-wtf
+pytz
+secure-cookie
+speaklater
+trytond<5.3,>=5.2
+trytond_company<5.3,>=5.2
