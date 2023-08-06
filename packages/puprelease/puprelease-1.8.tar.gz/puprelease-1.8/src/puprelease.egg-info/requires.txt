@@ -1,0 +1,7 @@
+click~=7.1
+requests~=2.0
+twine
+setuptools_scm
+
+[:platform_system == "Windows"]
+colorama
