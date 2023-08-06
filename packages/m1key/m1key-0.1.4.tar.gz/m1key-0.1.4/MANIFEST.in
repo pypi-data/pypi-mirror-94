@@ -1,0 +1,2 @@
+global-include *.txt *.py
+global-include m1key/haarcascade_frontalface_alt.xml
