@@ -1,0 +1,7 @@
+squarify
+nltk==3.5
+cdlib
+pyvis
+networkx
+ipywidgets
+textblob

@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: techminer
+Version: 0.1.0
+Summary: Tech Mining of Bibliograpy
+Home-page: http://github.com/jdvelasq/techminer
+Author: Juan D. Velasquez
+Author-email: jdvelasq@unal.edu.co
+License: MIT
+Description: Tech Mining of Bibliograpy
+Keywords: bibliograpy
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides: techminer
