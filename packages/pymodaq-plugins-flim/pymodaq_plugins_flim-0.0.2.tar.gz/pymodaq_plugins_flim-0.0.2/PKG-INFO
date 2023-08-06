@@ -1,0 +1,51 @@
+Metadata-Version: 1.1
+Name: pymodaq_plugins_flim
+Version: 0.0.2
+Summary: Set of PyMoDAQ plugins for FLIM Measurements (Fluorescence Lifetime Imaging Microscopy) (using a conjugation of Time-Correlated Single Photon Counting (TSCPC) and xy stages)
+Home-page: https://github.com/CEMES-CNRS/pymodaq_plugins_template
+Author: Sébastien Weber
+Author-email: sebastien.weber@cemes.fr
+License: CECILL B
+Description: pymodaq_plugins_flim (Fluorescence Lifetime Imaging Microscopy)
+        ###############################################################
+        
+        .. image:: https://img.shields.io/pypi/v/pymodaq_plugins_flim.svg
+           :target: https://pypi.org/project/pymodaq_plugins_flim/
+           :alt: Latest Version
+        
+        .. image:: https://readthedocs.org/projects/pymodaq/badge/?version=latest
+           :target: https://pymodaq.readthedocs.io/en/stable/?badge=latest
+           :alt: Documentation Status
+        
+        .. image:: https://github.com/CEMES-CNRS/pymodaq_plugins_flim/workflows/Upload%20Python%20Package/badge.svg
+            :target: https://github.com/CEMES-CNRS/pymodaq_plugins_flim
+        
+        Set of PyMoDAQ plugins for Fluorescence Lifetime Imaging Microscopy. Current instruments are using Picoquant time to
+        digital counting card and piezoconcept XY piezo stage
+        
+        
+        Authors
+        =======
+        
+        * Sebastien J. Weber
+        
+        Instruments
+        ===========
+        Below is the list of instruments included in this plugin
+        
+        ViewerND
+        ++++++++
+        
+        * **FLIM**: FLIM using piezoconcept XY stage and picoquant timeharp TH260"
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: CeCILL-B Free Software License Agreement (CECILL-B)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: User Interfaces
