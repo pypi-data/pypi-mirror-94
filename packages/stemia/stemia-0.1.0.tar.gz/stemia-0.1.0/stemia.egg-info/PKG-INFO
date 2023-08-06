@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: stemia
+Version: 0.1.0
+Summary: Scripts and Tools for Electron Microscopy Analysis.
+Home-page: https://github.com/brisvag/stemia/
+Author: Lorenzo Gaifas
+Author-email: brisvag@gmail.com
+License: BSD 3-Clause
+Description: # STEMIA
+        
+        **S**cripts and **T**ools for **E**lectron **M**icroscopy **I**mage **A**nalysis.
+        
+        ## Installation
+        
+        ```bash
+        pip install stemia
+        ```
+        
+        ## Tools
+        
+        ```bash
+        center_filament input_stack.mrc [output.mrc]
+        ```
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown

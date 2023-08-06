@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+stemia/__init__.py
+stemia/_version.py
+stemia/center_filament.py
+stemia/functions.py
+stemia/utils.py
+stemia.egg-info/PKG-INFO
+stemia.egg-info/SOURCES.txt
+stemia.egg-info/dependency_links.txt
+stemia.egg-info/entry_points.txt
+stemia.egg-info/not-zip-safe
+stemia.egg-info/requires.txt
+stemia.egg-info/top_level.txt
