@@ -1,0 +1,181 @@
+Metadata-Version: 2.1
+Name: gatenlp
+Version: 1.0.2
+Summary: GATE NLP implementation in Python.
+Home-page: https://github.com/GateNLP/python-gatenlp
+Author: Johann Petrak
+Author-email: johann.petrak@gmail.com
+License: Apache License 2.0
+Keywords: nlp,text processing
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: sortedcontainers (>=2.0.0)
+Provides-Extra: all
+Requires-Dist: msgpack ; extra == 'all'
+Requires-Dist: pyyaml ; extra == 'all'
+Requires-Dist: beautifulsoup4 (>=4.9.3) ; extra == 'all'
+Requires-Dist: requests ; extra == 'all'
+Requires-Dist: py4j ; extra == 'all'
+Requires-Dist: stanza ; extra == 'all'
+Requires-Dist: spacy ; extra == 'all'
+Requires-Dist: nltk ; extra == 'all'
+Requires-Dist: ipython ; extra == 'all'
+Requires-Dist: ipykernel ; extra == 'all'
+Requires-Dist: jupyterlab ; extra == 'all'
+Requires-Dist: notebook ; extra == 'all'
+Requires-Dist: voila ; extra == 'all'
+Requires-Dist: RISE ; extra == 'all'
+Requires-Dist: ipywidgets ; extra == 'all'
+Requires-Dist: matchtext ; extra == 'all'
+Requires-Dist: recordclass ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-pep8 ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: pytest-runner ; extra == 'all'
+Requires-Dist: sphinx ; extra == 'all'
+Requires-Dist: pdoc3 ; extra == 'all'
+Requires-Dist: tox ; extra == 'all'
+Requires-Dist: mypy ; extra == 'all'
+Requires-Dist: pytest-tornasync ; extra == 'all'
+Requires-Dist: black[d] ; extra == 'all'
+Provides-Extra: alldev
+Requires-Dist: msgpack ; extra == 'alldev'
+Requires-Dist: pyyaml ; extra == 'alldev'
+Requires-Dist: beautifulsoup4 (>=4.9.3) ; extra == 'alldev'
+Requires-Dist: requests ; extra == 'alldev'
+Requires-Dist: py4j ; extra == 'alldev'
+Requires-Dist: stanza ; extra == 'alldev'
+Requires-Dist: spacy ; extra == 'alldev'
+Requires-Dist: nltk ; extra == 'alldev'
+Requires-Dist: ipython ; extra == 'alldev'
+Requires-Dist: ipykernel ; extra == 'alldev'
+Requires-Dist: jupyterlab ; extra == 'alldev'
+Requires-Dist: notebook ; extra == 'alldev'
+Requires-Dist: voila ; extra == 'alldev'
+Requires-Dist: RISE ; extra == 'alldev'
+Requires-Dist: ipywidgets ; extra == 'alldev'
+Requires-Dist: matchtext ; extra == 'alldev'
+Requires-Dist: recordclass ; extra == 'alldev'
+Requires-Dist: pytest ; extra == 'alldev'
+Requires-Dist: pytest-pep8 ; extra == 'alldev'
+Requires-Dist: pytest-cov ; extra == 'alldev'
+Requires-Dist: pytest-runner ; extra == 'alldev'
+Requires-Dist: sphinx ; extra == 'alldev'
+Requires-Dist: pdoc3 ; extra == 'alldev'
+Requires-Dist: tox ; extra == 'alldev'
+Requires-Dist: mypy ; extra == 'alldev'
+Requires-Dist: pytest-tornasync ; extra == 'alldev'
+Requires-Dist: black[d] ; extra == 'alldev'
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-pep8 ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-runner ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: pdoc3 ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest-tornasync ; extra == 'dev'
+Requires-Dist: black[d] ; extra == 'dev'
+Provides-Extra: formats
+Requires-Dist: msgpack ; extra == 'formats'
+Requires-Dist: pyyaml ; extra == 'formats'
+Requires-Dist: beautifulsoup4 (>=4.9.3) ; extra == 'formats'
+Requires-Dist: requests ; extra == 'formats'
+Provides-Extra: gazetteers
+Requires-Dist: matchtext ; extra == 'gazetteers'
+Requires-Dist: recordclass ; extra == 'gazetteers'
+Provides-Extra: java
+Requires-Dist: py4j ; extra == 'java'
+Provides-Extra: nltk
+Requires-Dist: nltk ; extra == 'nltk'
+Provides-Extra: notebook
+Requires-Dist: ipython ; extra == 'notebook'
+Requires-Dist: ipykernel ; extra == 'notebook'
+Requires-Dist: jupyterlab ; extra == 'notebook'
+Requires-Dist: notebook ; extra == 'notebook'
+Requires-Dist: voila ; extra == 'notebook'
+Requires-Dist: RISE ; extra == 'notebook'
+Requires-Dist: ipywidgets ; extra == 'notebook'
+Provides-Extra: spacy
+Requires-Dist: spacy ; extra == 'spacy'
+Provides-Extra: stanza
+Requires-Dist: stanza ; extra == 'stanza'
+
+# Python library gatenlp
+
+[![PyPi version](https://img.shields.io/pypi/v/gatenlp.svg)](https://pypi.python.org/pypi/gatenlp/)
+[![Python compatibility](https://img.shields.io/pypi/pyversions/gatenlp.svg)](https://pypi.python.org/pypi/gatenlp/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/gatenlp)](https://pypistats.org/packages/gatenlp)
+[![License](https://img.shields.io/github/license/GateNLP/python-gatenlp.svg)](LICENSE)
+[![GitHub Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FGateNLP%2Fpython-gatenlp%2Fbadge&style=flat)](https://actions-badge.atrox.dev/GateNLP/python-gatenlp/goto)
+[![CodeCov](https://img.shields.io/codecov/c/gh/GateNlp/python-gatenlp.svg)](https://codecov.io/gh/GateNLP/python-gatenlp)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![Join the chat at https://gitter.im/GateNLP/python-gatenlp](https://badges.gitter.im/GateNLP/python-gatenlp.svg)](https://gitter.im/GateNLP/python-gatenlp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+This is a package for representing the basic elements of text processing
+and NLP in a way that is very similar to the
+[Java GATE NLP](https://gate.ac.uk/)
+framework, 
+for manipulating GateNLP documents and
+for interacting with GATE Java and the GATE python plugin.
+
+## Documentation and feedback
+
+* [Documentation](https://gatenlp.github.io/python-gatenlp/) 
+* [PythonDoc](https://gatenlp.github.io/python-gatenlp/pythondoc/gatenlp/)
+
+If you find bugs, want to requrest a feature or change, please use the [issue tracker](https://github.com/GateNLP/python-gatenlp/issues)
+
+For more general discussions about the package and communication within current and future users, please use the [Dicussions](https://github.com/GateNLP/python-gatenlp/discussions)
+
+
+## Overview
+
+Python GateNLP is an NLP and text processing framework implemented in Python. 
+
+Python GateNLP represents documents and stand-off annotations very similar to 
+the [Java GATE framework](https://gate.ac.uk/): Annotations describe arbitrary character ranges in the text and each annotation can have an arbitrary number of _features_.  Documents can have arbitrary features and an arbitrary number of named _annotation sets_, where each annotation set can have an arbitrary number of annotations which can overlap in any way. Python GateNLP documents can be exchanged with Java GATE by using the bdocjs/bdocym/bdocmp formats which are supported in Java GATE via the [Format Bdoc Plugin](https://gatenlp.github.io/gateplugin-Format_Bdoc/)
+
+Other than many other Python NLP tools, GateNLP does not require a specific way of how text is split up into tokens, tokens can be represented by annotations in any way, and a document can have different ways of tokenization simoultanously, if needed. Similarly, entities can be represented by annotations without restriction: they do not need to start or end at token boundaries and can overlap arbitrarily. 
+
+GateNLP provides ways to process text and create annotations using annotating pipelines, which are sequences of one or more annotators. 
+There are annotators for matching text against gazetteer lists and annotators for complex matching of annotation and text sequences (see [PAMPAC](pampac)).
+
+There is also support for creating GateNLP annotations with other NLP packages like Spacy or Stanford Stanza.
+
+The GateNLP document representation also optionally allows to track all changes
+done to the document in a "change log" (a `gatenlp.ChangeLog` instance).
+Such changes can later be applied to other Python GateNLP or to  Java GATE documents.
+
+This library also implements the functionality for the interaction with
+a Java GATE process in two different ways:
+* The Java GATE Python plugin can invoke a python process to annotate GATE documents
+  with python code
+* the python code can remote-control a Jave GATE instance
+
+## Versions and Roadmap
+
+* Versions 0.x are unpublished
+* Versions 1.0.x are public releases with feedback that may change APIs and change main parts of the software
+* Versions 1.x are public stable releases
+
+
+---
+
+**NOTE: The previous Pypi project "gatenlp" has moved to [gatenlphiltlab](https://github.com/nickwbarber/gatenlphiltlab)**
+
+
+
