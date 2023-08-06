@@ -1,0 +1,4 @@
+include ssht00ls/lib/opensc/*
+include ssht00ls/lib/opensc/*/**
+include ssht00ls/classes/utils/*
+include ssht00ls/classes/utils/*/**
