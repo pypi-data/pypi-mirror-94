@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: paramga
+Version: 0.0.1
+Summary: Parameter Regression GA tool
+Home-page: UNKNOWN
+Author: SBland
+Author-email: sblandcouk@gmail.com
+License: UNKNOWN
+Description: # Paramga
+        
+        Paramga is a Genetic Algorithm tool for optimizing model parameters.
+        
+Keywords: genetic algorithm,optimization,scientific modelling
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Provides-Extra: test
