@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: mapas
+Version: 1.0.1
+Summary: Create static maps from different layers
+Home-page: https://gitlab.com/categulario/mapas-py
+Author: Abraham Toriz Cruz
+Author-email: categulario@gmail.com
+License: GPLv3
+Keywords: map,mapa,static map
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: requests
+Requires-Dist: Pillow (<8.0,>=7.0)
+
+Mapas
+=====
+
+Create static maps from some layers, pretty much like you do with `openlayers`
+but static and in python.
+
+Installation
+------------
+
+.. code:: bash
+
+    $ pip install mapas
+
+Usage
+-----
+
+.. code:: python
+
+    from mapas import Map, Tile, Image, source
+
+    mapa = Map(
+        width=600,
+        height=400,
+        layers=[
+            Tile(source=source.Mapbox(
+                username='your-username',
+                style_id='some-style',
+                token='your-token',
+            )),
+            Image(source=source.ImageWms(
+                server_url="https://some.geoserver.com/wms",
+                layers=['your:layer'],
+                cql_filter="prop='value'",
+            )),
+        ],
+    )
+
+    mapa.set_center(-96.10257, 19.13352)
+    mapa.set_zoom(18)
+
+    renderer = mapa.render_to_image()
+
+    renderer.save('mapa.png')
+
+Run it and you'll have a beautiful map at ``mapa.png``.
+
+
