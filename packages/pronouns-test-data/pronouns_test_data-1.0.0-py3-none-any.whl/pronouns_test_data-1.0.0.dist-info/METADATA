@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pronouns-test-data
+Version: 1.0.0
+Summary: A library to aid in vending test data for UW-IT IAM pronouns test cases.
+Author: Tom Thorogood
+Author-email: tom@tomthorogood.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: inflection (>=0.5.1,<0.6.0)
+Requires-Dist: pydantic (>=1.7.3,<2.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: typer (>=0.3.2,<0.4.0)

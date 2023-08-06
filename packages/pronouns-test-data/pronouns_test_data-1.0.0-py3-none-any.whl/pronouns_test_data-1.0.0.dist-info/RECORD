@@ -1,0 +1,14 @@
+pronouns_test_data/__init__.py,sha256=-0aufCtX0EbyUyT_-KQBy04N-F2g0EqpnLuXA_VUmkE,1732
+pronouns_test_data/data/0.1.0.csv,sha256=D_BDjH6l3BCnm7q2zBhJDAZs2-0ZMDOkPzAmpVB4xOQ,2450
+pronouns_test_data/data/0.1.0.json,sha256=q7hgpFmTs5M8vkR0Vyml98xvPhq1BE4fDZ1O7L5Kp3M,4265
+pronouns_test_data/data/1.0.0.csv,sha256=D_BDjH6l3BCnm7q2zBhJDAZs2-0ZMDOkPzAmpVB4xOQ,2450
+pronouns_test_data/data/1.0.0.json,sha256=q7hgpFmTs5M8vkR0Vyml98xvPhq1BE4fDZ1O7L5Kp3M,4265
+pronouns_test_data/data/latest.csv,sha256=D_BDjH6l3BCnm7q2zBhJDAZs2-0ZMDOkPzAmpVB4xOQ,2450
+pronouns_test_data/data/latest.json,sha256=q7hgpFmTs5M8vkR0Vyml98xvPhq1BE4fDZ1O7L5Kp3M,4265
+pronouns_test_data/generate.py,sha256=7e7yvn1oqY_Uh68i5OqXRwTTzelVCa3bt_zT9mZQbb8,6367
+pronouns_test_data/models.py,sha256=hBTUtnqIPbBtGB8YiIFuxbm2lXFWYahp2eQslShQg-8,1089
+pronouns_test_data/publish.py,sha256=RLzaq1ub-3dEjAKvz5Klpzy8J8TMRd6W_O3pI41rca4,3864
+pronouns_test_data-1.0.0.dist-info/LICENSE,sha256=9tpPn3092rz4bPUtG-4Qy_i4ZCadRB-eJYy2Cb0ah9c,1091
+pronouns_test_data-1.0.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+pronouns_test_data-1.0.0.dist-info/METADATA,sha256=8wbW5p69ot28TzSA6Sr55AidFWbuyvew4_ReGb1QNss,541
+pronouns_test_data-1.0.0.dist-info/RECORD,,

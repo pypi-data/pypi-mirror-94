@@ -1,0 +1,99 @@
+{
+    "test_cases": [
+        {
+            "uwnetid": "javerage",
+            "pronoun": "they/them/their/theirs/themself",
+            "useCase": "The full expression of a single pronoun set. Also, this netid should be registered for some university classes."
+        },
+        {
+            "uwnetid": "uwitpn01",
+            "pronoun": "she/her/hers; they/them/theirs",
+            "useCase": "A consistently formatted list of two pronoun sets."
+        },
+        {
+            "uwnetid": "uwitpn02",
+            "pronoun": "he him his",
+            "useCase": "A single, atypically formatted pronoun set."
+        },
+        {
+            "uwnetid": "uwitpn03",
+            "pronoun": "she, her, hers or they/them",
+            "useCase": "Two atypically and inconsistently formatted pronoun sets."
+        },
+        {
+            "uwnetid": "uwitpn04",
+            "pronoun": "please use my name",
+            "useCase": "Guidance in place of a declared pronoun set, with no punctuation."
+        },
+        {
+            "uwnetid": "uwitpn05",
+            "pronoun": "i am exploring this. please ask me!",
+            "useCase": "Guidance in place of a declared pronoun set, with punctuation."
+        },
+        {
+            "uwnetid": "uwitpn06",
+            "pronoun": "they/them/theirs;they/them/theirs;they/them/theirs",
+            "useCase": "A consistently formatted pronoun set that is (accidentally?) pasted three times, with no spaces."
+        },
+        {
+            "uwnetid": "uwitpn07",
+            "pronoun": "she/they",
+            "useCase": "A common shorthand expression of two pronoun sets."
+        },
+        {
+            "uwnetid": "uwitpn08",
+            "pronoun": "ze/hir",
+            "useCase": "A common shorthand expression of two neo-pronoun sets."
+        },
+        {
+            "uwnetid": "uwitpn09",
+            "pronoun": "fae/r or they/themself",
+            "useCase": "One neo-pronoun shorthand and one shorthand expression of the \"they\" pronoun set, each with its own shorthand syntax"
+        },
+        {
+            "uwnetid": "uwitpn10",
+            "pronoun": "\"\"el\"&maybe \"els\" or just ask?",
+            "useCase": "A pronoun, plus guidance, with inconsistent punctuation."
+        },
+        {
+            "uwnetid": "uwitpn11",
+            "pronoun": "[qp~y5;XfVSk",
+            "useCase": "12 randomly generated characters (very common length)"
+        },
+        {
+            "uwnetid": "uwitpn12",
+            "pronoun": "@.8x]2-&y^iscCrC",
+            "useCase": "16 randomly generated characters (very common length)"
+        },
+        {
+            "uwnetid": "uwitpn13",
+            "pronoun": "'BtV+-Md:;[P{qKRja$_XEn0)x+DGl$9",
+            "useCase": "32 randomly generated characters (uncommon length)"
+        },
+        {
+            "uwnetid": "uwitpn14",
+            "pronoun": "Mb4f_k!+I! ny0GGQD=')_UcDD&mR,K_[krljd$U 97obMs1(7wBx_}3AVVr-z:}",
+            "useCase": "64 randomly generated characters (unlikely length)"
+        },
+        {
+            "uwnetid": "uwitpn15",
+            "pronoun": "<a)8i k!V:K*PLE_&O9\"J1$](-24a&2lG?Iu+>Y ]2GBXs?,(aq#=v!9F\"#Kr7,4d%%Y+OPrwTzntwY9A9uTtqg^.\"zGKeGeh0l>2/ei8?Pl\"E#;&m&r4{}YE4oxvsX=",
+            "useCase": "128 randomly generated characters (very unlikely length)"
+        },
+        {
+            "uwnetid": "uwitpn16",
+            "pronoun": "2ijdCPCC+WD0u/^.R$o=odFe&='1Ak_$LiKjQm?ITAR,g/u)`~9#qtlKJF~Q!78W9Cmu<7Waew+o<7D#fDfx@9:/l?{'a^lCx`WRyZBT'7Bce;SgF6Xrs'_p@L=IY}l`.f``n 2CC&HI",
+            "useCase": "140 (max. length) randomly generated characters (very unlikely length)"
+        },
+        {
+            "uwnetid": "uwitpn17",
+            "pronoun": ";='`&)$!+#-^\"%<?.-](<`?);>\"*~[%$:\"}$+(/\"+)<#~-,;){(.^-.(_>`!:!}:^`}%(<$({]`\"\"\"-=[`-].~~@@\"_]{$;&`%=]/,_-/*^+;}[{]\"].\"&!'/];@.][%$/}<;=[?-=`/",
+            "useCase": "140 characters of only punctuation, to test text wrapping"
+        },
+        {
+            "uwnetid": "uwitpn18",
+            "pronoun": "24713632739549236680103459143198308065667169262168649987657345631317517879718147154403037854543061319612683934677135747395643219072865559052",
+            "useCase": "140 characters of only punctuation, to test text wrapping"
+        }
+    ]
+}
