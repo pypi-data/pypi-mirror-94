@@ -1,0 +1,10 @@
+pytcolor/__init__.py,sha256=Pp45aoPDNHEKZWnSxelT32anYPWhFHvbjDs8H1HMKXM,540
+pytcolor/colors.py,sha256=91WJc2qF2hUNLNWcSd-iM2yn_1F2EnOUn6yIDQP-lnQ,4218
+pytcolor/constants.py,sha256=QVUftzZ822FQUTqyEQ4rPbEtXPa_VutNmnVBvnjjPIM,1222
+tests/__init__.py,sha256=ii5ychs_JD1wSDRJJjpX2vsgVyzIt3H6x7uru_i9SNk,339
+tests/test_apply_color.py,sha256=aQSW8_zVh9eTYiUMiWFm-MIvRXPJHhAWG8hgIj5zLak,5088
+pytcolor-1.0.0.1.dist-info/LICENSE,sha256=APbOZ4leWOHC3_zA1Kp74t059JKy2esMLCCjOjJcoAM,1057
+pytcolor-1.0.0.1.dist-info/METADATA,sha256=_xyFrqqfx8GTyLsAn_5cfa5WAM5JYua2KvI0jTNwBBU,3528
+pytcolor-1.0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytcolor-1.0.0.1.dist-info/top_level.txt,sha256=xL97nylkcy1xQ8xLDnwIq7P0m47TE1JHsKGCkpyYObg,15
+pytcolor-1.0.0.1.dist-info/RECORD,,
