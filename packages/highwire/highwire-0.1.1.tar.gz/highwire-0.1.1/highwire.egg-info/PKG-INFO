@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: highwire
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://gitlab.com/greenhousegroup/ai/libraries/highwire/
+Author: Bart Frenk
+Author-email: bart.frenk@gmail.com
+License: UNKNOWN
+Description: Description
+        ============
+        
+        A simple library for functional reactive programming in Python, very loosely
+        based on the `wires <https://hackage.haskell.org/package/wires>`_ Haskell package.
+        
+        Introduction
+        ------------
+        
+        Example
+        -------
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
