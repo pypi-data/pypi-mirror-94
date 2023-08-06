@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+crabatar/__init__.py
+crabatar/crab.png
+crabatar/models.py
+crabatar/utils.py
+crabatar.egg-info/PKG-INFO
+crabatar.egg-info/SOURCES.txt
+crabatar.egg-info/dependency_links.txt
+crabatar.egg-info/requires.txt
+crabatar.egg-info/top_level.txt
