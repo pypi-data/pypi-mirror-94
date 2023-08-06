@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ccf_spark
+Version: 0.1.1
+Summary: A little CCF implementation in a Spark context with networkx
+Home-page: https://github.com/ErnestBidouille/ccf-spark
+Author: Théo Chennebault
+Author-email: theo.chennebault@le-cab-politique.fr
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
