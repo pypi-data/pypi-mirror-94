@@ -1,0 +1,11 @@
+easyserial/__init__.py,sha256=IPh_bOIeipTQGt7Oiwj3uTzrpUSBPxpiJe9itguSCYU,48
+easyserial/easyserial.py,sha256=SAHt-1RzhjrP6C_K-gUwy5ONPUxPW7Ef_cyTbP7gcEA,8505
+easyserial/errors.py,sha256=7UcuVEQpu1yXS1N-iO313WlEEwtvRTk4-ACjD8Iztlc,535
+easyserial/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easyserial/scripts/logger.py,sha256=Ft9Qw9u5U3x5_iKaECoyVPIbvdCVXPf443y0CAqYtY0,3183
+easyserial-0.2.0.dist-info/LICENSE,sha256=l1hD4FQ988Jx87Q3acomzV60Wn_ketnn8c4m_t9CNNo,1076
+easyserial-0.2.0.dist-info/METADATA,sha256=Sg6M2YfhV-UNGqvz9cDLVH2UH-TZGuf3vqMRoRZk9a0,1796
+easyserial-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+easyserial-0.2.0.dist-info/entry_points.txt,sha256=CfzJGDUb9tfllCzU052heAsCkiKVJf3U1gRoFZ6bAs4,70
+easyserial-0.2.0.dist-info/top_level.txt,sha256=wuX4h2cMFMeawfVYFQ3hKlbpSQha6ii01QYuvTjcGzs,11
+easyserial-0.2.0.dist-info/RECORD,,
