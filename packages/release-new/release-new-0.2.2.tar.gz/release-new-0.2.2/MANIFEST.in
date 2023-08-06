@@ -1,0 +1,8 @@
+
+include *.py
+include tox.ini
+reverse_include release_new *.py
+
+exclude .gitlab-ci.yml
+
+prune debian
