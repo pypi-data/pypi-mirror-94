@@ -1,0 +1,322 @@
+Metadata-Version: 2.1
+Name: stig
+Version: 0.12.1a0
+Summary: TUI and CLI client for the Transmission daemon
+Home-page: https://github.com/rndusr/stig
+Author: Random User
+Author-email: rndusr@posteo.de
+License: GPLv3+
+Keywords: bittorrent torrent transmission
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Environment :: Console
+Classifier: Operating System :: Unix
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Requires-Dist: urwid (>=2.0)
+Requires-Dist: urwidtrees (>=1.0.3dev0)
+Requires-Dist: aiohttp (<4,>=3)
+Requires-Dist: async-timeout
+Requires-Dist: pyxdg
+Requires-Dist: blinker
+Requires-Dist: natsort
+Provides-Extra: proxy
+Requires-Dist: aiohttp-socks ; extra == 'proxy'
+Provides-Extra: setproctitle
+Requires-Dist: setproctitle ; extra == 'setproctitle'
+
+stig
+====
+
+|image0| |image1| |image2| |image3| |image4|
+
+|image5|
+
+stig is a TUI (text user interface) and CLI (command line interface)
+client for the `BitTorrent client
+Transmission <http://www.transmissionbt.com/>`__.
+
+stig is still in alpha state, which means breaking changes will be
+introduced in new releases without increasing the major version number.
+You shouldn't accept bugs, though; please report them.
+
+Features
+--------
+
+-  **Filters** are used to select torrents for listing,
+   starting/stopping, deleting, etc
+-  **Tabs** allow you to open and switch between multiple lists
+   (torrents, peers, files, etc)
+-  **Commands** do almost everything, and they can be invoked
+
+   -  through single- or multi-key (think emacs) **keybindings**,
+   -  by entering them in a **command prompt** in the TUI (think vi)
+      with **tab completion**,
+   -  by providing them as **CLI arguments** when invoking stig (think
+      git),
+   -  or by listing them in an **rc file** which is automatically
+      loaded.
+
+-  **Color themes** support 16 and 256 colors
+-  **Complete built-in documentation** with ``help`` command or
+   ``--help`` argument
+-  Full **API abstraction layer** makes it possible to add support for
+   other BitTorrent clients with RPC interfaces (contributors are
+   welcome)
+
+Examples
+--------
+
+Add two torrents, one by file and one by hash, and exit
+
+.. code:: bash
+
+   $ stig add /path/to/some.torrent d4d6b73851fe3288e40389a8e1fb98124a9b9ba5
+
+Connect to non-default host and present the TUI
+
+.. code:: bash
+
+   $ stig set connect.host torrents.local
+
+Print all uploading and/or downloading torrents on localhost:9092 and
+exit
+
+.. code:: bash
+
+   $ stig set connect.port 9092 \; ls active
+
+List torrents with more than 50 seeds, then remove them
+
+.. code:: bash
+
+   $ stig ls 'seeds>50'
+   $ stig rm 'seeds>50'
+
+Stop down/uploading torrents with ``/foo/`` in their download path and a
+ratio above 10
+
+.. code:: bash
+
+   $ stig stop 'path~/foo/&ratio>10'
+
+Open two tabs with different torrent lists:
+
+-  slowly uploading torrents with ``/foo/`` in their download path
+-  small or well-seeded torrents, sorted by size (ascending) and number
+   of seeds (descending)
+
+.. code:: bash
+
+   $ stig tab ls 'path~/foo/&rate-up<10k' \; tab ls 'size<500M|seeds>=1k' --sort 'size,!seeds'
+
+Configuration and Scripting
+---------------------------
+
+All configuration is done in an rc file, which is just a script
+containing a list of commands (think vim and .vimrc) that are executed
+during startup. The default rc file is ``$XDG_CONFIG_HOME/stig/rc``.
+``XDG_CONFIG_HOME`` defaults to ``$HOME/.config`` if not set. Because a
+default rc file is empty, it is not created automatically to avoid
+clutter.
+
+See ``stig help cfgman`` for more information.
+
+Example rc file
+~~~~~~~~~~~~~~~
+
+::
+
+   # Host that runs Transmission daemon
+   set connect.host example.org
+   set connect.port 123
+
+   # Update torrent/peer/file/etc lists every 10 seconds
+   set tui.poll 10
+
+   # Default columns in torrent lists
+   set columns.torrents name ratio rate-up rate-down
+
+   # Open a few tabs on startup
+   tab ls active --sort !%downloaded,path,!rate
+   tab ls paused --sort !%downloaded --columns name,%downloaded,ratio,size
+   tab ls isolated --sort tracker --columns name,path
+
+Run different rc files either with ``stig -c path/to/file`` or with the
+``rc`` command. You can even turn them into executables with the shebang
+``#!/path/to/stig -Tc`` (``-T`` disables the TUI, ``-c`` specifies the
+rc file).
+
+Example maintenance script
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+   #!/path/to/stig -Tc
+   rm path=/path/to/torrents/trash
+   pause seeds>100
+   start seeds<20&size>10G|seeds<50&size>20G
+
+Installation
+------------
+
+The `latest release <https://pypi.python.org/pypi/stig>`__ is always on
+PyPI.
+
+Packages
+~~~~~~~~
+
+-  Arch (AUR): `stig <https://aur.archlinux.org/packages/stig>`__,
+   `stig-git <https://aur.archlinux.org/packages/stig-git>`__
+-  NixOS:
+   `stig <https://nixos.org/nixos/packages.html?attr=stig&query=stig>`__
+
+Pipx (recommended)
+~~~~~~~~~~~~~~~~~~
+
+`Pipx <https://github.com/pipxproject/pipx>`__ installs applications in
+self-contained virtual environments in ``$HOME/.local/pipx/`` that
+include all dependencies. Executables are sym-linked to
+``$HOME/.local/bin/``.
+
+.. code:: bash
+
+   $ pipx install stig
+   $ pipx upgrade stig
+   $ pipx uninstall stig
+
+Pip
+~~~
+
+`pip <https://pip.pypa.io/en/stable/>`__ installs applications with
+their dependencies in the system-wide (``/usr/local``) or user-wide
+(``$HOME/.local``) environment.
+
+.. code:: bash
+
+   $ pip3 install stig         # Installs in /usr/local/
+   $ pip3 install --user stig  # Installs in $HOME/.local/
+
+To update, add the ``--upgrade`` or ``-U`` option.
+
+Extras
+~~~~~~
+
+The following extras are available to enable optional features:
+
+``setproctitle``
+   Strip arguments from process title when running in tmux session (this
+   requires Python headers; e.g. ``apt-get install libpython3-dev``)
+``proxy``
+   Tunnel the connection to the Transmission daemon through a SOCKS5,
+   SOCKS4 or HTTP proxy
+
+To install stig with dependencies for an extra:
+
+.. code:: bash
+
+   $ pipx install 'stig[setproctitle,proxy]'              # For pipx version>=0.15.0.0
+   $ pipx install stig --spec 'stig[setproctitle,proxy]'  # For pipx version<0.15.0.0
+
+Development version
+~~~~~~~~~~~~~~~~~~~
+
+To install the latest development version of stig with pipx:
+
+.. code:: bash
+
+   $ pipx install 'git+https://github.com/rndusr/stig.git#egg=stig'              # For pipx version>=0.15.0.0
+   $ pipx install stig --spec 'git+https://github.com/rndusr/stig.git#egg=stig'  # For pipx version<0.15.0.0
+
+Developing
+~~~~~~~~~~
+
+To make your code changes effective immediately, you can either run
+``python3 -m stig <ARGUMENTS>`` in the project directory or use
+``pip3``'s ``--editable`` option.
+
+#. Run tests with your system's Python version
+
+   To run the tests with the Python version that is installed on your
+   system, simply run ``make test`` in the project directory. This
+   creates a virtual environment in ``./venv``, installs stig and its
+   dependencies in there and runs all tests.
+
+   If you want to only run tests for a specific module or package:
+
+   #. Create a virtual environment with all dependencies: ``make venv``
+   #. Activate the virtual environment: ``source venv/bin/activate``
+   #. Pass any path in the ``tests`` directory to pytest:
+      ``pytest tests/settings_test``
+
+#. Run tests with all supported Python versions
+
+   #. Install and set up
+      `pyenv <https://github.com/pyenv/pyenv#table-of-contents>`__.
+   #. With pyenv, install the supported Python versions listed in
+      ``.setup.py``.
+   #. In stig's project directory, create a virtual environment with all
+      dependencies: ``make venv``
+   #. Activate the virtual environment: ``source venv/bin/activate``
+   #. Run the tests for each supported Python version: ``tox``
+   #. Pass arguments to pytest:
+      ``tox -- --exitfirst tests/settings_test``
+
+Requirements
+------------
+
+-  Python >=3.5
+-  `urwid <http://www.urwid.org/>`__ >=1.3.0
+-  `urwidtrees <https://github.com/pazz/urwidtrees>`__ >=1.0.3dev0
+-  `aiohttp <https://pypi.python.org/pypi/aiohttp>`__
+-  `async\ timeout <https://pypi.python.org/pypi/async_timeout>`__
+-  `pyxdg <https://pypi.python.org/pypi/pyxdg>`__
+-  `blinker <https://pypi.python.org/pypi/blinker>`__
+-  `natsort <https://pypi.python.org/pypi/natsort>`__
+-  `setproctitle <https://pypi.python.org/pypi/setproctitle/1.1.10>`__
+   (optional; prettifies the process name)
+-  `asynctest <https://pypi.python.org/pypi/asynctest/>`__ (only needed
+   to run tests)
+
+Contributing
+------------
+
+Pull requests, bug reports, features requests, ideas for improvement and
+all other constructive contributions are welcome.
+
+If you want to contribute code and get stuck, don't know where to even
+begin, or just to make sure you're not duplicating someone else's
+efforts, open an issue.
+
+Please submit your custom themes if you would like them to be included
+in stig.
+
+License
+-------
+
+stig is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the `GNU
+General Public License <https://www.gnu.org/licenses/gpl-3.0.txt>`__ for
+more details.
+
+.. |image0| image:: https://img.shields.io/pypi/v/stig.svg
+   :target: https://pypi.python.org/pypi/stig
+.. |image1| image:: https://img.shields.io/pypi/status/stig.svg
+.. |image2| image:: https://img.shields.io/pypi/l/stig.svg
+.. |image3| image:: https://img.shields.io/pypi/pyversions/stig.svg
+.. |image4| image:: https://img.shields.io/github/last-commit/rndusr/stig.svg
+.. |image5| image:: https://raw.githubusercontent.com/rndusr/stig/master/screenshot.png
+
+
