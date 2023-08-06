@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: torque-python
+Version: 1.0.1
+Summary: Torque library.
+Home-page: https://github.com/torquecloud/torque-python
+Author: Torque, Inc.
+Author-email: development@torque.cloud
+License: UNKNOWN
+Description: # Torque Python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
