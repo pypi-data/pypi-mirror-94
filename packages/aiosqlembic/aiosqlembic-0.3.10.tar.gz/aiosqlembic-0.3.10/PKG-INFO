@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: aiosqlembic
+Version: 0.3.10
+Summary: Migrations powered by aiosql
+Home-page: https://gitlab.com/euri10/aiosqlembic
+License: Unlicense
+Keywords: asyncpg,postgresql,migration
+Author: euri10
+Author-email: benoit.barthelet@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: Other/Proprietary License
+Classifier: License :: Public Domain
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: SQL
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Typing :: Typed
+Requires-Dist: aiosql (>=3.2.0,<4.0.0)
+Requires-Dist: asyncpg (>0.21.0)
+Requires-Dist: colorama (>=0.4.4,<0.5.0)
+Requires-Dist: jinja2 (>=2.11.2,<3.0.0)
+Requires-Dist: pydantic (>=1.6.1,<2.0.0)
+Project-URL: Documentation, https://aiosqlembic.readthedocs.io/en/latest/
+Project-URL: Repository, https://gitlab.com/euri10/aiosqlembic
+Description-Content-Type: text/markdown
+
+<img src="/docs/source/Cigogne_Belon_1555.jpg"  height="200">
+
+**Aiosqlembic, migrations welcome !**
+
+
+Readme
+======
+
+![pipeline](https://gitlab.com/euri10/aiosqlembic/badges/master/pipeline.svg)
+![coverage](https://gitlab.com/euri10/aiosqlembic/badges/master/coverage.svg)
+![documentation](https://readthedocs.org/projects/aiosqlembic/badge/?version=latest)
+
+
+Aiosqlembic aims at running database migrations powered by the awesome [aiosql](https://github.com/nackjicholson/aiosql)
+
+It's inspired by goose for those coming from go
+
+It is in development and likely to break
+
+Documentation
+-------------
+
+It's [here](https://aiosqlembic.readthedocs.io/en/latest/index.html)
+
+Usage
+-----
+
+Run `aiosqlembic --help`
+
