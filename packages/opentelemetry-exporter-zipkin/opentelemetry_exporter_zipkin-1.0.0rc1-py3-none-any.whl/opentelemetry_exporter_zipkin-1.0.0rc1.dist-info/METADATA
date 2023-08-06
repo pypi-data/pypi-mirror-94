@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: opentelemetry-exporter-zipkin
+Version: 1.0.0rc1
+Summary: Zipkin Span Exporter for OpenTelemetry
+Home-page: https://github.com/open-telemetry/opentelemetry-python/tree/main/exporter/opentelemetry-exporter-zipkin
+Author: OpenTelemetry Authors
+Author-email: cncf-opentelemetry-contributors@lists.cncf.io
+License: Apache-2.0
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Requires-Dist: protobuf (>=3.12)
+Requires-Dist: requests (~=2.7)
+Requires-Dist: opentelemetry-api (==1.0.0rc1)
+Requires-Dist: opentelemetry-sdk (==1.0.0rc1)
+Provides-Extra: test
+
+OpenTelemetry Zipkin Exporter
+=============================
+
+|pypi|
+
+.. |pypi| image:: https://badge.fury.io/py/opentelemetry-exporter-zipkin.svg
+   :target: https://pypi.org/project/opentelemetry-exporter-zipkin/
+
+This library allows to export tracing data to `Zipkin <https://zipkin.io/>`_.
+
+Installation
+------------
+
+::
+
+     pip install opentelemetry-exporter-zipkin
+
+
+References
+----------
+
+* `OpenTelemetry Zipkin Exporter <https://opentelemetry-python.readthedocs.io/en/latest/exporter/zipkin/zipkin.html>`_
+* `Zipkin <https://zipkin.io/>`_
+* `OpenTelemetry Project <https://opentelemetry.io/>`_
+
+
