@@ -1,0 +1,3 @@
+[console_scripts]
+backups = backups.cli:main
+
