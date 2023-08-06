@@ -1,0 +1,12 @@
+sheet2dict/__init__.py,sha256=8D5a8oKgqd6WA1RUkiKCn4l_PVemtyuckxQut0vDHXM,20
+sheet2dict/main.py,sha256=Ezv7hNJK9nqHV_VIbr3GN6oVNxYjRxPsju-Y_fWieYg,2008
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=LHhqjE_x4ftS59oAJIJ0zGN0GQxAMpss_bNeOWk17rU,209
+tests/test_1_xlsx.py,sha256=PDVA4h4spRB5dHuG0feYfFtyen09_P02JQeervLBq6I,1933
+tests/test_2_csv.py,sha256=iT7p2NR87mo6k1_MP-ohDlG4M145y0I2xWkQhwRlf90,1652
+tests/x-custom_tests.py,sha256=6zUblWWusZu95DVpVi4_2m3Vl-4PvdJP9T6_JYPP7XM,683
+sheet2dict-0.0.6.dist-info/LICENSE,sha256=AbWdkQgjKhMmeteK980ocHTPz_keWY7cBrVa93P-x-I,1069
+sheet2dict-0.0.6.dist-info/METADATA,sha256=R1tGUDfobEPW7_84Pu5lkiAuqXh9HcCaHMlFii201as,4041
+sheet2dict-0.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sheet2dict-0.0.6.dist-info/top_level.txt,sha256=ZVDKj0n5hlsySZ_wH3pFzI1eAhrZaNeT2YNAfEA-UB8,17
+sheet2dict-0.0.6.dist-info/RECORD,,
