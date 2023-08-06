@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: ydiskdown
+Version: 0.1
+Summary: Simple Yandex Disk downloader
+Home-page: https://github.com/IamSVP94/ydown
+Author: IamSVP
+Author-email: PSV1994@yandex.ru
+License: UNKNOWN
+Description: # Yandex Disk Downloader tool 
+        
+        Примеры работы через командную строку:
+        
+        Вывести ссылку на прямое скачивание в консоль
+        ```
+        python ydown.py --url https://yadi.sk/d/ykm7UqF3nPveY 
+        ```
+        Сохранить файл с именем из диска
+        ```
+        python ydown.py -d --url https://yadi.sk/d/ykm7UqF3nPveY 
+        ```
+        Сохранить файл по указаному пути
+        ```
+        python ydown.py -d --url https://yadi.sk/d/ykm7UqF3nPveY -o ./filename.ext
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
