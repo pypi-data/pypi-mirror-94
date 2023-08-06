@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mjango
+Version: 0.2.1
+Summary: mongodb sdk mimic interface like django
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: ChienHsiao
+Author-email: chien.hsiao@revteltech.com
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pymongo
+Requires-Dist: dnspython
