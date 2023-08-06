@@ -1,0 +1,3 @@
+[console_scripts]
+ansible-mkdocs=ansible_mkdocs.main:make_docs
+
