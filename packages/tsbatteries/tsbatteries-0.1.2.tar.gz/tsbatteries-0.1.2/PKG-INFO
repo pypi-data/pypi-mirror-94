@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: tsbatteries
+Version: 0.1.2
+Summary: Helper functions for time-series with PyTorch
+Home-page: UNKNOWN
+Author: James Morrill
+Author-email: james.morrill.6@gmail.com
+License: UNKNOWN
+Description: # Batteries
+        Helper functions for working with time series data in pytorch.
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
