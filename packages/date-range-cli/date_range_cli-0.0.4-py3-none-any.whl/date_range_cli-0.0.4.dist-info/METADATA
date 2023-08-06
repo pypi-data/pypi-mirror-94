@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: date-range-cli
+Version: 0.0.4
+Summary: A cli too that generates a range of dates or timestamps
+Home-page: https://github.com/captainrandom/daterange
+Author: Mark Jackson
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: pendulum (==2.0.5)
+
+UNKNOWN
+
+
