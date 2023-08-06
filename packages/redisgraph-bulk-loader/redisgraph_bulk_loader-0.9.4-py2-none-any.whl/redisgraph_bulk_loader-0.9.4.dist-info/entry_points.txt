@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        redisgraph-bulk-loader=redisgraph_bulk_loader.bulk_insert:bulk_insert
+    
