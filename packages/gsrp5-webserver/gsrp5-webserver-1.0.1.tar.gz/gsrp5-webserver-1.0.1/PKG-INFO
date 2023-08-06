@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: gsrp5-webserver
+Version: 1.0.1
+Summary: Global System Resource Planing
+Home-page: http://www.gsrp.org
+Author: Nikolay Chesnokov
+Author-email: nikolaychesnokov@gmail.com
+License: AGPL-3
+Description: GSRP Tornado Web Server for access in browser
+Platform: UNKNOWN

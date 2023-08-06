@@ -1,0 +1,18 @@
+[Unit]
+Description=Global System Resource Planning  Server Web Connector
+
+Wants=network-online.target
+
+# Remove postgresql.service if db is running on another host.
+After=syslog.target network-online.target
+
+[Service]
+User=gsrp
+Group = gsrp
+ExecStart=/usr/bin/gsrp5-webserver -c /etc/gsrp5-webserver.d/webserver.conf
+ExecStop=/usr/bin/kill -TERM $MAINPID
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
