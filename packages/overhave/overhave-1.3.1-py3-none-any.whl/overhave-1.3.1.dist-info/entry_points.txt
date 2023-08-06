@@ -1,0 +1,6 @@
+[console_scripts]
+overhave=overhave.cli:overhave
+
+[pytest11]
+overhave=overhave.testing.plugin
+
