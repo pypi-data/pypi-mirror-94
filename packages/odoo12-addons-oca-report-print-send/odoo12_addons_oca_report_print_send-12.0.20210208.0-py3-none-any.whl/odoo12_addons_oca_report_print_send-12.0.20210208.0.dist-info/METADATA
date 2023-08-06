@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: odoo12-addons-oca-report-print-send
+Version: 12.0.20210208.0
+Summary: Meta package for oca-report-print-send Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo12-addon-base-report-to-printer
+Requires-Dist: odoo12-addon-base-report-to-printer-mail
+Requires-Dist: odoo12-addon-printer-zpl2
+Requires-Dist: odoo12-addon-remote-report-to-printer
+
+UNKNOWN
+
+
