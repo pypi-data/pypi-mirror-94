@@ -1,0 +1,103 @@
+[tool.poetry]
+name = "pygenstub"
+version = "2.0.1"
+description = "Python stub file generator."
+readme = "README.rst"
+
+authors = ["H. Turgut Uyar <uyar@tekir.org>"]
+license = "GPL-3.0+"
+
+homepage = "https://tekir.org/pygenstub/"
+documentation = "https://pygenstub.readthedocs.io/"
+repository = "https://github.com/uyar/pygenstub"
+
+keywords = ["type hints", "stub files", "docstring"]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Framework :: Sphinx :: Extension",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.6",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Software Development :: Documentation"
+]
+
+include = ["*.pyi"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+docutils = "^0.16"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.3.2"
+pytest-cov = "^2.8.1"
+flake8 = "^3.7.9"
+flake8-isort = "^4.0.0"
+flake8-docstrings = "^1.5.0"
+black = "^19.10b0"
+sphinx = "^2.3.1"
+sphinx_rtd_theme = "^0.4.3"
+tox = "^3.14.3"
+
+[tool.poetry.scripts]
+pygenstub = "pygenstub:run"
+
+[tool.isort]
+line_length = 96
+lines_after_imports = 2
+known_test = "pytest"
+sections = "TEST,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+
+[tool.black]
+line-length = 96
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py{39,38,37,36}, style, docs
+isolated_build = True
+
+[testenv]
+deps =
+    pytest
+    docutils
+commands =
+    pytest {posargs:tests}
+
+[testenv:coverage]
+basepython = python3.8
+deps =
+    {[testenv]deps}
+    pytest-cov
+commands =
+    pytest --cov=pygenstub --cov-report=term-missing tests
+
+[testenv:style]
+basepython = python3.8
+deps =
+    flake8
+    flake8-isort
+    flake8-docstrings
+commands =
+    flake8 pygenstub.py
+
+[testenv:docs]
+basepython = python3.8
+deps =
+    sphinx
+    sphinx_rtd_theme
+changedir = docs/
+commands =
+    sphinx-build -b html source/ build/html/
+"""
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
