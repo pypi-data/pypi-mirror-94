@@ -1,0 +1,3 @@
+[console_scripts]
+setenv = py_setenv:click_command
+
