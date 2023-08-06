@@ -1,0 +1,16 @@
+mapel/__init__.py,sha256=5ybAu1KtMQ3WzcFLhPURiIYiRZ1AfdYlxm29aG9Mo-E,1154
+mapel/voting/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+mapel/voting/advanced.py,sha256=yfPOqzGJrf04_IMm8wJiS1as0gjDsuC99GEX1x_5EEU,19559
+mapel/voting/canonical.py,sha256=7w_ujTFRjcGq29AOCVwvg6fd8doA-JpowOnBYT0NTcE,122084
+mapel/voting/elections.py,sha256=9YhckPO0YEwM6TxYj2RVt3w7xeBeST5YpakQTEw_t8g,33151
+mapel/voting/embedding.py,sha256=zry-RhZJmwNLwiY6KxN2dkQaOqBuefSKXW-xruG6TIQ,4145
+mapel/voting/lp.py,sha256=bEb8X-6w-BXcKljqTfjAZuyOiJ5I-veEkAeFoDiAgcY,11298
+mapel/voting/metrics.py,sha256=CVWtI33paiBvHkiAx_n2BCdBtAsz6lqIpmxNDFpRBU0,9933
+mapel/voting/objects.py,sha256=egR9EEy5jIvb50bWILbGg-SVmzIqcvM9z-ghx4H0I3Q,25857
+mapel/voting/print.py,sha256=CE06gl0tl9qmaLR8BYsqeKpP5CaC4XQrn4sMxFKtzHo,43781
+mapel/voting/winners.py,sha256=B0fzko0BvLzg4ArnDZLM5oH_HbXrXTpzacriPyd1YXA,21247
+mapel-1.2.0.dist-info/LICENSE.txt,sha256=RBhg5hIyHCQyj9Hd6pdx4QVzRdIfplLdnbuNB0fm2H4,1093
+mapel-1.2.0.dist-info/METADATA,sha256=UuLnZo7Exu2WQx6Aq4i7joS3cPoxfZHrnfzDuUh1S4U,651
+mapel-1.2.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+mapel-1.2.0.dist-info/top_level.txt,sha256=Ov-eXk2A-G1wjlvjVJ-ZsmFvTmRVwgUFREIJu3K6hBI,6
+mapel-1.2.0.dist-info/RECORD,,
