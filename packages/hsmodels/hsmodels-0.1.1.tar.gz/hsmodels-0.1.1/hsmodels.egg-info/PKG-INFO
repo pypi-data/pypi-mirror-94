@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hsmodels
+Version: 0.1.1
+Summary: Pydantic models for HydroShare metadata
+Home-page: https://github.com/hydroshare/hsmodels
+Author: Scott Black
+Author-email: scott.black@usu.edu
+License: MIT
+Description: # hsmodels
+        pydantic models for hydroshare metadata
+        
+        TODO Jeff
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
