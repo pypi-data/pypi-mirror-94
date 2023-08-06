@@ -1,0 +1,11 @@
+README.md
+setup.py
+FredMD/__init__.py
+FredMD/fredmd.py
+FredMD.egg-info/PKG-INFO
+FredMD.egg-info/SOURCES.txt
+FredMD.egg-info/dependency_links.txt
+FredMD.egg-info/requires.txt
+FredMD.egg-info/top_level.txt
+FredMD/tests/__init__.py
+FredMD/tests/basic_test.py
