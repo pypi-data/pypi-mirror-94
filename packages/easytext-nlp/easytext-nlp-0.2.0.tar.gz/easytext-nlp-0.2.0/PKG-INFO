@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: easytext-nlp
+Version: 0.2.0
+Summary: Make it easy to train and metric NLP model.
+Home-page: https://github.com/cjopengler/easytext
+Author: Pan Xu
+Author-email: cjopengler@163.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
