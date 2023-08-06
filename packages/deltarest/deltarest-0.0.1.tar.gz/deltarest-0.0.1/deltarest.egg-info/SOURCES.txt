@@ -1,0 +1,10 @@
+README.md
+setup.py
+deltarest/__init__.py
+deltarest/rest.py
+deltarest/service.py
+deltarest.egg-info/PKG-INFO
+deltarest.egg-info/SOURCES.txt
+deltarest.egg-info/dependency_links.txt
+deltarest.egg-info/top_level.txt
+test/test.py
