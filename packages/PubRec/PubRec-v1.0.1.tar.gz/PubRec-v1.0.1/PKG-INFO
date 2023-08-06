@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: PubRec
+Version: v1.0.1
+Summary: Simple python module to get the number of citations of a paper (or list of papers)
+Home-page: https://github.com/GiacobboNicola/PubRec
+Author: Nicola Giacobbo
+Author-email: giacobbo.nicola@gmail.com
+License: MIT
+Description: See the github `repository <https://github.com/GiacobboNicola/PubRec>`_.
+Keywords: ADS,citations
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
