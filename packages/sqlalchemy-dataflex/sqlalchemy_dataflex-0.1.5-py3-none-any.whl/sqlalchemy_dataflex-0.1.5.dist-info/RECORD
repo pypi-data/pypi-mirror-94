@@ -1,0 +1,12 @@
+AUTHORS.md,sha256=2RCvKDCpsQLn8Ir4R_oHxrFXBAF-f2Ss44iB6fh8rt8,1040
+LICENSE.md,sha256=p9YRnmknb583mLhKo_wRcgRRqllxOa516uOL6wLAsdA,1447
+sqlalchemy_dataflex/.DS_Store,sha256=1lFlJ5EFymdzGAUAaI30vcaaLHt3F1LwpG7xILf9jsM,6148
+sqlalchemy_dataflex/__init__.py,sha256=tDEBk08PRA6CxW7LFvGEMyB0u1fAW29m2BfcCe2mIRE,910
+sqlalchemy_dataflex/base.py,sha256=B_XKCPkhIY2fiq7Z8pWmqlUPsODL_O5Yk2pMEy8HPwg,104727
+sqlalchemy_dataflex/pyodbc.py,sha256=71vahngB8KG_mA9-_VEk4hKBLAKD_I2qCvuvkW5symE,7028
+sqlalchemy_dataflex/requirements.py,sha256=whr7vcSf2RcsOuSzn3rvB3AOPkDFeqL-JOUwx_oTzp8,31363
+sqlalchemy_dataflex-0.1.5.dist-info/entry_points.txt,sha256=PkCOpHH-wD3ZFAvXxvNYmnAbos0o6_jZPCNNKl9pC48,142
+sqlalchemy_dataflex-0.1.5.dist-info/LICENSE.md,sha256=p9YRnmknb583mLhKo_wRcgRRqllxOa516uOL6wLAsdA,1447
+sqlalchemy_dataflex-0.1.5.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+sqlalchemy_dataflex-0.1.5.dist-info/METADATA,sha256=FPazVoKuxcyoh-B_IReAzbqfeFrYvYloncrn4RT1OWM,5978
+sqlalchemy_dataflex-0.1.5.dist-info/RECORD,,
