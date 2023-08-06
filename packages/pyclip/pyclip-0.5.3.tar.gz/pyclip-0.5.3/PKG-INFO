@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyclip
+Version: 0.5.3
+Summary: Cross-platform clipboard utilities supporting both binary and text data.
+Home-page: https://github.com/spyoungtech/pyclip
+Author: Spencer Young
+Author-email: spencer.young@spyoung.com
+License: Apache
+Description: docs/README.md
+Keywords: pyperclip clipboard cross-platform binary bytes files
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Provides-Extra: test

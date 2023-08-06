@@ -1,0 +1,3 @@
+[console_scripts]
+pyclip = pyclip.cli:main
+
