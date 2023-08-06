@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: minecraft_stores
+Version: 0.0.2
+Summary: Python library for saving minecraft game data to disk.
+Home-page: https://github.com/Nathan-Nesbitt/Minecraft_Store
+Author: Carlos Rueda Carrasco, Kathryn Lecha, Nathan Nesbitt,Adrian Morillo Quiroga
+License: UNKNOWN
+Description: # Minecraft_Store
+        Libraries for Handling the Storage of Minecraft Events
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

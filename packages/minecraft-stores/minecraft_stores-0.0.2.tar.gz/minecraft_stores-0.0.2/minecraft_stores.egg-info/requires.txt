@@ -1,0 +1,5 @@
+pandas
+wheel
+nest_asyncio
+pytest-asyncio
+pytest

@@ -1,0 +1,11 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "pandas",
+    "wheel",
+    "nest_asyncio",
+    "pytest-asyncio",
+    "pytest"
+]
+build-backend = "setuptools.build_meta"
