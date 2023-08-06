@@ -1,0 +1,6 @@
+ringleaderTile	findMushRoomTile	bigSpiderTile	leaveForrestTile
+banditTile	findMushRoomTile	findStickTile	findStickTile
+oldManTile	startingRoom	traderTile	emptyForrestTile
+findStickTile	emptyForrestTile	findKnifeTile	bigSpiderTile
+banditTile	findMushRoomTile	banditTile	emptyForrestTile
+findMushRoomTile	banditTile	oldManTile	findMushRoomTile
