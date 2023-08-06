@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: sparse-matrix-builder
+Version: 0.0.1
+Summary: This program is intended to build sparse matrices in a more intuitive GUI environment.
+Home-page: https://github.com/htw1127/matrix_builder
+Author: Taewoo Han
+Author-email: htw1127@gmail.com
+License: MIT
+Keywords: matrix
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# Matrix Builder
+
+### What is the Matrix Builder?
+The importance of linear algebra and its representation in matrix form has been on a growing
+trend for a long time. However, working with the matrix can be a difficult challenge; especially
+working with many big matrices in a computer can be a quite tedious task. Therefore, through this project
+we have sought to alleviate these burdensome problems with an intuitive solution.
+Matrix builder is the GUI program which helps users to build any matrix using an interactive canvas based on 
+the **tkinter** library. The program uses a basic drag-and-drop scheme to interact with the users. It supports various
+ways to convert users' works in the program into useful formats which users can directly utilize. 
+
+
+### Builder Layout
+
+### How to use
+#### From console
+
+
+
+```python
+import builder as bd
+
+```
+
+### Helpful Key Bindings
+- **Ctrl + v** : Copy and Paste the currently highlighted matrices
+- **(Hold) Ctrl** : Enter Multiple Selection Mode. In this mode user can highlight multiple matrices
+- **Ctrl + Mousewheel** : Zoom in and out of the canvas. The pivot point of zoom is where the point is
+  currently located.
+- **Shift + LMB Drag** : Can move the matrix inside the canvas
+- **RMB** : Provides useful options depending on a selected entity in the canvas. 
+
+### Example
+
+Contributor: Taewoo Han\
+Advisor: Dr. Forrest Laine\
+This project started during UC Berkeley Spring 2020 as a research project. If there is any
+issue or recommendation regarding the program, please email me at: *htw1127@gmail.com*
+

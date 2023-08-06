@@ -1,0 +1,3 @@
+[console_scripts]
+build-matrix = builder.__main__:main
+
