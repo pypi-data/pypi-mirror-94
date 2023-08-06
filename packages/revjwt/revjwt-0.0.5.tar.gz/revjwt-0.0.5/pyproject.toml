@@ -1,0 +1,16 @@
+[build-system]
+requires = ["flit_core >=2,<4", "setuptools-rust"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "revjwt"
+author = "ChienHsiao"
+author-email = "chien.hsiao@revteltech.com"
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires=[
+    'pyjwt >= 2.0.0',
+    'jwcrypto',
+    'google-auth',
+    'boto3',
+    "requests"
+]

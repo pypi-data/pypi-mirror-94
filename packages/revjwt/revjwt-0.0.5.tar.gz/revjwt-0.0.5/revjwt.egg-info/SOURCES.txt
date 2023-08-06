@@ -1,0 +1,12 @@
+setup.py
+revjwt/__init__.py
+revjwt/algorithms.py
+revjwt/google_jwt.py
+revjwt/jws.py
+revjwt/jwt.py
+revjwt/signer.py
+revjwt.egg-info/PKG-INFO
+revjwt.egg-info/SOURCES.txt
+revjwt.egg-info/dependency_links.txt
+revjwt.egg-info/requires.txt
+revjwt.egg-info/top_level.txt

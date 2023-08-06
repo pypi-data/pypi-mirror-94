@@ -1,0 +1,4 @@
+boto3
+google-auth
+jwcrypto
+pyjwt>=2.0.0

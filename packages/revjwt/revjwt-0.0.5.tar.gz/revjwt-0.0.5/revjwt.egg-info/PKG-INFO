@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: revjwt
+Version: 0.0.3
+Summary: jwt signing sdk for revteltech
+Home-page: https://github.com/revtel/revdb
+Author: Chien Hsiao
+Author-email: chien.hsiao@revteltech.com
+License: MIT
+Description: UNKNOWN
+Keywords: revteltech,sdk
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
