@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block preload %}
+<link rel="preload" href="{{ url_for('static', filename='js/decklist.js') }}" as="script">
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/decklist.js') }}"></script>
+{% endblock %}
+
+{% block article %}
+<article id="analysis">
+{% block archetype_name %}{% endblock %}
+<div id="review" class="review">
+	{% block archetype %}{% endblock %}
+</div>
+<div id="decklist" class="decklist">
+	<div id="list" class="list">
+		<h2 id="deck-name"></h2>
+		<p id="deck-header"></p>
+		<div class="command_zone">
+			<h3 id="command_zone">Command Zone</h3>
+			<ul id="commanders">
+			</ul>
+		</div>
+		<h3 id="library">Library</h3>
+		<div class="library" id="library-container">
+		</div>
+		<p id="deck-footer"></p>
+	</div>
+</div>
+</article>
+{% endblock %}
+
+{% block script %}
+<script>
+	window.onload = function () {
+		const content = document.querySelector('meta[property="decklist"]').content
+		const decklist = JSON.parse(JSON.parse(content))
+		displayDeck(decklist)
+		tippy('span.card', {
+			touchHold: true,
+			hideOnClick: false,
+			interactive: true,
+			placement: 'right',
+			distance: 20,
+			arrow: true,
+			animateFill: false,
+			animation: 'shift-away',
+			// In ES5 as you don't have a transpilation step(?):
+			onShow: function(instance) {
+				var img = instance.popper.querySelector('img');
+				img.src = img.dataset.src;
+			}
+		});
+	}
+</script>
+{% endblock %}
