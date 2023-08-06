@@ -1,0 +1,3 @@
+[console_scripts]
+daterange = date_range.daterange:main
+
