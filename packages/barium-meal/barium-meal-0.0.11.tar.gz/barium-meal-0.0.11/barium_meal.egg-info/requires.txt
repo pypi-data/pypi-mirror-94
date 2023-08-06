@@ -1,0 +1,8 @@
+pytest
+requests-mock
+flask
+opentelemetry-exporter-jaeger==0.17b0
+opentelemetry-api==0.17b0
+opentelemetry-instrumentation-requests
+opentelemetry-instrumentation-boto
+opentelemetry-instrumentation-flask
