@@ -1,0 +1,3 @@
+[console_scripts]
+triku = triku.cli.cli_triku:main
+

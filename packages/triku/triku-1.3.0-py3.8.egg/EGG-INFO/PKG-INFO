@@ -1,0 +1,34 @@
+Metadata-Version: 1.2
+Name: triku
+Version: 1.3.0
+Summary: Feature selection method for Single Cell data.
+Home-page: https://gitlab.com/alexmascension/triku
+Author: Alex M. Ascensión
+Author-email: alexmascension@gmail.com
+License: BSD
+Description: # Triku - Feature selection for Single Cell Analysis 🦔
+        [![PyPI version](https://badge.fury.io/py/triku.svg)](https://badge.fury.io/py/triku)
+        [![status](https://gitlab.com/alexmascension/triku/badges/dev/pipeline.svg)](https://gitlab.com/alexmascension/triku)
+        [![Docs](https://readthedocs.org/projects/triku/badge/?version=latest)](https://triku.readthedocs.io/en/latest/)
+        [![codecov](https://codecov.io/gl/alexmascension/triku/branch/dev/graph/badge.svg)](https://codecov.io/gl/alexmascension/triku/branch/dev)
+        [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+        [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+        [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4016715.svg)](https://doi.org/10.5281/zenodo.4016715)
+        
+        
+        Triku (hedgehog in euskera) is a feature selection method prepared for Single Cell Analysis.
+        
+        Look at [the docs](https://triku.readthedocs.io/en/latest/) to learn more about triku!
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.7
