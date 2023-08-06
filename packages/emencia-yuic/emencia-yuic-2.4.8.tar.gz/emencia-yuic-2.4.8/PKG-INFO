@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: emencia-yuic
+Version: 2.4.8
+Summary: Nope
+Home-page: http://perdu.com
+Author: Emencia
+Author-email: support@emencia.com
+License: Proprietary License
+Description: Niet
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/x-rst
+Provides-Extra: dev
