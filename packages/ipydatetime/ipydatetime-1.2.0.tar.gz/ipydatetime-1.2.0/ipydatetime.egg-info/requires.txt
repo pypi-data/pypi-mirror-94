@@ -1,0 +1,24 @@
+ipywidgets>=7.0.0
+
+[:python_version < "3"]
+tzlocal
+
+[docs]
+sphinx>=1.5
+recommonmark
+sphinx_rtd_theme
+nbsphinx>=0.2.13
+nbsphinx-link
+pypandoc
+pytz
+
+[examples]
+pytz
+
+[test]
+pytest>=3.6
+pytest-cov
+pytest_check_links[cache]
+nbval
+pytz
+coverage
