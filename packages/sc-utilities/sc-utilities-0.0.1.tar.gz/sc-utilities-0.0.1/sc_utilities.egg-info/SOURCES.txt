@@ -1,0 +1,13 @@
+README.rst
+setup.py
+sc_utilities.egg-info/PKG-INFO
+sc_utilities.egg-info/SOURCES.txt
+sc_utilities.egg-info/dependency_links.txt
+sc_utilities.egg-info/top_level.txt
+scutils/__init__.py
+scutils/file_utils.py
+scutils/log_utils.py
+scutils/singleton.py
+scutils/tests/__init__.py
+scutils/tests/singleton/__init__.py
+scutils/tests/singleton/singleton_test.py
