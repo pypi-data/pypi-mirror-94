@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "django-request-profiler"
+version = "0.16.1"
+description = "A simple Django project profiler for timing HTTP requests."
+authors = ["YunoJuno <code@yunojuno.com>"]
+license = "MIT"
+readme = "README.rst"
+homepage = "https://github.com/yunojuno/django-request-profiler"
+repository = "https://github.com/yunojuno/django-request-profiler"
+classifiers = [
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: Django",
+    "Framework :: Django :: 2.2",
+    "Framework :: Django :: 3.0",
+    "Framework :: Django :: 3.1",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+packages = [
+    { include = "request_profiler" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+django = "^2.2 || ^3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-cov = "*"
+pytest-django = "*"
+coverage = "*"
+pylint = "*"
+flake8 = "*"
+flake8-bandit = "*"
+flake8-docstrings = "*"
+isort = "*"
+mypy = "*"
+pre-commit = "*"
+black = {version = "*", allow-prereleases = true}
+tox = "*"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
