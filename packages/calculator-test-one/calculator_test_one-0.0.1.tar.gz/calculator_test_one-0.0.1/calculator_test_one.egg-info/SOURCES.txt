@@ -1,0 +1,15 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+config.py
+run.py
+setup.py
+calculator_test_one.egg-info/PKG-INFO
+calculator_test_one.egg-info/SOURCES.txt
+calculator_test_one.egg-info/dependency_links.txt
+calculator_test_one.egg-info/top_level.txt
+firstCalculator/__init__.py
+firstCalculator/calculator.py
+tests/__init__.py
+tests/test_calculator.py
