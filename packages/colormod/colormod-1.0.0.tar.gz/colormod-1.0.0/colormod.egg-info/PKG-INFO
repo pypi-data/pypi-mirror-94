@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: colormod
+Version: 1.0.0
+Summary: Makes the use of ANSI colors much easier. Its just a simplified version of colorama.Fore
+Home-page: UNKNOWN
+Author: LiquidDevect
+Author-email: UNKNOWN
+License: Do whatever you want
+Description: UNKNOWN
+Keywords: colors
+Platform: UNKNOWN
+Requires: colorama
