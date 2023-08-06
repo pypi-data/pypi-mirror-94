@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: aiozoom
+Version: 0.0.7.1
+Summary: Async library for interaction with Zoom API
+Home-page: https://github.com/vladisa88/aiozoom
+Author: Vladislav Isakov
+Author-email: vladisa88@gmail.com
+License: UNKNOWN
+Keywords: python,zoom,async
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# **AIOZOOM**
+
+![](https://travis-ci.com/vladisa88/aiozoom.svg?branch=main) [![CodeFactor](https://www.codefactor.io/repository/github/vladisa88/aiozoom/badge)](https://www.codefactor.io/repository/github/vladisa88/aiozoom) [![PyPI Version](https://img.shields.io/pypi/v/aiozoom)](https://pypi.org/project/aiozoom/)
+
+## aiozoom is an async library for interaction with Zoom API
+
+
+## Requirements
+1. Python 3.9
+2. pip
+
+## Installation
+### Under console using pip
+
+1. In the console, run the following command:
+```bash
+pip install --upgrade aiozoom
+```
+
+
+## Quick start
+
+1. Import module
+```python
+from aiozoom import Zoom
+```
+
+2. Configure a Client
+```python
+from aiozoom import Zoom
+
+Zoom.configure('JWT_TOKEN')
+```
+
+3. Create a meeting
+```python
+import asyncio
+
+from aiozoom import Zoom
+
+Zoom.configure('JWT_TOKEN')
+async def main():
+    zoom = Zoom()
+    await zoom.create_meeting('example@example.com', {'title': 'test'})
+
+loop = asyncio.get_event_loop()
+task = loop.create_task(main())
+loop.run_until_complete(task)
+loop.close()
+
+```
+
+## **Available methods:**
+
+```create_meeting(email, body)```
+
+```get_meeting(meeting_id)```
+
+```stop_meeting(meeting_id)```
+
+```delete_meeting(meeting_id)```
+
+```update_meeting(meeting_id, body)```
+
+and more...
+
+### Docs will be available soon...
+
