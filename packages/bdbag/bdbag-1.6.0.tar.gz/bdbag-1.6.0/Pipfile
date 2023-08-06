@@ -1,0 +1,12 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+bdbag = {path = ".", extras = ["boto","globus"]}
+
+[dev-packages]
+mock = "*"
+coverage = "*"
+flake8 = "*"
