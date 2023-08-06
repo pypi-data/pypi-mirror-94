@@ -1,0 +1,3 @@
+[console_scripts]
+prisma_get_spn = prisma_get_info:go
+

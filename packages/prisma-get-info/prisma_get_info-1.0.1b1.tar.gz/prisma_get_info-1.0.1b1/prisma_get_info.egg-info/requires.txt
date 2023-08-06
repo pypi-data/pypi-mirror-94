@@ -1,0 +1,4 @@
+pan-python>=0.16.0
+tabulate>=0.8.7
+netaddr>=0.8.0
+xmltodict>=0.12.0
