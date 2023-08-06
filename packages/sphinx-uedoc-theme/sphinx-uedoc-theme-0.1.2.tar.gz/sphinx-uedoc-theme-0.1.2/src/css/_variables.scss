@@ -1,0 +1,15 @@
+:root {
+  @include themeVariable('clr-background', (h: 0, s:0%, l:100%));
+  @include themeVariable('clr-primary', (h: 0, s:0%, l:16%));
+  @include themeVariable('clr-secondary', (h: 197, s:92%, l:49%));
+  @include themeVariable('clr-text-primary', (h: 0, s:0%, l:100%));
+  @include themeVariable('clr-text-secondary', (h: 0, s:0%, l:100%));
+  @include themeVariable('clr-text-background', (h: 0, s:0%, l:0%));
+
+  --clr-primary-gradient-start: hsla(var(--clr-primary-hsl), 0); 
+  --clr-primary-gradient-end: hsla(var(--clr-primary-hsl), 0.95);  
+
+  /* Scrollbars colors */
+  --clr-scrollbar: transparent;
+  --clr-scrollbar-thumb: hsla(var(--clr-primary-h), var(--clr-primary-s), 82%, 0.6); 
+}

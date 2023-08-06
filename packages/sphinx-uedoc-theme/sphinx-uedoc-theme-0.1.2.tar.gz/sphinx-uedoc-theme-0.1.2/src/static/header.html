@@ -1,0 +1,68 @@
+{% macro rendernav() %}
+	{% for link in theme_quicklinks %}
+		<li class="{{'has-submenu' if ('subnav' in link) else ''}}"role="menuitem">
+			<a href="{{link['link'] if link['link'] else '#'}}"><p>{{link['name']|upper}}</p></a>
+		{% if 'subnav' in link %}
+			<ul class="uedoc-nav-submenu">
+				<li role="menuitem" class="submenu-header">{{link['name']|upper}}</li>
+				{% for sublink in link['subnav'] %}
+				<li role="menuitem">
+					<a href="{{sublink['link'] if sublink['link'] else '#'}}"><p>{{sublink['name']|upper}}</p></a>
+				</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		</li>
+	{% endfor %}
+{% endmacro %}
+
+<div id="head" class="uedoc-header">
+	{% block uedoc_logo %}
+		{%- if theme_logo %}
+			<a href="{{ pathto(master_doc)|e }}" class="logo-wrapper">
+				<img class="logo" src="{{ pathto('_static/', 1)|e }}{{theme_logo}}" alt="Logo"/>
+			</a>
+		{%- else %}
+			{%- if theme_no_logo == 'false' %}
+				<a href="{{pathto(master_doc)}}" class="logo-wrapper">
+					<div class="logo" id="logo"></div>
+				</a>
+			{% endif %}
+		{% endif %}
+	{% endblock uedoc_logo %}
+	{% block uedoc_title %}
+		<div class="uedoc-title"><a href="{{pathto(master_doc)}}">{{docstitle|upper}}</a></div>
+	{% endblock uedoc_title %}
+	{% if (theme_quicklinks | length) != 0 %}
+		<div class="hamburger-nav header-button"><i class="fas fa-bars"></i></div>
+	{% endif %}
+	<div id="nav-menu">
+		<div class="nav-menu-wrapper">
+			{% block uedoc_header_nav %}{% endblock uedoc_header_nav %}
+			<div class="uedoc-quicklinks-wrapper">
+				<ul id="quicklinks" class="uedoc-quicklinks">
+					{{rendernav()}}
+				</ul>
+			</div>
+			{% block uedoc_header_right %}
+			<div class="header-end">
+				{% if theme_header_search %}
+				<div id="search_container">
+					<form method="get" action="{{ pathto('search') }}">
+						<button type="submit" class="searchbutton" > </button>
+						<input type="text" placeholder="Search Documentation..." class="searchbox" name="q" aria-labelledby="searchlabel" autocomplete="off">
+					</form>
+				</div>
+				{% endif %}
+			{% if theme_header_button %}
+				<div class="header-button">
+					<a href="{{theme_header_button['link']}}">
+						<span>{{theme_header_button['name']}}</span>
+					</a>
+				</div>
+			{% endif %}
+			</div>
+			{% endblock uedoc_header_right %}
+		</div> 
+	</div>
+</div>

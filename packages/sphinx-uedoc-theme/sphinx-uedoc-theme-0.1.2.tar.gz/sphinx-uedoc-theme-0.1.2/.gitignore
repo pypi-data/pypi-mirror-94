@@ -1,0 +1,14 @@
+#python generated stuff
+.DS_Store
+*.pyc
+
+build
+dist
+*.egg-info
+demo/build/*
+node_modules
+__pycache__
+Pipfile*
+
+#test folder
+testdoc

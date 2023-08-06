@@ -1,0 +1,36 @@
+---
+name: "GitHub Pages"
+
+on: push
+
+jobs:
+  gh-release:
+    name: "ghpages release"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      # - uses: actions/setup-python@v2
+      - uses: actions/checkout@v2
+      - name: "Build demo"
+        uses: ammaraskar/sphinx-action@master
+        with:
+          docs-folder: "/github/workspace/demo/"
+
+      - uses: actions/checkout@v2
+        with:
+          ref: 'gh-pages'
+          path: 'gh-pages'
+
+      - name: "Copy to gh-pages"
+        run: |
+            cp -rv demo/_build/html/. gh-pages
+
+      - name: "Commit build"
+        uses: EndBug/add-and-commit@v5
+        with:
+          cwd: 'gh-pages'
+          branch: 'gh-pages'
+          message: "Update Demo Build"
+        env:
+          # This is necessary in order to push a commit to the repo
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
