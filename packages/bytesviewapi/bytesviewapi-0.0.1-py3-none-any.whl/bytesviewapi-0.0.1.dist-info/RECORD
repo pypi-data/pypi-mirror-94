@@ -1,0 +1,11 @@
+bytesviewapi/__init__.py,sha256=ST_R-t6OllI7NFphbydCTqRZsOCAdAbZIYSlfebzw_4,63
+bytesviewapi/api_authentication.py,sha256=k8cNSWhb8d6SKmWlcrCr4_9NEOeUo0WI_oOeDcjq088,561
+bytesviewapi/bytesviewapi_client.py,sha256=kfIPRmSCLCPcLqjin6SAkvX61uEZVDoNkz0zy3UF614,3007
+bytesviewapi/bytesviewapi_exception.py,sha256=No0P3VdYe_AIDz8CDyCxO0wgMg-itJyWb-WZaU3xZ0Y,141
+bytesviewapi/env_file.py,sha256=KNT5Gr6aSOpiiq-V1nzh4MU9nKBJKpms34wd647AsNs,154
+bytesviewapi/utils.py,sha256=4bMLSZK3ZZJaM7C2uhIX-pVTE0G6C-cL5rbraSmeUXc,203
+bytesviewapi-0.0.1.dist-info/LICENSE,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+bytesviewapi-0.0.1.dist-info/METADATA,sha256=ApEcgKjuGA_MBEmLTLBlhn_bUP5WmExMQRtpFWSbGy0,1859
+bytesviewapi-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bytesviewapi-0.0.1.dist-info/top_level.txt,sha256=GvpFOIIDRxuLe4Sg7ocUOM0IoSdb9zqgyqHKVz4GlV0,13
+bytesviewapi-0.0.1.dist-info/RECORD,,
