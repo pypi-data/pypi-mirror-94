@@ -1,0 +1,4 @@
+[console_scripts]
+jujube = project_demo_2:jujube
+pill = project_demo_2:pill
+
