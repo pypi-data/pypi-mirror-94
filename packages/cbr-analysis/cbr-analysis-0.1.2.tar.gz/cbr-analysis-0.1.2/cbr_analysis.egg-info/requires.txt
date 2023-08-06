@@ -1,0 +1,6 @@
+numpy==1.18.5
+h5py
+pathlib
+matplotlib==3.2
+pandas
+scipy

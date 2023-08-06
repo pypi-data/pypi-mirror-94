@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cbr-analysis
+Version: 0.1.2
+Summary: OE analysis
+Home-page: https://github.com/palec87/cbr-analysis/archive/v0.1.2.tar.gz
+Author: DP
+Author-email: david@stanka.de
+License: UNKNOWN
+Description: # OE data analysis
+        
+        This is a framework which should eventually enable unified approach to OE optical spectroscopy data analysis.
+        
+        Package is installable via PyPI
+        
+        [cbr_analysis](https://guides.github.com/features/mastering-markdown/).
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
