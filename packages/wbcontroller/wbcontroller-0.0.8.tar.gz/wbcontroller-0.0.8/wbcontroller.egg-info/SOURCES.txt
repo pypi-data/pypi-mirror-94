@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+wbcontroller/_controller.so
+wbcontroller/controller.py
+wbcontroller/wbc_controller.py
+wbcontroller.egg-info/PKG-INFO
+wbcontroller.egg-info/SOURCES.txt
+wbcontroller.egg-info/dependency_links.txt
+wbcontroller.egg-info/top_level.txt
