@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="loop.sh 8" type="BashProRunConfiguration">
+    <option name="scriptParameters" value="8" />
+    <option name="scriptPath" value="$PROJECT_DIR$/bapy/scripts/loop.sh" />
+    <RunnerSettings bashdbVersion="Automatic" bashPathMapper="Automatic" RunnerId="pro.bashsupport.shDebugRunner" />
+    <method v="2" />
+  </configuration>
+</component>
