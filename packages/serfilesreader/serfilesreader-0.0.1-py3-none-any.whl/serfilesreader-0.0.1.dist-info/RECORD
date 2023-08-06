@@ -1,0 +1,13 @@
+serfilesreader/Ser_reader_fits_png.py,sha256=GKanlfElWHi_1u2NQop8d_NDM_VAkcFFbDUEk2FmIco,5651
+serfilesreader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+serfilesreader/essai_tpol.py,sha256=elpMyxul3RtqWkb1P3sNFC4_j6D9pGtP-8lAknPH90E,2543
+serfilesreader/myGUI.py,sha256=SDmpJoAWJGYeBA0USAKvhJSoCZE3FgLmqRrRa8zCYj0,7674
+serfilesreader/ser_playr_gui_qt.py,sha256=JZtNSvZXLw78BorqlynOOR6ym5zaS5j2Mcf3X_GzCyU,3112
+serfilesreader/ser_reader_gui.py,sha256=9tS9C0ENtHYc-P1R4IdIVP7D6cHh4FUb10oltY5hI4E,214
+serfilesreader/serfilesreader.py,sha256=LBAsIXmbYr99UtqcdnSqa5Ob-5RZzI36Qr2HPOmLx9Q,24005
+serfilesreader/setup.py,sha256=PBBQ2xUXVrMJyr0EDOOVBE-RAwIymedL_uAsujMpeVA,476
+serfilesreader/tool_bo_solex.py,sha256=Qc5WGmrEFVypnCSAL70ZZaUwG9JpiN9lUNbgM6NWjf4,538
+serfilesreader-0.0.1.dist-info/METADATA,sha256=Vyxs6gzCWRbIvgvvienJ_MmiJouoieZ0Oj52PDIzuEA,286
+serfilesreader-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+serfilesreader-0.0.1.dist-info/top_level.txt,sha256=AXuaSiLVg5TuJ6Al9UAOprbxgfi_amFVXwoIcA6IoH4,15
+serfilesreader-0.0.1.dist-info/RECORD,,

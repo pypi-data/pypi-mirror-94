@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: serfilesreader
+Version: 0.0.1
+Summary: A library handling SER files
+Home-page: UNKNOWN
+Author: JB BUTET
+Author-email: ashashiwa@gmail.com
+License: LGPL 3.0
+Platform: UNKNOWN
+Requires-Dist: astropy
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+
+UNKNOWN
+
+
