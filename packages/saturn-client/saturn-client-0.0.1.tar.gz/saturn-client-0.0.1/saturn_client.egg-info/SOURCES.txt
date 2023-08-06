@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+versioneer.py
+saturn_client/__init__.py
+saturn_client/_version.py
+saturn_client/core.py
+saturn_client/settings.py
+saturn_client.egg-info/PKG-INFO
+saturn_client.egg-info/SOURCES.txt
+saturn_client.egg-info/dependency_links.txt
+saturn_client.egg-info/not-zip-safe
+saturn_client.egg-info/requires.txt
+saturn_client.egg-info/top_level.txt
