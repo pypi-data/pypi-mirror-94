@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: orionutils
+Version: 0.1.5
+Summary: An Apache-licensed Python library that facilitates functional testing of Ansible Galaxy and related tooling.
+Home-page: https://github.com/peaqe/orion-utils/
+Author: Red Hat PEAQE Team
+License: Apache
+Description: orionutils provides collection generation for testing Galaxy and related projects.
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Quality Assurance
+Provides-Extra: dev

@@ -1,0 +1,8 @@
+attrs
+
+[dev]
+flake8
+flake8-docstrings
+flake8-import-order
+flake8-quotes
+pytest-cov
