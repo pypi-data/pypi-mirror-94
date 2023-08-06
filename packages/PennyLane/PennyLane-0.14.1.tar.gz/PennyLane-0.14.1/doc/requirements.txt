@@ -1,0 +1,20 @@
+--find-links https://download.pytorch.org/whl/torch_stable.html
+pip
+appdirs
+autograd
+jax==0.2.7
+jaxlib==0.1.57
+m2r
+numpy
+pygments-github-lexers
+semantic_version==2.6
+scipy
+sphinx==2.2.2
+sphinx-automodapi
+sphinx-copybutton
+sphinxcontrib-bibtex==0.4.2
+tensorflow==2.4.0
+tensornetwork==0.3
+toml
+torch==1.7.0+cpu
+torchvision==0.8.1+cpu
