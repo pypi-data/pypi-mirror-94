@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: nornir_salt
+Version: 0.3.0
+Summary: Nornir plugins used with SALTSTACK
+Home-page: https://github.com/dmulyalin/nornir-salt
+Author: Denis Mulyalin
+Author-email: d.mulyalin@gmail.com
+License: UNKNOWN
+Description: # nornir-salt
+        Collection of Nornir plugins used with [SALTSTACK Nornir modules](https://github.com/dmulyalin/salt-nornir).
+        
+        All plugins and functions can be used with Nornir directly unless stated otherwise.
+        
+        Reference [documentation](https://nornir-salt.readthedocs.io/en/latest/) for additional information.
+        
+        # Contributing
+        
+        If you solved a problem using Nornir and wrote piece of code that you think can be useful to other people, feel free
+        to raise an issue to start discussion or submit pull request. 
+        
+        Bug reports and feature requests are welcomed.
+        
+        [buy](https://paypal.me/dmulyalin) Author a coffee
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
