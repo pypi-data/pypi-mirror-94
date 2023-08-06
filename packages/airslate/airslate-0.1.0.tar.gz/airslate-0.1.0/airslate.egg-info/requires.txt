@@ -1,0 +1,6 @@
+requests==2.*,>=2.20.0
+urllib3<1.27,>=1.21.1
+
+[testing]
+pytest
+responses
