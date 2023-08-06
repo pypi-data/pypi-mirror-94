@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+tdp_matomo/__init__.py
+tdp_matomo/config.json
+tdp_matomo.egg-info/PKG-INFO
+tdp_matomo.egg-info/SOURCES.txt
+tdp_matomo.egg-info/dependency_links.txt
+tdp_matomo.egg-info/entry_points.txt
+tdp_matomo.egg-info/not-zip-safe
+tdp_matomo.egg-info/requires.txt
+tdp_matomo.egg-info/top_level.txt
