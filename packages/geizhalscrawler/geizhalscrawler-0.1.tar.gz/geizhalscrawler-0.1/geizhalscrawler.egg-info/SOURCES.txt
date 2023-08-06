@@ -1,0 +1,9 @@
+README.md
+setup.py
+geizhalscrawler/__init__.py
+geizhalscrawler/geizhalscrawler.py
+geizhalscrawler.egg-info/PKG-INFO
+geizhalscrawler.egg-info/SOURCES.txt
+geizhalscrawler.egg-info/dependency_links.txt
+geizhalscrawler.egg-info/requires.txt
+geizhalscrawler.egg-info/top_level.txt
