@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: PyTrinamicMicro
+Version: 0.0.2
+Summary: PyTrinamicMicro package for TMCM-0960-MotionPy python master board.
+Home-page: https://github.com/trinamic/PyTrinamicMicro
+Author: Maxim-Trinamic Software Team
+Author-email: pypi.trinamic@maximintegrated.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
