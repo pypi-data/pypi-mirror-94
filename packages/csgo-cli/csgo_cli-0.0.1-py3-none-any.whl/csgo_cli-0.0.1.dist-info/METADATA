@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: csgo-cli
+Version: 0.0.1
+Summary: CSGO CLI
+Home-page: UNKNOWN
+Author: Fredrik Mile
+Author-email: fredrik.mile@gmail.com
+License: LICENSE
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: typer
+Requires-Dist: setuptools
+Requires-Dist: tabulate
+Requires-Dist: python-a2s
+Requires-Dist: vdf
+
+# CSGO Command Line Interface
+
+CLI for starting CSGO and joining one of your favorite servers insanely fast.
+
+Because why not?
+
+# Usage
+
+![](src/csgo_help.png)
+![](src/csgo_connect.png)
+
+# Current installation
+```
+pip install csgo-cli
+```
+
+
+# Setup path to steam user data
+
+Steam stores your favorite servers in a file called `serverbrowser_hist.vdf`. 
+
+For me, this file was located at:
+```/c/Program Files (x86)/Steam/userdata/160616678/7/remote/serverbrowser_hist.vdf"```.
+
+![](src/csgo_configure.png)
+
+When the `serverbrowser_hist.vdf` has been located, run: 
+```
+csgo configure {full_path_to_`serverbrowser_hist.vdf`}
+```
+
+Everything should now be set, enjoy!
+
+
