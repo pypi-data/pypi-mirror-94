@@ -1,0 +1,9 @@
+README.md
+setup.py
+gcodeparser/__init__.py
+gcodeparser/commands.py
+gcodeparser/gcode_parser.py
+gcodeparser.egg-info/PKG-INFO
+gcodeparser.egg-info/SOURCES.txt
+gcodeparser.egg-info/dependency_links.txt
+gcodeparser.egg-info/top_level.txt
