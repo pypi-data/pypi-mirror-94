@@ -1,0 +1,14 @@
+testbook/__init__.py,sha256=_PPNSvwZGk4R-w08WXPQ9gy4vRUojhkCxZyKTD1xe24,76
+testbook/_version.py,sha256=8x-srUTUt7HKVA2T9J8UaukvhwcG0i1iJlcp0eQu2gI,18
+testbook/client.py,sha256=ZBOcN9X5mEWNGtMus3xNbfD-l2Q2lokY-1RLCfDr284,10570
+testbook/exceptions.py,sha256=ikuFp5LZZ5IqHgz_K3R--0jLVlP_xcqRSzP9Zw3OrMY,879
+testbook/reference.py,sha256=vslwLrOjJEB0eg41VZhLo61Hpirb0LGKdW16pUIEsSk,1217
+testbook/testbook.py,sha256=-G-l2SdhefdE9p6QanjXXUZ7CzGwf3zex9qkehBohjQ,1977
+testbook/testbooknode.py,sha256=L4oOK2ZMIS8KMB8T9rXJB44TdCsW9vJVPYs-4zU3pzQ,663
+testbook/translators.py,sha256=aky9Wqf6cjUzBAcpF5Ee2AB9hgBVEJ01idL4qRT71gE,3891
+testbook/utils.py,sha256=rhK40aswj7XvI4IAXDumOiPcSxhCLquUpeWGi7RUyTY,282
+testbook-0.2.6.dist-info/LICENSE,sha256=DEMcFqD4BTxncsL6aZAu48FRJ2NTChBrMhGQVNkfLF4,1515
+testbook-0.2.6.dist-info/METADATA,sha256=1_EbNv5C-y9tBtI803iKeJiCpx0DuMwP0SUfhVyx2Uc,4963
+testbook-0.2.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+testbook-0.2.6.dist-info/top_level.txt,sha256=gUFqaI41jZKyqfKtQSy1-mDK6OBPYRM1oUxtr-JhTx4,9
+testbook-0.2.6.dist-info/RECORD,,
