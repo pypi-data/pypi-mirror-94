@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: Satyam
+Version: 0.0.1
+Summary: This pacakage conatins a basic functionality of a 
+                    calculator , containing functions such as addition , subraction , multiplication and division.
+                    It  will return the value calculated by the respective function. 
+Home-page: UNKNOWN
+Author: Satyam Shukla
+Author-email: coolsatyamshukla@rediffmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: div,sub,add,mul
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved 
+Classifier: Programming Language :: Python :: 3
