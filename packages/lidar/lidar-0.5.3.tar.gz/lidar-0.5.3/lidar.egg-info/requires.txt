@@ -1,0 +1,9 @@
+Click>=6.0
+scikit-image
+numpy
+matplotlib
+scipy
+richdem
+pyshp
+PySimpleGUI==2.30.0
+whitebox
