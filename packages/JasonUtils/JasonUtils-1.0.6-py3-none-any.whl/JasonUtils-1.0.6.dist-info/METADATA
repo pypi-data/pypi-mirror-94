@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: JasonUtils
+Version: 1.0.6
+Summary: Jason's Utils
+Home-page: https://github.com/I-Good-Vegetable/JasonUtils
+Author: Jason
+Author-email: jinxin.liu.ca@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: beepy
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: imblearn
+Requires-Dist: scikit-learn
+
+UNKNOWN
+
+
