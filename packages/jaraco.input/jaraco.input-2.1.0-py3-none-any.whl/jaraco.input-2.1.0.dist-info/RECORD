@@ -1,0 +1,12 @@
+jaraco/input/__init__.py,sha256=kiRcVdS5oMDhfesWsKrCGxVHlxz8_yxVqTXALixY7p4,241
+jaraco/input/base.py,sha256=l6JrSfRa3WAHb64XdjtxQNqb-cvttH9GG1M05Y-HXlA,1337
+jaraco/input/binary.py,sha256=FcFi67OU37I_xXAiC62OCcKZ7sSsessDRcF3x4xIfxw,832
+jaraco/input/linux2/__init__.py,sha256=t3JIbA0w4UnSPXkJ6r619Qp7UQaB2nPzcGn1ilnaCME,56
+jaraco/input/linux2/joystick.py,sha256=GpHe_csU0jYMxNKto_rO4ZF41tB7xGTfE985LNqBcbY,2334
+jaraco/input/win32/__init__.py,sha256=NREMmvSJcwDdFMi4KkyrS_fWEox331AdnqIJrHR1gMk,72
+jaraco/input/win32/xinput.py,sha256=S_au0aeID0EntxdO5mHhJnUISUzCZeU4KmqF9oDe87E,8970
+jaraco.input-2.1.0.dist-info/LICENSE,sha256=2z8CRrH5J48VhFuZ_sR4uLUG63ZIeZNyL4xuJUKF-vg,1050
+jaraco.input-2.1.0.dist-info/METADATA,sha256=KpbPxDzI0l1An3xxs55WPU905RdO14mgJhngenz3i3c,2090
+jaraco.input-2.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jaraco.input-2.1.0.dist-info/top_level.txt,sha256=SfNfwtvbuldkMnccxCTA0fSyzVjMh-hSt8UGJ2jF12I,12
+jaraco.input-2.1.0.dist-info/RECORD,,
