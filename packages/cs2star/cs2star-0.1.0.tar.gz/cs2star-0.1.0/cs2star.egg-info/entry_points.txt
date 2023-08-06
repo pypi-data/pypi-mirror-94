@@ -1,0 +1,3 @@
+[console_scripts]
+cs2star = cs2star:main
+
