@@ -1,0 +1,12 @@
+anyio>=2
+greenback
+
+[doc]
+sphinx_rtd_theme
+
+[test]
+pytest>=4.3
+pytest_trio
+
+[trio]
+trio>=0.16

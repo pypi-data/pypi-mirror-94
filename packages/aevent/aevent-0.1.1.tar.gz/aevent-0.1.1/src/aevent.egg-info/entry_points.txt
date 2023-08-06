@@ -1,0 +1,3 @@
+[pytest11]
+aevent = aevent.pytest_plugin
+
