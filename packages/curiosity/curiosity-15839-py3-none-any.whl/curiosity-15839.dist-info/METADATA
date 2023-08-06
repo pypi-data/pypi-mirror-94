@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: curiosity
+Version: 15839
+Summary: The official Python driver for the Curiosity Search engine (https://curiosity.ai/).
+Home-page: http://curiosity.ai
+Author: curiosity.ai
+Author-email: hello@curiosity.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.25.0)
+Requires-Dist: urllib3 (>=1.26.2)
+
+﻿The official Python driver for the Curiosity Search engine (https://curiosity.ai/). 
+
+The Python driver makes it easy to: 
+* upload files, add entities and link them
+* create users, teams and manage access
+* run queries on the graph
+
+# Installation
+
+Run `pip install curiosity` to install the Python driver from [PyPI](https://pypi.org/project/curiosity/).
+
+# Getting Started 
+Replace the `server`,  and `connector_name` in the code sample below.
+* `server` : The full url to your Curiosity system. The used port is printed in the beginning of the log output of the Curiosity instance. The url has to end with `/api`.
+* `lib_token` : You have to create a library token  first, in order to use this library with your Curiosity instance. See the [python documentation page](http://docs.curiosity.ai/en/articles/4714114-getting-started-python-data-connector) on how to create a library token.
+* `connector_name` : A descriptive name for your Connector. This is how the connector shows up in the *Manage Data* overview.
+
+Now, you can use the methods on the `graph` object to interact with the Curiosty system. Check out the [API documentation]() to see all the possible methods.
+
+```python
+from curiosity import Graph
+
+def main():
+    # The url to you curiosity instance
+    server = "http://localhost:8080/api"
+
+    # The library token you just created
+    lib_token = "eqJHbGci..."
+
+    # A descriptive name for your Connector. This is how the connector shows up in the Manage Data overview.
+    connector_name = "Python data connector"
+
+    with Graph.connect(server, lib_token, connector_name) as graph:
+
+        # The graph objects provides plenty of methods to interact with your 
+        # Curiosity instance. A file can be uploaded like this:
+        fullpath = "./sample.pdf"
+        filename = "sample.pdf"
+        source = "Samples"
+
+        graph.upload_file_by_path(fullpath, filename, source)
+
+if __name__ == '__main__':
+    main()
+```
+# API documentation
+Coming soon ...
+# Example projects
+Coming soon ...
+
+
