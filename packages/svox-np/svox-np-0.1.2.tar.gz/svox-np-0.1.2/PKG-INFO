@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: svox-np
+Version: 0.1.2
+Summary: Sparse voxel N^3-tree data structure using numpy
+Home-page: UNKNOWN
+Author: Alex Yu
+Author-email: alexyu99126@gmail.com
+License: UNKNOWN
+Description: Sparse voxel N^3-tree data structure using numpy
+Platform: UNKNOWN
