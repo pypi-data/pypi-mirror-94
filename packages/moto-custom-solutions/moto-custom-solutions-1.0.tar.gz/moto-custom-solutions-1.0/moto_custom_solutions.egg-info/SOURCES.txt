@@ -1,0 +1,15 @@
+README.md
+setup.py
+moto_custom_solutions.egg-info/PKG-INFO
+moto_custom_solutions.egg-info/SOURCES.txt
+moto_custom_solutions.egg-info/dependency_links.txt
+moto_custom_solutions.egg-info/top_level.txt
+motocustomsolutionspkg/__init__.py
+motocustomsolutionspkg/dir_clean.py
+motocustomsolutionspkg/errors.py
+motocustomsolutionspkg/ftp_cleanse.py
+motocustomsolutionspkg/ftp_down.py
+motocustomsolutionspkg/ftp_up.py
+motocustomsolutionspkg/redash_download.py
+motocustomsolutionspkg/slack_funcs.py
+motocustomsolutionspkg/supp_create.py
