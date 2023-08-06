@@ -1,0 +1,1 @@
+This is a basic python module to enable reflective programming techniques within the Jupyter notebook context.
