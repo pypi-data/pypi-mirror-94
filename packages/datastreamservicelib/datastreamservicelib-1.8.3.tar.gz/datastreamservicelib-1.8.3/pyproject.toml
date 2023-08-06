@@ -1,0 +1,74 @@
+[tool.poetry]
+name = "datastreamservicelib"
+version = "1.8.3"
+description = ""
+authors = ["Eero af Heurlin <eero.afheurlin@iki.fi>"]
+homepage = "https://gitlab.com/advian-oss/python-datastreamservicelib/"
+repository = "https://gitlab.com/advian-oss/python-datastreamservicelib/"
+license = "MIT"
+readme = "README.rst"
+
+
+[tool.poetry.scripts]
+testpublisher = "datastreamservicelib.console:publisher_cli"
+testsubscriber = "datastreamservicelib.console:subscriber_cli"
+
+[tool.black]
+line-length = 120
+target-version = ['py37']
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  |  __pycache__
+)
+'''
+
+[tool.pytest.ini_options]
+junit_family="xunit2"
+addopts="--cov=datastreamservicelib --cov-fail-under=65 --cov-branch"
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.pylint.messages_control]
+disable=["fixme", "W1202"]
+
+[tool.coverage.run]
+omit = ["tests/*"]
+branch = true
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pyzmq = "^19.0"
+toml = "^0.10"
+click = "^7.0"
+datastreamcorelib = { version = "^1.1" }
+dataclasses = { version = "^0.7", python = "~3.6" }
+tomlkit = "^0.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+coverage = {version = "^5.4", extras = ["toml"]}
+pytest-cov = "^2.11"
+pylint = "^2.5"
+black = "=20.8b1"
+bandit = "^1.6"
+mypy = "^0.800"
+pre-commit = "^1.20"
+pytest-asyncio = "^0.14"
+bump2version = "^1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
