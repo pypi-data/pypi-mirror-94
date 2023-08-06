@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: ExpertOp4Grid
+Version: 0.0.1
+Summary: Expert analysis algorithm for solving overloads in a powergrid
+Home-page: https://github.com/marota/ExpertOp4Grid/
+Author: Nicolas Megel
+Author-email: nico.megel@gmail.com
+License: Mozilla Public License 2.0 (MPL 2.0)
+Keywords: ML powergrid optmization RL power-systems
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Requires-Dist: atomicwrites (==1.4.0)
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: backcall (==0.1.0)
+Requires-Dist: certifi (==2020.4.5.1)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: cloudpickle (==1.2.2)
+Requires-Dist: colorama (==0.4.3)
+Requires-Dist: commonmark (==0.5.4)
+Requires-Dist: cycler (==0.10.0)
+Requires-Dist: decorator (==4.4.2)
+Requires-Dist: docutils (==0.16)
+Requires-Dist: graphviz (==0.14)
+Requires-Dist: Grid2Op (==1.1.1)
+Requires-Dist: gym (==0.12.6)
+Requires-Dist: idna (==2.9)
+Requires-Dist: importlib-metadata (==1.6.0)
+Requires-Dist: ipykernel (==5.3.0)
+Requires-Dist: ipython (==7.15.0)
+Requires-Dist: ipython-genutils (==0.2.0)
+Requires-Dist: jedi (==0.17.0)
+Requires-Dist: jupyter-client (==6.1.3)
+Requires-Dist: jupyter-core (==4.6.3)
+Requires-Dist: kiwisolver (==1.2.0)
+Requires-Dist: llvmlite (==0.32.1)
+Requires-Dist: matplotlib (==3.3.3)
+Requires-Dist: metakernel (==0.24.4)
+Requires-Dist: more-itertools (==8.2.0)
+Requires-Dist: networkx (==2.4)
+Requires-Dist: numba (==0.49.1)
+Requires-Dist: numpy (==1.18.4)
+Requires-Dist: oct2py (==5.0.4)
+Requires-Dist: octave-kernel (==0.32.0)
+Requires-Dist: packaging (==20.4)
+Requires-Dist: pandapower (==2.2.2)
+Requires-Dist: pandas (==1.0.4)
+Requires-Dist: parso (==0.7.0)
+Requires-Dist: pathlib (==1.0.1)
+Requires-Dist: pexpect (==4.8.0)
+Requires-Dist: pickleshare (==0.7.5)
+Requires-Dist: pluggy (==0.13.1)
+Requires-Dist: prompt-toolkit (==3.0.5)
+Requires-Dist: ptyprocess (==0.6.0)
+Requires-Dist: py (==1.8.1)
+Requires-Dist: pydot (==1.4.1)
+Requires-Dist: pygame (==1.9.6)
+Requires-Dist: pyglet (==2.0.dev0)
+Requires-Dist: Pygments (==2.6.1)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: pytest (==4.4.2)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2020.1)
+Requires-Dist: pyyaml (==5.3.1)
+Requires-Dist: pyzmq (==19.0.1)
+Requires-Dist: recommonmark (==0.4.0)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: scipy (==1.4.1)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: tornado (==6.0.4)
+Requires-Dist: tqdm (==4.46.0)
+Requires-Dist: traitlets (==4.3.3)
+Requires-Dist: urllib3 (==1.25.9)
+Requires-Dist: wcwidth (==0.2.2)
+Requires-Dist: zipp (==3.1.0)
+Provides-Extra: optional
+Requires-Dist: pypower (>=5.1.4pypownet>=2.2.0) ; extra == 'optional'
+
+UNKNOWN
+
+
