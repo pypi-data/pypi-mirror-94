@@ -1,0 +1,4 @@
+[intake.drivers]
+stripe_catalog = intake_stripe.core:StripeCatalog
+stripe_table = intake_stripe.core:StripeTableSource
+
