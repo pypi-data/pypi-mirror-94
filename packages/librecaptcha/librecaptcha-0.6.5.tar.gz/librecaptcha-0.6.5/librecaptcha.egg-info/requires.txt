@@ -1,0 +1,6 @@
+Pillow>=4.1.1
+requests<3,>=2.18.1
+slimit<0.9,>=0.8.1
+
+[gtk]
+PyGObject<4,>=3.30.0
