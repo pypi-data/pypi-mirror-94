@@ -1,0 +1,13 @@
+README.md
+setup.py
+dicewars/__init__.py
+dicewars/__version__.py
+dicewars/game.py
+dicewars/grid.py
+dicewars/match.py
+dicewars/player.py
+dicewars/util.py
+dicewars.egg-info/PKG-INFO
+dicewars.egg-info/SOURCES.txt
+dicewars.egg-info/dependency_links.txt
+dicewars.egg-info/top_level.txt
