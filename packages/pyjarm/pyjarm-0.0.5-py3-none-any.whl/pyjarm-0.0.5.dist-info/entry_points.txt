@@ -1,0 +1,3 @@
+[console_scripts]
+pyjarm = jarm.cli:run
+
