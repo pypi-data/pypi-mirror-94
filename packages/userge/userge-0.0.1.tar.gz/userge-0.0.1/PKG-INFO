@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: userge
+Version: 0.0.1
+Summary: userbot
+Home-page: https://github.com/rking32/userge
+Author: rking32
+Author-email: rking32@usergeteam.org
+License: GPLv3
+Download-URL: https://github.com/rking32/userge/releases/latest
+Description: UNKNOWN
+Keywords: pyrogram,userbot,telegram
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
