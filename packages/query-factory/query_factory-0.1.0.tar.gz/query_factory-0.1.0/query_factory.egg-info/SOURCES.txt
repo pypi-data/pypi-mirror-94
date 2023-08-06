@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+query_factory/__init__.py
+query_factory/exceptions.py
+query_factory/factory.py
+query_factory.egg-info/PKG-INFO
+query_factory.egg-info/SOURCES.txt
+query_factory.egg-info/dependency_links.txt
+query_factory.egg-info/requires.txt
+query_factory.egg-info/top_level.txt
+tests/__init__.py
+tests/test_factory.py
