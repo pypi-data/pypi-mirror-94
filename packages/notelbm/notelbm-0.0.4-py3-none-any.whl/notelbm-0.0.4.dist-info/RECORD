@@ -1,0 +1,15 @@
+notelbm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+notelbm/buff.py,sha256=DCO2ImACdKHucZ6VRA6xe7y8Wj2eME9mqW3WHMi1apI,2044
+notelbm/cavity_1.py,sha256=bnDb29nROklCiUNaXdUmikwtmn4fSG93T8p88IB7ixc,2219
+notelbm/cavity_3.py,sha256=9PGNq6v1Ai75Llfb8-eU4p9U-AmXaUDdtqrC7ZxqoQU,2476
+notelbm/lattice.py,sha256=fI4Ar9uvjvYj-KHRTd140OvQ1fBrrI1FrxxM-RR48JI,35845
+notelbm/obs_array.py,sha256=lU3Oa5QdnMLUwN57rMfj2NG7SB2Dm-rDGgGUDw7AYnk,4046
+notelbm/obstacle.py,sha256=SpqE1IjDd9SxymTQ28oWMD-7-OrX8089yZXUi2TYHHA,3670
+notelbm/params.py,sha256=iUPrJYKZlH3aSRxzIHeLqoJtTjLXBz7UN-TGvq2EfG4,2589
+notelbm/poiseuille.py,sha256=07-FpBhuyAaEXoa5Z03DR_WZfA4CXbq1Dz_lXYQVulo,2830
+notelbm/shapes.py,sha256=L1LOTH3ULvip1F_smPjlEPtfbSg0RVCRs3uq9Sn-1l8,15529
+notelbm/turek.py,sha256=3xZ0YShrA9j68kb6IQysYrjS3kcv-V5rmI7NYThW_UU,3662
+notelbm-0.0.4.dist-info/METADATA,sha256=Bu4UfxXq64TQMGWrwC92T49i-l83ypC_G6812Qkn3p8,224
+notelbm-0.0.4.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+notelbm-0.0.4.dist-info/top_level.txt,sha256=43H3AsbG0t27AIjPiYWj7m8iEkLyjG4WnPSWlp8qZOw,8
+notelbm-0.0.4.dist-info/RECORD,,
