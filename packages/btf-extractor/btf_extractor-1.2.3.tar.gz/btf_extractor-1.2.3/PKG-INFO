@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: btf-extractor
+Version: 1.2.3
+Summary: Extract UBO BTF archive format(UBO2003, UBO2014).
+Home-page: https://github.com/2-propanol/btf_extractor
+License: Zlib
+Author: 2-propanol
+Author-email: nuclear.fusion.247@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Pillow (>=7)
+Requires-Dist: nptyping (>=1,<2)
+Requires-Dist: numpy (>=1.19,<2.0)
+Description-Content-Type: text/markdown
+
+# BTF Extractor
+[![PyPI version](https://img.shields.io/pypi/v/btf-extractor?style=flat-square)](https://pypi.org/project/btf-extractor/#history)
+[![GitHub version](https://img.shields.io/github/v/tag/2-propanol/BTF_extractor?style=flat-square)](https://github.com/2-propanol/BTF_extractor/releases)
+[![Python Versions](https://img.shields.io/pypi/pyversions/btf-extractor?style=flat-square)](https://pypi.org/project/btf-extractor/)
+
+Extract UBO BTF archive format([UBO2003](https://cg.cs.uni-bonn.de/en/projects/btfdbb/download/ubo2003/), [UBO2014](https://cg.cs.uni-bonn.de/en/projects/btfdbb/download/ubo2014/)).
+
+This repository uses [zeroeffects/btf](https://github.com/zeroeffects/btf)'s [btf.hh](https://github.com/zeroeffects/btf/blob/master/btf.hh).
+
+Extract to ndarray compatible with openCV(BGR, channels-last).
+
+## Install
+```bash
+pip install btf-extractor
+```
+
+This package uses the [Python C API](https://docs.python.org/3/c-api/index.html).
+To install this package, a C++ build environment is required.
+
+### Build is tested on
+- Windows 10 20H2 + MSVC v14.28 ([Build Tools for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/))
+- MacOS 11(Big Sur) + clang 12.0.0 (Command line tools for Xcode (`xcode-select --install`))
+- Ubuntu 20.04 + GCC 9.3.0 ([build-essential](https://packages.ubuntu.com/focal/build-essential))
+
+## Example
+```python
+>>> from btf_extractor import Ubo2003, Ubo2014
+
+>>> btf = Ubo2003("UBO_CORDUROY256.zip")
+>>> angles_list = list(btf.angles_set)
+>>> image = btf.angles_to_image(*angles_list[0])
+>>> print(image.shape)
+(256, 256, 3)
+>>> print(angles_list[0])
+(0, 0, 0, 0)
+
+>>> btf = Ubo2014("carpet01_resampled_W400xH400_L151xV151.btf")
+>>> print(btf.img_shape)
+(400, 400, 3)
+>>> angles_list = list(btf.angles_set)
+>>> image = btf.angles_to_image(*angles_list[0])
+>>> print(image.shape)
+(400, 400, 3)
+>>> print(angles_list[0])
+(60.0, 270.0, 60.0, 135.0)
+```
+
+## Supported Datasets
+### UBO2003
+6561 images, 256x256 resolution, 81 view and 81 light directions. 
+
+![ubo2003](https://user-images.githubusercontent.com/42978570/107014489-02f65c80-67df-11eb-9efc-b0e33670f311.jpg)
+> Mirko Sattler, Ralf Sarlette and Reinhard Klein "[Efficient and Realistic Visualization of Cloth](http://cg.cs.uni-bonn.de/de/publikationen/paper-details/sattler-2003-efficient/)", EGSR 2003.
+
+### ATRIUM (non-HDR)
+6561 images, 800x800 resolution, 81 view and 81 light directions.
+
+![atrium](https://user-images.githubusercontent.com/42978570/107017968-32a76380-67e3-11eb-9e87-a14708182f80.jpg)
+
+### UBO2014
+22,801 images, 512x512(400x400) resolution, 151 view and 151 light directions.
+
+![ubo2014](https://user-images.githubusercontent.com/42978570/107017983-376c1780-67e3-11eb-8416-047b648f64ca.jpg)
+> [Michael Weinmann](https://cg.cs.uni-bonn.de/en/people/dr-michael-weinmann/), [Juergen Gall](http://www.iai.uni-bonn.de/~gall/) and [Reinhard Klein](https://cg.cs.uni-bonn.de/en/people/prof-dr-reinhard-klein/). "[Material Classification based on Training Data Synthesized Using a BTF Database](https://cg.cs.uni-bonn.de/de/publikationen/paper-details/weinmann-2014-materialclassification/)", accepted at ECCV 2014.
+
