@@ -1,0 +1,11 @@
+eml_parser/__init__.py,sha256=V_PeHTwfe-HF30kX9YaO5l6rkPsLErFWBA1k0PJbgEQ,278
+eml_parser/decode.py,sha256=eG4ylB5MPWD9YcceUM4uN3M1qEiB9yFB0vqBROpx2b8,8240
+eml_parser/eml_parser.py,sha256=e6x_GF33tXjXRe-9xkO2jNTaNBfQwpU97oUtBJ5lBN0,45524
+eml_parser/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eml_parser/regex.py,sha256=IL5bFD1Ec3cDqk6NsHLjPlf20iTXhjiTbY80YDVOOZs,3855
+eml_parser/routing.py,sha256=fmpImXi53pW20rDhtPgs6l1oSMfIuah928Ad2RJTEc0,6393
+eml_parser-1.14.5.dist-info/LICENSE,sha256=V8j_M8nAz8PvAOZQocyRDX7keai8UJ9skgmnwqETmdY,34520
+eml_parser-1.14.5.dist-info/METADATA,sha256=1M9vLk1_KUKSKZjHVRNGcH2bGNy8g8Wtj2MNdxS5_bs,5115
+eml_parser-1.14.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+eml_parser-1.14.5.dist-info/top_level.txt,sha256=dzynB55DisCaGvpo7p3RcTjbKaaUQ9OzNRJQur-rsaI,11
+eml_parser-1.14.5.dist-info/RECORD,,
