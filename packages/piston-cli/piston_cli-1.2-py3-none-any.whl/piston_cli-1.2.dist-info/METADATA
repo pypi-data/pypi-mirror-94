@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: piston-cli
+Version: 1.2
+Summary: A cli tool with an terminal editor to compile over 35 languages instantly using the piston api.
+Home-page: https://github.com/Shivansh-007/piston-cli
+Author: Shivansh-007
+License: MIT
+Keywords: piston compiler cli compile run
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+Requires-Dist: prompt-toolkit
+Requires-Dist: requests
+Requires-Dist: pygments
+
+# Piston CLI
+[![](https://img.shields.io/github/license/Shivansh-007/piston-cli?style=for-the-badge)]()
+[![](https://img.shields.io/github/issues/Shivansh-007/piston-cli?style=for-the-badge)]()
+[![](https://img.shields.io/github/issues-pr/Shivansh-007/piston-cli?style=for-the-badge)]()
+[![](https://img.shields.io/github/workflow/status/Shivansh-007/piston-cli/Linting/main?style=for-the-badge)]()
+
+A cli tool which uses the [piston api](https://github.com/engineer-man/piston), developed by Engineerman and his team to compile over 35 languages instantly. Accepts files, paste.pythondiscord.com links and input.
+
+
+### Commands
+```bash
+# Installing the package
+pip3.8 install piston-cli -U
+# Help Command
+piston -h
+```
+
+### Languages
+```bash
+piston --list
+```
+
+## How to run it? (Contributing)
+```shell
+# This will install the development and project dependencies.
+pipenv sync --dev
+
+# This will install the pre-commit hooks.
+pipenv run precommit
+
+# Optionally: run pre-commit hooks to initialize them.
+# You can start working on the feature after this.
+pipenv run pre-commit run --all-files
+
+# Run it
+pipenv run start
+```
+
+
