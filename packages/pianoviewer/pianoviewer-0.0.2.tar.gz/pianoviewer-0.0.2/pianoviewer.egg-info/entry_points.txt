@@ -1,0 +1,3 @@
+[console_scripts]
+pianoviewer = pianoviewer.__main__:main
+
