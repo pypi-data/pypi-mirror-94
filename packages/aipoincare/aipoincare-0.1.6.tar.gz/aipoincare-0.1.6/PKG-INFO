@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: aipoincare
+Version: 0.1.6
+Summary: A machine learning package discovering conservation laws.
+Home-page: UNKNOWN
+Author: Ziming Liu
+Author-email: zmliu@mit.edu
+License: UNKNOWN
+Description: ## Quick Start
+        
+        The 'aipoincare' package is available on PyPI and can be installed with `pip install aipoincare`
+        
+        Required packages:
+        
+        ```python
+        numpy
+        pytorch
+        matplotlib
+        flask
+        os
+        sklearn
+        copy
+        ```
+        
+        
+        
+        #### First example
+        
+        ```python
+        from aipoincare.main import run
+        
+        run()
+        ```
+        
+        Then play with our GUI ! Have fun !
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

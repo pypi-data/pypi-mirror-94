@@ -1,0 +1,2 @@
+include aipoincare/*
+include aipoincare/backend/data/*
