@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: coveo-pypi-cli
+Version: 0.2.2
+Summary: A simple cli to query pypi.
+Author: Jonathan piché
+Author-email: jpiche@coveo.com
+Requires-Python: >=3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click
+Requires-Dist: coveo-styles (>=0.2.0,<0.3.0)
+Requires-Dist: requests
+Requires-Dist: typing-extensions

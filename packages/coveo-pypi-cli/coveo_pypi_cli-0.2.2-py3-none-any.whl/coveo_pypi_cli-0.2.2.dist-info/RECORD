@@ -1,0 +1,11 @@
+coveo_pypi_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coveo_pypi_cli/__main__.py,sha256=JH34dGrBCztrOhG3O_758mEQWTh59NcRxzZTeXPs274,230
+coveo_pypi_cli/cli.py,sha256=qEv3XHOZgVlTMhffcVw4LdCuFyO0JmMQUnKd1aemIRY,2216
+coveo_pypi_cli/exceptions.py,sha256=ellTY2sbkuXFid17LgkWj97FY0wh4vG7P5XFk8VzZ0E,146
+coveo_pypi_cli/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coveo_pypi_cli/pypi.py,sha256=sK6sjKdI-Z5Yl8XIdP8NgL98HJdfdSvXu2OPnSXVu-s,3448
+coveo_pypi_cli/versions.py,sha256=ve3NgVsHfH8ShSTrNy9SPkr8rhI_DGOrB-Nmx9b5cn0,2290
+coveo_pypi_cli-0.2.2.dist-info/entry_points.txt,sha256=EkBQhkvKqM3NZTd1KaDJUUzM_wdzsGfnjXd2vW1NF4g,48
+coveo_pypi_cli-0.2.2.dist-info/WHEEL,sha256=G_NFpzHmv_dUXgCUSAWL0-bLL-eMzYU6DzDeGXbRXUk,83
+coveo_pypi_cli-0.2.2.dist-info/METADATA,sha256=cxNh4c43tLT2gH8NFj8y8aeyCQoxPq5FV0WXLbVN5fc,494
+coveo_pypi_cli-0.2.2.dist-info/RECORD,,
