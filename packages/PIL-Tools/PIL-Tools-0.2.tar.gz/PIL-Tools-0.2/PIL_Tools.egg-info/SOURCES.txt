@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+PILTools/ImageTools.py
+PILTools/__init__.py
+PILTools/core.py
+PIL_Tools.egg-info/PKG-INFO
+PIL_Tools.egg-info/SOURCES.txt
+PIL_Tools.egg-info/dependency_links.txt
+PIL_Tools.egg-info/requires.txt
+PIL_Tools.egg-info/top_level.txt
