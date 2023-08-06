@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+NagiosCheckHelper/__init__.py
+NagiosCheckHelper.egg-info/PKG-INFO
+NagiosCheckHelper.egg-info/SOURCES.txt
+NagiosCheckHelper.egg-info/dependency_links.txt
+NagiosCheckHelper.egg-info/top_level.txt
