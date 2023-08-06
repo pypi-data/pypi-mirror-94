@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pppine
+Version: 1.0
+Summary: A collection of miscellaneous functions and utilities for Python and/or Django.
+Home-page: https://github.com/mkopani/pppine
+Author: Mark Kopani
+Author-email: pinedigitalgrowth@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (>=42)
+Requires-Dist: wheel
+Requires-Dist: python-magic
+Requires-Dist: pytz
+Requires-Dist: shortuuid
+Requires-Dist: phonenumbers
+
+# The Pine Digital Growth Python Package
+
+This package contains a variety of miscellaneous Python helper/utility functions used across different Pine Digital projects.
+
+## Components
+
+* Miscellaneous functions
+* Django functions
+* Encoders
+
+
