@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "yamlett"
+version = "0.0.4"
+description = "Yet Another ML Experiment Tracking Tool"
+authors = ["Virgile Landeiro <virgile.landeiro@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/vlandeiro/yamlett"
+repository = "https://github.com/vlandeiro/yamlett"
+keywords = ["ml", "machine learning", "experiment tracking", "mongodb"]
+classifiers = [
+            "Topic :: Scientific/Engineering :: Artificial Intelligence",
+            "Development Status :: 3 - Alpha",
+            "Intended Audience :: Science/Research"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pymongo = "^3.11.1"
+python-box = {extras = ["all"], version = "^5.2.0"}
+cloudpickle = "^1.6.0"
+cloudpathlib = { version = "^0", optional = true, extras = ["all"] }
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+pytest = "^6.1.2"
+mongomock = "^3.21.0"
+coverage = "^5.3"
+flake8 = "^3.8.4"
+isort = "^5.6.4"
+
+[tool.poetry.extras]
+cloud = ["cloudpathlib"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
