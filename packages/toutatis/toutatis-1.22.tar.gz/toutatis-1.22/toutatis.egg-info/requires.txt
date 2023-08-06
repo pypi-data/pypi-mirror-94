@@ -1,0 +1,5 @@
+argparse
+httpx
+tabulate
+tqdm
+unicodecsv
