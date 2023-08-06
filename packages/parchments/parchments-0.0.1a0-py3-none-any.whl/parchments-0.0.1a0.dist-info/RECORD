@@ -1,0 +1,14 @@
+parchments/__init__.py,sha256=FfrUJVcI9gvkKaLl5uXq65aVla0YjfGGCskQUryfYJk,37
+parchments/core/__init__.py,sha256=aSZYEXuuhQseHr3wifVlojZ3ukQD8Bk1ZhiDmEY-l_o,119
+parchments/core/block.py,sha256=P_XA6pJtioWEXJxoLP1CKSMv8wb9d1qfGfp6IusIehQ,1305
+parchments/core/choices.py,sha256=Utx0VP-IOSTlvpcYfDO55V7XngNQiKm5cmFSS174wkc,253
+parchments/core/core.py,sha256=A1tog7xJhAgp72c608vGSDzx23U7Rdl9vXpmbnVtK2o,322
+parchments/core/grid.py,sha256=8KL6uiTGPW_58so0_8n_XNZ54pYURYtGh29HVTtcQX0,1717
+parchments/core/row.py,sha256=z0AIUBwLPC1gP5Va4WuaadGDi-mJqG_Ku1LzCUYajds,1256
+parchments/core/validation.py,sha256=WLtp8vR4B5cu-o25gUNYJXi8uRNNtk6vsqvLKOj-83w,408
+parchments/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parchments-0.0.1a0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+parchments-0.0.1a0.dist-info/METADATA,sha256=0ZCkTNBnCBUTbugjtdaLHkK6v73i-IXGsVzaizU2ALI,1230
+parchments-0.0.1a0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+parchments-0.0.1a0.dist-info/top_level.txt,sha256=wwWn0uTX72ojcFD7N6SnVei3-eQohJz4nEYp6fGb3T4,11
+parchments-0.0.1a0.dist-info/RECORD,,
