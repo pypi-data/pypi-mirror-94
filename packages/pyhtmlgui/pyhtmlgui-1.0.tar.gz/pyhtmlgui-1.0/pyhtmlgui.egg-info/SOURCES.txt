@@ -1,0 +1,17 @@
+README.md
+setup.py
+pyhtmlgui/__init__.py
+pyhtmlgui/pyhtmlgui.py
+pyhtmlgui/pyhtmlgui_instance.py
+pyhtmlgui/pyhtmlview.py
+pyhtmlgui.egg-info/PKG-INFO
+pyhtmlgui.egg-info/SOURCES.txt
+pyhtmlgui.egg-info/dependency_links.txt
+pyhtmlgui.egg-info/top_level.txt
+pyhtmlgui/lib/__init__.py
+pyhtmlgui/lib/browser.py
+pyhtmlgui/lib/eventset.py
+pyhtmlgui/lib/observable.py
+pyhtmlgui/lib/observableDict.py
+pyhtmlgui/lib/observableList.py
+pyhtmlgui/lib/weakfunctionreferences.py
