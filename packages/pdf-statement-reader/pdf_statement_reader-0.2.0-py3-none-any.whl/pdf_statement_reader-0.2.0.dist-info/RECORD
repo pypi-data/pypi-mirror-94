@@ -1,0 +1,13 @@
+pdf_statement_reader/__init__.py,sha256=SmSdiTdvChDp5vRt2WqzKnOw4i6EWlRYUSi9EEGxeCc,6328
+pdf_statement_reader/decrypt.py,sha256=IUgOV5qXL40yZrjlaqT-nwzENZpFxs06Xrv7hfSzFSk,1168
+pdf_statement_reader/parse.py,sha256=M2jFz3siUO6oSqjqnKGbgJihPczFcSu493TWOdql_EI,3179
+pdf_statement_reader/validate.py,sha256=M1Wce2J1pnBozs8fuZ7Eg2z77NgZbUgFcYSZhAeaSek,480
+pdf_statement_reader/config/za/absa/cheque.json,sha256=zt8_udi89klg6SetwIqzsRN6xOR2WFqWilZ4n4n9CGQ,869
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_import.py,sha256=RZ5BURpmzA1G_Nh68FGUVYTXifDdxwIePiKD2sRFfwI,82
+pdf_statement_reader-0.2.0.dist-info/LICENSE,sha256=TO023K63pyAc6OQRqUIIXXIeexBEy2SdZ1oxSr1D5iM,1071
+pdf_statement_reader-0.2.0.dist-info/METADATA,sha256=MczSUNGx-Ouv-PWDGaoa-YttfkwGCe_4e8Y73xDvrfg,8324
+pdf_statement_reader-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pdf_statement_reader-0.2.0.dist-info/entry_points.txt,sha256=E5Ee6vxvRpBAbibqr74pH-oeAtE1zONQ7zFxSU6tnKw,50
+pdf_statement_reader-0.2.0.dist-info/top_level.txt,sha256=w_wq7cS7VdjAnmizRckgxu1O9QaPI8X2ocPx3agG8Bs,27
+pdf_statement_reader-0.2.0.dist-info/RECORD,,
