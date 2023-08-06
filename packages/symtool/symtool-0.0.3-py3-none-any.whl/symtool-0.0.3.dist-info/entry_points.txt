@@ -1,0 +1,3 @@
+[console_scripts]
+symtool=symtool.main:main
+
