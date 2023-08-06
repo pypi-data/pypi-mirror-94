@@ -1,0 +1,5 @@
+[console_scripts]
+tango = two_to_tango.cli:tango
+tango_download = two_to_tango.cli:download
+tango_reproduce = two_to_tango.cli:reproduce
+
