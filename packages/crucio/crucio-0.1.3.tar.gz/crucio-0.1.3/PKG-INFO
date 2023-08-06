@@ -1,0 +1,81 @@
+Metadata-Version: 1.1
+Name: crucio
+Version: 0.1.3
+Summary: Crucio is a python sci-kit learn inspired package for class imbalance. It use some classic methods for class balancing taking as parameters a data frame and the target column.
+Home-page: https://github.com/ScienceKot/crucio.git
+Author: YOUR NAME
+Author-email: vpapaluta06@gmail.com
+License: MIT
+Download-URL: https://github.com/ScienceKot/crucio/archive/v1.0.tar.gz
+Description: 
+        Crucio is a python sci-kit learn inspired package for class imbalance. It use some classic methods for class balancing taking as parameters a data frame and the target column.
+        
+        This version of crucio has the next methods of feature selection:
+        
+        1) ADASYN
+        
+        2) ICOTE (Immune Centroids Oversampling)
+        
+        3) MTDF (Mega-Trend Difussion Function)
+        
+        4) MWMOTE (Majority Weighted Minority Oversampling Technique)
+        
+        5) SMOTE (Synthetic Minority Oversampling Technique)
+        
+        6) SMOTENC (Synthetic Minority Over-sampling Technique for Nominal and Continuous)
+        
+        7) SMOTETOMEK (Synthetic Minority Oversampling Technique + Tomek links for undersampling)
+        
+        8) SMOTEENN (Synthetic Minority Oversampling Technique + ENN for undersampling)
+        
+        9) SCUT (SMOTE and Clustered Undersampling Technique)
+        
+        10) SLS (Safe-Level-Synthetic Minority Over-Sampling TEchnique)
+        
+        11) TKRKNN (Top-K ReverseKNN)
+        
+        All these methods takes the pandas Data Frame and y column to balance on.
+        
+        
+        How to use crucio
+        
+        To use balancer from crucio you should just import the balancer from crucio in the following framework:
+        
+        ```from crucio import <class name>```
+        
+        class names are written above in parantheses.
+        
+        Next create a object of this algorithm (I will use ADASYN method as an example).
+        
+        ```method = ADASYN()```
+        
+        To balance the dataset on the target column use the 'balance' function, using as parameters the pandas Data Frame and the column that you want to balance.
+        
+        ```new_dataframe = method.balance(df, 'target')```
+        
+        Returned value is a new data frame with the target column balanced.
+        
+        
+        With love from Sigmoid.
+        
+        
+        We are open for feedback. Please send your impression to vpapaluta06@gmail.com
+        
+        
+        
+Keywords: ml,machine learning,imbalanced learning,class balancing,python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
