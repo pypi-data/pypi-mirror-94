@@ -1,0 +1,14 @@
+fastapi_websocket_rpc/__init__.py,sha256=DjGpLUKFCMLAY7BlYU7O_qslEmylyht5zxjZEFipFpc,204
+fastapi_websocket_rpc/connection_manager.py,sha256=sy9noYlexSNNdCkXHmcHOfrNte_qegPnK23dJQAqjkI,396
+fastapi_websocket_rpc/logger.py,sha256=dU5VT3jn6nKXOqaJXhTUK5qNGF8S6f4kyh9MC-9uVm8,3123
+fastapi_websocket_rpc/rpc_channel.py,sha256=dwMIGV-WqY698dANWvW7hlRg-33GTQ6a6htB418Jg6o,11376
+fastapi_websocket_rpc/rpc_methods.py,sha256=rnbbLCW1Asys923Z81fpYuZUzUsOCJpeITTui7poYfA,2486
+fastapi_websocket_rpc/schemas.py,sha256=1yVZovQA19ufstZ5x91rolmGzJ7aZ1o0Ipwy9s3Dbaw,555
+fastapi_websocket_rpc/utils.py,sha256=osf1iWmNXrvpsFUMCcmdYoUQrA7EgfmbYYD8DI-Jdts,1763
+fastapi_websocket_rpc/websocket_rpc_client.py,sha256=tohQE-QM4Myoom0-6gS0NMCeIsKcPTm59k-GL54qlyk,9357
+fastapi_websocket_rpc/websocket_rpc_endpoint.py,sha256=KF3NLYYzgPlnVOHhcGvA6EpgKNKj7d3PA_K4eVho0YY,3520
+fastapi_websocket_rpc-0.1.12.dist-info/LICENSE,sha256=Hbi2gunWbEcH9ivh2sObUNMnBfimjnimeWAfdYPaEDc,1064
+fastapi_websocket_rpc-0.1.12.dist-info/METADATA,sha256=rSWcv0VGkOFIB6RRNO2kqGGzQ9Loc6PmUqyJu9rKWy0,6645
+fastapi_websocket_rpc-0.1.12.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fastapi_websocket_rpc-0.1.12.dist-info/top_level.txt,sha256=AMsBhRNU3Pu2pkDKtDa1y74IzTA0eaUXrV0fk4FrDB0,22
+fastapi_websocket_rpc-0.1.12.dist-info/RECORD,,
