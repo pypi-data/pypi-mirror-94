@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+CarterPrint/__init__.py
+CarterPrint.egg-info/PKG-INFO
+CarterPrint.egg-info/SOURCES.txt
+CarterPrint.egg-info/dependency_links.txt
+CarterPrint.egg-info/top_level.txt
