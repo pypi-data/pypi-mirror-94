@@ -1,0 +1,16 @@
+*.pyc
+/__pycache__/
+/venv/
+/.idea/
+.gitlab-ci.yml
+.gitkeep
+.env
+.vscode/
+.eggs/
+
+tests/logs
+tests/data
+dist/
+build/
+*.egg-info
+pythonenv*/
