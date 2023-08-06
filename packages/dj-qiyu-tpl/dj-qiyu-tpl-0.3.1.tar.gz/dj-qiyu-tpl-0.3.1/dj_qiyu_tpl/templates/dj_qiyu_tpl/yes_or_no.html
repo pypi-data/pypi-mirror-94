@@ -1,0 +1,7 @@
+{% load static %}
+
+{% if value %}
+    <img src="{% static "admin/img/icon-yes.svg" %}" alt="是"/>
+{% else %}
+    <img src="{% static "admin/img/icon-no.svg" %}" alt="否"/>
+{% endif %}
