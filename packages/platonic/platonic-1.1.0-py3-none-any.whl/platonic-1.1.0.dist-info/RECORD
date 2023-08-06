@@ -1,0 +1,14 @@
+platonic/const.py,sha256=s__v3nGYs_8j4Z2XtCUAMCgTCbT86z_De_20kNxrfes,227
+platonic/mapping.py,sha256=MAtN0Y5HqJqDrFBQFv1TL9kjXE9bdAXUK5ozwFM6_bk,1636
+platonic/queue/__init__.py,sha256=4ZxwAqVefFgzX-WeLRE_eVKxl9tJxP4CFNupReRlgFc,320
+platonic/queue/base.py,sha256=ZR2BhWGs3twxZLSos8o8b41ZuqHEROVWT4pJGLhA6sk,570
+platonic/queue/errors.py,sha256=WIuoOpVdpxa0dM3-jVKQWO6yM6blqFZnUuzo2yGqKLA,1710
+platonic/queue/message.py,sha256=KJI8-26t35ik9qSfsCIriHY8M7dWAcN59D8wvSHHzKA,240
+platonic/queue/receiver.py,sha256=NECmoF3f7Tz7JsZomiYfvnQdfmrKNT6jqU0jJno0qA0,1891
+platonic/queue/sender.py,sha256=1LdEFjce2BcgXBntjan6mmHZOsE_8LH44gAbxJgT4B8,937
+platonic/queue/types.py,sha256=DYsNEhkvN2ST3YFNhNU3eNLOL4xRDwbLmOS-QBsbM8I,183
+platonic/types.py,sha256=FcT_KVg3dQU6DqW4IJy-e3DsarJe8rsdhxqlzACdTdo,414
+platonic-1.1.0.dist-info/LICENSE,sha256=B9k2R4AKTN2N4gIfQGIVLXL9VK01di61_YTtYTmL4WQ,1103
+platonic-1.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+platonic-1.1.0.dist-info/METADATA,sha256=KBqYU2XI9U2fqbY8_WvPEGhxj7aCsmYwalEyn4EqBmk,3114
+platonic-1.1.0.dist-info/RECORD,,
