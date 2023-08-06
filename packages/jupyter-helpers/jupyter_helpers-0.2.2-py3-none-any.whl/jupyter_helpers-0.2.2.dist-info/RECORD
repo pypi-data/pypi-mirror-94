@@ -1,0 +1,15 @@
+jupyter_helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupyter_helpers/desktop_integration.py,sha256=n68gAzVicIE-pcYRkWDprjewPbCIfMEhTmS7zxY972Y,1874
+jupyter_helpers/following_tail.py,sha256=I0E2TmWw764me_nyVSQihEsX6scyZ-GWdY_wK8tE5fA,1766
+jupyter_helpers/namespace.py,sha256=8pBF2S-g4ZFCuxxu2deugkRtk6LxHhgvtG6NIeOw9_I,3110
+jupyter_helpers/notifications.py,sha256=plmnn1KAGWDTuMCPHFnylELWfsw_S6xukvlPtjaWwIw,6122
+jupyter_helpers/rpy2_autocompletion.py,sha256=MRsan3hl14SlJ_mWFJWCz-xGWyaauoPYdnWy6rsfQtI,504
+jupyter_helpers/selective_import.py,sha256=yyc08XtrjwEcTlSosLuFqN4IzmPLNTzJH640eWgC5JI,716
+jupyter_helpers/source.py,sha256=4JitOTT7gZqCutgazq0kNCQSM91KLIE24YzhkvEUKIw,983
+jupyter_helpers/table.py,sha256=FbixP68-DY2uFTRS00KTeDeBHaxtsWczbDHTvlk01TI,705
+jupyter_helpers/utilities.py,sha256=gPkUn8CCJLo_lVifO97FCji3CoCY4KLUApIh4crE2a8,3647
+jupyter_helpers-0.2.2.dist-info/LICENSE,sha256=97VQHY7oXlUL_O0LtRl165r1fW_xQf7gLQU7QxIzxjU,1070
+jupyter_helpers-0.2.2.dist-info/METADATA,sha256=EvxVjLcGhptKTbgQw4eB0wCBgtEROCwuEh-b6ulGVoM,3473
+jupyter_helpers-0.2.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jupyter_helpers-0.2.2.dist-info/top_level.txt,sha256=HqJwUTyVHAp1a1VeF5oAKLmh3gfU3F_s3TExWvprwcI,16
+jupyter_helpers-0.2.2.dist-info/RECORD,,

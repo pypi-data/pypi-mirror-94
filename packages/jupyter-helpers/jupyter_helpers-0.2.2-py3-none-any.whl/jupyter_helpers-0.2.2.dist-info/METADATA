@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: jupyter-helpers
+Version: 0.2.2
+Summary: A collection of helpers for using IPython in Jupyter(Lab)
+Home-page: https://github.com/krassowski/jupyter-helpers
+Author: Michal Krassowski
+Author-email: krassowski.michal+pypi@gmail.com
+License: MIT
+Keywords: ipython,jupyter,jupyterlab,notebook,helpers
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pandas
+Requires-Dist: pygments
+Requires-Dist: ipywidgets
+Requires-Dist: IPython
+Requires-Dist: jupyterlab-widgets
+
+# Jupyter helpers for IPython
+
+This collection of IPython helpers optimized for JupyterLab users will help you to:
+
+- Play a sound once the computations have finished (or failed)
+- Integrate the notifications with your OS (ready for GNOME shell)
+- Enable auto-completion for rpy2 (great for using  ggplot2!) - now also available in [jupyterlab-lsp](https://github.com/krassowski/jupyterlab-lsp)
+- Summarize dictionaries and other structures in a nice table
+- Selectively import from other notebooks
+- Scroll to the recently executed cell on error or when opening the notebook
+- Use interactive (following) tail for long outputs
+
+
+The examples are available in [demos](https://github.com/krassowski/jupyter-helpers/tree/master/demos) directory. Please, see the [Productivity tips for Jupyter (Python)](https://medium.com/@krassowski.michal/productivity-tips-for-jupyter-python-a3614d70c770) article for introduction and more code samples. For jump-to-definition feature, please visit [jupyterlab-lsp](https://github.com/krassowski/jupyterlab-lsp).
+
+
+
+### Installation
+
+For basic functionality:
+
+```bash
+pip3 install jupyter_helpers
+```
+
+To include interactive widgets:
+
+```bash
+pip3 install ipywidgets
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+```
+
+To use advanced GNOME integration,
+run `setup.sh` script from the installation directory (PRs welcome to propose a better setup procedure).
+
+To check if you have required system libraries for the better GNOME integration, see [notify-send.sh repository](https://github.com/vlevit/notify-send.sh).
+
+
+### Showcase
+
+#### Notifications
+
+![Notifications](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/notifications_integration.gif)
+
+#### Tailing outputs
+
+![Following tail](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/tail.gif)
+
+#### Auto-completion in R cells
+
+![R auto-completion](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/r_autocomplete.gif)
+
+#### Neat namespaces
+
+![NeatNamespace](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/neat_namespace.png)
+
+#### Selective imports
+
+![Selective imports](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/selective_import.png)
+
+
