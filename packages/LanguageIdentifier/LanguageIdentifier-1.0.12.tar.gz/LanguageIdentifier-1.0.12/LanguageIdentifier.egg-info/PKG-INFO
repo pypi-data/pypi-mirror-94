@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: LanguageIdentifier
+Version: 1.0.12
+Summary: Language identifier based on an LSTM model
+Home-page: UNKNOWN
+License: MIT
+Download-URL: https://pypi.org/project/LanguageIdentifier/
+Description: UNKNOWN
+Keywords: Lid,LSTM,Language identifier,Language
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
