@@ -1,0 +1,11 @@
+splitcopy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+splitcopy/ftp.py,sha256=aZQGQcLozRHgSIKuBMhiaqs7GqIXEVuV1fyI2FfKjwo,2365
+splitcopy/paramikoshell.py,sha256=hLVL28XUL02Kc-qnObcmYA2gKkKzR8Iz2yQge6WAuio,18001
+splitcopy/progress.py,sha256=kyGUfgqBs-0VGwfr-UMYbQiEv5rNZ5IcWSLK8oVXaxU,1414
+splitcopy/splitcopy.py,sha256=G8Tgb0DanRmtIn8epfkkDoQ2Q3bUouNpVr7WmIDNh_U,59855
+splitcopy-1.1.6.dist-info/LICENSE,sha256=OJ5-T81ZwRzVpKgUd3Z6WCAPGcr0guUnJgPZuMvntTQ,11351
+splitcopy-1.1.6.dist-info/METADATA,sha256=JiKx-mcL9ufeRNjkEp6k8hd2BwBtJOyig5sqCjVtIdA,8076
+splitcopy-1.1.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+splitcopy-1.1.6.dist-info/entry_points.txt,sha256=pOCbX0D9Ubt1vtG-C6hYtI2yChj58XOYBPV25I3tYOc,56
+splitcopy-1.1.6.dist-info/top_level.txt,sha256=S2eRB1F9lMeGN2u67fb_DyCc16nThA41YV2z3W-R55Q,10
+splitcopy-1.1.6.dist-info/RECORD,,
