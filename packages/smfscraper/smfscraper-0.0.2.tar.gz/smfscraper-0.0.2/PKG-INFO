@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: smfscraper
+Version: 0.0.2
+Summary: Wrapper for scraping simplemachineforums
+Home-page: https://github.com/ryuuzu/smfscaper
+Author: Utsav Magar
+Author-email: utsavmagar88728@gmail.com
+License: UNKNOWN
+Description: # smfscaper
+        Wrapper Library for scraping simplemachineforums with their main url only.
+        
+        It contains following functions:
+        * getBoards() - returns a list of visible boards
+        * getAllPosts() - returns a list of posts
+        * getStickyPosts() - returns a list of sticky posts
+        * getLockedPosts() - returns a list of locked-posts
+        * getNormalPosts() - returns a list of unlocked and non-sticky posts
+        * getLatestPosts() - returns the first normal post
+        
+Keywords: python,first package,smf,simplemachineforums,smfscraper,smfapi
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
