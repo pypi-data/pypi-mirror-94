@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+cv_stream/__init__.py
+cv_stream/camera.py
+cv_stream/camera_server.py
+cv_stream.egg-info/PKG-INFO
+cv_stream.egg-info/SOURCES.txt
+cv_stream.egg-info/dependency_links.txt
+cv_stream.egg-info/not-zip-safe
+cv_stream.egg-info/requires.txt
+cv_stream.egg-info/top_level.txt
+cv_stream/templates/index.html

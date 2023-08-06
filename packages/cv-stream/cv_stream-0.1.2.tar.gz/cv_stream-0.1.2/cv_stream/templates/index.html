@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Video Stream</title>
+    <style>
+      body {
+        background-color: #2e2e2e;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+      }
+      .stream {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="stream" src="{{ url_for('/stream') }}" />
+    </div>
+  </body>
+</html>
