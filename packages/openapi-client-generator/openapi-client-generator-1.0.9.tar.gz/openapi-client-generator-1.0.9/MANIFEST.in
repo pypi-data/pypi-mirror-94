@@ -1,0 +1,8 @@
+# https://docs.python.org/3/distutils/sourcedist.html#manifest
+include README.rst CHANGELOG.rst LICENSE.txt
+recursive-include requirements *.txt
+recursive-include openapi_client_generator
+recursive-include openapi_client_generator py.typed
+recursive-include openapi_client_generator *.j2
+exclude requirements/test.txt
+prune tests
