@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pnms/__init__.py
+pnms.egg-info/PKG-INFO
+pnms.egg-info/SOURCES.txt
+pnms.egg-info/dependency_links.txt
+pnms.egg-info/not-zip-safe
+pnms.egg-info/top_level.txt
