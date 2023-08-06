@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: shor
+Version: 0.0.6
+Summary: Quantum Computing for Humans
+License: MIT
+Author: Collin Overbay - shor.dev
+Author-email: shordotdev@gmail.com
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: matplotlib (>=3.3.3,<4.0.0)
+Requires-Dist: numpy (>=1.19.4,<2.0.0)
+Requires-Dist: qiskit (>=0.23.1,<0.24.0)
+Description-Content-Type: text/markdown
+
+# shor
+The Python quantum computing library.
+
+Shor is a simple, modular, and extensible quantum computing API written in python.
+
+#### Our mission is to make quantum computing easy and accesible to everyone.
+
+Use shor if you need a library that:
+- Enables fast prototyping of quantum circuits
+- Simulates small quantum programs
+- Makes quantum computing easy
+
+We currently support running programs on Qiskit providers including IBMQ quantum computeres.
+
+In the near future we plan to support other providers. Write your program once, and run it anywhere.
+
+Read the documentation, view tutorials and examples, and join the community at: https://shor.dev/
+
+We are in early development and looking for contributors!
+
+Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+Shor is compatible with Python 3.6 and is distributed under the MIT license.
