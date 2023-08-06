@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+sftpConfigReader/__init__.py
+sftpConfigReader/reader.py
+sftpConfigReader.egg-info/PKG-INFO
+sftpConfigReader.egg-info/SOURCES.txt
+sftpConfigReader.egg-info/dependency_links.txt
+sftpConfigReader.egg-info/top_level.txt
+tests/__init__.py
+tests/test_sftp_config.py
