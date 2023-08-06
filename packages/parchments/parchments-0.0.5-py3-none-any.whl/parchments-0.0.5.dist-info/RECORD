@@ -1,0 +1,17 @@
+parchments/__init__.py,sha256=FfrUJVcI9gvkKaLl5uXq65aVla0YjfGGCskQUryfYJk,37
+parchments/core/__init__.py,sha256=aSZYEXuuhQseHr3wifVlojZ3ukQD8Bk1ZhiDmEY-l_o,119
+parchments/core/block.py,sha256=ORP-eEkxuIYKofHOmX7eTaF_DvlMK-Vn6Vu_q4VNapI,2292
+parchments/core/choices.py,sha256=Utx0VP-IOSTlvpcYfDO55V7XngNQiKm5cmFSS174wkc,253
+parchments/core/core.py,sha256=spGSf3KKWDGzMRuLcCsna4SiYm86_FWrJ7Zamu8F7HM,372
+parchments/core/grid.py,sha256=UJtYLyNXeXKfKJg22qOlTFUWxEs5bihNEJ6TfUar7hQ,2514
+parchments/core/period.py,sha256=4JjG_-LPpMHnLJzu5hwZCSvt_JV2VxMR0sCQbcoQPjE,771
+parchments/core/row.py,sha256=f8zmiavDllY03qSrKyWRXZdNGi854FWknwF3YMzekj4,2410
+parchments/core/validation.py,sha256=WLtp8vR4B5cu-o25gUNYJXi8uRNNtk6vsqvLKOj-83w,408
+parchments/core/value.py,sha256=48vpWBpqxPkEgeoXkyaUycPuFjRKNBNgR6GLcFXj4Ok,946
+parchments/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parchments/tests/grid_tests.py,sha256=yR6GARWLEwfKEw0N0x3i-dk25FWAC2vnhVVJDf1WBCo,1912
+parchments-0.0.5.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+parchments-0.0.5.dist-info/METADATA,sha256=s-O1Vl2ivcUST5ahS7iWV-lx4DiIM34_gq2qwLz1bDM,22451
+parchments-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+parchments-0.0.5.dist-info/top_level.txt,sha256=wwWn0uTX72ojcFD7N6SnVei3-eQohJz4nEYp6fGb3T4,11
+parchments-0.0.5.dist-info/RECORD,,
