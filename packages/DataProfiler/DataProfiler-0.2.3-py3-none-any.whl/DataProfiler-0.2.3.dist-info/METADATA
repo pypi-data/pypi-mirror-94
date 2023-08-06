@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: DataProfiler
+Version: 0.2.3
+Summary: What is in your data? Detect schema, statistics and entities in almost any file.
+Home-page: https://github.com/capitalone/data-profiler
+Author: Jeremy Goodsitt, Austin Walters, Anh Truong, Grant Eden
+Author-email: UNKNOWN
+License: Apache License, Version 2.0
+Keywords: Data Investigation
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: h5py (>=2.10.0)
+Requires-Dist: wheel (>=0.33.1)
+Requires-Dist: future (>=0.18.2)
+Requires-Dist: numpy (<=1.19.2,>=1.18.5)
+Requires-Dist: pandas (>=1.1.2)
+Requires-Dist: python-dateutil (>=2.7.5)
+Requires-Dist: pytz (>=2020.1)
+Requires-Dist: six (>=1.15.0)
+Requires-Dist: pyarrow (>=1.0.1)
+Requires-Dist: chardet (>=3.0.4)
+Requires-Dist: fastavro (>=1.0.0.post1)
+Requires-Dist: python-snappy (>=0.5.4)
+Requires-Dist: scikit-learn (>=0.23.2)
+Requires-Dist: tensorflow-addons (>=0.11.2)
+Requires-Dist: keras (>=2.4.3)
+Requires-Dist: scipy (>=1.4.1)
+Requires-Dist: tensorflow (>=2.3.0) ; sys_platform == "darwin"
+Requires-Dist: tensorboard (>=2.3.0) ; sys_platform == "darwin"
+Requires-Dist: tensorflow-gpu (>=2.3.0) ; sys_platform == "linux"
+
+UNKNOWN
+
+
