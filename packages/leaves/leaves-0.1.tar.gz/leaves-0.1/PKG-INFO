@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: leaves
+Version: 0.1
+Summary: 基于rabbitmq的轻量级rpc调用封装
+Home-page: https://github.com/bigpangl/leaves
+Author: bigpangl
+Author-email: bigpangl@163.com
+License: Apache 2.0
+Description: 基于rabbitmq的轻量级rpc调用封装
+Keywords: rpc
+Platform: UNKNOWN
