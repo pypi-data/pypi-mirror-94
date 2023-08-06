@@ -1,0 +1,3 @@
+[console_scripts]
+ipdbx = ipdbx.__main__:main
+
