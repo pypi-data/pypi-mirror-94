@@ -1,0 +1,36 @@
+def urlshortner():
+
+    import validators
+    import os
+    import hashlib
+    import json
+    import pymongo
+
+    myurl=input('Enter a URL : ')
+    valid = validators.url(myurl)
+    if valid == True:
+        print('URL is valid')
+        random_data = os.urandom(128)
+        nurl = hashlib.md5(random_data).hexdigest()[:8]
+        with open('do_re_mi.json', 'w') as f:
+            data = {}
+            data['urls'] = []
+            data['urls'].append({'oldurl':myurl,'newurl' : nurl
+            })
+            json.dump(data, f)
+    else:
+        print('URL is invalid')
+
+
+    myclient = pymongo.MongoClient("mongodb+srv://gouthamreddy97:sai.1997@cluster0.tobaf.mongodb.net/mdb?retryWrites=true&w=majority")
+    mydb = myclient["mdb"]
+    mycol = mydb["inventory"]
+
+    with open('do_re_mi.json') as file:
+        file_data = json.load(file)
+
+    if isinstance(file_data, list):
+        mycol.insert_many(file_data)
+    else:
+        mycol.insert_one(file_data)
+
