@@ -1,0 +1,15 @@
+{% load cms_tags staticfiles sekizai_tags %}{% addtoblock "js" %}<script src="{% static 'parallaxjs/js/parallax.min.js' %}"></script>{% endaddtoblock %}<div {% spaceless %}
+    {% endspaceless %}{% if instance.id_name %} id="{{ instance.id_name }}"{% endif %}{% spaceless %}
+    {% endspaceless %}{% if instance.css_classes %} class="{{ instance.css_classes }}"{% endif %}{% spaceless %}
+    {% endspaceless %} data-parallax="scroll"{% spaceless %}
+    {% endspaceless %} data-image-src="{{ instance.image_url }}"{% spaceless %}
+    {% endspaceless %}{% if instance.natural_width %} data-natural-width="{{ instance.natural_width }}"{% endif %}{% spaceless %}
+    {% endspaceless %}{% if instance.natural_height %} data-natural-height="{{ instance.natural_height }}"{% endif %}{% spaceless %}
+    {% endspaceless %}{% if instance.position_x %} data-position-x="{{ instance.position_x }}"{% endif %}{% spaceless %}
+    {% endspaceless %}{% if instance.position_y %} data-position-y="{{ instance.position_y }}"{% endif %}{% spaceless %}
+    {% endspaceless %}{% if instance.speed is not None %} data-speed="{{ instance.speed }}"{% endif %}{% spaceless %}
+    {% endspaceless %}{% if instance.z_index %} data-z-index="{{ instance.z_index }}"{% endif %}{% spaceless %}
+    {% endspaceless %}{% if instance.bleed %} data-bleed="{{ instance.bleed }}"{% endif %}{% spaceless %}
+    {% endspaceless %}{% if instance.ios_fix is not None %} data-ios-fix="{{ instance.ios_fix }}"{% endif %}{% spaceless %}
+    {% endspaceless %}{% if instance.android_fix is not None %} data-android-fix="{{ instance.android_fix }}"{% endif %}{% spaceless %}
+    {% endspaceless %}{% if inline_styles %} style="{{ inline_styles }}"{% endif %}{% if instance.attributes_str %} {{ instance.attributes_str }}{% endif %}>{% for plugin in instance.child_plugin_instances %}{% render_plugin plugin %}{% endfor %}</div>
