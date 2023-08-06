@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "PyRPIIC"
+version = "1.1.0"
+description = "Python RPI interface to low-level ICs"
+authors = ["Adam Page <adam.page@samtec.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Samtec-ASH/pyrpiic"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+PyRPIO = "^0.1.0"
+bitarray = "^1.6.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.1"
+pep8 = "^1.7.1"
+pylint = "^2.6.0"
+autopep8 = "^1.5.4"
+flake8 = "^3.8.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
