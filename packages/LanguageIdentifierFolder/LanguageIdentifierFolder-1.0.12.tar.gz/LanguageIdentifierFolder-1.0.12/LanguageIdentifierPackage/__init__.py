@@ -1,0 +1,2 @@
+from LanguageIdentifierFolder.LanguageIdentifierPackage.LanguageIdentifier import predict
+
