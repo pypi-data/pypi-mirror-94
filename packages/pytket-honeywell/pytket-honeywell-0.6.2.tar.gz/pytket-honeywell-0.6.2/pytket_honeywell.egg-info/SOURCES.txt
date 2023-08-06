@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+_metadata.py
+setup.py
+pytket/extensions/backends/honeywell/__init__.py
+pytket/extensions/backends/honeywell/_metadata.py
+pytket/extensions/backends/honeywell/api_wrappers.py
+pytket/extensions/backends/honeywell/config.py
+pytket/extensions/backends/honeywell/honeywell.py
+pytket_honeywell.egg-info/PKG-INFO
+pytket_honeywell.egg-info/SOURCES.txt
+pytket_honeywell.egg-info/dependency_links.txt
+pytket_honeywell.egg-info/not-zip-safe
+pytket_honeywell.egg-info/requires.txt
+pytket_honeywell.egg-info/top_level.txt
