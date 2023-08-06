@@ -1,0 +1,11 @@
+numpy>=1
+asyncssh>=2
+prompt_toolkit>=3
+sounddevice
+samplerate
+
+[:sys_platform != "linux"]
+pynput
+
+[:sys_platform == "linux"]
+xlib
