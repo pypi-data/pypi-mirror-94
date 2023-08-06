@@ -1,0 +1,3 @@
+[console_scripts]
+wpa_pyfi = wpa_pyfi.cli:main
+
