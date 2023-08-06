@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: kocher-tools
+Version: 0.1.3
+Summary: Bioinformatic Tools for the Kocher Lab
+Home-page: https://kocher-guides.readthedocs.io/en/latest/
+Author: Andrew Webb and Sarah Kocher
+Author-email: aewebb@princeton.edu
+Maintainer: Andrew Webb
+Maintainer-email: 19213578+aewebb80@users.noreply.github.com
+License: MIT
+Project-URL: Documentation, https://kocher-guides.readthedocs.io/
+Project-URL: Code, https://github.com/kocherlab/kocher_tools
+Project-URL: Issue tracker, https://github.com/kocherlab/kocher_tools/issues
+Platform: UNKNOWN
+Requires-Python: >=3.7.*
+Requires-Dist: pyyaml
+Requires-Dist: pandas
+Requires-Dist: Biopython
+Requires-Dist: sqlalchemy
+Requires-Dist: gffutils
+Requires-Dist: tox
+
+kocher-tools
+============
+
+.. image:: https://www.travis-ci.com/kocherlab/kocher_tools.svg?branch=master
+    :target: https://www.travis-ci.com/kocherlab/kocher_tools
+
+Installation
+------------
+
+.. code-block:: bash
+
+    conda install -c aewebb80 -c bioconda kocher_tools
+
+
