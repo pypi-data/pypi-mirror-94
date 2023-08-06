@@ -1,0 +1,3 @@
+[console_scripts]
+orderly-web = orderly_web.cli:main
+

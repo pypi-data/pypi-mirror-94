@@ -1,0 +1,7 @@
+docker
+docopt
+hvac
+pytest
+pyyaml
+vault_dev
+Pillow==7.2
