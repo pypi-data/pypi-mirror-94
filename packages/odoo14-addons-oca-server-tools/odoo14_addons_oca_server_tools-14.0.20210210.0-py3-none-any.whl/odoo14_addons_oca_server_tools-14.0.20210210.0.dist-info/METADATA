@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: odoo14-addons-oca-server-tools
+Version: 14.0.20210210.0
+Summary: Meta package for oca-server-tools Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo14-addon-auditlog
+Requires-Dist: odoo14-addon-base-cron-exclusion
+Requires-Dist: odoo14-addon-base-exception
+Requires-Dist: odoo14-addon-base-jsonify
+Requires-Dist: odoo14-addon-base-m2m-custom-field
+Requires-Dist: odoo14-addon-base-sparse-field-list-support
+Requires-Dist: odoo14-addon-base-technical-user
+Requires-Dist: odoo14-addon-module-auto-update
+Requires-Dist: odoo14-addon-onchange-helper
+Requires-Dist: odoo14-addon-sentry
+Requires-Dist: odoo14-addon-sql-request-abstract
+
+UNKNOWN
+
+
