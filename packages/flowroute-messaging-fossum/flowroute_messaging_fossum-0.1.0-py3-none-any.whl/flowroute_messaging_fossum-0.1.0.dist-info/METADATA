@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: flowroute-messaging-fossum
+Version: 0.1.0
+Summary: Flowroute's Messaging API (Fossum edition).
+Home-page: https://github.com/fossum/flowroute-messaging-python
+Author: Flowroute Developers
+Author-email: fossum.eric@gmail.com
+License: MIT
+Keywords: messaging,sms,telephony,sip,api
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Communications :: Telephony
+Requires-Dist: requests
+Requires-Dist: jsonpickle
+
+UNKNOWN
+
+
