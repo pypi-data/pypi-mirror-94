@@ -1,0 +1,15 @@
+umakaparser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+umakaparser/locales/cmd.en.json,sha256=acjJhCnfXpQrUPPH5Nup62PsLIFvJ_sT0RCTfylCyk8,1333
+umakaparser/locales/cmd.ja.json,sha256=Sh7pZS75yv89Qz_AZVI5fgzcYRb2vZ9PjpEADzjAkhw,1748
+umakaparser/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+umakaparser/scripts/services/__init__.py,sha256=HH_3Dlwe-rTjX5ioziW4iJqjp1FnV5MKeuKm7QwBef4,165
+umakaparser/scripts/services/assets.py,sha256=JQ4W9AWMw9NuJcyuEJQznUp0VDce3neJxlts2DP0g_8,4698
+umakaparser/scripts/services/build.py,sha256=M4DWh5vQ9qH8AaCwFNhoY6s-aofk1n09IrRxYxaNBAE,14124
+umakaparser/scripts/services/convert.py,sha256=Hqb211vptdykySQZG7QbwGxQK359WkfwjjuWDudicdQ,456
+umakaparser/scripts/services/utils.py,sha256=tTXLfax1eTTMFB6dxMxW8T1iTiQ3zFoy2zwpAGWFw4k,1449
+umakaparser/scripts/services/validate.py,sha256=X0YXGXUaCXMuxyGpDTkORFAvYBV6X-0xNo0RDlaxNWM,4390
+umakaparser/services.py,sha256=vVOYnlpm1tzHrbFtSFHKb-2qxEs1iNpy-ISiTEaAg3c,2562
+umakaparser-0.1.4.dist-info/entry_points.txt,sha256=jxEbb5zp-0F1mkhyCU8B4tHZxKrbdTCM5KmxOHMLmI0,56
+umakaparser-0.1.4.dist-info/WHEEL,sha256=OL-EN-39HbzBiGlqqMt_l4r9-zX-74hoU51DNxxDqP4,88
+umakaparser-0.1.4.dist-info/METADATA,sha256=WDcO09ogYSFoyqUs7I8NOLG6y01BP94_E5UbNW6tcQ0,959
+umakaparser-0.1.4.dist-info/RECORD,,
