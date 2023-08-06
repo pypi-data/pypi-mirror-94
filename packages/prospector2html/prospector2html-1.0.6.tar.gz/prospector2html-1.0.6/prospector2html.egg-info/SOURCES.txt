@@ -1,0 +1,11 @@
+README.md
+setup.py
+prospector2html/__init__.py
+prospector2html/__main__.py
+prospector2html/prospector2html.py
+prospector2html.egg-info/PKG-INFO
+prospector2html.egg-info/SOURCES.txt
+prospector2html.egg-info/dependency_links.txt
+prospector2html.egg-info/entry_points.txt
+prospector2html.egg-info/requires.txt
+prospector2html.egg-info/top_level.txt
