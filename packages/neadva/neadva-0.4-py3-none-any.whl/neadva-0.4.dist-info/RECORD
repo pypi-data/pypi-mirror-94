@@ -1,0 +1,16 @@
+neadva/Config.py,sha256=XFY2ygZxC89G45FvmMujgLScFzSA7YqwPru26n4ukEM,2159
+neadva/Request.py,sha256=rW3zDOHV6QKocf3dPHTvgWSUUDOV9hILQrvGizpb4Ik,29244
+neadva/Util.py,sha256=TbsKw5ioilq8VNOs-2iBIIq-VmH2CLD25D9HejQWJjM,1162
+neadva/__init__.py,sha256=VU93451xa3Zsub4H9tI3iYT7yWzz6VqsMG-INwx_y_k,99
+neadva/xsd/3.0/catalog.xml,sha256=l1WKiMZC6wwvfWXL2BlqRoqmAN0MWIuTHbKhM5tqOMA,1410
+neadva/xsd/3.0/common.xsd,sha256=35a6MQ0xgY7se4JWdRB-wLGAQFyVE5BXi-bqnlXILE8,31458
+neadva/xsd/3.0/invoiceAnnulment.xsd,sha256=gvoK0lyzA1bnopuExlJb1OUeQ2FwqVdpB-AVA2GD6rM,4894
+neadva/xsd/3.0/invoiceApi.xsd,sha256=DIG0pVn1ujPRcD8HLaFMpq-Z7XA6TmnJgQva-kBAS98,115889
+neadva/xsd/3.0/invoiceBase.xsd,sha256=a8qOKVi9xk1YcXIo_ou-jiZT0mhfhAiE-jH-HvntwlQ,16094
+neadva/xsd/3.0/invoiceData.xsd,sha256=0coLb3lWL6N-dMRYZ0CTvr0YjOSX3GCupxzXSalrIDI,126120
+neadva/xsd/3.0/serviceMetrics.xsd,sha256=IplJNvkKs6dikw0LC4B42SM4NYA9pfST90SIHXPEdE8,9984
+neadva-0.4.dist-info/LICENSE,sha256=2vNwjnhWJy0Z9G2hSlJmiT1F42yxSGWq9a-PLhBvtkg,1070
+neadva-0.4.dist-info/METADATA,sha256=pjYwBPj_uCQ58Hg2B8NN0HjjSfKZGHvo3D7UVu8zczA,1422
+neadva-0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+neadva-0.4.dist-info/top_level.txt,sha256=o5A8HcjXJmQ32HnCke1zj_1XM_AnPBkYBS4ZWeKWZPE,7
+neadva-0.4.dist-info/RECORD,,

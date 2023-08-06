@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: neadva
+Version: 0.4
+Summary: Hungarian Tax Authority NAV reporting api library
+Home-page: https://github.com/andrew-azarov/neadva
+Author: Andrew Azarov
+Author-email: andrew@serverastra.com
+License: MIT
+Download-URL: https://github.com/andrew-azarov/neadva/archive/v0.4-alpha.tar.gz
+Keywords: tax,hungary,reporting,api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: pycryptodome
+
+# neadva
+Python 3 implementation of Hungarian Tax Office (NAV) version 3 reporting api
+-----------
+Alpha version of the module. Can be used to supply data and return transaction numbers safely. More work required for full transfer support of NAV API.
+
+Clone the repo to install:
+
+`git clone https://github.com/andrew-azarov/neadva`
+
+or install using pip:
+
+`pip install neadva`
+
+Warning:
+-----------
+Tested only with test interface of NAV. Not production interface. Might still have some bugs due to differences in test and prod environment which happens sometimes
+
+Modules required:
+-----------
+`pip install pycryptodome`
+
