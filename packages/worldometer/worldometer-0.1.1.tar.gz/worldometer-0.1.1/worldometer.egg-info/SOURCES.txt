@@ -1,0 +1,12 @@
+README.md
+setup.py
+worldometer/__about__.py
+worldometer/__init__.py
+worldometer/api.py
+worldometer/core.py
+worldometer.egg-info/PKG-INFO
+worldometer.egg-info/SOURCES.txt
+worldometer.egg-info/dependency_links.txt
+worldometer.egg-info/not-zip-safe
+worldometer.egg-info/requires.txt
+worldometer.egg-info/top_level.txt
