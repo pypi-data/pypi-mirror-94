@@ -1,0 +1,13 @@
+oxfs/__init__.py,sha256=dS5cdDvozp1sE0LeCoCaUGRgjuqf3TyAE-yhhPXcanw,14
+oxfs/apiserver.py,sha256=NL0CdrlZhFMz7e6y9qrpPKr0gPbYqcqTycfTGeJaw4s,3598
+oxfs/cache.py,sha256=ezOq2tuWKIeq_daAgz0_LiPgId-GoyH4oFc4A0R52AA,972
+oxfs/oxfs.py,sha256=AlFsXzyEJTw_1PozHVuDz_OtM8zIzbiqkAopduqJoCk,17402
+oxfs/task_executor.py,sha256=rtOni1NGySpYhP1LhyRh4YMEQ2211Qa9tkatANqYQ3o,2137
+oxfs/updater.py,sha256=O46Ug5O92vtjGS1HGsTxTc3tp7npXu6sGar0328S4GE,3481
+oxfs-0.4.0.dist-info/LICENSE,sha256=qLa_eaaLejdRifNma4uNjxwtf2hzEKBwnfPfO31JnfI,1068
+oxfs-0.4.0.dist-info/METADATA,sha256=dzw4ypPXYzHCZNK3KdK86EfB-HVBsbDvJSFiDNqxvXs,1275
+oxfs-0.4.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+oxfs-0.4.0.dist-info/entry_points.txt,sha256=X7NPqK3oBzgfGlX9yNOjyNhGpzlkuJkiodPvwaguqRA,41
+oxfs-0.4.0.dist-info/top_level.txt,sha256=npMdeLDbXkNCQD1Pa_9SygQMb6tByMfGHHYE6hjQwiE,5
+oxfs-0.4.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+oxfs-0.4.0.dist-info/RECORD,,
