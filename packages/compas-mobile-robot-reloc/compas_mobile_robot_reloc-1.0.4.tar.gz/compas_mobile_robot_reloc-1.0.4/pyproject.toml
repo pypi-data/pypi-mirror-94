@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/compas_mobile_robot_reloc/_version.py"
+
+[tool.autopep8]
+max-line-length = 88
+
+[tool.isort]
+profile = "black"
+force_single_line = true
+known_first_party = "compas_mobile_robot_reloc"
+known_third_party = "compas,Rhino"
+default_section = "THIRDPARTY"
+add_imports = "__future__.absolute_import,__future__.division,__future__.print_function"
+skip = "_version.py"
+
+[tool.black]
+target-version = ['py27']

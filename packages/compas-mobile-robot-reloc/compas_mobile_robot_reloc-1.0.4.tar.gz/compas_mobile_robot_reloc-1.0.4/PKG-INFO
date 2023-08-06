@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: compas_mobile_robot_reloc
+Version: 1.0.4
+Summary: Robot localization using external measuring device (total station).
+Home-page: https://gramaziokohler.github.io/compas_mobile_robot_reloc
+Author: Gramazio Kohler Research
+Maintainer: Anton Tetov Johansson
+Maintainer-email: anton@tetov.se
+License: MIT license
+Project-URL: Repository, https://github.com/gramaziokohler/compas_mobile_robot_reloc
+Project-URL: Issues, https://github.com/gramaziokohler/compas_mobile_robot_reloc/issues
+Project-URL: Documentation, https://gramaziokohler.github.io/compas_mobile_robot_reloc
+Description: # COMPAS Mobile Robot Relocalization
+        
+        Robot localization using external measuring device (total station).
+        
+        ![Build and test](https://github.com/gramaziokohler/compas_mobile_robot_reloc/workflows/workflow/badge.svg)
+        [![PyPI Package latest release](https://img.shields.io/pypi/v/compas_mobile_robot_reloc.svg)](https://pypi.org/project/compas-mobile-robot-reloc)
+        [![Conda](https://img.shields.io/conda/v/conda-forge/compas_mobile_robot_reloc)](https://anaconda.org/conda-forge/compas_mobile_robot_reloc)
+        ![License](https://img.shields.io/github/license/gramaziokohler/rapid_clay_formations_fab)
+        
+        ![Image of total station and robot setup in Brunnen](docs/images/total_station_brunnen.png)
+        Photo from video shot by
+        [MASDFAB 1920 team](https://www.masdfab.com/2019-20-t3-mas-dfab).
+        
+        * [Documentation](https://gramaziokohler.github.io/compas_mobile_robot_reloc)
+        * [Issue tracker](https://github.com/gramaziokohler/compas_mobile_robot_reloc)
+        
+        ## Sources
+        
+        Code adapted from source code by Selen Ercan and Sandro Meier at [Gramazio
+        Kohler Research](https://gramaziokohler.arch.ethz.ch/), ETH Zurich (2019).
+        
+        Original code:
+        [gramaziokohler/IF_jamming/if_jamming/localization](https://github.com/gramaziokohler/IF_jamming/blob/master/if_jamming/localization/)
+        
+        
+        ### Citing
+        
+        > Ercan, Selen, Sandro Meier, Fabio Gramazio, and Matthias Kohler. 2019.
+        > "Automated Localization of a Mobile Construction Robot with an External
+        > Measurement Device." *In Proceedings of the 36th International Symposium on
+        > Automation and Robotics in Construction (ISARC 2019)*, 929-36. International
+        > Association on Automation and Robotics in Construction.
+        > https://doi.org/10.3929/ethz-b-000328442.
+        
+        ```bibtex
+        @inproceedings{ercan_automated_2019,
+        	title = {Automated {Localization} of a {Mobile} {Construction} {Robot} with an {External} {Measurement} {Device}},
+        	copyright = {http://rightsstatements.org/page/InC-NC/1.0/},
+        	url = {https://www.research-collection.ethz.ch/handle/20.500.11850/328442},
+        	doi = {10.3929/ethz-b-000328442},
+        	language = {en},
+        	booktitle = {Proceedings of the 36th {International} {Symposium} on {Automation} and {Robotics} in {Construction} ({ISARC} 2019)},
+        	publisher = {International Association on Automation and Robotics in Construction},
+        	author = {Ercan, Selen and Meier, Sandro and Gramazio, Fabio and Kohler, Matthias},
+        	year = {2019},
+        	note = {Accepted: 2019-09-11T08:51:48Z},
+        	pages = {929--936},
+        }
+        ```
+        
+        # Changelog
+        
+        ## 2021-02-01 - 1.0.3
+        
+        ### Changed
+        * Bumped compas to `<2.0`.
+        
+        ## 2021-01-04 - 1.0.2
+        
+        No changes, version bumped to give give a clear indication of which conda
+        package to use. (Lingering package
+        [compas-mobile-robot-reloc](https://anaconda.org/conda-forge/compas-mobile-robot-reloc)
+        on conda forge.)
+        
+        ## 2020-12-18 - 1.0.1
+        
+        ### Added
+        * Moved MeasurementPoint from grasshopper document to `compas_mobile_robot_reloc.utils`.
+        
+        ## 2020-12-18 - 1.0.0
+        
+        Package broken out from
+        [rapid_clay_formations_fab](https://github.com/gramaziokohler/rapid_clay_formations_fab).
+        
+        Typing and tests added.
+        
+        MIT License
+        
+        Copyright (c) 2020 Gramazio Kohler Research
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: architecture,engineering,fabrication,construction
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: IronPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
