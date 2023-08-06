@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+mehalbasiccalculator/__init__.py
+mehalbasiccalculator.egg-info/PKG-INFO
+mehalbasiccalculator.egg-info/SOURCES.txt
+mehalbasiccalculator.egg-info/dependency_links.txt
+mehalbasiccalculator.egg-info/top_level.txt
