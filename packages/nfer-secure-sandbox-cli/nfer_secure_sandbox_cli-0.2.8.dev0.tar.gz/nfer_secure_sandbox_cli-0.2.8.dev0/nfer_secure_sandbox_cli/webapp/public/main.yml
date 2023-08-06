@@ -1,0 +1,117 @@
+- name: genentech-5050
+  tasks:
+  - name: Get algo+deps code in file structure
+    populate-codebase:
+      code_path: .
+      credentials:
+        password: 1fee608c8a65e83a147febc92770103c1fbb6524
+        username: maneckshaw71
+      deps_file: requirements.txt
+      deps_path: .
+      main_file: nference_algorithm.py
+      mode: git
+      stack: python
+      url: https://github.com/maneckshaw71/my-dummy-codebase2
+    register: codebase_metadata
+  - get-certs:
+      action: create
+      mode: self-signed
+      name: genentech123
+      path: certs
+    name: Get Certificates (Self-Signed)
+    register: cert_metadata
+  - name: Specify Sandbox Specs
+    register: sandbox_metadata
+    set-sandbox-specs:
+      ca_cert_path: '{{ cert_metadata "path" }}'
+      ca_certificate: '{{ cert_metadata "ca_cert" }}'
+      cert_path: '{{ cert_metadata "path" }}'
+      certificate: '{{ cert_metadata "cert" }}'
+      template_id: d290f1ee-6c54-4b01-90e6-d701748f0851
+  - dockerize-algo:
+      app_dir: '{{ codebase_metadata "dest_code" }}'
+      ca_cert_path: '{{ cert_metadata "path" }}'
+      ca_certificate: '{{ cert_metadata "ca_cert" }}'
+      cert_path: '{{ cert_metadata "path" }}'
+      certificate: '{{ cert_metadata "privkey" }}'
+      deps_dir: '{{ codebase_metadata "dest_deps" }}'
+      docker:
+        image_name: testskpharmav1
+        image_repo: testskpharma
+        image_tag: sktest1
+      domain: www.mypharma.com
+      key_algo: '{{ algokey_metadata "path" }}'
+      lang: '{{ codebase_metadata "stack" }}'
+      sdbx_pubkey: '{{ sandbox_metadata "public_key" }}'
+    name: Specify Algorithm to get Dockerized Image Encrypted (app and deps)
+    register: algo_metadata
+  - get-data-projection:
+      ca_cert_path: '{{ cert_metadata "path" }}'
+      ca_certificate: '{{ cert_metadata "ca_cert" }}'
+      cert_path: '{{ cert_metadata "path" }}'
+      certificate: '{{ cert_metadata "cert" }}'
+      data_identifier: jansonn-critical-rootcanal-data
+      projection_id: 197b00c2-0acc-474c-ba78-4daab9bf181c
+      sdbx_pubkey: '{{ sandbox_metadata "public_key" }}'
+    name: Prepare / Choose Data Projections
+    register: data_metadata
+  - name: Prepare Output Encryption Fields
+    output-encrypt-bundle:
+      id: 4fe5d836-cee1-4e1d-895e-0398ccd607a2
+      name: www.mypharma.com-genentech-5050-output
+    register: output_metadata
+  - name: Prepare Policy (comprising algo, deps, data info)
+    prepare-policy:
+      mrenclave: '{{ algo_metadata "mrenclave" }}'
+      platform_measurement: '{{ sandbox_metadata "measurement" }}'
+      algo_fspf_key: '{{ algo_metadata "FSPF_KEY" }}'
+      algo_fspf_tag: '{{ algo_metadata "FSPF_TAG" }}'
+      algo_image: '{{ algo_metadata "image_id" }}'
+      ca_cert_path: '{{ cert_metadata "path" }}'
+      ca_certificate: '{{ cert_metadata "ca_cert" }}'
+      cert_path: '{{ cert_metadata "path" }}'
+      certificate: '{{ cert_metadata "cert" }}'
+      data_loc: '{{ data_metadata "arn" }}'
+      dataset:
+        cid: '{{ data_metadata "cid" }}'
+        data_sym_ekey: '{{ data_metadata "data_sym_ekey" }}'
+        name: '{{ data_metadata "name" }}'
+      docker:
+        image_name: '{{ algo_metadata "image" }}'
+        image_repo: '{{ algo_metadata "repo" }}'
+        image_tag: '{{ algo_metadata "tag" }}'
+      domain: '{{ algo_metadata "DOMAIN" }}'
+      key_algo: '{{ algo_metadata "key_algo" }}'
+      out_fspf_key: '{{ output_metadata "fspf_key" }}'
+      output:
+        name: www.mypharma.com-genentech-5050-output
+      pipeline_name: '{{ properties "pipeline_name" }}'
+      sandbox:
+        instance_id: '{{ sandbox_metadata "instance_id" }}'
+        instance_name: '{{ sandbox_metadata "instance_name" }}'
+      sdbx_pubkey: '{{ sandbox_metadata "public_key" }}'
+      template_id: d290f1ee-6c54-4b01-90e6-d701748f0851
+    register: policy_metadata
+  - name: Submit Policy (created above)
+    register: submission_metadata
+    upload-policy:
+      pipeline_name: '{{ properties "pipeline_name" }}'
+      policy_doc: '{{ policy_metadata "policy_file" }}'
+      template_id: '{{ policy_metadata "template_id" }}'
+  - execute-policy:
+      entity: '{{ submission_metadata "pipeline_id" }}'
+    name: Trigger Policy a.k.a Pipeline
+    register: execution_metadata
+  - name: Retrieve Output
+    register: retrieve_metadata
+    retrieve-output:
+      dest: output
+      policy_doc: '{{ policy_metadata "policy_file" }}'
+      pipeline_id: '{{ submission_metadata "pipeline_id" }}'
+      experiment_id: '{{ execution_metadata "exec_hash" }}'
+      fspf_key: '{{ output_metadata "fspf_key" }}'
+  - publish-artefacts:
+      keep_original: true
+      format: md
+    name: Publish Artefacts
+  verbose: debug

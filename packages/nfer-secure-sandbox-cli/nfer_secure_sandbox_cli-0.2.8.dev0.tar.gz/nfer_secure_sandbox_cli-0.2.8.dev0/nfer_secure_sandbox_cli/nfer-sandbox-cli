@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+
+import sys
+import platform
+import argparse
+import getpass
+import nfer_secure_sandbox_cli
+
+major = sys.version_info.major
+minor = sys.version_info.minor
+
+
+def is_venv():
+    return (hasattr(sys, 'real_prefix') or
+            (hasattr(sys, 'base_prefix') and sys.base_prefix != sys.prefix))
+
+if platform.system() == "Linux":
+    if is_venv():
+        sys.path.append("/".join(nfer_secure_sandbox_cli.__file__.split("/")[:-1]))
+    else:
+        sys.path.append("/home/%s/.local/lib/python%s.%s/site-packages/nfer_secure_sandbox_cli"%(getpass.getuser(),major, minor))
+        sys.path.append("/usr/local/lib/python%s.%s/dist-packages/nfer_secure_sandbox_cli"%(major, minor))
+elif platform.system() == 'Darwin':
+    if is_venv():
+        sys.path.append("/".join(nfer_secure_sandbox_cli.__file__.split("/")[:-1]))
+    else:
+        sys.path.append("/usr/local/lib/python%s.%s/site-packages/nfer_secure_sandbox_cli"%(major, minor))
+else:
+    sys.path.append("/".join(nfer_secure_sandbox_cli.__file__.split("/")[:-1]))
+
+
+from actions.configure import configure
+from actions.setup import setup
+from actions.run import run
+from actions.destroy import destroy
+from actions.launch import launch
+
+
+parser = argparse.ArgumentParser(description='Secure Sandbox CLI Description here ...')
+parser.add_argument('action', nargs=1, help='either "configure", "create", "run", "destroy"')
+opts = parser.parse_args()
+
+trigger_funcs = {
+  "configure": configure,
+  "setup": launch,
+  "run": run,
+  "destroy": destroy
+}
+trigger_funcs[opts.action[0]]()
