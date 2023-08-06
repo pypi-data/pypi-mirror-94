@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+Fermat_Factoring/FermatFactorization.py
+Fermat_Factoring/__init__.py
+Fermat_Factoring.egg-info/PKG-INFO
+Fermat_Factoring.egg-info/SOURCES.txt
+Fermat_Factoring.egg-info/dependency_links.txt
+Fermat_Factoring.egg-info/top_level.txt
