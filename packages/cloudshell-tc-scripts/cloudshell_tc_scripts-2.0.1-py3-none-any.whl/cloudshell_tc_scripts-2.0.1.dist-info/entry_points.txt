@@ -1,0 +1,3 @@
+[console_scripts]
+cloudshell-tc-scripts = scripts.cli:cli
+

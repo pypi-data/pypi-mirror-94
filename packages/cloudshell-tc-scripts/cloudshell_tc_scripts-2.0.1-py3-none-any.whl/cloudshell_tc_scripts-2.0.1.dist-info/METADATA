@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cloudshell-tc-scripts
+Version: 2.0.1
+Summary: UNKNOWN
+Home-page: http://www.qualisystems.com/
+Author: QualiSystems
+Author-email: info@qualisystems.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: ~=3.9
+Requires-Dist: pygithub (~=1.54)
+Requires-Dist: click (~=7.1)
+Requires-Dist: cloudshell-pip-download (~=0.4)
+Requires-Dist: requests (~=2.25)
+Requires-Dist: pydantic (~=1.7)
+
+UNKNOWN
+
+
