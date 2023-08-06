@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: dbjson
+Version: 0.0.3
+Summary: 
+    This is a simple flat file database which stores its data in a JSON file.
+    It is NOT INTENTED TO USE IN PRODUCTION.
+    It can be used times when you are too lazy to write a schema and do other stuff for a ORM like SQLAlchemy.
+    Data is structured in simple format of collections and records ( key-value pairs ).    
+Home-page: https://github.com/KetanIP/jsondbb
+Author: Ketan Iralepatil
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+<p align="center" width="100%">
+    <img width="33%" src="https://i.imgur.com/gbT5IKBm.jpg">
+</p>
+
+# Getting started with DBJson
+
+```python
+from dbjson.main import DB
+
+# Instatilizing DB class from dbjson.main
+db = DB()
+
+# Test Data
+data = {
+  "id": 1,
+  "first_name": "Vivyan",
+  "last_name": "Treherne",
+  "email": "vtreherne0@jigsy.com",
+  "ip_address": "94.254.247.240"
+}
+collection = "users"
+
+# Adding Record
+data = db.createRecord(collection, data)
+print(data)
+# Response -> {'__id__': 'f00ae4e3ca8c3e318a68acc460e5f401', '__data__': {'id': 1, 'first_name': 'Vivyan', 'last_name': 'Treherne', 'email': 'vtreherne0@jigsy.com', 'ip_address': '94.254.247.240'}}
+
+# Updating Record
+record_key = "f00ae4e3ca8c3e318a68acc460e5f401"
+to_update = [
+    {"email": "jhon@email.com"},
+    {"ip_address": "google.com"}
+]
+data = db.updateRecord(collection, "f00ae4e3ca8c3e318a68acc460e5f401", to_update)
+print(data)
+# Response -> {'id': 1, 'first_name': 'Vivyan', 'last_name': 'Treherne', 'email': 'jhon@email.com', 'ip_address': 'google.com'}
+
+# Deleting Record
+db.removeRecord(collection, record_key)
+```
+
+---
+
+## What is DBJson?
+
+Read the [DBJson docs here](https://ketanip.github.io/dbjson/) .
+
+This is a simple flat file database which stores its data in filesystem ( folders and JSONfiles ).
+It is NOT INTENTED TO USE IN PRODUCTION.
+It can be used times when you are too lazy to write a schema and do other stuff for a ORM like SQLAlchemy.
+
+Data is structured as follows:
+
+Collections : contains records.
+records: contains key value pair.
+key value pair ( key: str, value: dictionary ).
+
+### What are its features ?
+
+It can CRUD data.
+It is ACID Compliant.
+
+### What can it Do ?
+
+It can do all the basic things that a database can do, which includes:
+
+1. creating records
+2. reading records
+3. updating records
+4. deleting records
+5. filter records
+
+### Why was it made ?
+
+Sometimes I am to lazy to setup database make database models and all that stuff, and I like key-value pair databases for small fun projects. So I could not find in python so I decided to make one for myself.
+
+Hope you guys like it.😊
+
+Read the [DBJson docs here](https://ketanip.github.io/dbjson/) .
+
+
