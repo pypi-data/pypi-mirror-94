@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: IslandPy
+Version: 0.0.0.dev13
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: ludwici
+Author-email: andrew.volski@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/ludwici/IslandPy
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pygame
+Requires-Dist: py-flags
+
+UNKNOWN
+
+
