@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "envolved"
+version = "0.4.1"
+description = ""
+authors = ["ben avrahami <avrahami.ben@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/bentheiii/envolved"
+packages = [
+    {include="envolved"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pydantic = "*"
+pytest = "*"
+flake8 = { version = "*", allow-prereleases = true }
+pytest-cov = "*"
+sphinx = "*"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
