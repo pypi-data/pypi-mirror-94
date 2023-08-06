@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: omc-kube
+Version: 0.0.2
+Summary: kubenetes plugin for omc
+Home-page: https://github.com/linewx/omc-kube
+Author: Lu Ganlin
+Author-email: linewx1981@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: omc (>=0.2.1)
+Requires-Dist: kubernetes (>=11.0.0)
+
+UNKNOWN
+
+
