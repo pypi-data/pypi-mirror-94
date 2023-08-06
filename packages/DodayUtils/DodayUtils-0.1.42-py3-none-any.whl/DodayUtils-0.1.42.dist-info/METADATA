@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: DodayUtils
+Version: 0.1.42
+Summary: Doday Utility Package
+Home-page: https://github.com/weitung/DodayUtils.git
+Author: Gadgethi Develop Team
+Author-email: developers@gadget-hitech.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: gadgethiServerUtils
+Requires-Dist: websocket-client
+Requires-Dist: websocket-server
+Requires-Dist: requests
+
+# DodayUtils
+This is the utility helper functions that can support the doday utility development. 
+
+### Versioning
+
+v0.0.x
+
+### Authors
+
+* **Weitung Chen** 
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+### Acknowledgments
+
+
