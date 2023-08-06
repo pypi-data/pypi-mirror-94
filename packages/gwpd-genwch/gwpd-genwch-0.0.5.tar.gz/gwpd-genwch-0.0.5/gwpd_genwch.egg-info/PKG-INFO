@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gwpd-genwch
+Version: 0.0.5
+Summary: gwpd
+Home-page: https://github.com/genwch/gwpd
+Author: genwch
+Author-email: 
+License: UNKNOWN
+Description: # gwpd
+        
+        Pandas as table / view written by python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
