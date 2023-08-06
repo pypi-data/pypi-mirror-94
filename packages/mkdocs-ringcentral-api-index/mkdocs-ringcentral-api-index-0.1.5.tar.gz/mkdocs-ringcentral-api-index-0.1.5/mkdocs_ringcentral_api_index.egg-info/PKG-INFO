@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: mkdocs-ringcentral-api-index
+Version: 0.1.5
+Summary: An MkDocs plugin to generate a table of contents page for a swagger specification to make navgating to an API Reference easier.
+Home-page: https://github.com/byrnereese/mkdocs-ringcentral-api-index
+Author: Byrne Reese
+Author-email: byrne@majordojo.com
+License: MIT
+Description: # mkdocs-ringcentral-api-index
+        
+        A MkDocs plugin created by RingCentral to assist in the creation of an API Quick Reference based upon a swagger specification.
+        
+        At RingCentral we had the desire to publish an API Quick Reference that would make it easier for developers to scan for the endpoint they are looking for and quickly access the documentation for that endpoint in our API Reference. 
+        
+        ## Setup
+        
+        Install the plugin using pip:
+        
+        `pip install mkdocs-ringcentral-api-index-plugin`
+        
+        Activate the plugin in `mkdocs.yml`:
+        ```yaml
+        plugins:
+          - search
+          - rc-api-index:
+              spec_url: true
+              outfile: 'docs/api-index.md'
+        ```
+        
+        > **Note:** If you have no `plugins` entry in your config file yet, you'll likely also want to add the `search` plugin. MkDocs enables it by default if there is no `plugins` entry set, but now you have to enable it explicitly.
+        
+        ## Options
+        
+        - `spec_url`: Sets the URL to the Swagger specification for the RingCentral platform. This should default to the official URL. Override this for development purposes only. 
+        - `outfile`: The file to output. This file is typically somewhere in your docs folder. 
+        
+        More information about plugins in the [MkDocs documentation][mkdocs-plugins].
+        
+        ## See Also
+        
+        More information about templates [here][mkdocs-template].
+        
+        More information about blocks [here][mkdocs-block].
+        
+        [mkdocs-plugins]: https://www.mkdocs.org/user-guide/plugins/
+        [mkdocs-template]: https://www.mkdocs.org/user-guide/custom-themes/#template-variables
+        [mkdocs-block]: https://www.mkdocs.org/user-guide/styling-your-docs/#overriding-template-blocks
+        
+Keywords: mkdocs swagger api documentation
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
