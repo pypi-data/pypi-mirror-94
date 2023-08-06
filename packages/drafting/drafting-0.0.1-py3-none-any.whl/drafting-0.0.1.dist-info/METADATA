@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: drafting
+Version: 0.0.1
+Summary: Color and geometric primitives
+Home-page: https://github.com/goodhertz/drafting
+Author: Rob Stenson / Goodhertz
+Author-email: rob@goodhertz.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: more-itertools
+
+
+# Drafting
+
+Color and geometric primitives
+
+
