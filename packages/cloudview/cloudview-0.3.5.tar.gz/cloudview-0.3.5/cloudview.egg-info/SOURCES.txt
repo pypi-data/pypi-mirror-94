@@ -1,0 +1,17 @@
+README.md
+cloudview
+setup.py
+_cloudview/__init__.py
+_cloudview/amazon.py
+_cloudview/az.py
+_cloudview/exceptions.py
+_cloudview/gcp.py
+_cloudview/openstack.py
+_cloudview/output.py
+_cloudview/singleton.py
+cloudview.egg-info/PKG-INFO
+cloudview.egg-info/SOURCES.txt
+cloudview.egg-info/dependency_links.txt
+cloudview.egg-info/not-zip-safe
+cloudview.egg-info/requires.txt
+cloudview.egg-info/top_level.txt
