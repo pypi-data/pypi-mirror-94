@@ -1,0 +1,15 @@
+matplotlib
+numpy
+qutip
+scipy
+
+# tests
+pytest
+pytest-cov
+flake8
+
+# tutorials
+networkx
+notebook
+scikit-optimize
+python-igraph
