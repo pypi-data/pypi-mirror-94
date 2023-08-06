@@ -1,0 +1,8 @@
+cloudcomponents/cdk_dependency_check/__init__.py,sha256=TJdofFdkl1g0mi6MoT-cSBT_mQdAtcOy4_aeP0YJyeM,20042
+cloudcomponents/cdk_dependency_check/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cloudcomponents/cdk_dependency_check/_jsii/__init__.py,sha256=80NCxaT8wThhgPHHRARQZckDgnXsWVBzseWoCr0C5LE,610
+cloudcomponents/cdk_dependency_check/_jsii/cdk-dependency-check@1.24.0.jsii.tgz,sha256=ZXeIcH3PfhUjXpCAOQO4yP7jr33y5jcJeSLkLBpZN7E,59849
+cloudcomponents.cdk_dependency_check-1.24.0.dist-info/METADATA,sha256=uOPZNwl1zGt0c4DqKLGrsQ53NGRfG31qXXn2GhqTZqo,5080
+cloudcomponents.cdk_dependency_check-1.24.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cloudcomponents.cdk_dependency_check-1.24.0.dist-info/top_level.txt,sha256=B4EWas985OPzDPLZgw2jcOsscXpuQJyowJnB5pl9rpQ,16
+cloudcomponents.cdk_dependency_check-1.24.0.dist-info/RECORD,,
