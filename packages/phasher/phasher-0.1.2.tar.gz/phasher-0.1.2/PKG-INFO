@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: phasher
+Version: 0.1.2
+Summary: quickly check file hashes of various formats in python
+Home-page: https://github.com/user/wmoynihan/phasher
+Author: wa moy
+Author-email: wmoynihan+gh@softwaresecured.com
+License: MIT
+Download-URL: https://github.com/wmoynihan/phasher/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: hash,compare,integrity
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
