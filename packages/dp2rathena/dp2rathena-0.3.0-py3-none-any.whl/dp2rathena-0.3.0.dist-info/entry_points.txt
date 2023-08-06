@@ -1,0 +1,3 @@
+[console_scripts]
+dp2rathena=dp2rathena.cli:dp2rathena
+
