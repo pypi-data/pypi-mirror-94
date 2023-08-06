@@ -1,0 +1,15 @@
+invenio_banners/__init__.py,sha256=0s5JIwxRfgUqusJTjl_fUXLV0BQpdTucA-ahbX6iNxc,378
+invenio_banners/admin.py,sha256=c9yYQnsEISHST-PSrOyju0EC8-in8dA_-YK9cvq4kcA,2269
+invenio_banners/config.py,sha256=4NhwzP7Nkju04nMcgasJ65zs_KCOiGs7PPu1RSdoQuk,583
+invenio_banners/ext.py,sha256=-WeS6uEX7qy5XfHpZPhpSklSxbrmenhO2UmL0gCY60k,1085
+invenio_banners/models.py,sha256=2v01guwz-49EtlQ-O3fbmAMwC7iLKGrkeveEOdeLkU8,3039
+invenio_banners/utils.py,sha256=RS2E7gF2R65raUXyV2a5WxnMz1SouQDWvfRTAyBc31w,834
+invenio_banners/version.py,sha256=jrvXdsZccvcss8XEc__kktQEKcYiUX-LyUdwhh0SMl0,363
+invenio_banners/views.py,sha256=AhzMoQstQvcYt1-7jfWXLJ2tFa-98PwiRqNt_duOjIc,977
+invenio_banners-1.0.0a0.dist-info/AUTHORS.rst,sha256=fQsy2e1bLnwt_a89-kO6CwBwN7o58Ix9F9195b2iTJo,295
+invenio_banners-1.0.0a0.dist-info/LICENSE,sha256=UvI8pR8jGWqe0sTkb_hRG6eIrozzWwWzyCGEpuXX4KE,1062
+invenio_banners-1.0.0a0.dist-info/METADATA,sha256=PFYLRcotZsJFCrAtDiqINtaaeQbYhv_YRpbS6kxh87c,2583
+invenio_banners-1.0.0a0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+invenio_banners-1.0.0a0.dist-info/entry_points.txt,sha256=6i216ET5b501q0S_ylVSEQkWDduLA5J2DoOxijK6WGA,513
+invenio_banners-1.0.0a0.dist-info/top_level.txt,sha256=ENJP1dEZ93e4ImCi7AHaVooTUV-6fQnRJ106wHitg5g,16
+invenio_banners-1.0.0a0.dist-info/RECORD,,
