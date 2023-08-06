@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: localstack-s3-pyspark
+Version: 0.0.0
+Summary: A CLI to configure pyspark for use with s3 on localstack
+Home-page: UNKNOWN
+Author: David Belais
+Author-email: david@belais.me
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: ~=3.6
+Provides-Extra: boto3
+Provides-Extra: dev
+Provides-Extra: test
+Provides-Extra: all
