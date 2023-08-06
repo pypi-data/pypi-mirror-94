@@ -1,0 +1,22 @@
+name: funing
+version: git
+summary: funing
+description: 
+
+confinement: devmode
+base: core18
+
+parts:
+  offlineimap:
+    plugin: python
+    python-version: python3
+    source: .
+    stage-packages:
+      - dlib
+      - face-recognition
+      - language_data
+      - langcodes
+      - pony
+      - opencv-python
+      - pyyaml
+
