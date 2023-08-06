@@ -1,0 +1,9 @@
+README.md
+setup.py
+ofunctions.mailer.egg-info/PKG-INFO
+ofunctions.mailer.egg-info/SOURCES.txt
+ofunctions.mailer.egg-info/dependency_links.txt
+ofunctions.mailer.egg-info/namespace_packages.txt
+ofunctions.mailer.egg-info/not-zip-safe
+ofunctions.mailer.egg-info/top_level.txt
+ofunctions/mailer/__init__.py
