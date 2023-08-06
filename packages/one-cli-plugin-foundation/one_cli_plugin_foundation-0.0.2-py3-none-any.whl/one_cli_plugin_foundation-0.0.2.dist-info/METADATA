@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: one-cli-plugin-foundation
+Version: 0.0.2
+Summary: This is a one-cli plugin to help create new DNX foundations.
+Home-page: https://github.com/DNXLabs/plugin-foundation
+Author: DNX Solutions
+Author-email: contact@dnx.solutions
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: gitpython (==3.1.12)
+Requires-Dist: jinja2 (==2.11.3)
+Requires-Dist: jinja2-ansible-filters (==1.3.0)
+
+# plugin-foundation
+
+This is a one-cli plugin to help create new DNX foundations.
+
+![Build](https://github.com/DNXLabs/plugin-foundation/workflows/Build/badge.svg)
+[![PyPI](https://badge.fury.io/py/one-cli-plugin-foundation.svg)](https://pypi.python.org/pypi/one-cli-plugin-foundation/)
+[![LICENSE](https://img.shields.io/github/license/DNXLabs/plugin-foundation)](https://github.com/DNXLabs/plugin-foundation/blob/master/LICENSE)
+
+## Configuration
+
+```yaml
+# one.yaml
+required_version: ">= 0.7.1"
+
+plugins:
+  foundation:
+    package: one-cli-plugin-foundation==0.0.1
+    module: 'plugin_foundation'
+```
+
+## Usage
+
+```bash
+one foundation
+```
+
+## Development
+
+#### Dependencies
+
+- Python 3
+
+#### Python Virtual Environment
+
+```bash
+# Create environment
+python3 -m venv env
+
+# To activate the environment
+source env/bin/activate
+
+# When you finish you can exit typing
+deactivate
+```
+
+#### Install dependencies
+
+```bash
+pip3 install --editable .
+```
+
+## Author
+
+Managed by [DNX Solutions](https://github.com/DNXLabs).
+
+## License
+
+Apache 2 Licensed. See [LICENSE](https://github.com/DNXLabs/plugin-foundation/blob/master/LICENSE) for full details.
+
