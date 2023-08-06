@@ -1,0 +1,6 @@
+sphinx>=3.2
+ipykernel
+nbsphinx
+ipywidgets
+IProgress
+autodocsumm
