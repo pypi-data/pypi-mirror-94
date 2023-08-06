@@ -1,0 +1,5 @@
+numpy
+torch
+torchvision
+brambox>=2
+pillow
