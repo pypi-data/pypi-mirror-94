@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: csr
+Version: 0.2.0
+Summary: Compressed Sparse Row matrices for Python, with Numba API.
+Home-page: https://csr.lenskit.org
+Author: Michael Ekstrand <michaelekstrand@boisestate.edu>
+Author-email: michaelekstrand@boisestate.edu

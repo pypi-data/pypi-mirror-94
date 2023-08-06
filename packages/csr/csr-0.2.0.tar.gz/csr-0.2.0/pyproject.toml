@@ -1,0 +1,61 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "csr"
+author = "Michael Ekstrand <michaelekstrand@boisestate.edu>"
+author-email = "michaelekstrand@boisestate.edu"
+home-page = "https://csr.lenskit.org"
+classifiers = ["License :: OSI Approved :: MIT License"]
+description-file = "README.md"
+requires-python = ">= 3.6.1"
+requires = [
+    "numba >=0.51,<0.54",
+    "numpy >= 1.16",
+    "scipy",
+    "dataclasses; python_version < '3.7'"
+]
+
+[tool.flit.metadata.requires-extra]
+test = [
+    "pytest",
+    "pytest-doctestplus",
+    "pytest-benchmark",
+    "pytest-cov",
+    "hypothesis"
+]
+dev = [
+    "flake8",
+    "rstcheck"
+]
+doc = [
+    "sphinx",
+    "sphinx_rtd_theme"
+]
+profile = [
+    "notebook",
+    "seaborn",
+    "pandas >=1.0"
+]
+mkl = [
+    "cffi"
+]
+
+[tool.flit.sdist]
+include = ["tests/*"]
+exclude = [
+    ".github",
+    "*.ipynb"
+]
+
+[tool.envtool.conda]
+name = "csr"
+channels = ["conda-forge"]
+
+[tool.envtool.conda.extras]
+mkl = [
+    "mkl-devel",
+    "libblas=*=*mkl",
+    "c-compiler"
+]
