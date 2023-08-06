@@ -1,0 +1,12 @@
+coveo_testing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coveo_testing/logging.py,sha256=-VExQBV-j_e-8JtrLJKulhAOy0_CLLyZ7vy_FRuK-LA,3628
+coveo_testing/markers.py,sha256=40lzDUIWZwwTvovBFkP2N1ueh5yrT4RXZ_9h5-Kwvjw,884
+coveo_testing/mocks.py,sha256=f6-5wllUi4Mk6gqGzbM1Uxnj1qcNb1SVjzGEQaQ50pQ,451
+coveo_testing/parametrize.py,sha256=BIebbLThjgYtkQMaagZDyZg9xgpkMzfqYPrONQ0pqBE,1153
+coveo_testing/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coveo_testing/temporary_resource/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coveo_testing/temporary_resource/base.py,sha256=-ZrQC5EBqIWntF-Qt-k3-nlbP_mPiS6IfvdVIyn-dCE,983
+coveo_testing/temporary_resource/unique_id.py,sha256=Tod0nGqYwD3VZMcf7saEBmiofKXkbaZLiCp5d6fUQyo,3179
+coveo_testing-0.2.3.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+coveo_testing-0.2.3.dist-info/METADATA,sha256=pmEcOlZ_3w0VRt3syPU8vqGejce-zl0n4AvCsHpt1K8,584
+coveo_testing-0.2.3.dist-info/RECORD,,

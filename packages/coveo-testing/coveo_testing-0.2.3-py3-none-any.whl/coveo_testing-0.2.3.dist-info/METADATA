@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: coveo-testing
+Version: 0.2.3
+Summary: A grab-bag of testing utilities.
+Home-page: https://pypi.dev.cloud.coveo.com/simple
+Author: Jonathan piché
+Author-email: jpiche@coveo.com
+Requires-Python: >=3.6
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: attrs
+Requires-Dist: pytest
+Project-URL: Repository, https://pypi.dev.cloud.coveo.com/simple
