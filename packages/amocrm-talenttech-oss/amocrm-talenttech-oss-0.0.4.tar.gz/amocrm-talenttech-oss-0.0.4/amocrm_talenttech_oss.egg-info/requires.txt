@@ -1,0 +1,6 @@
+pandas
+etl-helper-talenttech==1.2.8
+s3-talenttech-oss==0.0.6
+clickhouse-balanced-talenttech-oss==0.0.1
+requests
+vertica-connector-talenttech==1.1.3
