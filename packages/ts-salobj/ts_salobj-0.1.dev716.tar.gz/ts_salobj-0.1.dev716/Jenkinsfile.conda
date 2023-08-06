@@ -1,0 +1,2 @@
+@Library('JenkinsShared@correct_defaults') _
+SalobjPipeline(["ts_config_ocs"])
