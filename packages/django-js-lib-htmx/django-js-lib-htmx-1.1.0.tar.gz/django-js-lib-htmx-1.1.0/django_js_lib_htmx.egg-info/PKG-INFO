@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: django-js-lib-htmx
+Version: 1.1.0
+Summary: htmx: high power tools for HTML (repackaged for django)
+Home-page: https://github.com/nonZero/django-js-lib-htmx
+Author: Udi Oron
+Author-email: udioron@gmail.com
+License: BSD-2-Clause
+Description: # HTMX Repackaged for Django
+        
+        [HTMX](https://htmx.org/) packaged in a Django reusable app.
+        
+        
+        ## Installation
+        
+            pip install django-js-lib-htmx
+        
+        ## Usage
+        
+        1. Add `"js_lib_htmx"` to your `INSTALLED_APPS` setting like this::
+        
+               INSTALLED_APPS = [
+                   ...
+                   "js_lib_htmx",
+                   ...
+               ]
+        
+        2. In your template use:
+           
+               {% load static %}
+           
+              And one of:
+            
+               <script src="{% static "htmx/htmx.js" %}"></script>
+               <script src="{% static "htmx/htmx.min.js" %}"></script>
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/markdown
