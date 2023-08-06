@@ -1,0 +1,25 @@
+# For networking
+aiohttp>=3.6.0,<3.8.0
+websockets==8.1
+
+# Extra extractor resolver
+asyncspotify==0.12.1
+
+# Source extractor
+av==8.0.3
+PyNaCl==1.4.0
+youtube-dl==2021.2.4.1
+youtube-related==1.0.2
+
+# Subtitle parser
+bs4==0.0.1
+lxml==4.6.2
+defusedxml==0.6.0
+markdownify==0.6.3
+
+# Logging
+colorlog==4.7.2
+
+# Node webserver
+sanic==20.12.1
+psutil==5.8.0
