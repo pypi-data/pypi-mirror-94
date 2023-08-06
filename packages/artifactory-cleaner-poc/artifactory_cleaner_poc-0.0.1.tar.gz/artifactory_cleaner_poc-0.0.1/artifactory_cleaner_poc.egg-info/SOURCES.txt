@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+artifactory_cleaner_poc.egg-info/PKG-INFO
+artifactory_cleaner_poc.egg-info/SOURCES.txt
+artifactory_cleaner_poc.egg-info/dependency_links.txt
+artifactory_cleaner_poc.egg-info/top_level.txt
