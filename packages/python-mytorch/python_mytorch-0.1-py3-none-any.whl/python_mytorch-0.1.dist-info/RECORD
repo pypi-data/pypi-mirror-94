@@ -1,0 +1,7 @@
+mytorch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mytorch/ops/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mytorch/ops/im2col.py,sha256=DrKIe7dy0s7M1mXxqArASCmTlBS6aJkz8aijFFJHKls,10651
+python_mytorch-0.1.dist-info/METADATA,sha256=NrfLJeoTwt9dOQYcZ_Wwpagg8EPzAsB44UjrBtBkhs4,1549
+python_mytorch-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+python_mytorch-0.1.dist-info/top_level.txt,sha256=keJUGMXx93bQqotKxq9jxVETCmR1rHcVQBVgaUUsl2Q,8
+python_mytorch-0.1.dist-info/RECORD,,
