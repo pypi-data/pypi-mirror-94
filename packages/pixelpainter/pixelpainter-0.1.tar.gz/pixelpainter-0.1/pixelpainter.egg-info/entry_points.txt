@@ -1,0 +1,3 @@
+[console_scripts]
+pixelpainter = pixelpainter.core:main
+
