@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+src/plomberie/__init__.py
+src/plomberie/task.py
+src/plomberie.egg-info/PKG-INFO
+src/plomberie.egg-info/SOURCES.txt
+src/plomberie.egg-info/dependency_links.txt
+src/plomberie.egg-info/top_level.txt
