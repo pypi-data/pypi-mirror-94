@@ -1,0 +1,8 @@
+numpy
+scipy
+aghasher
+itertools
+multiprocessing
+tqdm
+gc
+pandas
