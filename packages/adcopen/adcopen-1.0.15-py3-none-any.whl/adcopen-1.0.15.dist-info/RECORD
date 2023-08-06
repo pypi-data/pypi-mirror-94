@@ -1,0 +1,16 @@
+adcopen/__init__.py,sha256=zJJCZHcNNPo9IBAMdl3WBsWwB0V3FvH6v0g_NgZpizA,250
+adcopen/ads_client.py,sha256=nWwsS6Wud3U7Z80YHzPpM2Eqpn33bZpAL2IBg_r6kHE,18339
+adcopen/ads_manager.py,sha256=ab8t4RauE0nSBL3Wom6__XXUqHmm9tdtxKZs8KDdFlM,6813
+adcopen/ads_manager_test.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adcopen/corelink.py,sha256=YB6sYz5qt3D1RUNmBP0P5lx3vbXVEBqRZsDV8PiXW-o,12497
+adcopen/events.py,sha256=4y76Dg_RjlABixS8POL2piwuvvInZrgyDEuEvsKBXN4,5143
+adcopen/events_test.py,sha256=3nCZ6-WvMkS14CVj6j5BYcpkRiJiS3jK97jPx0Ny0GA,1122
+adcopen/sae_butterworth.py,sha256=Vu8ICxitGikpE7KyQGfl1ufl9lTBcfK2gzbPzgJMLlI,3161
+adcopen/sae_butterworth_test.py,sha256=YePHoRJwrq_UisL6OHtFNHU_jz250X_unU3iIqGUJos,581
+adcopen/software_trigger.py,sha256=L-3byMujkUi2Ut9-6KEjnksqAmFF7wi6JHGuTyICK68,14480
+adcopen/win_service_base.py,sha256=yKuUkd_bVet3Pz3d_FY2ePEtU_5PrlH1wTSaYyWI650,3551
+adcopen/win_service_base_test.py,sha256=aQ-CnVmB52ty7y0EzehwXr76qttaL3VDKh6js6E8pbs,698
+adcopen-1.0.15.dist-info/METADATA,sha256=SLlHpfntNYsxCqOE1T7Fkh7UTwY9XQcU3MpCZto6BO4,1366
+adcopen-1.0.15.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+adcopen-1.0.15.dist-info/top_level.txt,sha256=WykgyyUTcvSFyu6QylWDx1r8M47TVdgf0kap7vNk3Gg,8
+adcopen-1.0.15.dist-info/RECORD,,
