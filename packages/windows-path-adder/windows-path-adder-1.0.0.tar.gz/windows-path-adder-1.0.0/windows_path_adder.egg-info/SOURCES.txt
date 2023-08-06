@@ -1,0 +1,9 @@
+README.md
+setup.py
+windows_path_adder.egg-info/PKG-INFO
+windows_path_adder.egg-info/SOURCES.txt
+windows_path_adder.egg-info/dependency_links.txt
+windows_path_adder.egg-info/top_level.txt
+windowspathadder/__init__.py
+windowspathadder/error.py
+windowspathadder/windowspathadder.py
