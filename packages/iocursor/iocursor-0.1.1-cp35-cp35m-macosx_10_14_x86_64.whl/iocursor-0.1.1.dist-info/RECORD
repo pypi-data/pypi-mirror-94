@@ -1,0 +1,11 @@
+iocursor/__init__.py,sha256=RIcrRjPPN-GPfsuzALbrb4cjcvyoTXrxnrFEAEk56E0,343
+iocursor/cursor.c,sha256=I2E2EPomJZcAkWXH7aQaB47YVIWtLTFDZskeu5QVBr8,34202
+iocursor/cursor.cpython-35m-darwin.so,sha256=C8RN2mxwM5DhpJ0xQdX0SxfEkR1KYbY7c-RYCCSZSa0,44264
+iocursor/cursor.h,sha256=0zUVMHOLqKGHENNNGiniXS0LmQ7k2PqLMEcRq784_3U,623
+iocursor/cursor.pyi,sha256=TUV-XIRkgeWnzgdfaOYjqsRaI32HgLoEZJqCE2YV3Js,1512
+iocursor/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iocursor-0.1.1.dist-info/COPYING,sha256=vOlUHBIVwgaaL-p8hOvOIh9S43ObCm8_hiOyR9tq5iQ,1072
+iocursor-0.1.1.dist-info/METADATA,sha256=hMt0KZE7M2b2Fzc7sPi8P3ak1rmkPw1VH9vRTerxhIo,6939
+iocursor-0.1.1.dist-info/WHEEL,sha256=SYvke5m49tStmG9f09Iqg-FHSHHXQBZqHcL1YR0NYJM,111
+iocursor-0.1.1.dist-info/top_level.txt,sha256=FdewTP3CTEdXkzMQuC7X15eORzZEwLbE6MzeAvrtgg0,9
+iocursor-0.1.1.dist-info/RECORD,,
