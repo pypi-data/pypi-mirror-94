@@ -1,0 +1,11 @@
+README.md
+setup.py
+signer_pdf/__init__.py
+signer_pdf/sign_generator.py
+signer_pdf/signer.py
+signer_pdf.egg-info/PKG-INFO
+signer_pdf.egg-info/SOURCES.txt
+signer_pdf.egg-info/dependency_links.txt
+signer_pdf.egg-info/requires.txt
+signer_pdf.egg-info/top_level.txt
+signer_pdf/resources/font.ttf
