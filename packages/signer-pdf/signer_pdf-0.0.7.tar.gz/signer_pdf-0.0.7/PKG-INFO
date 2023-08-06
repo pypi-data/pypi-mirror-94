@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: signer_pdf
+Version: 0.0.7
+Summary: A signer pdf with image
+Home-page: https://gitlab.com/Hjklvfr/signer_pdf
+Author: Roman Grigoriev
+Author-email: hjklvfr@list.ru
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
