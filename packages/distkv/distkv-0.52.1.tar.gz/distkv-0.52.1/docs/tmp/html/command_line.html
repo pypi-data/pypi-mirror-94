@@ -1,0 +1,1417 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>The DistKV command &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DistKV’s client protocol" href="client_protocol.html" />
+    <link rel="prev" title="Starting DistKV" href="startup.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The DistKV command</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#distkv">distkv</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>The DistKV command</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/command_line.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-distkv-command">
+<h1>The DistKV command<a class="headerlink" href="#the-distkv-command" title="Permalink to this headline">¶</a></h1>
+<p>DistKV uses one command line tool, appropriately named <code class="docutils literal notranslate"><span class="pre">distkv</span></code>. It
+provides various sub- and sub-sub-commands to run and control your server.</p>
+<p>Each command and sub-command accepts a distinct set of options which must
+be used directly after the (sub)command affected by them.</p>
+<div class="section" id="distkv">
+<h2>distkv<a class="headerlink" href="#distkv" title="Permalink to this headline">¶</a></h2>
+<p>The main entry point for all commands.</p>
+<p>Use the option <code class="docutils literal notranslate"><span class="pre">--help</span></code> to show that (sub)command’s detailed information.</p>
+<p>Options used only for testing are not shown in the commands’ help text.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-v">
+<span id="cmdoption-distkv-verbose"></span><code class="sig-name descname">-v</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--verbose</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase debugging verbosity. Broadly speaking, the default is
+<code class="docutils literal notranslate"><span class="pre">ERROR</span></code>; this option selects <code class="docutils literal notranslate"><span class="pre">WARNING</span></code>, <code class="docutils literal notranslate"><span class="pre">INFO</span></code> or <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code>
+depending on how often you use it.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-q">
+<span id="cmdoption-distkv-quiet"></span><code class="sig-name descname">-q</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--quiet</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-q" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decrease debugging verbosity: the opposite of <a class="reference internal" href="#cmdoption-distkv-v"><code class="xref std std-option docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">-v</span></code></a>,
+reducing the verbosity to <code class="docutils literal notranslate"><span class="pre">FATAL</span></code>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-l">
+<span id="cmdoption-distkv-log"></span><code class="sig-name descname">-l</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--log</code><code class="sig-prename descclassname"> &lt;source=LEVEL&gt;</code><a class="headerlink" href="#cmdoption-distkv-l" title="Permalink to this definition">¶</a></dt>
+<dd><p>You can selectively adjust debugging verbosity if you need to print, or
+ignore, some types of messages. Example: <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">-vvv</span> <span class="pre">--log</span>
+<span class="pre">asyncactor=ERROR</span> <span class="pre">server</span> <span class="pre">NAME</span></code> would suppress most chattiness of the
+Actor that’s responsible for inter-server synchronization.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-D">
+<span id="cmdoption-distkv-d"></span><span id="cmdoption-distkv-debug"></span><code class="sig-name descname">-D</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--debug</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some DistKV methods, in particular cryptographic operations, are not
+noted for their speed. This option reduces the bit count of these
+options in order to speed them up significantly.</p>
+<p>It also reduces their security unacceptably. Thus, this option should
+only used while debugging.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-c">
+<span id="cmdoption-distkv-cfg"></span><code class="sig-name descname">-c</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--cfg</code><code class="sig-prename descclassname"> &lt;FILE&gt;</code><a class="headerlink" href="#cmdoption-distkv-c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify a YAML configuration file.</p>
+<p>Data in this file override the corresponding entries in the
+<code class="docutils literal notranslate"><span class="pre">distkv.defaults.CFG</span></code> directory.</p>
+<p>The config will be loaded from the first of these files, assuming it’s
+readable:</p>
+<ul class="simple">
+<li><p>~/config/distkv.cfg</p></li>
+<li><p>~/.config/distkv.cfg</p></li>
+<li><p>~/.distkv.cfg</p></li>
+<li><p>/etc/distkv/distkv.cfg</p></li>
+<li><p>/etc/distkv.cfg</p></li>
+</ul>
+<p>If you don’t want to read any config file, use <code class="docutils literal notranslate"><span class="pre">/dev/null</span></code>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-C">
+<span id="cmdoption-distkv-conf"></span><code class="sig-name descname">-C</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--conf</code><code class="sig-prename descclassname"> &lt;location=value&gt;</code><a class="headerlink" href="#cmdoption-distkv-C" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a specific configuration value.
+This option takes precedence over <a class="reference internal" href="#cmdoption-distkv-c"><code class="xref std std-option docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">-c</span></code></a>.</p>
+</dd></dl>
+
+<p>Run the DistKV server.</p>
+<p>A DistKV server holds all data and syncs with all other DistKV servers.
+You can’t run <strong class="program">distkv client</strong> unless you have at least one running
+server.</p>
+<p>There is no separate option to set the address for clients to connect to;
+use <code class="docutils literal notranslate"><span class="pre">server.bind_default.port=57589</span></code> (or your own port number) to change
+it from the default of <code class="docutils literal notranslate"><span class="pre">27589</span></code>, or use a configuration file.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-server-l">
+<span id="cmdoption-distkv-server-load"></span><code class="sig-name descname">-l</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--load</code><code class="sig-prename descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-distkv-server-l" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pre-load the saved data from this file into the server before starting it.</p>
+<p><strong>Do not use this option with an out-of-date savefile.</strong></p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-server-s">
+<span id="cmdoption-distkv-server-save"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--save</code><code class="sig-prename descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-distkv-server-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log all changes to this file. This includes the initial data.</p>
+<p>This option is only used for testing. Use <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">log</span> <span class="pre">dest</span></code> in
+production use.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-server-i">
+<span id="cmdoption-distkv-server-incremental"></span><code class="sig-name descname">-i</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--incremental</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-server-i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Don’t write the complete state to the save file.</p>
+<p>This option is of limited usefulness and only used for testing.
+Use <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">log</span> <span class="pre">dest</span> <span class="pre">-i</span></code> in production.</p>
+</dd></dl>
+
+<p>A network of servers needs to contain some data before it becomes
+operational. When starting the first server, you can use an initial</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-server-I">
+<span id="cmdoption-distkv-server-init"></span><code class="sig-name descname">-I</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--init</code><code class="sig-prename descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-distkv-server-I" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the server by storing this value in the root entry.</p>
+<p>This option is only used for testing. Create initial content with
+<code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">dump</span> <span class="pre">init</span></code> for production use.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-server-e">
+<span id="cmdoption-distkv-server-eval"></span><code class="sig-name descname">-e</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--eval</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-server-e" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the initial value, as a standard Python expression.</p>
+<p>This option is only used for testing.</p>
+</dd></dl>
+
+<p>You can also use <strong class="program">distkv client data set</strong> to update this value
+later.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-server-arg-name">
+<code class="sig-name descname">name</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-server-arg-name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Each DistKV server requires a unique name. If you recycle a name, the old
+server using it will die (unless your network is segmented – in that case,
+one or both will terminate some random time after the networks are
+reconnecting, and you’ll get inconsistent data). So don’t do that.</p>
+<p>This subcommand collects all sub-subcommand which talk to a DistKV server.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-h">
+<span id="cmdoption-distkv-client-host"></span><code class="sig-name descname">-h</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--host</code><code class="sig-prename descclassname"> &lt;address&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>The address to connect to. Defaults to <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.</p>
+<p>This setting is also available as the <code class="docutils literal notranslate"><span class="pre">connect.host</span></code> configuration
+setting.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-p">
+<span id="cmdoption-distkv-client-port"></span><code class="sig-name descname">-p</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--port</code><code class="sig-prename descclassname"> &lt;port&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port to connect to. Defaults to 27586.</p>
+<p>This setting is also available as the <code class="docutils literal notranslate"><span class="pre">connect.port</span></code> configuration
+setting.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-a">
+<span id="cmdoption-distkv-client-auth"></span><code class="sig-name descname">-a</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--auth</code><code class="sig-prename descclassname"> &lt;params&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameters for authorizing this client. Use <code class="docutils literal notranslate"><span class="pre">=file</span></code> to load the data
+from a file, or <code class="docutils literal notranslate"><span class="pre">method</span> <span class="pre">data=value…</span></code> to provide them inline.</p>
+<p>The default is <code class="docutils literal notranslate"><span class="pre">_anon</span></code>, i.e. no authorization.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-m">
+<span id="cmdoption-distkv-client-metadata"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--metadata</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>The results of many commands will include the metadata associated with the
+entry or entries in question. This allows you to safely modify a value.</p>
+</dd></dl>
+
+<p>Basic data access.</p>
+<p>This subcommand does not have options.</p>
+<p>Read a DistKV value.</p>
+<p>If you read a sub-tree recursively, be aware that the whole subtree will
+be read before anything is printed. Use the <code class="docutils literal notranslate"><span class="pre">watch</span> <span class="pre">--state</span></code> subcommand
+for incremental output.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-get-r">
+<span id="cmdoption-distkv-client-data-get-recursive"></span><code class="sig-name descname">-r</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--recursive</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-get-r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print all entries below this entry.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-get-d">
+<span id="cmdoption-distkv-client-data-get-as-dict"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--as-dict</code><code class="sig-prename descclassname"> &lt;text&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-get-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>When you use this option, the data is printed as a dictionary.
+The argument of this option controls which key is used for the actual
+value; this string should not occur as a path element.</p>
+<p>The customary value to use is a single underscore.</p>
+<p>Using this option in conjunction with <code class="docutils literal notranslate"><span class="pre">--recursive</span></code> requires keeping
+the whole data set in memory before starting to print anything. This may
+take a long time or eat a lot of memory.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-get-m">
+<span id="cmdoption-distkv-client-data-get-mindepth"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--mindepth</code><code class="sig-prename descclassname"> &lt;integer&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-get-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>When printing recursively, start at this depth off the given path.</p>
+<p>The default is zero, i.e. include the entry itself.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-get-M">
+<span id="cmdoption-distkv-client-data-get-maxdepth"></span><code class="sig-name descname">-M</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--maxdepth</code><code class="sig-prename descclassname"> &lt;integer&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-get-M" title="Permalink to this definition">¶</a></dt>
+<dd><p>When printing recursively, stop at this depth (inclusive).</p>
+<p>The default is to print the whole tree. Use <code class="docutils literal notranslate"><span class="pre">1</span></code> to print the entry itself
+(assuming that it has a value and you didn’t use <code class="docutils literal notranslate"><span class="pre">--mindepth=1</span></code>)
+and its immediate children.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-get-arg-path...">
+<span id="cmdoption-distkv-client-data-get-arg-path"></span><code class="sig-name descname">path…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-get-arg-path..." title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the entry at this location.</p>
+</dd></dl>
+
+<p>List DistKV values.</p>
+<p>This command is basically like <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">data</span> <span class="pre">get</span></code>, except that
+<code class="docutils literal notranslate"><span class="pre">--recursive</span></code> and <code class="docutils literal notranslate"><span class="pre">empty</span></code> are always set. <code class="docutils literal notranslate"><span class="pre">mindepth</span></code> and <code class="docutils literal notranslate"><span class="pre">maxdepth</span></code>
+default to 1.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-list-r">
+<span id="cmdoption-distkv-client-data-list-recursive"></span><code class="sig-name descname">-r</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--recursive</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-list-r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print all entries below this entry.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-list-d">
+<span id="cmdoption-distkv-client-data-list-as-dict"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--as-dict</code><code class="sig-prename descclassname"> &lt;text&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-list-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>When you use this option, the data is printed as a dictionary.
+The argument of this option controls which key is used for the actual
+value; this string should not occur as a path element.</p>
+<p>The customary value to use is a single underscore.</p>
+<p>Using this option in conjunction with <code class="docutils literal notranslate"><span class="pre">--recursive</span></code> requires keeping
+the whole data set in memory before starting to print anything. This may
+take a long time or eat a lot of memory.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-list-m">
+<span id="cmdoption-distkv-client-data-list-mindepth"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--mindepth</code><code class="sig-prename descclassname"> &lt;integer&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-list-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>When printing recursively, start at this depth off the given path.</p>
+<p>The default is zero, i.e. include the entry itself.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-list-M">
+<span id="cmdoption-distkv-client-data-list-maxdepth"></span><code class="sig-name descname">-M</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--maxdepth</code><code class="sig-prename descclassname"> &lt;integer&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-list-M" title="Permalink to this definition">¶</a></dt>
+<dd><p>When printing recursively, stop at this depth (inclusive).</p>
+<p>The default is to print the whole tree. Use <code class="docutils literal notranslate"><span class="pre">1</span></code> to print the entry itself
+(assuming that it has a value and you didn’t use <code class="docutils literal notranslate"><span class="pre">--mindepth=1</span></code>)
+and its immediate children.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-list-arg-path...">
+<span id="cmdoption-distkv-client-data-list-arg-path"></span><code class="sig-name descname">path…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-list-arg-path..." title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the entry at this location.</p>
+</dd></dl>
+
+<p>Store a value at some DistKV position.</p>
+<p>If you update a value, you should use <a class="reference internal" href="#cmdoption-distkv-client-data-set-l"><code class="xref std std-option docutils literal notranslate"><span class="pre">--last</span></code></a> (preferred) or
+<a class="reference internal" href="#cmdoption-distkv-client-data-set-p"><code class="xref std std-option docutils literal notranslate"><span class="pre">--prev</span></code></a> (if you must), to ensure that no other change collides
+with yours.</p>
+<p>When adding a new entry, use <a class="reference internal" href="#cmdoption-distkv-client-data-set-n"><code class="xref std std-option docutils literal notranslate"><span class="pre">--new</span></code></a> to ensure that you don’t
+accidentally overwrite something.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-set-v">
+<span id="cmdoption-distkv-client-data-set-value"></span><code class="sig-name descname">-v</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--value</code><code class="sig-prename descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-set-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value to store. This option is mandatory.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-set-e">
+<span id="cmdoption-distkv-client-data-set-eval"></span><code class="sig-name descname">-e</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--eval</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-set-e" title="Permalink to this definition">¶</a></dt>
+<dd><p>Treat the <code class="docutils literal notranslate"><span class="pre">value</span></code> as a Python expression, to store anything that’s not a
+string.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-set-l">
+<span id="cmdoption-distkv-client-data-set-last"></span><code class="sig-name descname">-l</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--last</code><code class="sig-prename descclassname"> &lt;node&gt; &lt;count&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-set-l" title="Permalink to this definition">¶</a></dt>
+<dd><p>The chain link which last modified this entry.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-set-n">
+<span id="cmdoption-distkv-client-data-set-new"></span><code class="sig-name descname">-n</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--new</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-set-n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this option instead of <code class="docutils literal notranslate"><span class="pre">--last</span></code> or <code class="docutils literal notranslate"><span class="pre">prev</span></code> if the entry is new, or
+has been deleted.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-set-p">
+<span id="cmdoption-distkv-client-data-set-prev"></span><code class="sig-name descname">-p</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--prev</code><code class="sig-prename descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-set-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value which this entry needs to have in order to be affected.</p>
+<p>Try not to use this option; <code class="docutils literal notranslate"><span class="pre">--last</span></code> is much better.</p>
+<p>This value is also affected by <code class="docutils literal notranslate"><span class="pre">--eval</span></code>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-set-arg-path...">
+<span id="cmdoption-distkv-client-data-set-arg-path"></span><code class="sig-name descname">path…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-set-arg-path..." title="Permalink to this definition">¶</a></dt>
+<dd><p>Write to the entry at this location.</p>
+</dd></dl>
+
+<p>Delete the value at some DistKV position.</p>
+<p>If you delete a value, you should use <a class="reference internal" href="#cmdoption-distkv-client-data-delete-l"><code class="xref std std-option docutils literal notranslate"><span class="pre">--last</span></code></a> (preferred) or
+<a class="reference internal" href="#cmdoption-distkv-client-data-delete-p"><code class="xref std std-option docutils literal notranslate"><span class="pre">--prev</span></code></a> (if you must), to ensure that no other change collides
+with your deletion.</p>
+<p>Recursive changes only check the entry you mention on the command line.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-delete-l">
+<span id="cmdoption-distkv-client-data-delete-last"></span><code class="sig-name descname">-l</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--last</code><code class="sig-prename descclassname"> &lt;node&gt; &lt;count&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-delete-l" title="Permalink to this definition">¶</a></dt>
+<dd><p>The chain link which last modified this entry.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-delete-e">
+<span id="cmdoption-distkv-client-data-delete-eval"></span><code class="sig-name descname">-e</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--eval</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-delete-e" title="Permalink to this definition">¶</a></dt>
+<dd><p>Treat the <code class="docutils literal notranslate"><span class="pre">value</span></code> as a Python expression, to store anything that’s not a
+string.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-delete-p">
+<span id="cmdoption-distkv-client-data-delete-prev"></span><code class="sig-name descname">-p</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--prev</code><code class="sig-prename descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-data-delete-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value which this entry needs to have in order to be affected.</p>
+<p>Try not to use this option; <code class="docutils literal notranslate"><span class="pre">--last</span></code> is much better.</p>
+<p>This value is also affected by <code class="docutils literal notranslate"><span class="pre">--eval</span></code>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-delete-arg-path...">
+<span id="cmdoption-distkv-client-data-delete-arg-path"></span><code class="sig-name descname">path…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-delete-arg-path..." title="Permalink to this definition">¶</a></dt>
+<dd><p>Write to the entry at this location.</p>
+</dd></dl>
+
+<p>Monitor changes to the state of an entry, or rather its subtree.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-watch-s">
+<span id="cmdoption-distkv-client-data-watch-state"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--state</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-watch-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Before emitting changes, emit the current state of this subtree.</p>
+<p>A flag entry will be printed when this step is completed.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-watch-o">
+<span id="cmdoption-distkv-client-data-watch-only"></span><code class="sig-name descname">-o</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--only</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-watch-o" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only emit the value. This mode is ideal for monitoring an entry with a
+script or similar.</p>
+<p>This mode will only watch a single entry, not the whole tree. The command
+will exit silently if the value is deleted or, when <code class="docutils literal notranslate"><span class="pre">--state</span></code> is used,
+doesn’t exist in the first place.</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The current state may already include updates, due to DistKV’s
+asynchonous nature. You should simply replace existing values.</p>
+</div>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-watch-m">
+<span id="cmdoption-distkv-client-data-watch-msgpack"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--msgpack</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-watch-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the output as <code class="docutils literal notranslate"><span class="pre">MsgPack</span></code> data. XXX TODO</p>
+<p>The default is to use YAML.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-watch-arg-path...">
+<span id="cmdoption-distkv-client-data-watch-arg-path"></span><code class="sig-name descname">path…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-watch-arg-path..." title="Permalink to this definition">¶</a></dt>
+<dd><p>Monitor the subtree at this location.</p>
+</dd></dl>
+
+<p>Stream a list of changes from standard input to DistKV.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-update-m">
+<span id="cmdoption-distkv-client-data-update-msgpack"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--msgpack</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-update-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpret the input as <code class="docutils literal notranslate"><span class="pre">MsgPack</span></code> data. XXX TODO</p>
+<p>The default is to use YAML. XXX TODO</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-data-update-arg-path...">
+<span id="cmdoption-distkv-client-data-update-arg-path"></span><code class="sig-name descname">path…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-data-update-arg-path..." title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpret the streamed data relative to this subtree.</p>
+</dd></dl>
+
+<p>Control your server.  XXX TODO</p>
+<p>Control logging of changes on the server.</p>
+<p>Set the file to log to. The old file is closed as soon as the new file is
+ready (i.e. the current state is saved).</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-log-dest-i">
+<span id="cmdoption-distkv-client-log-dest-incremental"></span><code class="sig-name descname">-i</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--incremental</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-log-dest-i" title="Permalink to this definition">¶</a></dt>
+<dd><p>The save file will only contain changes, but not the current state.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-log-dest-arg-path">
+<code class="sig-name descname">path</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-log-dest-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file to write to. Note that this file is on the server.</p>
+</dd></dl>
+
+<p>Save the current state of the server to this file.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-log-save-arg-path">
+<code class="sig-name descname">path</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-log-save-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file to write to. Note that this file is on the server.</p>
+</dd></dl>
+
+<p>Stop logging.</p>
+<p>Set up and change client authorization.</p>
+<p>If you have never setup authorization, this sub-subcommands’ <code class="docutils literal notranslate"><span class="pre">--help</span></code>
+options may not work. Use <code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">root</span></code> as a workaround.  XXX TODO</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-m">
+<span id="cmdoption-distkv-client-auth-method"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--method</code><code class="sig-prename descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-auth-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Affect the named method.</p>
+<p>DistKV supports multiple authorization methods. The default is the one
+that has been changed to with <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">auth</span> <span class="pre">init</span></code>.</p>
+<p>If you want to do anything with authorization, you’ll need to use this
+flag to set up the initial users.</p>
+<p>See <cite>Auth</cite>.</p>
+</dd></dl>
+
+<p>Set up this method.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-init-s">
+<span id="cmdoption-distkv-client-auth-init-switch"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--switch</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-auth-init-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Actually swtich to using this method. This is the default for initial
+set-up.</p>
+</dd></dl>
+
+<p>List configured auth methods.</p>
+<p>XXX TODO</p>
+<p>Manage DistKV users.</p>
+<p>Each authorization method has its own schema for validating users.</p>
+<p>Add a new user.</p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">-a</span> <span class="pre">root</span> <span class="pre">auth</span> <span class="pre">-m</span> <span class="pre">password</span> <span class="pre">user</span> <span class="pre">add</span> <span class="pre">name=foo</span> <span class="pre">password=barbaz</span></code></p>
+<p>The identifier which you’d use to subsequently refer to that user is
+printed when this command completes.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-user-add-key-value-...-arg-key">
+<span id="cmdoption-distkv-client-auth-user-add-key-value-arg-key"></span><code class="sig-name descname">&lt;key&gt;</code><code class="sig-prename descclassname">=&lt;value&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-auth-user-add-key-value-...-arg-key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an auth-specific parameter. If you write <code class="docutils literal notranslate"><span class="pre">password?</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">password=SomeSecret</span></code>, you tell DistKV to read the actual data from the
+terminal (without echo) so that it won’t show up in your history.</p>
+</dd></dl>
+
+<p>Modify a user.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-ident">
+<span id="cmdoption-distkv-client-auth-user-mod-ident-key-value-arg-ident"></span><code class="sig-name descname">&lt;ident&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-ident" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier DistKV has assigned to the user.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-key">
+<span id="cmdoption-distkv-client-auth-user-mod-ident-key-value-arg-key"></span><code class="sig-name descname">&lt;key&gt;</code><code class="sig-prename descclassname">=&lt;value&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-key" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-Set">
+<span id="cmdoption-distkv-client-auth-user-mod-ident-key-value-arg-set"></span><code class="sig-name descname">Set</code><code class="sig-prename descclassname"> an auth-specific parameter.</code><a class="headerlink" href="#cmdoption-distkv-client-auth-user-mod-ident-key-value-...-arg-Set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Modify a user’s setting.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-user-param-ident-type-key-arg-ident">
+<code class="sig-name descname">&lt;ident&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-auth-user-param-ident-type-key-arg-ident" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier DistKV has assigned to the user.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-user-param-ident-type-key-arg-type">
+<code class="sig-name descname">&lt;type&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-auth-user-param-ident-type-key-arg-type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of setting to modify. The server interprets “acl” and “conv”.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-user-param-ident-type-key-arg-key">
+<code class="sig-name descname">&lt;key&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-auth-user-param-ident-type-key-arg-key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type-dependent setting to use as stored in DistKV. For ACLs the
+relevant record is added with <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">acl</span> <span class="pre">set</span> <span class="pre">&lt;key&gt;</span> <span class="pre">…</span></code>, for data
+conversion <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">codec</span> <span class="pre">convert</span> <span class="pre">&lt;key&gt;</span> <span class="pre">…</span></code>.</p>
+</dd></dl>
+
+<p>Check that authorizing a user works.</p>
+<p>XXX TODO seems broken</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-user-auth-arg-options...">
+<span id="cmdoption-distkv-client-auth-user-auth-arg-options"></span><code class="sig-name descname">options…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-auth-user-auth-arg-options..." title="Permalink to this definition">¶</a></dt>
+<dd><p>Whichever auth options you’d normally use in <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">-a</span> <span class="pre">TYPE</span> <span class="pre">…</span></code>.</p>
+</dd></dl>
+
+<p>Dump data of a user.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-user-get-c">
+<span id="cmdoption-distkv-client-auth-user-get-chain"></span><code class="sig-name descname">-c</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--chain</code><code class="sig-prename descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-auth-user-get-c" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>The chain length to return, for subsequent modification.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-auth-user-get-arg-ident">
+<code class="sig-name descname">ident</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-auth-user-get-arg-ident" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user identifier, as reported by <code class="docutils literal notranslate"><span class="pre">add</span></code>.</p>
+</dd></dl>
+
+<p>List users.</p>
+<p>XXX TODO add verbosity</p>
+<p>Set up DistKV’s type control: verify the data that clients write.</p>
+<p>See <a class="reference internal" href="translator.html"><span class="doc">Verifying and Translating Entries</span></a> for details.</p>
+<p>Retrieve a type entry.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-get-y">
+<span id="cmdoption-distkv-client-type-get-yaml"></span><code class="sig-name descname">-y</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--yaml</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-type-get-y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Emit the schema as YAML data. Default: JSON.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-get-s">
+<span id="cmdoption-distkv-client-type-get-script"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--script</code><code class="sig-prename descclassname"> &lt;filename&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-type-get-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the script to this file. Default: include in the output.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-get-S">
+<span id="cmdoption-distkv-client-type-get-schema"></span><code class="sig-name descname">-S</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--schema</code><code class="sig-prename descclassname"> &lt;filename&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-type-get-S" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the schema to this file. Default: include in the output.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-get-arg-name...">
+<span id="cmdoption-distkv-client-type-get-arg-name"></span><code class="sig-name descname">name…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-type-get-arg-name..." title="Permalink to this definition">¶</a></dt>
+<dd><p>The type data to retrieve.</p>
+</dd></dl>
+
+<p>Add or modify a type entry.</p>
+<p>For setting up a type, you need at least two good and one bad test value.
+(If there’s only one possible good value, you don’t need the entry; if
+there’s no bad value you don’t need the type check.)</p>
+<p>Type checks accumulate: Both ‘good’ and ‘bad’ test values for “int
+percent” must be accepted by “int”.</p>
+<p>Tests can use Python code, a JSON schema, or both. In the latter case the
+schema is tested first.</p>
+<p>To modify a record, use <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">type</span> <span class="pre">get</span> <span class="pre">&lt;path&gt;…</span> <span class="pre">&gt;</span> <span class="pre">&lt;tempfile&gt;</span></code>, edit
+the tempfile, then restore with <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">type</span> <span class="pre">set</span> <span class="pre">-d</span> <span class="pre">&lt;tempfile&gt;</span> <span class="pre">&lt;path&gt;…</span></code>.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-set-y">
+<span id="cmdoption-distkv-client-type-set-yaml"></span><code class="sig-name descname">-y</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--yaml</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-type-set-y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the schema as YAML. Default: JSON.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-set-s">
+<span id="cmdoption-distkv-client-type-set-script"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--script</code><code class="sig-prename descclassname"> &lt;filename&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-type-set-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the script from this file. Default: no script.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-set-S">
+<span id="cmdoption-distkv-client-type-set-schema"></span><code class="sig-name descname">-S</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--schema</code><code class="sig-prename descclassname"> &lt;filename&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-type-set-S" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the schema from this file. Default: no schema.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-set-g">
+<code class="sig-name descname">-g</code><code class="sig-prename descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-type-set-g" title="Permalink to this definition">¶</a></dt>
+<dd><p>A known-good value to test the codec. It will be Python-evaluated.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-set-b">
+<code class="sig-name descname">-b</code><code class="sig-prename descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-type-set-b" title="Permalink to this definition">¶</a></dt>
+<dd><p>A known-bad value to test the codec. It will be Python-evaluated.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-set-a">
+<span id="cmdoption-distkv-client-type-set-all"></span><code class="sig-name descname">-a</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--all</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-type-set-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the complete record from the <code class="docutils literal notranslate"><span class="pre">script</span></code> file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-set-arg-name...">
+<span id="cmdoption-distkv-client-type-set-arg-name"></span><code class="sig-name descname">name…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-type-set-arg-name..." title="Permalink to this definition">¶</a></dt>
+<dd><p>The type data to set.</p>
+</dd></dl>
+
+<p>Read, set or delete type matches, i.e. which part of your DistKV tree is
+constricted by which type.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-match-t">
+<span id="cmdoption-distkv-client-type-match-arg-type"></span><code class="sig-name descname">-t</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">type</code><code class="sig-prename descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-type-match-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type name to use. Use multiple <cite>–type`</cite> options to access subtypes.
+Skip this option to display which type corresponds to the given path.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-match-d">
+<span id="cmdoption-distkv-client-type-match-delete"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--delete</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-type-match-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the match record instead of printing it.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-type-match-arg-path...">
+<span id="cmdoption-distkv-client-type-match-arg-path"></span><code class="sig-name descname">path…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-type-match-arg-path..." title="Permalink to this definition">¶</a></dt>
+<dd><p>The DistKV entry to affect. Path elements ‘+’ and ‘#’ match exactly-one and
+one-or-more subpaths. The most specific path wins.</p>
+</dd></dl>
+
+<p>Set up codecs: manipulate the data that clients see, sort of like a
+database view.</p>
+<p>Codecs consist of code that encodes, i.e. converts to the user’s view, and
+decodes, i.e. converts to the server’s storage.</p>
+<p>Codecs cannot translate path names, or access other entries. The decoder may
+modify an existing entry (or rather, use the currently-stored version when
+assembling an entry’s new value).</p>
+<p>Unlike types, the codec hierarchy is strictly for convenience.</p>
+<p>Retrieve information about a codec, including its scripts.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-get-e">
+<span id="cmdoption-distkv-client-codec-get-encode"></span><code class="sig-name descname">-e</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--encode</code><code class="sig-prename descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-codec-get-e" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file which the encoder’s Python code is written to.</p>
+<p>If this option is not used, the code is part of the script’s output.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-get-d">
+<span id="cmdoption-distkv-client-codec-get-decode"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--decode</code><code class="sig-prename descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-codec-get-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file which the decoder’s Python code is written to.</p>
+<p>If this option is not used, the code is part of the script’s output.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-get-s">
+<span id="cmdoption-distkv-client-codec-get-script"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--script</code><code class="sig-prename descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-codec-get-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>The YAML file to which to write any other data.</p>
+<p>This file will also contain the scripts, if not stored otherwise.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-get-arg-name">
+<code class="sig-name descname">&lt;name&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-codec-get-arg-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the codec group from which this codec should be retrieved.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-get-arg-path">
+<code class="sig-name descname">&lt;path&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-codec-get-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DistKV entry that would be affected. Path elements ‘+’ and ‘#’ match
+exactly-one and one-or-more subpaths. The most specific path wins.</p>
+</dd></dl>
+
+<p>Add or modify a codec.</p>
+<p>To modify a codec, use <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">codec</span> <span class="pre">get</span> <span class="pre">&lt;path&gt;…</span> <span class="pre">&gt;</span> <span class="pre">&lt;tempfile&gt;</span></code>, edit the
+tempfile, then restore with <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">codec</span> <span class="pre">set</span> <span class="pre">-d</span> <span class="pre">&lt;tempfile&gt;</span> <span class="pre">&lt;path&gt;…</span></code>.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-set-e">
+<span id="cmdoption-distkv-client-codec-set-encode"></span><code class="sig-name descname">-e</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--encode</code><code class="sig-prename descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-codec-set-e" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file which contains the encoder’s Python code.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-set-d">
+<span id="cmdoption-distkv-client-codec-set-decode"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--decode</code><code class="sig-prename descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-codec-set-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file which contains the decoder’s Python code.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-set-i">
+<span id="cmdoption-distkv-client-codec-set-in"></span><code class="sig-name descname">-i</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--in</code><code class="sig-prename descclassname"> &lt;source&gt; &lt;dest&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-codec-set-i" title="Permalink to this definition">¶</a></dt>
+<dd><p>A pair of test values for the decoding branch of the codec.
+Both are <code class="docutils literal notranslate"><span class="pre">eval</span></code>-uated.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-set-o">
+<span id="cmdoption-distkv-client-codec-set-out"></span><code class="sig-name descname">-o</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--out</code><code class="sig-prename descclassname"> &lt;source&gt; &lt;dest&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-codec-set-o" title="Permalink to this definition">¶</a></dt>
+<dd><p>A pair of test values for the encoding branch of the codec.
+Both are <code class="docutils literal notranslate"><span class="pre">eval</span></code>-uated.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-set-D">
+<span id="cmdoption-distkv-client-codec-set-data"></span><code class="sig-name descname">-D</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--data</code><code class="sig-prename descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-codec-set-D" title="Permalink to this definition">¶</a></dt>
+<dd><p>The YAML file which contains any other data.</p>
+<p>Required: two arrays “in” and “out” containing tuples with before/after
+values for the decoder and encoder, respectively.</p>
+<p>You may store the scripts in this file, using “encode” and “decode” keys.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-set-arg-name">
+<code class="sig-name descname">&lt;name&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-codec-set-arg-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the codec group to which this codec should be saved or
+modified.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-set-arg-path">
+<code class="sig-name descname">&lt;path&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-codec-set-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DistKV entry to affect. Path elements ‘+’ and ‘#’ match exactly-one and
+one-or-more subpaths. The most specific path wins.</p>
+</dd></dl>
+
+<p>Read, set or delete codec matches, i.e. which part of your DistKV tree is
+managed by which codec. To this effect, matches are tagged by a group name.</p>
+<p>Which codec group to apply to a given user is stored in that user’s
+auxiliary data as <code class="docutils literal notranslate"><span class="pre">conv=NAME</span></code>. If no such entry is present, that user’s
+data are not converted.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-convert-c">
+<span id="cmdoption-distkv-client-codec-convert-codec"></span><code class="sig-name descname">-c</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--codec</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-codec-convert-c" title="Permalink to this definition">¶</a></dt>
+<dd><p>The codec to use on the given path. Use this option multiple times if
+the codec has a multi-level name.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-convert-arg-name">
+<code class="sig-name descname">&lt;name&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-codec-convert-arg-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the codec group to which this codec should be saved or
+modified.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-codec-convert-arg-path">
+<code class="sig-name descname">&lt;path&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-codec-convert-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DistKV entry to affect. Path elements ‘+’ and ‘#’ match exactly-one and
+one-or-more subpaths. The most specific path wins.</p>
+</dd></dl>
+
+<p>Manipulate access control lists stored in DistKV.</p>
+<p>Generate a list of known ACLs.</p>
+<p>Retrieve the flags at a specific ACL path.</p>
+<p>If the path does not contain any flags, print <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-get-arg-acl">
+<code class="sig-name descname">&lt;acl&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-acl-get-arg-acl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ACL to modify. Mandatory.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-get-arg-path">
+<code class="sig-name descname">&lt;path&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-acl-get-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ACL path from which to retrieve the flags.</p>
+</dd></dl>
+
+<p>Set the flags at a specific ACL path.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-set-a">
+<span id="cmdoption-distkv-client-acl-set-acl"></span><code class="sig-name descname">-a</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--acl</code><code class="sig-prename descclassname"> &lt;MODES&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-acl-set-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>The flag values to set. Start with <code class="docutils literal notranslate"><span class="pre">+</span></code> to add, <code class="docutils literal notranslate"><span class="pre">-</span></code> to remove modes.
+Use an empty argument (<code class="docutils literal notranslate"><span class="pre">''</span></code>) to remove all rights. A lone <code class="docutils literal notranslate"><span class="pre">-</span></code>
+removes the entry.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-set-arg-acl">
+<code class="sig-name descname">&lt;acl&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-acl-set-arg-acl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ACL to modify. Mandatory.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-set-arg-path">
+<code class="sig-name descname">&lt;path&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-acl-set-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ACL path to add or modify.</p>
+</dd></dl>
+
+<p>Check whether an ACL allows access.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-test-m">
+<span id="cmdoption-distkv-client-acl-test-mode"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--mode</code><code class="sig-prename descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-acl-test-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check this mode (single letter). The default is “x”.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-test-a">
+<span id="cmdoption-distkv-client-acl-test-acl"></span><code class="sig-name descname">-a</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--acl</code><code class="sig-prename descclassname"> &lt;acl&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-acl-test-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>In addition to the user’s current ACL, also check the flag on the named ACL.</p>
+<p>There is no indication which of the two failed. This is intentional.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-test-arg-path">
+<code class="sig-name descname">&lt;path&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-acl-test-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to check.</p>
+</dd></dl>
+
+<p>Dump an ACL’s content.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-dump-d">
+<span id="cmdoption-distkv-client-acl-dump-as-dict"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--as-dict</code><code class="sig-prename descclassname"> TEXT</code><a class="headerlink" href="#cmdoption-distkv-client-acl-dump-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print as dictionary. <code class="docutils literal notranslate"><span class="pre">TEXT</span></code> is the key used for the ACL data.</p>
+<p>Default: Emit a list.</p>
+<p>Using this flag requires storing the whole ACL in memory, which is
+usually not a problem (unlike for data).</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-dump-arg-name">
+<code class="sig-name descname">&lt;name&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-acl-dump-arg-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the ACL to dump. Mandatory.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-acl-dump-arg-path">
+<code class="sig-name descname">&lt;path&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-acl-dump-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to start dumping at. Default: the root.</p>
+</dd></dl>
+
+<p>Manipulate code stored in DistKV.</p>
+<p>List code snippets stored in DistKV.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-list-d">
+<span id="cmdoption-distkv-client-code-list-as-dict"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--as-dict</code><code class="sig-prename descclassname"> &lt;text&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-code-list-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>When you use this option, the data is printed as a dictionary.
+The argument of this option controls which key is used for the actual
+value; this string should not occur as a path element.</p>
+<p>The customary value to use is a single underscore.</p>
+<p>Using this option in conjunction with <code class="docutils literal notranslate"><span class="pre">--recursive</span></code> requires keeping
+the whole data set in memory before starting to print anything. This may
+take a long time or eat a lot of memory.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-list-s">
+<span id="cmdoption-distkv-client-code-list-short"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--short</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-code-list-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print one-line entries.</p>
+<p>Incompatible with <code class="docutils literal notranslate"><span class="pre">-f</span></code> and <code class="docutils literal notranslate"><span class="pre">-d</span></code>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-list-f">
+<span id="cmdoption-distkv-client-code-list-full"></span><code class="sig-name descname">-f</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--full</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-code-list-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the actual code.</p>
+<p>Otherwise, code is not printed and a “number of lines” <code class="docutils literal notranslate"><span class="pre">info</span></code> entry is
+generated (if missing).</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-list-m">
+<span id="cmdoption-distkv-client-code-list-mindepth"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--mindepth</code><code class="sig-prename descclassname"> &lt;integer&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-code-list-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>When printing recursively, start at this depth off the given path.</p>
+<p>The default is zero, i.e. include the entry itself.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-list-M">
+<span id="cmdoption-distkv-client-code-list-maxdepth"></span><code class="sig-name descname">-M</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--maxdepth</code><code class="sig-prename descclassname"> &lt;integer&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-code-list-M" title="Permalink to this definition">¶</a></dt>
+<dd><p>When printing recursively, stop at this depth (inclusive).</p>
+<p>The default is to print the whole tree. Use <code class="docutils literal notranslate"><span class="pre">1</span></code> to print the entry itself
+(assuming that it has a value and you didn’t use <code class="docutils literal notranslate"><span class="pre">--mindepth=1</span></code>)
+and its immediate children.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-list-arg-path...">
+<span id="cmdoption-distkv-client-code-list-arg-path"></span><code class="sig-name descname">path…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-code-list-arg-path..." title="Permalink to this definition">¶</a></dt>
+<dd><p>List the code below this location.</p>
+</dd></dl>
+
+<p>Retrieve Python code stored in the server.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-get-s">
+<span id="cmdoption-distkv-client-code-get-script"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--script</code><code class="sig-prename descclassname"> &lt;filename&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-code-get-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the code to &lt;filename&gt; instead of including it in the output.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-get-arg-path">
+<code class="sig-name descname">&lt;path&gt;</code><code class="sig-prename descclassname"> …</code><a class="headerlink" href="#cmdoption-distkv-client-code-get-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to the code in question.</p>
+</dd></dl>
+
+<p>Store or replace Python code stored in the server.</p>
+<p>This code will not run in the server; the purpose of these calls is to
+upload code for use by client runners.</p>
+<p>To modify some code, use <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">code</span> <span class="pre">get</span> <span class="pre">&lt;path&gt;…</span> <span class="pre">&gt;</span> <span class="pre">&lt;tempfile&gt;</span></code>, edit
+the tempfile, then restore with <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">code</span> <span class="pre">set</span> <span class="pre">-d</span> <span class="pre">&lt;tempfile&gt;</span> <span class="pre">&lt;path&gt;…</span></code>.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-set-d">
+<span id="cmdoption-distkv-client-code-set-data"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--data</code><code class="sig-prename descclassname"> &lt;filename&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-code-set-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the metadata from this file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-set-s">
+<span id="cmdoption-distkv-client-code-set-script"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--script</code><code class="sig-prename descclassname"> &lt;filename&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-code-set-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the code from this file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-set-a">
+<span id="cmdoption-distkv-client-code-set-async"></span><code class="sig-name descname">-a</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--async</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-code-set-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>The code will run asynchronously, i.e. it may use <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code> statements.</p>
+<p>You should only use the <code class="docutils literal notranslate"><span class="pre">anyio</span></code> module for sleeping, locking etc..</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-set-t">
+<span id="cmdoption-distkv-client-code-set-thread"></span><code class="sig-name descname">-t</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--thread</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-code-set-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>The code will run in a worker thread.</p>
+<p>This option is incompatible with <code class="docutils literal notranslate"><span class="pre">--async</span></code>.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-set-arg-name...">
+<span id="cmdoption-distkv-client-code-set-arg-name"></span><code class="sig-name descname">name…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-code-set-arg-name..." title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to the code to write.</p>
+</dd></dl>
+
+<p>TODO: Old versions of the code continue to run; DistKV does not yet restart users.</p>
+<p>Manipulate modules stored in DistKV.</p>
+<p>Modules are replaced immediately, but code using them is <strong>not</strong>
+auto-restarted.</p>
+<p>This code is experimental and frankly just plain wrong: Module loading is
+not deferred until “import” time. This code needs sever refactoring. For now, please store modules
+in the file system.</p>
+<p>Retrieve Python module stored in the server.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-module-get-s">
+<span id="cmdoption-distkv-client-code-module-get-script"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--script</code><code class="sig-prename descclassname"> &lt;filename&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-code-module-get-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the code to &lt;filename&gt; instead of including it in the output</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-module-get-arg-path">
+<code class="sig-name descname">&lt;path&gt;</code><code class="sig-prename descclassname"> …</code><a class="headerlink" href="#cmdoption-distkv-client-code-module-get-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to the code in question.</p>
+</dd></dl>
+
+<p>Store or replace Python code stored in the server.</p>
+<p>This code will not run in the server; the purpose of these calls is to
+upload code for use by client-side runners.</p>
+<p>To modify a module, use <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">code</span> <span class="pre">module</span> <span class="pre">get</span> <span class="pre">&lt;path&gt;…</span> <span class="pre">&gt;</span> <span class="pre">&lt;tempfile&gt;</span></code>, edit
+the tempfile, then restore with <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">code</span> <span class="pre">module</span> <span class="pre">set</span> <span class="pre">-d</span> <span class="pre">&lt;tempfile&gt;</span> <span class="pre">&lt;path&gt;…</span></code>.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-module-set-d">
+<span id="cmdoption-distkv-client-code-module-set-data"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--data</code><code class="sig-prename descclassname"> &lt;filename&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-code-module-set-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the metadata from this file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-module-set-s">
+<span id="cmdoption-distkv-client-code-module-set-script"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--script</code><code class="sig-prename descclassname"> &lt;filename&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-code-module-set-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the module’s code from this file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-code-module-set-arg-name...">
+<span id="cmdoption-distkv-client-code-module-set-arg-name"></span><code class="sig-name descname">name…</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-code-module-set-arg-name..." title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to the code to set, below <code class="docutils literal notranslate"><span class="pre">.distkv</span> <span class="pre">code</span> <span class="pre">proc</span></code> or whatever
+else is configured under <code class="docutils literal notranslate"><span class="pre">codes</span></code>.</p>
+</dd></dl>
+
+<p>TODO: Old versions of the code continue to run; DistKV does not yet restart users.</p>
+<p>Subcommand for controlling and executing code stored in DistKV.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-n">
+<span id="cmdoption-distkv-client-run-node"></span><code class="sig-name descname">-n</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--node</code><code class="sig-prename descclassname"> &lt;node&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-run-n" title="Permalink to this definition">¶</a></dt>
+<dd><p>The node where the code in question will run.</p>
+<p>Code marked with this option will run on exactly this node. The default
+is the local node name.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-g">
+<span id="cmdoption-distkv-client-run-group"></span><code class="sig-name descname">-g</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--group</code><code class="sig-prename descclassname"> &lt;group&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-run-g" title="Permalink to this definition">¶</a></dt>
+<dd><p>The group which the code in question shall run on.</p>
+<p>The default group is “all”.</p>
+</dd></dl>
+
+<p>This is the actual runner, i.e. the program that runs stored tasks.</p>
+<p>This program does not terminate.</p>
+<p>List available run entries.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-list-s">
+<span id="cmdoption-distkv-client-run-list-state"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--state</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-run-list-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the current state.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-list-S">
+<span id="cmdoption-distkv-client-run-list-state-only"></span><code class="sig-name descname">-S</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--state-only</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-run-list-S" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only print the current state.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-list-arg-prefix">
+<code class="sig-name descname">&lt;prefix&gt;</code><code class="sig-prename descclassname"> …</code><a class="headerlink" href="#cmdoption-distkv-client-run-list-arg-prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Limit listing to this prefix.</p>
+</dd></dl>
+
+<p>Read a runner entry.</p>
+<p>Create or change a runner entry.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-set-c">
+<span id="cmdoption-distkv-client-run-set-code"></span><code class="sig-name descname">-c</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--code</code><code class="sig-prename descclassname"> &lt;code&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-run-set-c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to the code that this entry should execute. This value is either
+split by spaces or, if <code class="docutils literal notranslate"><span class="pre">--eval</span></code> is used, interpreted as a Python
+expression.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-set-t">
+<span id="cmdoption-distkv-client-run-set-time"></span><code class="sig-name descname">-t</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--time</code><code class="sig-prename descclassname"> &lt;when&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-run-set-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time at which the runner should fire next. Seconds in the future.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-set-r">
+<span id="cmdoption-distkv-client-run-set-repeat"></span><code class="sig-name descname">-r</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--repeat</code><code class="sig-prename descclassname"> &lt;seconds&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-run-set-r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time after a successful execution when the runner should fire again.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-set-d">
+<span id="cmdoption-distkv-client-run-set-delay"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--delay</code><code class="sig-prename descclassname"> &lt;seconds&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-run-set-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time after an unsuccessful execution when the runner should fire again.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-set-k">
+<span id="cmdoption-distkv-client-run-set-ok"></span><code class="sig-name descname">-k</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--ok</code><code class="sig-prename descclassname"> &lt;seconds&gt;</code><a class="headerlink" href="#cmdoption-distkv-client-run-set-k" title="Permalink to this definition">¶</a></dt>
+<dd><p>If a task runs for longer than this many seconds, it’s considered OK and
+any error associated with it is cleared.</p>
+<p>Errors are also cleared when a task exits, which won’t work for tasks
+that typically do not.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-run-set-b">
+<span id="cmdoption-distkv-client-run-set-backoff"></span><code class="sig-name descname">-b</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--backoff</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-run-set-b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Back-off exponent. The effective delay is <code class="docutils literal notranslate"><span class="pre">delay</span> <span class="pre">*</span> <span class="pre">backoff</span> <span class="pre">^</span> <span class="pre">n_failures</span></code>.</p>
+<p>To retry a failure immediately, simply use <code class="docutils literal notranslate"><span class="pre">--time</span> <span class="pre">now</span></code>.</p>
+</dd></dl>
+
+<p>Subcommand for viewing and modifying the internal state of a DistKV server.</p>
+<p>This command emits DistKV’s internal state.</p>
+<p>The output is comparable to <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">data</span> <span class="pre">dump</span> <span class="pre">-rd_</span></code>, but for internal
+data.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-dump-arg-path">
+<code class="sig-name descname">&lt;path&gt;</code><code class="sig-prename descclassname"> …</code><a class="headerlink" href="#cmdoption-distkv-client-internal-dump-arg-path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path prefix for DistKV’s internal data structure.</p>
+</dd></dl>
+
+<p>This command queries the internal state of a DistKV server.</p>
+<p>All lists of <code class="docutils literal notranslate"><span class="pre">tick</span></code> values are sorted and consist of either single
+entries, or <code class="docutils literal notranslate"><span class="pre">[begin,end)</span></code> tuples, i.e. the starting value is part of the
+range but the end is not.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-state-y">
+<span id="cmdoption-distkv-client-internal-state-yaml"></span><code class="sig-name descname">-y</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--yaml</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-state-y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the result of this operation as YAML data.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-state-n">
+<span id="cmdoption-distkv-client-internal-state-nodes"></span><code class="sig-name descname">-n</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--nodes</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-state-n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list of known nodes and their current <code class="docutils literal notranslate"><span class="pre">tick</span></code> value.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-state-d">
+<span id="cmdoption-distkv-client-internal-state-deleted"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--deleted</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-state-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list of per-node deleted <code class="docutils literal notranslate"><span class="pre">tick</span></code> values, i.e. those whose entries
+have been purged from the system.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-state-p">
+<span id="cmdoption-distkv-client-internal-state-present"></span><code class="sig-name descname">-p</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--present</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-state-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list of per-node <code class="docutils literal notranslate"><span class="pre">tick</span></code> values which can be retrieved via
+node+tick, i.e. for which a chain entry exists.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-state-s">
+<span id="cmdoption-distkv-client-internal-state-superseded"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--superseded</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-state-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list of per-node <code class="docutils literal notranslate"><span class="pre">tick</span></code> values which have been superseded by
+subsequent changes. This is returned as “known”.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-state-m">
+<span id="cmdoption-distkv-client-internal-state-missing"></span><code class="sig-name descname">-m</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--missing</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-state-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list of per-node missing <code class="docutils literal notranslate"><span class="pre">tick</span></code> values, i.e. those neither in
+the <code class="docutils literal notranslate"><span class="pre">known</span></code> list nor seen in any entries’ chains.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-state-r">
+<span id="cmdoption-distkv-client-internal-state-remote-missing"></span><code class="sig-name descname">-r</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--remote-missing</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-state-r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a list of per-node missing <code class="docutils literal notranslate"><span class="pre">tick</span></code> values that have been requested
+from other servers.</p>
+</dd></dl>
+
+<p>See <cite>Server protocol &lt;server_protocol&gt;</cite> for details.</p>
+<p>Mark ticks as known or deleted. This is used to clean up the <code class="docutils literal notranslate"><span class="pre">missing</span></code>
+range(s) when there’s a consistency problem.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-mark-d">
+<span id="cmdoption-distkv-client-internal-mark-deleted"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--deleted</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-mark-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the nodes to the <code class="docutils literal notranslate"><span class="pre">deleted</span></code> list instead of the <code class="docutils literal notranslate"><span class="pre">known</span></code> list. The
+effect is that if they subsequently re-surcace they’ll be ignored.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-mark-b">
+<span id="cmdoption-distkv-client-internal-mark-broadcast"></span><code class="sig-name descname">-b</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--broadcast</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-mark-b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send the changes to the whole network, not just the node you’re a client
+of. (The local node is still targeted first, to ensure that if your
+message should crash the server at least it’ll only crash one.)</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-mark-arg-node">
+<code class="sig-name descname">&lt;node&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-mark-arg-node" title="Permalink to this definition">¶</a></dt>
+<dd><p>The node whose ticks shall be used.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-mark-arg-item">
+<code class="sig-name descname">&lt;item&gt;</code><code class="sig-prename descclassname"> …</code><a class="headerlink" href="#cmdoption-distkv-client-internal-mark-arg-item" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tick values you want to clear. Taken from the current <code class="docutils literal notranslate"><span class="pre">missing</span></code>
+list if not specified here; in this case, an empty <code class="docutils literal notranslate"><span class="pre">node</span></code> means to
+take the whole list, not just the ones for <code class="docutils literal notranslate"><span class="pre">node</span></code>.</p>
+</dd></dl>
+
+<p>Manage the list of nodes that collectively manage cleaning deleted entries from
+the DistKV tree.</p>
+<p>All of these nodes must be online for clean-up to work.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-deleter-d">
+<span id="cmdoption-distkv-client-internal-deleter-delete"></span><code class="sig-name descname">-d</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--delete</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-client-internal-deleter-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the mentioned nodes. Default is to add them.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-client-internal-deleter-arg-node">
+<code class="sig-name descname">&lt;node&gt;</code><code class="sig-prename descclassname"> …</code><a class="headerlink" href="#cmdoption-distkv-client-internal-deleter-arg-node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nodes to add or delete. If none are given, list the current state, or (with
+<code class="docutils literal notranslate"><span class="pre">--delete</span></code>) clear the list, disabling node deletion.</p>
+<p>If you want to shut deletion down temporarily, you can also add a
+nonexistent node to the list.</p>
+</dd></dl>
+
+<p>Manage errors.</p>
+<p>Show currently-logged errors.</p>
+<p>Mark an error as handled.</p>
+<p>DistKV does this itself, usually, but not if the node which caused the
+problem is deleted.</p>
+<p>Various low-level data handling commands.</p>
+<p>Display the current configuration data.</p>
+<p>Unpack a file and show its contents as YAML.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-dump-file-arg-file">
+<code class="sig-name descname">&lt;file&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-dump-file-arg-file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the file to decode.</p>
+</dd></dl>
+
+<p>Create an initial data file.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-dump-init-arg-node">
+<code class="sig-name descname">&lt;node&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-dump-init-arg-node" title="Permalink to this definition">¶</a></dt>
+<dd><p>The node name of the DistKV server that should load the initial file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-distkv-dump-init-arg-file">
+<code class="sig-name descname">&lt;file&gt;</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-dump-init-arg-file" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file to write. Typically <code class="docutils literal notranslate"><span class="pre">/var/lib/distkv/%Y-%m-%d/0.dkv</span></code>.</p>
+</dd></dl>
+
+<p>Monitor all back-end messages. (I.e. not just those from DistKV.)
+Decodes MsgPack messages. Display as YAML.</p>
+<dl class="std option">
+<dt id="cmdoption-distkv-dump-msg-NAME...-arg-NAME">
+<span id="cmdoption-distkv-dump-msg-name-arg-name"></span><code class="sig-name descname">NAME</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-distkv-dump-msg-NAME...-arg-NAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>You may tell the monitor which stream to emit. By default it prints the
+main server’s update stream for data. You may use</p>
+<ul class="simple">
+<li><p>some random sequence of names, which is used as-is as the topic to
+monitor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+NAME</span></code>, to monitor this sub-stream instead</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> to monitor all sub-streams (recursively; does not work with the
+Serf backend)</p></li>
+</ul>
+</dd></dl>
+
+<p>This subcommand imports the debugger and then continues to process arguments.</p>
+<p>This can be used to drop into the debugger when an exception occurs, set
+breakpoints, or whatever.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Stepping over async function calls may or may not work. If not, your
+best bet is to set a breakpoint on the next line.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="client_protocol.html" class="btn btn-neutral float-right" title="DistKV’s client protocol" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="startup.html" class="btn btn-neutral float-left" title="Starting DistKV" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

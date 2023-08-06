@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Access control &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Code in DistKV" href="code.html" />
+    <link rel="prev" title="DistKV and authentication" href="auth.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Access control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#acls">ACLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#association">Association</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#putting-it-all-together">Putting it all together</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Access control</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/acls.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="access-control">
+<h1>Access control<a class="headerlink" href="#access-control" title="Permalink to this headline">¶</a></h1>
+<p>DistKV employs a two-step access control scheme.</p>
+<p>First, you define an ACL hierarchy which controls which items may be
+accessed using a particular named ACL. Then you associate that ACL
+with users that shall be bound by it.</p>
+<div class="section" id="acls">
+<h2>ACLs<a class="headerlink" href="#acls" title="Permalink to this headline">¶</a></h2>
+<p>An ACL entry controls these access modes:</p>
+<ul class="simple">
+<li><p>a: acl: retrieve the ACL flags for this node</p></li>
+<li><p>r: read: retrieve the data at this node</p></li>
+<li><p>w: write: change the data at this node</p></li>
+<li><p>c: create: add new data to this node</p></li>
+<li><p>d: delete: remove the data at this node</p></li>
+<li><p>x: access: read specific sub-nodes below this one</p></li>
+<li><p>e: enumerate: list sub-nodes of this one</p></li>
+<li><p>n: new: create new nodes below this one</p></li>
+</ul>
+<p>In the DistKV sources you’ll also encounter these modes in calls to
+<code class="docutils literal notranslate"><span class="pre">follow_acl</span></code> (i.e. these flags can be checked for but you cannot set
+them):</p>
+<ul class="simple">
+<li><p>W: check ‘c’ if the node is new or has no data, else ‘w’</p></li>
+</ul>
+<p>ACLs can use wildcards ‘+’ (one level) and ‘#’ (one or more levels).
+Search is depth-first; more specific keys are checked first.</p>
+</div>
+<div class="section" id="association">
+<h2>Association<a class="headerlink" href="#association" title="Permalink to this headline">¶</a></h2>
+<p>You change a user’s ACL entry by adding an “acl=ACLNAME” field to the
+user’s aux data. The user is affected as soon as they log back in.</p>
+<p>Updated ACL records are effective immediately.</p>
+</div>
+<div class="section" id="putting-it-all-together">
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<p>Given the following data structure, the user “aclix” will only be able to
+write initial data to <code class="docutils literal notranslate"><span class="pre">one</span></code> and <code class="docutils literal notranslate"><span class="pre">one</span> <span class="pre">two</span></code>. They can also read the data
+back. However, any other access is not possible:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">null</span><span class="p">:</span>
+  <span class="n">auth</span><span class="p">:</span>
+    <span class="n">_</span><span class="p">:</span>
+      <span class="n">current</span><span class="p">:</span> <span class="n">_test</span>
+    <span class="n">_test</span><span class="p">:</span>
+      <span class="n">user</span><span class="p">:</span>
+        <span class="n">aclix</span><span class="p">:</span>
+          <span class="n">_</span><span class="p">:</span>
+            <span class="n">_aux</span><span class="p">:</span>
+              <span class="n">acl</span><span class="p">:</span> <span class="n">foo</span>
+        <span class="n">std</span><span class="p">:</span>
+          <span class="n">_</span><span class="p">:</span>
+            <span class="n">_aux</span><span class="p">:</span> <span class="p">{}</span>
+  <span class="n">acl</span><span class="p">:</span>
+    <span class="n">foo</span><span class="p">:</span>
+      <span class="n">one</span><span class="p">:</span>
+        <span class="n">_</span><span class="p">:</span> <span class="n">rxnc</span>
+        <span class="n">two</span><span class="p">:</span>
+          <span class="n">_</span><span class="p">:</span> <span class="n">rc</span>
+<span class="n">one</span><span class="p">:</span>
+  <span class="n">_</span><span class="p">:</span> <span class="mi">10</span>
+  <span class="n">two</span><span class="p">:</span>
+    <span class="n">_</span><span class="p">:</span> <span class="mi">11</span>
+</pre></div>
+</div>
+<p>The above is the server content at the end of the testcase
+<code class="docutils literal notranslate"><span class="pre">tests/test_feature_acls.py::test_81_basic</span></code>, when
+dumped with the command <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">get</span> <span class="pre">-rd_</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="code.html" class="btn btn-neutral float-right" title="Code in DistKV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="auth.html" class="btn btn-neutral float-left" title="DistKV and authentication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

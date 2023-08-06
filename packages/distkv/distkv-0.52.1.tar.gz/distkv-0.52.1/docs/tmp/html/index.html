@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>DistKV: A distributed no-master key-value store &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Principles of operation" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>DistKV: A distributed no-master key-value store</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="distkv-a-distributed-no-master-key-value-store">
+<h1>DistKV: A distributed no-master key-value store<a class="headerlink" href="#distkv-a-distributed-no-master-key-value-store" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="rationale">
+<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
+<p>Any kind of distributed storage is subject to the CAP theorem (also called
+“Brewer’s theorem”): you can’t get all of (global) Consistency,
+Availability, and Partition tolerance. The problem is that you do want all
+three of these.</p>
+<p>One way around this problem is to recognize that on most KV storage
+systems, any given record is rarely (if ever) changed by more than one
+entity at the same time. Thus, a simple gossip protocol is sufficient
+for distributing data.</p>
+<p>DistKV is intended to be used in a mostly-RAM architecture. There is no
+disk-based storage backend; snapshots and event logs are used to restore a
+system, if necessary.</p>
+<p>See <cite>Protocol Overview &lt;overview.html&gt;</cite> for details about DistKV’s
+choices.</p>
+</div>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<p>DistKV offers an efficient interface to access and change data.</p>
+</div>
+<div class="section" id="status">
+<h2>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<p>DistKV is in production use as the backbone of the author’s home and office
+automation setup.</p>
+<p>Note that as of DistKV 0.30, multi-word paths were replaced with dotted
+strings. Some pieces of documentation might still reflect the old style.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#storage">Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#record-deletion">Record Deletion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#start-the-server">Start the server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#data-commands">Data commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#persistent-storage">Persistent storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#authorization">Authorization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#access-restrictions">Access restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#code-execution">Code execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#errors">Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#the-python-api">The Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#verification">Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#data-mangling">Data mangling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#dynamic-configuration">Dynamic configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command_line.html#distkv">distkv</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="client_protocol.html#requests">Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client_protocol.html#replies">Replies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client_protocol.html#actions">Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client_protocol.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="server_protocol.html#data-types">Data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server_protocol.html#common-items">Common items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server_protocol.html#message-types">Message types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server_protocol.html#timing-and-concurrency">Timing and concurrency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server_protocol.html#message-graphs">Message graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server_protocol.html#msgpack-encoding">MsgPack encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server_protocol.html#yaml-encoding">YAML encoding</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="auth.html#included-user-auth-methods">Included user auth methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auth.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="acls.html#acls">ACLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acls.html#association">Association</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acls.html#putting-it-all-together">Putting it all together</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code.html#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code.html#modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code.html#runners">Runners</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code.html#single-node-runner">Single-node runner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code.html#any-node-runner">Any-node runner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code.html#all-node-runner">All-node runner</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code.html#variables">Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code.html#messages">Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="model.html#acls">ACLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.html#helper-methods-and-classes">Helper methods and classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="translator.html#verification">Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translator.html#translation">Translation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html#missing-data">Missing data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="related.html#home-assistant">Home Assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="related.html#knx">KNX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="related.html#wire">1wire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="related.html#inventory-management">Inventory Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="related.html#akumuli">Akumuli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="related.html#binary-i-o">Binary I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="related.html#wago-i-o-controllers">Wago I/O controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+<li><p><a class="reference external" href="https://trio.readthedocs.io/en/stable/glossary.html#glossary" title="(in Trio v0.18.0)"><span>Glossary</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="overview.html" class="btn btn-neutral float-right" title="Principles of operation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

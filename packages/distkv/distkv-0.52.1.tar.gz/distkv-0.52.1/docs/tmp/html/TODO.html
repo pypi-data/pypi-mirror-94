@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Open issues &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Release history" href="history.html" />
+    <link rel="prev" title="Plugins and related software" href="related.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Open issues</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/TODO.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="open-issues">
+<h1>Open issues<a class="headerlink" href="#open-issues" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p>Ping: ignore messages with decreasing tock (per node)</p></li>
+<li><p>chroot operation: add and test proper sub-roots, including auth and
+whatnot</p></li>
+<li><p>We need path translation. Idea: store an extension element in the
+destination path, which would pick the appropriate parts from the
+source path when processed.</p>
+<p>2-element tuples would probably work also, given that it’s unlikely that
+people use complex elements in their path, but why limit ourselves?</p>
+</li>
+<li><p>ACLs for system data, i.e. those stored below <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p>after starting with initial data, wait until the Actor is up and we’re
+synced to the other nodes</p></li>
+<li><p>Teach the server to also run an executor (or two or three or …)</p></li>
+<li><p>Rather than mangling split messages, use a MsgPack extension type.</p></li>
+<li><p>Rate limiting. Currently the server can flood the client with data and no
+other call can get a word in edgewise.</p></li>
+<li><p>AnyRunner: Do proper load balancing; the leader should be able to tell
+some other node to run a job if it’s busy.</p></li>
+<li><p>Add an EveryRunner (with per-node status of course).</p></li>
+<li><p>Keep an error index on the server?  Something more general?</p></li>
+<li><p>Restart code that’s been changed (without waiting for restart/retry).</p></li>
+<li><p>Use cryptography.hazmat.primitives.asymmetric.x25519 instead of
+Diffie-Hellman to send passwords to the server.</p></li>
+<li><p>Implement a shared secret to sign server-to-server messages.</p></li>
+<li><p>Re-implement Serf (or something like it) in Python, it’s large and adds latency</p></li>
+<li><p>Runner: switch to monotonic time (except for target time!)</p></li>
+<li><p>Error consolidation: if a conflict doesn’t get resolved on its own, do it
+anyway when we are “it” next and &gt;1 cycle has passed</p></li>
+<li><p>Add a command to cleanly flush the server log and stop the server.</p></li>
+<li><p>Test iterator on changed config entries</p></li>
+<li><p>errors: better display</p></li>
+<li><p>errors: manually acknowledge and delete them</p></li>
+<li><p>errors: add a web service to monitor them?</p></li>
+<li><p>Runner: store the number of active group members / actor config in the group</p></li>
+<li><p>Restore passing positional parameters as keywords (to code entries)</p></li>
+<li><p>Add a maintainer mode (user flag) that allows limited access when data is missing</p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="history.html" class="btn btn-neutral float-right" title="Release history" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="related.html" class="btn btn-neutral float-left" title="Plugins and related software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

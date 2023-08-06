@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Code in DistKV &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Model" href="model.html" />
+    <link rel="prev" title="Access control" href="acls.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_protocol.html">DistKV’s client protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Code in DistKV</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code">Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#storage">Storage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#modules">Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#runners">Runners</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#runner-types">Runner types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#single-node-runner">Single-node runner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#any-node-runner">Any-node runner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#all-node-runner">All-node runner</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#runner-configuration">Runner configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#variables">Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#node-groups">Node Groups</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#calladmin">CallAdmin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#messages">Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Code in DistKV</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/code.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="code-in-distkv">
+<h1>Code in DistKV<a class="headerlink" href="#code-in-distkv" title="Permalink to this headline">¶</a></h1>
+<p>DistKV can store Python code and modules, either for direct use by your
+client or for a runner daemon.</p>
+<p>TODO: There is no dependency resolution. Thus, while you can store Python
+modules in DistKV, there’s no guarantee yet that they’ll actually be present
+when your code loads.</p>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<p>Python code stored in DistKV is wrapped with a procedure context, mainly to
+make returning a result more straightforward. This is done by indenting the
+code before compiling it: don’t depend on multi-line strings to be flush
+left.</p>
+<div class="section" id="storage">
+<h3>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h3>
+<p>The location for executable scripts is configurable and defaults to
+“.distkv code proc”. Scripts are stored as a dict with these attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: the actual text</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_async</span></code>: a flag whether the procedure is synchronous (<code class="docutils literal notranslate"><span class="pre">None</span></code>),
+sync but should run in a worker thread (<code class="docutils literal notranslate"><span class="pre">False</span></code>), or async (<code class="docutils literal notranslate"><span class="pre">True</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vars</span></code>: Required input variables of your procedure. Parameters not
+mentioned here are still available as globals.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requires</span></code>: modules which this code needs.  XXX TODO</p></li>
+</ul>
+<p>There’s no way for code written for a specific async library to run under
+another, with the possible exception of “asyncio on top of Trio” (via
+<code class="docutils literal notranslate"><span class="pre">trio-asyncio</span></code>). DistKV itself uses <code class="docutils literal notranslate"><span class="pre">anyio</span></code> in order to avoid the
+problem. The author strongly recommends to follow this practice, if at all
+possible.</p>
+<p>The required modules must be stored in DistKV. Accessing modules from your
+Python installation or the virtualenv you’ve set up for DistKV is of course
+possible, but DistKV does not try to keep them up-to-date for you.</p>
+<p>If you want to run user code in your DistKV module, call
+<code class="docutils literal notranslate"><span class="pre">cr</span> <span class="pre">=</span> <span class="pre">await</span> <span class="pre">CodeRoot.as_handler(client)</span></code>. Then, run some code by
+simply naming it: <code class="docutils literal notranslate"><span class="pre">cr(&quot;forty.two&quot;)</span></code> or <code class="docutils literal notranslate"><span class="pre">cr((&quot;forty&quot;,&quot;two&quot;))</span></code> will run
+the code stored at <code class="docutils literal notranslate"><span class="pre">.distkv</span> <span class="pre">code</span> <span class="pre">proc</span> <span class="pre">forty</span> <span class="pre">two</span></code>. All arguments will be
+passed to the stored code.</p>
+</div>
+</div>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<p>Python modules are stored to DistKV as plain code.</p>
+<p>Recursive dependencies are not allowed.</p>
+<div class="section" id="id1">
+<h3>Storage<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The location for Python modules is configurable and defaults to
+“.distkv code module”. Modules are stored as a dict with these attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code>: the actual program text</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requires</span></code>: other modules which this module needs to be loaded.</p></li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<p>Call <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">ModuleRoot.as_handler(client)</span></code>. All modules in your DistKV
+store are loaded into the Python interpreter; use normal import statements
+to access them.</p>
+<p>TODO: Modules are not yet loaded incrementally.</p>
+</div>
+</div>
+<div class="section" id="runners">
+<h2>Runners<a class="headerlink" href="#runners" title="Permalink to this headline">¶</a></h2>
+<p>The distributed nature of DistKV lends itself to running arbitrary code on
+any node that can accomodate it.</p>
+</div>
+</div>
+<div class="section" id="runner-types">
+<h1>Runner types<a class="headerlink" href="#runner-types" title="Permalink to this headline">¶</a></h1>
+<p>DistKV has three built-in types of code runners. All are organized by a “group”
+tag. The “distkv client run all” command starts all jobs of a type, in a
+specific group.</p>
+<p><code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">run</span></code> accepts a <code class="docutils literal notranslate"><span class="pre">-g</span> <span class="pre">‹group›</span></code> option that tells the
+system which group to use. If you don’t use this option, the default group
+is named <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p>
+<p>All groups and all runners are distinct. Which nodes actually execute the
+code you enter into DistKV is determined solely by running <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span>
+<span class="pre">run</span> <span class="pre">all</span></code> on them, with the appropriate options.</p>
+<div class="section" id="single-node-runner">
+<h2>Single-node runner<a class="headerlink" href="#single-node-runner" title="Permalink to this headline">¶</a></h2>
+<p>This runner executes code on a specific node. This is useful e.g. if you
+need to access non-redundant hardware, e.g. a 1wire bus connected to a
+specific computer.</p>
+<p>On the command line you access this runner with <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">run</span> <span class="pre">-n</span>
+<span class="pre">NAME</span></code>.</p>
+</div>
+<div class="section" id="any-node-runner">
+<h2>Any-node runner<a class="headerlink" href="#any-node-runner" title="Permalink to this headline">¶</a></h2>
+<p>This runner executes code on one of a group of nodes. Which node executes
+the code is largely determined by chance, startup order, or phase of the
+moon. This is useful when accessing redundant hardware, e.g. a radio
+interface.</p>
+<p>TODO: Load balancing is not yet implemented.</p>
+<p>On the command line you access this runner with <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">run</span></code>, i.e.
+without using the <code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">‹node›</span></code> option.</p>
+</div>
+<div class="section" id="all-node-runner">
+<h2>All-node runner<a class="headerlink" href="#all-node-runner" title="Permalink to this headline">¶</a></h2>
+<p>This runner executes code on all members of a group of nodes. You access it
+with <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">run</span> <span class="pre">-n</span> <span class="pre">-</span></code>.</p>
+</div>
+</div>
+<div class="section" id="runner-configuration">
+<h1>Runner configuration<a class="headerlink" href="#runner-configuration" title="Permalink to this headline">¶</a></h1>
+<p>Runner entries don’t hold code; they merely point to it. The advantage is
+that you can execute the same code with different parameters.</p>
+<p>See <a class="reference internal" href="model.html#distkv.runner.RunnerEntry" title="distkv.runner.RunnerEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">distkv.runner.RunnerEntry</span></code></a> for details.</p>
+<p>The actual runtime information is stored in a separate “state” node.
+This avoids race conditions.
+See <a class="reference internal" href="model.html#distkv.runner.StateEntry" title="distkv.runner.StateEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">distkv.runner.StateEntry</span></code></a> for details.</p>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>The runners pass a couple of variables to their code.</p>
+<ul>
+<li><p>_client</p>
+<p>The DistKV client instance. You can use it to access arbitraty DistKV
+data.</p>
+</li>
+<li><p>_cfg</p>
+<p>The current configuration.</p>
+</li>
+<li><p>_cls</p>
+<p>A dict (actually, <cite>distkv.util.attrdict</cite>) with various runner-related
+message classes. Convenient if you want to avoid a cumbersome <code class="docutils literal notranslate"><span class="pre">import</span></code>
+statement in your code, since these are not part of DistKV’s public API.</p>
+</li>
+<li><p>_digits</p>
+<p>A reference to <cite>distkv.util.digits</cite>.</p>
+</li>
+<li><p>_info (async only)</p>
+<p>A queue for events. This queue receives various messages. See below.</p>
+</li>
+<li><p>_log</p>
+<p>A standard <code class="docutils literal notranslate"><span class="pre">Logger</span></code> object.</p>
+</li>
+<li><p>_P</p>
+<p><cite>distkv.util.P</cite>, to decode a Path string to a Path object.</p>
+</li>
+<li><p>_Path</p>
+<p><cite>distkv.util.Path</cite>, to convert a list of path elements to a Path object.</p>
+</li>
+<li><p>_self (async only)</p>
+<p>The controller. See <cite>distkv.runner.CallAdmin</cite>, below.</p>
+</li>
+</ul>
+<p>These variables, as well as the contents of the data associated with the
+runner, are available as global variables.</p>
+<div class="section" id="node-groups">
+<h3>Node Groups<a class="headerlink" href="#node-groups" title="Permalink to this headline">¶</a></h3>
+<p>All runners are part of a group of nodes. The Any-Node runners use the
+group to synchronize job startup.</p>
+<p>Runners also forward the group’s membership information to your code as it
+changes. You can use this information to implement “emergency operation
+when disconnected” or similar fallback strategies.</p>
+</div>
+</div>
+</div>
+<div class="section" id="calladmin">
+<h1>CallAdmin<a class="headerlink" href="#calladmin" title="Permalink to this headline">¶</a></h1>
+<p>Your code has access to a <code class="docutils literal notranslate"><span class="pre">_self</span></code> variable which contains a <cite>CallAdmin</cite> object.
+The typical usage pattern is to start monitoring some DistKV entries with
+<cite>CallAdmin.watch</cite>, then iterate <code class="docutils literal notranslate"><span class="pre">_info</span></code> for the values of those entries.
+When you get a <cite>ReadyMsg</cite> event, all values have been transmitted; you can
+then set up some timeouts, set other values, access external services, and
+do whatever else your code needs to do.</p>
+<p>DistKV client code requires an async context manager for most scoped
+operations. Since a <cite>CallAdmin</cite> is scoped by definition, it can manage
+these scopes for you. Thus, instead of writing boilerplate code like
+this:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">anyio</span>
+<span class="n">inport</span> <span class="n">distkv</span><span class="o">.</span><span class="n">runner</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Assume we want to process changes from these two subtrees</span>
+<span class="sd">for 100 seconds</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="k">async</span> <span class="k">with</span> <span class="n">_client</span><span class="o">.</span><span class="n">watch</span><span class="p">(</span><span class="n">_P</span><span class="p">(</span><span class="s2">&quot;some.special.path&quot;</span><span class="p">))</span> <span class="k">as</span> <span class="n">w1</span><span class="p">:</span>
+   <span class="k">async</span> <span class="k">with</span> <span class="n">_client</span><span class="o">.</span><span class="n">watch</span><span class="p">(</span><span class="n">P</span><span class="p">(</span><span class="s2">&quot;some.other.path&quot;</span><span class="p">))</span> <span class="k">as</span> <span class="n">w2</span><span class="p">:</span>
+      <span class="n">q</span> <span class="o">=</span> <span class="n">anyio</span><span class="o">.</span><span class="n">create_queue</span><span class="p">()</span>  <span class="c1"># q_s,q_r = anyio.create_memory_object_stream()</span>
+      <span class="k">async</span> <span class="k">def</span> <span class="nf">_watch</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+         <span class="k">async</span> <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">w</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">q</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>  <span class="c1"># q_s.send(msg)</span>
+      <span class="k">async</span> <span class="k">def</span> <span class="nf">_timeout</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+         <span class="k">await</span> <span class="n">anyio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+         <span class="k">await</span> <span class="n">process_timeout</span><span class="p">()</span>
+      <span class="k">await</span> <span class="n">_self</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">_watch</span><span class="p">,</span> <span class="n">w1</span><span class="p">)</span>
+      <span class="k">await</span> <span class="n">_self</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">_watch</span><span class="p">,</span> <span class="n">w2</span><span class="p">)</span>
+      <span class="k">await</span> <span class="n">_self</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">_timeout</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+      <span class="k">async</span> <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">q</span><span class="p">:</span>  <span class="c1"># q_r</span>
+         <span class="k">await</span> <span class="n">process_data</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>you can simplify this to:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">_self</span><span class="o">.</span><span class="n">watch</span><span class="p">(</span><span class="n">_P</span><span class="p">(</span><span class="s2">&quot;some.special.path&quot;</span><span class="p">))</span>
+<span class="k">await</span> <span class="n">_self</span><span class="o">.</span><span class="n">watch</span><span class="p">(</span><span class="n">_P</span><span class="p">(</span><span class="s2">&quot;some.other.path&quot;</span><span class="p">))</span>
+<span class="k">await</span> <span class="n">_self</span><span class="o">.</span><span class="n">timer</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">_info</span><span class="p">:</span>
+   <span class="k">if</span> <span class="n">msg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="k">return</span>  <span class="c1"># system was stalled</span>
+   <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">_cls</span><span class="o">.</span><span class="n">TimerMsg</span><span class="p">):</span>
+      <span class="k">await</span> <span class="n">process_timeout</span><span class="p">()</span>
+   <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">_cls</span><span class="o">.</span><span class="n">ChangeMsg</span><span class="p">):</span>
+      <span class="k">await</span> <span class="n">process_data</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">msg</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Distinguishing messages from different sources can be further simplified by
+using distinct <code class="docutils literal notranslate"><span class="pre">cls=</span></code> parameters (subclasses of <code class="docutils literal notranslate"><span class="pre">ChangeMsg</span></code> and
+<code class="docutils literal notranslate"><span class="pre">TimerMsg</span></code>) in your <code class="docutils literal notranslate"><span class="pre">watch</span></code> and <code class="docutils literal notranslate"><span class="pre">timer</span></code> calls, respectively.</p>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">watch</span></code> retrieves the current value on startup. Set
+<code class="docutils literal notranslate"><span class="pre">fetch=False</span></code> if you don’t want that.</p>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">watch</span></code> only retrieves the named entry. Set <code class="docutils literal notranslate"><span class="pre">max_depth=-1</span></code>
+if you want all sub-entries. There’s also <code class="docutils literal notranslate"><span class="pre">min_depth</span></code> if you should need
+it.</p>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">max_depth</span></code>, entries are returned in mostly-depth-first order.
+It’s “mostly” because updates may arrive at any time. A <code class="docutils literal notranslate"><span class="pre">ReadyMsg</span></code>
+message is sent when the subtree is complete.</p>
+<p>The <cite>CallAdmin.spawn</cite> method starts a subtask.</p>
+<p><cite>watch</cite>, <cite>timer</cite>, and <cite>spawn</cite> each return an object which you can call
+<code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">res.cancel()</span></code> on, which causes the watcher, timer or task in
+question to be terminated.</p>
+<div class="section" id="messages">
+<h2>Messages<a class="headerlink" href="#messages" title="Permalink to this headline">¶</a></h2>
+<p>The messages in <code class="docutils literal notranslate"><span class="pre">_info</span></code> can be used to implement a state machine. If your
+code is long-running and async, you should iterate them; if the queue is
+full, your code may be halted. Alternately you’ll get a <cite>None</cite> message.
+That message indicates that the queue has stalled: you should exit.</p>
+<p>The following message types are defined. You’re free to ignore any you
+don’t recognize.</p>
+<ul>
+<li><p>CompleteState</p>
+<p>There are at least N runners in the group. (N is specified as an argument
+to <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">all</span></code>; making this configurable via DistKV is TODO.)</p>
+</li>
+<li><p>PartialState</p>
+<p>There are some runners available, but more than one and fewer than N.</p>
+</li>
+<li><p>DetachedState</p>
+<p>There is no other runner available.</p>
+</li>
+<li><p>BrokenState</p>
+<p>Something else is wrong.</p>
+</li>
+<li><p>ChangeMsg</p>
+<p>An entry you’re watching has changed. The message’s <code class="docutils literal notranslate"><span class="pre">value</span></code> and
+<code class="docutils literal notranslate"><span class="pre">path</span></code> attributes contain relevant details. <code class="docutils literal notranslate"><span class="pre">value</span></code> doesn’t exist if
+the node has been deleted.</p>
+<p>You can use the watcher’s <code class="docutils literal notranslate"><span class="pre">cls</span></code> argument to subclass this message, to
+simplify dispatching.</p>
+</li>
+<li><p>TimerMsg</p>
+<p>A timer has triggered. The message’s <code class="docutils literal notranslate"><span class="pre">msg</span></code> attribute is the timer, i.e.
+the value you got back from <code class="docutils literal notranslate"><span class="pre">_self.timer</span></code>. You can use <cite>Timer.run(delay)</cite>
+to restart the timer.</p>
+<p>You can use the timer’s <code class="docutils literal notranslate"><span class="pre">cls</span></code> argument to subclass this message, to
+simplify dispatching.</p>
+</li>
+<li><p>ReadyMsg</p>
+<p>Startup is complete. This message is generated after all watchers have
+started and sent their initial data. The <code class="docutils literal notranslate"><span class="pre">msg</span></code> attribute contains the
+number of watchers.</p>
+<p>This message may be generated multiple times because of race conditions;
+you should check that the count is correct.</p>
+</li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">…State</span></code> messages can be useful to determine what level of redundancy
+you currently have in the system. One application would be to send a
+warning to the operator that some nodes might be down.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="model.html" class="btn btn-neutral float-right" title="Data Model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="acls.html" class="btn btn-neutral float-left" title="Access control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

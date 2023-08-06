@@ -1,0 +1,592 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>DistKV’s client protocol &mdash; DistKV 0.52.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DistKV’s server protocol" href="server_protocol.html" />
+    <link rel="prev" title="The DistKV command" href="command_line.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DistKV
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.52.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Principles of operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">The DistKV tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup.html">Starting DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line.html">The DistKV command</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DistKV’s client protocol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requests">Requests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#seq">seq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#action">action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nchain">nchain</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#replies">Replies</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">seq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error">error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#value">value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#state">state</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chain">chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tick">tick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tock">tock</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#actions">Actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#connect">connect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auth">auth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-acl">test_acl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop">stop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-value">get_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-value">set_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-value">delete_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-state">get_state</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-tree">get_tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#root">root</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#watch">watch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save">save</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log">log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#msg-send">msg_send</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#msg-monitor">msg_monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#get-and-set-a-value">Get and set a value</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="server_protocol.html">DistKV’s server protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">DistKV and authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acls.html">Access control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Code in DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-types">Runner types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#runner-configuration">Runner configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#calladmin">CallAdmin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html">Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translator.html">Verifying and Translating Entries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Fixing DistKV network problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extend.html">Extending DistKV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="related.html">Plugins and related software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TODO.html">Open issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DistKV</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>DistKV’s client protocol</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/client_protocol.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="distkv-s-client-protocol">
+<h1>DistKV’s client protocol<a class="headerlink" href="#distkv-s-client-protocol" title="Permalink to this headline">¶</a></h1>
+<p>DistKV’s native client protocol is based on MsgPack. The client sends
+requests; the server sends one or more responses. You may (and indeed
+should) run concurrent requests on the same connection.</p>
+<p>Strings must be UTF-8, as per MsgPack specification.</p>
+<p>Requests and replies are mappings.</p>
+<p>The server initially sends a greeting, using sequence number zero. It will
+not send any other unsolicited message.</p>
+<div class="section" id="requests">
+<h2>Requests<a class="headerlink" href="#requests" title="Permalink to this headline">¶</a></h2>
+<p>Client requests are always mappings. <code class="docutils literal notranslate"><span class="pre">seq</span></code> and <code class="docutils literal notranslate"><span class="pre">action</span></code> must be
+present. All other fields are request specific. The server will ignore
+fields it doesn’t understand.</p>
+<div class="section" id="seq">
+<h3>seq<a class="headerlink" href="#seq" title="Permalink to this headline">¶</a></h3>
+<p>Every client request must contain a strictly increasing positive sequence
+number. All replies associated with a request carry the same sequence
+number.</p>
+</div>
+<div class="section" id="action">
+<h3>action<a class="headerlink" href="#action" title="Permalink to this headline">¶</a></h3>
+<p>The action which the server is requested to perform. Valid actions are
+described below.</p>
+</div>
+<div class="section" id="nchain">
+<h3>nchain<a class="headerlink" href="#nchain" title="Permalink to this headline">¶</a></h3>
+<p>This field tells the DistKV server how many change entries to return.
+The default is zero. If you want to update a value, retrieve the
+original with <code class="docutils literal notranslate"><span class="pre">nchain</span></code> set to one. Synchronization between DistKV servers
+requires the number of possible partitions plus one, in order to protect
+against spurious conflict reports.</p>
+</div>
+</div>
+<div class="section" id="replies">
+<h2>Replies<a class="headerlink" href="#replies" title="Permalink to this headline">¶</a></h2>
+<p>Server replies are always mappings. At least one of <code class="docutils literal notranslate"><span class="pre">seq</span></code> and <code class="docutils literal notranslate"><span class="pre">error</span></code>
+must be present. The client must ignore fields it doesn’t expect.</p>
+<div class="section" id="id1">
+<h3>seq<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The sequence number of the request which caused this reply.</p>
+<p>Server messages which don’t include a sequence number are errors and
+will close the connection.</p>
+<p>The server will either send exactly one reply with any given sequence number,
+or a multi-reply sequence which starets with a <code class="docutils literal notranslate"><span class="pre">state=start</span></code> message.</p>
+</div>
+<div class="section" id="error">
+<h3>error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h3>
+<p>This field contains a human-readable error message. A request has failed if
+this field is present.</p>
+</div>
+<div class="section" id="value">
+<h3>value<a class="headerlink" href="#value" title="Permalink to this headline">¶</a></h3>
+<p>The value of the DistKV entry, assuming one was requested.</p>
+</div>
+<div class="section" id="state">
+<h3>state<a class="headerlink" href="#state" title="Permalink to this headline">¶</a></h3>
+<p>May be <code class="docutils literal notranslate"><span class="pre">start</span></code> or <code class="docutils literal notranslate"><span class="pre">end</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> indicates the beginning of a multi-value result.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> indicates that a multi-value result has finished. No more
+messages with this sequence number will be sent.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">start</span></code> message will contain neither an error nor a value.</p>
+</div>
+<div class="section" id="chain">
+<h3>chain<a class="headerlink" href="#chain" title="Permalink to this headline">¶</a></h3>
+<p>The change chain resulting from, or retrieved by, a command.</p>
+<p>Change chains track which server last modified a value, so that replayed
+updates can be ignored and conflicting updates can be recognized. A chain
+never contains any one DistKV server more than once.</p>
+<p>See the server protocol for a detailed description.</p>
+</div>
+<div class="section" id="tick">
+<h3>tick<a class="headerlink" href="#tick" title="Permalink to this headline">¶</a></h3>
+<p>The current server’s change counter. This field can be used to ensure that
+the local server is not restarted with old state.</p>
+</div>
+<div class="section" id="tock">
+<h3>tock<a class="headerlink" href="#tock" title="Permalink to this headline">¶</a></h3>
+<p>An always-increasing integer that’s (supposed to be) shared within the
+whole DistKV system. You can use it when you need to reconnect to a server,
+to make sure that the system is (mostly) up-to-date.</p>
+</div>
+</div>
+<div class="section" id="actions">
+<h2>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="connect">
+<h3>connect<a class="headerlink" href="#connect" title="Permalink to this headline">¶</a></h3>
+<p>This is a pseudo-action with sequence number zero, which the server assumes
+to have received after connecting. The server’s first message will contain
+<code class="docutils literal notranslate"><span class="pre">seq=0</span></code>, its <code class="docutils literal notranslate"><span class="pre">node</span></code> name, a <code class="docutils literal notranslate"><span class="pre">version</span></code> (as a list of integers), and
+possibly its current <code class="docutils literal notranslate"><span class="pre">tick</span></code> and <code class="docutils literal notranslate"><span class="pre">tock</span></code> sequence numbers.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">auth</span></code> parameter, if present, carries a list of configured
+authorization methods. The first method in the list <strong>should</strong> be used to
+authorize the client. If the list’s first entry is <code class="docutils literal notranslate"><span class="pre">None</span></code> then
+authorization is not required. Other entries <strong>may</strong> be used for
+testing after a client is logged in.</p>
+</div>
+<div class="section" id="auth">
+<h3>auth<a class="headerlink" href="#auth" title="Permalink to this headline">¶</a></h3>
+<p>Tell the server about your identity. This method <strong>must</strong> be sent first if
+the server requests authorization.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">identity</span></code> parameter tells the server which user ID (or equivalent)
+to use for logging in. <code class="docutils literal notranslate"><span class="pre">typ</span></code> contains the auth type to use; this
+<strong>must</strong> be identical to the first entry in the <code class="docutils literal notranslate"><span class="pre">connect</span></code> reply’s
+<code class="docutils literal notranslate"><span class="pre">auth</span></code> parameter.</p>
+<p>If this is not the first message, the authorization is verified but the
+resulting user identity is ignored.</p>
+</div>
+<div class="section" id="test-acl">
+<h3>test_acl<a class="headerlink" href="#test-acl" title="Permalink to this headline">¶</a></h3>
+<p>Check whether the given <code class="docutils literal notranslate"><span class="pre">path</span></code> is accessible with the given  <code class="docutils literal notranslate"><span class="pre">mode</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">acl</span></code> to test may be specified. The user’s ACL, if any, is also
+tested; the return message’s <code class="docutils literal notranslate"><span class="pre">access</span></code> element may contain <code class="docutils literal notranslate"><span class="pre">False</span></code>
+(access not allowed), <code class="docutils literal notranslate"><span class="pre">True</span></code> (access allowed but no ACL details
+available) or the actual ACL characters.</p>
+<p>Access will not be granted if you try to check a specific ACL when your
+own rights don’t include ‘a’ (for accessing ACLs).</p>
+</div>
+<div class="section" id="stop">
+<h3>stop<a class="headerlink" href="#stop" title="Permalink to this headline">¶</a></h3>
+<p>Send this action to abort a running multi-value request. Set <code class="docutils literal notranslate"><span class="pre">task</span></code> to
+the sequence number of the request to abort.</p>
+<p>This action only works after you received a <code class="docutils literal notranslate"><span class="pre">start</span></code> state message.
+It returns a <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> which is <code class="docutils literal notranslate"><span class="pre">True</span></code> if the command was still
+running.</p>
+<p>A positive reply does not indicate that no more messages with the stated
+sequence number will arrive; this will be indicated by the <code class="docutils literal notranslate"><span class="pre">state=end</span></code>
+message.</p>
+</div>
+<div class="section" id="get-value">
+<h3>get_value<a class="headerlink" href="#get-value" title="Permalink to this headline">¶</a></h3>
+<p>Retrieve a single value. The <code class="docutils literal notranslate"><span class="pre">path</span></code> to the value needs to be sent as a list.</p>
+<p>If the value does not exist or has been deleted, you’ll get <code class="docutils literal notranslate"><span class="pre">None</span></code> back.</p>
+<p>Alternately, you can set <code class="docutils literal notranslate"><span class="pre">node</span></code> and <code class="docutils literal notranslate"><span class="pre">tick</span></code>, which returns the entry
+that has been set by this event (if the event is still available). The
+entry will contain the current value even if the event has set a previous
+value.</p>
+</div>
+<div class="section" id="set-value">
+<h3>set_value<a class="headerlink" href="#set-value" title="Permalink to this headline">¶</a></h3>
+<p>Set a single value. The <code class="docutils literal notranslate"><span class="pre">path</span></code> to that <code class="docutils literal notranslate"><span class="pre">value</span></code> needs to be sent as a list.</p>
+<p>If you are updating a known value, you should send a <code class="docutils literal notranslate"><span class="pre">chain</span></code> entry
+to help ensure that no other node has changed it unexpectedly. (Of course,
+due to the distributed nature of DistKV, this may happen anyway.) You can
+also use <code class="docutils literal notranslate"><span class="pre">prev</span></code> to send an expected old value, but you really shouldn’t.</p>
+<p>This action returns the node’s new change <code class="docutils literal notranslate"><span class="pre">chain</span></code>. If you did not send a
+<code class="docutils literal notranslate"><span class="pre">chain</span></code> field, the previous value is returned in <code class="docutils literal notranslate"><span class="pre">prev</span></code>.</p>
+</div>
+<div class="section" id="delete-value">
+<h3>delete_value<a class="headerlink" href="#delete-value" title="Permalink to this headline">¶</a></h3>
+<p>Remove a single value. This is the same as setting it to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</div>
+<div class="section" id="get-state">
+<h3>get_state<a class="headerlink" href="#get-state" title="Permalink to this headline">¶</a></h3>
+<p>Retrieve the current system state. The following <code class="docutils literal notranslate"><span class="pre">bool</span></code> attributes can be
+set to specify what is returned. The reply is stored in an attribute of the
+same name.</p>
+<ul class="simple">
+<li><p>nodes</p></li>
+</ul>
+<p>A dict of node ⇒ tick.</p>
+<ul class="simple">
+<li><p>known</p></li>
+</ul>
+<p>A dict of node ⇒ ranges of ticks known. This contains current data as well
+as events that have been superseded.</p>
+<ul class="simple">
+<li><p>current</p></li>
+</ul>
+<p>A dict of node ⇒ ranges of ticks corresponding to the current state of
+nodes. This is expensive to calculate. It is a superset of <cite>‘known`</cite>.</p>
+<ul class="simple">
+<li><p>missing</p></li>
+</ul>
+<p>A dict of node ⇒ ranges of ticks not available locally. This is the inverse
+of <code class="docutils literal notranslate"><span class="pre">known</span></code>.</p>
+<ul class="simple">
+<li><p>remote_missing</p></li>
+</ul>
+<p>A dict of node ⇒ ranges of ticks reported to be missing at some other node.</p>
+</div>
+<div class="section" id="get-tree">
+<h3>get_tree<a class="headerlink" href="#get-tree" title="Permalink to this headline">¶</a></h3>
+<p>Retrieves all values with the prefix given in <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p>
+<p>This is a multi-value reply; each reply contains <code class="docutils literal notranslate"><span class="pre">path</span></code> and <code class="docutils literal notranslate"><span class="pre">value</span></code>
+entries. Deleted nodes may or may not be reported.</p>
+<p>If the path does not exist or does not have children, a single-value reply
+is returned.</p>
+<p>Optimization: if a reply contains a “depth” key, its path is shortened by
+the request’s path, plus that many elements from the previous reply’s path.</p>
+<p>Thus, if you request a path of <code class="docutils literal notranslate"><span class="pre">['a','b','c']</span></code>, this reply:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="n">seq</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;one&quot;</span> <span class="p">}</span>
+<span class="p">{</span> <span class="n">seq</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;two&quot;</span> <span class="p">}</span>
+<span class="p">{</span> <span class="n">seq</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;three&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>is equivalent to:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="n">seq</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;one&quot;</span> <span class="p">}</span>
+<span class="p">{</span> <span class="n">seq</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;two&quot;</span> <span class="p">}</span>
+<span class="p">{</span> <span class="n">seq</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;three&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+<ul>
+<li><p>min_depth</p>
+<p>Start reporting nodes at this depth.</p>
+</li>
+<li><p>max_depth</p>
+<p>Limit recursion depth.</p>
+</li>
+<li><p>add_empty</p>
+<p>Include empty nodes. This is useful when limiting the depth to non-leaf
+nodes without data.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="root">
+<h3>root<a class="headerlink" href="#root" title="Permalink to this headline">¶</a></h3>
+<p>Switch the client’s root to the given path. This request returns the new
+root node.</p>
+<p>It is not possible to undo this request (other than to reconnect).
+Tasks started before this action are not affected.</p>
+<p>This action returns the new root node’s value.</p>
+</div>
+<div class="section" id="watch">
+<h3>watch<a class="headerlink" href="#watch" title="Permalink to this headline">¶</a></h3>
+<p>Monitor changes to this node (and those below it). Replies look like those from <code class="docutils literal notranslate"><span class="pre">get_tree</span></code>.</p>
+<p>The recommended way to run the <code class="docutils literal notranslate"><span class="pre">watch</span></code> call with <code class="docutils literal notranslate"><span class="pre">fetch=True</span></code>. This
+fetches the current state and guarantees that no updates are lost. To mark
+the end of the static data, the server sends a <code class="docutils literal notranslate"><span class="pre">state=uptodate</span></code> message.
+This process will not send stale data after an update, so your code may
+safely replace an old entry’s state with new data.</p>
+<p>This task obeys <code class="docutils literal notranslate"><span class="pre">min_depth</span></code> and <code class="docutils literal notranslate"><span class="pre">max_depth</span></code> restrictions.</p>
+</div>
+<div class="section" id="save">
+<h3>save<a class="headerlink" href="#save" title="Permalink to this headline">¶</a></h3>
+<p>Instruct the server to save its state to the given <code class="docutils literal notranslate"><span class="pre">path</span></code> (a string with
+a filename).</p>
+</div>
+<div class="section" id="log">
+<h3>log<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h3>
+<p>Instruct the server to continuously write change entries to the given <code class="docutils literal notranslate"><span class="pre">path</span></code>
+(a string with a filename). If <code class="docutils literal notranslate"><span class="pre">fetch</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the server will also
+write its current state to that file.</p>
+<p>This command returns after the new file has been opened and the initial
+state has been written, if so requested. If there was an old log stream,
+there may be some duplicate entries. No updates are skipped.</p>
+</div>
+<div class="section" id="msg-send">
+<h3>msg_send<a class="headerlink" href="#msg-send" title="Permalink to this headline">¶</a></h3>
+<p>Pass-through call to transmit a message. Parameters are <code class="docutils literal notranslate"><span class="pre">type</span></code> (the user
+event to send to) and <code class="docutils literal notranslate"><span class="pre">data</span></code> (the data to send).</p>
+<p>Raw binary data may be transmitted by using <code class="docutils literal notranslate"><span class="pre">raw</span></code> instead of <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
+</div>
+<div class="section" id="msg-monitor">
+<h3>msg_monitor<a class="headerlink" href="#msg-monitor" title="Permalink to this headline">¶</a></h3>
+<p>Pass-through call to receive brodcast messages. You’ll get a
+stream with <code class="docutils literal notranslate"><span class="pre">data</span></code> containing the decoded message. If decoding fails,
+<code class="docutils literal notranslate"><span class="pre">raw</span></code> contains the message’s bytes and <code class="docutils literal notranslate"><span class="pre">error</span></code> holds a string
+representation of the decoder problem.</p>
+<p>Set <code class="docutils literal notranslate"><span class="pre">raw</span></code> to True if the incoming messages are not supposed to be
+msgpack-encoded in the first place. In this case, <code class="docutils literal notranslate"><span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">error</span></code>
+will always be missing.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>You can turn on message debugging with ‘distkv -vvv’.</p>
+<div class="section" id="get-and-set-a-value">
+<h3>Get and set a value<a class="headerlink" href="#get-and-set-a-value" title="Permalink to this headline">¶</a></h3>
+<p>If the value is not set:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Send</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,),</span> <span class="s1">&#39;nchain&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;get_tree&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Setting an initial value:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Send</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">1234</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,),</span> <span class="s1">&#39;nchain&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;chain&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;set_value&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;changed&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;chain&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;node&#39;</span><span class="p">:</span> <span class="s1">&#39;test1&#39;</span><span class="p">,</span> <span class="s1">&#39;tick&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;prev&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Trying the same thing again will result in an error:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Send</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">1234</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,),</span> <span class="s1">&#39;nchain&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;chain&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;set_value&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="s1">&#39;This entry already exists&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>To fix that, use the chain value you got when setting or retrieving the
+previous value:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Send</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,),</span> <span class="s1">&#39;nchain&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;chain&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;node&#39;</span><span class="p">:</span> <span class="s1">&#39;test1&#39;</span><span class="p">,</span> <span class="s1">&#39;tick&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;set_value&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;changed&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;chain&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;node&#39;</span><span class="p">:</span> <span class="s1">&#39;test1&#39;</span><span class="p">,</span> <span class="s1">&#39;tick&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;prev&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Sending no precondition would also work</p>
+<p>After you set multiple values:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Send</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">),</span> <span class="s1">&#39;nchain&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;set_value&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;changed&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;prev&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">Send</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bap&#39;</span><span class="p">),</span> <span class="s1">&#39;nchain&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;set_value&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;changed&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;prev&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">}</span>
+<span class="n">Send</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">),</span> <span class="s1">&#39;nchain&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;set_value&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;changed&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;prev&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+<span class="n">Send</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">1234</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,),</span> <span class="s1">&#39;nchain&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;set_value&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;changed&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;prev&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>you can retrieve the whole subtree:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Send</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,),</span> <span class="s1">&#39;nchain&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;get_tree&#39;</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;start&#39;</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">1234</span><span class="p">,</span> <span class="s1">&#39;depth&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,),</span> <span class="s1">&#39;depth&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;bap&#39;</span><span class="p">,),</span> <span class="s1">&#39;depth&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">),</span> <span class="s1">&#39;depth&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">Recv</span> <span class="p">{</span><span class="s1">&#39;seq&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;end&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Retrieving this tree with <code class="docutils literal notranslate"><span class="pre">distkv</span> <span class="pre">client</span> <span class="pre">get</span> <span class="pre">-rd</span> <span class="pre">':val'</span> <span class="pre">test</span></code> would print:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="p">:</span>
+  <span class="p">:</span><span class="n">val</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">foo</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">val</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="n">bap</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;:val&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">}</span>
+    <span class="n">bar</span><span class="p">:</span>
+      <span class="p">:</span><span class="n">val</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="n">baz</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;:val&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="server_protocol.html" class="btn btn-neutral float-right" title="DistKV’s server protocol" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="command_line.html" class="btn btn-neutral float-left" title="The DistKV command" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright The DistKV authors.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
