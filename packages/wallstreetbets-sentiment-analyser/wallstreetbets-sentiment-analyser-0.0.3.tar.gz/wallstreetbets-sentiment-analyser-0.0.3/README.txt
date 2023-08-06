@@ -1,0 +1,1 @@
+A package for extracting posts from reddit.com and run them through the vadar sentiment analyser.

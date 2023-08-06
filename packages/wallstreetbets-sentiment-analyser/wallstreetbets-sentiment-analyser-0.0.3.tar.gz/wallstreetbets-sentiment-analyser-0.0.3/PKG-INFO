@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: wallstreetbets-sentiment-analyser
+Version: 0.0.3
+Summary: A tool for extracting post from the wallstreetbets reddit group and running them through a sentiment analyser (vadar).
+Home-page: https://github.com/squeakycheese75/wallstreetbets-sentiment-analyser
+Author: Jamie Wooltorton
+Author-email: james_wooltorton@hotmail.com
+License: MIT
+Description: A package for extracting posts from reddit.com and run them through the vadar sentiment analyser.
+        
+        Change Log
+        ==========
+        
+        0.0.1 (13/02/2021)
+        ------------------
+         - Initial Release
+         
+Keywords: wallstreetbets reddit sentiment analyser
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
