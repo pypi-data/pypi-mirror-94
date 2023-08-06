@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+DEL.py.egg-info/PKG-INFO
+DEL.py.egg-info/SOURCES.txt
+DEL.py.egg-info/dependency_links.txt
+DEL.py.egg-info/requires.txt
+DEL.py.egg-info/top_level.txt
+delpy/__init__.py
+delpy/client.py
+delpy/errors.py
