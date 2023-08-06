@@ -1,0 +1,15 @@
+wandb_allennlp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wandb_allennlp/__main__.py,sha256=PWUHum-isWFDepgD5IHFc9rK5g_Il7crfESzSwxy_yM,328
+wandb_allennlp/allennlp_translator.py,sha256=ho8PcP5sZ8WnFDKkcMmmmgIvX6F63SFgRMyxGRWSPCk,5327
+wandb_allennlp/commandline.py,sha256=2_GKIc39Q00yIHLm-tK8B0DJ7C8zQK7hgaAJ6pv_zI8,4036
+wandb_allennlp/versioned.py,sha256=RJSQzJDVE_zo9X1g7J3JVg_GHwzVfAdft9j4j2I7hJA,164
+wandb_allennlp/training/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wandb_allennlp/training/callbacks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wandb_allennlp/training/callbacks/log_to_wandb.py,sha256=zs52hGAyg6luOqNKBtca2unknqfG0LGTeGxSrklHUAM,9203
+wandb_allennlp/training/callbacks/utils.py,sha256=7n6z6wW7wQ77DJgo6lnO4IFpmSKNbG6p1n8r_wichcQ,1807
+wandb_allennlp-0.2.3.dist-info/LICENSE,sha256=aoFiL-y_EYeGqIqSGFHZFnrJ-r_-nMv8etkaYgq5AhQ,1065
+wandb_allennlp-0.2.3.dist-info/METADATA,sha256=V6Ws273NNKEutHefaDI232u0KfplMVlziDmwPYVDx1M,7039
+wandb_allennlp-0.2.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+wandb_allennlp-0.2.3.dist-info/entry_points.txt,sha256=L8mYGs2X9d9oJeXIw_PD9y5lDcgngNTjSRbAc26SiAA,64
+wandb_allennlp-0.2.3.dist-info/top_level.txt,sha256=vA_b0kEnxBYXGdUHg3aF2IeYmkK3PqFKn8s7R6GEB5c,15
+wandb_allennlp-0.2.3.dist-info/RECORD,,
