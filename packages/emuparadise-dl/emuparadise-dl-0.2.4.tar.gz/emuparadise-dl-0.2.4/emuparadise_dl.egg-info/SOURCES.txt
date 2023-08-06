@@ -1,0 +1,11 @@
+README.md
+setup.py
+bin/emuparadise-dl
+emuparadise_dl/__init__.py
+emuparadise_dl/emuparadise_dl.py
+emuparadise_dl/helper.py
+emuparadise_dl.egg-info/PKG-INFO
+emuparadise_dl.egg-info/SOURCES.txt
+emuparadise_dl.egg-info/dependency_links.txt
+emuparadise_dl.egg-info/requires.txt
+emuparadise_dl.egg-info/top_level.txt
