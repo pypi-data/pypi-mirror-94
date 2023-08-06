@@ -1,0 +1,9 @@
+README.md
+setup.py
+_ui/__init__.py
+_ui/_main_ui.py
+_ui/locale.py
+funing.egg-info/PKG-INFO
+funing.egg-info/SOURCES.txt
+funing.egg-info/dependency_links.txt
+funing.egg-info/top_level.txt
