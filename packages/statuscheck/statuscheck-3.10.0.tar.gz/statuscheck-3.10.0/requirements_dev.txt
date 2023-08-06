@@ -1,0 +1,15 @@
+pip==21.0.1
+tox==3.21.4
+coverage==5.4
+coveralls==3.0.0
+pytest==6.2.2
+respx==0.16.3
+
+# Linting & QA
+black==20.8b1
+check-manifest==0.46
+flake8==3.8.4
+isort==5.7.0
+mypy==0.800
+pre-commit==2.10.1
+pydocstyle==5.1.1
