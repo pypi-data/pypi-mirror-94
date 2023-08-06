@@ -1,0 +1,7 @@
+asysocks>=0.1.0
+minikerberos>=0.2.9
+prompt-toolkit>=3.0.2
+six
+tqdm
+winacl>=0.1.0
+winsspi>=0.0.9
