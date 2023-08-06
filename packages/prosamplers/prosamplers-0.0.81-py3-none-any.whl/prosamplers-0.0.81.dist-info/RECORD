@@ -1,0 +1,14 @@
+progressive_samplers/__init__.py,sha256=AO8_Ej0ESlNepIjFOLzqlIHVCd3kk1ORZT0vVzHymbA,23
+progressive_samplers/_nbdev.py,sha256=J7b-QMntnRe7mVWFsK-yo2f_2JgbiOJfMLDwvK6NHXQ,779
+progressive_samplers/core.py,sha256=zeiMLT4Sd1xB65dptlhw551I4p-lIddhCBLpBMA22YA,7519
+progressive_samplers/test.py,sha256=YjWRHa1s1gDWj-X-VWTPj_--N8WT1LwFNdTSB4M5ZNI,938
+prosamplers/__init__.py,sha256=u3jgVMJo2TRFuDPR7ipbhoQ-5y_q85RF1OrXy31PrMc,23
+prosamplers/_nbdev.py,sha256=J7b-QMntnRe7mVWFsK-yo2f_2JgbiOJfMLDwvK6NHXQ,779
+prosamplers/core.py,sha256=zeiMLT4Sd1xB65dptlhw551I4p-lIddhCBLpBMA22YA,7519
+prosamplers/test.py,sha256=YjWRHa1s1gDWj-X-VWTPj_--N8WT1LwFNdTSB4M5ZNI,938
+prosamplers-0.0.81.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+prosamplers-0.0.81.dist-info/METADATA,sha256=_b3n-lz98eqKg9tW-9JEtTjqwqNzaXS-GoJ5_2zSUqY,3063
+prosamplers-0.0.81.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+prosamplers-0.0.81.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+prosamplers-0.0.81.dist-info/top_level.txt,sha256=aDWR6QA95uEe1G4TfXYcFoemMDdfVIvxVKyeX3FKiJE,33
+prosamplers-0.0.81.dist-info/RECORD,,
