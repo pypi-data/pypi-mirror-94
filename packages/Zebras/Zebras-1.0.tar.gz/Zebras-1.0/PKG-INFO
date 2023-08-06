@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: Zebras
+Version: 1.0
+Summary: This a module made for fun 
+Home-page: https://github.com/Joe-Sin7h/Zebras
+Author: Jogendra Singh
+Author-email: josingh481@gmail.com
+License: MIT
+Download-URL: https://github.com/Joe-Sin7h/Zebras/archive/v_1.0.tar.gz
+Description: UNKNOWN
+Keywords: Animals,Zebra,Jungle
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.7
