@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: sarpy-apps
+Version: 1.0.8
+Summary: This provides a set of GUI tools based on tkinter for visualizing and interacting with SAR imagery and related data.
+Home-page: https://github.com/ngageoint/sarpy_apps
+Author: National Geospatial-Intelligence Agency
+Author-email: Wade.C.Schwartzkopf@nga.mil
+License: MIT
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: sarpy (>=1.1.49)
+Requires-Dist: tk-builder (>=1.0.7)
+Requires-Dist: Pillow
+Requires-Dist: typing ; python_version < "3.4"
+Requires-Dist: future ; python_version < "3.4"
+
+SarPy_Apps
+==========
+This provides a set of GUI tools based on tkinter for visualizing and interacting 
+with SAR imagery and related data.
+
+Origins
+-------
+This was developed to enable simple prototyping of graphical user interfaces useful 
+in conjunction with SarPy project, and was based on and motivated by the set of MATLAB 
+tools developed by NGA/NRL referred to as TASER. This effort was developed at the 
+National Geospatial-Intelligence Agency (NGA). The software use, modification, and 
+distribution rights are stipulated within the MIT license.
+
+Dependencies
+------------
+The core library functionality depends on the [sarpy](https://github.com/ngageoint/sarpy) 
+and [tk_builder](https://github.com/ngageoint/tk_builder) projects. 
+
+Python 2.7
+----------
+The development here has been geared towards Python 3.6 and above, but efforts have
+been made towards remaining compatible with Python 2.7. If you are using the library
+from Python 2.7, there is an additional dependencies for the `typing` package. A 
+dependency for the `tk_builder` project (in turn for the `tkinter` package) is the 
+`future` (not to be confused with the more widely known `futures`) package.
+
+
