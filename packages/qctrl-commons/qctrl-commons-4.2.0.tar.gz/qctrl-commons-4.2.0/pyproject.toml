@@ -1,0 +1,106 @@
+[tool.poetry]
+name = "qctrl-commons"
+version = "4.2.0"
+description = "Q-CTRL Python Commons"
+license = "https://q-ctrl.com/terms"
+authors = ["Q-CTRL <support@q-ctrl.com>"]
+maintainers = ["Q-CTRL <support@q-ctrl.com>"]
+readme = "DESCRIPTION.md"
+homepage = "https://q-ctrl.com"
+repository = ""
+documentation = ""
+keywords = [
+    "q-ctrl",
+    "qctrl",
+    "quantum control"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Software Development :: Embedded Systems",
+    "Topic :: System :: Distributed Computing"
+]
+packages = [
+    { include = "qctrlcommons" },
+]
+
+[tool.poetry.dependencies]  # https://poetry.eustace.io/docs/versions
+python = ">=3.6.4, <3.9"
+numpy = ">=1.16.2"
+scipy = ">=1.4.1"
+toml = "^0.10.0"
+pythonflow = "^0.3.0"
+python-forge = "^18.6.0"
+pyjwt = "^1.7.1"
+aiohttp = "^3.6.2"
+inflection = "^0.5.1"
+dataclasses = "^0.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.5"
+pytest-cov = "^2.6.1"
+pytest-mock = "^1.10.3"
+pylama = "*"
+pylint = "*"
+pylint_runner = "*"
+sphinx = "^2.2.0"
+sphinx-rtd-theme = "^0.4.3"
+black = "^19.10b0"
+isort = "^5.4.2"
+numpydoc = "^1.1.0"
+pre-commit = "^2.9.3"
+
+[tool.poetry.urls]
+GitHub = "https://github.com/qctrl"
+Twitter = "https://twitter.com/qctrlHQ"
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+    \.git
+    | \.pytest_cache
+    | \.github
+    | docs
+  )/
+  | setup.py
+)
+'''
+
+[tool.isort]
+profile = "black"
+force_grid_wrap = "2"
+
+[tool.dephell.main]
+from = {format = "poetry", path = "pyproject.toml"}
+to = {format = "setuppy", path = "setup.py"}
+versioning = "pep"
+prereleases = true
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+#  _______________________________________
+# / If you update this file, please run   \
+# \ poetry update && dephell deps convert /
+#  ---------------------------------------
+#        \   ^__^
+#         \  (oo)\_______
+#            (__)\       )\/\
+#                ||----w |
+#                ||     ||
