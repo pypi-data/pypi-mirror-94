@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pygraders
+Version: 1.0.4
+Summary: Autograders Python3 Library
+Home-page: https://github.com/autograders/lib/
+Author: Andrés Castellanos
+Author-email: andres.cv@galileo.edu
+License: Apache-2.0
+Project-URL: Source, https://github.com/autograders/lib/
+Project-URL: Documentation, https://github.com/Autograders/lib/blob/main/README.md
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Requires-Dist: paramiko
+
+<img src="https://raw.githubusercontent.com/Autograders/logo/master/logo/full.png" width="145px" align="right" />
+
+# Autograders Python3 Library
+
+[![License](https://img.shields.io/github/license/autograders/lib)](https://github.com/Autograders/lib/blob/master/LICENSE) [![version](https://img.shields.io/pypi/v/pygraders)](https://pypi.org/project/pygraders/)
+
+
