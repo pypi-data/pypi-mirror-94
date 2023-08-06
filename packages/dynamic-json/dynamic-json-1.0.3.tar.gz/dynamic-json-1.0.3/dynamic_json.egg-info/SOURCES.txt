@@ -1,0 +1,9 @@
+README.md
+setup.py
+dynamic_json/__init__.py
+dynamic_json/json_wrappers.py
+dynamic_json.egg-info/PKG-INFO
+dynamic_json.egg-info/SOURCES.txt
+dynamic_json.egg-info/dependency_links.txt
+dynamic_json.egg-info/requires.txt
+dynamic_json.egg-info/top_level.txt
