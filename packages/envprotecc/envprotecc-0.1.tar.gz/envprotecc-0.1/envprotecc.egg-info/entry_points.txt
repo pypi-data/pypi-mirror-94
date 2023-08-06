@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        protecc=protecc.commands:protecc
+    
