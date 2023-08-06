@@ -1,0 +1,32 @@
+Change log
+=================================================================
+
+0.0.1 (05/Feb/2021)
+------------------------------------------------------------------
+   -  Setup
+         - Install via pip;
+                pip install paygo-utils
+         - Add it to installed apps in django settings.py;
+                INSTALLED_APPS =
+                (
+                'paygo_utils',
+                ....
+                )
+   -  This library contains the following;
+   -  Constants;
+         - This contains general application constants like RecordStatus, SeverityLevel, LogStatus, Gender, etc
+   -  Date processing;
+            - This can be located in file dateutils.py
+   -  Exceptions;
+            - This file contain general application exception definitions which include
+                  1. GenericException
+                  2. InvalidCredentialsException
+                  3. InvalidOrganizationException
+                  4. NullObjectException
+                  5. ValidationFailedException
+                  6. OperationFailedException
+   -  Numeric processing;
+            - This contains alithmetic operations that can be performed on numeric values.
+              These include but not limited to add, subtract, divide, multiply, etc
+   -  Utilities;
+            - This file contains general utility functions that cut around different projects/microservices
