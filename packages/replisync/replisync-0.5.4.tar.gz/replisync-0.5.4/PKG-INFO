@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: replisync
+Version: 0.5.4
+Summary: Транслятор репликации в задачи Celery
+Home-page: https://stash.bars-open.ru/projects/BUDG/repos/replisync
+Author: BARS Group
+Author-email: kirov@bars-open.ru
+License: MIT
+Description: **0.5.4**
+        - Добавлен тип long_description в setup.py
+        - Скорректирован .gitignore
+        
+        **0.5.3**
+        - Добавлена поддержка параметров
+           task_default_routing_key
+           task_default_queue
+           в replisync.conf для возможности отделить
+           replisync от общих очередей 
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Web Environment
+Classifier: Natural Language :: Russian
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Description-Content-Type: text/markdown
