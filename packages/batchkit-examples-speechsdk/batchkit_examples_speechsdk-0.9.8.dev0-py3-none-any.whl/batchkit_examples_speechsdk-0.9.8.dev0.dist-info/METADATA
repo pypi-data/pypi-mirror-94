@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: batchkit-examples-speechsdk
+Version: 0.9.8.dev0
+Summary: UNKNOWN
+Home-page: https://github.com/microsoft/batch-processing-kit
+Author: Microsoft Azure
+Author-email: andwald@microsoft.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: setuptools
+Requires-Dist: requests (>=2.23.0)
+Requires-Dist: Cerberus (>=1.3.2)
+Requires-Dist: deepdiff (>=4.0.9)
+Requires-Dist: PyYAML (>=5.1.2)
+Requires-Dist: mock (>=4.0.1)
+Requires-Dist: Flask (==1.1.1)
+Requires-Dist: jsonpickle (>=1.3)
+Requires-Dist: requests (>=2.23.0)
+Requires-Dist: psutil (>=5.7.0)
+Requires-Dist: azure-cognitiveservices-speech (==1.10.0)
+Requires-Dist: pyinotify (~=0.9.6); sys_platform != "win32"
+
+UNKNOWN
+
+
