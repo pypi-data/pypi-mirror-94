@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: nnest
+Version: 0.4.2
+Summary: Neural network nested sampling
+Home-page: https://github.com/adammoss/nnest/
+Author: Adam Moss
+Author-email: adam.moss@nottingham.ac.uk
+Maintainer: Adam Moss
+Maintainer-email: adam.moss@nottingham.ac.uk
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides: nnest
