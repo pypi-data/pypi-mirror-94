@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+icoshift3/__init__.py
+icoshift3/icoshift.py
+icoshift3/test_wine.py
+icoshift3/tests.py
+jonwestern.egg-info/PKG-INFO
+jonwestern.egg-info/SOURCES.txt
+jonwestern.egg-info/dependency_links.txt
+jonwestern.egg-info/requires.txt
+jonwestern.egg-info/top_level.txt

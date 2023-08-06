@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: jonwestern
+Version: 0.0.1
+Summary: Spectral Icoshift updated for python v.3
+Home-page: https://github.com/Sour-Smelno/icoshift.git
+Author: Charley Western
+Author-email: westernj@lafayette.edu
+License: GPL
+Description: UNKNOWN
+Keywords: bioinformatics metabolomics research analysis science
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Requires-Python: >=3.0
