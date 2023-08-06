@@ -1,0 +1,11 @@
+rhasspyclient/__init__.py,sha256=uyteStlTpNArUuv0Ju2mHnKgZ-B7qPJbj6EgVd1wybk,11748
+rhasspyclient/__main__.py,sha256=-xDEo4EJEj0sO1qtD3CfSpsEZ1JSW9_czLmfpndCJWs,5772
+rhasspyclient/intent.py,sha256=1xqONyrqyVK7WWvEPxBGHceZVSoGlIdCbbTV0kHr3KE,3352
+rhasspyclient/speech.py,sha256=3jBBoM2wl3IunnXF-RkC8IYalWwKskKKpWsS_P0Izvw,491
+rhasspyclient/train.py,sha256=t_icfe-IL0gBQ3oTcmhdWLPle85xSijBDa2oZiebOPA,354
+rhasspyclient/utils.py,sha256=F0gCom8jnfRyH-FeVzyEnKhYNRhLR-xuRJ7yTD_noF0,494
+rhasspy_client-1.1.1.dist-info/LICENSE,sha256=JzwR_pqZXGZFbzbhD_a0wjTRBMTxdds5yPJapRI_cMA,1071
+rhasspy_client-1.1.1.dist-info/METADATA,sha256=QVAO6PHpPfZMohrkDfhma4sncdtR9es-4bzwl45QDWs,1908
+rhasspy_client-1.1.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+rhasspy_client-1.1.1.dist-info/top_level.txt,sha256=T0MdRxI62u0XqG4KGHTdgkQNaLpIygiazl-4uX2gED8,14
+rhasspy_client-1.1.1.dist-info/RECORD,,
