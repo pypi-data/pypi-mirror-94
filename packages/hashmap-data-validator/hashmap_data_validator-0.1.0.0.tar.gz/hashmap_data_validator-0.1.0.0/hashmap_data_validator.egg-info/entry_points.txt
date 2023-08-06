@@ -1,0 +1,3 @@
+[console_scripts]
+hdv = hdv.cli_validator:cli_validate
+
