@@ -1,0 +1,1 @@
+Simple Python Library to perform Fuzzy Math Function such as Min, Max and Min-Max

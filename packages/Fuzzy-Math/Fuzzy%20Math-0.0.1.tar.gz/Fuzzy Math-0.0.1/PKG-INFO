@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: Fuzzy Math
+Version: 0.0.1
+Summary: Performs Fuzzy Math Functions
+Home-page: UNKNOWN
+Author: Nicholas R Furth
+Author-email: nf77@njit.edu
+License: MIT
+Description: Simple Python Library to perform Fuzzy Math Function such as Min, Max and Min-Max
+        
+        Change Log
+        ==========
+        
+        0.0.1 (02/07/2021)
+        ------------------
+        - First Release
+Keywords: Fuzzy Math
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
