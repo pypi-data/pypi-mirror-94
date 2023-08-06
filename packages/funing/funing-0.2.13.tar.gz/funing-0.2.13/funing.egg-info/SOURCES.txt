@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+funing.egg-info/PKG-INFO
+funing.egg-info/SOURCES.txt
+funing.egg-info/dependency_links.txt
+funing.egg-info/entry_points.txt
+funing.egg-info/requires.txt
+funing.egg-info/top_level.txt
