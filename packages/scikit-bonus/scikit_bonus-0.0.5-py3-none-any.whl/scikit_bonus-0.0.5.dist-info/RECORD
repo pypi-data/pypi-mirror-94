@@ -1,0 +1,16 @@
+skbonus/__init__.py,sha256=vucW-Fe97d2P_nl7TMRJ2Cp458lb7VTRk6EckM_ozdM,23
+skbonus/exceptions.py,sha256=03gy4BdmyW7iwg8E1W00GkMr-0n7j2K4c9AFLhkEX7U,269
+skbonus/metrics/__init__.py,sha256=dzbbSohd1BmCCyN4TETjeW9RORe6NKXLxPoR8eJlEqI,81
+skbonus/metrics/_regression.py,sha256=nGDHU2UYL6Ymts4koUpMKD68JIZ4H0UMyIAy9l-YTZs,2632
+skbonus/metrics/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skbonus/metrics/tests/test__regression.py,sha256=2f4uVnZcrCq2k1U0oBHK_4ysl3ox5NCK3HcVvmDmzFs,1345
+skbonus/pandas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skbonus/pandas/_dummifier.py,sha256=7FRONz6F8IdUdC-BRnNWJw-QEEBXOPCoPvNtjNdWGx8,1314
+skbonus/pandas/time.py,sha256=wR8Ubu44NpRnEbTtdLOzPrBajMUWYXRS8x0uovYQ7Tc,20863
+skbonus/pandas/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skbonus/pandas/tests/test_date.py,sha256=RStS5GjsqIOtUVY36O7bZx45LRNg_ENfjQNpzDmfy6E,1879
+skbonus/pandas/tests/test_time.py,sha256=nTpddGfKc0HT7BF5UZf3RiMxDhXrhTqG2ewwC0D-aCk,2975
+scikit_bonus-0.0.5.dist-info/METADATA,sha256=5A_YARDPolQxY0Oyav6dHdLq5V5LwXfSkceaQhQutQQ,7009
+scikit_bonus-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+scikit_bonus-0.0.5.dist-info/top_level.txt,sha256=M-PKW7pUlMyxdM-oKMqmewoM1AZ_8k4URl_Mg8zcB1g,8
+scikit_bonus-0.0.5.dist-info/RECORD,,
