@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: snektalk
+Version: 0.0.1
+Summary: Advanced Python REPL
+Home-page: https://github.com/breuleux/snektalk
+License: MIT
+Author: Olivier Breuleux
+Author-email: breuleux@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: coleo (>=0.2.1,<0.3.0)
+Requires-Dist: hrepr (>=0.3.5,<0.4.0)
+Requires-Dist: jurigged (>=0.1.3,<0.2.0)
+Requires-Dist: sanic (>=20.9.1,<21.0.0)
+Project-URL: Repository, https://github.com/breuleux/snektalk
+Description-Content-Type: text/markdown
+
+
+# TODO
+
+Package is not functional yet.
+
