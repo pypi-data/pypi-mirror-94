@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ComeToLoseMoney
+Version: 1.9
+Summary: ComeToLoseMoney module
+Home-page: UNKNOWN
+Author: Arthur
+Author-email: arthur8485@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=3.3
+Requires-Dist: pendulum (>=2.0.5)
+
+UNKNOWN
+
+
