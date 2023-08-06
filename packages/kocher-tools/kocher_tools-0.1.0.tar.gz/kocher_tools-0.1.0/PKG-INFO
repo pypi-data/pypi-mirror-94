@@ -1,0 +1,38 @@
+Metadata-Version: 1.2
+Name: kocher_tools
+Version: 0.1.0
+Summary: Bioinformatic Tools for the Kocher Lab
+Home-page: https://kocher-guides.readthedocs.io/en/latest/
+Author: Andrew Webb and Sarah Kocher
+Author-email: aewebb@princeton.edu
+Maintainer: Andrew Webb
+Maintainer-email: 19213578+aewebb80@users.noreply.github.com
+License: MIT
+Project-URL: Documentation, https://ppp.readthedocs.io
+Project-URL: Code, https://github.com/jaredgk/PPP
+Project-URL: Issue tracker, https://github.com/jaredgk/PPP/issues
+Description: Kocher-Tools
+        ============
+        
+        .. image:: https://www.travis-ci.com/kocherlab/kocher_tools.svg?branch=master
+            :target: https://www.travis-ci.com/kocherlab/kocher_tools
+        
+        Installation
+        ------------
+        
+        .. code-block:: bash
+        
+            git clone https://github.com/kocherlab/kocher_tools
+            cd kocher_tools/
+            python setup.py install
+        
+        If you are running anaconda and don’t have blast, vsearch, or fastq-multx, they may be installed using:
+        
+        .. code-block:: bash
+        
+            conda install -c bioconda blast
+            conda install -c bioconda fastq-multx
+            conda install -c bioconda vsearch
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7.*
