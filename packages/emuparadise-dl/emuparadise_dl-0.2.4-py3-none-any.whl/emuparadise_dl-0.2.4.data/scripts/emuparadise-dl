@@ -1,0 +1,70 @@
+#!python
+
+""" emuparadise-dl -- Search and Download roms from a selection of rom-hosting websites.
+    Andrea Grazioso (ray) <grazioandre@gmail.com>
+
+    Based on BeautifulSoup and Requests
+
+    Usage:
+        From the command line: emuparadise-dl -h
+"""
+
+import sys
+import signal
+import argparse
+from emuparadise_dl.emuparadise_dl import search_action, download_action, default_backends
+from emuparadise_dl.helper import check_connection
+
+long_desc = """
+Small utility to search and download roms from emuparadise.me now that
+all links have been disabled.
+
+To use the tool first search for something, than start the download providing
+as input the correct ID for the rom you wish to have.
+
+Supported backends:
+* emuparadise.me
+* the-eye.eu
+* romsmania.cc
+* daroms.com
+
+"""
+
+class CheckAction(argparse.Action):
+    def __call__(self, parser, namespace, values, option_string=None):
+        if not os.path.isdir(values):
+            print("The supplied directory '"+ values +"' does not exists!\nDo you want to create it now? (Y/N)")
+            if sys.stdin in ["y", "Y", "yes", "YES", "porcodio"]:
+                os.mkdir(os.path.expanduser(values))
+                setattr(namespace, self.dest, values)
+            else:
+                print("Ok, directory not created, exiting...")
+                sys.exit(0)
+        else:
+            setattr(namespace, self.dest, values)
+
+def parse_args():
+    parser = argparse.ArgumentParser(description=long_desc, formatter_class=argparse.RawDescriptionHelpFormatter)
+    
+    parser.add_argument('-b', '--backend', choices=list(default_backends.keys()), default='emuparadise', help='specify backend to search, by default only emuparadise.me is used')
+    parser.add_argument('-a', '--all', help='use all backend for searching, please note that the output for a common rom would be VERY long', action='store_true')
+    parser.add_argument('-c', '--category', default='', help='search for a specific system')
+    parser.add_argument('-o', '--output-directory', default='', help='select destination directory', action=CheckAction)
+    parser.add_argument('--maxwidth', type=int, default=80, help='set the maximum width a single column should occupy')
+    parser.add_argument('query', help='a quoted string to search, ex. "resident evil"')
+    
+    return parser.parse_args()
+
+def signal_handler(sig, frame):
+    sys.stdout.flush()
+    print('You pressed Ctrl+C!')
+    sys.exit(0)
+
+if __name__ == '__main__':
+
+    signal.signal(signal.SIGINT, signal_handler)
+    if not check_connection():
+        print("Sorry, no internet connection available")
+        sys.exit()
+    args = parse_args()
+    search_action(args)
