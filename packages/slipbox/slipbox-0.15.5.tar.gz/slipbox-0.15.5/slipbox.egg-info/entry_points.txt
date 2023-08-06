@@ -1,0 +1,3 @@
+[console_scripts]
+slipbox = slipbox.__main__:main
+
