@@ -1,0 +1,3 @@
+[console_scripts]
+crusher=crusher:crusher.cli_entrypoint
+
