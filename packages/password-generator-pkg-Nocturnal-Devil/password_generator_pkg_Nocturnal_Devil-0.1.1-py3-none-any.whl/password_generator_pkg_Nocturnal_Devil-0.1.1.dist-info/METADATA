@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: password-generator-pkg-Nocturnal-Devil
+Version: 0.1.1
+Summary: Password hasher
+Home-page: https://github.com/Devil-Shinji/Password-Generator
+Author: Devil-Shinji
+Author-email: frank.m.kiibus@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Password-Generator
+
+### Python Integration
+
+Password generator which takes in a string and hashes it using MD5 algorithm
+
+---
+
+## Author: [Devil-Shinji](https://github.com/Devil-Shinji)
+
+---
+
+## Requirements
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+- Cd into Python directory
+
+- Run the program using either
+```bash
+python password_generator.py
+```
+or create an executable using pyinstaller [Add all necessary modules as hidden imports from requirements.txt]
+```bash
+pyinstaller --onefile password_generator.py --hidden-import pyperclip
+```
+and run the executable
+```bash
+./password_generator.exe
+```
+
+---
+
+## License
+See [LICENSE.md](LICENSE.md) for more details
+
