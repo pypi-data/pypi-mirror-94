@@ -1,0 +1,3 @@
+[console_scripts]
+beet=beet.toolchain.cli:main
+
