@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: odoo12-addons-oca-reporting-engine
+Version: 12.0.20210209.0
+Summary: Meta package for oca-reporting-engine Odoo addons
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Requires-Dist: odoo12-addon-bi-sql-editor
+Requires-Dist: odoo12-addon-bi-sql-editor-aggregate
+Requires-Dist: odoo12-addon-bi-view-editor
+Requires-Dist: odoo12-addon-kpi
+Requires-Dist: odoo12-addon-kpi-dashboard
+Requires-Dist: odoo12-addon-kpi-dashboard-altair
+Requires-Dist: odoo12-addon-kpi-dashboard-bokeh
+Requires-Dist: odoo12-addon-report-async
+Requires-Dist: odoo12-addon-report-context
+Requires-Dist: odoo12-addon-report-csv
+Requires-Dist: odoo12-addon-report-label
+Requires-Dist: odoo12-addon-report-py3o
+Requires-Dist: odoo12-addon-report-py3o-fusion-server
+Requires-Dist: odoo12-addon-report-qr
+Requires-Dist: odoo12-addon-report-qweb-element-page-visibility
+Requires-Dist: odoo12-addon-report-qweb-encrypt
+Requires-Dist: odoo12-addon-report-qweb-parameter
+Requires-Dist: odoo12-addon-report-qweb-pdf-fixed-column
+Requires-Dist: odoo12-addon-report-qweb-pdf-watermark
+Requires-Dist: odoo12-addon-report-qweb-signer
+Requires-Dist: odoo12-addon-report-substitute
+Requires-Dist: odoo12-addon-report-wkhtmltopdf-param
+Requires-Dist: odoo12-addon-report-xlsx
+Requires-Dist: odoo12-addon-report-xlsx-helper
+Requires-Dist: odoo12-addon-report-xlsx-helper-demo
+Requires-Dist: odoo12-addon-report-xml
+
+UNKNOWN
+
+
