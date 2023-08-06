@@ -1,0 +1,174 @@
+Metadata-Version: 2.1
+Name: trashpanda
+Version: 1.0.0
+Summary: Helper methods compounding tasks, which are not directly covered in pandas. (Or I didn't found them.)
+Home-page: https://gitlab.com/david.scheliga/trashpanda
+Author: David Scheliga
+License: GNU General Public License V3 (GPLv3)
+Project-URL: Documentation, https://trashpanda.readthedocs.io/en/latest/
+Project-URL: Source Code Repository, https://gitlab.com/david.scheliga/trashpanda
+Keywords: pandas,helper
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=1.0.0)
+Requires-Dist: numpy (>=1.16.0)
+
+# trashpanda
+[![Coverage Status](https://coveralls.io/repos/gitlab/david.scheliga/trashpanda/badge.svg?branch=master)](https://coveralls.io/gitlab/david.scheliga/trashpanda?branch=master)
+[![Build Status](https://travis-ci.com/david.scheliga/trashpanda.svg?branch=master)](https://travis-ci.com/david.scheliga/trashpanda)
+[![PyPi](https://img.shields.io/pypi/v/trashpanda.svg?style=flat-square&label=PyPI)](https://https://pypi.org/project/trashpanda/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/trashpanda.svg?style=flat-square&label=PyPI)](https://https://pypi.org/project/trashpanda/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+
+**trashpanda** is a collection of helper methods composing tasks around
+pandas.DataFrames and Series. Either they are to specific (or I didn't found
+them).
+
+![trashpanda icon](https://trashpanda.readthedocs.io/en/latest/_images/trashpanda-icon.svg "A trash panda")
+
+## Installing
+
+Installing the latest release using pip is recommended.
+
+````shell script
+$ pip install trashpanda
+````
+
+## Usage
+
+The api reference with all available methods can be found at 
+https://trashpanda.readthedocs.io/en/latest/
+
+
+## Authors
+
+* **David Scheliga** 
+    [@gitlab](https://gitlab.com/david.scheliga)
+    [@Linkedin](https://www.linkedin.com/in/david-scheliga-576984171/)
+    - Initial work
+    - Maintainer
+
+## License
+
+This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the
+[LICENSE](https://gitlab.com/david.scheliga/dicthandling/blob/master/LICENSE) file for details
+
+## Acknowledge
+
+- [Code style: black](https://github.com/psf/black)
+- [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+- [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+# Changelog
+This changelog is inspired by [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+
+## [1.0.0] - 2020-02-13
+### Added
+- License file
+- Additional tests to cover 100%.
+
+## [0.8b1]
+### Fixed
+- Unintentional sorting of columns in DataFrame related functions.
+
+### Added
+- Codecoverage with coverall, Travis-CI
+- makefile
+- Moved setup from setup.py to setup.cfg
+- tox.ini
+
+## [0.8b0] - 2020-01-08
+### Added
+- Function *meld_along_columns* with supporting functions *get_unique_index_positions*
+  and *remove_duplicated_indexes*
+
+### Fixed
+- Requirements.txt and required packages for pip.
+
+### Removed
+- Future warnings in *cut_series_after_max* and *cut_dataframe_after_max*.
+
+## [0.7b0] - 2020-12-30
+### Added
+- Function *find_index_of_value_in_series* returns the index of the first occurrence
+  of the nearest value towards a *search value* within a series.
+
+## [0.6b0] - 2020-12-21
+### Added
+- Function *cut_before* drops values of either DataFrames and Series before the
+  cutting index.
+
+### Fixed
+- Bug in *cut_after* leading to ignore a short-cut.
+
+## [0.5b0] - 2020-12-17
+### Changed
+- Function *cut_after* now keeps first line if equal.
+
+### Removed
+- *add_blank_rows_to_dataframe* is replaced by *add_blank_rows*
+- *cut_dataframe_after* is replaced by *cut_after*
+
+## [0.4b0.post1] - 2020-12-01
+### Fixed
+- readthedocs issue
+
+## [0.4b0] - 2020-12-01
+### Fixed
+- Results of *add_blank_rows_to_dataframe* and *cut_dataframe_after* keep the
+  index name.
+- Wrong definitions within the documentation.
+
+### Added
+- Functions *cut_dataframe_after_max*, *cut_series_after_max*, *cut_after*,
+  *add_blank_rows*
+
+### Deprecated
+- Functions *cut_dataframe_after* and *add_blank_rows_to_dataframe* are replaced
+  by *cut_after* and *add_blank_rows*
+
+## [0.3b0] - 2020-11-25
+### Added
+- Function *cut_dataframe_after* which returns a cut DataFrame with interpolated values
+  at the cutting index.
+
+### Changed
+- Changed structure of sphinx documentation.
+
+### Removed
+- Function *get_intersection_of_series* was removed and replaced by *get_intersection*,
+  which works for *pandas.Series* and *pandas.DataFrame*.
+
+
+## [0.2b0] - 2020-11-22
+### Added
+- Function *add_blank_rows_to_dataframe* for adding blank rows into a DataFrame.
+
+## [0.1b0.post1] - 2020-11-15
+### Added
+- Link to the documentation.
+
+### Deprecated
+- Function *get_intersection_for_series* will be removed in the next release.
+
+## [0.1b0] - 2020-11-15
+### Added
+- Function *get_intersection* as a replacement for *get_intersection_of_series*
+
+### Deprecated
+- Function *get_intersection_for_series* will be removed in the next release.
+
+## [0.0b1.post1] - 2020-11-13
+### Added
+- Link to Read-the-Docs documentation in README.md and setup.py
+
+## [0.0b1] - 2020-11-13
+First release of trashpanda.
+
