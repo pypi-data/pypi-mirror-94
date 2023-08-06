@@ -1,0 +1,12 @@
+replisync/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+replisync/config.py,sha256=cfFKIP3r8TU-Xn-9G1LSsW8YdILRGWJQO-tDRBCq6_4,4948
+replisync/consumers.py,sha256=SYuo6YqxZyrU32sDuN-wBTPh3cKQiw0pLKmEbHHW7uc,2344
+replisync/errors.py,sha256=kpX2hwJc4gOyFDwip5GGjudLfTh2jZhEr-878kQSs-4,179
+replisync/pipeline.py,sha256=qwUtu86yA-Y0ojmdpe80NwDMnDsxd-qBVXJ2EhMoedM,2156
+replisync/receivers.py,sha256=YpZJrTb10D23xDM5n67RN1FG1zoXm8agjGxLc0fsekA,15839
+replisync/start.py,sha256=jh-hAhP6H6Pf5cf7NFbq2vJy9jlvtcwB_LSfGLKlF2M,2737
+replisync-0.5.4.dist-info/METADATA,sha256=WFgVAx7JnAkcamswrY3XSDiOikUgA0RiZcco6r0S8qw,1075
+replisync-0.5.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+replisync-0.5.4.dist-info/entry_points.txt,sha256=pYmtNoPaDZO4Jk9ljUuHjlDqlhV946qWKY-lDwB0R-Y,52
+replisync-0.5.4.dist-info/top_level.txt,sha256=t6LgzvIPfGCTOmuWULi54iGym5V3gCDjqOtJ9ofgb5s,10
+replisync-0.5.4.dist-info/RECORD,,
