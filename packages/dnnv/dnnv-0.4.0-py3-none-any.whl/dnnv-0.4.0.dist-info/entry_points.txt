@@ -1,0 +1,3 @@
+[console_scripts]
+dnnv=dnnv.__main__:_main
+
