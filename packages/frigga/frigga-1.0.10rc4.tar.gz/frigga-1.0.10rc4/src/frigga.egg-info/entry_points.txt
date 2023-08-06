@@ -1,0 +1,3 @@
+[console_scripts]
+frigga = frigga.__main__:main
+
