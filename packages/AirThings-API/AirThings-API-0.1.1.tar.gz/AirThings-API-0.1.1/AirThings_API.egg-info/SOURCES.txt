@@ -1,0 +1,15 @@
+README.md
+setup.py
+AirThings_API.egg-info/PKG-INFO
+AirThings_API.egg-info/SOURCES.txt
+AirThings_API.egg-info/dependency_links.txt
+AirThings_API.egg-info/requires.txt
+AirThings_API.egg-info/top_level.txt
+airthings-api/__init__.py
+airthings-api/api/__init__.py
+airthings-api/api/web.py
+airthings-api/responses/__init__.py
+airthings-api/responses/locations_instance.py
+airthings-api/responses/me_instance.py
+airthings-api/responses/relay_devices_instance.py
+airthings-api/responses/thresholds_instance.py

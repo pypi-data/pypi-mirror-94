@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: AirThings-API
+Version: 0.1.1
+Summary: Python Wrappers for AirThings API
+Home-page: https://github.com/braibaud/airthings-api
+Author: Benjamin Raibaud
+Author-email: braibaud@gmail.com
+License: MIT
+Description: 
+        AirThings-API is a high-level API wrapper for AirThings sensors.
+        AirThings-API is compatible with Python 3.7 and is distributed under the MIT license.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
