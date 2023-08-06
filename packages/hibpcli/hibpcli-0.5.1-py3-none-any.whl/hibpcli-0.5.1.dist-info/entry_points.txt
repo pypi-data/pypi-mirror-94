@@ -1,0 +1,3 @@
+[console_scripts]
+hibpcli = hibpcli.cli:main
+
