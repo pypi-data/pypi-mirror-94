@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+py_setenv.egg-info/PKG-INFO
+py_setenv.egg-info/SOURCES.txt
+py_setenv.egg-info/dependency_links.txt
+py_setenv.egg-info/entry_points.txt
+py_setenv.egg-info/requires.txt
+py_setenv.egg-info/top_level.txt
