@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: cylinter
+Version: 0.0.14
+Summary: CyLinter
+Home-page: https://github.com/labsyspharm/cylinter
+Author: Gregory J. Baker
+Author-email: gregory_baker2@hms.harvard.edu
+License: MIT License
+Download-URL: https://github.com/labsyspharm/cylinter/archive/v0.0.14.tar.gz
+Keywords: scripts single cell data science
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: ==3.8.5
+Requires-Dist: PyYAML (==5.4)
+Requires-Dist: pyarrow (==2.0.0)
+Requires-Dist: pandas (==1.2.0)
+Requires-Dist: hdbscan (==0.8.26)
+Requires-Dist: joblib (==0.17.0)
+Requires-Dist: matplotlib (==3.3.3)
+Requires-Dist: seaborn (==0.11.1)
+Requires-Dist: scikit-image (==0.18.1)
+Requires-Dist: napari (==0.3.6)
+Requires-Dist: PyQt5 (==5.15.2)
+Requires-Dist: zarr (==2.6.1)
+Requires-Dist: natsort (==7.1.0)
+Requires-Dist: rpy2 (==3.4.2)
+Requires-Dist: bridson (==0.1.0)
+Requires-Dist: hurry.filesize (==0.9)
+Requires-Dist: synapseclient (==2.0.0)
+
+![alt text](https://github.com/labsyspharm/cylinter/blob/master/docs/logo3.png?raw=true)
+
+## An Interactive Image Segmentation Filter for Multiplex Microscopy.
+
+CyLinter cleans image-derived, single-cell data by identifying and removing cell segmentation instances in multiplexed whole tissue and tissue microarray images corrupted by optical and/or image preprocessing artifacts. The tool comprises a set of user-guided, quality control (QC) modules instantiated in a configurable [Python](https://www.python.org) Class. The results of each module are cached to allow for dynamic restarts and iterative QC strategies.
+
+CyLinter development is led by [Greg Baker](https://github.com/gjbaker) at [Laboratory of Systems Pharmacology](https://hits.harvard.edu/the-program/laboratory-of-systems-pharmacology/about/), Harvard Medical School.
+
+**Funding:** This work is supported by the following:
+
+* *NIH grant U54CA225088: Systems Pharmacology of Therapeutic and Adverse Responses to Immune Checkpoint and Small Molecule Drugs*
+* Ludwig Center at Harvard Medical School and the Ludwig Cancer Research Foundation
+
+**Instructions:** https://labsyspharm.github.io/cylinter/
+
+
