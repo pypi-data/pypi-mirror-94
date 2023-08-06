@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: elementapi
+Version: 0.3.9
+Summary: element-iot api client lib
+Home-page: https://github.com/ZennerIoT/python-elementapi
+Author: Stefan Reiser
+Author-email: sr@zenner-iot.com
+License: UNKNOWN
+Download-URL: https://github.com/ZennerIoT/python-elementapi/archive/master.zip
+Description: UNKNOWN
+Keywords: client,rest,element-iot
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
