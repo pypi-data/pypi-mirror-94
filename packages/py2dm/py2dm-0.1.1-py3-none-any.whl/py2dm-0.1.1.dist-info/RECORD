@@ -1,0 +1,13 @@
+py2dm/__init__.py,sha256=0N2FMAvwgTV5WkkWp3Omrt7VGLzhx4Ao9QsIOuQ2HUA,948
+py2dm/entities.py,sha256=8Zf7dfSTXiweQENEV1oaYC1kbcX5p6IOLUyObPsB7WU,12020
+py2dm/errors.py,sha256=MwrPSzZsyZ3r6z03uQb6h6s5GstKP0W4wBTIRq8uA08,1375
+py2dm/py.typed,sha256=mPnvv3hkccM15iSIDTK64rRAEblvl1a9mpAiiA_d-fY,169
+py2dm/read.py,sha256=NXYSDZap3tVJHAOpWdy12MKmyq9O_U8GvQTiFvfDUoQ,15005
+py2dm/types.py,sha256=S3wjIs4uQqNi-fRvqat5H6uIYYrJgs-Oqt5IIwA9LJQ,103
+py2dm/utils.py,sha256=UfqYYxBtQdZ57gf_8jkDdHx0x2e2gtLV96lG8CwG3uA,3062
+py2dm/write.py,sha256=WY2ybRPOFehaLqnwulPVqG29X1h9qTmbm5BvDCw5avo,9215
+py2dm-0.1.1.dist-info/LICENSE,sha256=KVHDVATYMFr36Q0MqdEV5tSINFj7hZzQQvJRXqvhugM,1089
+py2dm-0.1.1.dist-info/METADATA,sha256=GbVeH1t0skAZFLX5XFoIp-LbuwcmDm-8ob79nyaSs7U,4558
+py2dm-0.1.1.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+py2dm-0.1.1.dist-info/top_level.txt,sha256=MjgPCwq6eTH0YDi3FAScB4eqAGju9ouvV2CecheoyAQ,6
+py2dm-0.1.1.dist-info/RECORD,,
