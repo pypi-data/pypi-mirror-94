@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ahkunwrapped/__init__.py
+ahkunwrapped/autohotkey.py
+ahkunwrapped.egg-info/PKG-INFO
+ahkunwrapped.egg-info/SOURCES.txt
+ahkunwrapped.egg-info/dependency_links.txt
+ahkunwrapped.egg-info/not-zip-safe
+ahkunwrapped.egg-info/requires.txt
+ahkunwrapped.egg-info/top_level.txt
