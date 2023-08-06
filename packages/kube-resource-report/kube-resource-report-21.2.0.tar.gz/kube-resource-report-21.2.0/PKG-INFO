@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: kube-resource-report
+Version: 21.2.0
+Summary: Report Kubernetes cluster and pod resource requests vs usage and generate static HTML
+Home-page: https://codeberg.org/hjacobs/kube-resource-report
+License: GPL-3.0+
+Author: Henning Jacobs
+Author-email: henning@jacobs1.de
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: jinja2
+Requires-Dist: pykube-ng
+Requires-Dist: requests
+Requires-Dist: requests-futures
+Requires-Dist: stups-tokens
+Project-URL: Repository, https://codeberg.org/hjacobs/kube-resource-report

@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "kube-resource-report"
+version = "21.2.0"
+description = "Report Kubernetes cluster and pod resource requests vs usage and generate static HTML"
+authors = ["Henning Jacobs <henning@jacobs1.de>"]
+license = "GPL-3.0+"
+repository = "https://codeberg.org/hjacobs/kube-resource-report"
+
+[tool.poetry.scripts]
+kube-resource-report = 'kube_resource_report:main.main'
+
+[tool.poetry.dependencies]
+python = "^3.7"
+jinja2 = "*"
+pykube-ng = "*"
+requests = "*"
+requests-futures = "*"
+stups-tokens = "*"
+
+[tool.poetry.dev-dependencies]
+boto3 = "*"
+coverage = "*"
+coveralls = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-watch = "*"
+pre-commit = "^2.2.0"
