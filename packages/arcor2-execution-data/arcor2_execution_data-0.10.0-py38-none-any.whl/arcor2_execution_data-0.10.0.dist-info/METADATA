@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: arcor2-execution-data
+Version: 0.10.0
+Summary: ARCOR2 Execution service data
+Home-page: UNKNOWN
+Author: Robo@FIT
+Author-email: imaterna@fit.vut.cz
+License: LGPL
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: ==3.8.*
+Description-Content-Type: text/markdown
+Requires-Dist: arcor2 (~=0.11.0)
+Requires-Dist: dataclasses-jsonschema-rereleased[fast-validation] (==2.12.2)
+
+# arcor2_execution_data
+# Changelog
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+
+## [0.10.0] - 2021-02-08
+
+### Changed
+- `PackageState` RPC removed.
+
+## [0.9.0] - 2020-10-22
+
+### Changed
+- `PackageSummary` now contains optional `project_meta` property which may hold basic information about the project embedded in the execution package.
+
+## [0.8.1] - 2020-10-19
+
+### Changed
+- ARCOR2 dependency updated
+
+## [0.8.0] - 2020-09-24
+### Changed
+- The first release of the separated package.
+
