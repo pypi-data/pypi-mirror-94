@@ -1,0 +1,13 @@
+README.md
+setup.py
+GalletaPy.egg-info/PKG-INFO
+GalletaPy.egg-info/SOURCES.txt
+GalletaPy.egg-info/dependency_links.txt
+GalletaPy.egg-info/requires.txt
+GalletaPy.egg-info/top_level.txt
+galletapy/DKR.py
+galletapy/MD.py
+galletapy/OS.py
+galletapy/__init__.py
+galletapy/boys.py
+galletapy/shells.py
