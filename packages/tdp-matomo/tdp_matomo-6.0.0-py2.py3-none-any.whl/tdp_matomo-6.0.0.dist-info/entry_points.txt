@@ -1,0 +1,6 @@
+[phovea.config]
+tdp_matomo = tdp_matomo:phovea_config
+
+[phovea.registry]
+tdp_matomo = tdp_matomo:phovea
+
