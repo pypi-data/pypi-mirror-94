@@ -1,0 +1,3 @@
+import bloggo
+
+bloggo.run()

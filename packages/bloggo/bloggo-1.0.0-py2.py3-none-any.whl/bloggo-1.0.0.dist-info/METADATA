@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: bloggo
+Version: 1.0.0
+Summary: A blog-oriented static site generator
+Home-page: https://github.com/askonomm/bloggo
+Author: Asko Nõmm
+Author-email: asko@askonomm.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Bloggo
+
+Bloggo is yet another blog-oriented static site generator.
+
+![linter and tests](https://github.com/askonomm/bloggo/workflows/.github/workflows/linter-tests.yml/badge.svg)
+
+## Requirements
+
+- Python 3.9+
+- [pip](https://pip.pypa.io/)
+
+## Installation
+
+1. Download Bloggo, extract it to a place you like and go into it with your shell
+2. Install dependencies with `pip install -r requirements.txt`
+3. Generate site with `python bloggo.py`
+
+That's it, your static site should be available in the `public` folder that was just created.
+Every time you make changes, run `python bloggo.py` again to generate 
+new files. You can upload your `public` folder's contents to any hosting provided you'd like.
+
+## Content
+
+Content files are very simple, YAML-esque (but one-level only!) structures. A complete example of a content file looks like this:
+
+```yaml
+---
+title: Hello, World
+decription: A post about welcoming oneself to the world
+date: 2021-02-12
+---
+
+Markdown content follows here.
+```
+
+Files have to be in a `.md` extension, such as `hello-world.md` and placed inside the 
+`resources/content` directory. What's MD you say? It's Markdown. Beautiful, glorious, best friend of an efficient writer.
+
+## URLs
+
+If you have a file called `hello.md` in the root of the `resources/content` directory, then that content
+will be available via yoursite.com/hello. Likewise if you put your stuff in a directory itself, like in a case of a blog post you would 
+have a file in `resources/content/blog/hello.md`, then that  content will be available via yoursite.com/blog/hello.
+
+**Note:** the way Bloggo is written is that it always expects blog posts to live in the blog directory. I may 
+at one point make it configurable (or you can make a pull request), but for now it is what it is.
+
+## Templating
+
+Bloggo uses Handlebars to put together your static site. It runs in a single templating file, called `template.hbs`, in `resources` directory.
+I encourage you to make it your own, change things around and go crazy. But if you won't, that's okay, too.
+
+### Variables
+
+#### Global variables:
+- `is_home` returns true when being on the home page of the site
+- `is_post` returns true when any content item is being viewed
+
+Additionally, any configuration that you have added to  the `resources/config.json` file will be available as it's own 
+variable as well. For example a config such as:
+
+```json
+{
+  "site_title": "Doggo's Bloggo"
+}
+```
+
+would be usable in the template as `{{site_title}}`.
+
+#### Contextual variables
+
+Each of the posts yaml-esque key: value configuration is also available to you, in the post's context.
+Post context is available in two places:
+
+When you are inside a `is_post` context, you can simply access all of the post's variables as-is. An example use-case would be:
+
+```handlebars
+{{#if is_post}}
+    <h2>{{title}}</h2>
+    <div class="date">{{date}}</div>
+    <div class="entry">{{entry}}</div>
+{{/if}}
+```
+
+However when you are inside a `is_home` context, you c an access all of the post's
+variables from within a loop. An example use-case would be:
+
+```handlebars
+<ul>
+    {{#posts}}
+        <li>
+            <h2>{{title}}</h2>
+            <div class="date">{{date}}</div>
+            <div class="entry">{{entry}}</div>
+        </li>
+    {{/posts}}
+</ul>
+```
+
+You see all of the post's yaml-esque key: value things are available as `{{key}}`, and the content of the post is available as `{{{entry}}}`. Note 
+the three curly brackets, which Handlebars will render HTML with. 
+
+### Assets
+
+You should add your images, stylesheets, fonts and so on in the `resources/assets` directory. This will get copied over
+to the `public` directory when generating so your assets will be available via yoursite.com/assets/{...} 
+
