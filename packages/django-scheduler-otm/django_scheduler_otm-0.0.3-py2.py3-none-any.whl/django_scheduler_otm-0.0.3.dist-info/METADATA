@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: django-scheduler-otm
+Version: 0.0.3
+Summary: A calendaring app for OpenTreeMap.
+Home-page: https://github.com/cwardcode/django-scheduler-otm
+Author: Chris Ward
+Author-email: chris.dev.ward@gmail.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Utilities
+Requires-Python: >=2.7
+Requires-Dist: Django (>=1.11)
+Requires-Dist: python-dateutil (>=2.1)
+Requires-Dist: pytz (>=2013.9)
+Requires-Dist: icalendar (>=3.8.4)
+
+UNKNOWN
+
+
