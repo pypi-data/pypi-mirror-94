@@ -1,0 +1,20 @@
+import os
+
+ENDI_PAYMENT_HISTORY = "/endi_payment/history"
+ENDI_PAYMENT_HISTORY_ITEM = os.path.join(ENDI_PAYMENT_HISTORY, "{id}")
+ENDI_PAYMENT_HISTORY_ITEM_ARCHIVE = os.path.join(
+    ENDI_PAYMENT_HISTORY_ITEM, "archive"
+)
+
+ENDI_PAYMENT_ARCHIVE = "/endi_payment/archives"
+ENDI_PAYMENT_ARCHIVE_ITEM = os.path.join(ENDI_PAYMENT_ARCHIVE, "{id}")
+
+
+def includeme(config):
+    config.add_route(ENDI_PAYMENT_HISTORY, ENDI_PAYMENT_HISTORY)
+    config.add_route(ENDI_PAYMENT_HISTORY_ITEM, ENDI_PAYMENT_HISTORY_ITEM)
+    config.add_route(
+        ENDI_PAYMENT_HISTORY_ITEM_ARCHIVE,
+        ENDI_PAYMENT_HISTORY_ITEM_ARCHIVE,
+    )
+    config.add_route(ENDI_PAYMENT_ARCHIVE_ITEM, ENDI_PAYMENT_ARCHIVE_ITEM)
