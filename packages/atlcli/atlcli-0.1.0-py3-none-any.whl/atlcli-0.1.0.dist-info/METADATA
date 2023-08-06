@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: atlcli
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: atlassian-python-api
+Requires-Dist: pyyaml
+Requires-Dist: prettytable
+Requires-Dist: semantic-version
+Requires-Dist: pprint36
+Requires-Dist: requests
+
+UNKNOWN
+
+
