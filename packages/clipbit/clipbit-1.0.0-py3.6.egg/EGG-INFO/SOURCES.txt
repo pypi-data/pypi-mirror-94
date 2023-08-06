@@ -1,0 +1,13 @@
+README.md
+setup.py
+clipbit/__init__.py
+clipbit/__main__.py
+clipbit/clipbit.py
+clipbit/script.py
+clipbit/text_summary.py
+clipbit.egg-info/PKG-INFO
+clipbit.egg-info/SOURCES.txt
+clipbit.egg-info/dependency_links.txt
+clipbit.egg-info/entry_points.txt
+clipbit.egg-info/requires.txt
+clipbit.egg-info/top_level.txt
