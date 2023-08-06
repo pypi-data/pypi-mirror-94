@@ -1,0 +1,8 @@
+setup.py
+bin/notmike
+notmike.egg-info/PKG-INFO
+notmike.egg-info/SOURCES.txt
+notmike.egg-info/dependency_links.txt
+notmike.egg-info/not-zip-safe
+notmike.egg-info/requires.txt
+notmike.egg-info/top_level.txt

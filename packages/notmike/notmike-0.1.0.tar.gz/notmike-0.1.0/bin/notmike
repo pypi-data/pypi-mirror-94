@@ -1,0 +1,138 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+from peche import setup
+
+_, log = setup('notmike')
+
+
+def create_build_env(dist):
+    shutil.rmtree(dist, ignore_errors=True)
+    os.mkdir(dist)
+
+
+def load_config(path='.notmike.json'):
+    with open(path) as f:
+        return json.load(f)
+
+
+def discover_versions():
+    forced_versions = os.getenv('VERSIONS')
+
+    if forced_versions:
+        v = [w.strip() for w in forced_versions.split(' ')]
+        src = 'env'
+    else:
+        pattern = re.compile(r'^\d\.\d(?:\.\d)?(?:-[a-zA-Z0-9]+)?')
+        v = [x for x in os.listdir('.') if os.path.isdir(x) and pattern.match(x)]
+        src = 'fs'
+
+    log.info('discovered versions', source=src, versions=v)
+
+    return v
+
+
+def build_version(version, latest, announcement, pos, copy, driver, dist):
+    copy_from = None
+    cwd = '.'
+
+    if 'native' in driver:
+        args = [driver['native'].get('bin', 'mkdocs')]
+        args.extend(driver['native'].get('command', ['build']))
+
+        copy_from = f'{version}/site'
+        copy_to = f'{dist}/{version}'
+        cwd = version
+    elif 'docker' in driver:
+        args = ['docker', 'run', '--rm',
+                '-v', '{}:{}'.format(os.path.abspath(version), driver['docker'].get('mount_to', '/docs')),
+                '-v', '{}/{}:{}/site'.format(os.path.abspath(dist), version, driver['docker'].get('mount_to', '/docs')),
+                driver['docker'].get('image', 'squidfunk/mkdocs-material')]
+        args.extend(driver['docker'].get('command', ['build']))
+    else:
+        raise Exception('no mkdocs driver configured')
+
+    for a, b in copy.items():
+        log.info('copying file', a=a, b=f'{version}/{b}')
+        if os.path.isdir(a): shutil.copytree(a, f'{version}/{b}')
+        else: shutil.copyfile(a, f'{version}/{b}')
+
+    if announcement.get("enabled", False) and pos != 0:
+        with open(f'{version}/overrides/main.html') as f:
+            main = f.read()
+
+        if '{% block announce %}' not in main:
+            log.info('injecting announcement', version=version)
+
+            if pos == -1:
+                msg = announcement.get('old_template',
+                                       'Warning &mdash; this documentation describes an older version. <a href="/{'
+                                       'latest}/">View the latest version ({latest}) here</a>.')
+            else:
+                msg = announcement.get('prerelease_template',
+                                       'Warning &mdash; this documentation describes a version that has not been '
+                                       'released. <a href="/{latest}/">View the latest version ({latest}) here</a>.')
+
+            main += f'\n{{% block announce %}}\n{msg.format(latest=latest)}\n{{% endblock %}}'
+
+            with open(f'{version}/overrides/main.html', 'w') as f:
+                f.write(main)
+
+    log.info('building project', version=version, driver=args[0])
+
+    subprocess.call(args, cwd=cwd)
+    if copy_from is not None: os.rename(copy_from, copy_to)
+
+    for p in copy.values():
+        log.info('cleaning up file', path=f'{version}/{p}')
+        if os.path.isdir(f'{version}/{p}'): shutil.rmtree(f'{version}/{p}')
+        else: os.remove(f'{version}/{p}')
+
+    log.info('cleaning up dir', path=f'{version}/site')
+    shutil.rmtree(f'{version}/site', ignore_errors=True)
+
+
+def write_manifest(versions, latest, dist):
+    with open(f'{dist}/versions.json', 'w') as f:
+        json.dump([{"version": v, "title": v, "aliases": ["latest"] if v == latest else []}
+                   for v in reversed(versions)], f)
+
+
+def copy_latest(dist, version):
+    shutil.copytree(f'{dist}/{version}', f'{dist}/latest')
+    log.info('copied latest', version=version)
+
+
+def write_apex(dist, ref):
+    with open(f'{dist}/index.html', 'w') as f:
+        f.write(f'<html><head><meta http-equiv="refresh" content="0; URL=/{ref}/"/></head></html>')
+
+
+if __name__ == '__main__':
+    try: config = load_config(path=sys.argv[1])
+    except IndexError: config = load_config()
+
+    create_build_env(dist=config.get('dist', './dist'))
+
+    versions = sorted(discover_versions())
+
+    latest = os.getenv('LATEST', versions[-1])
+    latest_index = versions.index(latest)
+
+    [build_version(v, latest, config.get('inject_announcement', {}),
+                   0 if idx == latest_index else (1 if idx > latest_index else -1),
+                   copy=config.get('copy', {}),
+                   driver=config.get('driver', {}),
+                   dist=config.get('dist', './dist'))
+     for idx, v in enumerate(versions)]
+
+    if config.get('copy_latest', False): copy_latest(config.get('dist', './dist'), latest)
+    if config.get('write_versions', True): write_manifest(versions, latest, dist=config.get('dist', './dist'))
+    if config.get('write_apex', True): write_apex(config.get('dist', './dist'),
+                                                  'latest' if config.get('copy_latest', False) else latest)
