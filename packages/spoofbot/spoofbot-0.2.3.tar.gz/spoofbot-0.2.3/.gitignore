@@ -1,0 +1,9 @@
+# Project exclude paths
+/venv/
+test_data
+.cache
+build
+dist
+*.egg-info
+*.bak
+__pycache__
