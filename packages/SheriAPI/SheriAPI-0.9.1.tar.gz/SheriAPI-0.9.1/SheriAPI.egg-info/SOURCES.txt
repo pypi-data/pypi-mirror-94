@@ -1,0 +1,16 @@
+CHANGELOG.txt
+MANIFEST.in
+README.md
+main.py
+requirements.txt
+setup.py
+SheriAPI/__init__.py
+SheriAPI/api.py
+SheriAPI/endpoints.py
+SheriAPI/enums.py
+SheriAPI/errors.py
+SheriAPI.egg-info/PKG-INFO
+SheriAPI.egg-info/SOURCES.txt
+SheriAPI.egg-info/dependency_links.txt
+SheriAPI.egg-info/requires.txt
+SheriAPI.egg-info/top_level.txt
