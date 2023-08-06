@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+VERSION.txt
+setup.py
+requirements/build_requirements.txt
+scripts/build.sh
+seligimus/__init__.py
+seligimus.egg-info/PKG-INFO
+seligimus.egg-info/SOURCES.txt
+seligimus.egg-info/dependency_links.txt
+seligimus.egg-info/top_level.txt
+seligimus/python/__init__.py
+seligimus/python/decorators/__init__.py
+seligimus/python/decorators/operators/__init__.py
+seligimus/python/decorators/operators/equality/__init__.py
+seligimus/python/decorators/operators/equality/equal_type.py
