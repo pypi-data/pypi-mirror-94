@@ -1,0 +1,14 @@
+LICENSE,sha256=Wou2w3G7V16grNHi_aEf9p4aRqWnM957o86Gh21ZXCw,1077
+dictionaries/warodai.jtdb,sha256=1T-oskhaT5OvIhej-EBKOtSFTpoeXUw-kJU3eKgZADI,16062559
+dictionaries/yarxi.jtdb,sha256=Talp3jpSTw-P9_YXzOUCentUodFeXm42wdO9anmlhJU,11956628
+jrsub/__init__.py,sha256=fsOuXPYuCgYbTqFTCQSVCO0ePtA0dVzRz2esxs_4iOw,633
+jrsub/entry.py,sha256=abwZ04KmWAAOhl-XDQFZaL2hqNqK9lm8J0_X4kc494E,856
+jrsub/reference.py,sha256=v1SLLKT432bF1gdY0W0YsKUwuq23CBTEE5nd5ogS2mk,823
+jrsub/search.py,sha256=MmiEuofK3lM3O0JoMWn003y1pTqUSV6Pcwm080OdQlQ,270
+jrsub/utils.py,sha256=bwIKI51un7AfJBbQpbVTKxE-JNOdqFLqOa1KOm8ABIk,1684
+jrsub/warodai.py,sha256=1PyPCCxt_VX3DlaLclj5MRe3Ri5MVlk6HiVrbiTOs3o,278462
+jrsub/yarxi.py,sha256=cs9Gtt__sdYpYE_QcuujsMfhEz6hXVjh1yJQJnsmUHY,41993
+jrsub-0.1.1.dist-info/LICENSE,sha256=Wou2w3G7V16grNHi_aEf9p4aRqWnM957o86Gh21ZXCw,1077
+jrsub-0.1.1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+jrsub-0.1.1.dist-info/METADATA,sha256=1cs4kY0iwGvtz5s2xuxRU9pmSUPlpr-SncdgH5M53Mg,868
+jrsub-0.1.1.dist-info/RECORD,,
