@@ -1,0 +1,8 @@
+pytest-cov
+numpy
+scipy
+pandas
+matplotlib
+seaborn
+colormath
+poli_sci_kit
