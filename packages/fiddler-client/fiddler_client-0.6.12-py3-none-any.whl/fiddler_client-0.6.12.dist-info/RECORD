@@ -1,0 +1,17 @@
+fiddler/__init__.py,sha256=kNElguhT9C3Kr318blCFv7txGOoz2hoiVfRWsxuUNpg,911
+fiddler/_version.py,sha256=BfD3qEgwpt-t6SsK7uE-eWxxSFH5r-ssvC2kvq0_Kio,23
+fiddler/aws_utils.py,sha256=-Iqz2gfueUmgaRWhDDGdQ7ekxoi24zujiTe3tqQ6RE0,1613
+fiddler/client.py,sha256=wr8yDDlfGpbGDxdqBUAJkv4wVg1e1SBnCR98pTistng,5166
+fiddler/core_objects.py,sha256=1fjk8PAk2y5ir2ASc9EJho6fnbOS0VmNlMVLmMsi8PU,48350
+fiddler/fiddler_api.py,sha256=GokAgo-L9Qj7nNJSOvo7jbiCu8gjHNmSSt6SDaJugkk,72834
+fiddler/model_info_validator.py,sha256=I7fqsOLdX8B4hPCRksdM31YtihThQ1mPgbPNXxKYT4o,3493
+fiddler/model_loaders.py,sha256=tmA7EbizV3WRtEx22JUoxTRidS-C0dtELRZgN4Oaxdo,8239
+fiddler/utils.py,sha256=oflGbJH_3qO2xOd-7QWA45IaQMdmPMHew99z3EGuWN8,3352
+fiddler/validator.py,sha256=ehBqWgIQp9CZkVcV5pf7Gq1bObhruSxAjr6sS5qyAjg,13656
+fiddler/assets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fiddler/assets/pg_reserved_words.py,sha256=Ar8Y4vrw5cJxc6xMmul42cNw0NEu-LjEV5jK6QlKisY,8200
+fiddler_client-0.6.12.dist-info/LICENSE.txt,sha256=w8-LUAb_VLBWSsCNmih0pAqLIicJfGu8OJXpDjkIg_o,559
+fiddler_client-0.6.12.dist-info/METADATA,sha256=jq7cfu1AAt5pAdAa75bzoo223IEtnUMBuIXc5fUYmAw,3488
+fiddler_client-0.6.12.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+fiddler_client-0.6.12.dist-info/top_level.txt,sha256=ndC6LqvKmrTTs8czRlBOYdYgSqZbHuMf0zHt_HWpzzk,8
+fiddler_client-0.6.12.dist-info/RECORD,,
