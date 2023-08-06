@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: clin-msi
+Version: 0.0.1
+Summary: The workflow package for MSI detection in Python
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: xgboost (==1.3.3)
