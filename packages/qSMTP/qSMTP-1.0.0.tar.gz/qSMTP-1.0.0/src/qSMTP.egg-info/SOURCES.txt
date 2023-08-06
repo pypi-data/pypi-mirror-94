@@ -1,0 +1,7 @@
+setup.py
+src/qSMTP/__init__.py
+src/qSMTP/qSMTP.py
+src/qSMTP.egg-info/PKG-INFO
+src/qSMTP.egg-info/SOURCES.txt
+src/qSMTP.egg-info/dependency_links.txt
+src/qSMTP.egg-info/top_level.txt
