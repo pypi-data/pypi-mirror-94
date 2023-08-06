@@ -1,0 +1,16 @@
+nidhoggr/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nidhoggr/core/config.py,sha256=tK6-MywhaQeLuj19T1kIdXDGTSSSVi1AiAogGXwz49g,210
+nidhoggr/core/crypto.py,sha256=y-sqkvKBSx2ZjxQzWI5QToHICCkPZwnKOKS5uST8pO8,96
+nidhoggr/core/repository.py,sha256=lf6Qwh--bVe_nCNyFLtYzDCYCR5AnsFEcy9rpqMEUpI,1282
+nidhoggr/core/response.py,sha256=oTgkOHk60MC4pEmmyotjGLf9vDuSckRBulhNRo4yoh4,414
+nidhoggr/core/texture.py,sha256=vqBA0PR4fMakbVBRbZhLoNnuasgAStpOpuKqTYb1v5o,869
+nidhoggr/core/user.py,sha256=Muxw1xelNLdLsMLe0vXV2-0afkqctdqzZersAvi5pW8,1148
+nidhoggr/requests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nidhoggr/requests/core.py,sha256=aGj-eZQ_djJ6RRBWhb2hK37g1Mnnvh6pL_Wjcb9LBZk,1569
+nidhoggr/requests/textures.py,sha256=fHHyERNplRVGpP2Ob0DUi7Yt_TBqXNeU4rDxRcKlgjY,930
+nidhoggr/requests/users.py,sha256=y_XoSAVOQ1uWwrISDSW5QQnWhet2wwtOFEqBnokDovE,918
+nidhoggr_core-0.10.0.dist-info/LICENSE,sha256=8Am7Sg6X9bsjul6W5MJuNiOidM1M0f3q0FcMAd2_gLg,1083
+nidhoggr_core-0.10.0.dist-info/METADATA,sha256=260aDwKYR8SCVjMSQMp3j2kvsc3RLias-NWaUk9NtBQ,1721
+nidhoggr_core-0.10.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+nidhoggr_core-0.10.0.dist-info/top_level.txt,sha256=TsPCCDIipd3Bvo-ntCx754VkuUjtFdmt3y4O_QBwAHc,14
+nidhoggr_core-0.10.0.dist-info/RECORD,,
