@@ -1,0 +1,14 @@
+ip_area/__init__.py,sha256=vMo_EOo6wwPdrRBKj5RFD95S0T3-k85yJnXNsKjMWew,184
+ip_area/api.py,sha256=tyrFB2I1r3MaKAUrbHzu_YiUzqfx-hSwZJIaRKyBDkg,3030
+ip_area/ip_area.py,sha256=4UNlDF5Ik6xITJ_AY4Qe6IXAtuRiFZ4UN_CvKnuuZUo,636
+ip_area/tools.py,sha256=boI1ey3kcnIfE7xgrA2mwe2f06fUyq3kQWbColG5oeE,258
+ip_area/version.py,sha256=82dYWz-7f59LsoQjmkdhz60nWSBF51J2_tZIjddADhk,44
+ip_area/wrap_api.py,sha256=BcVYU8AQY0eHVfLdoor5lfeHW9vuPSYenifrsYivllM,1090
+test/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+test/test.py,sha256=oJdqm5Ns02_SOr9Gho34z2venTnLHV-jyiFIjhmLXh4,1098
+test/test_get_info.py,sha256=hHTcsXJvq-K0ZA9XcWrUj2T8f2QGSUggmhsXEiRxAUI,87
+ip_area-0.0.1.dist-info/METADATA,sha256=XbUKggkR0zd3Porchhsz-2-6ljdmZCbv-f7_6CWqlns,1466
+ip_area-0.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ip_area-0.0.1.dist-info/top_level.txt,sha256=qqRaflRU4r0wSM_sVpSsKuZngpjjDFawOdLMIl2yOB4,13
+ip_area-0.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ip_area-0.0.1.dist-info/RECORD,,
