@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+src/apistblz/__init__.py
+src/apistblz/downloadonce.py
+src/apistblz/exceptions.py
+src/apistblz/ratecontrol.py
+src/apistblz/wait_and_retry.py
+src/apistblz.egg-info/PKG-INFO
+src/apistblz.egg-info/SOURCES.txt
+src/apistblz.egg-info/dependency_links.txt
+src/apistblz.egg-info/not-zip-safe
+src/apistblz.egg-info/top_level.txt
