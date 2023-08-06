@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "jrpystan"
+description = "Jumping Rivers: Introduction to Bayesian inference using PyStan"
+version = "0.0.1"
+authors = ["Jumping Rivers <info@jumpingrivers.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+pandas = ">=1"
+numpy = ">=1.19"
+matplotlib = ">=3.0"
+pystan = "^2.19"
+
+[tool.poetry.dev-dependencies]
