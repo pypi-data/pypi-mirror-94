@@ -1,0 +1,12 @@
+README.rst
+setup.py
+mahjong/__init__.py
+mahjong/__main__.py
+mahjong/game.py
+mahjong/melds.py
+mahjong/players.py
+mahjong/tiles.py
+python_mahjong.egg-info/PKG-INFO
+python_mahjong.egg-info/SOURCES.txt
+python_mahjong.egg-info/dependency_links.txt
+python_mahjong.egg-info/top_level.txt
