@@ -1,0 +1,4 @@
+azure.identity
+python-dotenv
+azure-datalake-store
+azure-storage-file-datalake
