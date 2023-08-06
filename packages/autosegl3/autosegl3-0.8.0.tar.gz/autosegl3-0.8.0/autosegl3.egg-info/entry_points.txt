@@ -1,0 +1,4 @@
+[console_scripts]
+autosegl3 = autosegl3.autosegl3:main
+test_train = tests.test_train:test_train
+
