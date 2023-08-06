@@ -1,0 +1,15 @@
+there/__main__.py,sha256=2TudpbpcP6JaXYxj3lpezv910MNA6cki4x0Cqslvsro,24012
+there/fuse_drive.py,sha256=u-O3RTbW0ZqyzQ5i1wJ_2PVfK-pjOJVIjxdD3VRZR78,5478
+there/jupyter-setup.py,sha256=mq9riws7K6fHpsXbS_j9XrhbCsjgeKFLTKPvkgbcMMQ,1578
+there/kernel.py,sha256=IKwdTldSXDjTpdtfb65dwtBeJwPdrZEjlb4cUfsKYB8,9625
+there/miniterm_mpy.py,sha256=oEHCob8yjNK4yqXEl3CP5mpWtmFnn-Ml_FJVj0g3x1M,35304
+there/os_error_list.py,sha256=su07VErGGAtTyhojDyTs2HuSTM84TB8wGrkcE8AS_1w,2215
+there/repl_connection.py,sha256=uj6qDj1FdaeAqgkjymKw2P7kco86byD9dcSEHQ-lIt0,18478
+there/speaking.py,sha256=tfm9dz_6Fl93p1FLuQKJa5oesw3qsms_fwwDgKe6dHY,2975
+there/string_escape.py,sha256=xhYsrAjhdQucwrY7WQ1SVs0aY4ptSlal9WjCHn8F_yw,1971
+mpy_repl_tool-0.13.dist-info/LICENSE.txt,sha256=POTkvihYyxOk96o7qzlxQE7CkOVLPLKJ9zdKMb0xpxE,1886
+mpy_repl_tool-0.13.dist-info/METADATA,sha256=BkFLKzL7kwk8bjf76q_0GkwpmpIt_-j29Oz95WG0uag,4457
+mpy_repl_tool-0.13.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mpy_repl_tool-0.13.dist-info/entry_points.txt,sha256=zbeS1S_lh09IEX84HD6FU_mjNCVGxKL58_6Eou39gp8,47
+mpy_repl_tool-0.13.dist-info/top_level.txt,sha256=GrCUreMkUMY6QhtN2p-kNRiWxUyAc3ldZHhqyX2gAOs,6
+mpy_repl_tool-0.13.dist-info/RECORD,,
