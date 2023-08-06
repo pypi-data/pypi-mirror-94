@@ -1,0 +1,14 @@
+splicemachinesa/__init__.py,sha256=Sa61w4hh1YQXRTZY8-2UKpVpxkTVziSdhhoxFidrk7Q,1213
+splicemachinesa/base.py,sha256=cCBwWNY-xpYeZTDrwIi14PCurZ4iBO73C77maMvlfZA,43126
+splicemachinesa/constants.py,sha256=yHLHnmE4AlykpbU4RWg4UDH8Ke_D9wADOjGZjODNCt4,7985
+splicemachinesa/pyodbc.py,sha256=hzi4dJPU09B6LnfwVE11Q1uSq6qZOqUOxiTQZnLtsUo,5355
+splicemachinesa/reflection.py,sha256=MbmV9EHHrJ4Oz-LBEPtyUjNEhMJB1czKL3q0xgzGDtU,22025
+splicemachinesa/requirements.py,sha256=_AcmPXRMyzEQKnrlJ8T9DNIfjmJy-3oLddUl_iivWPw,5282
+splicemachinesa/splice_machine.py,sha256=nHVH1SV2unf4LeoocWKlPk4-e0pLYHENbo2Jf5wt12w,8626
+splicemachinesa/utilities.py,sha256=_5NlCm8QmtI8Ui1JP_xj750HkTgTy1szpKusSICGVQ0,2183
+splicemachinesa-0.3.6.dist-info/LICENSE.txt,sha256=V8j_M8nAz8PvAOZQocyRDX7keai8UJ9skgmnwqETmdY,34520
+splicemachinesa-0.3.6.dist-info/METADATA,sha256=yNAj_RKW1QcQQmfO07L8qAusY0R96TkAYux6LJbLmXk,7688
+splicemachinesa-0.3.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+splicemachinesa-0.3.6.dist-info/entry_points.txt,sha256=AcxrVUg2325NkQ-sZ2s3dZ1XtHlmBowMflhgoj1nsvE,256
+splicemachinesa-0.3.6.dist-info/top_level.txt,sha256=c6llzNGjJYeB52Te6jYAPqURye0CPgBvib9AJ7RGBqE,16
+splicemachinesa-0.3.6.dist-info/RECORD,,
