@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: os_android_play_console_automation
+Version: 1.00
+Summary: This module will automate a bunch of Google Play actions like publish apk/app bundle and image handling
+Home-page: https://github.com/osfunapps/os-android-play-console-automation-py
+Author: Oz Shabat
+Author-email: admin@os-apps.com
+License: MIT
+Description: UNKNOWN
+Keywords: python,osfunapps,apk,google_play,play_console,app_bundle,android,automation,release,publish,assemble-release,create,google-play,screenshots,logo,feature_graphic
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.9
