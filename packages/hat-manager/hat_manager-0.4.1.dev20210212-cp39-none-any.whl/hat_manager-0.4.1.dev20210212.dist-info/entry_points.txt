@@ -1,0 +1,7 @@
+[console_scripts]
+
+
+[gui_scripts]
+hat-manager-event = hat.manager.event.main:main
+hat-manager-hue = hat.manager.hue.main:main
+
