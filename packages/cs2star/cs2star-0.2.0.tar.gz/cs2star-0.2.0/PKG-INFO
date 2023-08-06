@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: cs2star
+Version: 0.2.0
+Summary: A simple utility to convert cryosparc particle positions to relion star format.
+Home-page: https://github.com/brisvag/cs2star/
+Author: Lorenzo Gaifas
+Author-email: brisvag@gmail.com
+License: BSD 3-Clause
+Description: # cs2star.py
+        
+        A simple utility that wraps around `csparc2star.py` to convert particle positions from Cryosparc JOB directories into a RELION-ready directory. On top of what `csparc2star.py` already does, this script automatically symlinks (or copies) the `.mrc` files, renaming them as appropriate to `mrcs` and updating the `rlnMicrographName` column to reflect the change.
+        
+        # Usage
+        
+        ```bash
+        cs2star.py particle_positions_job_directory [destination_directory]
+        ```
+        
+        A couple more options are available, check out the help page with `-h`.
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown

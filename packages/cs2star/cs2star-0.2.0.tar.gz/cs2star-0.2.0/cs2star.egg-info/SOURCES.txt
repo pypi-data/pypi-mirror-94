@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+cs2star.egg-info/PKG-INFO
+cs2star.egg-info/SOURCES.txt
+cs2star.egg-info/dependency_links.txt
+cs2star.egg-info/entry_points.txt
+cs2star.egg-info/not-zip-safe
+cs2star.egg-info/requires.txt
+cs2star.egg-info/top_level.txt
