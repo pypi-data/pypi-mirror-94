@@ -1,0 +1,12 @@
+pystone/__init__.py,sha256=hPM7abCLDpwG_h3qjUsGf-Q6_PCrugiYX35NGGW5sd8,8707
+pystone/__version__.py,sha256=Q5xTUtC7svgt_1jAYyOKQclIZi0LFk5Hav8ztBHgMJM,343
+pystone/constants.py,sha256=XEPtWmaUjrOYr0HLVXF2G2MPCt4Z-SnlCQaO1eHAjOY,2003
+pystone/deepl.py,sha256=j8H-JdZXS9tPxrz0VCygd-_m0VxdkGIBsEn6oDxWnXs,6187
+pystone/languages.py,sha256=kw41VXQxixaajxdx9a9MnmVfIjvKc3n-4IVFwRuqshc,2080
+pystone/reverso.py,sha256=yG7bLY_gMjnwpZ-2P2Y2qjgjE7Ioj9NQvMhauH9aaOk,5370
+pystone-0.1.0.dist-info/LICENSE,sha256=BLcKMNFzoCD9DcJyiygo0GlVlPCQdu8tRPFSQRyq4ac,1061
+pystone-0.1.0.dist-info/METADATA,sha256=ac9p5y0Vh1pgpKXDTsOzW0SfzrYb907Xd3QP4J13Xhs,7243
+pystone-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pystone-0.1.0.dist-info/entry_points.txt,sha256=k8Cp68mS6kov6i0smhTYedRmkwik7knRxrml0-3B08w,51
+pystone-0.1.0.dist-info/top_level.txt,sha256=rTbrJXn8qKBs4V-G87StZuW7X4kyRILldj59Rn17ZoQ,8
+pystone-0.1.0.dist-info/RECORD,,

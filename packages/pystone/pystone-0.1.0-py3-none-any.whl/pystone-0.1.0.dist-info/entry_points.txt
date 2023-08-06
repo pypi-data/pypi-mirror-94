@@ -1,0 +1,3 @@
+[console_scripts]
+pystone = pystone.__init__:main
+
