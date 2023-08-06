@@ -1,0 +1,11 @@
+yowasp_nextpnr_ice40/__init__.py,sha256=MVwQVpWEebLWafLkZNxrFJHpncyZkvSRrs19vlBhKcs,3175
+yowasp_nextpnr_ice40/icebram.wasm,sha256=KcKLi0G7T_Q82TVIndn0ptDvGoOmvH96sptsgAMbhj0,511260
+yowasp_nextpnr_ice40/icemulti.wasm,sha256=KJdW6q8KrG7m2KWXQzrYYkrVey2ATJPyMr4KyoP8yLk,464401
+yowasp_nextpnr_ice40/icepack.wasm,sha256=w62dvz0TlueGU8wySO6TNbLX2wEW1pOmERT4SVomaLo,554333
+yowasp_nextpnr_ice40/icepll.wasm,sha256=sidjWyt4fThfVfLD1cDzsTaZ6kq2fpIyitLZBOvlcSU,62117
+yowasp_nextpnr_ice40/nextpnr-ice40.wasm,sha256=BuL1F2fFtZzAX5Q9Ig6aWNjM4C6ZDdQq9xyxE_XKcnc,1677554
+yowasp_nextpnr_ice40-0.0.post2867.dev68.dist-info/METADATA,sha256=SMQndTvbzkM4IbiHs5V80kThBbug1Z_qSOy21xLU9ng,1245
+yowasp_nextpnr_ice40-0.0.post2867.dev68.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+yowasp_nextpnr_ice40-0.0.post2867.dev68.dist-info/entry_points.txt,sha256=kmtWwGAD2zrwnSifDlIrKX6GZv3AfkUG20T8yGf9HsY,371
+yowasp_nextpnr_ice40-0.0.post2867.dev68.dist-info/top_level.txt,sha256=JsqBSQJgfE-9Or6J52YpOk1sRBM-U1v60tVgfalNhiw,21
+yowasp_nextpnr_ice40-0.0.post2867.dev68.dist-info/RECORD,,
