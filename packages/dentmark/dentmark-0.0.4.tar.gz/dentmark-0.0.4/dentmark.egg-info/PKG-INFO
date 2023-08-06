@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: dentmark
+Version: 0.0.4
+Summary: An indentation-delimited, configurable markdown language
+Home-page: https://www.transvec.com/dentmark
+Author: Ryli Dunlap
+Author-email: ryli@transvec.com
+License: UNKNOWN
+Description: # Dentmark
+        
+        An indentation-delimited, configurable markdown language
+        
+        Demo and docs: https://www.transvec.com/dentmark
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
