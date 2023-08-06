@@ -1,0 +1,5 @@
+Django>=1.10
+djangorestframework>=3.3
+
+[:python_version < "3.5"]
+typing<3.8,>=3.7
