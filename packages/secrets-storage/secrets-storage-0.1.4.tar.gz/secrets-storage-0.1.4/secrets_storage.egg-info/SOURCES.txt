@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+secrets_storage/__init__.py
+secrets_storage/storages.py
+secrets_storage/version.py
+secrets_storage.egg-info/PKG-INFO
+secrets_storage.egg-info/SOURCES.txt
+secrets_storage.egg-info/dependency_links.txt
+secrets_storage.egg-info/not-zip-safe
+secrets_storage.egg-info/requires.txt
+secrets_storage.egg-info/top_level.txt
