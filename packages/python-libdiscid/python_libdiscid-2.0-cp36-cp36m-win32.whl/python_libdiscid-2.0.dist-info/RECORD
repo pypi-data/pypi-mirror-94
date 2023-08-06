@@ -1,0 +1,16 @@
+libdiscid/__init__.py,sha256=XZLsSSulD6Q-F7C0xSpuiM8hMSe763fzpJWfMCzdA7U,10457
+libdiscid/_discid.cp36-win32.pyd,sha256=ikuiN78Sf_pIoxh48NTxrPSosUx9gYTtAQgyvA9LGMU,76800
+libdiscid/_discid.pyi,sha256=no9cdQl6hRJBDpbGpeCIYr6WUw5BKJrEcBhMFvpuoMQ,2370
+libdiscid/exceptions.py,sha256=XO041kqsl1Q4zLF-wTir028wsNhc7t6o52KAeQbTlrQ,1364
+libdiscid/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libdiscid/compat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libdiscid/compat/discid.py,sha256=DwyzMNf1UuyYWNo0JFouy0BZoDp3BAnIWyNWViyniY0,6570
+libdiscid/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libdiscid/tests/common.py,sha256=Zjz02UlrRSifPxumG-5n4Fr-A8YPOrJlCQ0JlmT2EIY,2329
+libdiscid/tests/test_compat_discid.py,sha256=9mpgXn2lWKuFKSmNtjzLqDeF1ULtJPzhOzjXXzLBVzY,5784
+libdiscid/tests/test_libdiscid.py,sha256=TR7t8kZMStINjOpO1gwFc5xD0dBBxpwrqJUT9-PgPts,6048
+python_libdiscid-2.0.dist-info/LICENSE,sha256=DpC0t8QwMEOgPp-_ZGu4Q2IztH-XdTKZ889PFfOzQfw,1113
+python_libdiscid-2.0.dist-info/METADATA,sha256=8hyPcLc3TChbWhi35xuD_Jom9Nv2BD9E9TrqCU8mQjI,2903
+python_libdiscid-2.0.dist-info/WHEEL,sha256=MIcnjHs8vB2T7t3biMROEABHsna_miSfN1s4sPkohUM,97
+python_libdiscid-2.0.dist-info/top_level.txt,sha256=xaJ5FmYBlY8-iQaBYw7R_NzIgy-49nYp146silcZvR8,10
+python_libdiscid-2.0.dist-info/RECORD,,
