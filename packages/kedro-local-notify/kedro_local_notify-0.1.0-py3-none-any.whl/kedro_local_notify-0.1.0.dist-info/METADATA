@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: kedro-local-notify
+Version: 0.1.0
+Summary: A kedro plugin that interacts with your local notifications
+Author: Zain Patel
+Author-email: zain.patel06@gmail.com
+Requires-Python: >=3.7,<3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: kedro (>=0.17.0,<0.18.0)
+Requires-Dist: pync (>=2.0.3,<3.0.0)
