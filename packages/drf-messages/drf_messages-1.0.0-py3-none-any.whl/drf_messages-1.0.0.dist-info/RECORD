@@ -1,0 +1,17 @@
+drf_messages/__init__.py,sha256=aw0bOBIqv2o4cx2sXB5z3oI54i89UH8U62SpOZ7L888,122
+drf_messages/admin.py,sha256=MeXTPLP6qycmo03qPwRWhmfwvQEntqvemdos84g4HvE,800
+drf_messages/apps.py,sha256=GABw3UKWtYgPfPMZPnouqK4Zc3MjuVJN2WJFC2g1s6Y,138
+drf_messages/conf.py,sha256=yLY_oZq6qeSCG8GjxYEeDTNcY1SUdfovFMYp62JXvnY,449
+drf_messages/filters.py,sha256=OvbwCm0IQqkI5RVzFlTfj2lDW9dRgFokpc5FqBOkKYo,955
+drf_messages/models.py,sha256=QHN2o7UDfcc9YgCeMn9E6tlfIzzBofgJB5XwAvrcBow,6365
+drf_messages/serializers.py,sha256=8hx67bYuEWfkhz8nCkIlPknQBE52ONi6-NIF4bCvF3A,622
+drf_messages/storage.py,sha256=WtYqQsYLskKYwh95f-cBlNm9LHC7TgndDkvnGJ5dsUk,4252
+drf_messages/urls.py,sha256=8Px9tbVJsnAAnV1IFfttqfCAcPx8tqL11cHOM7WjsPg,248
+drf_messages/views.py,sha256=pSOMDxAE96-UluJEZF9Rg1Jwr2NDS9134_AMi2xqKrY,1575
+drf_messages/migrations/0001_initial.py,sha256=eoNkfVdhN06cyRHMn3yeCZpqmPqRe_VkLEn5-TrZTkM,2146
+drf_messages/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drf_messages-1.0.0.dist-info/LICENSE,sha256=IRP8ezkpIm-qwvBjbIqDuQXykIQoRYrJp9Kg4A1p9KA,1547
+drf_messages-1.0.0.dist-info/METADATA,sha256=WhkM2HvC349KVv8Mw_MxSUMZN9eIE_VpIHa9-cdwnNY,3591
+drf_messages-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+drf_messages-1.0.0.dist-info/top_level.txt,sha256=mLtSyn-UNmB0yKpnEsRBMXXdK2tPOUWkmj44yc3adH4,13
+drf_messages-1.0.0.dist-info/RECORD,,
