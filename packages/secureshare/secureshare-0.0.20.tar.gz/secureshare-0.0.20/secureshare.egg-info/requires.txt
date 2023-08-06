@@ -1,0 +1,8 @@
+flask
+psycopg2
+pyaltt2>=0.0.97
+pycrypto
+pytz
+pyyaml
+requests
+sqlalchemy
