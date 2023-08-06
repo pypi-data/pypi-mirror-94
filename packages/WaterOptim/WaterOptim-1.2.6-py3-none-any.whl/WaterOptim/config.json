@@ -1,0 +1,101 @@
+{
+    "filename": "config.json",
+    "lang": 1,
+    "icons": {
+        "main_frame": "icons\\drop.png",
+        "project_tree": "icons\\project.png",
+        "run1": "icons\\recycle-water.png",
+        "sensi": "icons\\bar-graph.png",
+        "add": "icons\\plus.png",
+        "rmv": "icons\\rmv1.png",
+        "new": "icons\\add-file.png",
+        "open": "icons\\open.png",
+        "logout": "icons\\logout.png",
+        "licence": "icons\\licence.png",
+        "setting": "icons\\setting.png",
+        "chat": "icons\\chat.png",
+        "excel": "icons\\excel.png",
+        "pdf": "icons\\pdf.png"
+    },
+    "project_schema": {
+        "id": "",
+        "name": "",
+        "desc": "",
+        "posts": [],
+        "subs": [],
+        "sources": [],
+        "sinks": [],
+        "loc": [],
+        "cons": []
+    },
+    "subs_schema": {
+        "project": "",
+        "id": "",
+        "name": "",
+        "desc": ""
+    },
+    "loc_schema": {
+        "project": "",
+        "id": "",
+        "name": "",
+        "desc": ""
+    },
+    "post_schema": {
+        "project": "",
+        "id": "",
+        "name": "",
+        "desc": "",
+        "loc": "",
+        "priority": 100,
+        "subs": {},
+        "regen": {
+            "R": {},
+            "f": {},
+            "loc": {}
+        }
+    },
+    "sink_schema": {
+        "project": "",
+        "id": "",
+        "name": "",
+        "desc": "",
+        "loc": "",
+        "subs": {},
+        "m": 0
+    },
+    "source_schema": {
+        "project": "",
+        "id": "",
+        "name": "",
+        "desc": "",
+        "loc": "",
+        "subs": {},
+        "priority": 100,
+        "m": 0
+    },
+    "cons_schema": {
+        "project": "",
+        "id": "",
+        "from_type": "",
+        "to_type": "",
+        "from_": "",
+        "to_": "",
+        "ub": 0,
+        "lb": 0,
+        "distance": 0,
+        "enable": 0,
+        "desc": "",
+        "risque": 0,
+        "product_safety": 0,
+        "process_safety": 0,
+        "feasibility": 0,
+        "priority": 0
+    },
+    "var_schema": {
+        "val": 0,
+        "name": "",
+        "lb": 0,
+        "ub": 0,
+        "enable":0
+    }
+}
