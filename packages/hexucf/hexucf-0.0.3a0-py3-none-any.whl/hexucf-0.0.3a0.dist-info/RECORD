@@ -1,0 +1,15 @@
+capsnet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+capsnet/layers.py,sha256=xtvjaRX6Rn9qc1djtIigcxlfJgeq1VHqE2ehUvpPmQE,40208
+capsnet/losses.py,sha256=SI1IAqu93tGg9Emn4Jo4N36qHz2ucU1J45jB-3tqxj8,2187
+capsnet/models.py,sha256=-hoM56AElTJNgTGbtfYXKgPdl1LFPF1kkxHWwH46eZI,9149
+capsnet/setup.py,sha256=IXQnpbGD8h4uEFYn7nrHwbpTcGYhabROjGa6ffFtsjY,703
+capsnet/utils.py,sha256=nUpOAhsoHCaLOHYfyIM-Espo6jKVd7fIn5f2-IaXvnE,2850
+datasets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datasets/setup.py,sha256=jaerjO0OtxbdrRl2ACyQBrOcIEnJfRUSRoZpvWQBlrQ,712
+datasets/ucf101.py,sha256=cCx33ozvm9bkCswb8o3ylQq0jA3CTcaN-oh6AiHj11g,5370
+datasets/ucf50.py,sha256=-HtznO7a2GzheM0vJ8aplVSx6a2ns28rlmRKLSMWMbU,5462
+datasets/utils.py,sha256=zrJ2q8h8Hu_jxSJUhcDCi9_N2IwmbGwAAN5EztZEEBQ,3431
+hexucf-0.0.3a0.dist-info/METADATA,sha256=4QfUCBkJp0GwxTQJZkXfBlxte48RltXv0_d_OL4OgBo,490
+hexucf-0.0.3a0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hexucf-0.0.3a0.dist-info/top_level.txt,sha256=KNNJp94CbrzAJFtNMGkPVhLhZiZWnYbbqwvAJhPp9vg,17
+hexucf-0.0.3a0.dist-info/RECORD,,
