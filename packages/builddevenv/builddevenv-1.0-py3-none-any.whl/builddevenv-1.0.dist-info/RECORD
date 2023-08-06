@@ -1,0 +1,11 @@
+builddevenv/Builder.py,sha256=A_uVGJA1XkrYtBBCJQxHKlGPoiMVh8lieIVJWf8ScH8,8846
+builddevenv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+builddevenv/__main__.py,sha256=SYrqsFbpMTuAsy_myyGBv_yeeQT8tXJ3G_KUkgqUHpA,132
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_builddevenv.py,sha256=OAdMHbwMvfTeUFIShopM3vQm5ZIaBGDs6w2AzuH0kx4,704
+builddevenv-1.0.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+builddevenv-1.0.dist-info/METADATA,sha256=guRq_D7iOlwhvSR3iWrQaw9Cyfr854zj8cmSRSNnemY,1998
+builddevenv-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+builddevenv-1.0.dist-info/entry_points.txt,sha256=UYh3kGOMmm-pbE0BWe_AHPkzHgH464bc-CMTMSnQgEE,58
+builddevenv-1.0.dist-info/top_level.txt,sha256=haUX4RaiICTm5H_30cX8_0TwH1T5U4SUejLd4HPZeBs,17
+builddevenv-1.0.dist-info/RECORD,,
