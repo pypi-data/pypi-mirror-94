@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>main_window</class>
+ <widget class="QMainWindow" name="main_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>770</width>
+    <height>507</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="main_widget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="main_tabs">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="summary_tab">
+       <attribute name="title">
+        <string>Summary</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="summary_tab_layout">
+        <item>
+         <widget class="Summary" name="summary" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="activities_tab">
+       <attribute name="title">
+        <string>Activities</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="activities_tab_layout">
+        <item>
+         <layout class="QVBoxLayout" name="activity_list_area">
+          <item>
+           <widget class="QLabel" name="activities_label">
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Activities</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="ActivityListTable" name="activity_list_table">
+            <property name="minimumSize">
+             <size>
+              <width>500</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>600</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::SingleSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectRows</enum>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="cornerButtonEnabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="ActivitySummary" name="activity_summary" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="social_tab">
+       <attribute name="title">
+        <string>Social</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="SocialTree" name="social_tree">
+            <column>
+             <property name="text">
+              <string notr="true">1</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <widget class="SocialActivityList" name="social_activity_list">
+            <property name="minimumSize">
+             <size>
+              <width>720</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>600</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::SingleSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectRows</enum>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="cornerButtonEnabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="ActivitySummary" name="social_activity_summary" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>770</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="file_menu">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="export_menu">
+     <property name="title">
+      <string>Export</string>
+     </property>
+     <addaction name="export_original"/>
+    </widget>
+    <addaction name="action_import"/>
+    <addaction name="action_add_manual"/>
+    <addaction name="export_menu"/>
+    <addaction name="separator"/>
+    <addaction name="action_quit"/>
+   </widget>
+   <widget class="QMenu" name="settings_menu">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="action_units"/>
+    <addaction name="action_servers"/>
+   </widget>
+   <widget class="QMenu" name="activity_menu">
+    <property name="title">
+     <string>Activity</string>
+    </property>
+    <addaction name="action_edit"/>
+    <addaction name="action_add_photos"/>
+    <addaction name="action_analyse"/>
+   </widget>
+   <addaction name="file_menu"/>
+   <addaction name="activity_menu"/>
+   <addaction name="settings_menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_import">
+   <property name="text">
+    <string>Import</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="action_quit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="action_units">
+   <property name="text">
+    <string>Units</string>
+   </property>
+  </action>
+  <action name="action_edit">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="export_original">
+   <property name="text">
+    <string>Original</string>
+   </property>
+  </action>
+  <action name="action_add_manual">
+   <property name="text">
+    <string>Add Manual</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="action_add_photos">
+   <property name="text">
+    <string>Add Photos</string>
+   </property>
+  </action>
+  <action name="actionAdd">
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="action_servers">
+   <property name="text">
+    <string>Servers</string>
+   </property>
+  </action>
+  <action name="action_analyse">
+   <property name="text">
+    <string>Analyse</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ActivityListTable</class>
+   <extends>QTableWidget</extends>
+   <header>activate/app/tables.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ActivitySummary</class>
+   <extends>QWidget</extends>
+   <header>activate/app/activity_summary.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SocialTree</class>
+   <extends>QTreeWidget</extends>
+   <header>activate/app/social_tree.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SocialActivityList</class>
+   <extends>QTableWidget</extends>
+   <header>activate/app/tables.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Summary</class>
+   <extends>QWidget</extends>
+   <header>activate/app/summary.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>action_quit</sender>
+   <signal>triggered()</signal>
+   <receiver>main_window</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_import</sender>
+   <signal>triggered()</signal>
+   <receiver>main_window</receiver>
+   <slot>import_activities()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_units</sender>
+   <signal>triggered()</signal>
+   <receiver>main_window</receiver>
+   <slot>edit_unit_settings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_edit</sender>
+   <signal>triggered()</signal>
+   <receiver>main_window</receiver>
+   <slot>edit_activity_data()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>export_original</sender>
+   <signal>triggered()</signal>
+   <receiver>main_window</receiver>
+   <slot>export_activity()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_add_manual</sender>
+   <signal>triggered()</signal>
+   <receiver>main_window</receiver>
+   <slot>add_manual_activity()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_add_photos</sender>
+   <signal>triggered()</signal>
+   <receiver>main_window</receiver>
+   <slot>add_photos()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_servers</sender>
+   <signal>triggered()</signal>
+   <receiver>main_window</receiver>
+   <slot>edit_server_settings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_analyse</sender>
+   <signal>triggered()</signal>
+   <receiver>main_window</receiver>
+   <slot>analyse_activity()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>activity_list_table</sender>
+   <signal>currentCellChanged(int,int,int,int)</signal>
+   <receiver>main_window</receiver>
+   <slot>update_activity()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>312</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>main_tabs</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>main_window</receiver>
+   <slot>main_tab_switch()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>639</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>social_tree</sender>
+   <signal>itemChanged(QTreeWidgetItem*,int)</signal>
+   <receiver>main_window</receiver>
+   <slot>filter_social_activities()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>631</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>social_activity_list</sender>
+   <signal>currentCellChanged(int,int,int,int)</signal>
+   <receiver>main_window</receiver>
+   <slot>update_social_activity()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>529</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>import_activities()</slot>
+  <slot>update_page()</slot>
+  <slot>update_activity()</slot>
+  <slot>edit_unit_settings()</slot>
+  <slot>edit_activity_data()</slot>
+  <slot>main_tab_switch()</slot>
+  <slot>update_totals()</slot>
+  <slot>export_activity_original()</slot>
+  <slot>add_manual_activity()</slot>
+  <slot>add_photos()</slot>
+  <slot>edit_server_settings()</slot>
+  <slot>update_social_activity()</slot>
+  <slot>filter_social_activities()</slot>
+  <slot>analyse_activity()</slot>
+ </slots>
+</ui>

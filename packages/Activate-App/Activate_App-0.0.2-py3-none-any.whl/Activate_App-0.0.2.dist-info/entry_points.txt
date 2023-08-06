@@ -1,0 +1,3 @@
+[gui_scripts]
+activate = activate.app:main
+
