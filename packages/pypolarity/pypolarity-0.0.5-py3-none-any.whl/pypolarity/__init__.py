@@ -1,0 +1,1 @@
+from pypolarity.main import do_sentiment_whole_news

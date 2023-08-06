@@ -1,0 +1,16 @@
+pypolarity/__init__.py,sha256=RugI9CvsG2MuHHQK4eE79am0bIzwAJMT-0Mqhw8Mduk,51
+pypolarity/main.py,sha256=ARkN0dcBC8bYWR64lccA58vDTTZWkED6IQe3ROc1Mrk,19151
+pypolarity/sentiment.py,sha256=R94EqnxkmjKB00vTX5zpxSY5JO2PQO4kdOhCUpKF6u0,4632
+pypolarity/sentimentV2.py,sha256=B8cR3AIKa-r7FRfoWaxxKG04JWTs2O5bgQVhWEVmrAU,17132
+pypolarity/sentimentV3.py,sha256=n4uYE0AK0BKXGlt0OkiyCn1l1e93Ija501Xv25VawmU,17916
+pypolarity/sentimentV4.py,sha256=9OSDV1V9ul2Z9WPSrsyMbvAstRCFF_6Ha3RnguVPiBE,18812
+pypolarity/test.py,sha256=Uct_2Tbi9FpAVATdnsv8Le58yVlNqImY1m575kmB7Xs,382
+pypolarity/sentiment/negative_adjectives.txt,sha256=TX6DeNVX4fgR7PwYj8DLtyO9ZyhqAgdwUFL6fIOREME,3047
+pypolarity/sentiment/negative_new.txt,sha256=dHyEUydJeaaqNvL-PS4quKB6uTnzImVySgLILczFKNw,15150
+pypolarity/sentiment/negative_verbs.txt,sha256=6l_30u3CqO8gr4hDjXiLwew7vqySrn3KTxY15KnnwDQ,5218
+pypolarity/sentiment/positive_new.txt,sha256=TJHhWT0JGFxO_1mF9JNHyFPZ_oHf_7G4AzOfDqKnHTc,7319
+pypolarity-0.0.5.dist-info/LICENSE.txt,sha256=pCc1bO_gJ5x_lUX4QXv7jckmeTxXLXMtQlgQWaCQw8w,1050
+pypolarity-0.0.5.dist-info/METADATA,sha256=p3DQyaSyT_yfAYqZhppVRhRs_7MpwfrrnU6bxuoAZN4,492
+pypolarity-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pypolarity-0.0.5.dist-info/top_level.txt,sha256=YWl_yxW4uFcDF14FAgyXP4RcPNKmNjyUWq43oqqSYYo,11
+pypolarity-0.0.5.dist-info/RECORD,,
