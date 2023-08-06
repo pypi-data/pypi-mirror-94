@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pylichat
+Version: 1.1
+Summary: A library for the Lichat protocol
+Home-page: https://github.com/shirakumo/py-lichat
+Author: Nicolas Hafner
+Author-email: shinmera@tymoon.eu
+License: zlib
+Keywords: chat,protocol
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: zlib/libpng License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Internet
+
+## About PyLichat
+This is a library implementing the client-side protocol for "Lichat"(https://github.com/shirakumo/lichat-protocol).
+
+See "``__main__.py``"(link pylichat/__main__.py) for a simple example client usage.
+
+

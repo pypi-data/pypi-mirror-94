@@ -1,0 +1,13 @@
+pylichat/__init__.py,sha256=2520kOTU8EGsLv7k_YyUGURs4mvjUgru2KgTOJ1mnNg,107
+pylichat/__main__.py,sha256=I_mjgZq1ISmbPF5eQnhvXu164zao670eG0qJY72ddew,2117
+pylichat/client.py,sha256=RDMicekhVYykNiHMTCmalWs8LGT9YSCOGnFKHa6WGcg,16526
+pylichat/symbol.py,sha256=U032G7xAsklZR_Y7jWn2vy-Pqm1XSznfNQDgA9TCZ2o,1297
+pylichat/toolkit.py,sha256=vzYNJ4tVpRpjOFyeH72vvbHzPmWNFm3BIv6ZHF9xTHM,1442
+pylichat/update.py,sha256=UONDYS_VTsfq6FuG-_D7xWzdRew29FVZls74ihbFT5M,6456
+pylichat/wire.py,sha256=0Ls-7WsfApJmDzTDVX-wNsyG0vIfVbBXJqqbeYir4VQ,3376
+pylichat-1.1.dist-info/LICENSE,sha256=ulv3Wg8oYuE93f8_fK23zMFvJsw-czzuiqoKAJ0hTkI,853
+pylichat-1.1.dist-info/METADATA,sha256=uiuks8ZX8w7y58t-YmjAJLe3QpnLv3kupTt0V7gU9iI,720
+pylichat-1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pylichat-1.1.dist-info/entry_points.txt,sha256=oZI4w6Y78JMgxbMEjjqNc7tC5fCMfXPICNFujdKUYss,53
+pylichat-1.1.dist-info/top_level.txt,sha256=Ys3KXhL7lT5aKqAFUQ5U4WIP6By2-AvJaoBy-Zb5ERA,9
+pylichat-1.1.dist-info/RECORD,,
