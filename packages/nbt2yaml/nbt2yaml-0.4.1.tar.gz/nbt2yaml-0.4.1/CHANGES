@@ -1,0 +1,34 @@
+0.4.1
+=====
+Fixed a bug where an entry that has a blank list would fail to be
+parsed from YAML form.
+
+0.4.0
+=====
+Happy new decade!  Someone said they were using this.    So I
+resurrected it from a deleted hg repository, got it going on
+Python 3 2020's style.
+
+Also implemented the Long_Array datatype, patch courtesy
+Mark Taylor.
+
+
+0.3.0
+=====
+Modified the yaml rendering of TAG_Byte_array to render/
+parse as a hex dump.  This is a more readable/editable
+format, also courtesy dratin0.
+
+0.2.2
+=====
+Added support for the new TAG_Int_array type, courtesy
+dratini0.
+
+0.2.1
+=====
+Fixed -n option in yaml2nbt, previously was having
+no effect and still gzipping output.
+
+0.2.0
+=====
+Initial Release.
