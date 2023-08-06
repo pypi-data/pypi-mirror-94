@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: json_easy
+Version: 1.1
+Summary: Json DB's made easy
+Home-page: https://github.com/ConnorTippets/json-easy/
+Author: meiscool466
+License: MIT
+Description: # json-easy
+        Used to make json db'ing easier
+        
+        Usage:
+        ```py
+        import json-easy as json
+        db = json.db('path/to/db.json')
+        #in a function
+        await db.changeval('somekey', 'someval')
+        await db.getval('somekey')
+        await db.removeval('somekey')
+        ```
+        
+Keywords: json,db,easy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
