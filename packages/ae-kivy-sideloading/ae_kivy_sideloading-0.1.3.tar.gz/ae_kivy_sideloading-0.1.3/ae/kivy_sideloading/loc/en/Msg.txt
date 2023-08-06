@@ -1,0 +1,20 @@
+{
+"help_flow#open_file_chooser": """\
+tap to open the
+file chooser.""",
+"help_flow#open_iterable_displayer": """\
+tap for to display
+more detailed info.""",
+"help_flow#open_qr_displayer": """\
+tap for to display
+the QR code.""",
+"help_flow#open_sideloading_menu": """\
+tab for to open the menu
+of the sideloading server.""",
+"help_flow#start_sideloading_server": """\
+tap for to start the
+sideloading-server.""",
+"help_flow#start_sideloading_server":  """\
+tap for to stop the
+sideloading-server.""",
+}
