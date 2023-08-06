@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+targetd_client/__init__.py
+targetd_client/cli.py
+targetd_client/client.py
+targetd_client/exceptions.py
+targetd_client.egg-info/PKG-INFO
+targetd_client.egg-info/SOURCES.txt
+targetd_client.egg-info/dependency_links.txt
+targetd_client.egg-info/entry_points.txt
+targetd_client.egg-info/not-zip-safe
+targetd_client.egg-info/requires.txt
+targetd_client.egg-info/top_level.txt

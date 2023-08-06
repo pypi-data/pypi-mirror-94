@@ -1,0 +1,10 @@
+[tool.commitizen]
+name = "cz_customize"
+version = "0.3.0"
+tag_format = "v$version"
+
+[tool.commitizen.customize]
+schema_pattern = '^(build|ci|docs|feat|fix|initial|perf|refactor|revert|style|test)!?(\(\S+\))?:.{1,50}$'
+bump_pattern = '^(build|feat|fix|perf)'
+bump_map = { "build" = "PATCH", "feat" = "MINOR", "fix" = "PATCH", "perf" = "PATCH" }
+change_type_order = [ "BREAKING CHANGE", "feat", "fix", "perf", "build", "refactor", "revert", "style", "docs", "ci" ]

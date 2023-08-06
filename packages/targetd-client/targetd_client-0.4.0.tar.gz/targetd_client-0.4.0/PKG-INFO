@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: targetd_client
+Version: 0.4.0
+Summary: A client library for targetd
+Home-page: https://gitlab.com/Arcaik/targetd_client
+Author: Johan Fleury
+Author-email: jfleury@arcaik.net
+License: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Description: # targetd-client
+        
+        targetd-client is a client library for the targetd API.
+        
+        ## Usage
+        
+        targetd-client is available on PyPI:
+        
+        ```
+        $ python -m pip install targetd-client
+        ```
+        
+        Using the library is pretty simple:
+        
+        ```
+        >>> from targetd_client import TargetdClient
+        >>> targetd = TargetdClient("https://example.com:18700", "username", "password")
+        >>> pool_list = targetd.pool_list()
+        >>> vol_list = targetd.vol_list(pool_list[0]["name"])
+        >>> ...
+        ```
+        
+        ## `targetdctl`
+        
+        This projects also ships with the `targetdctl` CLI utility. To use it, you must
+        first install its dependencies:
+        
+        ```
+        $ pip install targetd-client[cli]
+        ```
+        
+        Use `targetdctl --help` to get the list of command lines arguments.
+        
+        ## Contributing
+        
+        This library is [Free Software](LICENCE) and every contributions are welcome.
+        
+        Please note that this project is released with a [Contributor Code of
+        Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to
+        abide by its terms.
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System
+Classifier: Topic :: System :: Filesystems
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: cli
