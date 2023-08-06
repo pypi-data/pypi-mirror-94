@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pudzu
+Version: 0.9.2
+Summary: Various dataviz-oriented utilities
+Home-page: https://github.com/Udzu/pudzu/
+Author: Uri Granta
+Author-email: uri.granta+python@gmail.com
+License: MIT
+Keywords: pudzu,visualization,pillow,unicode
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Requires-Dist: pudzu-utils
+Requires-Dist: pudzu-dates
+Requires-Dist: pudzu-pillar (>=0.9.2)
+Requires-Dist: pudzu-charts (>=0.9.2)
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Requires-Dist: pandas
+
+Various utility functions, mostly geared towards dataviz and used to create the data visualisations at https://www.flickr.com/photos/zarfo/albums (most of which have been posted to reddit at some point by /u/Udzu).
+
+
