@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: flake8-assert-check
+Version: 0.1
+Summary: Plugin for flake8 that checks for asserts in tests.
+Author: netqa GmbH
+Author-email: contact@netqa.de
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
