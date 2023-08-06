@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: geopython
+Version: 1.0.0
+Summary: Vanity package for geopython projects
+Home-page: https://geopython.github.io
+Author: Tom Kralidis
+Author-email: tomkralidis@gmail.com
+Maintainer: Tom Kralidis
+Maintainer-email: tomkralidis@gmail.com
+License: MIT
+Keywords: geospatial python
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: GIS
+Description-Content-Type: text/markdown
+
+# geopython
+
+Vanity package for [geopython](https://geopython.github.io) projects
+
+```bash
+pip install geopython
+```
+
+```python
+>>> import geopython
+```
+
