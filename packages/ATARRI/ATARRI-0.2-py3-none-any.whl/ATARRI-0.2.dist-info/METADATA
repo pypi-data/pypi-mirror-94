@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ATARRI
+Version: 0.2
+Summary: A TESS Archive RR Lyrae Classifier
+Home-page: https://github.com/kennethcarrell/ATARRI
+Author: Kenneth Carrell
+Author-email: kennethcarrell@gmail.com
+License: GPL-3.0
+Keywords: astronomy,periodic variables,light curves,RR Lyrae,TESS
+Platform: any
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Python: ==3.8.*
+Requires-Dist: numpy (>=1.19)
+Requires-Dist: astropy (>=4.2)
+Requires-Dist: lightkurve (>=1.11)
+Requires-Dist: astroquery (>=0.4)
+Requires-Dist: matplotlib (>=3.3)
+
+ATARRI (A TESS Archive RR Lyrae Classifier) is a GUI designed to visualize and do simple analysis of RR Lyrae stars using FFI data from TESS.
+
+For more information visit: https://github.com/kennethcarrell/ATARRI
+
+
