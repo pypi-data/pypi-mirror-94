@@ -1,0 +1,60 @@
+
+
+{% load staticfiles %}
+<style>
+    .logo {
+        height: 100px;
+    }
+</style>
+<div class="title">
+    <h2>
+        Relance d'appel à cotisation {{contribution.year}}
+    </h2>
+    <div class="logo">
+        <img src="{{uri}}{{actor.regionalnetwork.logo}}"
+        alt="logo">
+    </div>
+</div>
+
+<div class="email-content">
+
+    <p>
+        Bonjour {{user.name}},
+    </p>
+
+    <p>
+        <b>Nous avons le plaisir de compter {{actor.name}} parmi nos membres</b> et vous êtes indiqué comme contact de gestion.
+    </p>
+
+    <p>
+        Pour renouveler l’adhésion de votre structure au réseau de l’énergie citoyenne, nous vous invitons à <b>récupérer votre appel à cotisation dans votre espace membre ici :</b><br/>
+        <a href="https://membre.energie-partagee.org" _blank="">https://membre.energie-partagee.org</a>
+    </p>
+
+    <p>
+        
+        Grâce à cette double adhésion à {{actor.regionalnetwork.name}} et Energie Partagée vous avez accès à l'ensemble des services du réseau.
+    </p>
+    <p>
+        <b>Votre cotisation {{contribution.year}}</b> est de {{contribution.amount}}€. <br/>
+        Référence : <b>{{actor.regionalnetwork.code}}-{{contribution.year}}-{{contribution.id}}</b>
+    </p>
+    <p>
+        Nous vous invitons à régler <br/>
+        - par virement (de préférence) :<br/>
+        IBAN : {{actor.regionalnetwork.iban}}<br/>
+        BIC : {{actor.regionalnetwork.bic}}<br/>
+        - ou par chèque à l'ordre :<br/>
+        {{actor.regionalnetwork.name}} <br/>
+        {{actor.regionalnetwork.address}} <br/>
+        {{actor.regionalnetwork.postcode}} {{actor.regionalnetwork.city}}
+    </p>
+    <p>
+        Après réception de votre cotisation, nous mettrons votre reçu à disposition dans votre espace membre.
+    </p>
+    <p>
+        Pour toute question sur l'adhésion et la cotisation, n'hésitez pas à nous contacter.
+    </p>
+
+    <p>{{actor.regionalnetwork.usercontact.first_name}} {{actor.regionalnetwork.usercontact.last_name}}</p>
+</div>

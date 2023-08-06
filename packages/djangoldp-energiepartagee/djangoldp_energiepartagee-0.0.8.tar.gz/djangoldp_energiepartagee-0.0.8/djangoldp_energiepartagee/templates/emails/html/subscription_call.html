@@ -1,0 +1,118 @@
+
+
+{% load staticfiles %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet"> 
+    <style>
+        .mail {
+            width: 95%;
+            max-width: 1050px;
+            margin: auto;
+            border: solid 1px  #65aa04;
+            border-radius: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .title {
+            background-color: #65aa04;
+            width: 100%;
+            height: 250px;
+            text-align: center;
+            display: flex;
+            position: relative;
+            margin-bottom: 80px;
+            border-radius: 20px 20px 0 0;
+        }
+        h2 {
+            color: white;
+            font-size: 45px;
+            font-weight: 800;
+            margin: auto;
+        }
+        .logo {
+            height: 120px;
+            width: 100px;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3)
+        }
+        .logo img {
+            width:100px;
+            height:120px;
+            object-fit: contain;
+        }
+        .email-content {
+            max-width: 800px;
+            margin: auto;
+            width: 90%;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 25px;
+            margin: 30px 0;
+        }
+        a {
+            color:#65aa04;
+        }
+        b {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<div class="mail">
+    <div class="title">
+        <h2>
+        Appel à cotisation {{contribution.year}}
+        </h2>
+        <div class="logo">
+            <img src="{{uri}}{{actor.regionalnetwork.logo}}"
+            alt="logo">
+        </div>
+    </div>
+    <div class="email-content">
+        <p>
+            Bonjour {{user.name}},
+        </p>
+        <p>
+            <b>Nous avons le plaisir de compter {{actor.name}} parmi nos membres</b> et vous êtes indiqué comme contact de gestion.
+        </p>
+        <p>
+            Pour renouveler l’adhésion de votre structure au réseau de l’énergie citoyenne, nous vous invitons à <b>récupérer votre appel à cotisation dans votre espace membre ici :</b><br/>
+            <a href="https://membre.energie-partagee.org" target="_blank">https://membre.energie-partagee.org</a>
+        </p>
+        <p>
+            
+            Grâce à cette double adhésion à {{actor.regionalnetwork.name}} et Energie Partagée, vous avez accès à l'ensemble des services du réseau.
+        </p>
+        <p>
+            <b>Votre cotisation {{contribution.year}}</b> est de {{contribution.amount}}€. <br/>
+            Référence : <b>{{actor.regionalnetwork.code}}-{{contribution.year}}-{{contribution.contributionnumber}}</b>
+        </p>
+        <p>
+            Nous vous invitons à régler <br/>
+            - par virement (de préférence) :<br/>
+            IBAN : {{actor.regionalnetwork.iban}}<br/>
+            BIC : {{actor.regionalnetwork.bic}}<br/>
+            - ou par chèque à l'ordre :<br/>
+            {{actor.regionalnetwork.name}} <br/>
+            {{actor.regionalnetwork.address}} <br/>
+            {{actor.regionalnetwork.postcode}} {{actor.regionalnetwork.city}}
+        </p>
+        <p>
+            Après réception de votre cotisation, nous mettrons votre reçu à disposition dans votre espace membre.
+        </p>
+        <p>
+            Pour toute question sur l'adhésion et la cotisation, n'hésitez pas à nous contacter.
+        </p>
+        
+        <p>
+            {{actor.regionalnetwork.usercontact.first_name}} {{actor.regionalnetwork.usercontact.last_name}}
+        </p>
+    </div>
+</div>
