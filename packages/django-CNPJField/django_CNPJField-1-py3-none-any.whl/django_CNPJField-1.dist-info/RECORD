@@ -1,0 +1,9 @@
+cnpj_field/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cnpj_field/forms.py,sha256=lhTI40zfZevbxP2newzsJXbvpKgZdRRy3FetkxsPBVI,173
+cnpj_field/models.py,sha256=9F4Ik1IBgE-9Gd17GyeNpUgLOykXF0_b31rzgped2Ls,334
+cnpj_field/validators.py,sha256=g4jMRf10c4n2rAqK9ZJBvt55stN5UoC9nDyt_LWmX10,1890
+django_CNPJField-1.dist-info/LICENSE,sha256=b11M_apfTaWOrrN0gWm4VXz9o69i3HtVuYUzn6F6Yeg,1101
+django_CNPJField-1.dist-info/METADATA,sha256=KSqy8bWZG7v0rsHDxbBPUrP6l2RkfE4x6xMelRATfbI,1627
+django_CNPJField-1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_CNPJField-1.dist-info/top_level.txt,sha256=NDTllixYorXNeoIv4yS9_eHGFrxpNEen_aEnQegasok,11
+django_CNPJField-1.dist-info/RECORD,,
