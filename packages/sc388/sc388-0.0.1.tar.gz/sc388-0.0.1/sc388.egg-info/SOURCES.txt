@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+sc388/__init__.py
+sc388.egg-info/PKG-INFO
+sc388.egg-info/SOURCES.txt
+sc388.egg-info/dependency_links.txt
+sc388.egg-info/top_level.txt

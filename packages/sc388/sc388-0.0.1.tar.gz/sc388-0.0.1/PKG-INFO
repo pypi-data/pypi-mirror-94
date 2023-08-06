@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: sc388
+Version: 0.0.1
+Summary: A very basic number addition
+Home-page: UNKNOWN
+Author: Sai Charan 
+Author-email: sai.aws@yandex.com
+License: MIT
+Description: --This is basic addition function--
+        
+        ==First Release==
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
