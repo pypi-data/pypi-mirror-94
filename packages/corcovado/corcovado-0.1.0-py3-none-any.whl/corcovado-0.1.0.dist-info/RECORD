@@ -1,0 +1,11 @@
+corcovado/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+corcovado/api/timer.py,sha256=AnsA5KWKsNMtn4bWmEcKKt_nuQmL7soKGGojQMil4sM,20508
+corcovado/cli.py,sha256=_3U0nq0pAhWfCi8w3v7v519v4FcBBqL0-hPZfouUEm0,8817
+corcovado/database/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+corcovado/database/main.py,sha256=Zeyiaumgi2STCkGaGSXtqjuIaDBHdpCOdODFAHYAUnA,752
+corcovado/database/models.py,sha256=MbMwFHk9BC4DGmhMT0hr6Ralvky8Oro76C7rmjpzRHI,2150
+corcovado/database/repository.py,sha256=nBtywZiVVI5gmoRGAU41VMv4nBasJhBKHwMo3SxEhSc,902
+corcovado/database/settings.py,sha256=U2oUziKjSxlHHkk8eZacCG3U0Niqae62ssRdjW0Ss0c,436
+corcovado-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+corcovado-0.1.0.dist-info/METADATA,sha256=75KFckbei9O4CG3ewzxN8mueZW3O_zrXg3f_SuGuqvw,596
+corcovado-0.1.0.dist-info/RECORD,,
