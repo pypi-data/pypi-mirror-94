@@ -1,0 +1,9 @@
+README.md
+setup.py
+octid/__init__.py
+octid/octid.py
+octid.egg-info/PKG-INFO
+octid.egg-info/SOURCES.txt
+octid.egg-info/dependency_links.txt
+octid.egg-info/requires.txt
+octid.egg-info/top_level.txt
