@@ -1,0 +1,16 @@
+README.md
+setup.py
+bgetlib/BilibiliAgent.py
+bgetlib/CDNList.py
+bgetlib/ConvertAgent.py
+bgetlib/DownloadAgent.py
+bgetlib/Errors.py
+bgetlib/__init__.py
+bgetlib.egg-info/PKG-INFO
+bgetlib.egg-info/SOURCES.txt
+bgetlib.egg-info/dependency_links.txt
+bgetlib.egg-info/requires.txt
+bgetlib.egg-info/top_level.txt
+bgetlib/Data/DataClass.py
+bgetlib/Data/Mappers.py
+bgetlib/Data/__init__.py
