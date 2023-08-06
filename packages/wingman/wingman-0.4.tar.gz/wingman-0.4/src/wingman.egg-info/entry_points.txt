@@ -1,0 +1,3 @@
+[gui_scripts]
+wingman = wingman.main:main
+
