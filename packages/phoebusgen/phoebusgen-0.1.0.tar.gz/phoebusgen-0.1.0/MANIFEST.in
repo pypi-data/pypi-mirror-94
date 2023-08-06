@@ -1,0 +1,5 @@
+include phoebusgen/config/*.def
+include phoebusgen/config/*.bcf
+include README.md
+include LICENSE
+include requirements.txt
