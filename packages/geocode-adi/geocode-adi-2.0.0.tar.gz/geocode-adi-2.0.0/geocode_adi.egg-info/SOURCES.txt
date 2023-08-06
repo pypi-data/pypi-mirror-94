@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+geocode-adi/__init__.py
+geocode-adi/__main__.py
+geocode-adi/geocodeadi.py
+geocode-adi/resources/BlockGroupToADI.feather
+geocode-adi/resources/__init__.py
+geocode_adi.egg-info/PKG-INFO
+geocode_adi.egg-info/SOURCES.txt
+geocode_adi.egg-info/dependency_links.txt
+geocode_adi.egg-info/requires.txt
+geocode_adi.egg-info/top_level.txt

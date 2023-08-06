@@ -1,0 +1,7 @@
+requests
+tqdm
+censusgeocode
+geopy
+pandas
+numpy
+pyarrow
