@@ -1,0 +1,17 @@
+svgis/__init__.py,sha256=8GRgq9V7q0DV-6GyZcllHRduayU72OIr1iKOuKJ_oY4,657
+svgis/bounding.py,sha256=dz1tyE1vBUNABLm5H9UvqODHyaBZMJ9RXbYccPVxhI4,3921
+svgis/cli.py,sha256=Q7LCRtIXgp-HOpbsIhzNMGysVDjWYe0bpWzKf-XmooI,8597
+svgis/dom.py,sha256=1hVqI3gWyT88jf888w5MQVX4xKbQG1gCglRUNc2zN0Q,2934
+svgis/draw.py,sha256=Ef_ABo2fhpHJyXSaqCSMaZ6vWoDu8EqaPBzs8j0uu9I,6353
+svgis/errors.py,sha256=1J0pmdDOlfFM-TAwOSx68Y4rLiaHtKXys3TubrmGDHo,407
+svgis/graticule.py,sha256=xSmA7Zu8HI0G6qoKOMJ-RedGkjD2-SjAMBBzKSnOtM8,3054
+svgis/projection.py,sha256=O1Wd0iuonE6yje5yvmC-faSESzNDFgyxMwAFpXgVU9E,4712
+svgis/style.py,sha256=4Lo2vuxzCOCxbPQ2lHi9FoNTlm4hUYtqTU3QL2zaKVY,5860
+svgis/svg.py,sha256=GewIrtM5GTUuzbvGGaVJXBgqZBfz97PO6iX0SyZIG1U,5732
+svgis/svgis.py,sha256=V0oZV5KTCTROXYwsmiNrMwAThI6MsX8YpFc0CbVPjM4,20793
+svgis/transform.py,sha256=a1Q959dI4KTfRg2P4JZNZPxirwkVdo-ZkdsQkBmSMhk,3925
+svgis/utils.py,sha256=8IYjn3UdiXf2OLEq0qF7a_IVK0wjG9otFjs781L6w58,2476
+svgis-0.5.1.dist-info/entry_points.txt,sha256=W7maeVW0lqW8ZP4QTAlSZE5nnlzgayfAdDHPzeUwurE,40
+svgis-0.5.1.dist-info/WHEEL,sha256=NLqmsx-ZFZ6gDavYgh2oH0ZSN-KRmpcdEXIZDnYy9Pg,99
+svgis-0.5.1.dist-info/METADATA,sha256=iedYscldPP053UID5Nff_XQZjPlIBYSc9Kc-2omv2JA,4690
+svgis-0.5.1.dist-info/RECORD,,
