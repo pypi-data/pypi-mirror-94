@@ -1,0 +1,3 @@
+[pymodaq.plugins]
+femto = pymodaq_plugins_femto
+

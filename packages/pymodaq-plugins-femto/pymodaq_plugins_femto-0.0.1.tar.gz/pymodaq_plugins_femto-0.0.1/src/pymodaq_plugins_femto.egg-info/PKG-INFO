@@ -1,0 +1,51 @@
+Metadata-Version: 1.1
+Name: pymodaq-plugins-femto
+Version: 0.0.1
+Summary: Plugin to simulate acquisition from ultrashort pulse measurement device based on the pypret package
+Home-page: https://github.com/CEMES-CNRS/pymodaq_plugins_femto
+Author: Sébastien Weber
+Author-email: sebastien.weber@cemes.fr
+License: MIT
+Description: pymodaq_plugins_femto (Femto Characterization)
+        ##############################################
+        
+        .. image:: https://img.shields.io/pypi/v/pymodaq_plugins_femto.svg
+           :target: https://pypi.org/project/pymodaq_plugins_femto/
+           :alt: Latest Version
+        
+        .. image:: https://readthedocs.org/projects/pymodaq/badge/?version=latest
+           :target: https://pymodaq.readthedocs.io/en/stable/?badge=latest
+           :alt: Documentation Status
+        
+        .. image:: https://github.com/CEMES-CNRS/pymodaq_plugins_femto/workflows/Upload%20Python%20Package/badge.svg
+            :target: https://github.com/CEMES-CNRS/pymodaq_plugins_femto
+        
+        Plugins wrapping the Pypret package to simulate femtosecond pulse characterization
+        
+        
+        Authors
+        =======
+        
+        * _S. J. Weber
+        
+        Instruments
+        ===========
+        Below is the list of instruments included in this plugin
+        
+        Viewer1D
+        ++++++++
+        
+        * **femto**: Fake detector mocking typically a spectrometer acquiring FROG traces
+          (but not limited to FROG)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: CeCILL-B Free Software License Agreement (CECILL-B)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: User Interfaces
