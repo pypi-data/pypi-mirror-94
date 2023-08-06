@@ -1,0 +1,59 @@
+Metadata-Version: 1.1
+Name: calplot
+Version: 0.1.0
+Summary: Calendar heatmaps from Pandas time series data
+Home-page: https://github.com/tomkwok/calplot
+Author: Tom Kwok; Martijn Vermaat
+Author-email: tom@tomkwok.com
+License: MIT License
+Description: Calendar heatmaps from Pandas time series data
+        ==============================================
+        
+        Calplot creates heatmaps from Pandas time series data.
+        
+        Package `calplot` is a fork of `calmap` (https://github.com/martijnvermaat/calmap) with the following changes and additions.
+        
+        - Pandas >= 0.18 is now required to install the package. Legacy code for compatibility removed. Fixed a FutureWarning in `yearplot`.
+        - Function `calendarplot` renamed to `calplot`.
+        - Argument `colorbar` added for function `calplot` to display a colorbar to the right of the heatmap if more than one unique values in plot. Defaults to `True`.
+        - Argument `dropzero` added for function `calplot` and `yearplot` to specify whether to not fill a cell with a color for days with a zero value. Defaults to `True`.
+        - Argument `figsize` added for function `calplot`. Defaults to a tighter layout automatically adjusted to fit the number of years in plot.
+        - Argument `suptitle` added for function `calplot`. Defaults to `None`.
+        - Argument `yearcolor` added for function `calplot`. Defaults to `lightgray` (in contrast to `whitesmoke`, the default value for `fillcolor`).
+        - Default colormap `cmap` for `yearplot` (and hence `calplot`) changed to `viridis`.
+        
+        
+        Plot `Pandas <http://pandas.pydata.org/>`_ time series data sampled by day in
+        a heatmap per calendar year, similar to GitHub's contributions plot, using
+        `matplotlib <http://matplotlib.org/>`_.
+        
+        .. image:: https://pythonhosted.org/calmap/_images/index-2.png
+            :alt: Example calendar heatmap
+        
+        
+        Installation
+        ------------
+        
+        To install the latest release via PyPI using pip::
+        
+            pip install calplot
+        
+        Todo
+        ----
+        
+        - Option to add a seperating line between months.
+        - Option to plot a rounded value for the day or plot the day of month for each mesh grid cell.
+        - Option to change horizontal alignment (for example, to the left) for month labels.
+        
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Scientific/Engineering
