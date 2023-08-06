@@ -1,0 +1,50 @@
+#!python
+
+import argparse
+from fastaUtils.fasta import seqRecord
+
+if __name__=="__main__":
+  parser = argparse.ArgumentParser(prog='fst-awk',description="Generate fasta file from stockholm",formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+  parser.add_argument('infile', nargs='?', default=None, help='Input file in stockholm format')
+  parser.add_argument('-ins', dest="insertions", action="store_true", default=False, help='Keep insertions (lowcase chars)')
+  parser.add_argument('-del', dest="deletions", action="store_true", default=False, help='Keep deletions (".")')
+  args=parser.parse_args()
+  
+  msa={}
+  with open(args.infile,'r') as infile:
+    for line in infile:
+      if len(line.strip())<5: 
+        continue
+      if line[:4]=="#=GS":
+        tok=line.split()
+        try:
+          de=tok.index("DE")
+          header=tok[1]+" "+" ".join(tok[de+1:])
+        except:
+          header=tok[1]
+        msa[tok[1]]=seqRecord(header)
+      elif line[0]!="#":
+        tok=line.split()
+        if tok[0] not in msa.keys():
+          msa[tok[0]]=seqRecord(tok[0])  
+        msa[tok[0]].append(tok[1].strip())
+  if args.insertions and args.deletions:
+    for uid,seq in msa.items():
+      print(seq)
+  elif not args.insertions and args.deletions:
+    import re
+    ins_re=re.compile(r'[a-z]')
+    for uid,seq in msa.items():
+      seq.seq=ins_re.sub('',seq.seq)
+      print(seq)
+  elif args.insertions and not args.deletions:
+    for uid,seq in msa.items():
+      seq.seq=seq.seq.replace('.','')
+      print(seq)
+  elif not args.insertions and not args.deletions:
+    import re
+    ins_re=re.compile(r'[a-z]')
+    for uid,seq in msa.items():
+      seq.seq=seq.seq.replace('.','')
+      seq.seq=ins_re.sub('',seq.seq)
+      print(seq)

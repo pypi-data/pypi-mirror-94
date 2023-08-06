@@ -1,0 +1,35 @@
+#!python
+
+import argparse
+from fastaUtils.fasta import seqRecord,parse_fasta
+from fastaUtils.profiles import parse_profile,profile_data
+from fastaUtils.random import generate_random_seq,generate_random_seq_with_template
+import random
+
+if __name__=="__main__":
+  parser = argparse.ArgumentParser(prog='fst-randomseq',description="Generate random sequences according to a profile",formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+  parser.add_argument('profile', help='Input profile')
+  parser.add_argument('N', type=int,help='Number of sequences to generate')
+  parser.add_argument('-t','--template', type=str, default=None, help='Real sequences to be randomly masked with random amino acids')
+  parser.add_argument('-d','--dropout', type=float, default=0.9, help='Fraction of real aminoacids to keep')
+  parser.add_argument('--seed', dest="seed", type=int, default=None, help='Seed used during random sort')
+  args=parser.parse_args()
+  
+  random.seed(args.seed)
+  
+  profile=parse_profile(args.profile)
+  profiledata=profile_data(profile)
+  
+  if args.template is None:
+    for i in range(args.N):
+      seq=seqRecord("{}".format(i+1))
+      seq.append(generate_random_seq(profiledata))
+      print(seq)
+  else:
+    seqs=[seq.seq for seq in parse_fasta(args.template)]
+    index = random.choices(range(len(seqs)),k=args.N)
+    nsubs=int(len(seqs[0])*(1.-args.dropout))
+    for i,idx in enumerate(index):
+      seq=seqRecord("{}".format(i+1))
+      seq.append(generate_random_seq_with_template(profiledata,seqs[idx],nsubs))
+      print(seq)
