@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: sa818
+Version: 0.1.7
+Summary: SA818 Programming Software
+Home-page: https://github.com/0x9900/SA818/
+Author: Fred C. (W6BSD)
+Author-email: w6bsd@bsdworld.org
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Communications :: Ham Radio
+Description-Content-Type: text/markdown
+Requires-Dist: pyserial
+
+
+
+## SA818 Programming
+
+Use this software to program the frequency, ctcss, dcs and filters ont
+the radio module SA818
+
+### Installation
+
+```
+$ pip install sa818
+```
+
+### Example
+
+```
+$ sa818 radio --frequency 145.230 --offset -.6 --ctcss 100
+SA818: INFO: +DMOSETGROUP:0, RX frequency: 145.2300, TX frequency: 144.6300, ctcss: 100.0, squelch: 4, OK
+
+$ sa818 volume --level 5
+SA818: INFO: +DMOSETVOLUME:0 Volume level: 5
+```
+
+
+
