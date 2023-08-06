@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mlserver-lightgbm
+Version: 0.3.1.dev1
+Summary: LightGBM runtime for MLServer
+Home-page: https://github.com/SeldonIO/MLServer.git
+Author: Seldon Technologies Ltd.
+Author-email: hello@seldon.io
+License: Apache 2.0
+Description: # LightGBM runtime for MLServer
+        
+        This package provides a MLServer runtime compatible with LightGBM.
+        
+        ## Usage
+        
+        You can install the runtime, alongside `mlserver`, as:
+        
+        ```bash
+        pip install mlserver mlserver-lightgbm
+        ```
+        
+        For further information on how to use MLServer with LightGBM, you can check out
+        this [worked out example](../../examples/lightgbm/README.md).
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
