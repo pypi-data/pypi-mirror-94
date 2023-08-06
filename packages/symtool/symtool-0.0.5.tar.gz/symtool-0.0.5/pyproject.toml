@@ -1,0 +1,29 @@
+[build-system]
+requires = ['poetry-core>=1.0.0']
+build-backend = 'poetry.core.masonry.api'
+
+[tool.poetry]
+name = 'symtool'
+version = '0.0.5'
+description = 'A tool for interacting with your SYM-1 microcomputer'
+authors = ['Lars Kellogg-Stedman <lars@oddbit.com>']
+license = 'GPLv3'
+readme = 'README.md'
+homepage = 'https://github.com/larsks/symtool'
+repository = 'https://github.com/larsks/symtool'
+include = ['LICENSE']
+
+[tool.poetry.dependencies]
+python = '^3.9'
+click = '^7.1.2'
+hexdump = '^3.3'
+pyserial = '^3.5'
+
+[tool.poetry.dev-dependencies]
+pytest = '^6.2.2'
+flake8 = '^3.8.4'
+setuptools = '^53.0.0'
+pytest-cov = '^2.11.1'
+
+[tool.poetry.scripts]
+symtool = 'symtool.main:main'
