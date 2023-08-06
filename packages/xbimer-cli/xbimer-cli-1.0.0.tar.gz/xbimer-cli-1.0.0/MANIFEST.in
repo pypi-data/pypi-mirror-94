@@ -1,0 +1,21 @@
+include LICENSE 
+include README.md
+include requirements.txt
+
+include xbimer_cli/ampe/zips/ac22.zip
+include xbimer_cli/ampe/zips/ac23.zip
+include xbimer_cli/ampe/zips/cast.zip
+include xbimer_cli/ampe/zips/entry.zip
+include xbimer_cli/ampe/zips/pybind11.zip
+include xbimer_cli/ampe/zips/Python37.zip
+
+include xbimer_cli/ampe/includes_ac22.json
+include xbimer_cli/ampe/includes_ac23.json
+include xbimer_cli/ampe/includes_none.json
+
+include xbimer_cli/ampe/libraries_ac22.json
+include xbimer_cli/ampe/libraries_ac23.json
+include xbimer_cli/ampe/libraries_none.json
+
+include xbimer_cli/__init__.py
+include xbimer_cli/_utils_.py

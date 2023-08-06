@@ -1,0 +1,125 @@
+Metadata-Version: 2.1
+Name: xbimer-cli
+Version: 1.0.0
+Summary: archicad mini program command line interface
+Home-page: https://github.com/xbimer/xbimer-cli.git
+Author: beanjs
+Author-email: 502554248@qq.com
+License: MIT
+Description: # xbimer-cli
+        
+        Command line tools for xBIMer
+        
+        ## ampm Commands
+        
+        ### `version`
+        
+        Output xbimer-cli version number
+        
+        ```bash
+        ampm version
+        ```
+        
+        ### `lsproj`
+        
+        Show joined projects
+        
+        ```bash
+        ampm lsproj
+        ```
+        
+        ### `passwd`
+        
+        Modify account password
+        
+        ```bash
+        ampm passwd
+        ```
+        
+        ### `signin`
+        
+        Login to server
+        
+        ```bash
+        ampm signin
+        ```
+        
+        ### `signup`
+        
+        Create xBIMer account
+        
+        ```bash
+        ampm signup
+        ```
+        
+        ### `whoami`
+        
+        View current login account information
+        
+        ```bash
+        ampm whoami
+        ```
+        
+        ## amp Commands
+        
+        ### `version`
+        
+        Output xbimer-cli version number
+        
+        ```bash
+        amp version
+        ```
+        
+        ### `admem`
+        
+        Add member to a project
+        
+        ```bash
+        amp admem
+        ```
+        
+        ### `init`
+        
+        Create applet project
+        
+        ```bash
+        amp init
+        ```
+        
+        ### `lsmem`
+        
+        Show the members who joined the project
+        
+        ```bash
+        amp lsmem
+        ```
+        
+        ### `rmmem`
+        
+        Remove member from a project
+        
+        ```bash
+        amp rmmem
+        ```
+        
+        ## ampe Commands
+        
+        ### `init`
+        
+        Generating Python module encapsulation project based on C++
+        
+        ```bash
+        ampe init
+        ```
+        
+Keywords: archicad,xbimer,xbimer-cli
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.7.5
+Description-Content-Type: text/markdown

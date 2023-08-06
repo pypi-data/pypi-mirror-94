@@ -1,0 +1,154 @@
+[
+  {
+    "Include": "python37\\libs\\python37.lib",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\AlgMath\\Win\\AlgMathImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\Brep\\Win\\BrepImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\BrepOperations\\Win\\BrepOperationsImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\BuiltInLibrary\\Win\\BuiltInLibraryImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\GSRoot\\Win\\GSRootImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\DGGraphix\\Win\\DGGraphixImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\DGLib\\Win\\DGImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\Geometry\\Win\\GeometryImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\Graphix\\Win\\GraphixImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\GSATLib\\Win\\GSAT2DDataImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\GSModeler\\Win\\GSModelerImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\GSModeler2D\\Win\\GSModeler2DImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\GSMSections\\Win\\GSMSectionsImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\GSUtils\\Win\\GSUtilsImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\GX\\Win\\GXImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\GXImage\\Win\\GXImageImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\GXImageBase\\Win\\GXImageBaseImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\GXMedia\\Win\\GXMediaImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\InputOutput\\Win\\InputOutputImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\Markup\\Win\\MarkupImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\Model3D\\Win\\Model3DImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\Pattern\\Win\\PatternImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\Phasing\\Win\\PhasingImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\PropertyOperations\\Win\\PropertyOperationsImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\QuantityTakeoff\\Win\\QuantityTakeoffImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\SMLibBrepOperations\\Win\\SMLibBrepOperationsImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\TextEngine\\Win\\TextEngineImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\UCLib\\Win\\UCImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\UDLib\\Win\\UDImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\VBAttrDialogs\\Win\\VBAttrDialogsImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\VBAttributeList\\Win\\VBAttributeListImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\VBAttributes\\Win\\VBAttributesImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\VBAttrOperations\\Win\\VBAttrOperationsImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\VBElemDialogs\\Win\\VBElemDialogsImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\VBElemOperations\\Win\\VBElemOperationsImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\VBUtils\\Win\\VBUtilsImp.LIB",
+    "Filter": "Libraries"
+  },
+  {
+    "Include": "ac23\\VectorImage\\Win\\VectorImageImp.LIB",
+    "Filter": "Libraries"
+  }
+]

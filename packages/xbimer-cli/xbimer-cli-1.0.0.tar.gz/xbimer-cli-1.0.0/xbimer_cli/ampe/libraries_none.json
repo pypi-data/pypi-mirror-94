@@ -1,0 +1,6 @@
+[
+  {
+    "Include": "python37\\libs\\python37.lib",
+    "Filter": "Libraries"
+  }
+]

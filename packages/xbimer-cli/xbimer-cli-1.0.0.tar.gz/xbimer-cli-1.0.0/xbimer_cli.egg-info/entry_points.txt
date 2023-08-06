@@ -1,0 +1,5 @@
+[console_scripts]
+amp = xbimer_cli.amp.clis:main
+ampe = xbimer_cli.ampe.clis:main
+ampm = xbimer_cli.ampm.clis:main
+
