@@ -1,0 +1,11 @@
+kuptoo_encoders/encoders/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kuptoo_encoders/encoders/word2measure.py,sha256=nYpKEJkuqo957SBNVSXww52AMYqK4Nd2ydDcmK_MiCE,10301
+kuptoo_encoders/encoders/word2vec_from_dict_encoder.py,sha256=bkPnd2bZJuQrigY5eF1ho_lg6mo_VLc6JKQ_vgnCmRo,2419
+kuptoo_encoders/encoders/utils/math.py,sha256=hKCo2Plb2tAgnvzE2_qMdXAnb0q6hR7Gn2yJYBiq59E,276
+kuptoo_encoders/encoders/utils/padding.py,sha256=4drSt4VfFk_sFDZV6npkAW_zhRGQqTOfPKxP6SwGaWg,1096
+kuptoo_encoders/encoders/utils/__pycache__/math.cpython-37.pyc,sha256=3Hv890PjA8HJfHYtDzcWto72ylH0oVZ2LUf5IgTy4iA,623
+kuptoo_encoders/encoders/utils/__pycache__/padding.cpython-37.pyc,sha256=mvxmOleIsxhZ7CickZtLZfcMlt7v_Lvgbbcp6M7OjUQ,1148
+kuptoo_encoders-0.1.dist-info/METADATA,sha256=ZKqwATS5PTh2kH278SVFAfnLgrO-P1VSQkaMw3ASbng,494
+kuptoo_encoders-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+kuptoo_encoders-0.1.dist-info/top_level.txt,sha256=xuGe50Ehhvl5llxs6UyXcuuuNM18-lqa_upBni4_gqc,16
+kuptoo_encoders-0.1.dist-info/RECORD,,
