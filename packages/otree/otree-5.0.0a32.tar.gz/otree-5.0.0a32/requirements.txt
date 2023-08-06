@@ -1,0 +1,11 @@
+aiofiles  # starlette StaticFiles
+asgiref  # maybe can use asyncio.run instead?
+itsdangerous
+markupsafe
+python-multipart
+sqlalchemy
+starlette
+uvicorn
+websockets  # this library is optional but auto-pings websockets and detects disconnects (e.g. rooms)
+wtforms
+WTForms-SQLAlchemy
