@@ -1,0 +1,17 @@
+README.md
+setup.py
+procemon/__init__.py
+procemon/card_back.py
+procemon/dex.py
+procemon/dex_encoder.py
+procemon/monster.py
+procemon/monster_type.py
+procemon/move.py
+procemon/paths.py
+procemon/rarity.py
+procemon/zine.py
+procemon.egg-info/PKG-INFO
+procemon.egg-info/SOURCES.txt
+procemon.egg-info/dependency_links.txt
+procemon.egg-info/requires.txt
+procemon.egg-info/top_level.txt
