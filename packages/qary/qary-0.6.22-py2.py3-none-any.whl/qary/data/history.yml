@@ -1,0 +1,309 @@
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_skill: null
+  reply_text: I am sorry! I don't understand you
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: null
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_skill: null
+  reply_text: I am sorry! I don't understand you.
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: null
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_skill: null
+  reply_text: I am sorry! I don't understand you.
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: null
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_skill: qary.clibot
+  reply_text: Sorry, something went wrong. None of my skills had anything to say...
+  skills:
+  - qary.skills.qa
+  statement: null
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_context:
+    turn_count: 0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_context:
+    turn_count: 1
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_context:
+    turn_count: 2
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_context:
+    turn_count: 0
+  reply_skill: qary.skills.eliza
+  reply_text: I'm not sure I understand you fully.
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_context:
+    turn_count: 1
+  reply_skill: qary.skills.eliza
+  reply_text: Please go on.
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_context:
+    turn_count: 2
+  reply_skill: qary.skills.eliza
+  reply_text: What does that suggest to you ?
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_context:
+    turn_count: 0
+  reply_skill: qary.skills.glossary
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_context:
+    turn_count: 1
+  reply_skill: qary.skills.glossary
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_context:
+    turn_count: 2
+  reply_skill: qary.skills.glossary
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_context:
+    turn_count: 0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_context:
+    turn_count: 1
+  reply_skill: null
+  reply_text: I am sorry! I don't understand you.
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: null
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_context:
+    turn_count: 0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.2935626287030357
+  reply_context:
+    turn_count: 1
+  reply_skill: null
+  reply_text: hello barbie is an internet-connected version of the doll that uses
+    a chatbot provided by the company toytalk, which previously used the chatbot for
+    a range of smartphone-based characters for children.
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hello
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_context:
+    turn_count: 0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_context:
+    turn_count: 1
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_context:
+    turn_count: 2
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_context:
+    turn_count: 0
+  reply_skill: qary.skills.eliza
+  reply_text: I'm not sure I understand you fully.
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_context:
+    turn_count: 1
+  reply_skill: qary.skills.eliza
+  reply_text: Please go on.
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.5
+  reply_context:
+    turn_count: 2
+  reply_skill: qary.skills.eliza
+  reply_text: What does that suggest to you ?
+  skills:
+  - qary.skills.eliza
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_context:
+    turn_count: 0
+  reply_skill: qary.skills.glossary
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_context:
+    turn_count: 1
+  reply_skill: qary.skills.glossary
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.05
+  reply_context:
+    turn_count: 2
+  reply_skill: qary.skills.glossary
+  reply_text: I don't understand. That doesn't sound like a question I can answer
+    using my glossary.
+  skills:
+  - qary.skills.glossary
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 1.0
+  reply_context:
+    turn_count: 0
+  reply_skill: null
+  reply_text: Hello!
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: Hi
+- conversation_manager: qary.clibot
+  reply_confidence: 0.667
+  reply_context:
+    turn_count: 1
+  reply_skill: null
+  reply_text: I am sorry! I don't understand you.
+  skills:
+  - qary.skills.parul
+  - qary.skills.pattern
+  statement: null
