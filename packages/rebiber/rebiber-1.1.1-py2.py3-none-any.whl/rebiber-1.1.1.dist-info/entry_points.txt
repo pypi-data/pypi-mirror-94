@@ -1,0 +1,3 @@
+[console_scripts]
+rebiber = rebiber.normalize:main
+
