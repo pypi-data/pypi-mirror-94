@@ -1,0 +1,3 @@
+[console_scripts]
+md2pdfy = md2pdfy.main:main
+
