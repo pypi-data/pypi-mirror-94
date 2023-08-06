@@ -1,0 +1,17 @@
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+rocc/__init__.py
+rocc/calculation.c
+rocc/rocc.py
+rocc.egg-info/PKG-INFO
+rocc.egg-info/SOURCES.txt
+rocc.egg-info/dependency_links.txt
+rocc.egg-info/not-zip-safe
+rocc.egg-info/requires.txt
+rocc.egg-info/top_level.txt
+tests/__init__.py
+tests/test_rocc.py
