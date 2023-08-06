@@ -1,0 +1,17 @@
+resources/logo.svg,sha256=Ge5-hOHXaEj8l5slfamgVoOP6nScwG69HisZxeHB-7Y,4534
+www/homepage.py,sha256=R8xdfqPTSjpMbmEG72cDccY2iI2-0MaosE8pbYr-tkk,5948
+www/static/logo.png,sha256=bR3PtTXAD7T8eqNT1zwZC39ByJ-xU_lruTjFnIso9rU,8836
+xlsxcessive/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xlsxcessive/cache.py,sha256=WhMBtYgmF1qhWR_LqjgqaHm-2-FBLZ63rn4a2bGldak,333
+xlsxcessive/errors.py,sha256=L2Zdk8uJx7gchDKPhBew_594kamUADz8QxVym5oEIl8,43
+xlsxcessive/markup.py,sha256=zhEgAqt0R5jolFEbyH0tEA_EZi49ZQ2ftgGBqDPshSU,1123
+xlsxcessive/parts.py,sha256=CtafTALlyUNRF9dAIDrHa--j0F2PKEoY0X0GF_zZJFs,820
+xlsxcessive/style.py,sha256=yGaY8z_DDFeHX7ZjsmBYr1J8aWNfcL0nZDlRO1zzXH8,7773
+xlsxcessive/workbook.py,sha256=IqeJRakL0QGQwR90tipNqOju2hLGNKN2WDncX6A1cBI,818
+xlsxcessive/worksheet.py,sha256=M23kO84SodwDc8Fafm7Ax4lZa3hGZLmI9DCx8BYEeaU,15883
+xlsxcessive/xlsx.py,sha256=uS76gQe8tYTVHAN-y1cXI2lQkV1oPW4xrzJriraL-3E,832
+xlsxcessive-1.1.0.dist-info/LICENSE,sha256=2z8CRrH5J48VhFuZ_sR4uLUG63ZIeZNyL4xuJUKF-vg,1050
+xlsxcessive-1.1.0.dist-info/METADATA,sha256=92S9eP4SnhDX8OaNu-NcIghAFcQlIilfXkGi8KbPM_w,5745
+xlsxcessive-1.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+xlsxcessive-1.1.0.dist-info/top_level.txt,sha256=ASmY8zU619HmJFKQLlH4H9X1mWQn_VQPga_waRyEx3g,31
+xlsxcessive-1.1.0.dist-info/RECORD,,
