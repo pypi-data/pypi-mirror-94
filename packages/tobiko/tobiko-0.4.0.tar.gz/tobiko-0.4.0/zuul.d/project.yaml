@@ -1,0 +1,43 @@
+- project:
+    templates:
+      - ansible-role-jobs
+      - build-openstack-docs-pti
+      - build-release-notes-jobs-python3
+      - check-requirements
+      - docs-on-readthedocs
+      - openstack-cover-jobs
+      - openstack-lower-constraints-jobs
+      - openstack-python3-wallaby-jobs
+      - publish-to-pypi
+      - devstack-tobiko-gate
+    vars:
+        rtd_webhook_id: '84947'
+
+    check:
+      jobs:
+        - devstack-tobiko-faults-ubuntu
+        - tobiko-infrared
+
+    gate:
+      jobs:
+        - tobiko-infrared
+
+    periodic:
+      jobs:
+        - tobiko-infrared
+        - tobiko-infrared-centos
+        - tobiko-infrared-centos-7
+        - tobiko-infrared-fedora
+        - tobiko-infrared-ubuntu
+        - tripleo-ci-centos-8-content-provider
+        - tobiko-tripleo-functional:
+            vars: &consumer_vars
+              consumer_job: true
+              build_container_images: false
+              remove_tags:
+                - build
+            dependencies: &deps_cprovider
+              - tripleo-ci-centos-8-content-provider
+        - tobiko-tripleo-faults:
+            vars: *consumer_vars
+            dependencies: *deps_cprovider
