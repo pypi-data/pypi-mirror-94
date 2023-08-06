@@ -1,0 +1,3 @@
+[console_scripts]
+lpp = lipyphilic.cli:main
+

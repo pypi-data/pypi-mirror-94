@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: lipyphilic
+Version: 0.0.0
+Summary: Analyse MD simulations of lipids with python
+Home-page: https://github.com/p-j-smith/lipyphilic
+Author: Paul Smith
+Author-email: paul.smith@kcl.ac.uk
+License: LGPL-2.1-or-later
+Project-URL: Documentation, https://lipyphilic.readthedocs.io/
+Project-URL: Changelog, https://lipyphilic.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/p-j-smith/lipyphilic/issues
+Keywords: lipids,molecular dynamics
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Requires-Dist: click
+
+========
+Overview
+========
+
+
+
+Analyse MD simulations of lipids with python
+
+* Free software: GNU Lesser General Public License v2.1 or later (LGPLv2+)
+
+Installation
+============
+
+::
+
+    pip install lipyphilic
+
+You can also install the in-development version with::
+
+    pip install https://github.com/p-j-smith/lipyphilic/archive/master.zip
+
+
+Documentation
+=============
+
+
+https://lipyphilic.readthedocs.io/
+
+
+Development
+===========
+
+To run all the tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+0.0.0 (2021-02-08)
+------------------
+
+* First release on PyPI.
+
+
