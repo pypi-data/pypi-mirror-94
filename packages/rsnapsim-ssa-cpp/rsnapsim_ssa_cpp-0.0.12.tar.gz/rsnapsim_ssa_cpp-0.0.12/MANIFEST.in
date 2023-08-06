@@ -1,0 +1,6 @@
+recursive-include include *.pxd
+recursive-include include *.pyx
+recursive-include include *.cpp
+recursive-include include *.h
+include *.h
+recursive-include *.h *.py
