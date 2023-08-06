@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: wagtail-onboarding
+Version: 0.1.0
+Summary: A guided tour for the Wagtail admin. 
+Home-page: UNKNOWN
+Author: Kalob Taulien
+Author-email: kalob.taulien@torchbox.com
+License: BSD
+Description: # Wagtail Onboarding
+        
+        Adds a tour guide to the Wagtail admin to help editors understand all their options, Wagtail features, and how to move around.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Wagtail
+Classifier: Framework :: Wagtail :: 2
+Description-Content-Type: text/markdown
+Provides-Extra: testing
