@@ -1,0 +1,15 @@
+dsul/__init__.py,sha256=-LGgpVzBvQsNFEbahLrAD1u9e1Ur3koil2eg54r1t7Y,23
+dsul/distributions.py,sha256=owYWWDIoK8VwQd9FZblR-lzek0TSLnSIZpmhni049pE,29062
+dsul/linear_model.py,sha256=tU0gW-enFhd5z2_L0-Z8M-4Xlz83amUtA9ycrfpKsJI,1797
+dsul/confidence_intervals/__init__.py,sha256=zunRX0a__RWnoE9iQ0QhJTwHwuHW9xVGBtGKU4jertQ,57
+dsul/confidence_intervals/analytical.py,sha256=QztVnCOgs9Em7l2VUMwtd_o0CmB7NR4FLPzTIiuH45w,1893
+dsul/confidence_intervals/base.py,sha256=C_dj2TMri8FaMUyY3jWrjpz7B0fEAv-icAuBEMkAHvM,766
+dsul/confidence_intervals/computational.py,sha256=RW1aV9qpK13G4nq9JwDJEunxGyPOUPXmqVGBqWO7esQ,4739
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_confidence_intervals.py,sha256=brHLMA-BTxUBYfYIqZPBGGD941l6khVW2Jh5d5r8Lxc,8347
+tests/test_linear_model.py,sha256=81RZcboI4-GD1MIDfCYEoE3PCZn_mhQuESVCLpuPQ2Y,524
+DSUL-0.0.1.dist-info/LICENSE,sha256=pT-m2kNs8AUV_DDabmfmKfZCPs9KgLiUcUIbPchq8y0,1092
+DSUL-0.0.1.dist-info/METADATA,sha256=67MLPiD8hHogoDAgTjOx0fx1FbWHItBlB8ywcYAywi0,539
+DSUL-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+DSUL-0.0.1.dist-info/top_level.txt,sha256=FgYsZPDpNFh1FGfVBl0jAeTpxYGPsb5qGahp96M1RGw,11
+DSUL-0.0.1.dist-info/RECORD,,

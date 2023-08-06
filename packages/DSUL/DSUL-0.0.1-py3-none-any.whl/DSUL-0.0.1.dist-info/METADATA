@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: DSUL
+Version: 0.0.1
+Summary: Utility Library for Data Scientists
+Home-page: https://github.com/EdgarTeixeira/dsul
+Author: Edgar Teixeira
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: joblib
+Requires-Dist: scikit-learn
+
+# Data Scientists' Utility Library
+
+
