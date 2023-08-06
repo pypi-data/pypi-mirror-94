@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: pilapse
+Version: 0.0.8
+Summary: Raspberry Pi time-lapse service
+Home-page: https://github.com/yix/pilapse
+Author: Alex McGunn
+Author-email: mcgunn@oo2.be
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: Pillow
+
+# pilapse
+A simple time-lapse service for Raspberry Pi. It uses `raspistill` binary to capture images. It's currently capable of periodically capturing of still images and serving last captured image to the web browser.
+
+# Installation
+ *requires Python3*
+
+### Using Pip
+
+```bash
+pip3 install pilapse --user
+```
+
+### Manual
+```bash
+git clone https://github.com/yix/pilapse
+cd pilapse
+pip3 install -r requirements.txt --user
+```
+
+# Usage
+
+```bash
+pilapse --port 8888 --path ~/pylapse_images --period 60
+
+# or if just cloned the repo (repository should be your current directory)
+python3 -m pilapse --port 8888 --path ~/pylapse_images --period 60
+```
+
+
