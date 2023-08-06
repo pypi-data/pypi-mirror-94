@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+trainml/__init__.py
+trainml/auth.py
+trainml/datasets.py
+trainml/environments.py
+trainml/exceptions.py
+trainml/gpu_types.py
+trainml/jobs.py
+trainml/trainml.py
+trainml.egg-info/PKG-INFO
+trainml.egg-info/SOURCES.txt
+trainml.egg-info/dependency_links.txt
+trainml.egg-info/requires.txt
+trainml.egg-info/top_level.txt
