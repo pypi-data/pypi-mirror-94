@@ -1,0 +1,32 @@
+{
+  "EMPTY" :
+  {
+    "T1": [],
+    "T2": [],
+    "RS": [],
+    "DWI": [],
+    "rDWI": [],
+    "IR" : [],
+    "FLAIR" : []
+  },
+  "ALFA1" :
+  {
+    "T1": ["T1_ALFA1"],
+    "T2": ["T2_ALFA1"],
+    "RS": ["RS_ALFA1", "RS_ALFA1 SENSE"],
+    "DWI": ["DWI_ALFA1"],
+    "rDWI": ["rDWI_ALFA1"],
+    "IR" : ["IR_ALFA1", "IR_ALFA1 SENSE"],
+    "FLAIR" : ["FLAIR_ALFA1"]
+  },
+  "ALFA" :
+  {
+    "T1": ["SAG FSPGR 3D"],
+    "T2": ["AXIAL T2 FRFSE"],
+    "RS": ["RESTING"],
+    "DWI": ["Ax DTI (64 direc) iso 2"],
+    "rDWI": [],
+    "IR" : [],
+    "FLAIR" : ["Ax T2 FLAIR_FS"]
+  }
+}

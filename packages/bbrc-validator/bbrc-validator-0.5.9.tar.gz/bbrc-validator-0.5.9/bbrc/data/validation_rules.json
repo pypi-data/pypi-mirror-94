@@ -1,0 +1,545 @@
+{
+    "FIDMAG_pruebas": {
+        "obligatory": {
+            "B0_DWI_100DIR SENSE": 64,
+            "B0 map": 74,
+            "T1_AXIAL": 100,
+            "3D_FLAIR_3mm_Tra": 50,
+            "T1_SENSE1.3_RECON1": 180,
+            "T2_20160830": 180,
+            "Resting": 14364,
+            "T1_CORONAL": 100,
+            "DWI_100DIR_8b0": 6912,
+            "Multi_echo": 1320
+        },
+        "silently_identified": [
+            "SmartBrain SENSE",
+            "B1_calibration",
+            "Patient Aligned MPR AWPLAN_SMARTPLAN_TYPE_BRAIN",
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "T2_AXIAL",
+            "T2_CORONAL"
+        ],
+        "aliases": {
+            "T2_CORONAL": [
+                "T2_Coronal"
+            ]
+        }
+    },
+    "EPAD": {
+        "obligatory": {
+            "Axial T2-Star": 47,
+            "MPRAGE_SENSE2": 170,
+            "Axial T2W-TSE with Fat Sat": 47,
+            "FLAIR_SAG": 192,
+            "T1_ALFA1": 240
+        },
+        "silently_identified": [
+            "B1_calibration",
+            "Survey",
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "MPRAGE_CORONAL",
+            "MPRAGE_SAGITAL",
+            "FLAIR_CORONAL",
+            "FLAIR_AXIAL"
+        ],
+        "aliases": {}
+    },
+    "ALFA_OPCIONAL": {
+        "obligatory": {
+            "rDWI_ALFA1": 66,
+            "T1_ALFA1": 240,
+            "rRS_ALFA1 SENSE": 230,
+            "SE-fMRI-AP SENSE": 225,
+            "IR_ALFA1": 78,
+            "DWI_ALFA1": 4752,
+            "RS_ALFA1 SENSE": 13800,
+            "FLAIR_ALFA1": 180,
+            "SE-fMRI-PA SENSE": 225,
+            "T2_ALFA1": 360
+        },
+        "silently_identified": [
+            "B1_calibration",
+            "B0_ALFA1",
+            "SmartBrain SENSE",
+            "MPR - SmartBrain SENSE",
+            "Patient Aligned MPR AWPLAN_SMARTPLAN_TYPE_BRAIN",
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "T1_CORONAL",
+            "T1_AXIAL",
+            "FLAIR_CORONAL",
+            "FLAIR_AXIAL"
+        ],
+        "aliases": {
+            "rRS_ALFA1 SENSE": [
+                "rRS_ALFA1"
+            ],
+            "SE-fMRI-AP SENSE": [
+                "SE-fMRI-AP"
+            ],
+            "IR_ALFA1": [
+                "IR_ALFA1 SENSE"
+            ],
+            "T1_AXIAL": [
+                "AXIAL",
+                "T1 AXIAL",
+                "T1_Axial"
+            ],
+            "FLAIR_CORONAL": [
+                "FLAIR CORONAL",
+                "Coronal FLAIR"
+            ],
+            "RS_ALFA1 SENSE": [
+                "RS_ALFA1"
+            ],
+            "SE-fMRI-PA SENSE": [
+                "SE-fMRI-PA"
+            ],
+            "T1_CORONAL": [
+                "CORONAL",
+                "T1 CORONAL",
+                "T1_Coronal"
+            ],
+            "FLAIR_AXIAL": [
+                "FLAIR AXIAL",
+                "FLAIR_Axial",
+                "Axial FLAIR"
+            ]
+        }
+    },
+    "ALFA_PLUS": {
+        "obligatory": {
+            "rDWI_ALFA1": 66,
+            "T1_ALFA1": 240,
+            "rRS_ALFA1 SENSE": 230,
+            "SE-fMRI-AP SENSE": 225,
+            "IR_ALFA1": 78,
+            "DWI_ALFA1": 4752,
+            "RS_ALFA1 SENSE": 13800,
+            "FLAIR_ALFA1": 180,
+            "SE-fMRI-PA SENSE": 225,
+            "T2_ALFA1": 360
+        },
+        "silently_identified": [
+            "B1_calibration",
+            "B0_ALFA1",
+            "SmartBrain SENSE",
+            "MPR - SmartBrain SENSE",
+            "Patient Aligned MPR AWPLAN_SMARTPLAN_TYPE_BRAIN",
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "T1_CORONAL",
+            "T1_AXIAL",
+            "FLAIR_CORONAL",
+            "FLAIR_AXIAL"
+        ],
+        "aliases": {
+            "rRS_ALFA1 SENSE": [
+                "rRS_ALFA1"
+            ],
+            "SE-fMRI-AP SENSE": [
+                "SE-fMRI-AP"
+            ],
+            "IR_ALFA1": [
+                "IR_ALFA1 SENSE"
+            ],
+            "T1_AXIAL": [
+                "AXIAL",
+                "Axial",
+                "T1 AXIAL",
+                "T1_Axial",
+                "VWIP T1_Axial"
+            ],
+            "FLAIR_CORONAL": [
+                "FLAIR CORONAL",
+                "Coronal FLAIR"
+            ],
+            "RS_ALFA1 SENSE": [
+                "RS_ALFA1"
+            ],
+            "SE-fMRI-PA SENSE": [
+                "SE-fMRI-PA"
+            ],
+            "T1_CORONAL": [
+                "CORONAL",
+                "T1 CORONAL",
+                "T1_Coronal"
+            ],
+            "FLAIR_AXIAL": [
+                "FLAIR AXIAL",
+                "FLAIR_Axial",
+                "Axial FLAIR"
+            ]
+        }
+    },
+    "ALFA_PLUS2": {
+        "obligatory": {
+            "QFLOW_CSF": 90,
+            "WIP muti-b medio max": 128,
+            "SV_PRESS_100_Myo_CHESS_Ang": 2,
+            "WIP muti-b altos max": 96,
+            "WIP muti-b bajo max": 64,
+            "SV_PRESS_100_Myo_CHESS_Cun": 2,
+            "SV_PRESS_100_Myo_CHESS_Hipo": 2,
+            "SWIp SENSE": 280,
+            "M0_ASL": 30,
+            "M2DI": 30,
+            "sWIP pCASL SENSE": 30,
+            "pCASL": 1800,
+            "QFLOW_CAROTID": 90,
+            "DelRec - SWIp SENSE": 1120,
+            "sT1W_3D_TFE_HR_32 iso1.2 long AT": 150
+        },
+        "silently_identified": [
+            "SmartBrain SENSE",
+            "MPR - SmartBrain SENSE",
+            "VSmartBrain SENSE",
+            "Patient Aligned MPR AWPLAN_SMARTPLAN_TYPE_BRAIN",
+            "VM2DI CLEAR",
+            "MIP - M2DI",
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "VWIP sT1W_3D_TFE_HR_32 iso1.2 long AT SENSE",
+            "VWIP sT1W_3D_axial",
+            "VWIP sT1W_3D_coronal"
+        ],
+        "aliases": {
+            "WIP muti-b bajo max": [
+                "WIP muti-b  bajo max"
+            ],
+            "VWIP sT1W_3D_TFE_HR_32 iso1.2 long AT SENSE" :[
+                "VWIP sT1W_3D_TFE_HR_32 iso1.2 long AT"
+            ],
+            "pCASL": [
+                "SOURCE - pCASL_SENSE",
+                "SOURCE - pCASL"
+            ],
+            "sWIP pCASL SENSE": [
+                "pCASL_SENSE"
+            ]
+        }
+    },
+    "AETIONOMY":
+    {
+       "obligatory": {
+          "3DT1": 240
+       },
+       "silently_identified":[],
+       "warning_if_missing":[],
+       "aliases": {}
+    },
+    "ALFA": {
+        "obligatory": {
+            "SAG FSPGR 3D": 174,
+            "AX GRE": 39,
+            "Ax T2 FLAIR_FS":39,
+            "AXIAL T2 FRFSE": 39,
+            "3D ASL": 176,
+            "RESTING": 5160,
+            "Ax DTI (64 direc) iso 2": 3640,
+            "AX FSPGR": 256,
+            "SAG FSPGR": 174,
+            "COR FSPGR": 256,
+            "Cerebral Blood Flow": 88,
+            "Average DC": 56,
+            "Fractional Aniso.": 56,
+            "Isotropic image": 56
+        },
+        "silently_identified": [ ],
+        "warning_if_missing": ["B0 map" ],
+        "aliases": { }
+    },
+    "CLIN_PREV_DEM": {
+        "obligatory": {
+            "T1_ALFA1": 240,
+            "T1_Coronal": 105,
+            "T1_Axial": 75,
+            "FLAIR_ALFA1": 180,
+            "FLAIR_Coronal": 105,
+            "FLAIR_Axial": 75,
+            "T2_ALFA1": 360,
+            "IR_ALFA1 SENSE": 78,
+            "rDWI_ALFA1": 66,
+            "DWI_ALFA1": 4752,
+            "SWIp SENSE": 280,
+            "DelRec - SWIp SENSE": 1120
+        },
+        "silently_identified": [
+            "SmartBrain SENSE",
+            "MPR - SmartBrain SENSE",
+            "Patient Aligned MPR AWPLAN_SMARTPLAN_TYPE_BRAIN",
+            "unknown"
+        ],
+        "warning_if_missing": [ ],
+        "aliases": { }
+    },
+    "ALFA_COGNICIO": {
+        "obligatory": {
+            "T1_ALFA1": 240,
+            "FLAIR_ALFA1": 180,
+            "T2_ALFA1": 360,
+            "IR_ALFA1": 78,
+            "rDWI_ALFA1": 66,
+            "DWI_ALFA1": 4752,
+            "SWIp SENSE": 280,
+            "DelRec - SWIp SENSE": 1120
+        },
+        "silently_identified": [
+            "SmartBrain SENSE",
+            "MPR - SmartBrain SENSE",
+            "Patient Aligned MPR AWPLAN_SMARTPLAN_TYPE_BRAIN",
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "T1_CORONAL",
+            "T1_AXIAL",
+            "FLAIR_CORONAL",
+            "FLAIR_AXIAL"
+        ],
+        "aliases": {
+            "IR_ALFA1": [
+                "IR_ALFA1 SENSE"
+            ],
+            "T1_AXIAL": [
+                "AXIAL",
+                "T1 AXIAL",
+                "T1_Axial"
+            ],
+            "FLAIR_CORONAL": [
+                "FLAIR CORONAL",
+                "FLAIR_Coronal",
+                "Coronal FLAIR"
+            ],
+            "T1_CORONAL": [
+                "CORONAL",
+                "T1 CORONAL",
+                "T1_Coronal"
+            ],
+            "FLAIR_AXIAL": [
+                "FLAIR AXIAL",
+                "FLAIR_Axial",
+                "Axial FLAIR"
+            ]
+        }
+    },
+    "ALFA_PLUS_EXP": {
+        "obligatory": {
+            "sT1W_3D_TFE_HR_32 iso1.2 long AT": 150,
+            "SV_PRESS_100_Myo_CHESS_Ang": 2,
+            "SV_PRESS_100_Myo_CHESS_Cun": 2,
+            "SV_PRESS_100_Myo_CHESS_Hipo": 2,
+            "IR_ALFA1": 78,
+            "WIP muti-b bajo max": 64,
+            "WIP muti-b medio max": 128,
+            "WIP muti-b altos max": 96,
+            "FLAIR_ALFA1": 180,
+            "rDWI_ALFA1": 66,
+            "DWI_ALFA1": 4752,
+            "SWIp SENSE": 280,
+            "DelRec - SWIp SENSE": 1120
+        },
+        "silently_identified": [
+            "SmartBrain SENSE",
+            "MPR - SmartBrain SENSE",
+            "Patient Aligned MPR AWPLAN_SMARTPLAN_TYPE_BRAIN",
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "VWIP sT1W_3D_TFE_HR_32 iso1.2 long AT SENSE",
+            "VWIP sT1W_3D_axial",
+            "VWIP sT1W_3D_coronal",
+            "FLAIR_CORONAL",
+            "FLAIR_AXIAL"
+        ],
+        "aliases": {
+            "WIP muti-b bajo max": [
+                "WIP muti-b  bajo max"
+            ],
+            "IR_ALFA1": [
+                "IR_ALFA1 SENSE"
+            ],
+            "FLAIR_CORONAL": [
+                "FLAIR CORONAL",
+                "Coronal FLAIR"
+            ],
+            "FLAIR_AXIAL": [
+                "FLAIR AXIAL",
+                "Axial FLAIR"
+            ]
+        }
+    },
+    "ALFA_PLUS_PET": {
+        "obligatory": {
+            "PET_FDG_20min": 109,
+            "PET_FDG_4x5min": 436
+        },
+        "silently_identified":[
+            "PET_FDG_4x5min_recon2",
+            "PET_FDG_20min_recon2",
+            "PET_FDG_4x5min_recon3",
+            "PET_FDG_20min_recon3",
+            "PET_Flutemetamol_20min_recon2",
+            "PET_Flutemetamol_4x5min_recon2",
+            "PET_Flutemetamol_20min_recon3",
+            "PET_Flutemetamol_4x5min_recon3"
+        ],
+        "warning_if_missing": [
+            "CT   3.0  B30f",
+            "Thorax  1.0  B31f",
+            "Thorax  3.0  B31f"
+        ],
+        "aliases": {
+            "PET_FDG_20min": [
+                "PET_Flutemetamol_20min"
+            ],
+            "PET_FDG_4x5min": [
+                "PET_Flutemetamol_4x5min"
+            ]
+        }
+    },
+    "T1rho_S1": {
+        "obligatory": {
+            "T1-3D_T1RHO": 150,
+            "MULTIECHO-3D_T1RHO": 4752,
+            "3D_TS_0": 180,
+            "3D_TS_20": 180,
+            "3D_TS_40": 180,
+            "3D_TS_60": 180,
+            "3D_TS_80": 180,
+            "BO_MAP": 360,
+            "PCA1": 6,
+            "PCA2": 2,
+            "M0_T1RHO": 20,
+            "TE-ASL_T1RHO": 20,
+            "SOURCE - Timencoded ASL Barca": 1280
+        },
+        "silently_identified":[
+            "Survey",
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "VWIP sT1W_3D_TFE_HR_32 iso1.2 long AT SENSE",
+            "VWIP sT1W_3D_axial",
+            "VWIP sT1W_3D_coronal",
+            "WIP - WIP 3D_TS_0"
+        ],
+        "aliases": {
+            "SOURCE - Timencoded ASL Barca": [
+                "WIP SOURCE - Timencoded ASL Barca"
+            ]
+        }
+    },
+    "RLINK": {
+        "obligatory": {
+            "3DT1_singleshot": 176,
+            "DelRec - 3Dcompensation": 176,
+            "DTI32": 2310,
+            "DTI32blip": 2310,
+            "svs_se_30_ref": 2,
+            "svs_se_30_ws": 2,
+            "3D_FLAIR_3mm_Tra": 50
+        },
+        "silently_identified":[
+            "Survey",
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "COR",
+            "TRA"
+        ],
+        "aliases": {}
+    },
+    "ALFA_PLUS_V2": {
+        "obligatory": {
+            "T1_ALFA1": 240,
+            "rRS_ALFA1 SENSE": 230,
+            "RS_ALFA1 SENSE": 13800,
+            "SE-fMRI-AP SENSE": 225,
+            "SE-fMRI-PA SENSE": 225,
+            "FLAIR_ALFA1": 180,
+            "T2_ALFA1": 360,
+            "IR_ALFA1 SENSE": 78,
+            "rDWI_ALFA1": 66,
+            "DWI_ALFA1": 4752
+        },
+        "silently_identified": [
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "T1_CORONAL",
+            "T1_AXIAL",
+            "FLAIR_CORONAL",
+            "FLAIR_AXIAL"
+        ],
+        "aliases": {
+            "T1_AXIAL": [
+                "T1_Axial"
+            ],
+            "T1_CORONAL": [
+                "T1_Coronal"
+            ],
+            "FLAIR_AXIAL": [
+                "FLAIR_Axial"
+            ],
+            "FLAIR_CORONAL": [
+                "FLAIR_Coronal"
+            ]
+        }
+    },
+    "ALFA_PLUS2_V2": {
+        "obligatory": {
+            "sT1W_3D_TFE_HR_32 iso1.2 long AT": 150,
+            "SV_PRESS_100_Myo_CHESS_Hipo": 2,
+            "SV_PRESS_100_Myo_CHESS_Cun": 2,
+            "PCA1": 6,
+            "PCA2": 2,
+            "3D-pCASL_ALFA2-V2": 30,
+            "WIP SOURCE - 3D-pCASL_ALFA2-V2": 180,
+            "QFLOW_CAROTID": 90,
+            "QFLOW_CSF": 90,
+            "WIP muti-b bajo max": 64,
+            "WIP muti-b medio max": 128,
+            "WIP muti-b altos max": 96,
+            "MULTI-ECHO_ALFA2-V2": 2970,
+            "QSM_ALFA2-V2": 280,
+            "DelRec - QSM_ALFA2-V2": 1680
+        },
+        "silently_identified": [
+            "SmartBrain SENSE",
+            "MPR - SmartBrain SENSE",
+            "VSmartBrain SENSE",
+            "Patient Aligned MPR AWPLAN_SMARTPLAN_TYPE_BRAIN",
+            "VM2DI CLEAR",
+            "MIP - M2DI",
+            "unknown"
+        ],
+        "warning_if_missing": [
+            "VWIP sT1W_3D_TFE_HR_32 iso1.2 long AT",
+            "VWIP sT1W_3D_axial",
+            "VWIP sT1W_3D_coronal"
+        ],
+        "aliases": {
+            "WIP muti-b bajo max": [
+                "WIP muti-b  bajo max"
+            ],
+            "MPR - SmartBrain SENSE" :[
+                "WIP MPR - SmartBrain SENSE"
+            ],
+            "VWIP sT1W_3D_TFE_HR_32 iso1.2 long AT" :[
+                "VWIP sT1W_3D_TFE_HR_32 iso1.2 long AT SENSE"
+            ],
+            "WIP SOURCE - 3D-pCASL_ALFA2-V2": [
+                "WIP SOURCE - 3D-pCASL_T1RHO",
+                "SOURCE - 3D-pCASL_ALFA2-V2"
+            ]
+        }
+    }
+}
