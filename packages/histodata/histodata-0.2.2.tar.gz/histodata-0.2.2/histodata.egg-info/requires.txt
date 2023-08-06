@@ -1,0 +1,12 @@
+matplotlib
+numpy
+torch>=1.5.1
+torchvision>=0.6.1
+pandas
+scikit-learn
+scikit-image>=0.18.1
+imagesize
+openslide-python
+opencv-python-headless
+Pillow
+tiatoolbox
