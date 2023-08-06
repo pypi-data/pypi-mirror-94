@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: discord-menu
+Version: 0.13.0
+Summary: A library to create tabbed menus in Discord messages
+Home-page: https://github.com/TsubakiBotPad/discord-menu
+Author: The Tsubotki Team
+Author-email: 69992611+TsubakiBotPad@users.noreply.github.com
+License: Apache-2.0 License
+Description: # discord-menu
+        Create tabbed menus in Discord messages
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
