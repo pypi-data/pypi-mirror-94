@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+telethon_cosmosdb_sqlsession.egg-info/PKG-INFO
+telethon_cosmosdb_sqlsession.egg-info/SOURCES.txt
+telethon_cosmosdb_sqlsession.egg-info/dependency_links.txt
+telethon_cosmosdb_sqlsession.egg-info/requires.txt
+telethon_cosmosdb_sqlsession.egg-info/top_level.txt
+telethoncosmosdb/__init__.py
+telethoncosmosdb/telethoncosmosdb.py
