@@ -1,0 +1,12 @@
+dkist-processing-core
+globus-sdk
+gqlclient
+talus
+astropy
+redis
+
+[test]
+pytest
+pytest-cov
+pytest-mock
+hypothesis
