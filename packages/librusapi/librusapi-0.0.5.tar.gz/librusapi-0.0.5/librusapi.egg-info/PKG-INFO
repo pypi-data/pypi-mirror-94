@@ -1,0 +1,128 @@
+Metadata-Version: 1.1
+Name: librusapi
+Version: 0.0.5
+Summary: Scraper for Librus Synergia
+Home-page: https://github.com/ravensiris/librusapi
+Author: Maksymilian Jodłowski
+Author-email: UNKNOWN
+License: MIT
+Description: 
+        .. contents::
+        
+        librusapi - A Librus Synergia scraper
+        -------------------------------------
+        
+        Goal of this project is to free students from the limitations of Librus Synergia software
+        mainly: giving the user **fresh** information unlike their mobile app that can only
+        refresh every **3h** or so.
+        
+        Install
+        -------
+        
+        .. code:: sh
+        
+            pip install librusapi
+        
+        Tech used
+        ---------
+        
+        - written in ``python`` developed with ``3.9`` in mind
+        
+        - ``requests`` library for fetching data, mainly html
+        
+        - ``BeautifulSoup4`` library for parsing the data
+        
+        Development specific
+        ~~~~~~~~~~~~~~~~~~~~
+        
+        - ``mypy`` for type checking
+        
+        - ``pytest`` for running tests
+        
+        - ``pdoc`` for creating html documentation
+        
+        Quick start
+        -----------
+        
+        Example usage of the API
+        
+        Getting the timetable
+        ~~~~~~~~~~~~~~~~~~~~~
+        
+        .. code:: python
+        
+            from librusapi.token import get_token
+            from librusapi import timetable
+        
+            token = get_token('username', 'password')
+            lesson_units = timetable.lesson_units(token)
+        
+            for lu in lesson_units:
+                print(lu)
+        
+        Listing messages
+        ~~~~~~~~~~~~~~~~
+        
+        .. code:: python
+        
+            from librusapi.token import get_token
+            from librusapi import messages
+        
+            token = get_token('username', 'password')
+            messages = messages.list_messages(token)
+        
+            for msg in messages:
+                print(msg)
+        
+        Documentation
+        -------------
+        
+        Docs can be found `here <https://ravensiris.github.io/librusapi/>`_
+        
+        Working on the project
+        ----------------------
+        
+        .. code:: sh
+        
+            git clone https://github.com/ravensiris/librusapi
+            cd librusapi
+            python -m venv venv
+            # This may be different depending on your operating system and shell
+            source ./venv/bin/activate
+            pip install -r requirements.txt
+            # Installing as an editable library
+            pip install -e .
+        
+        Now you can import ``librusapi`` in your project
+        
+        Generating docs
+        ~~~~~~~~~~~~~~~
+        
+        .. code:: sh
+        
+            pdoc --html librusapi
+        
+        Status
+        ------
+        
+        Currenty you can:
+        
+        - Authenticate and get a token
+        
+        - List all lessons in a timetable
+        
+        - List all messages ( can't read them yet )
+        
+        Copyright 2021 Maksymilian Jodłowski
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Keywords: librus,scraper,api
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
