@@ -1,0 +1,9 @@
+README.md
+setup.py
+animation/__init__.py
+animation/animation.py
+kohonen_som.egg-info/PKG-INFO
+kohonen_som.egg-info/SOURCES.txt
+kohonen_som.egg-info/dependency_links.txt
+kohonen_som.egg-info/top_level.txt
+test/test_mapping.py
