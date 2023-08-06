@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "candella-sdk"
+version = "1.0.0-alpha1"
+description = "Create and manage Candella apps and services with ease."
+authors = ["Marquis Kurt <software@marquiskurt.net>"]
+license = "MPL-2.0"
+repository = "https://github.com/UnscriptedVN/candella-sdk"
+documentation = "https://candella.unscriptedvn.dev/99-candella-sdk/"
+
+[tool.poetry.scripts]
+candella-sdk="candella_sdk:main"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+cookiecutter = "^1.7.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+autopep8 = "^1.5.5"
+pylint = "^2.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

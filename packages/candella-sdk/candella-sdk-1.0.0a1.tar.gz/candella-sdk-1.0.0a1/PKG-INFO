@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: candella-sdk
+Version: 1.0.0a1
+Summary: Create and manage Candella apps and services with ease.
+Home-page: https://github.com/UnscriptedVN/candella-sdk
+License: MPL-2.0
+Author: Marquis Kurt
+Author-email: software@marquiskurt.net
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cookiecutter (>=1.7.2,<2.0.0)
+Project-URL: Documentation, https://candella.unscriptedvn.dev/99-candella-sdk/
+Project-URL: Repository, https://github.com/UnscriptedVN/candella-sdk
