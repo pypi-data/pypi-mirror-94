@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: streamlit-data-profile-viewer
+Version: 0.1.2
+Summary: Data profile viewer component for Streamlit
+Home-page: UNKNOWN
+Author: Sonia Castelo Quispe
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: streamlit (>=0.63)
+Requires-Dist: data-profile-viewer (>=0.2.6)
+
+# Streamlit Data Profile Viewer
+
+## Installation
+
+In your python virtual environment, run:
+
+```sh
+pip install streamlit-data-profile-viewer
+```
+
+
