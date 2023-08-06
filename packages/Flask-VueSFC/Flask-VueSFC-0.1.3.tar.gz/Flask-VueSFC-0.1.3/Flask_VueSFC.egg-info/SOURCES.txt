@@ -1,0 +1,17 @@
+MANIFEST.in
+README.rst
+setup.py
+Flask_VueSFC.egg-info/PKG-INFO
+Flask_VueSFC.egg-info/SOURCES.txt
+Flask_VueSFC.egg-info/dependency_links.txt
+Flask_VueSFC.egg-info/not-zip-safe
+Flask_VueSFC.egg-info/requires.txt
+Flask_VueSFC.egg-info/top_level.txt
+flask_vue_sfc/__init__.py
+flask_vue_sfc/helpers.py
+flask_vue_sfc/utils.py
+flask_vue_sfc/static/js/escodegen.js
+flask_vue_sfc/static/js/vue-template-compiler.js
+flask_vue_sfc/static/js/vue.js
+flask_vue_sfc/static/js/vue.min.js
+flask_vue_sfc/templates/page.html
