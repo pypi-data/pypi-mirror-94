@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pesel/__init__.py
+pesel/__main__.py
+pesel/main.py
+pesel/pesel.py
+pesel.egg-info/PKG-INFO
+pesel.egg-info/SOURCES.txt
+pesel.egg-info/dependency_links.txt
+pesel.egg-info/entry_points.txt
+pesel.egg-info/top_level.txt
