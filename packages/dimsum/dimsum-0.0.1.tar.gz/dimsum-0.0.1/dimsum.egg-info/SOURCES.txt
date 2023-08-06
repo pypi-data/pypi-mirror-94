@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dimsum/__init__.py
+dimsum/container.py
+dimsum/io.py
+dimsum/schema.py
+dimsum.egg-info/PKG-INFO
+dimsum.egg-info/SOURCES.txt
+dimsum.egg-info/dependency_links.txt
+dimsum.egg-info/requires.txt
+dimsum.egg-info/top_level.txt

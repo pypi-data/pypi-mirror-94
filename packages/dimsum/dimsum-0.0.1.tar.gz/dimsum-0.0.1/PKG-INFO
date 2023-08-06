@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dimsum
+Version: 0.0.1
+Summary: Relational operations built on GraphBLAS
+Home-page: UNKNOWN
+Author: Jim Kitchen and Erik Welch
+License: UNKNOWN
+Description: # Dimsum
+        
+        Library built on top of GraphBLAS to behave more like a DataFrame than a Matrix.
+        
+        A schema made of Dimensions is defined upfront and provides the foundation for elegant
+        dimensional pivoting, reductions, and other manipulations.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Description-Content-Type: text/markdown
