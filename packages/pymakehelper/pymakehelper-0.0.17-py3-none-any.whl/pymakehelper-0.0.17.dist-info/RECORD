@@ -1,0 +1,15 @@
+pymakehelper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymakehelper/configs.py,sha256=49u_8x0fVA1lpBGQGZP9l_ldodRnfpnsttZqGZkoKhE,1077
+pymakehelper/main.py,sha256=6Em-4fT3OzW_Aja9rE03BLQyt4vLlpC8BDZn6hWHPSs,4696
+pymakehelper/static.py,sha256=dikVEAKKDhL_IG50DPHQgOz8hBjFMv8wK74M2T_1DGg,208
+pymakehelper/utils.py,sha256=-xoZ6bNpd2r2Be9qqPCSbIFCDMG8ktOxY7014va-RQ0,1545
+pymakehelper/version.py,sha256=eg93Wh0dQgnXnpp9ZN-dP6VCCzi7DuVvU7c3r4Jb8vY,83
+pymakehelper/endpoints/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymakehelper/endpoints/group_default.py,sha256=39V1Se9PqVvEcaGPkIbustUMljKq5vcgpRTTZt-rApw,4603
+pymakehelper/endpoints/main.py,sha256=GA-5s6BugC5zxMfUpRG21_IYT5Rjc2aHcvKv9GzPXHg,547
+pymakehelper-0.0.17.dist-info/LICENSE,sha256=FfbSLkoQchuCU9EkvQiM7FfOSBek-_TzGBMguXwpiRI,1070
+pymakehelper-0.0.17.dist-info/METADATA,sha256=_OoABAmH98Ya6ELeBl6d6d0j3FXPZc1-OmbrJVGYJNY,1363
+pymakehelper-0.0.17.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pymakehelper-0.0.17.dist-info/entry_points.txt,sha256=KsO-B0PWmyqjBzxyLJ58jI0IbBrBKpXzTkjrktV4q6w,57
+pymakehelper-0.0.17.dist-info/top_level.txt,sha256=TJgq4bVz3ENs388ya_TVEB_QNKSWrKkwcaywY2v7Vlc,13
+pymakehelper-0.0.17.dist-info/RECORD,,
