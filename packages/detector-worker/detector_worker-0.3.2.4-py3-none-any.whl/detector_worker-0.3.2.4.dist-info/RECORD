@@ -1,0 +1,8 @@
+detector_worker/__init__.py,sha256=qEkV3VFtFsDElYnIvorwnPh9zPHCux9Kej4KSYmxAw8,84
+detector_worker/gazetteer.py,sha256=NmEJB4x04C6HMZxxqWxWeaEvj6t9mtfFyYJas95iDEg,2901
+detector_worker/sentencizer.py,sha256=fU6h8eSietkU25tELx3euVav0wxcmIHIODZYEkP8Ntk,1762
+detector_worker/worker.py,sha256=D6v1WwYg25tOPp6ydb-uoIbAkTH-PUPyWGGVC6_z6Do,17454
+detector_worker-0.3.2.4.dist-info/METADATA,sha256=ompSqRJUz0o5XckswKL_slTDtRn-6HPH05WQSNJ3h5E,503
+detector_worker-0.3.2.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+detector_worker-0.3.2.4.dist-info/top_level.txt,sha256=F7yR5qMa2T44yih6dzzpfOgVYcp10YQspKF96Off7QE,16
+detector_worker-0.3.2.4.dist-info/RECORD,,
