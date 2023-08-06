@@ -1,0 +1,3 @@
+[gui_scripts]
+faber-bench = faber_bench.cli:cli_main
+
