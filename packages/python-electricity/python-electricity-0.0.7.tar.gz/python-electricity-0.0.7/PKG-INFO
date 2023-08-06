@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: python-electricity
+Version: 0.0.7
+Summary: Determine Electricity Tariff Periods in Python
+Home-page: https://github.com/dgomes/python-electricity
+Author: dgomes
+Author-email: diogogomes@gmail.com
+Maintainer: dgomes
+Maintainer-email: diogogomes@gmail.com
+License: MIT
+Description: 
+        # python-electricity
+        Tariff Periods for electricity billing
+        
+        ## Available Operators:
+        
+        ### Portugal
+        
+        #### Operators
+          * EDP
+            * Simples
+            * Bi-horário - ciclo diário
+            * Bi-horário - ciclo semanal
+            * Tri-horário - ciclo diário
+            * Tri-horário - ciclo semanal
+          * Galp
+            * Simples
+            * Bi-horário - ciclo diário
+            * Bi-horário - ciclo semanal
+          * Iberdrola
+            * Casa
+            * Casa Noite - ciclo diário
+            * Casa Noite - ciclo semanal
+          * GoldEnergy
+            * Simples
+            * Bi-horário - ciclo diário
+            * Bi-horário - ciclo semanal
+              
+        #### Available Tariffs
+          * Normal
+          * Ponta
+          * Cheias
+          * Vazio
+          * Vazio Normal
+          * Super Vazio
+          
+        ## Status
+        
+        Currently only Portuguese operators EDP, Galp, Iberdrola and GoldEnergy are available.
+        
+        ## Pull Requests
+        
+        Pull requests are welcomed and supported! Go ahead add your Country/Operator
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Office/Business :: Scheduling
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Localization
+Description-Content-Type: text/markdown
