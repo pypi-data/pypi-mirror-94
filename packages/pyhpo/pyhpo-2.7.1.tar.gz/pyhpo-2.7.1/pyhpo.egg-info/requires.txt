@@ -1,0 +1,10 @@
+
+[all]
+pandas
+scipy
+
+[pandas]
+pandas
+
+[scipy]
+scipy
