@@ -1,0 +1,15 @@
+zgw_auth_backend/__init__.py,sha256=zn7WzsWC_aPSaXuL7gy2BhV3r0d8zHwbFLHu83fvOpc,66
+zgw_auth_backend/admin.py,sha256=gr4vKy9flOPUmu_oojsVXbxIxKSc-QwLifNPtWUtgTI,240
+zgw_auth_backend/apps.py,sha256=0AsB5s3h_XQFH4l0qycjUcQB-X9_x1AFm8M5qYOSaLo,330
+zgw_auth_backend/authentication.py,sha256=OldcZxXia36dL-xxY0lR8sz4-Un5v2UOwFfS6jy3YMk,1960
+zgw_auth_backend/models.py,sha256=MXGvd9HnkuwEFY6PL8rOo2_JpUikDtnE2PBWmteB3UI,655
+zgw_auth_backend/zgw.py,sha256=tKpwPv75qH3vmIQcIbqb9vO2CMBFCSFhiplk4VdJmSw,2629
+zgw_auth_backend/contrib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zgw_auth_backend/contrib/drf_spectacular.py,sha256=H7-RosVZ7jKsyLsCTd2NQ2ia-MntAP7AJl79AOS7zTk,408
+zgw_auth_backend/migrations/0001_initial.py,sha256=wbTjeIlzQ3iBlFsqgaTI0DL9mdcWbfGtLKvmKcIFbKc,1424
+zgw_auth_backend/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zgw_auth_backend-1.0.2.dist-info/LICENSE,sha256=NgPdm-0CmaOYcG80bY54Q6pVvecTv-zcr3oKVs7uX2U,1052
+zgw_auth_backend-1.0.2.dist-info/METADATA,sha256=fRP8Y7QvP34Eu8GtgZkX20y8HL5bWxDrmUgUn8quZOs,4794
+zgw_auth_backend-1.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+zgw_auth_backend-1.0.2.dist-info/top_level.txt,sha256=kjDA3_ObPpWRufy65pqjGAnN6Ca_psqsoqpCwvvwo_8,17
+zgw_auth_backend-1.0.2.dist-info/RECORD,,
