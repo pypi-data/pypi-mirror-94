@@ -1,0 +1,180 @@
+Metadata-Version: 2.1
+Name: wpa_pyfi
+Version: 0.5.2
+Summary: Command line tool and library wrapper around '/etc/wpa_supplicant/wpa_supplicant.conf'
+Home-page: https://github.com/garretthagen21/wpa_pyfi.git
+Author: Garrett Hagen, Rocky Meza, Gavin Wahl
+Author-email: garretthagen21@gmail.com
+License: BSD
+Description: wpa_pyfi
+        ========
+        
+        wpa_pyfi provides a command line wrapper for iwlist and /etc/wpa_supplicant/wpa_supplicant.conf
+        that makes it easier to connect the WiFi networks from the command line, specifically on a
+        a Raspberry Pi Device. The wpa_pyfi command is also implemented as a library that can be used from Python.
+        
+        ::
+        
+        $ pip install wpa_pyfi
+        $ wpa_pyfi --help
+        
+        
+        .. image::  https://travis-ci.org/garretthagen21/wpa_pyfi.png?branch=master
+            :target: https://travis-ci.org/garretthagen21/wpa_pyfi
+        
+        
+        .. note::
+            The documentation for wpa_pyfi lives at https://wpa_pyfi.readthedocs.org/en/latest/.
+        
+            Wpa_pyfi is based off of the archived wifi library originally created by Rocky Meza: https://github.com/rockymeza/wifi.git
+        
+        
+        Changelog
+        =========
+        
+        0.5.2
+        ^^^^^
+        :release-date: 2021-02-10
+        
+        - There was an issue in 0.5.1 that prevented pip install. PyPi will not let me overwrite/remove it so it is being fixed in this release
+        
+        0.5.1
+        ^^^^^
+        :release-date: 2021-02-03
+        
+        - Add automatic priority management so activated networks will connect (fix ambiguity bug)
+        - Remove explicit priority specification on network creation
+        - Fix parsing bug that would cause connection data retrieval to fail for network
+        - Make NETNAME parameter optional in CLI arguments
+        
+        0.5.0
+        ^^^^^
+        :release-date: 2021-01-04
+        
+        - Packaged renamed from wifi to wpa_pyfi
+        - Project was rebuilt to run on wpa_cli instead of ifup and ifdown (a noteable issue for RPi Users)
+        - Scheme class was replaced with Network class
+        - Configurations are saved by default in /etc/wpa_supplicant/wpa_supplicant.conf instead of /etc/networks/interfaces (previous)
+        - Ad hoc network connection via CLI is no longer supported
+        - Connection class is no longer utilized. IfConfigParser object is used instead to view connection information
+        - Network tests are currently broken
+        - Discontinued support for Python3
+        
+        0.4.0
+        ^^^^^
+        :release-date: unknown
+        
+        - Make the wifi command name configurable (#55 - thanks yourealwaysbe)
+        - Add a __main__.py so that wifi can be invoked using python -mwifi
+        - Fix argument parsing so that scan is the default argument even with options passed
+        
+        0.3.8
+        ^^^^^
+        :release-date: 2016-03-11
+        
+        - Parse noise level if available (#91 - thanks zgoda-mobica)
+        
+        0.3.7
+        ^^^^^
+        :release-date: 2016-03-11
+        
+        - Fix bugs related to scheme parsing (#59, #42)
+        
+        0.3.6
+        ^^^^^
+        :release-date: 2016-02-11
+        
+        - Set all attributes to None in Cell.__init__ (#88 - thanks stvad)
+        
+        0.3.5
+        ^^^^^
+        :release-date: 2016-01-24
+        
+        - Better password handling (#62 - thanks foosel)
+        - Account for Cells with no SSID (#86 - thanks tlau)
+        
+        0.3.4
+        ^^^^^
+        :release-date: 2014-09-02
+        
+        - Fixed installation missing some files (#48 - thanks luckydonald)
+        
+        0.3.3
+        ^^^^^
+        :release-date: 2014-08-31
+        
+        - Check for write access for bashcompletion via os.access (#41, #47 - thanks foosel and jegger)
+        - Fixed scanning when quality is reported absolutely (#45 - jeromelebel)
+        - Fixed channel parsing (#33, #39 - thanks gavinwahl and qizha)
+        
+        0.3.2
+        ^^^^^
+        :release-date: 2014-07-26
+        
+        - Only run if __name__ == '__main__' (#29 - thanks Jonwei)
+        - Try to connect to the nearest Access Point
+        - wifi scan was failing when Bit Rate was the last line of output (#42 - thanks jargij)
+        - Added documentation for signal and quality on Cell
+        
+        0.3.1
+        ^^^^^
+        :release-date: 2014-02-10
+        
+        - Scheme.activate was failing on a TypeError in Python3
+        
+        0.3.0
+        ^^^^^
+        :release-date: 2014-02-09
+        
+        - Scheme.activate now throws a ConnectionError if activation failed (#17 - thanks alexykot)
+        - Cell.all now throws an InterfaceError if scanning failed (#18 - thanks alexykot)
+        - Better error message when scheme isn't found (#19 - thanks gavinwahl)
+        - Added ability to delete schemes (#20 - thanks spektom)
+        - Added the --file option (#21)
+        - Scheme.activate returns a Connection object (#22)
+        - Added the autoconnect command (#23)
+        - Fixed parsing error missing channel (#24 - thanks LiorKirsch)
+        - Fixed relative signal return as zero (#25 - thanks LiorKirsch)
+        - Relative signals are now converted to dBm (#26 - thanks LiorKirsch)
+        - Various codebase cleanup (#27 - thanks ramnes)
+        - Added support for WPA Version 1 (#28 - thanks LiorKirsch)
+        - Fixed Python3 support for WPA/PBKDF2
+        
+        0.2.2
+        ^^^^^
+        :release-date: 2013-12-25
+        
+        - Fixed relative signal parsing bug (#12 - thanks alexykot)
+        
+        0.2.1
+        ^^^^^
+        :release-date: 2013-11-22
+        
+        - Fixed print_table str/int bug (#13 - thanks DanLipsitt)
+        
+        0.2.0
+        ^^^^^
+        :release-date: 2013-09-27
+        
+        - Added support for WEP
+        - Fixed bug related to very short SSIDs
+        - Fixed bug related to numeric passkeys
+        
+        0.1.1
+        ^^^^^
+        :release-date: 2013-05-26
+        
+        - Updated setup.py to actually install the bash completion script
+        
+Platform: Debian
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: System :: Networking
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/x-rst
