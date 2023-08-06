@@ -1,0 +1,14 @@
+beproductive/__init__.py,sha256=anBcPGggCP0f-o9w0IsZYV49rl6HvJbHcuDN39x3mxw,23
+beproductive/__main__.py,sha256=vo7ZGGMqgU7o4D0Q-4Qmn3uvaSr0UEE7uw8JD41ul4U,3551
+beproductive/_nbdev.py,sha256=IzWj_WPWdj9Ge1bgWIy77cr52CT_6sgwHOr-EJaaNk8,1419
+beproductive/beproductive.py,sha256=T1zqbK0nGRLExomnGQPGEwVxcC4f89r15Nvx3PObpWc,754
+beproductive/blocker.py,sha256=xIu7Xd-catow3svQfuG3jEA_XHcm0KtWBzrY0CbdrEQ,3594
+beproductive/blocklist.py,sha256=naSXfs1dxy6RsH4KXrorhIk4RhAJik6zmwxA7_sNl34,294
+beproductive/config.py,sha256=tA4pzwYh1gjtm6XnJJvk7YS471KfHtPmfebRCkkhd0g,1789
+beproductive/pomodoro.py,sha256=LMVh-KLE_l9eH5DuIhfg66lmFCpl7xinYlQZYIIAyUs,1093
+beproductive-0.2.2.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+beproductive-0.2.2.dist-info/METADATA,sha256=i1WPUrRsxDykkbBClvxAGrdekW1FO-7yLXNNJewKJBI,3900
+beproductive-0.2.2.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+beproductive-0.2.2.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+beproductive-0.2.2.dist-info/top_level.txt,sha256=jxAnx-24NCk4poNl0IxW3RGVMt0cBVaZdSOt6iyVVnM,13
+beproductive-0.2.2.dist-info/RECORD,,
