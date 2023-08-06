@@ -1,0 +1,7 @@
+grpcio
+grpcio_reflection
+protobuf
+
+[test]
+pytest
+pytest-grpc
