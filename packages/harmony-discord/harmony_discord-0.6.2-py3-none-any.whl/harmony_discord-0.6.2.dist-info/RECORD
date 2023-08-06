@@ -1,0 +1,13 @@
+harmony/__init__.py,sha256=EMXsbzoE6qsSD0j4imvHBirCvYBfj2ih1xG4Rr7iAoc,849
+harmony/__main__.py,sha256=J3kcx-bcHSy_MEAZJqZKe_tOMUP40T26FAY_clhg5RA,1664
+harmony/discord.py,sha256=1fhTEKQGuX-FJLon1ghk2BKh30etfH-o5ZNngbZl4o0,17737
+harmony/harmony.py,sha256=p4snjS69X0qQa2OYndbXZGJnYFZXFGIwNtkioN2aADc,24401
+harmony/messages.py,sha256=SWiqFEkOPh0kt0Z4GSOx2B4VThmx2j1NTWL-jijWFE4,2015
+harmony/user_agent_data.py,sha256=Oo0yu_AlsRGsboJGfRurpLgSijCVyDy7RyZ-GZ0rYac,9659
+harmony/user_agents.py,sha256=S_QEhKHYuiq049m9i6R6Yy6CWzkQQ992UatFWq4xliY,836
+harmony_discord-0.6.2.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+harmony_discord-0.6.2.dist-info/METADATA,sha256=KgL9E17qPUkHCbkq4W0e94LerqpdL8YT3Bzg7IM-LZk,5282
+harmony_discord-0.6.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+harmony_discord-0.6.2.dist-info/entry_points.txt,sha256=13nswfacNEeAzS34S5FKCyAzhBWu5bc66770M5lctOc,42
+harmony_discord-0.6.2.dist-info/top_level.txt,sha256=FJmIJW4WLlnPXrFQdNoIffTSI0UOQUzeZ0QseZHpYXI,8
+harmony_discord-0.6.2.dist-info/RECORD,,
