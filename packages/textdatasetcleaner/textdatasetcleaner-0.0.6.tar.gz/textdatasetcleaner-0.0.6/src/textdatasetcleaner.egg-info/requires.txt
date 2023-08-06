@@ -1,0 +1,10 @@
+srsly==1.0.2
+tqdm>=4.49.0<5.0.0
+scikit-learn<=0.20.2
+profanity-check==1.0.3
+selectolax<0.3.0,>=0.2.7
+requests<3.0.0,>=2.24.0
+click<8.0.0,>=7.1.2
+PyYAML<6.0.0,>=5.3.1
+textacy>=0.10.1<1.0.0
+fasttext==0.9.2
