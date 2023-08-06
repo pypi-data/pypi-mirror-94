@@ -1,0 +1,9 @@
+README.md
+setup.py
+speechaugs/__init__.py
+speechaugs/speechaugs.py
+speechaugs.egg-info/PKG-INFO
+speechaugs.egg-info/SOURCES.txt
+speechaugs.egg-info/dependency_links.txt
+speechaugs.egg-info/requires.txt
+speechaugs.egg-info/top_level.txt
