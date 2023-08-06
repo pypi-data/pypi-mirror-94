@@ -1,0 +1,16 @@
+bonk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bonk/admin.py,sha256=2R3Xt9h4JF8hNm9J9uceNvhlTpD8FfrKXESX60Vg59k,102
+bonk/apps.py,sha256=wyZ66brlPE0LCZCMDZ7Hr2tr_NdyeSfdUKy0PSOyM1Q,163
+bonk/models.py,sha256=PSvZIj2I2TugbqEy0ruxnAZFpACJ78tLUTsClFdPEug,137
+bonk/serializers.py,sha256=y3X0xGlKYHsfaHdGmJ7pYOyYqBjdvRHuXygRySMyCU0,27306
+bonk/tasks.py,sha256=lXF2MRhc3fdc3cojElFy1qEkytrieb4oKcIfHm_Td_k,5201
+bonk/tests.py,sha256=N1xpL7AD_xax3GgoYDDeTg4xlvlmEFBzcc2kiYYpBCs,41090
+bonk/urls.py,sha256=yORhBMABrsBIY7BPUdUVslsPfgog6h0vVVqRpn3ca3o,2331
+bonk/views.py,sha256=QK71QizLbZ_A96dO3Cdatg3Neq1coRpB2aIE2DVRMmI,15511
+bonk/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bonk-0.7.1.dist-info/LICENSE.txt,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+bonk-0.7.1.dist-info/METADATA,sha256=r4VramYnpSn8ikYXIVKmwLROnB9QMUSNUDZcJ-0sQt0,663
+bonk-0.7.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bonk-0.7.1.dist-info/top_level.txt,sha256=aCTDUSNkaW8uHJNCxkhtSAhfHpsb50hAUHS3jXwU4Wg,5
+bonk-0.7.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+bonk-0.7.1.dist-info/RECORD,,

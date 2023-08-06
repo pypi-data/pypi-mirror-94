@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: bonk
+Version: 0.7.1
+Summary: Simple IPAM
+Home-page: https://github.com/dhozac/bonk
+Author: Klarna Bank AB
+Author-email: daniel.zakrisson@klarna.com
+License: Apache Software License
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 1.11
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: System :: Networking
+Requires-Dist: netaddr
+Requires-Dist: djangorestframework
+Requires-Dist: django-rethink
+Requires-Dist: requests
+Requires-Dist: dnspython
+
+UNKNOWN
+
+
