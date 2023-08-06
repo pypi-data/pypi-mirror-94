@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: ts-sdk
+Version: 1.1.4
+Summary: Tetrascience Python SDK
+Home-page: https://developers.tetrascience.com
+Author: tetrascience
+Author-email: developers@tetrascience.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: attrs (<21,>=20.2.0)
+Requires-Dist: boto3 (<2,>=1.16.3)
+Requires-Dist: botocore (<2,>=1.19.3)
+Requires-Dist: certifi (<2021,>=2020.6.20)
+Requires-Dist: chardet (<4,>=3.0.4)
+Requires-Dist: idna (<3,>=2.10)
+Requires-Dist: importlib-metadata (<3,>=2.0.0)
+Requires-Dist: jmespath (<1,>=0.10.0)
+Requires-Dist: jsonschema (<4,>=3.2.0)
+Requires-Dist: pyrsistent (<1,>=0.17.3)
+Requires-Dist: python-dateutil (<3,>=2.8.1)
+Requires-Dist: query-string (<2021,>=2020.7.1)
+Requires-Dist: requests (<3,>=2.24.0)
+Requires-Dist: s3transfer (<1,>=0.3.3)
+Requires-Dist: six (<2,>=1.15.0)
+Requires-Dist: smart-open[s3] (<4,>=3.0.0)
+Requires-Dist: typing-extensions (<4,>=3.7.4)
+Requires-Dist: urllib3 (<2,>=1.25.11)
+Requires-Dist: zipp (<4,>=3.3.1)
+
+# ts-sdk
+Tetrascience Python SDK
+
+## Install
+
+```
+pip3 install ts-sdk
+```
+
+## Usage
+
+### Init a new protocol
+
+```
+ts-sdk init -o <org> -m <master-script-slug> -t <task-script-slug> -f <protocol-folder>
+cd <protocol-folder>/task-script
+pipenv install --dev
+# task-script code modifications...
+pipenv run pytest
+```
+
+### Upload artifact
+
+```
+export TS_ORG=<your-org-slug>
+export TS_API_URL=https://api.tetrascience.com/v1
+export TS_AUTH_TOKEN=<token>
+ts-sdk put <ids|master-script|task-script> <namespace> <slug> <version> <artifact-folder>
+```
+
+## Dockerfile ENTRYPOINT
+
+```
+ENTRYPOINT [ "<python-bin>", "-u", "-m", "ts_sdk.task.run" ]
+```
+
+
