@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: toloka-kit
+Version: 0.1.2
+Summary: Toloka API client
+Home-page: UNKNOWN
+Author: Vladimir Losev
+Author-email: losev@yandex-team.ru
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.6.0
+Requires-Dist: attrs
+Requires-Dist: requests
+Requires-Dist: urllib3
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: simplejson
+Requires-Dist: cattrs (==1.0.0) ; python_version < "3.7.0"
+Requires-Dist: backports-datetime-fromisoformat ; python_version < "3.7.0"
+Requires-Dist: cattrs (>=1.1.1) ; python_version >= "3.7.0"
+Provides-Extra: dev
+Requires-Dist: requests-mock ; extra == 'dev'
+
+UNKNOWN
+
+
