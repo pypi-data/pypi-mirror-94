@@ -1,0 +1,12 @@
+automapdb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+automapdb/cli.py,sha256=6bUa9KlsKEu98Ww31-8bnke8NtUxgz-CSX2e2_xh7Yc,629
+automapdb/db.py,sha256=65c2zp_5Vzfo32mh-X81TUzdaRPSu7vJ0TIeq0jOY8U,5743
+automapdb/mappings.py,sha256=p_AeG6ABXbgbSP96RBlLkCUzKpUuV45FGwFERFXDPm8,6714
+automapdb/table.py,sha256=Ccb9GXxBo8tQd4g4kPtproxtqtrJkNzuL0doiHjOnXU,9325
+automapdb/utils.py,sha256=2Abdk7UNZS5ejVQNHQqJ5ItnYzbtSXxnTvdS6HM15yw,5048
+automapDB-0.0.1rc0.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+automapDB-0.0.1rc0.dist-info/METADATA,sha256=x3p6rc7EQqwMwKvVCJR0F1Jmmtwdhs62d76OWXMF0DI,5415
+automapDB-0.0.1rc0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+automapDB-0.0.1rc0.dist-info/entry_points.txt,sha256=pBHGnCqQj-k4nVMwHWHrRUveQuk0xAET7z58oKoDCu8,50
+automapDB-0.0.1rc0.dist-info/top_level.txt,sha256=SxPE6Kt3_i1eS7EQW5kEPqwzkJ3S-BVI_1wOFAOoKcc,10
+automapDB-0.0.1rc0.dist-info/RECORD,,
