@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: json-parser-utils
+Version: 0.0.0
+Summary: A python package that makes it easier to access nested json data
+Home-page: https://github.com/shashankkr9/json-parser-utils
+Author: Shashank Kumar
+Author-email: shashank.kr9@gmail.com
+License: UNKNOWN
+Description: # json-parser-utils
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

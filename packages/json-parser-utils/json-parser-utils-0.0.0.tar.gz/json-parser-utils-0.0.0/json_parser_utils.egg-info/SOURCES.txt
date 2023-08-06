@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+json_parser_utils/__init__.py
+json_parser_utils/json_parser.py
+json_parser_utils/utils.py
+json_parser_utils.egg-info/PKG-INFO
+json_parser_utils.egg-info/SOURCES.txt
+json_parser_utils.egg-info/dependency_links.txt
+json_parser_utils.egg-info/top_level.txt
