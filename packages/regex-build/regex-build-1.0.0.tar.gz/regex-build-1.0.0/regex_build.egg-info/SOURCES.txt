@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+regex_build.py
+setup.cfg
+setup.py
+regex_build.egg-info/PKG-INFO
+regex_build.egg-info/SOURCES.txt
+regex_build.egg-info/dependency_links.txt
+regex_build.egg-info/top_level.txt
