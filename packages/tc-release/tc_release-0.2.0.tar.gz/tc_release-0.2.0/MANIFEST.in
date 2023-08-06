@@ -1,0 +1,5 @@
+include versioneer.py
+include requirements.txt
+include README.md
+include tc_release/_version.py
+include tc_release/tcgvl.txt
