@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: Aakash-calculator
+Version: 0.0.1
+Summary: This Package will provide a basics Calculator function such as add_num, sub_num, mul_num, div_num
+Home-page: UNKNOWN
+Author: Aakash Gupta
+Author-email: s1032190135@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
