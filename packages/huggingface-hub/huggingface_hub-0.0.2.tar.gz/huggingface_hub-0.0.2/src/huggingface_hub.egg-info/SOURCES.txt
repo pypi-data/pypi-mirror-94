@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+src/huggingface_hub/__init__.py
+src/huggingface_hub/constants.py
+src/huggingface_hub/file_download.py
+src/huggingface_hub/hf_api.py
+src/huggingface_hub.egg-info/PKG-INFO
+src/huggingface_hub.egg-info/SOURCES.txt
+src/huggingface_hub.egg-info/dependency_links.txt
+src/huggingface_hub.egg-info/entry_points.txt
+src/huggingface_hub.egg-info/requires.txt
+src/huggingface_hub.egg-info/top_level.txt
+src/huggingface_hub/commands/__init__.py
+src/huggingface_hub/commands/huggingface_cli.py
+src/huggingface_hub/commands/lfs.py
+src/huggingface_hub/commands/user.py
