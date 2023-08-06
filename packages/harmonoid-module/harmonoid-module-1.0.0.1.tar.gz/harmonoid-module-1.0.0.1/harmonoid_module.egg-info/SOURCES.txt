@@ -1,0 +1,14 @@
+README.md
+setup.py
+harmonoid_module.egg-info/PKG-INFO
+harmonoid_module.egg-info/SOURCES.txt
+harmonoid_module.egg-info/dependency_links.txt
+harmonoid_module.egg-info/requires.txt
+harmonoid_module.egg-info/top_level.txt
+harmonoidmodule/__init__.py
+harmonoidmodule/module.py
+harmonoidmodule/harmonoidservice/__init__.py
+harmonoidmodule/harmonoidservice/async_mutagen.py
+harmonoidmodule/harmonoidservice/async_pytube_ytmusicapi.py
+harmonoidmodule/harmonoidservice/browsing.py
+harmonoidmodule/harmonoidservice/downloading.py
