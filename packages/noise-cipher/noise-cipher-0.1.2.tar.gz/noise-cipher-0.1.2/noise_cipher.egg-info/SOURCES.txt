@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+noise/__init__.py
+noise/charsets.py
+noise/errors.py
+noise/noise.py
+noise_cipher.egg-info/PKG-INFO
+noise_cipher.egg-info/SOURCES.txt
+noise_cipher.egg-info/dependency_links.txt
+noise_cipher.egg-info/top_level.txt
