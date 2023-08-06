@@ -1,0 +1,10 @@
+gcp_flowlogs_reader/__init__.py,sha256=8n8lmUEiZxmNHEUVLUqJxSHZoG4H6C0jYz8hz4TYyPc,308
+gcp_flowlogs_reader/__main__.py,sha256=wZTxF_QfmYjrFEIRwzxs8AlDyVGhccwAtjGLjbuWz6I,4805
+gcp_flowlogs_reader/aggregation.py,sha256=So8_0owja-HNm5rUXgnDBgAPqgr27Fz--9gUPN1QFXU,1350
+gcp_flowlogs_reader/gcp_flowlogs_reader.py,sha256=6_i-J34rNaxucJvGTkeNrEVtwN3fxL2cseyxuRxFbSc,8662
+gcp_flowlogs_reader-0.7.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+gcp_flowlogs_reader-0.7.0.dist-info/METADATA,sha256=s2djz0wEB3yUyIXrhm9xRbC2DzjoI2ai36qnxRKYysM,968
+gcp_flowlogs_reader-0.7.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gcp_flowlogs_reader-0.7.0.dist-info/entry_points.txt,sha256=f1hCESS3kRfl-AzRHZE9rqJvEYAC1xDR3eDP-NI2N10,75
+gcp_flowlogs_reader-0.7.0.dist-info/top_level.txt,sha256=CB2LiFbb86m5dEKme096yafHqehc9uziyUqK9_FzgBo,20
+gcp_flowlogs_reader-0.7.0.dist-info/RECORD,,
