@@ -1,0 +1,8 @@
+setup.py
+src/alioss/__init__.py
+src/alioss/alioss.py
+src/qalioss.egg-info/PKG-INFO
+src/qalioss.egg-info/SOURCES.txt
+src/qalioss.egg-info/dependency_links.txt
+src/qalioss.egg-info/requires.txt
+src/qalioss.egg-info/top_level.txt
