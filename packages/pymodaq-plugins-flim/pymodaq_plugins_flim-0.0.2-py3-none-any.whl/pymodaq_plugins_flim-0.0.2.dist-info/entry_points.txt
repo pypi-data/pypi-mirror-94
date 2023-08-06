@@ -1,0 +1,3 @@
+[pymodaq.plugins]
+flim = pymodaq_plugins_flim
+
