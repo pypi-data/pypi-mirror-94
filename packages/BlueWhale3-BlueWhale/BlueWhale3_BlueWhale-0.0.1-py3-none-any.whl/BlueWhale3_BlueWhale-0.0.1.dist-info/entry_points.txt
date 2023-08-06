@@ -1,0 +1,6 @@
+[orange.widgets]
+BlueWhale = orangecontrib.blue_whale.widgets
+
+[orange3.addon]
+blue_whale = orangecontrib.blue_whale
+

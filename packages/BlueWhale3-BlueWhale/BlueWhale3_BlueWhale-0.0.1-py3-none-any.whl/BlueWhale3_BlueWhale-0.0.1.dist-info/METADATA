@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: BlueWhale3-BlueWhale
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://bw.dashenglab.com/
+Author: 大数据团队
+Author-email: dashenglab@163.com
+License: BlueWhale
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Requires-Dist: requests (~=2.25.1)
+Requires-Dist: PyQt5 (~=5.15.2)
+Requires-Dist: AnyQt (~=0.0.11)
+Requires-Dist: numpy (~=1.19.5)
+Requires-Dist: setuptools (~=51.0.0)
+Requires-Dist: bluewhale-canvas-core
+Requires-Dist: bluewhale-widget-base
+Requires-Dist: BlueWhale3
+Requires-Dist: python-i18n
+
+UNKNOWN
+
+

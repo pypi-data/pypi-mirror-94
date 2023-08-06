@@ -1,0 +1,92 @@
+package_label: "Blue Whale"
+package_desc: "Blue whale tools."
+
+common:
+  data: "Data"
+
+canvasmain:
+  sign_in: "Sign in"
+  sign_out: "Sign out"
+  service: "Account"
+  login: "Blue whale login"
+
+owcasedata:
+  name: "Datasets"
+  desc: "View the case data set and download the relevant data."
+  warn: "Warning"
+  warn_cont: 'Login failed, please login again.'
+  number_miss_value: "({:.1f}% missing values)"
+  no_missing_value: "(no missing values)"
+  none: "(None)"
+  desc_text:
+    output_doc: "Attribute-valued dataset read from the selected table."
+    number_instance: "<p>{} instance(s)"
+    feature: "<br/>{} feature(s) {}"
+    regression_numerical_class: "<br/>Regression; numerical class {}"
+    classification_categorical_class: "<br/>Classification; categorical class with {} values {}"
+    data_no_target_variable: "<br/>Data has no target variable."
+    meta_attribute: "<br/>{} meta attribute(s)"
+    entry: "<p>First entry: {}<br/> Last entry: {}</p>"
+    target_variable: "<br/>Multi-target; {} target variables {}"
+  msg:
+    file_too_big: "The file is too large to load automatically.Press Reload to load."
+    load_warning: "Read warning:\n{}"
+    performance_warning: "Categorical variables with >100 values may decrease performance."
+    renamed_vars: "Some variables have been renamed to avoid duplicates.\n{}"
+    file_not_found: "File not found."
+    missing_reader: "Missing reader."
+    sheet_error: "Error listing available sheets."
+    unknown: "Read error:\n{}"
+    warn: "Warning"
+    warn_text: "File does not exist, please download again"
+  btn:
+    all_info: "All Download"
+    more: "More"
+    apply: "Apply"
+    reset: "Reset"
+  title:
+    datasets: "Datasets"
+    table: "Table"
+    info: "Info"
+    columns: "Columns (Double click to edit)"
+  tip:
+    no_load: "No data loaded."
+    no_data: "No data."
+  report:
+    unknown: "unknown"
+    file: "File"
+    file_name: "File name"
+    no_file: "No file."
+    format: "Format"
+    data: "Data"
+
+datasets:
+  name: "Case"
+  desc: "Download Datasets from Bluewhale"
+  msg_not_fetch_data: "Could not fetch datasets list, only local cached datasets are shown"
+  msg_cannot_fetch_data: "Could not fetch dataset list"
+  see_also: "<small><b>See Also</b>\n"
+  reference: "<small><b>References</b>\n"
+  all_info: "All Datasets"
+  label:
+    name: "Name"
+    type: "Type"
+    stars: "Stars"
+    size: "Size"
+    create_date: "Created Dated"
+    tags: "Tags"
+  title:
+    desc: "Description"
+  tip:
+    search_for: "Search for dataset ..."
+    tree_view: "Press Return or double-click to send"
+  btn:
+    down: "Download"
+  status:
+    initialize: "Initializing"
+    fetch: "Fetching..."
+
+remote:
+  warn: "Warning"
+  warn_text: "Account login failed, please login again"
+  warn_err: "Account request information error, please login again"

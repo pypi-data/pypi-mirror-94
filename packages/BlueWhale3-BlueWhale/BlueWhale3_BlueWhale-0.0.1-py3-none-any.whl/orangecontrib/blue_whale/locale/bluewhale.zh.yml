@@ -1,0 +1,92 @@
+package_label: "蓝鲸"
+package_desc: "蓝鲸工具"
+
+common:
+  data: "数据"
+
+canvasmain:
+  sign_in: "账号登入"
+  sign_out: "账号登出"
+  service: "账号"
+  login: "蓝鲸登录"
+
+owcasedata:
+  name: "数据"
+  desc: "查看案例数据集，对相关数据集进行下载"
+  warn: "警告"
+  warn_cont: "登录账号失败, 请重新登录"
+  number_miss_value: "({:.1f}% 缺失值）"
+  no_missing_value: "（无缺失值）"
+  none: "(无)"
+  desc_text:
+    output_doc: "从所选表读取的属性值数据集"
+    number_instance: "<p>实例：{} 个"
+    feature: "<br/>特征变量：{} 个{}"
+    regression_numerical_class: "<br/>目标变量：数值型；回归 {}"
+    classification_categorical_class: "<br/>目标变量：类目型；包含 {} 个值 {}"
+    data_no_target_variable: "<br/>数据没有目标变量。"
+    meta_attribute: "<br/>元变量：{} 个"
+    entry: "<p>第一条：{}<br/>最后一条：{}</p>"
+    target_variable: "<br/>多目标：{} 目标变量{}"
+  msg:
+    reload_file: "该文件太大，无法自动加载。"
+    read_warning: "阅读警告：\n{}"
+    decrease_performance: "值大于100的分类变量可能会降低性能。"
+    var_renamed_avoid_duplicate: "一些变量已重命名以避免重复。\n{}"
+    file_not_found: "找不到文件。"
+    missing_reader: "缺少阅读器。"
+    sheet_error: "列出可用工作表时出错。"
+    read_error: "阅读错误：\n{}"
+    warn: "警告"
+    warn_text: "文件不存在，请重新下载"
+  btn:
+    all_info: "全部已下载"
+    more: "更多数据"
+    apply: "应用"
+    reset: "重置"
+  title:
+    datasets: "数据集"
+    table: "数据表"
+    info: "数据信息"
+    columns: "列 (双击可编辑)"
+  tip:
+    no_load: "未加载数据."
+    no_data: "无数据."
+  report:
+    unknown: "未知"
+    file: "文件"
+    file_name: "文件名"
+    no_file: "没有文件。"
+    format: "格式"
+    data: "数据"
+
+datasets:
+  name: "案例"
+  desc: "从蓝鲸平台下载案例以及数据"
+  msg_not_fetch_data: "无法获取数据集列表，仅显示本地缓存的数据集"
+  msg_cannot_fetch_data: "无法获取数据集列表"
+  see_also: "<small><b>另请参见</b>\n"
+  reference: "<small><b>参考</b>\n"
+  all_info: "全部数据集"
+  label:
+    name: "名称"
+    type: "类型"
+    stars: "星级"
+    size: "大小"
+    create_date: "创建时间"
+    tags: "标签"
+  title:
+    desc: "数据描述"
+  tip:
+    search_for: "搜索数据集 ..."
+    tree_view: "请按回车或者双击进行下载"
+  btn:
+    down: "下载"
+  status:
+    initialize: "初始化"
+    fetch: "正在获取..."
+
+remote:
+  warn: "提示"
+  warn_text: "账号登录失败，请重新登录"
+  warn_err: "账号请求信息错误，请重新登录"
