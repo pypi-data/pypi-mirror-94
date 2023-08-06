@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: boostsa
+Version: 0.1.0
+Summary: A package to compute bootstrap sampling significance test
+Home-page: https://github.com/fornaciari/bootstrap
+Author: Tommaso Fornaciari
+Author-email: fornaciari@unibocconi.it
+License: MIT license
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pip (==20.2.4)
+Requires-Dist: wheel (==0.36.2)
+Requires-Dist: twine (==3.3.0)
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: sklearn
+
+BooStSa - BOOtSTrap SAmpling in pyhton
+======================================
+
+
+
+.. image:: https://img.shields.io/github/license/fornaciari/boostsa
+        :target: https://lbesson.mit-license.org/
+        :alt: License
+
+This is a tool to compute bootstrap sampling significance test, 
+even in the pipeline of a complex experimental design.
+
+
+
+
+
+
+
+
+
+
+For the theoretical aspects of Bootstrap sampling, please refer to the paper:
+
+ Søgaard, A., Johannsen, A., Plank, B., Hovy, D., & Alonso, H. M. (2014, June). 
+ *What’s in a p-value in NLP?*. 
+ In Proceedings of the eighteenth conference on computational natural language learning (pp. 1-10).
+
+
+
+
+
+
