@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: plateflo
+Version: 0.3.2
+Summary: PlateFlo perfusion system tools.
+Home-page: https://github.com/robertpazdzior/plateflo-pypi
+Author: Robert Pazdzior
+Author-email: rpazdzior@protonmail.com
+License: UNKNOWN
+Description: # PlateFlo
+        Python tools for the PlateFlo perfusion tissue culture system. Simplifies
+        serial control of FETbox hardware controller and Ismatec peristaltic pumps.
+        
+        ## Installation
+        Using `pip` package manager:
+        ```bash
+        pip install plateflo
+        ```
+        or
+        ```bash
+        python3 -m pip install plateflo
+        ```
+        
+        ## Description
+        The `plateflo` package includes the following modules and sub-package:
+        * `fetbox` - OmniPerf FETbox serial control
+        * `scheduler` - Scheduling/executing system commands, e.g. valve on/off every 5 min.
+        * `ismatec` - Package for basic serial control of Ismatec peristaltic pumps
+            * `ismatec_dig` - Reglo Digital peristaltic pump
+            * `ismatec_icc` - Reglo ICC peristaltic pump
+            * `ismatec_scanner` - Find connected Reglo pumps
+        * `serial_io` - Underlying threaded serial I/O library. Built around `pyserial`
+        
+        ## Documentation
+        * Publication [coming soon]
+        * PlateFlo ReadTheDocs [coming soon]
+        
+        ## Source
+        Github - https://github.com/robertpazdzior/plateflo-pypi
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
