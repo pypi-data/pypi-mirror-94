@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: Calculator-Tcet
+Version: 0.0.1
+Summary: Our file will give you basic functions of calculation like addition, multiplication, subtraction and division.
+Home-page: UNKNOWN
+Author: Payal Kunwar
+Author-email: XYZ@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
