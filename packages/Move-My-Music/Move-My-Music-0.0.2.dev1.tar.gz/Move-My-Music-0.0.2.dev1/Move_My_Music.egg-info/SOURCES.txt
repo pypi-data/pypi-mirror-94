@@ -1,0 +1,13 @@
+README.md
+setup.py
+MoveMyMusic/VK.py
+MoveMyMusic/__init__.py
+MoveMyMusic/__main__.py
+MoveMyMusic/config.py
+MoveMyMusic/spotify.py
+MoveMyMusic/yandexmusic.py
+Move_My_Music.egg-info/PKG-INFO
+Move_My_Music.egg-info/SOURCES.txt
+Move_My_Music.egg-info/dependency_links.txt
+Move_My_Music.egg-info/entry_points.txt
+Move_My_Music.egg-info/top_level.txt
