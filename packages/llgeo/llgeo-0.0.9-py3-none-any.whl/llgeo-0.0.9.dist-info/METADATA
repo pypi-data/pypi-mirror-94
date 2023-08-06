@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: llgeo
+Version: 0.0.9
+Summary: Python library for Geotechnical Engineering
+Home-page: https://github.com/lauralunacabrera/LLGEO.git
+Author: Laura Luna
+Author-email: lauralunacabrera@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.16.4)
+Requires-Dist: pandas (>=1.1.5)
+Requires-Dist: scipy (>=1.2.0)
+Requires-Dist: ezdxf (>=0.14.2)
+Requires-Dist: matplotlib (>=3.0.3)
+Requires-Dist: seaborn (>=0.9.0)
+
+# LLGEO
+### A Python Library for Geotechnical Engineering Applications
+
+This is a test version!
+
+
+
+TODO:
+1) utilities -> formatters
+    num2str and arr2str functions are an absolute disaster. Really need to fix them.
+
+
+STRUCTURE
+
+props_nonlinear/
+    darandeli_2011.py
+
+quad4m/
+    genfiles.py
+    geometry.py
+    soildat.py
+
+rand_fields/
+    LAS.py
+    F77_to_py/
+
+
+VERSION 0.0.3
+- llgeo/quad4m/genfiles.py : added genfiles.py, which generates input files for QUAD4M. Note that KSAV and KOUT flags were not coded in so far, and will need to be added in later.
+- llgeo/quad4m/geometry.py : fixed orientation of nodes (was clockwise instead of counter-clockwise)
+
+
+VERSION 0.0.4
+- llgeo/quad4m/          : improved documentation of all existing modules
+- New modules:
+    - llgeo/basic_stats
+    - llgeo/cpt_interp
+    - llgeo/plotting
+    - llgeo/randfields
+
+VERSION 0.0.5
+- Decreased python version required to 3.6
+
+
