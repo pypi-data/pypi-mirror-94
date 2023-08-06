@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+florodoro/__init__.py
+florodoro.egg-info/PKG-INFO
+florodoro.egg-info/SOURCES.txt
+florodoro.egg-info/dependency_links.txt
+florodoro.egg-info/entry_points.txt
+florodoro.egg-info/requires.txt
+florodoro.egg-info/top_level.txt
