@@ -1,0 +1,3 @@
+    [console_scripts]
+    iatorch-train=iatorch.scripts.train:cli
+    
