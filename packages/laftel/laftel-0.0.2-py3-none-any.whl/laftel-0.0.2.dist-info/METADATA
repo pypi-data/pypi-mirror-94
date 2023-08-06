@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: laftel
+Version: 0.0.2
+Summary: 라프텔(애니메이션) API Wrapper (laftel.net)
+Home-page: https://github.com/331leo/laftel
+Author: LeoK
+Author-email: support@leok.kr
+License: GPL-V3
+Download-URL: https://github.com/331leo/laftel
+Keywords: anime,laftel,info,API,wrapper
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# Laftel
+API Wrapper for laftel.net 
+
+
