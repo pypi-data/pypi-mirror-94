@@ -1,0 +1,13 @@
+kss/__init__.py,sha256=yBFVDlgBuMpLsOFCCrb2uZlmOjH2q68qtkghR3EVhnQ,450
+kss/base.py,sha256=Y0CPhWYxtrYlzY5gpIdufnsrAUu6qzs8QzlwJK9E2_o,6479
+kss/korean.py,sha256=MtxjCRdGZQr0jLpJove8sonLPfR54-3uFaiMrOBAc80,4579
+kss/kss.py,sha256=ksrmlnmKc1nUBGw8YBJ3r_6FsF_hq8ZuehtkVKFpQP0,13193
+kss/rule.py,sha256=9rm7QNguduY4rzJZaIdYrcl4LO5Hp4K5HKC3tjRGLmM,16969
+kss/table.py,sha256=YoxZT3asrtg5U5mlOgk2fF6xwpPID0sxkfcGgHcbygI,7090
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_kss.py,sha256=yGoH1KA54GVherzrRgkgHiLSbny_hQ5WGLTmvn2jloo,131430
+kss-2.5.0.dist-info/LICENSE,sha256=6ElECixGhwNSQTPXOzrK_kBVdIf3OFNbZufEbNip5s4,1596
+kss-2.5.0.dist-info/METADATA,sha256=v_AGr66UZdBos5i99DVCGscp7ZUOhkz1C586JNQKzww,9331
+kss-2.5.0.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+kss-2.5.0.dist-info/top_level.txt,sha256=0jgv14vHP4vKmGbxbtgZH65Ft8Aa78smWPIvjHY7m6k,10
+kss-2.5.0.dist-info/RECORD,,
