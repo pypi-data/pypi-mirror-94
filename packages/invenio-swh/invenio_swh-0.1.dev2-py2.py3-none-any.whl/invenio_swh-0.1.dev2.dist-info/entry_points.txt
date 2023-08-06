@@ -1,0 +1,9 @@
+[invenio_base.apps]
+invenio_swh = invenio_swh:InvenioSWH
+
+[invenio_base.blueprints]
+invenio_swh = invenio_swh.views:blueprint
+
+[invenio_i18n.translations]
+messages = invenio_swh
+
