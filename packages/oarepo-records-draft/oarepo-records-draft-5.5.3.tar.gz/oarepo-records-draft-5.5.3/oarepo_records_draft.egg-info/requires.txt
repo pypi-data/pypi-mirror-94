@@ -1,0 +1,13 @@
+wrapt>=1.11.2
+oarepo_validate
+deepmerge
+
+[dev]
+oarepo[tests]~=3.3
+Babel
+
+[tests]
+oarepo[tests]~=3.3
+
+[tests_files]
+invenio-files-rest
