@@ -1,0 +1,3 @@
+[console_scripts]
+acbextract = acb.__main__:main
+
