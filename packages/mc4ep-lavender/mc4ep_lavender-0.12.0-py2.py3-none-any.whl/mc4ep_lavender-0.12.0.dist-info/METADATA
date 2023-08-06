@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: mc4ep-lavender
+Version: 0.12.0
+Summary: MC4EP cabinet core
+Home-page: https://git.mc4ep.org/mc4ep/lavender
+Author: Andriy Kushnir (Orhideous)
+Author-email: me@orhideous.name
+License: MIT
+Keywords: Minecraft,Yggdrasil,Authentication,Nidhoggr,Lavender
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: Django (==2.2.1)
+Requires-Dist: mysqlclient (==2.0.3)
+Requires-Dist: django-debug-toolbar (==2.1)
+Requires-Dist: Pillow (==8.1.0)
+Requires-Dist: singleton-decorator (==1.0.0)
+Requires-Dist: pydantic (==1.7.3)
+Requires-Dist: nidhoggr-core (>=0.7.1)
+
+# Lavender
+
+MC4EP cabinet core
+
+
+# History
+
+## 0.8.0 (2020-01-02)
+
+* First public release on PyPI.
+
+
