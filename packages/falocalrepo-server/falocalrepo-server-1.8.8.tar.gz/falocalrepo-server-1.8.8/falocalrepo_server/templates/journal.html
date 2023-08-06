@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        :root {
+            --table_border_color: darkgray;
+            --table_background_color_even: lightgrey;
+        }
+
+        #journal_metadata {
+            width: 95%;
+            max-width: 95%;
+            top: 20px;
+            margin: auto;
+            text-align: center
+        }
+
+        #journal_content {
+            width: 80%;
+            max-width: 600px;
+            top: 20px;
+            margin: auto;
+            text-align: justify;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid var(--table_border_color);
+        }
+
+        table th {
+            padding: 2px;
+            border: 2px solid var(--table_border_color);
+            text-align: center;
+        }
+
+        table td {
+            padding: 2px;
+            border: 1px solid var(--table_border_color);
+        }
+
+        .overflow {
+            overflow: hidden;
+            white-space: normal;
+        }
+
+        #journal_metadata table {
+            width: 300px;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        #journal_metadata .value {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div id="journal_metadata">
+    <h2>{{ journal["TITLE"] }}</h2>
+    <table style="max-width: 300px">
+        <tr>
+            <td>Author</td>
+            <td class="overflow value"><a href="/user/{{ journal["AUTHOR"] }}">
+                {{ journal["AUTHOR"] }}
+            </a></td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td class="overflow value">{{ journal["DATE"] }}</td>
+        </tr>
+    </table>
+    <br>
+    <form action="/journal/{{ journal["ID"] }}/zip/journal-{{ "{0:010}".format(journal["ID"]) }}.zip">
+        <button type="submit">Download Journal as ZIP</button>
+    </form>
+    <form action="https://www.furaffinity.net/journal/{{ journal["ID"] }}">
+        <button type="submit">Open on Fur Affinity</button>
+    </form>
+    <form id="prevNext" action="">
+        <button type="submit" onclick="this.form.action='/journal/{{ next }}'" {{ "disabled" if not next }}>
+            Next
+        </button>
+        <button type="submit" onclick="this.form.action='/journal/{{ prev }}'" {{ "disabled" if not prev }}>
+            Prev
+        </button>
+    </form>
+</div>
+<br><br>
+<div id="journal_content">
+    {% autoescape false %}
+    {{ journal["CONTENT"].replace("https://www.furaffinity.net/", "/").replace("http://www.furaffinity.net/", "/") }}
+    {% endautoescape %}
+</div>
+<script>
+    window.onload = () => {
+        const dpi = Number(window.devicePixelRatio || 1)
+        if (dpi <= 1) return
+        document.getElementById("journal_content").style.maxWidth = `${600 * (dpi / Math.floor(dpi))}px`
+    }
+</script>
+</body>
+</html>
