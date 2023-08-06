@@ -1,0 +1,12 @@
+README.md
+setup.py
+geomapviz/__init__.py
+geomapviz/geomapviz.py
+geomapviz.egg-info/PKG-INFO
+geomapviz.egg-info/SOURCES.txt
+geomapviz.egg-info/dependency_links.txt
+geomapviz.egg-info/not-zip-safe
+geomapviz.egg-info/requires.txt
+geomapviz.egg-info/top_level.txt
+tests/__init__.py
+tests/test_geomapviz.py
