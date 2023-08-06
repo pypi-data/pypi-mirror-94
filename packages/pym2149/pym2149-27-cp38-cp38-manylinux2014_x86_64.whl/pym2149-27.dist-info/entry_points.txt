@@ -1,0 +1,16 @@
+[console_scripts]
+bpmtool = pym2149.main:main_bpmtool
+dosound2jack = pym2149.main:main_dosound2jack
+dosound2txt = pym2149.main:main_dosound2txt
+dosound2wav = pym2149.main:main_dosound2wav
+dsd2wav = pym2149.main:main_dsd2wav
+lc2jack = pym2149.main:main_lc2jack
+lc2portaudio = pym2149.main:main_lc2portaudio
+lc2txt = pym2149.main:main_lc2txt
+lc2wav = pym2149.main:main_lc2wav
+mkdsd = ymtests.mkdsd:main_mkdsd
+ym2jack = pym2149.main:main_ym2jack
+ym2portaudio = pym2149.main:main_ym2portaudio
+ym2txt = pym2149.main:main_ym2txt
+ym2wav = pym2149.main:main_ym2wav
+
