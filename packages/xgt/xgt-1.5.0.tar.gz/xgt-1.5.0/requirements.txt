@@ -1,0 +1,5 @@
+six>=1.9.0
+grpcio>=1.20
+jupyter
+pandas>=0.24.2
+protobuf>=3.12.0

@@ -1,0 +1,8 @@
+# `xgt`: The Python interface to the Trovares xGT graph analytics engine.
+
+xGT is a high-performance property graph engine designed to support extremely large in-memory graphs, and the `xgt` library is the client-side interface which controls it.
+
+## Documentation
+
+The `xgt` library is self-documenting, and all external methods and classes have docstrings accessible through `help()`.
+A formatted version of the same is available online on the Trovares documentation site: [](http://docs.trovares.com/)
