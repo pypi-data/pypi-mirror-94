@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+sveder/__init__.py
+sveder/sveder
+sveder/sveder.py
+sveder.egg-info/PKG-INFO
+sveder.egg-info/SOURCES.txt
+sveder.egg-info/dependency_links.txt
+sveder.egg-info/top_level.txt
