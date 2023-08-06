@@ -1,0 +1,4 @@
+tornado
+ed25519
+requests
+nyzostrings>=0.0.6
