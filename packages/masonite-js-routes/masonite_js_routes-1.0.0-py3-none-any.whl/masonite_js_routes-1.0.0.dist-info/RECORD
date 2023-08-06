@@ -1,0 +1,15 @@
+masonite/js_routes/__init__.py,sha256=QXKSd2AyZSq7hvOSGK2ArTcnyp7HW2MFXuBzidXvPvY,57
+masonite/js_routes/generator.py,sha256=Oqp1OE742k-UqqKu8ns_dxS9El7T-tL_LOssBrCDAhE,887
+masonite/js_routes/helpers.py,sha256=nEz0udDKo90cGjFQSDy6X5E_zHnwdObCcEJvZdEMBsI,725
+masonite/js_routes/routes.py,sha256=THhRFrEQgmqpzfTg3Ox7iJF9nu_WdJZUsq6v8urVpg4,4428
+masonite/js_routes/commands/GenerateCommand.py,sha256=Mb_h0DA2Xc3Gun1SKdJ0oGdes6ggRbjpxsSwxanJJWY,751
+masonite/js_routes/commands/InstallCommand.py,sha256=AVC5B_vA9beDFYfP3ox13BL7iVdowN-T_oPcDvKDpgA,570
+masonite/js_routes/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+masonite/js_routes/config/js_routes.py,sha256=7JUZrqEX4aFAr7cpt6V_NtaAolPcks0mo8__a-XwsyA,1179
+masonite/js_routes/providers/JSRoutesProvider.py,sha256=jJhMRnAPIWnDakCTaIgal-QCUPLvX48HsI0kKhOzuXM,1200
+masonite/js_routes/providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+masonite_js_routes-1.0.0.dist-info/LICENSE,sha256=H3FDfl6aeVJq_bk35DbcI_IjuEY-rVKGtaNhDh-NpKo,1074
+masonite_js_routes-1.0.0.dist-info/METADATA,sha256=wP6W5rbcmR7QT6mipz8VBr6UlSaU7V6wfbnJ80oTtY8,10148
+masonite_js_routes-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+masonite_js_routes-1.0.0.dist-info/top_level.txt,sha256=Z6q65YKbPv67_DvbSXOJqdRfySmtX9WgLWj_FxCaGUk,9
+masonite_js_routes-1.0.0.dist-info/RECORD,,
