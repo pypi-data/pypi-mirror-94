@@ -1,0 +1,5 @@
+spark-nlp<2.8,>=2.7.1
+numpy
+pyarrow>=0.16.0
+pandas
+dataclasses
