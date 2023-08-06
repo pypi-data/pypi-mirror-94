@@ -1,0 +1,11 @@
+django
+
+[all]
+PyJWT
+webargs
+
+[jwt]
+PyJWT
+
+[webargs]
+webargs
