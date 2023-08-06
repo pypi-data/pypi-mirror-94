@@ -1,0 +1,139 @@
+Metadata-Version: 2.1
+Name: dallinger
+Version: 7.0.0
+Summary: Laboratory automation for the behavioral and social sciences
+Home-page: http://github.com/Dallinger/Dallinger
+Maintainer: Jordan Suchow
+Maintainer-email: suchow@berkeley.edu
+License: MIT
+Keywords: science,cultural evolution,experiments,psychology
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Pytest
+Requires-Dist: apscheduler (==3.7.0)
+Requires-Dist: boto3 (==1.16.59)
+Requires-Dist: cached-property (==1.5.2)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: faker (==5.8.0)
+Requires-Dist: flask-crossdomain (==0.1)
+Requires-Dist: flask-login (==0.5.0)
+Requires-Dist: flask-sockets (==0.2.1)
+Requires-Dist: Flask-WTF (==0.14.3)
+Requires-Dist: flask (==1.1.2)
+Requires-Dist: future (==0.18.2)
+Requires-Dist: gevent (==21.1.2)
+Requires-Dist: greenlet (==1.0.0)
+Requires-Dist: gunicorn (==20.0.4)
+Requires-Dist: localconfig (==1.1.3)
+Requires-Dist: pexpect (==4.8.0)
+Requires-Dist: psutil (==5.8.0)
+Requires-Dist: psycopg2 (==2.8.6)
+Requires-Dist: redis (==3.5.3)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: rq (==1.7.0)
+Requires-Dist: selenium (==3.141.0)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: sqlalchemy-postgres-copy (==0.5.0)
+Requires-Dist: sqlalchemy (==1.3.22)
+Requires-Dist: tabulate (==0.8.7)
+Requires-Dist: timeago (==1.0.15)
+Requires-Dist: ua-parser (==0.10.0)
+Requires-Dist: user-agents (==2.2.0)
+Requires-Dist: APScheduler (==3.7.0)
+Requires-Dist: Faker (==5.8.0)
+Requires-Dist: Flask (==1.1.2)
+Requires-Dist: Flask-Login (==0.5.0)
+Requires-Dist: Flask-Sockets (==0.2.1)
+Requires-Dist: SQLAlchemy (==1.3.22)
+Requires-Dist: tzlocal (==2.1)
+Provides-Extra: data
+Requires-Dist: pandas (==1.2.1) ; extra == 'data'
+Requires-Dist: tablib[all] ; extra == 'data'
+Provides-Extra: dev
+Requires-Dist: alabaster ; extra == 'dev'
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: coverage-pth ; extra == 'dev'
+Requires-Dist: codecov ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: mock ; extra == 'dev'
+Requires-Dist: pycodestyle ; extra == 'dev'
+Requires-Dist: pypandoc ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: recommonmark ; extra == 'dev'
+Requires-Dist: sphinxcontrib-spelling ; extra == 'dev'
+Requires-Dist: Sphinx ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: sphinx-js (==3.1) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Provides-Extra: jupyter
+Requires-Dist: jupyter (==1.0.0) ; extra == 'jupyter'
+Requires-Dist: ipywidgets (==7.6.3) ; extra == 'jupyter'
+
+Dallinger
+=========
+
+|Build Status| |Demos| |codecov| |Code Climate| |License|
+
+Laboratory automation for the behavioral and social sciences.
+
+Features
+--------
+
+-  Performs laboratory automation for the behavioral and social sciences
+-  Coordinates participant recruitment using Mechanical Turk
+
+Install
+-------
+
+To install Dallinger, see `the
+instructions <http://dallinger.readthedocs.io/>`__.
+
+Documentation
+-------------
+
+Documentation is available on the `documentation
+website <http://dallinger.readthedocs.io/>`__.
+
+Demos
+-----
+
+Demonstration experiments are distributed separately in the
+``dlgr.demos`` package.
+
+Contribute
+----------
+
+-  Issue Tracker: http://github.com/Dallinger/Dallinger/issues
+-  Source Code: http://github.com/Dallinger/Dallinger
+
+Support
+-------
+
+If you are having issues, please `let us
+know <http://github.com/Dallinger/Dallinger/issues>`__. We run a users
+group at https://groups.google.com/d/forum/dallinger.
+
+License
+-------
+
+The project is licensed under the MIT license.
+
+.. |Build Status| image:: https://github.com/dallinger/Dallinger/workflows/continuous-integration/badge.svg
+   :target: https://github.com/Dallinger/Dallinger/actions?query=workflow%3Acontinuous-integration
+.. |Demos| image:: https://img.shields.io/badge/demos-11-edd172.svg
+   :target: http://dallinger.readthedocs.io/en/latest/#demos
+.. |codecov| image:: https://codecov.io/gh/Dallinger/Dallinger/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/Dallinger/Dallinger
+.. |Code Climate| image:: https://codeclimate.com/github/Dallinger/Dallinger/badges/gpa.svg
+   :target: https://codeclimate.com/github/Dallinger/Dallinger
+.. |License| image:: https://img.shields.io/badge/license-MIT-blue.svg
+   :target: http://en.wikipedia.org/wiki/MIT_License
+
+
