@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: hnxbeta
+Version: 0.1.9
+Summary: HyperNetX is a Python library for the creation and study of hypergraphs.
+Home-page: https://github.com/pnnl/HyperNetX
+Author: Brenda Praggastis, Dustin Arendt, Emilie Purvine, Cliff Joslyn
+Author-email: hypernetx@pnnl.gov
+License: 3-Clause BSD license
+Description: 
+              Hnxbeta is a development version of HyperNetX
+              intended for super users to test and give feedback.
+              Please install in a virtual environment and send comments 
+              and bug reports to `hypernetx@pnnl.gov`. 
+        
+              The HyperNetX library provides classes and methods for complex network data.
+              HyperNetX uses data structures designed to represent set systems containing
+              nested data and/or multi-way relationships. The library generalizes traditional
+              graph metrics to hypergraphs. It can be found at `https://github.com/pnnl/HyperNetX`
+        
+              Hnxbeta has C++ support available from the NWHypergraph library.
+              It is available via `pip install nwhy`.
+              This library is still in development and will be updated frequently on PyPI.
+              At present it is only available for OSX and Centos7.
+              To use, first `conda install tbb` in your environment, note that pip does not
+              install the correct version of tbb at present.
+            
+Platform: UNKNOWN
+Provides-Extra: testing
+Provides-Extra: notebooks
+Provides-Extra: tutorials
+Provides-Extra: documentation
+Provides-Extra: all
