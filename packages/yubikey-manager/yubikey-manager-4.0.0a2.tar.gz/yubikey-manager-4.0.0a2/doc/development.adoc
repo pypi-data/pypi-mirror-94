@@ -1,0 +1,86 @@
+== Working with the code
+
+=== Install dependencies
+
+It's assumed a Python 3 environment with pip is installed.
+
+==== Windows
+Make sure the http://www.swig.org/[swig] executable is in your PATH.
+
+==== macOS
+
+    $ brew install swig
+
+==== Linux (Debian-based distributions)
+
+    $ sudo apt install swig libu2f-udev pcscd libpcsclite-dev
+
+=== Install yubikey-manager from source
+
+Clone the repository:
+
+    $ git clone https://github.com/Yubico/yubikey-manager.git
+    $ cd yubikey-manager
+
+Install in editable mode with pip:
+
+    $ pip install -e .
+
+Show available commands:
+
+    $ ykman --help
+
+Show information about inserted YubiKey:
+
+    $ ykman info
+
+Run ykman in DEBUG mode:
+
+    $ ykman --log-level DEBUG info
+
+To uninstall, run:
+
+    $ pip uninstall yubikey-manager
+
+=== Code Style & Security
+This project uses https://black.readthedocs.io/en/latest/[Black] and
+https://flake8.pycqa.org/[Flake8] for code style,
+https://mypy-lang.org[mypy] for static type checking, and
+https://github.com/PyCQA[Bandit] for security linting. These are invoked with a
+http://pre-commit.com/[pre-commit] hook.
+To use these:
+
+    $ pip install pre-commit black flake8 bandit mypy
+    $ pre-commit install
+
+=== Unit tests
+
+First, install https://tox.readthedocs.io/en/latest/[tox] if you haven't already:
+
+    $ pip install tox
+
+To run unit tests:
+
+    $ tox
+
+To run with multiple Python versions (requires all those interpreters to be installed):
+
+    $ tox -e py36,py38
+
+
+=== Integration tests
+
+WARNING: ONLY run these on dedicated developer keys, as it will permanently delete data on the device(s)!
+
+To run integration tests, indicate the serial numbers (given by `ykman list`) of the YubiKeys to test with:
+
+   $ DESTRUCTIVE_TEST_YUBIKEY_SERIALS=123456,234567 tox -e integration-test
+
+The integration test suite will automatically identify which test cases can be run with the
+available YubiKeys, and run those test cases for each eligible YubiKey. See
+link:integration-tests.adoc[integration-tests.adoc] for a deep dive into how this works.
+
+
+=== Packaging
+
+For third-party packaging, use the source releases and signatures available https://developers.yubico.com/yubikey-manager/Releases/[here].
