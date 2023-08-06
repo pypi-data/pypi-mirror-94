@@ -1,0 +1,5 @@
+deprecated
+pytz
+pyyaml==5.*,>=5.1.0
+requests==2.*,>=2.22.0
+simplejson==3.*,>=3.16.0
