@@ -1,0 +1,3 @@
+include versioneer.py
+include intake_informaticslab/_version.py
+recursive-include intake_informaticslab/cats *.yaml
