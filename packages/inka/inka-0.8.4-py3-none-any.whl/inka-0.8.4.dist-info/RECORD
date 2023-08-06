@@ -1,0 +1,15 @@
+inka/__init__.py,sha256=PtH7P3DXedvpK4LWSSxCTW38cmEXvmG6EvUpXZC-eLo,22
+inka/__main__.py,sha256=XbKdCZBfCzuxBj4z1NFCELRXwu3-ijjvPPnAVWmQFm0,76
+inka/anki_api.py,sha256=axdNmSrmWD6gWTiGLSlrEnODsyR30P3BFijn4OHqVvI,3745
+inka/card.py,sha256=SQTQgJiBPBysfd2msdAevdMV2amJsOvQyfVw8lD62Eo,879
+inka/config.py,sha256=BjzXexTbfHkxM6nwbNCDA3sk-FnBuS5eI5uwSgpufBE,2621
+inka/converter.py,sha256=NmFYN-12JMkCs18Z-bgfs0U2qwPcvrGnYIPmmhOp25E,433
+inka/image.py,sha256=uQI0yi1Sa97IBLgcw8rNUneHRR2wsajMqqsyh3sEDRk,1487
+inka/inka.py,sha256=wrd7F95kut9Li98r_fc3IwTQWse2IGE__PJpE3m-AJ8,8082
+inka/parser.py,sha256=SwqBbXWhUhDUKR6oDG9kuAvsZJFCAKtSdmE2aq2a3cM,6750
+inka-0.8.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+inka-0.8.4.dist-info/METADATA,sha256=SYuuWtKPr_yMnx-tkegPHLE1N9eUCVC45bfi3V75I-M,3402
+inka-0.8.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+inka-0.8.4.dist-info/entry_points.txt,sha256=uNGtlFFIuw3vFO0macvKlutBaauzzDQkQ3-mFnz0sjQ,40
+inka-0.8.4.dist-info/top_level.txt,sha256=rYqNxxa5AONDWMmlvKjVgthg4nVLLQRk70pcISB7KOA,5
+inka-0.8.4.dist-info/RECORD,,
