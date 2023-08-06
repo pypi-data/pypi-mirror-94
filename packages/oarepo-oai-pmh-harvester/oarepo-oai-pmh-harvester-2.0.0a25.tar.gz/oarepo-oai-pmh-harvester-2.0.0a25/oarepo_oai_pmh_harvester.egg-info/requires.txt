@@ -1,0 +1,13 @@
+sickle
+click
+boltons
+
+[postgresql]
+psycopg2-binary
+
+[sqlite]
+
+[tests]
+pytest
+pytest-cov
+oarepo
