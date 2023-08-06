@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pronouns-test-data"
+version = "1.0.0"
+description = "A library to aid in vending test data for UW-IT IAM pronouns test cases."
+authors = ["Tom Thorogood <tom@tomthorogood.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+pydantic = "^1.7.3"
+typer = "^0.3.2"
+inflection = "^0.5.1"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
