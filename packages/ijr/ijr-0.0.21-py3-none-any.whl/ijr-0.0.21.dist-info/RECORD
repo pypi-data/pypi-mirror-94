@@ -1,0 +1,10 @@
+ijr/__init__.py,sha256=ccGjJh58y3uNyqtmYR0ZRz_eX8F8DD8yx0syApP7pmg,13
+ijr/firefly.py,sha256=l38lryLPLbSGqLdhrOQWVQWhkhJ6sjNeh_k9n2cCYIM,4375
+ijr/gcp_lib.py,sha256=KkBKKXITBOOPaIKK0gLLNhDwNsgPP1Aow_lh4RWBAvM,1681
+ijr/generic_lib.py,sha256=xPMRcNiL88PrhjWWJnA35SYBc59nYIFJsQNr78dbEog,9691
+ijr/mongo_lib.py,sha256=qQaUfthRcqjrAAFZ9jyeRG_YzyLtLbaXrdNlPv-dYS0,4442
+ijr-0.0.21.dist-info/LICENSE,sha256=CuPtqVjTc5c3QhE7YBavdgcr8aboS3-HuCsf2LLiJRI,1073
+ijr-0.0.21.dist-info/METADATA,sha256=OypzQff9fLKtuD7j9KpeGUk9e2MrjRhno1EI90az9cA,327
+ijr-0.0.21.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ijr-0.0.21.dist-info/top_level.txt,sha256=AkE0GPByxQlBD_SYiwftwVJYGGTB_zqhs0qYMmEpq9s,4
+ijr-0.0.21.dist-info/RECORD,,
