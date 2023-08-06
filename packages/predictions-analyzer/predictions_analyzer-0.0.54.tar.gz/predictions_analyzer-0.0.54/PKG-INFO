@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: predictions_analyzer
+Version: 0.0.54
+Summary: A powerful tool for analyzing and ensembling predictions
+Home-page: https://github.com/ThomasMeli/predictions_analyzer
+Author: Thomas Meli
+Author-email: tpmeli.data@gmail.com
+License: UNKNOWN
+Description: # predictions_analyzer
+        
+        Predictions Analyzer is a powerful tool to help discover which models perform best on the kinds of samples you have.  This allows you to create local models and ensemble models with precision, while also finding out which samples are the most challenging to classify.
+        
+        # Documentation: 
+        https://predictions-analyzer.readthedocs.io/en/latest
+        
+        # Notes
+        Currently in development.
+        Expected first release: Early Febuary 2021
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
