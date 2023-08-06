@@ -1,0 +1,14 @@
+ligand/__init__.py,sha256=arj8zQYVpbw5BNvsYIEeQMO-XGslwKKI1mhZ0Fcf23k,42
+ligand/daemon.py,sha256=pdYbOS8x5kklp895arriBTGxGrh1BBMo-i-znaDmwv0,5649
+ligand/exceptions.py,sha256=djxzKAOuZaddFo46e74bMRtoFu6Fg6ZS_ibIPTiKPd4,333
+ligand/job.py,sha256=BnIpQkZEY5QPd8meDE6Fkltm3TR62URryzI8hO7RU-c,2334
+ligand/version.py,sha256=Ey0Bv9_3muXxs8um2qSsrsPubseb0pb73uO3-20pli4,92
+ligand/bin/ligand-daemon,sha256=910Erc47VvlJ04pIt826IudiBwbeH_AzryhQcGzxqW0,25851200
+ligand/servicepb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ligand/servicepb/latch_pb2.py,sha256=7HTLGng505yd-fHMAs4ePSOCKbCAjHWSSDjBkHQvXRU,12906
+ligand/servicepb/latch_pb2_grpc.py,sha256=as_OqJQSJHLz-Fb4WMuN6lGUDf_9L4ImOy2GeHbGaVc,3882
+ligand-0.0.2.data/scripts/ligand,sha256=omEZuT3h45G9luVhRfDe18bkAZ4KHaL3vEiegwwvoVc,25851200
+ligand-0.0.2.dist-info/METADATA,sha256=I7frkNzbB5uQDjzc-Ts_hs3V7TZEtycYQ_7G5c0uAyc,1234
+ligand-0.0.2.dist-info/WHEEL,sha256=BwVdCnQ0dBs8uniMJKUA_pkI8OZK_6H7mpK5rwhqM7U,107
+ligand-0.0.2.dist-info/top_level.txt,sha256=v7KLq1MryVMBJmR458FYs9QA8ANqt6kXLuwQoNGNOAk,7
+ligand-0.0.2.dist-info/RECORD,,
