@@ -1,0 +1,3 @@
+[pymodaq.plugins]
+picoquant = pymodaq_plugins_picoquant
+
