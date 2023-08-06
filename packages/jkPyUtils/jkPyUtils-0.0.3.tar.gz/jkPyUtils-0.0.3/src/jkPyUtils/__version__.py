@@ -1,0 +1,9 @@
+__title__ = 'jkPyUtils'
+__description__ = 'Common Utils for Python from Jackon'
+__url__ = 'https://github.com/JackonYang/jkPyUtils'
+__version__ = '0.0.3'
+# __build__ = 0x022500
+__author__ = 'Jackon Yang'
+__author_email__ = 'i@jackon.me'
+__license__ = 'MIT'
+__copyright__ = 'Copyright 2021 Jackon Yang'
