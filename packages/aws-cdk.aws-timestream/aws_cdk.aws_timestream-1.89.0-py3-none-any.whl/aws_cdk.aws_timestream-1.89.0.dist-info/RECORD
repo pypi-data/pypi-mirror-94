@@ -1,0 +1,8 @@
+aws_cdk/aws_timestream/__init__.py,sha256=HMFtaz2pX30Ot8SuWUviTir5XV_FEcYWOQbthYXm1lM,15944
+aws_cdk/aws_timestream/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_timestream/_jsii/__init__.py,sha256=buLC9xw7veHGVQAEpaCv5fH_wSa4lmWMAWaAPptkPk4,366
+aws_cdk/aws_timestream/_jsii/aws-timestream@1.89.0.jsii.tgz,sha256=xuPvPt4zRyPGCQPjLOe9Tm3dgFQuXa5l21mDO-09q5I,18800
+aws_cdk.aws_timestream-1.89.0.dist-info/METADATA,sha256=dMBAZ4Jn02GL2VtEuXNueyc8GDWwISzsmucA6sGRn3k,1668
+aws_cdk.aws_timestream-1.89.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aws_cdk.aws_timestream-1.89.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_timestream-1.89.0.dist-info/RECORD,,
