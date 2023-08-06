@@ -1,0 +1,9 @@
+README.md
+setup.py
+ImageClassifier/__init__.py
+ImageClassifier/img.py
+image_classifier.egg-info/PKG-INFO
+image_classifier.egg-info/SOURCES.txt
+image_classifier.egg-info/dependency_links.txt
+image_classifier.egg-info/requires.txt
+image_classifier.egg-info/top_level.txt
