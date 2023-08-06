@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: dbdpy
+Version: 1.2.6
+Summary: Discord Bot Designer For Discord module for python writen by Edited cocktail, official server: https://discord.gg/t9wHKGtD7p
+License: Alpachi License 2.0
+Author: Winter_coctail
+Requires-Python: >=3.6,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9

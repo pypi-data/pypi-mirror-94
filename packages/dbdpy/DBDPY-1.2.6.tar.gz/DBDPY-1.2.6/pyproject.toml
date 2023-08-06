@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "DBDPY"
+version = "1.2.6"
+description = "Discord Bot Designer For Discord module for python writen by Edited cocktail, official server: https://discord.gg/t9wHKGtD7p"
+authors = ["Winter_coctail"]
+license = "Alpachi License 2.0"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
