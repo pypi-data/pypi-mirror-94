@@ -1,0 +1,4 @@
+[console_scripts]
+conjuguer = Conjugator.frenchCLI:main
+konjugier = Conjugator.deutschCLI:main
+
