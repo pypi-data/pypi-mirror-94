@@ -1,0 +1,4 @@
+Pint>=0.10
+numpy>=1.17
+toml>=0.10
+xxhash>=2.0
