@@ -1,0 +1,9 @@
+README.md
+setup.py
+mt_FileMan/__init__.py
+mt_FileMan/mt_FileMan.py
+mt_FileMan.egg-info/PKG-INFO
+mt_FileMan.egg-info/SOURCES.txt
+mt_FileMan.egg-info/dependency_links.txt
+mt_FileMan.egg-info/requires.txt
+mt_FileMan.egg-info/top_level.txt
