@@ -1,0 +1,3 @@
+[console_scripts]
+cfwafenabler=cfwafenabler.__main__:main
+
