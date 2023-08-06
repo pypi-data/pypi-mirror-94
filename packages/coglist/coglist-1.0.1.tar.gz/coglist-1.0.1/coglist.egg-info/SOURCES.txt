@@ -1,0 +1,8 @@
+README.md
+setup.py
+coglist.egg-info/PKG-INFO
+coglist.egg-info/SOURCES.txt
+coglist.egg-info/dependency_links.txt
+coglist.egg-info/requires.txt
+coglist.egg-info/top_level.txt
+cogs/__init__.py

@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: coglist
+Version: 1.0.1
+Summary: A collection of cogs to create Discord bots with.
+Home-page: https://github.com/coglist/cogs
+Author: vcokltfre, elfq, tag-epic
+License: MIT
+Description: # botlist/cogs
+        
+        ## A collection of cogs for use with [templatebot](https://github.com/vcokltfre/template-bot-v2)
+        
+        ### What's this?
+        
+        This is a repository to store discord.py cogs that you're able to use with templatebot.
+        
+        ### Links
+        
+        ● [discord server](https://discord.gg/tWfaeNftAS)
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
