@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: chess-heatmap
+Version: 0.0.6.1
+Summary: Package to generate chess heatmaps from pgn files
+Home-page: UNKNOWN
+Author: Sravanti Tatiraju
+Author-email: sravanti.p21@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Implement a project based on Chess using dask and coiled<br />
+
+Develop a control heatmap which will show which side controls which squares how many times per ply/move. <br />
+Input will be PGNs (Portable Game Notation) and produce heat maps per game per ply. Publish the (num_white_control, num_black_control) tuple for each square for each ply.
+Apply parallelism to multiple games in a single PGN and to multiple PGNs
+
+
