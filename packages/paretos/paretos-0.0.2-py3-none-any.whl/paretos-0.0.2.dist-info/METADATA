@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: paretos
+Version: 0.0.2
+Summary: Package to get started optimizing
+Home-page: UNKNOWN
+Author: Paretos
+Author-email: support@paretos.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: sqlalchemy (>=1.3.20)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: sqlalchemy-utils
+
+# Paretos package
+This is the paretos package for easy integration of socrates optimization
+within customer environments. The package also enables to get the results
+of socrates api in an easy and understandable way.
+
+## Installation
+The installation of the package is simply done via. pip
+
+```shell
+pip install paretos
+```
+
+## Usage
+In general the complete documentation for usage and classes can be found [here](https://docs.paretos.io/). In this
+readme only brief overview of the most important points to get started is given.
+
+## Development
+### Linting
+- `isort .`
+- `black .`
+### Unit Testing
+- `python -m unittest discover test/unittest`
+- `coverage run --source src -m unittest discover test/unittest`
+- `coverage html`
+
+
+## Documentation of single classes of the paretos API connector
+The docs for the single classes will be released within V.0.0.2
+
+
