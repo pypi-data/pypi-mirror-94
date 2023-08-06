@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mttf
+Version: 0.0.1
+Summary: A dummy package to assert that TensorFlow has been installed.
+Home-page: https://github.com/inteplus/mttf
+Author: ['Minh-Tri Pham']
+License: UNKNOWN
+Project-URL: Documentation, https://mtdoc.readthedocs.io/en/latest/mt.base/mt.tf.html
+Project-URL: Source Code, https://github.com/inteplus/mttf
+Platform: UNKNOWN
+
+UNKNOWN
+
+
