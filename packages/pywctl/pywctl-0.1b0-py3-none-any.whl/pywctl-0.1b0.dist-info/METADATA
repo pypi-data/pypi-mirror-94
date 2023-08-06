@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pywctl
+Version: 0.1b0
+Summary: A utility to connect you, using python, to iwd, using iwctl, in ash. Made specifically for snakeware.
+Home-page: https://github.com/sorroweater/pywctl
+Author: Akshat Deshpande
+Author-email: akshat.deshpande@icloud.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# pywctl
+A utility to connect you, using python, to iwd, using iwctl, in ash. Made specifically for snakeware.
+
+# Dependencies
+`python3`
+`pip3`
+`iwd`
+`git`
+an internet connection (unless you're on snakeware, then it's included for MY FORK.)
+
+# Installation
+This will clone the repo and install the module. THIS IS NOT READY FOR INSTALLATION YET.
+
+`git clone https://github.com/SorrowEater/pywctl.git`
+`cd pywctl`
+`pip3 install .`
+
+
