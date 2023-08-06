@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: prado
+Version: 0.3.0
+Summary: The PyTorch implementation of PRADO
+Home-page: http://github.com/suflaj/prado
+Author: Miljenko Šuflaj
+Author-email: headsouldev@gmail.com
+License: Apache License 2.0
+Description: # PRADO
+        
+        The PyTorch implementation of the architecture described in [PRADO - Projection Attention Networks for Document Classification On-Device](https://www.aclweb.org/anthology/D19-1506.pdf) by Kaliamoorthi et al., 2019.
+        
+Keywords: prado pytorch torch kaliamoorthi ai
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: GPU
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
