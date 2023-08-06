@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: cadCAD_machine_search
+Version: 0.0.1.2
+Summary: Tools for Large-Scale Machine Search for Parameter Optimization on cadCAD
+Home-page: https://github.com/cadCAD-org/cadCAD_machine_search
+Author: Danilo Lessa Bernardineli
+Author-email: danilo@block.science, danilo.lessa@gmail.com
+License: UNKNOWN
+Description: 
+        cadCAD tools for preparing & analyzing experiments where large-scale machine search for selecting parameters are involved.
+        
+Platform: UNKNOWN
