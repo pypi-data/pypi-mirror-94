@@ -1,0 +1,16 @@
+cut_sent_thai/__init__.py,sha256=yyeIvvRH-EgKCnSsa2Gzqk2EJlOGgpxASG4nnC7h71E,39
+cut_sent_thai/cut_sent_utils.py,sha256=0ju0z9ci76Zid113_WcXYyExI0fxCh-2LwxhAOvlqxM,18578
+cut_sent_thai/cut_sentence.h5,sha256=Mcjmj1d_Zv96K7qQZiGdjQofP8mLv352WYALO54jnjM,55014064
+cut_sent_thai/cut_sentence.pt,sha256=vd7bCHfO2mmbMUP4CFYwvdTX3-gzkUCkXgTI-BouwFk,11674103
+cut_sent_thai/inference_cut_sentence_before_pack.py,sha256=is94GxeCKDJYpW_dmqQhgXLV0Ipt7GfsVdcLaE1z3fk,7716
+cut_sent_thai/main.py,sha256=o-f7AJRpcxjv1Il-wDHaAHHFh9AoHQL9SIplt4AcbqQ,8569
+cut_sent_thai/stoi.pickle,sha256=9zTgSaUirBZYHnTpSwF0hpUvbrSIaS51X7wor2VvrRk,200898
+cut_sent_thai/stoi_pos.pickle,sha256=bqam4iCpKwG-qsyalhgt9fDjbY1_JgvQr6n-8kOPUn4,606
+cut_sent_thai/train_cut_sentence_orchid.py,sha256=RNRSiSDFcWyAC5OdJxDFNjWdiY1komHz0GP7tFbTMBQ,10560
+cut_sent_thai/train_cut_sentence_orchid_pt.py,sha256=HDDs5rkjB_3rrBdq87ucoJ1MREpFQp-d-zQrdj26t8E,9295
+cut_sent_thai/train_sent_tok_perfect_word_tok.py,sha256=By81hDiOLnaWSHp_2EZ9RVHd7OXGX8iaCG3tGy4g7mo,6542
+cut_sent_thai-0.0.9.dist-info/LICENSE.txt,sha256=pCc1bO_gJ5x_lUX4QXv7jckmeTxXLXMtQlgQWaCQw8w,1050
+cut_sent_thai-0.0.9.dist-info/METADATA,sha256=tBszPgp2wfZl3rNWJD7MbTrhWsHwgnjEZ0fOcVy2qRo,828
+cut_sent_thai-0.0.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cut_sent_thai-0.0.9.dist-info/top_level.txt,sha256=mO4SJaCAt8vE5U3Fmb4bcfEj4lULl07eKYvqBGcEzWA,14
+cut_sent_thai-0.0.9.dist-info/RECORD,,

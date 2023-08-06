@@ -1,0 +1,1 @@
+from cut_sent_thai.main import cut_sent

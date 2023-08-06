@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: cut-sent-thai
+Version: 0.0.9
+Summary: tokenize sentence in Thai
+Home-page: UNKNOWN
+Author: sumeth
+Author-email: author@example.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: tensorflow (>=2.2.0)
+Requires-Dist: pythainlp (>=2.2.0)
+Requires-Dist: ujson
+
+from cut_sent_thai import cut_sent<br/>
+tokens = cut_sent("put your string here")<br/><br/>
+If you want the raw answer (which space is end of sentence (EOS) and which space is not)<br/>
+tokens, raw = cut_sent("put your string here", return_raw=True) <br/>
+raw is numpy array. value is 1 if that space position is EOS and 0 if it's not. Length of raw is the same as number of spaces in your text
+
+<br/>
+change log version 0.0.8: now needs pytorch as dependency
+
