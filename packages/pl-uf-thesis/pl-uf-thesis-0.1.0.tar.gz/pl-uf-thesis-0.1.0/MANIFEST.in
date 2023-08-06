@@ -1,0 +1,3 @@
+include conf.py
+include version.py
+graft plufthesis/assets
