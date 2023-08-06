@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tpml
+Version: 0.1.1
+Summary: Machine learning helper funcs.
+Home-page: UNKNOWN
+Author: Thomas Pinder
+Author-email: t.pinder2@lancaster.ac.uk
+License: LICENSE
+Keywords: machine-learning
+Platform: UNKNOWN
+Requires-Dist: matplotlib (==3.3.4)
+Requires-Dist: numpy (>=1.18.0)
+Requires-Dist: multipledispatch (==0.6.0)
+Requires-Dist: typing (==3.7.4)
+Requires-Dist: gpflow (>=2.0.0)
+
+UNKNOWN
+
+
