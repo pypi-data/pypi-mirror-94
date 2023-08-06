@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: ServerMaker
+Version: 0.0.1
+Summary: A server and client maker
+Home-page: UNKNOWN
+Author: Pikhunyk David
+Author-email: pikhunykdavid@gmail.com
+License: MIT
+Description: This is a library that simplifies programming with the standard library socket.
+        
+        CHANGE LOG
+        ======================
+        
+        0.0.1 (10/2/2021)
+        First release nothing new
+        -------------------------
+Keywords: server
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

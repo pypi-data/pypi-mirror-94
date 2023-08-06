@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+ServerMaker.egg-info/PKG-INFO
+ServerMaker.egg-info/SOURCES.txt
+ServerMaker.egg-info/dependency_links.txt
+ServerMaker.egg-info/requires.txt
+ServerMaker.egg-info/top_level.txt
