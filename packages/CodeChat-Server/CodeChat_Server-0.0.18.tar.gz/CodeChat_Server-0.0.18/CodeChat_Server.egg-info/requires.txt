@@ -1,0 +1,10 @@
+CodeChat
+Flask
+Thrift
+Sphinx
+markdown
+websockets
+
+[test]
+pytest
+requests
