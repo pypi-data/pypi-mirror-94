@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: fun-responses
+Version: 1.0.0
+Summary: An API for getting fun responses
+Home-page: https://void206551.dev/projects/fun-responses
+Author: Jason O'Donnell
+Author-email: void206551@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Fun Responses
+
+### How to use:
+```python
+import fun_responses
+
+print(fun_responses.joke())
+print(fun_responses.topic())
+print(fun_responses.pickup())
+print(fun_responses.roast())
+print(fun_responses.toast())
+
+```
+
+
