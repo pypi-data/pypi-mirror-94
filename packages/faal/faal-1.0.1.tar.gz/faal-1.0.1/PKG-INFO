@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: faal
+Version: 1.0.1
+Summary: Faal Hafez
+Home-page: https://github.com/salehbigdeli/faal/tree/master/
+Author: Ali
+Author-email: al.ak.saleh@gmail.com
+License: Apache Software License 2.0
+Description: # Project name here
+        > Summary description here.
+        
+        
+        This file will become your README and also the index of your documentation.
+        
+        ## Install
+        
+        `pip install faal`
+        
+        ## How to use
+        
+        You simply import the lib an see your faal!
+        
+        ```python
+        from faal.hafez import take
+        ```
+        
+        ```python
+        take()
+        ```
+        
+Keywords: Iran Poem
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

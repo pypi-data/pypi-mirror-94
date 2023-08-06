@@ -1,0 +1,15 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+faal/__init__.py
+faal/_nbdev.py
+faal/hafez.py
+faal.egg-info/PKG-INFO
+faal.egg-info/SOURCES.txt
+faal.egg-info/dependency_links.txt
+faal.egg-info/entry_points.txt
+faal.egg-info/not-zip-safe
+faal.egg-info/top_level.txt
