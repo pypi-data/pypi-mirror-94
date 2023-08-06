@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+Mopidy_Bandcamp.egg-info/PKG-INFO
+Mopidy_Bandcamp.egg-info/SOURCES.txt
+Mopidy_Bandcamp.egg-info/dependency_links.txt
+Mopidy_Bandcamp.egg-info/entry_points.txt
+Mopidy_Bandcamp.egg-info/not-zip-safe
+Mopidy_Bandcamp.egg-info/requires.txt
+Mopidy_Bandcamp.egg-info/top_level.txt
+mopidy_bandcamp/__init__.py
+mopidy_bandcamp/backend.py
+mopidy_bandcamp/bandcamp.py
+mopidy_bandcamp/ext.conf
+mopidy_bandcamp/library.py
+mopidy_bandcamp/web.py
