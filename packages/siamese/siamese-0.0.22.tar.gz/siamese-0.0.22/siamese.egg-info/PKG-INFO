@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: siamese
+Version: 0.0.22
+Summary: A small siamese network package
+Home-page: https://github.com/Benjamin-Etheredge/siamese
+Author: Benjamin Etheredge
+Author-email: 
+License: UNKNOWN
+Description: # Siamese Package
+        
+        This is a simple siamese network package for my personal use.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
