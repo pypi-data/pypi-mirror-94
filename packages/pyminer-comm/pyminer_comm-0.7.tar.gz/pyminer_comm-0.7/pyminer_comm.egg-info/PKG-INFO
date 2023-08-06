@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: pyminer-comm
+Version: 0.7
+Summary: PyMiner Extension package to transfer datawith PyMiner or manipulate PyMiner by another python process.
+Home-page: https://gitee.com/hzy15610046011/pyminer_comm
+Author: hzy15610046011
+Author-email: 1295752786@qq.com
+License: LGPL
+Description: UNKNOWN
+Platform: all
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
