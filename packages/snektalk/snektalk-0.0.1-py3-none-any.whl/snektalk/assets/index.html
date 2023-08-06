@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snektalk</title>
+        <meta http-equiv="Content-type" content="text/html" charset="UTF-8" />
+        <link rel="stylesheet" href="/style/snek.css">
+        <script type="text/javascript" src="/lib/require.min.js"></script>
+    </head>
+    <body>
+        <div id="main">
+            <div class="snek-pin-pane"></div>
+            <div class="snek-interactor">
+                <div class="snek-outer-pane">
+                    <div class="snek-pane"></div>
+                </div>
+                <div class="snek-input-box">
+                    <div class="snek-input-mode"></div>
+                    <div class="snek-input"></div>
+                </div>
+                <div class="snek-nav">
+                </div>
+                <div class="snek-status-bar">
+                </div>
+            </div>
+        </div>
+        <script>
+            require(["scripts/repl"], repl => {
+                let the_repl = new repl.Repl(document.getElementById("main"));
+                the_repl.connect();
+                the_repl.editor.focus();
+            });
+        </script>
+    </body>
+</html>
