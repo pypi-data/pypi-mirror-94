@@ -1,0 +1,7 @@
+BioPython>=1.78
+cutadapt
+
+[docs]
+sphinx
+sphinx_rtd_theme
+sphinx-tabs
