@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: py3status-portfolio
+Version: 0.1
+Summary: view stock portfolio
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: py3status (>=3.20)
+Requires-Dist: stockquotes
+
+UNKNOWN
+
+
