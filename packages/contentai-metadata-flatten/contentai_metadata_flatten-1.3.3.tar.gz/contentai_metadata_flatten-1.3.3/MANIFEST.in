@@ -1,0 +1,7 @@
+# for tox flake8 testing
+recursive-include docs *
+include requirements.txt
+include testing/tox-requirements.txt
+
+# Include the data files
+recursive-include contentai_metadata_flatten/data *
