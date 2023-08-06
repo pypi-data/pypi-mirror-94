@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: petfinder-client
+Version: 0.0.2
+Summary: Petfinder API client
+Home-page: https://github.com/phillipdupuis/petfinder-client
+Author: Phillip Dupuis
+Author-email: phillip_dupuis@alumni.brown.edu
+License: MIT
+Description: # petfinder-client
+        
+        An interface for retrieving data from the petfinder API. Both standard and async clients are provided.
+        
+Keywords: async
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
