@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: make-arq
+Version: 0.1
+Summary: A tool for generating Sony A7RIII/IV and Fujifilm GFX 100 Pixel-Shift files.
+Home-page: https://github.com/ickc/make_arq
+Author: Kolen Cheung
+Author-email: christian.kolen@gmail.com
+License: GPL-3.0-only
+Description: UNKNOWN
+Keywords: Sony ARQ Fujifilm GFX 100
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Provides-Extra: extras
