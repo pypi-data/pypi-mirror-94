@@ -1,0 +1,3 @@
+[console_scripts]
+yee=yee.cli:main
+
