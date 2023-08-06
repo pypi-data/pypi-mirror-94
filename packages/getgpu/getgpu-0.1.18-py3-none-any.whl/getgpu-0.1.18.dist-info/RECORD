@@ -1,0 +1,9 @@
+getgpu/__init__.py,sha256=xRiVwnzUt-boKJAFLlNjBzJFzlkfESniKuxVFQW8uxg,130
+getgpu/get_idle.py,sha256=t3D2UnqYRTcNCbuPQ07Ouby5dbCcCOj8V1PrBQqgxH8,1605
+getgpu/get_idle_v2.py,sha256=FZCJetpG9QmrVqlW6DIn8UnPyDORew9RcRUOoOT3eeQ,8464
+getgpu/gpuinfo.py,sha256=I2m2HOhmwItk7jDOk2f0jbUiYQkEfEqdR4rMI0_HOg8,291
+getgpu-0.1.18.dist-info/LICENSE,sha256=lAkFKvipfN4WgShTfsaM1g8-WJELIaQ68N9OvLfnsiw,1064
+getgpu-0.1.18.dist-info/METADATA,sha256=b6XNDmw__e7M-FRa9sjKxgUD0CUELsoyamqofTrbRro,349
+getgpu-0.1.18.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+getgpu-0.1.18.dist-info/top_level.txt,sha256=2XAa3ltjeImtu1xmi8NY6nLc2Iv80UpPYrJLUeDzb2I,7
+getgpu-0.1.18.dist-info/RECORD,,

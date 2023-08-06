@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: getgpu
+Version: 0.1.18
+Summary: get idle gpu deivce.
+Home-page: https://github.com/seilna/getgpu
+Author: seil.na
+Author-email: seil.na@vision.snu.ac.kr
+License: UNKNOWN
+Download-URL: https://github.com/seilna/getgpu/archive/master.zip
+Keywords: gpu
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: pynvml
+
+UNKNOWN
+
+
