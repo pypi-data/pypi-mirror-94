@@ -1,0 +1,17 @@
+CHANGELOG.md
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+JupyterNotebookReflection/CellManager.py
+JupyterNotebookReflection/Client.js
+JupyterNotebookReflection/CommManager.py
+JupyterNotebookReflection/DataManager.py
+JupyterNotebookReflection/__init__.py
+JupyterNotebookReflection.egg-info/PKG-INFO
+JupyterNotebookReflection.egg-info/SOURCES.txt
+JupyterNotebookReflection.egg-info/dependency_links.txt
+JupyterNotebookReflection.egg-info/top_level.txt
+JupyterNotebookReflection/JupyterNotebookReflection.egg-info/SOURCES.txt
+JupyterNotebookReflection/JupyterNotebookReflection.egg-info/dependency_links.txt
+JupyterNotebookReflection/JupyterNotebookReflection.egg-info/top_level.txt
