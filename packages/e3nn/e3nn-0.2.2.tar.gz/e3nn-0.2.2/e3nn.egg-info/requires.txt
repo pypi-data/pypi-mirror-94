@@ -1,0 +1,4 @@
+sympy
+scipy
+torch>=1.4.0
+torch_geometric
