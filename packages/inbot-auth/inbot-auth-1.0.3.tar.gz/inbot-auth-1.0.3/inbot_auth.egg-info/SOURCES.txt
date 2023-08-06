@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+inbot_auth.egg-info/PKG-INFO
+inbot_auth.egg-info/SOURCES.txt
+inbot_auth.egg-info/dependency_links.txt
+inbot_auth.egg-info/requires.txt
+inbot_auth.egg-info/top_level.txt
+inbotauth/__init__.py
+inbotauth/azure.py
+inbotauth/config.py
+inbotauth/user.py

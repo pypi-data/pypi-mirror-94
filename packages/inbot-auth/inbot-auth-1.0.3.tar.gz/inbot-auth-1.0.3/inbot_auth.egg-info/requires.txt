@@ -1,0 +1,10 @@
+inbot-common==0.5.9
+Flask>=1.0.2
+Flask-Session>=0.3.0
+Flask-SQLAlchemy>=2.4.0
+marshmallow>=2.21.0
+msal>=1.8.0
+requests>=2.24.0
+SQLAlchemy>=1.3.22
+urllib3>=1.25.11
+Werkzeug>=0.14
