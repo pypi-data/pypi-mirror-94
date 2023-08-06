@@ -1,0 +1,5 @@
+TEST_CASE_STATUS = 'status'
+HDS_CASE_DIRECTORY = 'home'
+HDS_ACT_DIRECTORY = 'act-home'
+ACTOR = 'actor'
+TIMEOUT = 'timeout'
