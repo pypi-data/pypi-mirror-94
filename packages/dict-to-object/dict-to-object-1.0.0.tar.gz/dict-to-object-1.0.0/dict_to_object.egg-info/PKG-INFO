@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: dict-to-object
+Version: 1.0.0
+Summary: dictionary to object.
+Home-page: https://github.com/oneofthezombies/dict-to-object
+Author: oneofthezombies
+Author-email: hunhoekim@gmail.com
+License: MIT
+Description: # dict-to-object
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
