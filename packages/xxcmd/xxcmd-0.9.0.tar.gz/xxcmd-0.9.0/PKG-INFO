@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: xxcmd
+Version: 0.9.0
+Summary: A helper for remembering useful shell commands.
+Home-page: https://github.com/grking/xxcmd
+Author: Graham R King
+Author-email: grking.email@gmail.com
