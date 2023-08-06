@@ -1,0 +1,6 @@
+[console_scripts]
+napari = napari.__main__:main
+
+[pytest11]
+napari = napari.utils._testsupport
+
