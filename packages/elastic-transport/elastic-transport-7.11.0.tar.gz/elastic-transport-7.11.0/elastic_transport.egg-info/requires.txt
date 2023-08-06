@@ -1,0 +1,10 @@
+urllib3<2,>=1.21.1
+six>=1.12
+certifi
+
+[develop]
+pytest
+pytest-cov
+pytest-mock
+mock
+requests
