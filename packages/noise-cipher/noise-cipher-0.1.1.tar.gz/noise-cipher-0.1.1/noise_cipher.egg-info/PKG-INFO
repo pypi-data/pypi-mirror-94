@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: noise-cipher
+Version: 0.1.1
+Summary: A new cipher module
+Home-page: https://github.com/DaRealCodeWritten/Noise-Cipher
+Author: CodeWritten
+Author-email: ytcodew@gmail.com
+License: UNKNOWN
+Description: # Noise-Cipher
+        A new Cipher module for Python, which uses "Noise" to obfuscate a given string
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
