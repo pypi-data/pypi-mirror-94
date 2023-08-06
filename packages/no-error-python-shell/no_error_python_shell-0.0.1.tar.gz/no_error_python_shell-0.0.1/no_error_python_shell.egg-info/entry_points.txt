@@ -1,0 +1,3 @@
+[console_scripts]
+nepython = no_error_python_shell:start_shell
+
