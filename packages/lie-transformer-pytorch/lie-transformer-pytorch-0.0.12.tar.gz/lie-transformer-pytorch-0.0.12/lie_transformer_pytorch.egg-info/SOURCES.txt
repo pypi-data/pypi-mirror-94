@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+lie_transformer_pytorch/__init__.py
+lie_transformer_pytorch/lie_transformer_pytorch.py
+lie_transformer_pytorch/se3.py
+lie_transformer_pytorch.egg-info/PKG-INFO
+lie_transformer_pytorch.egg-info/SOURCES.txt
+lie_transformer_pytorch.egg-info/dependency_links.txt
+lie_transformer_pytorch.egg-info/requires.txt
+lie_transformer_pytorch.egg-info/top_level.txt
