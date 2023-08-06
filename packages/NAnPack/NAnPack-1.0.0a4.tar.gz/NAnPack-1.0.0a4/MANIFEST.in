@@ -1,0 +1,14 @@
+#include pyproject.toml
+
+# Include the README
+include *.md
+
+# Include the license file
+include LICENSE.md
+
+# Include the data files
+#recursive-include Project_NAnPack-benchmark
+
+# Include the configuration files for the simulation
+include nanpack/input/*.ini
+include nanpack/tests/*.py
