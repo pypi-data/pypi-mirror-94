@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+sync_folders/__init__.py
+sync_folders/cleaner.py
+sync_folders/main.py
+sync_folders/purgelog.py
+sync_folders.egg-info/PKG-INFO
+sync_folders.egg-info/SOURCES.txt
+sync_folders.egg-info/dependency_links.txt
+sync_folders.egg-info/top_level.txt
