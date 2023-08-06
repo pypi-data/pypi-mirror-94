@@ -1,0 +1,75 @@
+diff --git a/engine/utilities/intutils.h b/engine/utilities/intutils.h
+index 894bd97be..54660ee08 100644
+--- a/engine/utilities/intutils.h
++++ b/engine/utilities/intutils.h
+@@ -44,6 +44,8 @@
+ #include "regina-config.h"
+ #include <stdint.h>
+ 
++#include <boost/config.hpp>
++
+ namespace regina {
+ 
+ template <bool supportInfinity>
+@@ -224,35 +226,12 @@ struct IntOfSize<8> {
+     typedef uint64_t utype;
+ };
+ 
+-#if defined(INTERNAL___INT128_FOUND)
+-    #define INT128_AVAILABLE
+-    template <>
+-    struct IntOfSize<16> {
+-        typedef __int128 type;
+-        typedef __uint128 utype;
+-    };
+-#elif defined(INTERNAL___INT128_T_FOUND)
+-    #define INT128_AVAILABLE
+-    template <>
+-    struct IntOfSize<16> {
+-        typedef __int128_t type;
+-        typedef __uint128_t utype;
+-    };
+-#elif defined(INTERNAL_INT128_T_FOUND)
+-    #define INT128_AVAILABLE
+-    template <>
+-    struct IntOfSize<16> {
+-        typedef int128_t type;
+-        typedef uint128_t utype;
+-    };
+-#else
+-    #undef INT128_AVAILABLE
+-    template <>
+-    struct IntOfSize<16> {
+-        typedef void type;
+-        typedef void utype;
+-    };
+-#endif
++template <>
++struct IntOfSize<16> {
++    typedef boost::int128_type type;
++    typedef boost::uint128_type utype;
++};
++
+ 
+ #endif // __DOXYGEN
+ 
+diff --git a/python/regina/__init__.py b/python/regina/__init__.py
+index 272c4b8d3..6e9c5dc9f 100644
+--- a/python/regina/__init__.py
++++ b/python/regina/__init__.py
+@@ -69,4 +69,15 @@ else:
+ 
++# In sageRegina, the census files are supplied differently.
++# Set the location here.
++try:
++    from .pyCensus import __path__ as _pyCensusPath
++    GlobalDirs.setDirs(
++        GlobalDirs.home(),
++        GlobalDirs.pythonModule(),
++        _pyCensusPath[0])
++except ImportError:
++    pass
++
+ def reginaSetup(quiet = False, readline = True, banner = False,
+                 snappyPath = True, namespace = None, builtinOpen = True):
+     """

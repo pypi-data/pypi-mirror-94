@@ -1,0 +1,19 @@
+EqualityType.BY_VALUE
+EqualityType.BY_VALUE
+EqualityType.BY_REFERENCE
+Integer:
+True False
+AbelianGroup:
+True False
+Triangulation3:
+False True
+GroupPresentation:
+False True
+Triangulation3:
+True False
+Tetrahedron3:
+True False
+AbelianGroup:
+True False
+GroupPresentation:
+True False
