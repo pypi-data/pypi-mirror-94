@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gwws-genwch
+Version: 0.0.9
+Summary: gwws
+Home-page: https://github.com/genwch/gwws
+Author: genwch
+Author-email: 
+License: UNKNOWN
+Description: # gwws - webscrape
+        
+        This is a web scraping program written by python.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
