@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: DagVisitor
+Version: 1.0.1
+Summary: Simple Dag Visitor
+Home-page: https://github.com/rdaly525/DagVisitor
+Maintainer: Ross Daly
+Maintainer-email: rdaly525@stanford.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
