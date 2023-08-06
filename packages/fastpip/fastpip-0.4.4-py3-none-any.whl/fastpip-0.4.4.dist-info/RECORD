@@ -1,0 +1,11 @@
+fastpip/__init__.py,sha256=P3YpyEvuqiDR5qA6mHvvzupVBNj1aUyDqwIecCvv1Rk,1776
+fastpip/__pyinfo.py,sha256=vGPkI2ZOJEP4X8iupLf-GlZG_qPrDjoF6BG5Z-jmGvw,29
+fastpip/__syspath.py,sha256=1f2gdOz79LQk8f6F3u0JV-awGEgEMDX2n_SjEM5LvA0,26
+fastpip/errors.py,sha256=0ISpgtHLf_mE5fjrOcEa63y1H0MfEiuP0Ombli_YNKE,469
+fastpip/fastpip.py,sha256=KnOTeBsuO8L6dAag5eXoEdKrVCUZXvbGMBf0pPsZFxI,28693
+fastpip/findpypath.py,sha256=cLw-k7p_HhH10gxugAthgRPp9z4ZS7mKUmQbpTj0ZHU,3500
+fastpip-0.4.4.dist-info/LICENSE,sha256=GGB-LFVkUdiKx2s4YAM3JmJYPgwn3krVatYZPTN5bLM,1060
+fastpip-0.4.4.dist-info/METADATA,sha256=YPQ36ZmlP5CQWovJjyIj1zlXpUwTnpHAAnBr7EDk2LQ,5546
+fastpip-0.4.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fastpip-0.4.4.dist-info/top_level.txt,sha256=2yDp5VAjiTL6dgMPUUnKorSx_gWX5MPBc-W4g1Y06-M,8
+fastpip-0.4.4.dist-info/RECORD,,
