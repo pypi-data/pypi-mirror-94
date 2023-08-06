@@ -1,0 +1,14 @@
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+citeurl/__init__.py
+citeurl/__main__.py
+citeurl/default-schemas.yaml
+citeurl/mdx.py
+citeurl.egg-info/PKG-INFO
+citeurl.egg-info/SOURCES.txt
+citeurl.egg-info/dependency_links.txt
+citeurl.egg-info/entry_points.txt
+citeurl.egg-info/requires.txt
+citeurl.egg-info/top_level.txt
