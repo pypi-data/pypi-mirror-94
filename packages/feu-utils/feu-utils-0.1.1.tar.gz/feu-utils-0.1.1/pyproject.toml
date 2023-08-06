@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "feu-utils"
+version = "0.1.1"
+description = "A set of common utilities used by Inmarsat FieldEdge Ultralite"
+authors = ["G.Bruce-Payne <geoff.bruce-payne@inmarsat.com>"]
+license = "Apache 2.0"
+packages = [
+  { include = "utils" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+paho-mqtt = "^1.5.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+pylint = "^2.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
