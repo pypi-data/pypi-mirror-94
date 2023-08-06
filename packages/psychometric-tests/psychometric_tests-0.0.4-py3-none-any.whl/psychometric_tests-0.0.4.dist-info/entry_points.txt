@@ -1,0 +1,6 @@
+[console_scripts]
+psychometric_tests = psychometric_tests.entry:run
+psychometric_tests_ant = psychometric_tests.entry:ant
+psychometric_tests_nback = psychometric_tests.entry:nback
+psychometric_tests_rat = psychometric_tests.entry:rat
+
