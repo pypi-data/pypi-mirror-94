@@ -1,0 +1,10 @@
+README.md
+nbmelt.py
+pyproject.toml
+setup.py
+jupyter_notebook_config.d/nbmelt.json
+jupyter_server_config.d/nbmelt.json
+nbmelt.egg-info/PKG-INFO
+nbmelt.egg-info/SOURCES.txt
+nbmelt.egg-info/dependency_links.txt
+nbmelt.egg-info/top_level.txt
