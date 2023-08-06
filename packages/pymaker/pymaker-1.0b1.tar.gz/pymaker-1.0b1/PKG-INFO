@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pymaker
+Version: 1.0b1
+Summary: Python one-click project creator
+Home-page: UNKNOWN
+Author: AlexBroNikitin
+Author-email: alexnikitin071209@gmail.com
+License: UNKNOWN
+Description: # Documentation and information - https://alexbronikitin.github.io/pymaker/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
