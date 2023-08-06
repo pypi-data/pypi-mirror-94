@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+mona_uds_client/__init__.py
+mona_uds_client/mona_uds_client.py
+mona_uds_client/mona_uds_client_test.py
+mona_uds_client.egg-info/PKG-INFO
+mona_uds_client.egg-info/SOURCES.txt
+mona_uds_client.egg-info/dependency_links.txt
+mona_uds_client.egg-info/requires.txt
+mona_uds_client.egg-info/top_level.txt
