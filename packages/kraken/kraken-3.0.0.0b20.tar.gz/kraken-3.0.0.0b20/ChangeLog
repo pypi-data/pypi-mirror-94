@@ -1,0 +1,131 @@
+CHANGES
+=======
+
+3.0b20
+------
+
+* Fixes crash on empty hyper\_params argument
+* Fixes lines and regions classes in the validation set absent of the training set interupting training
+* Fixes restart epoch count msg not being shown in all cases
+* Loads hyper params incrementaly and reset the epoch count when training on top of a model
+* print full tracebacks in debug log when sample loading fails
+* more helpful log messages when image transformation fails
+
+3.0b19
+------
+
+* allow selection of legacy segmenter again
+
+3.0b18
+------
+
+* pin scikit-image to < 0.18.0
+* also raise exception when adding text to PolygonGTDataset without transfrmations
+* change order of event callbacks in trainer
+* and cuda conda update
+* non-cuda pip install
+* update non-cuda environment file
+* new default segmentation model with non-semantic text region
+* shut up scipy warning on sato filter
+* make pdf loader work with different sized pages\`
+
+3.0b17
+------
+
+* fix regression in lstm layer with pytorch 1.7
+
+3.0b16
+------
+
+* check for character locations in padding
+* remove debug raise
+
+3.0b15
+------
+
+* hotfix for polygonization
+
+3.0b14
+------
+
+* catch errors in bl elongation code
+* correct feature calculation when given raw image in calculate\_polygonal\_environment
+* use correct scale for repolygonization script
+
+3.0b13
+------
+
+* index update
+* update readme for new segmenter
+* better hyperparameters
+* forgot to uncomment invalid seam skipping
+* revert to line-wise compute of polygons
+* fix default model selection for bl segmenter
+* Revert "test python 3.8 in travis"
+* skip anaconda build
+* test python 3.8 in travis
+* test fixes
+* make repolygonization switch work in segmentation\_overlay.py
+* make repolygonization work again
+* cite origin of boundary tracing function
+* clamp bounding polygon to 1 stdev
+* calculate polygonization batchwise to get accurate line height averages
+* correct avg line height computation
+* recalc distance bias by average line height
+* compute average line height/depth in 2-pass seamcarve
+
+3.0b12
+------
+
+* region vectorizer fixes
+* baseline extension code fixes
+* fix None-ness test for polygon
+* fix docstrings
+* switch out contour finder with boundary tracing
+* new vectorizer without superpixels
+* change shape of separators to increase attachment to lines
+* more sensible region boundaries for polygonisation
+* add default model for segmenter
+* add @brobertson's printed word bbox spreader to contrib
+* new bl segmentation heatmap overlay script
+* assign lines not by centroid but actual line mid point to regions
+
+3.0b11
+------
+
+* disable batching per default
+* assign lines to regions based on centroid
+* also make page parser set script\_detection flag correctly
+* set script\_detection flag correctly in alto parser
+* allow generic xml inputs in kraken cli driver
+* better error handling in PolygonGTDataset
+* bump alto version to 4.2
+* unify error handling in alto/page parser
+* make recognition work with larger than bl boundaries
+* better error handling in ketos test
+* don't abort recognition with invalid line coordinates
+* add exception handling switch in cli drivers
+* fix \_\_all\_\_ symbols in dataset.py
+* don't swallow maxcolseps parameter in legacy segmenter
+* remove unused code in ketos test
+
+3.0b10
+------
+
+* type bounds correctly in precalculated polygon calculation path
+
+3.0b9
+-----
+
+* forgot to commit 2nd half of fix
+* regression in last polygonizatoin speedup
+* pin channels in conda envs
+* try to avoid line shortening by masking separators
+
+3.0b8
+-----
+
+* fix counting of regions in dataset
+* fix layer resizing with delete only operations
+* add class counts to dataset/print on segtrain
+* make multiline format string work properly
