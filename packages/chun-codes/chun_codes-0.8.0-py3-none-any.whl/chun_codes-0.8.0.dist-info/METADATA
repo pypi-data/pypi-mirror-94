@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: chun-codes
+Version: 0.8.0
+Summary: Set of Python 2.7 and 3.xx codes used in astrochun's codes
+Home-page: https://github.com/astrochun/chun_codes
+Author: Chun Ly
+Author-email: astro.chun@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pdfmerge ; python_version == "2.7"
+Requires-Dist: matplotlib (==2.2.5) ; python_version == "2.7"
+Requires-Dist: astropy (==2.0.16) ; python_version == "2.7"
+Requires-Dist: matplotlib ; python_version >= "3.0"
+Requires-Dist: astropy ; python_version >= "3.0"
+
+# chun_codes
+Set of Python 2.7 and 3.xx codes used in astrochun's codes
+
+[![GitHub build](https://github.com/astrochun/chun_codes/workflows/Python%20package/badge.svg?branch=master)](https://github.com/astrochun/chun_codes/actions?query=workflow%3A%22Python+package%22)
+![GitHub top language](https://img.shields.io/github/languages/top/astrochun/chun_codes)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/astrochun/chun_codes)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+
+
+
