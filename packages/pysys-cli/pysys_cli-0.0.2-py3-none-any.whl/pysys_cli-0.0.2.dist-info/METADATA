@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pysys-cli
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: https://github.com/YangzhenZhao/pysys-cli
+Author: nocilantro
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: psutil
+
+UNKNOWN
+
+
