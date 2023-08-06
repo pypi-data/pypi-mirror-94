@@ -1,0 +1,36 @@
+2020-12-14 14:57 - root - ERROR (test_logger): default: testing logger (error)
+2020-12-14 14:57 - root - ERROR (test_logger): default: testing logger (error)
+2020-12-14 14:57 - root - ERROR (test_logger_advanced): customdir, default: testing logger (error)
+2020-12-14 14:57 - root - CRITICAL (_extract_meta_from_cellpy_file): cycle mode not found
+2020-12-15 11:06 - root - ERROR (test_logger): default: testing logger (error)
+2020-12-15 11:06 - root - ERROR (test_logger): default: testing logger (error)
+2020-12-15 11:06 - root - ERROR (test_logger_advanced): customdir, default: testing logger (error)
+2020-12-15 11:06 - root - CRITICAL (_extract_meta_from_cellpy_file): cycle mode not found
+2021-01-04 09:59 - root - ERROR (test_logger): default: testing logger (error)
+2021-01-04 09:59 - root - ERROR (test_logger): default: testing logger (error)
+2021-01-04 09:59 - root - ERROR (test_logger_advanced): customdir, default: testing logger (error)
+2021-01-04 09:59 - root - CRITICAL (_extract_meta_from_cellpy_file): cycle mode not found
+2021-01-04 10:04 - root - ERROR (test_logger): default: testing logger (error)
+2021-01-04 10:04 - root - ERROR (test_logger): default: testing logger (error)
+2021-01-04 10:04 - root - ERROR (test_logger_advanced): customdir, default: testing logger (error)
+2021-01-04 10:04 - root - CRITICAL (_extract_meta_from_cellpy_file): cycle mode not found
+2021-02-01 12:40 - root - ERROR (test_logger): default: testing logger (error)
+2021-02-01 12:40 - root - ERROR (test_logger): default: testing logger (error)
+2021-02-01 12:40 - root - ERROR (test_logger_advanced): customdir, default: testing logger (error)
+2021-02-01 12:40 - root - CRITICAL (_extract_meta_from_cellpy_file): cycle mode not found
+2021-02-01 22:55 - root - ERROR (test_logger): default: testing logger (error)
+2021-02-01 22:55 - root - ERROR (test_logger): default: testing logger (error)
+2021-02-01 22:55 - root - ERROR (test_logger_advanced): customdir, default: testing logger (error)
+2021-02-01 22:55 - root - CRITICAL (_extract_meta_from_cellpy_file): cycle mode not found
+2021-02-01 22:57 - root - ERROR (test_logger): default: testing logger (error)
+2021-02-01 22:57 - root - ERROR (test_logger): default: testing logger (error)
+2021-02-01 22:57 - root - ERROR (test_logger_advanced): customdir, default: testing logger (error)
+2021-02-01 22:57 - root - CRITICAL (_extract_meta_from_cellpy_file): cycle mode not found
+2021-02-04 14:33 - root - ERROR (test_logger): default: testing logger (error)
+2021-02-04 14:33 - root - ERROR (test_logger): default: testing logger (error)
+2021-02-04 14:33 - root - ERROR (test_logger_advanced): customdir, default: testing logger (error)
+2021-02-04 14:33 - root - CRITICAL (_extract_meta_from_cellpy_file): cycle mode not found
+2021-02-10 13:26 - root - ERROR (test_logger): default: testing logger (error)
+2021-02-10 13:26 - root - ERROR (test_logger): default: testing logger (error)
+2021-02-10 13:26 - root - ERROR (test_logger_advanced): customdir, default: testing logger (error)
+2021-02-10 13:26 - root - CRITICAL (_extract_meta_from_cellpy_file): cycle mode not found
