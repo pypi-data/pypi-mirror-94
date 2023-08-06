@@ -1,0 +1,12 @@
+swachhdata/image/__init__.py,sha256=HLTDTa6s6NIfF38ZSwVQyEUZTUOQq_lAYo8Yxh3Gq7I,91
+swachhdata/image/_image.py,sha256=X4RWXG8_Dcsmkf5aKDeSsZPXFAo6LDsDSBFGZIDIQX8,4857
+swachhdata/legacy/__init__.py,sha256=OMxy48FpAsZ-u4bMcElkMn2ITuiCOc-53ZzO1prpfV4,163
+swachhdata/legacy/_text.py,sha256=BOTDMNM0HMUqDHxFPCZYW5fP4l4PuA3kDckiIby0Zdk,17614
+swachhdata/text/__init__.py,sha256=RICA6h3ZC6QZA9U11KzI17pxAj6_cjv8TPBrQT0k6s0,1025
+swachhdata/text/_base.py,sha256=B_PT-FaFhZZ1cyn8-gkePGNgHDJwqlN_clCFZdmDJMA,1059
+swachhdata/text/_text.py,sha256=NrFBlW-fR03n_sORhbnH4yHtJWtFcoIzMtXXrroPnIk,103803
+swachhdata-1.1.9.dist-info/LICENSE.txt,sha256=S4nUUYvRNatO4VSnvOciJGtXqYw9fvwaCUCYmBYMK9E,16724
+swachhdata-1.1.9.dist-info/METADATA,sha256=1H2ebmna6fEQLaEv6NYC6oRcvUPtg4TvY5UScrk4K5U,2517
+swachhdata-1.1.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+swachhdata-1.1.9.dist-info/top_level.txt,sha256=UPLFTkg5MwIkJLZzEOsLnndE5jByl-BGbZ0_Z40oq0Y,11
+swachhdata-1.1.9.dist-info/RECORD,,
