@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/mapper.py
+src/pigconf.egg-info/PKG-INFO
+src/pigconf.egg-info/SOURCES.txt
+src/pigconf.egg-info/dependency_links.txt
+src/pigconf.egg-info/requires.txt
+src/pigconf.egg-info/top_level.txt
+tests/mapper_test.yml
+tests/test_mapper.py
