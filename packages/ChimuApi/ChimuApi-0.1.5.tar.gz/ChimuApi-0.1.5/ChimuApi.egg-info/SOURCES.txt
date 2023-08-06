@@ -1,0 +1,9 @@
+README.md
+setup.py
+ChimuApi/__init__.py
+ChimuApi/chimu_api.py
+ChimuApi/classes.py
+ChimuApi.egg-info/PKG-INFO
+ChimuApi.egg-info/SOURCES.txt
+ChimuApi.egg-info/dependency_links.txt
+ChimuApi.egg-info/top_level.txt
