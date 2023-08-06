@@ -1,0 +1,6 @@
+
+[:python_version == "3.6"]
+numpy==1.16.2
+
+[:python_version >= "3.7"]
+numpy>=1.16.2
