@@ -1,0 +1,15 @@
+version: "3"
+services:
+    integration:
+        image: quay.io/rebasehelper/integration
+    tests:
+        build:
+            context: ..
+            dockerfile: containers/Containerfile.tests
+        cap_add:
+            - SYS_ADMIN
+        environment:
+            - PYTEST_ADDOPTS
+            - TOXENV
+        depends_on:
+            - integration
