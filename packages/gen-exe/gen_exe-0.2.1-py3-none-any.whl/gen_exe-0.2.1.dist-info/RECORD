@@ -1,0 +1,10 @@
+genexe/__init__.py,sha256=MtsVEtCnlTNz_aRJP_8cFy2y51R3p-Yf4Jgi1bSViS0,56
+genexe/generate_exe.py,sha256=uypXqCrjjXNXmgFkLTBkIMCuO3OCg66tSzg-tRu9PSY,3076
+genexe/winicon.py,sha256=uaaHxSzia4B95wYamz6lwxW5Vb2Az3ErPUaszq0PNQk,4921
+genexe/res/template,sha256=A3vcwZcTy4J4yu_1NtoynZxmHcPiHcSWALDvZncsfKs,123392
+gen_exe-0.2.1.dist-info/LICENSE,sha256=-2r7rN1F7rSEdBLMLz8WI3VQ2r4fNBrHwk9PrT3PaN0,1078
+gen_exe-0.2.1.dist-info/METADATA,sha256=tgIlReIfuQt4ReFKg7FVAdMYV0C7JGmt6wyRoLRX2b0,3455
+gen_exe-0.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gen_exe-0.2.1.dist-info/entry_points.txt,sha256=CnhVPHWnq_UzqDO67rGKG5NGrMTIcbDUdrsuhgENyyo,89
+gen_exe-0.2.1.dist-info/top_level.txt,sha256=kK6kpd5kMjBbsyY1vWco4wlxB1e8U7jrJlir6DOKlko,7
+gen_exe-0.2.1.dist-info/RECORD,,

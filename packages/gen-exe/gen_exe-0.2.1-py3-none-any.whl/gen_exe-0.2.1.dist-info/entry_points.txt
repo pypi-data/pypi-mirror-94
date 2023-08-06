@@ -1,0 +1,4 @@
+[console_scripts]
+add-ico-to-exe = genexe.winicon:cli
+gen-exe = genexe.generate_exe:cli
+
