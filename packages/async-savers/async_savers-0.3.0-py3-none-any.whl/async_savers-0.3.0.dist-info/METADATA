@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: async-savers
+Version: 0.3.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Jacky Liang
+Author-email: jackyliang@cmu.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-image
+Requires-Dist: simple-zmq
+
+UNKNOWN
+
+
