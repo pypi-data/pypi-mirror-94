@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+resource_translate/__init__.py
+resource_translate/utils.py
+resource_translate.egg-info/PKG-INFO
+resource_translate.egg-info/SOURCES.txt
+resource_translate.egg-info/dependency_links.txt
+resource_translate.egg-info/top_level.txt
