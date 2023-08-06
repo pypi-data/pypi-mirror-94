@@ -1,0 +1,12 @@
+imbalance_xgboost-0.8.1.data/scripts/focal_loss.py,sha256=sHrXJ1h5EiQm8GQ7G5IAjAkcTcLlo6W3B9CZKMOBVJQ,1820
+imbalance_xgboost-0.8.1.data/scripts/imbalance_xgb.py,sha256=ysgdXs1dWAcaivi1YoBgua-DfQVAtgSaZMMIBsArYKc,10223
+imbalance_xgboost-0.8.1.data/scripts/weighted_loss.py,sha256=yJWlL9ZXKgp2qEiD21ivR1vH5BcXtkM6zl7PY1FKd8k,898
+imxgboost/__init__.py,sha256=litfajQdmKMQgheRj6XpQ0twpMd251ygdDrnVk3uTG0,32
+imxgboost/focal_loss.py,sha256=sHrXJ1h5EiQm8GQ7G5IAjAkcTcLlo6W3B9CZKMOBVJQ,1820
+imxgboost/imbalance_xgb.py,sha256=ysgdXs1dWAcaivi1YoBgua-DfQVAtgSaZMMIBsArYKc,10223
+imxgboost/weighted_loss.py,sha256=yJWlL9ZXKgp2qEiD21ivR1vH5BcXtkM6zl7PY1FKd8k,898
+imbalance_xgboost-0.8.1.dist-info/LICENSE,sha256=1MA_YtvFZlm6G56Gop5lmZl0canHkxvON75JEZRZ03Q,1066
+imbalance_xgboost-0.8.1.dist-info/METADATA,sha256=QhcEqgx1afNzPwYhCSVUe33QjSUElE5MsOiILTP4Rf0,16349
+imbalance_xgboost-0.8.1.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+imbalance_xgboost-0.8.1.dist-info/top_level.txt,sha256=lfCaq1O-aRgrb_igV4L-cCJ7oeCczij6gass2XAxrI8,10
+imbalance_xgboost-0.8.1.dist-info/RECORD,,
