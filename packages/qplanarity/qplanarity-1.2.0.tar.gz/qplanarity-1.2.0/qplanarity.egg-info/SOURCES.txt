@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+qplanarity/__init__.py
+qplanarity/graph.py
+qplanarity/main.py
+qplanarity/qtutils.py
+qplanarity.egg-info/PKG-INFO
+qplanarity.egg-info/SOURCES.txt
+qplanarity.egg-info/dependency_links.txt
+qplanarity.egg-info/entry_points.txt
+qplanarity.egg-info/requires.txt
+qplanarity.egg-info/top_level.txt
