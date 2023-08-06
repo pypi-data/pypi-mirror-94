@@ -1,0 +1,3 @@
+[console_scripts]
+fontgen = fontgen.__main__:main
+

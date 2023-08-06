@@ -1,0 +1,16 @@
+fontgen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fontgen/__main__.py,sha256=lIJNwbsXxR12lNJL-MlXUDyQ_qfe1i5wEtfv5iwdjyI,14647
+fontgen/matrai_generator.py,sha256=nLbQRhBPsXdXqLwYRCX52h71P9TLD_XaHy4HOm8K0V0,16578
+fontgen/setFilters.py,sha256=mXqBwjv7elR_JR4SNWSVu2v4HWoihSg3Sv4ZcI01SGE,1109
+fontgen/filters/__init__.py,sha256=kl-CWz1hd4DihT8b3SBtyfSN8Le44eOXVDcrTPHGlbk,185
+fontgen/filters/fontinfo_fix.py,sha256=fXms6UBABQzyqlnItX2YScbIw4yHmZEL6NA8aRao8B4,13064
+fontgen/filters/matrai_gen.py,sha256=PcBaTgdyB8p_NGqF4NMrv87PaiyHn-NLKTq2P2wpRyo,16567
+fontgen/filters/matrai_sub.py,sha256=IkU4AuuGoWKf3M1NOL8xM7wpmKg__GyTE18s3UlS5kE,6013
+fontgen/filters/unicode_fix.py,sha256=ClQvv87i_slFeTh9DzD1-Qu3OIQCz6XG7tA0I6Enatg,1486
+fontgen/filters/variable_tag.py,sha256=Rh2bNH1xfBRNg_s_MO0VSUgNZk-h7DVf2ccQ4Gu-TPk,1917
+fontgen-0.0.1.dist-info/LICENSE,sha256=BR9Qa5DSSFdPFWlDN9vergheYQ3kRy5qytMiI2bUfWg,20
+fontgen-0.0.1.dist-info/METADATA,sha256=_pngwJM3ocSHLP6-ZWsudKkUdkCWKIZ8Ek6bzmTL5bs,1764
+fontgen-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fontgen-0.0.1.dist-info/entry_points.txt,sha256=r3enveZpdHKAiOk2N_5A2vTJB7KylbpsIWP3efG-2T8,51
+fontgen-0.0.1.dist-info/top_level.txt,sha256=j6YsNt6uW7lYyCKi2K7WWesRZID8hv1E2PXVw3btCGo,8
+fontgen-0.0.1.dist-info/RECORD,,
