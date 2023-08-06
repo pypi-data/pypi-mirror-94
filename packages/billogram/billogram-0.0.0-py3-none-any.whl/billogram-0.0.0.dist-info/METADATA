@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: billogram
+Version: 0.0.0
+Summary: Python utilities for Billogram - https://billogram.com/
+Home-page: https://github.com/billogram
+Keywords: billogram
+Author: Billogram
+Author-email: platform@billogram.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Project-URL: Repository, https://github.com/billogram
+Description-Content-Type: text/markdown
+
+# `billogram`
+
+## Installation with `pip`
+```
+$ pip install billogram
+```
+
+Placeholder for a Python utility package related to Billogram – https://billogram.com/
+
