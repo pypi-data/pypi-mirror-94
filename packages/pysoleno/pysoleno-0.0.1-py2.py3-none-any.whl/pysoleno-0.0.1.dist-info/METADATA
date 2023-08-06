@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pysoleno
+Version: 0.0.1
+Summary: Solenoid field and inductance matrix calculator.
+Home-page: https://gitlab.com/mawoznia/PySoleno
+Author: Mariusz Wozniak
+Author-email: mariusz.wozniak@cern.ch
+License: UNKNOWN
+Keywords: magnetic field inductance
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy
+
+# PySoleno
+
+![Python Logo](https://www.python.org/static/community_logos/python-logo.png "Sample inline image")
+
+Solenoid field and inductance matrix calculator.
+
+
+
+
