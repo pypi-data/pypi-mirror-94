@@ -1,0 +1,3 @@
+[console_scripts]
+weather_cli = py_weather_cli.main:cli
+
