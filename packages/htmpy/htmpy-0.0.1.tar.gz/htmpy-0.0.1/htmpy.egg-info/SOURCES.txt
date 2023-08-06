@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+htmpy.egg-info/PKG-INFO
+htmpy.egg-info/SOURCES.txt
+htmpy.egg-info/dependency_links.txt
+htmpy.egg-info/top_level.txt
