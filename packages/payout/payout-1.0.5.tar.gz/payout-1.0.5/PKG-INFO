@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: payout
+Version: 1.0.5
+Summary: Python API for integrating with the Red Shepherd Payouts
+Home-page: https://bitbucket.org/redshepherdinc/python-payout-api.git
+Author: Red Shepherd Inc.
+Author-email: support@redshepherd.com
+License: UNKNOWN
+Description: ![logo](https://redshepherdmedia.s3-us-west-2.amazonaws.com/red_logo_64.png "logo")
+        
+        # Red Shepherd Python Payout API Docs
+        
+        ## _Follow these steps for Simple API Integration_
+        
+        ---
+        
+        ### Step 1 a- Adding the payment library using pip
+        
+        > **_Add the payment library to your code using pip_**
+        
+        ```python
+        > pip install payout
+        ```
+        
+        ---
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
