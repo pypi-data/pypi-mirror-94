@@ -1,0 +1,9 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+setup.py
+SCRAP/SCRAP.py
+amzscraper.egg-info/PKG-INFO
+amzscraper.egg-info/SOURCES.txt
+amzscraper.egg-info/dependency_links.txt
+amzscraper.egg-info/top_level.txt
