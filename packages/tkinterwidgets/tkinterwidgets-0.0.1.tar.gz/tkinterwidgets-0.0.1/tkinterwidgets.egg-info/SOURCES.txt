@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+tkinterwidgets/__init__.py
+tkinterwidgets.egg-info/PKG-INFO
+tkinterwidgets.egg-info/SOURCES.txt
+tkinterwidgets.egg-info/dependency_links.txt
+tkinterwidgets.egg-info/top_level.txt
