@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+ChemE/Boiler.py
+ChemE/HMT.py
+ChemE/Thermo.py
+ChemE/__init__.py
+ChemE.egg-info/PKG-INFO
+ChemE.egg-info/SOURCES.txt
+ChemE.egg-info/dependency_links.txt
+ChemE.egg-info/requires.txt
+ChemE.egg-info/top_level.txt
