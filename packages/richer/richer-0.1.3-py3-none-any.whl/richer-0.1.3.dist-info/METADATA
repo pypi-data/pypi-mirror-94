@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: richer
+Version: 0.1.3
+Summary: Table renderer for dataclass
+Home-page: https://github.com/sarojaba/richer
+Author: sarojaba
+Author-email: sarojaba@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/sarojaba/richer
+Keywords: table
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Requires-Dist: rich
+
+UNKNOWN
+
+

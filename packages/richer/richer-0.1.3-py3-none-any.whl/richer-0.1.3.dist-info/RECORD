@@ -1,0 +1,13 @@
+richer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+richer/interactive_console.py,sha256=eobsur_sp7jLOsky-ylxYVCWTsNtNsvo9ubzMrJS57g,2495
+richer/list_table.py,sha256=gezMZtRTxb_koN-LrW0h-C0qpbDh_jvTG7aWImF8Yq4,2990
+richer/main.py,sha256=5Glmk2v8CExXQcBG2NrBurgZNNtINyhxK-jH2amLpsY,3846
+richer/parser.py,sha256=IAvST046buhY7bmG_VMllcplwXuCuw0sz3_OmlRIGUE,1603
+richer/property_table.py,sha256=ua5mfP1F6l4L0H51k4oD5poAQuQiHvRwk89fVwd_xhk,517
+richer/richer.py,sha256=3BPUQaKBSOpKQo7uBD3CK3hAlo-CdQe0zu4FueolJGY,1135
+richer/table.py,sha256=TXoA2HdtYbzwvrnx-s4lSBoEM--Bn2flFxm9toxVE8c,3395
+richer-0.1.3.dist-info/LICENSE,sha256=qRnJKrSu_gKjYECuMkptJnqlLUFyqc1K4FdNTw3ap-4,1069
+richer-0.1.3.dist-info/METADATA,sha256=8FRB4fykdVrCNFcdSad6hPvcIrMpCMBKRZGRrdfGfm0,536
+richer-0.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+richer-0.1.3.dist-info/top_level.txt,sha256=jzbZpNVBp3loK0NFoIrWpyuNKSi4teMg9Jcflzx-caY,7
+richer-0.1.3.dist-info/RECORD,,
