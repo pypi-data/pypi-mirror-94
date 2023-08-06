@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: babe8901
+Version: 0.0.1
+Summary: This is a package for a calculator. It's provides you with the basic functionality of any calculator.
+created by Shubham Yadav
+on 09/02/2020
+Home-page: UNKNOWN
+Author: Shubham Yadav
+Author-email: luckyshubham16@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: add,sub,mul,div
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education Purpose for Students
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT LicenseProgramming Language :: Python :: 3
