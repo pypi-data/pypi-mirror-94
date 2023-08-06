@@ -1,0 +1,14 @@
+setuptools
+AnyQt>=0.0.11
+docutils
+commonmark>=0.8.1
+requests
+cachecontrol[filecache]
+pip>=18.0
+dictdiffer
+qasync
+python-i18n
+
+[DOCBUILD]
+sphinx
+sphinx-rtd-theme
