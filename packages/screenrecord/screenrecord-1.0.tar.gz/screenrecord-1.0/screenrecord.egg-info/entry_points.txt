@@ -1,0 +1,3 @@
+[console_scripts]
+record = screenrecord.srecord:main
+

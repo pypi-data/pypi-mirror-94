@@ -1,0 +1,10 @@
+README.md
+setup.py
+screenrecord/__init__.py
+screenrecord/srecord.py
+screenrecord.egg-info/PKG-INFO
+screenrecord.egg-info/SOURCES.txt
+screenrecord.egg-info/dependency_links.txt
+screenrecord.egg-info/entry_points.txt
+screenrecord.egg-info/requires.txt
+screenrecord.egg-info/top_level.txt
