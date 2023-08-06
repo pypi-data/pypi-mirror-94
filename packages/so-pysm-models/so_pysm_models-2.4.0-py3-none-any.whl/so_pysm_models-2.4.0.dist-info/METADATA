@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: so-pysm-models
+Version: 2.4.0
+Summary: PySM sky components models for PySM
+Home-page: https://github.com/simonsobs/so_pysm_models
+Author: A. Zonca
+Author-email: zonca@sdsc.edu
+License: BSD 3-Clause
+Platform: UNKNOWN
+Requires-Dist: healpy
+
+UNKNOWN
+
+
