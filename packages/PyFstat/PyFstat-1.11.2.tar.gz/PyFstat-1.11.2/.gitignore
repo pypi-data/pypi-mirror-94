@@ -1,0 +1,4 @@
+*pyc
+*swp
+docs/build/
+docs/source/*_example*/
