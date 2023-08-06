@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: instaling-solver
+Version: 0.01
+Summary: instaling-solver is a small project that automates the process of answering instaling.pl questions.
+Home-page: https://github.com/SmellyN3rd/instaling-solver
+Author: SmellyN3rd
+Author-email: milosz.kusz@onet.pl
+License: 	gpl-3.0
+Download-URL: https://github.com/SmellyN3rd/instaling-solver/archive/0.01.tar.gz
+Description: UNKNOWN
+Keywords: selenium,instaling,automation,bot
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
