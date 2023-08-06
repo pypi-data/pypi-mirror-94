@@ -1,0 +1,2 @@
+recursive-include tf/server/templates *
+recursive-include tf/server/static *
