@@ -1,0 +1,9 @@
+README.md
+setup.py
+sklearn_som/__init__.py
+sklearn_som/som.py
+sklearn_som.egg-info/PKG-INFO
+sklearn_som.egg-info/SOURCES.txt
+sklearn_som.egg-info/dependency_links.txt
+sklearn_som.egg-info/requires.txt
+sklearn_som.egg-info/top_level.txt
