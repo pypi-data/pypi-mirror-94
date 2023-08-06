@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+sheet2dict/__init__.py
+sheet2dict/main.py
+sheet2dict.egg-info/PKG-INFO
+sheet2dict.egg-info/SOURCES.txt
+sheet2dict.egg-info/dependency_links.txt
+sheet2dict.egg-info/requires.txt
+sheet2dict.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/test_1_xlsx.py
+tests/test_2_csv.py
+tests/x-custom_tests.py
