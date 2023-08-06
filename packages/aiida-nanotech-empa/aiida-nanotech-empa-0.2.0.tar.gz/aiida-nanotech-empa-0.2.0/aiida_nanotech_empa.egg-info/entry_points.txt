@@ -1,0 +1,9 @@
+[aiida.cmdline.data]
+nanotech_empa = aiida_nanotech_empa.cli:data_cli
+
+[aiida.parsers]
+nanotech_empa.pp = aiida_nanotech_empa.parsers:PpParser
+
+[aiida.workflows]
+nanotech_empa.nanoribbon = aiida_nanotech_empa.workflows.nanoribbon:NanoribbonWorkChain
+
